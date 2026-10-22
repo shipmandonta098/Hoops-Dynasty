@@ -1,0 +1,1156 @@
+{
+ "summary": {
+  "league": "wnba",
+  "label": "after",
+  "seed": 9001,
+  "seasons": 3,
+  "seasonStatus": [
+   {
+    "status": "completed",
+    "errors": [],
+    "games": 266
+   },
+   {
+    "status": "completed",
+    "errors": [],
+    "games": 263
+   },
+   {
+    "status": "completed",
+    "errors": [],
+    "games": 262
+   }
+  ],
+  "teams": 12,
+  "trades": {
+   "total": 72,
+   "regularSeason": 54,
+   "offseason": 18,
+   "perSeason": 24,
+   "byMonth": {
+    "2024-05": 4,
+    "2024-06": 5,
+    "2024-07": 5,
+    "2024-09": 14,
+    "2025-06": 3,
+    "2025-07": 15,
+    "2025-09": 4,
+    "2026-05": 3,
+    "2026-06": 5,
+    "2026-07": 14
+   },
+   "byWeeksToDeadline": {
+    "0": 6,
+    "1": 9,
+    "2": 5,
+    "3": 10,
+    "4": 4,
+    "5": 6,
+    "6": 4,
+    "7": 2,
+    "8": 1,
+    "9": 2,
+    "10": 1,
+    "11": 2,
+    "12": 2
+   },
+   "picksPerTrade": 0.29,
+   "tradesWithPicks": 21,
+   "firstRoundPicksMoved": 9,
+   "multiPlayer": 5,
+   "shapes": {
+    "2p+1pk": 20,
+    "2p+0pk": 30,
+    "3p+1pk": 1,
+    "1p+0pk": 17,
+    "3p+0pk": 4
+   }
+  },
+  "inSeasonSignings": {
+   "total": 27,
+   "byMonth": {
+    "2024-05": 8,
+    "2024-07": 1,
+    "2025-05": 1,
+    "2025-06": 1,
+    "2025-07": 4,
+    "2025-08": 1,
+    "2026-04": 2,
+    "2026-05": 8,
+    "2026-06": 1
+   }
+  },
+  "inSeasonWaivers": {
+   "total": 0,
+   "byMonth": {}
+  },
+  "offseason": {
+   "signings": 2,
+   "releases": 133
+  },
+  "seconds": 729.511
+ },
+ "log": {
+  "trades": [
+   {
+    "year": 2024,
+    "day": 6,
+    "month": "2024-05",
+    "phase": "regular",
+    "weeksToDeadline": 12,
+    "teams": "3-11",
+    "players": 2,
+    "picks": 1,
+    "firstRound": 1,
+    "multiPlayer": false
+   },
+   {
+    "year": 2024,
+    "day": 13,
+    "month": "2024-05",
+    "phase": "regular",
+    "weeksToDeadline": 11,
+    "teams": "5-9",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2024,
+    "day": 20,
+    "month": "2024-05",
+    "phase": "regular",
+    "weeksToDeadline": 10,
+    "teams": "1-8",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2024,
+    "day": 27,
+    "month": "2024-05",
+    "phase": "regular",
+    "weeksToDeadline": 9,
+    "teams": "4-11",
+    "players": 2,
+    "picks": 1,
+    "firstRound": 1,
+    "multiPlayer": false
+   },
+   {
+    "year": 2024,
+    "day": 34,
+    "month": "2024-06",
+    "phase": "regular",
+    "weeksToDeadline": 8,
+    "teams": "3-5",
+    "players": 2,
+    "picks": 1,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2024,
+    "day": 41,
+    "month": "2024-06",
+    "phase": "regular",
+    "weeksToDeadline": 7,
+    "teams": "8-9",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2024,
+    "day": 48,
+    "month": "2024-06",
+    "phase": "regular",
+    "weeksToDeadline": 6,
+    "teams": "4-10",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2024,
+    "day": 55,
+    "month": "2024-06",
+    "phase": "regular",
+    "weeksToDeadline": 5,
+    "teams": "2-5",
+    "players": 2,
+    "picks": 1,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2024,
+    "day": 55,
+    "month": "2024-06",
+    "phase": "regular",
+    "weeksToDeadline": 5,
+    "teams": "3-6",
+    "players": 2,
+    "picks": 1,
+    "firstRound": 1,
+    "multiPlayer": false
+   },
+   {
+    "year": 2024,
+    "day": 62,
+    "month": "2024-07",
+    "phase": "regular",
+    "weeksToDeadline": 4,
+    "teams": "1-11",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2024,
+    "day": 69,
+    "month": "2024-07",
+    "phase": "regular",
+    "weeksToDeadline": 3,
+    "teams": "4-8",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2024,
+    "day": 74,
+    "month": "2024-07",
+    "phase": "regular",
+    "weeksToDeadline": 3,
+    "teams": "5-10",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2024,
+    "day": 77,
+    "month": "2024-07",
+    "phase": "regular",
+    "weeksToDeadline": 2,
+    "teams": "1-4",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2024,
+    "day": 86,
+    "month": "2024-07",
+    "phase": "regular",
+    "weeksToDeadline": 1,
+    "teams": "4-5",
+    "players": 3,
+    "picks": 1,
+    "firstRound": 0,
+    "multiPlayer": true
+   },
+   {
+    "year": 2024,
+    "day": 153,
+    "month": "2024-09",
+    "phase": "offseason",
+    "weeksToDeadline": null,
+    "teams": "0-8",
+    "players": 1,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2024,
+    "day": 153,
+    "month": "2024-09",
+    "phase": "offseason",
+    "weeksToDeadline": null,
+    "teams": "0-9",
+    "players": 1,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2024,
+    "day": 153,
+    "month": "2024-09",
+    "phase": "offseason",
+    "weeksToDeadline": null,
+    "teams": "1-4",
+    "players": 1,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2024,
+    "day": 153,
+    "month": "2024-09",
+    "phase": "offseason",
+    "weeksToDeadline": null,
+    "teams": "1-9",
+    "players": 1,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2024,
+    "day": 153,
+    "month": "2024-09",
+    "phase": "offseason",
+    "weeksToDeadline": null,
+    "teams": "1-5",
+    "players": 1,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2024,
+    "day": 153,
+    "month": "2024-09",
+    "phase": "offseason",
+    "weeksToDeadline": null,
+    "teams": "1-6",
+    "players": 1,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2024,
+    "day": 153,
+    "month": "2024-09",
+    "phase": "offseason",
+    "weeksToDeadline": null,
+    "teams": "2-6",
+    "players": 1,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2024,
+    "day": 153,
+    "month": "2024-09",
+    "phase": "offseason",
+    "weeksToDeadline": null,
+    "teams": "1-7",
+    "players": 1,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2024,
+    "day": 153,
+    "month": "2024-09",
+    "phase": "offseason",
+    "weeksToDeadline": null,
+    "teams": "7-8",
+    "players": 1,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2024,
+    "day": 153,
+    "month": "2024-09",
+    "phase": "offseason",
+    "weeksToDeadline": null,
+    "teams": "2-7",
+    "players": 1,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2024,
+    "day": 153,
+    "month": "2024-09",
+    "phase": "offseason",
+    "weeksToDeadline": null,
+    "teams": "6-8",
+    "players": 1,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2024,
+    "day": 153,
+    "month": "2024-09",
+    "phase": "offseason",
+    "weeksToDeadline": null,
+    "teams": "4-8",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2024,
+    "day": 153,
+    "month": "2024-09",
+    "phase": "offseason",
+    "weeksToDeadline": null,
+    "teams": "2-8",
+    "players": 1,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2024,
+    "day": 153,
+    "month": "2024-09",
+    "phase": "offseason",
+    "weeksToDeadline": null,
+    "teams": "8-9",
+    "players": 1,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2025,
+    "day": 48,
+    "month": "2025-06",
+    "phase": "regular",
+    "weeksToDeadline": 6,
+    "teams": "1-10",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2025,
+    "day": 55,
+    "month": "2025-06",
+    "phase": "regular",
+    "weeksToDeadline": 5,
+    "teams": "2-4",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2025,
+    "day": 55,
+    "month": "2025-06",
+    "phase": "regular",
+    "weeksToDeadline": 5,
+    "teams": "8-11",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2025,
+    "day": 62,
+    "month": "2025-07",
+    "phase": "regular",
+    "weeksToDeadline": 4,
+    "teams": "5-9",
+    "players": 2,
+    "picks": 1,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2025,
+    "day": 62,
+    "month": "2025-07",
+    "phase": "regular",
+    "weeksToDeadline": 4,
+    "teams": "6-7",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2025,
+    "day": 69,
+    "month": "2025-07",
+    "phase": "regular",
+    "weeksToDeadline": 3,
+    "teams": "1-10",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2025,
+    "day": 74,
+    "month": "2025-07",
+    "phase": "regular",
+    "weeksToDeadline": 3,
+    "teams": "2-5",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2025,
+    "day": 74,
+    "month": "2025-07",
+    "phase": "regular",
+    "weeksToDeadline": 3,
+    "teams": "3-11",
+    "players": 2,
+    "picks": 1,
+    "firstRound": 1,
+    "multiPlayer": false
+   },
+   {
+    "year": 2025,
+    "day": 74,
+    "month": "2025-07",
+    "phase": "regular",
+    "weeksToDeadline": 3,
+    "teams": "6-9",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2025,
+    "day": 77,
+    "month": "2025-07",
+    "phase": "regular",
+    "weeksToDeadline": 2,
+    "teams": "1-7",
+    "players": 2,
+    "picks": 1,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2025,
+    "day": 77,
+    "month": "2025-07",
+    "phase": "regular",
+    "weeksToDeadline": 2,
+    "teams": "8-10",
+    "players": 3,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": true
+   },
+   {
+    "year": 2025,
+    "day": 83,
+    "month": "2025-07",
+    "phase": "regular",
+    "weeksToDeadline": 1,
+    "teams": "2-6",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2025,
+    "day": 83,
+    "month": "2025-07",
+    "phase": "regular",
+    "weeksToDeadline": 1,
+    "teams": "3-5",
+    "players": 2,
+    "picks": 1,
+    "firstRound": 1,
+    "multiPlayer": false
+   },
+   {
+    "year": 2025,
+    "day": 83,
+    "month": "2025-07",
+    "phase": "regular",
+    "weeksToDeadline": 1,
+    "teams": "4-11",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2025,
+    "day": 86,
+    "month": "2025-07",
+    "phase": "regular",
+    "weeksToDeadline": 1,
+    "teams": "1-10",
+    "players": 3,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": true
+   },
+   {
+    "year": 2025,
+    "day": 92,
+    "month": "2025-07",
+    "phase": "regular",
+    "weeksToDeadline": 0,
+    "teams": "4-6",
+    "players": 3,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": true
+   },
+   {
+    "year": 2025,
+    "day": 92,
+    "month": "2025-07",
+    "phase": "regular",
+    "weeksToDeadline": 0,
+    "teams": "5-8",
+    "players": 2,
+    "picks": 1,
+    "firstRound": 1,
+    "multiPlayer": false
+   },
+   {
+    "year": 2025,
+    "day": 92,
+    "month": "2025-07",
+    "phase": "regular",
+    "weeksToDeadline": 0,
+    "teams": "9-11",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2025,
+    "day": 153,
+    "month": "2025-09",
+    "phase": "offseason",
+    "weeksToDeadline": null,
+    "teams": "1-5",
+    "players": 1,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2025,
+    "day": 153,
+    "month": "2025-09",
+    "phase": "offseason",
+    "weeksToDeadline": null,
+    "teams": "7-9",
+    "players": 1,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2025,
+    "day": 153,
+    "month": "2025-09",
+    "phase": "offseason",
+    "weeksToDeadline": null,
+    "teams": "4-7",
+    "players": 1,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2025,
+    "day": 153,
+    "month": "2025-09",
+    "phase": "offseason",
+    "weeksToDeadline": null,
+    "teams": "1-7",
+    "players": 1,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2026,
+    "day": 6,
+    "month": "2026-05",
+    "phase": "regular",
+    "weeksToDeadline": 12,
+    "teams": "6-7",
+    "players": 2,
+    "picks": 1,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2026,
+    "day": 13,
+    "month": "2026-05",
+    "phase": "regular",
+    "weeksToDeadline": 11,
+    "teams": "10-11",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2026,
+    "day": 27,
+    "month": "2026-05",
+    "phase": "regular",
+    "weeksToDeadline": 9,
+    "teams": "4-6",
+    "players": 2,
+    "picks": 1,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2026,
+    "day": 41,
+    "month": "2026-06",
+    "phase": "regular",
+    "weeksToDeadline": 7,
+    "teams": "2-5",
+    "players": 2,
+    "picks": 1,
+    "firstRound": 1,
+    "multiPlayer": false
+   },
+   {
+    "year": 2026,
+    "day": 48,
+    "month": "2026-06",
+    "phase": "regular",
+    "weeksToDeadline": 6,
+    "teams": "3-6",
+    "players": 2,
+    "picks": 1,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2026,
+    "day": 48,
+    "month": "2026-06",
+    "phase": "regular",
+    "weeksToDeadline": 6,
+    "teams": "9-10",
+    "players": 3,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": true
+   },
+   {
+    "year": 2026,
+    "day": 55,
+    "month": "2026-06",
+    "phase": "regular",
+    "weeksToDeadline": 5,
+    "teams": "1-7",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2026,
+    "day": 55,
+    "month": "2026-06",
+    "phase": "regular",
+    "weeksToDeadline": 5,
+    "teams": "4-8",
+    "players": 2,
+    "picks": 1,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2026,
+    "day": 62,
+    "month": "2026-07",
+    "phase": "regular",
+    "weeksToDeadline": 4,
+    "teams": "5-11",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2026,
+    "day": 69,
+    "month": "2026-07",
+    "phase": "regular",
+    "weeksToDeadline": 3,
+    "teams": "2-6",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2026,
+    "day": 69,
+    "month": "2026-07",
+    "phase": "regular",
+    "weeksToDeadline": 3,
+    "teams": "3-10",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2026,
+    "day": 74,
+    "month": "2026-07",
+    "phase": "regular",
+    "weeksToDeadline": 3,
+    "teams": "5-9",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2026,
+    "day": 74,
+    "month": "2026-07",
+    "phase": "regular",
+    "weeksToDeadline": 3,
+    "teams": "8-11",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2026,
+    "day": 77,
+    "month": "2026-07",
+    "phase": "regular",
+    "weeksToDeadline": 2,
+    "teams": "4-6",
+    "players": 2,
+    "picks": 1,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2026,
+    "day": 77,
+    "month": "2026-07",
+    "phase": "regular",
+    "weeksToDeadline": 2,
+    "teams": "7-10",
+    "players": 2,
+    "picks": 1,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2026,
+    "day": 83,
+    "month": "2026-07",
+    "phase": "regular",
+    "weeksToDeadline": 1,
+    "teams": "1-5",
+    "players": 2,
+    "picks": 1,
+    "firstRound": 1,
+    "multiPlayer": false
+   },
+   {
+    "year": 2026,
+    "day": 83,
+    "month": "2026-07",
+    "phase": "regular",
+    "weeksToDeadline": 1,
+    "teams": "3-9",
+    "players": 2,
+    "picks": 1,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2026,
+    "day": 83,
+    "month": "2026-07",
+    "phase": "regular",
+    "weeksToDeadline": 1,
+    "teams": "8-11",
+    "players": 2,
+    "picks": 1,
+    "firstRound": 1,
+    "multiPlayer": false
+   },
+   {
+    "year": 2026,
+    "day": 86,
+    "month": "2026-07",
+    "phase": "regular",
+    "weeksToDeadline": 1,
+    "teams": "6-7",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2026,
+    "day": 92,
+    "month": "2026-07",
+    "phase": "regular",
+    "weeksToDeadline": 0,
+    "teams": "1-10",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2026,
+    "day": 92,
+    "month": "2026-07",
+    "phase": "regular",
+    "weeksToDeadline": 0,
+    "teams": "2-5",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   },
+   {
+    "year": 2026,
+    "day": 92,
+    "month": "2026-07",
+    "phase": "regular",
+    "weeksToDeadline": 0,
+    "teams": "4-11",
+    "players": 2,
+    "picks": 0,
+    "firstRound": 0,
+    "multiPlayer": false
+   }
+  ],
+  "signings": [
+   {
+    "year": 2024,
+    "day": 1,
+    "month": "2024-05",
+    "team": 2,
+    "id": 10014
+   },
+   {
+    "year": 2024,
+    "day": 1,
+    "month": "2024-05",
+    "team": 9,
+    "id": 10019
+   },
+   {
+    "year": 2024,
+    "day": 2,
+    "month": "2024-05",
+    "team": 10,
+    "id": 10025
+   },
+   {
+    "year": 2024,
+    "day": 4,
+    "month": "2024-05",
+    "team": 5,
+    "id": 10028
+   },
+   {
+    "year": 2024,
+    "day": 5,
+    "month": "2024-05",
+    "team": 6,
+    "id": 10026
+   },
+   {
+    "year": 2024,
+    "day": 7,
+    "month": "2024-05",
+    "team": 1,
+    "id": 10001
+   },
+   {
+    "year": 2024,
+    "day": 7,
+    "month": "2024-05",
+    "team": 8,
+    "id": 10008
+   },
+   {
+    "year": 2024,
+    "day": 10,
+    "month": "2024-05",
+    "team": 11,
+    "id": 10029
+   },
+   {
+    "year": 2024,
+    "day": 88,
+    "month": "2024-07",
+    "team": 5,
+    "id": 10013
+   },
+   {
+    "year": 2025,
+    "day": 2,
+    "month": "2025-05",
+    "team": 3,
+    "id": 273
+   },
+   {
+    "year": 2025,
+    "day": 59,
+    "month": "2025-06",
+    "team": 11,
+    "id": 214
+   },
+   {
+    "year": 2025,
+    "day": 72,
+    "month": "2025-07",
+    "team": 10,
+    "id": 92
+   },
+   {
+    "year": 2025,
+    "day": 75,
+    "month": "2025-07",
+    "team": 6,
+    "id": 156
+   },
+   {
+    "year": 2025,
+    "day": 79,
+    "month": "2025-07",
+    "team": 10,
+    "id": 158
+   },
+   {
+    "year": 2025,
+    "day": 86,
+    "month": "2025-07",
+    "team": 10,
+    "id": 272
+   },
+   {
+    "year": 2025,
+    "day": 96,
+    "month": "2025-08",
+    "team": 6,
+    "id": 278
+   },
+   {
+    "year": 2026,
+    "day": 0,
+    "month": "2026-04",
+    "team": 1,
+    "id": 99
+   },
+   {
+    "year": 2026,
+    "day": 0,
+    "month": "2026-04",
+    "team": 8,
+    "id": 331
+   },
+   {
+    "year": 2026,
+    "day": 1,
+    "month": "2026-05",
+    "team": 2,
+    "id": 0
+   },
+   {
+    "year": 2026,
+    "day": 2,
+    "month": "2026-05",
+    "team": 10,
+    "id": 2
+   },
+   {
+    "year": 2026,
+    "day": 2,
+    "month": "2026-05",
+    "team": 3,
+    "id": 333
+   },
+   {
+    "year": 2026,
+    "day": 3,
+    "month": "2026-05",
+    "team": 4,
+    "id": 7001500
+   },
+   {
+    "year": 2026,
+    "day": 3,
+    "month": "2026-05",
+    "team": 11,
+    "id": 4
+   },
+   {
+    "year": 2026,
+    "day": 4,
+    "month": "2026-05",
+    "team": 5,
+    "id": 216
+   },
+   {
+    "year": 2026,
+    "day": 5,
+    "month": "2026-05",
+    "team": 6,
+    "id": 241
+   },
+   {
+    "year": 2026,
+    "day": 6,
+    "month": "2026-05",
+    "team": 7,
+    "id": 182
+   },
+   {
+    "year": 2026,
+    "day": 51,
+    "month": "2026-06",
+    "team": 10,
+    "id": 34
+   }
+  ],
+  "waivers": [],
+  "offseasonSignings": 2,
+  "offseasonReleases": 133,
+  "days": 459
+ }
+}
