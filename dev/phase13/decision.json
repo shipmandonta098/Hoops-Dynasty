@@ -1,0 +1,35 @@
+{
+  "selectedFactor": 1.4,
+  "selectedLabel": "cal140",
+  "testedLabels": [
+    "calbaseline",
+    "cal135",
+    "cal140",
+    "cal145"
+  ],
+  "change": "Modern fictional WNBA initial roster-quality SD target rises from 1.15x to 1.40x its unallocated value, using the existing same-position swap algorithm. NBA stays at 1.15x.",
+  "reason": "1.45 reached the spread target but exceeded the real 20+ ceiling; 1.35 respected the ceiling but fell below the SD target; 1.40 was borderline on the initial five seeds (SD 5.299); five additional calibration seeds 116\u2013120 were run without a parameter change. The full ten-season calibration met both gates. No transition tuning.",
+  "calibrationSelected": {
+    "seasons": 10,
+    "games": 2400,
+    "meanMargin": 12.14875,
+    "blow20Pct": 18.0,
+    "within5Pct": 23.25,
+    "otPct": 3.7083333333333335,
+    "teamMarginSD": 5.537374006673206,
+    "transitionOpportunityPct": 20.88597398412855,
+    "fastbreakFGAPct": 18.16307765320045,
+    "final60Possessions": 5.771353482260184,
+    "counts": {
+      "possessions": 384842,
+      "transitionPossessions": 80378,
+      "primaryFGA": 297305,
+      "fastbreakFGA": 61235,
+      "final60Starts": 10656,
+      "FGA": 337140,
+      "closeGames": 761,
+      "closeFinal60Starts": 4392
+    }
+  },
+  "ceiling20Pct": 18.88111888111888
+}
