@@ -1,0 +1,107 @@
+HOOPS DYNASTY — PHASE 13 FINAL HOLDOUT AUDIT
+Frozen build SHA-256: fea697ebacf31cb460125afb899dc14dece44aeba7a96aa20af9a1bf0fccc883
+Frozen at (UTC): 2026-10-22T06:57:25.380030+00:00
+Holdout completed (UTC): 2026-10-22T07:22:24.269Z
+
+Only game change: Modern fictional WNBA initial roster-quality SD target rises from 1.15x to 1.40x its unallocated value, using the existing same-position swap algorithm. NBA stays at 1.15x.
+No transition, foul-delay, hold+quick, or final-minute pace tuning. No tuning after the holdout began.
+
+PRE-FREEZE WNBA CALIBRATION
+All arms initially used the same five existing seeds (111–115), 1,200 evolving regular-season games. The selected 1.40 setting also used five additional calibration seeds (116–120) without a parameter change, for 2,400 games total. Those seeds are not holdout seeds. Candidate selection used mean per-season team-margin SD 5.3–6.2 and pooled 20+ rate at or below 18.8811%. Individual random seasons can lie outside the target.
+calbaseline: mean margin 11.331; 20+ 15.167%; OT 3.750%; mean team-margin SD 4.653; SD seed range 3.490–5.837.
+cal135: mean margin 11.855; 20+ 17.833%; OT 3.500%; mean team-margin SD 5.219; SD seed range 3.529–7.074.
+cal140: mean margin 12.149; 20+ 18.000%; OT 3.708%; mean team-margin SD 5.537; SD seed range 3.965–7.461.
+cal145: mean margin 12.318; 20+ 19.083%; OT 3.667%; mean team-margin SD 5.717; SD seed range 3.760–7.379.
+Selection: 1.45 reached the spread target but exceeded the real 20+ ceiling; 1.35 respected the ceiling but fell below the SD target; 1.40 was borderline on the initial five seeds (SD 5.299); five additional calibration seeds 116–120 were run without a parameter change. The full ten-season calibration met both gates. No transition tuning.
+
+REAL FULL-SEASON REFERENCES (REGULAR SEASON, OT INCLUDED)
+League | Season | Games | Mean margin | 20+ % | Within5 % | OT % | Team-margin SD
+WNBA | 2022 | 216 | 11.148 | 14.352 | 23.611 | 5.093 | 5.516
+WNBA | 2023 | 240 | 11.671 | 16.250 | 22.917 | 4.167 | 5.795
+WNBA | 2024 | 240 | 10.817 | 9.167 | 25.417 | 3.333 | 5.718
+WNBA | 2025 | 286 | 12.287 | 18.881 | 24.476 | 1.748 | 5.980
+NBA | 2024 | 1230 | 12.584 | 19.106 | 23.333 | 4.797 | 5.464
+NBA | 2025 | 1230 | 12.748 | 21.057 | 25.122 | 4.878 | 5.893
+
+TRANSITION DEFINITION CHECK — COMPLETED BEFORE FREEZE
+NBA same 134 games: 2,884 fastbreak-tagged FGA / 23,735 FGA = 12.151%.
+Retained official NBA Synergy 2024–25: team average 18.580%; inferred pooled share 18.613% ; the commonly quoted ~20% overstates the retained 2024–25 value.
+WNBA same fastbreak-qualifier/FGA definition, 100 games in 2022–2025: 1,462 / 13,596 = 10.753%.
+The retained NBA stats.nba.com playbyplayv3 files omit qualifiers; the same 134 IDs were retrieved from the official CDN with qualifiers. Missing qualifiers were not counted as zero. Two games differ by one FGA each between feeds, cancelling in the total. One CDN final score differs by one point from the retained feed (0022400072); retaining all 134 gives 12.151%, while the 133 score-matching games give 12.123%. Both are reported; no game was dropped to improve agreement.
+The 12.15% vs 18.61% comparison changes both tag definition and denominator and compares a sample to a full season. It is NOT a conversion factor. WNBA should be compared with the same PBP-tagged FGA statistic, not judged directly against Synergy possession share. Simulation tags still come from its own transition-opportunity classification, not independent real-game taggers. No official WNBA Synergy rate was available.
+
+FINAL HOLDOUT SCORECARDS
+20 reserved seeds, not used for calibration or smoke tests; prior retained audit files checked: 1605. Seeds were reserved before the holdout. Full evolving regular seasons; no resets or playoff games.
+
+NBA — 10 seeds, 12,300 games
+Metric | Holdout | 95% seed-bootstrap interval | Real reference
+Mean winning margin | 13.21 points | 12.91–13.48 | 12.58–12.75 points
+20+ point wins | 22.35 % | 21.15–23.38 | 19.11–21.06 %
+Within 5 points | 23.99 % | 23.01–24.98 | 23.33–25.12 %
+Games reaching OT | 4.08 % | 3.80–4.41 | 4.80–4.88 %
+Team season mean-margin SD | 5.49 points | 5.05–5.90 | 5.46–5.89 points
+Transition: fast-break FGA share | 17.60 % | 17.51–17.68 | 12.15% (134 PBP games)
+Final-60s possession starts | 5.84 starts | 5.80–5.88 | 6.27 (52 close / 134 PBP games)
+Additional simulation diagnostic: transition opportunities 20.117% of possession calls; this is not an official Synergy classification.
+Final-minute sample: 3,983 games within six points at 60 seconds; 23,262 combined-team starts. Mean team-margin SD is the mean of ten season SDs, not SD after pooling team identities across worlds.
+Per-seed results: seed | mean margin | 20+ % | within5 % | OT % | SD | fastbreak FGA % | final60 starts
+3101300001 | 13.165 | 22.764 | 25.122 | 3.415 | 5.158 | 17.477 | 5.922
+3101300002 | 13.478 | 22.358 | 22.195 | 4.146 | 6.204 | 17.792 | 5.694
+3101300003 | 13.449 | 23.333 | 24.146 | 3.984 | 5.879 | 17.783 | 5.783
+3101300004 | 13.664 | 24.309 | 22.764 | 4.390 | 5.362 | 17.474 | 5.795
+3101300005 | 13.151 | 22.439 | 23.740 | 3.659 | 4.775 | 17.551 | 5.937
+3101300006 | 12.448 | 19.431 | 26.504 | 3.902 | 4.390 | 17.694 | 5.852
+3101300007 | 13.740 | 24.146 | 21.463 | 3.659 | 6.167 | 17.519 | 5.916
+3101300008 | 12.347 | 18.455 | 24.634 | 4.228 | 4.576 | 17.662 | 5.871
+3101300009 | 13.617 | 23.577 | 23.008 | 4.065 | 6.441 | 17.361 | 5.793
+3101300010 | 13.085 | 22.683 | 26.341 | 5.366 | 5.927 | 17.661 | 5.828
+
+WNBA — 10 seeds, 2,400 games
+Metric | Holdout | 95% seed-bootstrap interval | Real reference
+Mean winning margin | 11.98 points | 11.64–12.32 | 10.82–12.29 points
+20+ point wins | 17.92 % | 16.33–19.75 | 9.17–18.88 %
+Within 5 points | 25.50 % | 24.04–26.92 | 22.92–25.42 %
+Games reaching OT | 4.04 % | 3.46–4.67 | 1.75–5.09 %
+Team season mean-margin SD | 5.76 points | 5.03–6.53 | 5.52–5.98 points
+Transition: fast-break FGA share | 18.20 % | 18.09–18.32 | 10.75% (100 PBP games)
+Final-60s possession starts | 5.93 starts | 5.77–6.08 | 5.78 (40 close / 100 PBP games)
+Additional simulation diagnostic: transition opportunities 21.029% of possession calls; this is not an official Synergy classification.
+Final-minute sample: 843 games within six points at 60 seconds; 4,998 combined-team starts. Mean team-margin SD is the mean of ten season SDs, not SD after pooling team identities across worlds.
+Per-seed results: seed | mean margin | 20+ % | within5 % | OT % | SD | fastbreak FGA % | final60 starts
+3101300101 | 12.100 | 20.000 | 29.167 | 2.917 | 5.951 | 17.982 | 6.095
+3101300102 | 11.483 | 15.417 | 25.833 | 5.417 | 5.301 | 17.906 | 5.448
+3101300103 | 11.246 | 15.833 | 28.333 | 2.917 | 4.659 | 18.405 | 5.942
+3101300104 | 12.042 | 17.917 | 25.417 | 2.917 | 6.327 | 18.548 | 6.301
+3101300105 | 11.496 | 16.667 | 27.083 | 4.167 | 4.790 | 18.156 | 6.151
+3101300106 | 12.613 | 19.583 | 25.833 | 3.750 | 6.861 | 18.192 | 5.816
+3101300107 | 12.354 | 20.000 | 25.833 | 4.167 | 6.418 | 18.202 | 6.025
+3101300108 | 11.312 | 14.583 | 20.833 | 4.583 | 3.871 | 18.001 | 5.882
+3101300109 | 12.988 | 23.750 | 22.500 | 5.833 | 8.218 | 18.306 | 5.653
+3101300110 | 12.129 | 15.417 | 24.167 | 3.750 | 5.165 | 18.317 | 5.896
+
+FINAL GATE RESULTS
+WNBA mean season SD target 5.3–6.2: PASS (5.756).
+WNBA pooled 20+ real ceiling 18.881%: PASS (17.917%).
+WNBA individual seasons within SD target: 2/10; within 20+ ceiling: 6/10.
+No parameter was changed in response to these holdout results. A miss remains a miss; this report does not imply every metric or every random season is calibrated.
+
+DEFINITIONS AND LIMITS
+Mean margin = absolute final score difference, including all OT. 20+ uses >=20; within5 uses <=5. OT = at least one overtime period. Team-margin SD = population standard deviation across teams of their signed season mean margins, computed per season then averaged.
+Transition scorecard = primary FGA carrying the simulation fast-break opportunity flag divided by ALL box-score FGA, including untagged putbacks/kickouts. Real denominator = every official PBP isFieldGoal attempt, tagged numerator = qualifiers contains fastbreak, including misses. Opportunity share is a separate diagnostic.
+Final60 = possession starts at 0<regulation time remaining<=60, summed across both teams, conditional on absolute margin<=6 at the 60-second checkpoint. Does not count a possession that began before the window. Real possession boundaries are reconstructed from control changes, made baskets, final made ordinary FTs, defensive rebounds and turnovers; offensive rebounds retain control. PBP is not direct inbound tracking, and inference/retained-ball edge cases can differ from the simulator.
+Real full-season ranges are observed season ranges, not confidence intervals or universal pass/fail bands. PBP samples are retained convenience samples, not league censuses. Seed-cluster bootstrap uses 4,000 resamples of the ten worlds; it reflects this generated-world sample and cannot certify unseen worlds or other eras. WNBA simulated rules/size are 2024 (12 teams,40 games); 2025 real reference has13 teams,44 games.
+The extra five calibration seasons were an explicitly recorded pre-freeze extension, not a second holdout; only the reserved 20 seasons are the final holdout. Calibration uses paired initial seeds, but changes can alter random-number consumption and later season paths. Aggregate differences are not isolated same-possession causal effects. Player identities, attributes, league-wide talent and position counts are preserved; roster swaps apply only to newly generated fictional modern WNBA careers. Existing saves, NBA allocation and pre-2020 generation are unchanged.
+
+VERIFICATION
+Passive instrumentation: exact score, box and summary-event equality in six full NBA/WNBA games. Scope: player pool and positions preserved; NBA and pre-2020 allocations unchanged; loading existing rosters matches baseline normalization. Each full season asserts expected schedule count, completed non-tied final scores and box scoring identities. Frozen production and audit inputs verified before and after all holdout runs.
+Production hash: fea697ebacf31cb460125afb899dc14dece44aeba7a96aa20af9a1bf0fccc883
+
+SOURCES AND REPRODUCTION
+Official full-season game logs retained in dev/phase3, dev/phase4 and dev/phase12; file hashes in real-seasons.json.
+https://stats.nba.com/stats/leaguegamelog
+https://stats.wnba.com/stats/leaguegamelog
+https://stats.nba.com/stats/synergyplaytypes?LeagueID=00&SeasonYear=2024-25&SeasonType=Regular%20Season&PerMode=Totals&PlayerOrTeam=T&PlayType=Transition&TypeGrouping=offensive
+Official NBA tagged PBP: https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_<GAME_ID>.json; exact URLs in nba-tags-fetch.json.
+Official WNBA tagged PBP: https://cdn.wnba.com/static/json/liveData/playbyplay/playbyplay_<GAME_ID>.json; sources retained from Phase12.
+Reproduce from checkout: python3 dev/phase13/reference.py; node dev/phase13/run-holdout.cjs; python3 dev/phase13/analyze.py; python3 dev/phase13/report.py. Existing holdout outputs are verified/reused, not silently replaced. Deleting outputs reruns the same reserved seeds on the recorded frozen build.
+The bundle includes calibration and per-game holdout outputs, protocol, frozen hashes, raw tagged/reference data, and reproduction scripts.
