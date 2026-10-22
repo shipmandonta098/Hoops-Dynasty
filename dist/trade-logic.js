@@ -71,13 +71,16 @@ function aiTradePairs(clubs,limit){const kind=new Map(clubs.map(t=>[t.id,tradeTi
  const pairs=[];for(let i=0;i<clubs.length;i++)for(let j=i+1;j<clubs.length;j++)pairs.push({a:clubs[i],b:clubs[j],tier:rank(clubs[i],clubs[j]),r:Math.random()});
  return pairs.sort((x,y)=>x.tier-y.tier||x.r-y.r).slice(0,limit).map(({a,b})=>Math.random()<.5?[a,b]:[b,a])}
 function aiTradeCandidates(from,to,count){return from.roster.filter(p=>!tradeRestrictionText(p)).map(p=>({p,gain:tradePlayerValue(p,to)-tradePlayerValue(p,from)+dissatisfactionTradePriority(p)*.5})).sort((x,y)=>y.gain-x.gain||x.p.id-y.p.id).slice(0,count).map(x=>x.p)}
-function aiTradeEvaluate(a,b,out,into,outPicks=[],inPicks=[]){if(tradeLegality(a,b,out,into,0,outPicks,inPicks).length)return null;const sa=tradeSideAssessment(a,out,into,outPicks,inPicks,0,{human:false}),sb=tradeSideAssessment(b,into,out,inPicks,outPicks,0,{human:false});if(!sa.accepted||!sb.accepted)return {short:sb.accepted?null:sb};return {out,into,outPicks,inPicks,surplus:Math.min(sa.received/Math.max(.01,sa.sent),sb.received/Math.max(.01,sb.sent))}}
+function aiTradeEvaluate(a,b,out,into,outPicks=[],inPicks=[]){const sa=tradeSideAssessment(a,out,into,outPicks,inPicks,0,{human:false});if(!sa.accepted)return null;const sb=tradeSideAssessment(b,into,out,inPicks,outPicks,0,{human:false});if(!sb.accepted)return {short:sb};if(tradeLegality(a,b,out,into,0,outPicks,inPicks).length)return null;return {out,into,outPicks,inPicks,surplus:Math.min(sa.received/Math.max(.01,sa.sent),sb.received/Math.max(.01,sb.sent))}}
 function aiTradeBest(a,b){
- const gives=aiTradeCandidates(a,b,6),gets=aiTradeCandidates(b,a,5),packages=[];
+ const gives=aiTradeCandidates(a,b,6),gets=aiTradeCandidates(b,a,5),packages=[],value=new Map();
+ // Cheap pre-filter with per-club values computed once; full assessments and legality run only on plausible packages.
+ for(const p of [...gives,...gets])value.set(p.id,[tradePlayerValue(p,a),tradePlayerValue(p,b)]);
+ const plausible=(out,into)=>{const sum=(list,i)=>list.reduce((n,p)=>n+value.get(p.id)[i],0),aGets=sum(into,0),aGives=sum(out,0),bGets=sum(out,1),bGives=sum(into,1);return aGets>=aGives*.9&&bGets>=bGives*.6};
  for(const q of gets){for(const p of gives)packages.push([[p],[q]]);for(let i=0;i<gives.length;i++)for(let j=i+1;j<gives.length;j++)packages.push([[gives[i],gives[j]],[q]])}
  for(const p of gives)for(let i=0;i<gets.length;i++)for(let j=i+1;j<gets.length;j++)packages.push([[p],[gets[i],gets[j]]]);
- const sweeteners=tradePicks(a).sort((x,y)=>tradePickValue(x,b)-tradePickValue(y,b)).slice(0,4);let best=null;
- for(const [out,into] of packages){let r=aiTradeEvaluate(a,b,out,into);
+ const ranked=tradePicks(a).sort((x,y)=>tradePickValue(x,b)-tradePickValue(y,b)),sweeteners=[...new Set([...ranked.slice(0,3),ranked.find(p=>p.round===1)].filter(Boolean))];let best=null;
+ for(const [out,into] of packages){if(!plausible(out,into))continue;let r=aiTradeEvaluate(a,b,out,into);
   // A package close to fair for the other club may be completed with the cheapest qualifying pick.
   if(r&&!r.out&&r.short&&r.short.received>=r.short.sent*.7)for(const pick of sweeteners){r=aiTradeEvaluate(a,b,out,into,[pick]);if(r?.out)break}
   if(r?.out&&(!best||r.surplus>best.surplus))best=r}
