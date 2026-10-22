@@ -1,0 +1,210 @@
+{
+  "league": "nba",
+  "seed": 7101,
+  "checks": [
+    {
+      "name": "setup presets present with preset logos",
+      "ok": true,
+      "detail": [
+        30,
+        31
+      ]
+    },
+    {
+      "name": "team ids unique and contiguous",
+      "ok": true
+    },
+    {
+      "name": "all teams including presets debut by League Day 3",
+      "ok": true,
+      "detail": {
+        "teams": 32,
+        "debutByDay3": 32,
+        "openingNight": 2,
+        "rule": null
+      }
+    },
+    {
+      "name": "save/load round trip keeps preset identity",
+      "ok": true
+    },
+    {
+      "name": "season A completed without validation errors",
+      "ok": true,
+      "detail": {
+        "status": "completed",
+        "errors": []
+      }
+    },
+    {
+      "name": "franchise archive records preset teams after season A",
+      "ok": true
+    },
+    {
+      "name": "expansion window open after playoffs",
+      "ok": true
+    },
+    {
+      "name": "expansion refusal comes from the existing roster-capacity rule",
+      "ok": true,
+      "detail": "These rules cannot supply 14 players while preserving each team’s minimum roster. Lower protections, allow two selections per team, or wait for larger rosters."
+    },
+    {
+      "name": "relocation keeps key, roster and contracts",
+      "ok": true,
+      "detail": {
+        "key": [
+          "team-NYE",
+          "team-NYE"
+        ]
+      }
+    },
+    {
+      "name": "relocation applies preset identity, arena and altitude",
+      "ok": true,
+      "detail": {
+        "key": "team-NYE",
+        "abbr": "OTT",
+        "city": "Ottawa",
+        "roster": "821:10.895356:2027,2062527:5.257998:2029,30:14.102194:2027,39:13.104773:2027,461:5.369342:2028,36:7.713639:2028,40:9.267899:2027,38:7.442778:2026,32:6.515866:2027,42:3.482372:2027,253:3.562121:2027,64:5.892178:2028,37:3.826587:2027,31:4.232018:2027",
+        "wins": 38,
+        "logoAtlas": "preset",
+        "stadiumCapacity": 18000,
+        "altitudeFt": 230,
+        "oldAbbrInBoxes": false
+      }
+    },
+    {
+      "name": "relocation re-keys archived box scores to the new abbreviation",
+      "ok": true
+    },
+    {
+      "name": "relocation save/load round trip",
+      "ok": true
+    },
+    {
+      "name": "rollover advances to a fresh schedule",
+      "ok": true
+    },
+    {
+      "name": "every team (incl. new/relocated) debuts by Day 3",
+      "ok": true,
+      "detail": {
+        "teams": 32,
+        "debutByDay3": 32
+      }
+    },
+    {
+      "name": "OTT played its full schedule",
+      "ok": true,
+      "detail": {
+        "played": 82,
+        "scheduled": 82,
+        "abbr": "OTT"
+      }
+    },
+    {
+      "name": "all regular-season games completed with legal scores",
+      "ok": true
+    },
+    {
+      "name": "champion recorded after season B",
+      "ok": true
+    },
+    {
+      "name": "final save/load round trip after season B",
+      "ok": true
+    }
+  ],
+  "seasons": [
+    {
+      "phase": "A",
+      "status": "completed",
+      "games": 1392,
+      "seconds": 915.952,
+      "champion": null
+    },
+    {
+      "phase": "B",
+      "seconds": 1402.59,
+      "year": 2027,
+      "teams": 32,
+      "champion": 2,
+      "presetGames": [
+        {
+          "abbr": "OTT",
+          "city": "Ottawa",
+          "games": 82
+        },
+        {
+          "abbr": "CGY",
+          "city": "Calgary",
+          "games": 82
+        },
+        {
+          "abbr": "NWK",
+          "city": "Newark",
+          "games": 82
+        }
+      ]
+    }
+  ],
+  "expansionRosterState": {
+    "min": 14,
+    "max": 15,
+    "sizes": [
+      15,
+      14,
+      14,
+      14,
+      14,
+      15,
+      14,
+      15,
+      15,
+      15,
+      14,
+      14,
+      15,
+      15,
+      14,
+      14,
+      14,
+      14,
+      14,
+      14,
+      14,
+      15,
+      14,
+      14,
+      14,
+      15,
+      14,
+      14,
+      15,
+      14,
+      15,
+      15
+    ]
+  },
+  "expansionBlocked": "These rules cannot supply 14 players while preserving each team’s minimum roster. Lower protections, allow two selections per team, or wait for larger rosters.",
+  "relocation": {
+    "before": {
+      "key": "team-NYE",
+      "abbr": "NYE",
+      "city": "New York",
+      "wins": 38,
+      "histAbbr": 82
+    },
+    "after": {
+      "key": "team-NYE",
+      "abbr": "OTT",
+      "city": "Ottawa",
+      "wins": 38,
+      "logoAtlas": "preset",
+      "stadiumCapacity": 18000,
+      "altitudeFt": 230,
+      "oldAbbrInBoxes": false
+    }
+  }
+}

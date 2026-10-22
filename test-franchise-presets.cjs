@@ -54,6 +54,14 @@ l.context.base=base;
 assert.equal(run(`expansionConfig({...base,preset:'ott'}).preset`),'OTT');
 assert.equal(run(`'preset' in expansionConfig({...base})`),false);
 assert.throws(()=>run(`expansionConfig({...base,preset:'XYZ'})`),/preset/);
+// Expansion end to end with a preset (same flow and roster setup as test-expansion.cjs; schedule rebuild excluded).
+(async()=>{
+const exp=await l.run(`(async()=>{render=()=>{};save=async()=>true;ownerCanManage=()=>true;state=fresh(defaultTeams(),82);state.gmName='Preset test';state.schedule.forEach(r=>r.forEach(([a,b])=>{state.teams[a].w++;state.teams[b].l++}));state.day=state.schedule.length;state.champion=0;state.teams.forEach(t=>t.roster.forEach(p=>p.salary=3));
+ const p=franchisePreset('TPA'),def=presetTeamDefinition(p),v={preset:'TPA',city:p.city,name:p.name,abbr:p.abbr,arenaName:p.arenaName,divisionId:'southeast',newDivision:'',conferenceId:'east',marketSize:p.marketSize,primary:def.colors[0].hex,secondary:'#203040',cap:'reduced',seed:'fourth',capacity:p.capacity,ticket:90,protect:8,maximum:2,target:14,fee:900,hype:90,rebuild:'on'};
+ await beginExpansion({preventDefault(){},target:v});state=validateCareerData(copy(state));await lockExpansionProtections();for(let i=0;i<14;i++)expansionSelection(expansionAvailable()[0].p.id);state=validateCareerData(copy(state));await finishExpansion();
+ const t=state.teams[30];state=validateCareerData(copy(state));const s=state.teams[30];await runDraftLottery();
+ return {teams:state.teams.length,key:t.key,abbr:s.abbr,city:s.city,atlas:s.logoAtlas,index:s.logoIndex,capacity:s.stadiumCapacity,arena:s.arenaName,colors:s.colors.map(c=>c.name+c.hex),roster:s.roster.length,preset:state.expansion.history[0].config.preset,inLottery:state.draft.order.includes(30),fourth:state.draft.order[3]}})()`);
+assert.deepEqual(JSON.parse(JSON.stringify(exp)),{teams:31,key:'expansion-2026-30',abbr:'TPA',city:'Tampa',atlas:'preset',index:10,capacity:18200,arena:'Bayshore Arena',colors:['Aqua#2EC4C6','Secondary#203040','Coral#FF7F66'],roster:14,preset:'TPA',inLottery:true,fourth:30});
 // Relocation through the team editor: identity changes, franchise continuity preserved.
 run(`state=fresh(defaultTeams(),2,2025,'male',10);state.gmName='Preset test';state.history=[{a:0,b:1,sa:100,sb:90,winner:0,day:1,stage:'Regular season',box:[{name:'X',team:'ATL',pts:10,reb:1,ast:1}]}];`);
 const reloc=run(`(()=>{const t=state.teams[0],before={key:t.key,roster:t.roster.map(p=>p.id).join()},p=franchisePreset('NSH'),idx=PRESET_LOGO_OFFSET+FRANCHISE_PRESETS.indexOf(p),v={city:p.city,name:p.name,abbr:p.abbr,arenaName:p.arenaName,stadiumCapacity:String(p.capacity),marketSize:p.marketSize,logo:String(idx),secondaryLogoIndex:String(idx),arenaCity:'',elevationFt:'',...(state.scheduleFormat==='nba82'?{swap:''}:{divisionId:t.divisionId})};presetTeamDefinition(p).colors.forEach((c,i)=>{v['color'+i]=c.hex;v['colorName'+i]=c.name});applyManagedTeam(0,v);return {...before,after:{key:t.key,roster:t.roster.map(p=>p.id).join(),city:t.city,abbr:t.abbr,logoAtlas:t.logoAtlas,logoIndex:t.logoIndex,secondary:t.secondaryLogoIndex,capacity:t.stadiumCapacity,arena:t.arenaName,feet:altitudeVenue(t).feet},box:state.history[0].box[0].team}})()`);
@@ -78,4 +86,5 @@ assert.deepEqual(riv('Dallas','Houston'),['In-State Rivalry|geography'],'existin
 run(`state=fresh([...defaultTeams(),presetTeamDefinition(franchisePreset('BUF'))],2,2025,'male',10);`);
 assert.equal(run(`rivalryMatchup(state.teams.find(t=>t.abbr==='BUF'),state.teams.find(t=>t.abbr==='TOR')).split`),false);
 assert.equal(run(`rivalryMatchup(state.teams.find(t=>t.abbr==='BUF'),state.teams.find(t=>t.abbr==='NYE')).split`),true);
-console.log('Franchise presets: 12 identities, geography, altitude, logos, photos, setup/save validation, expansion config, relocation and rivalry classification passed.');
+console.log('Franchise presets (incl. preset expansion draft): 12 identities, geography, altitude, logos, photos, setup/save validation, expansion config, relocation and rivalry classification passed.');
+})().catch(e=>{console.error(e);process.exitCode=1});

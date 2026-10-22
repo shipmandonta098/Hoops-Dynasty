@@ -49,4 +49,11 @@ The engine has no geographic travel-distance or time-zone fatigue model. Coordin
 - `node dev/franchise-presets/season-check.cjs nba|wnba`: full seasons (regular season, All-Star, playoffs, draft, free agency, rollover) with headless integrity validators, a preset expansion attempt, a relocation, the Day-3 debut rule, and save/load round trips.
 - `node dev/franchise-presets/ui-check.cjs <dir>`: Chromium walkthrough with screenshots.
 
-Known limitations (pre-existing, not introduced by presets) are listed in the pull request and the final report: round-robin calendars fail the Opening Night Day-3 rule, and WNBA expansion cannot meet the roster minimum before the draft.
+Results (seed 7101): NBA, a 32-team custom 82-game league with Calgary and Newark, plus Ottawa by relocation, passed 18 of 18 checks over two full seasons. WNBA, 12 teams with Tampa and Winnipeg, plus San Jose by relocation, also passed 18 of 18. The unit test runs a full preset expansion draft (Tampa: logo, arena, 18,200 seats, colors, guaranteed #4 pick, save/load).
+
+## Known limitations (pre-existing, reproduced without presets)
+
+1. **Round-robin calendars cannot be generated.** `scheduleOpeningNight` now throws "Cannot fit the featured opener…" whenever displaced day-1 games have no free date. Round-robin rounds have no free dates, so any NBA league that is not exactly 30 aligned teams fails to start when it uses the default 2-meeting format. Every expansion rebuild (always round-robin) also fails, which is why `test-expansion.cjs` stops at `newSeason()`. The same failure reproduces with the original quick presets (Las Vegas, Vancouver) and with plain team counts from 31 to 36. The older version (`dev/fixtures/opening-night-b0a5718.js`) fell back to `constrained:true` instead. Workaround: League settings → Custom season format. A 32-team custom 82-game league schedules and simulates correctly.
+2. **The expansion draft rarely has enough players at the lottery window.** After a simulated season, CPU rosters sit at or near the minimum (NBA 14–15 of 14 minimum, WNBA 11 of 11), so the protection rules cannot supply a roster. The game shows its own "cannot supply" message.
+3. **NBA lottery weights cover 14 lottery teams.** Leagues larger than 30 need another draft type, for example Reverse standings.
+4. **The original quick presets** (Las Vegas, Vancouver, Montreal, Kansas City, Louisville, Pittsburgh, Baltimore, Mexico City) still borrow logos from the first eight default teams. They are unchanged here.
