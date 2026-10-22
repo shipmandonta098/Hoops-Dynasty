@@ -61,5 +61,34 @@ function tradePickLabel(p){return p.year+' R'+p.round+' ('+state.teams[p.origin]
 /* Legacy callers also enter the same validated offer flow. */
 trade=function(){return finalizeTradeCenter()};
 generateGMProposal=function(){if(state.day<1||state.day%7!==0||tradeDeadlinePassed()||!ownerCanManage())return;const box=inboxStore(),key=state.year+':'+state.day;if(box.lastProposal===key)return;box.lastProposal=key;for(const club of state.teams.filter(t=>t.id!==controlledTeamId()).filter(t=>!expansionPendingSeason(t)))for(const incoming of club.roster)for(const outgoing of team().roster){if(tradeLegality(team(),club,[outgoing],[incoming]).length)continue;const ai=tradeSideAssessment(club,[incoming],[outgoing]);if(!ai.accepted)continue;const user=tradeSideAssessment(team(),[outgoing],[incoming]);if(user.received<user.sent*.9)continue;addGMMessage('Trade proposal',club.city+' GM','Trade proposal from '+club.city,`Our direction is ${ai.timeline}. We offer ${incoming.name} for ${outgoing.name}. This offer passes current salary, roster and eligibility checks. Review before accepting.`,{club:club.id,out:outgoing.id,into:incoming.id});return}};
-function runAITradeRound(){const key=state.year+':'+state.day;if(state.day<1||state.day%7!==0||tradeDeadlinePassed()||state.tradeAILast===key)return;state.tradeAILast=key;const clubs=state.teams.filter(t=>t.id!==controlledTeamId()).filter(t=>!expansionPendingSeason(t));for(let i=0;i<clubs.length;i++){const a=clubs[(i+Math.floor(state.day/7))%clubs.length],b=clubs[(i+1+Math.floor(state.day/7))%clubs.length];for(const p of [...a.roster].sort((x,y)=>dissatisfactionTradePriority(y)-dissatisfactionTradePriority(x)))for(const q of b.roster){if(tradeLegality(a,b,[p],[q]).length||!tradeSideAssessment(a,[p],[q],[],[],0,{human:false}).accepted||!tradeSideAssessment(b,[q],[p],[],[],0,{human:false}).accepted)continue;a.roster[a.roster.indexOf(p)]=q;b.roster[b.roster.indexOf(q)]=p;for(const x of [p,q]){resetPlayerSituation(x);x.moraleAdjustment=-6;lockTradedPlayer(x)}for(const t of [a,b]){if(t.rotationPlan)t.rotationPlan=rotationFromClub(t);financeSync(t)}say('Trade completed: '+a.city+' acquires '+q.name+' from '+b.city+' in exchange for '+p.name+'.');return}}}
+// CPU trades. Packages (1-for-1, 2-for-1, 1-for-2, plus pick sweeteners) must pass tradeLegality and
+// both clubs' tradeSideAssessment. Contender–rebuilder pairs are tried first; activity rises before the deadline.
+const AI_TRADE_COOLDOWN_DAYS=21,AI_TRADE_DEADLINE_COOLDOWN_DAYS=7;
+function aiTradeDeadlineWindow(){const left=seasonMilestones().deadline-state.day;return left>=0&&left<=21}
+// Cooldown is derived from saved trade locks: received players carry tradeLockedUntil = trade day + TRADE_LOCK_DAYS.
+function aiTradeCoolingDown(t){const days=aiTradeDeadlineWindow()?AI_TRADE_DEADLINE_COOLDOWN_DAYS:AI_TRADE_COOLDOWN_DAYS;return t.roster.some(p=>p.tradeLockedUntil!==undefined&&p.tradeLockedUntil-TRADE_LOCK_DAYS>medicalStamp()-days)}
+function aiTradePairs(clubs,limit){const kind=new Map(clubs.map(t=>[t.id,tradeTimeline(t)])),rank=(a,b)=>{const k=[kind.get(a.id),kind.get(b.id)].sort().join('|');return k==='Contender|Rebuilding'?0:k.includes('Contender')||k.includes('Rebuilding')?1:2};
+ const pairs=[];for(let i=0;i<clubs.length;i++)for(let j=i+1;j<clubs.length;j++)pairs.push({a:clubs[i],b:clubs[j],tier:rank(clubs[i],clubs[j]),r:Math.random()});
+ return pairs.sort((x,y)=>x.tier-y.tier||x.r-y.r).slice(0,limit).map(({a,b})=>Math.random()<.5?[a,b]:[b,a])}
+function aiTradeCandidates(from,to,count){return from.roster.filter(p=>!tradeRestrictionText(p)).map(p=>({p,gain:tradePlayerValue(p,to)-tradePlayerValue(p,from)+dissatisfactionTradePriority(p)*.5})).sort((x,y)=>y.gain-x.gain||x.p.id-y.p.id).slice(0,count).map(x=>x.p)}
+function aiTradeEvaluate(a,b,out,into,outPicks=[],inPicks=[]){if(tradeLegality(a,b,out,into,0,outPicks,inPicks).length)return null;const sa=tradeSideAssessment(a,out,into,outPicks,inPicks,0,{human:false}),sb=tradeSideAssessment(b,into,out,inPicks,outPicks,0,{human:false});if(!sa.accepted||!sb.accepted)return {short:sb.accepted?null:sb};return {out,into,outPicks,inPicks,surplus:Math.min(sa.received/Math.max(.01,sa.sent),sb.received/Math.max(.01,sb.sent))}}
+function aiTradeBest(a,b){
+ const gives=aiTradeCandidates(a,b,6),gets=aiTradeCandidates(b,a,5),packages=[];
+ for(const q of gets){for(const p of gives)packages.push([[p],[q]]);for(let i=0;i<gives.length;i++)for(let j=i+1;j<gives.length;j++)packages.push([[gives[i],gives[j]],[q]])}
+ for(const p of gives)for(let i=0;i<gets.length;i++)for(let j=i+1;j<gets.length;j++)packages.push([[p],[gets[i],gets[j]]]);
+ const sweeteners=tradePicks(a).sort((x,y)=>tradePickValue(x,b)-tradePickValue(y,b)).slice(0,4);let best=null;
+ for(const [out,into] of packages){let r=aiTradeEvaluate(a,b,out,into);
+  // A package close to fair for the other club may be completed with the cheapest qualifying pick.
+  if(r&&!r.out&&r.short&&r.short.received>=r.short.sent*.7)for(const pick of sweeteners){r=aiTradeEvaluate(a,b,out,into,[pick]);if(r?.out)break}
+  if(r?.out&&(!best||r.surplus>best.surplus))best=r}
+ return best}
+function aiTradeExecute(a,b,d){if(typeof contractTrack==='function')contractTrack();
+ a.roster=a.roster.filter(p=>!d.out.includes(p)).concat(d.into);b.roster=b.roster.filter(p=>!d.into.includes(p)).concat(d.out);
+ for(const x of [...d.out,...d.into]){resetPlayerSituation(x);x.moraleAdjustment=-6;lockTradedPlayer(x)}
+ transferTradePicks(a,b,d.outPicks,d.inPicks);for(const t of [a,b]){if(t.rotationPlan)t.rotationPlan=rotationFromClub(t);updateCapSpace(t)}
+ if(typeof contractTrack==='function')contractTrack();
+ say('Trade completed: '+a.city+' acquires '+[...d.into.map(p=>p.name),...d.inPicks.map(tradePickLabel)].join(', ')+' from '+b.city+' in exchange for '+[...d.out.map(p=>p.name),...d.outPicks.map(tradePickLabel)].join(', ')+'.')}
+function runAITradeRound(){const key=state.year+':'+state.day,deadline=aiTradeDeadlineWindow();if(state.day<1||tradeDeadlinePassed()||state.tradeAILast===key||state.day%(deadline?3:7)!==0)return;state.tradeAILast=key;
+ const clubs=state.teams.filter(t=>t.id!==controlledTeamId()&&!expansionPendingSeason(t)&&!aiTradeCoolingDown(t)),cap=deadline?3:state.day<30?1:2,traded=new Set();let made=0;
+ for(const [a,b] of aiTradePairs(clubs,deadline?24:14)){if(made>=cap)break;if(traded.has(a.id)||traded.has(b.id))continue;const d=aiTradeBest(a,b);if(!d)continue;aiTradeExecute(a,b,d);traded.add(a.id);traded.add(b.id);made++}}
 const tradeOwnerDayBefore=ownerDay;ownerDay=function(...args){const r=tradeOwnerDayBefore(...args);runAITradeRound();return r};
