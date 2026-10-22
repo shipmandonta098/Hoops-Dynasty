@@ -1,0 +1,26 @@
+const assert=require('node:assert/strict'),{loadLeague}=require('./load-league.cjs');const r=loadLeague({seed:53,strictDOM:false});r.context.assert=assert;
+r.run(`
+state=validateCareerData(fresh(defaultTeams().slice(0,6),2,2026,'male',14));
+const club=team(),p=club.roster[0];p.personalityTraits=['steady','leader','balanced'];
+const pre={injured:false,average:20,expected:30,deep:false,score:60};
+const ctx={streak:0,chemistry:60,quality:'normal',rival:false,players:new Map([[p.id,pre]])};moralePerformanceContext=new Map([[club.id,ctx]]);
+const row={playerId:p.id,mp:30,pts:20,fgm:8,fga:15};state.history=[{a:0,b:1,winner:0,sa:100,sb:95,box:[row]}];
+assert.equal(performanceMoraleChange(p,club,true),2);
+ctx.streak=-4;assert(performanceMoraleChange(p,club,false)<=-6);ctx.streak=10;assert.equal(performanceMoraleChange(p,club,false),-1);ctx.streak=0;
+ctx.quality='top';assert.equal(performanceMoraleChange(p,club,true),7);ctx.quality='bottom';assert.equal(performanceMoraleChange(p,club,false),-7);ctx.quality='normal';ctx.rival=true;assert.equal(performanceMoraleChange(p,club,true),3);ctx.rival=false;
+p.personalityTraits=['steady','fiery','balanced'];assert.equal(performanceMoraleChange(p,club,false),-4);p.personalityTraits=['steady','professional','balanced'];assert.equal(performanceMoraleChange(p,club,false),0);
+p.personalityTraits=['steady','leader','diva'];row.fga=3;assert(performanceMoraleChange(p,club,true)<0);
+p.personalityTraits=['steady','leader','balanced'];row.fga=10;row.fgm=2;row.pts=4;row.mp=12;state.moralePerformance.players={};
+for(let i=0;i<3;i++)performanceMoraleChange(p,club,true);assert(performanceMood(p).slump);assert(performanceMood(p).reasons.includes('Three-game minutes below role expectations'));
+row.fga=12;row.fgm=8;row.pts=26;row.mp=35;performanceMoraleChange(p,club,true);assert(!performanceMood(p).slump);
+pre.deep=true;pre.expected=10;assert(performanceMoraleChange(p,club,true)>=9);pre.deep=false;pre.expected=30;
+state.history[0].moraleFinalShot={playerId:p.id,made:true,value:2,beforeMargin:-1,afterMargin:1,remaining:0};state.history[0].sa=100;state.history[0].sb=99;
+state.history[0].moraleWinningShot=state.history[0].moraleFinalShot;state.history[0].moraleFinalShot={playerId:999,made:false,value:3,beforeMargin:-1,afterMargin:-1,remaining:0};performanceMoraleChange(p,club,true);delete state.history[0].moraleWinningShot;assert.equal(performanceMood(p).clutchGames,3);assert.equal(performanceMood(p).clutchBoost,12);delete state.history[0].moraleFinalShot;
+for(let i=0;i<3;i++)performanceMoraleChange(p,club,true);assert.equal(performanceMood(p).clutchGames,0);
+state.history[0].moraleFinalShot={playerId:p.id,made:false,value:3,beforeMargin:-2,afterMargin:-2,remaining:0};assert(performanceMoraleChange(p,club,false)<-2);delete state.history[0].moraleFinalShot;
+const count=performanceMood(p).recent.length;pre.injured=true;row.mp=0;performanceMoraleChange(p,club,false);assert.equal(performanceMood(p).recent.length,count);
+const good=fresh(defaultTeams().slice(0,6),2,2026,'male',14);good.moralePerformance=copy(state.moralePerformance);assert.equal(validateCareerData(good).moralePerformance.players[p.id].recent.length,3);good.moralePerformance.players[p.id].clutchGames=100;assert.throws(()=>validateCareerData(good),/Invalid player performance morale/);
+assert.equal(moraleAttributeValue(80,'fg',95),80);assert(moraleAttributeValue(80,'per',50)<80);assert.equal(moraleAttributeValue(80,'drb',20),80);
+state=validateCareerData(fresh(defaultTeams().slice(0,6),2,2026,'male',14));moralePerformanceContext=null;const originals=JSON.stringify(state.teams.flatMap(t=>t.roster.map(p=>p.attributes)));play(0,1);assert.equal(JSON.stringify(state.teams.flatMap(t=>t.roster.map(p=>p.attributes))),originals);assert(state.teams.flatMap(t=>t.roster).every(p=>p.moraleAdjustment===undefined||Number.isInteger(p.moraleAdjustment)));assert.equal(moralePerformanceContext,null);
+`);console.log('PASS streaks, opponent quality, rivalry, personalities, minutes, slump/breakout, bench opportunity, clutch duration, injured exemption, save validation, and temporary attribute effects');
+(async()=>{r.run("state=validateCareerData(fresh(defaultTeams().slice(0,6),2,2026,'male',14));simulationExecution.mode='headless';simulationExecution.autopilot=true;");await r.run('simulateDayHeadless()');r.run('validateCareerData(copy(state));');console.log('PASS completed league day reload validation with performance morale');})().catch(e=>{console.error(e.message);process.exitCode=1});

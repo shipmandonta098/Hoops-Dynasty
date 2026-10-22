@@ -1,0 +1,13 @@
+const assert=require('node:assert/strict'),{loadLeague}=require('./load-league.cjs');
+(async()=>{const l=loadLeague({seed:10,strictDOM:false,sourceTransform:(name,code)=>name.startsWith('gm-career.js')?'save=async()=>globalThis.saveOK;'+code:code});Object.assign(l.context,{assert,saveOK:true});
+await l.run(`(async()=>{
+ const d=makeDraft();d.gmName='Edge GM';d.teams=d.teams.slice(0,4);d.meetings=2;state=validateCareerData(buildSetupCareer(d));render=()=>{};simulationExecution.mode='headless';gmEnsure();const id=gmEnsure().id;
+ // Achievement attribution uses simulation milestones and is idempotent.
+ state.day=seasonLength();state.champion=0;gmCaptureMilestones();gmCaptureMilestones();assert.equal(gmTotals().titles,1);gmEndEmployment('Resigned');state.gmCareer.marketEpoch=null;ownerFor(state.teams[1]).patience=0;state.teams[1].owner.fired=true;gmRefreshJobs();const offer=state.gmCareer.jobs.find(j=>j.teamId===1);assert(offer);state.gmCareer.reputation=95;await gmApply(offer.id);
+ const before=JSON.stringify(state);saveOK=false;await gmAccept(offer.id);assert.equal(JSON.stringify(state),before,'failed hiring save rolls back whole league and identity');assert.equal(controlledTeamId(),-1);saveOK=true;await gmAccept(offer.id);assert.equal(controlledTeamId(),1);gmCaptureMilestones();assert.equal(gmTotals().titles,1,'new team does not inherit GM title');assert.equal(gmFranchiseTitles(state.teams[1]),0);assert.equal(gmFranchiseTitles(state.teams[0]),1);
+ assert(editableCoach(1,coachContract(coachFor(team())).revision));assert.equal(editableCoach(0,coachContract(coachFor(state.teams[0])).revision),null);assert(coachContractPanel(team()).includes('controlledTeamId()'));
+ // A later championship belongs to the new tenure, and both stay on the GM record.
+ archiveFranchiseSeason();state.year++;state.day=0;state.champion=null;gmCaptureMilestones();state.day=seasonLength();state.champion=1;gmCaptureMilestones();assert.equal(gmTotals().titles,2);assert.equal(state.gmCareer.tenures[0].records[0].titles,1);assert.equal(state.gmCareer.tenures[1].records.find(r=>r.year===state.year).titles,1);assert.equal(gmFranchiseTitles(state.teams[0]),1);assert.equal(gmFranchiseTitles(state.teams[1]),1);gmCaptureHall();assert.equal(hallState().people.find(p=>p.key===state.gmCareer.hallKey).seasons.reduce((n,r)=>n+r.titles,0),2);
+ const split=hdSplit(makeCareerRecord(state,{id:'gm-storage'}));assert.equal(JSON.stringify(split.leagues[0].core.gmCareer),JSON.stringify(state.gmCareer));
+})()`);console.log('PASS hiring-save rollback, controlled-team coach contracts, milestone idempotency, two-franchise GM titles, separate franchise titles, persistent normalized storage core');
+})().catch(e=>{console.error(e.stack?.slice(0,1800));process.exitCode=1});

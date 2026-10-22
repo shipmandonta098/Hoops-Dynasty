@@ -1,0 +1,24 @@
+const fs=require('node:fs'),assert=require('node:assert/strict'),cp=require('node:child_process'),{candidate}=require('./putback-block-candidate.cjs');
+const a=require('./putback-block-baseline.json'),b=require('./putback-block-candidate.json'),c=require('./putback-block-production.json');
+assert.equal(a.baselineReproduction,'EXACT MATCH');for(const k of ['games','totals','metrics','running','puts','putback','secondPoints','tokens','parity'])assert.deepEqual(c[k],b[k],'exact adopted reproduction: '+k);
+assert.equal(c.parity,150);
+const source=cp.execFileSync('git',['show',a.parentCommit+':dist/attributes.js'],{encoding:'utf8'});assert.equal(fs.readFileSync('dist/attributes.js','utf8'),candidate('attributes.js',source));
+const controls=require('./putback-block-controls-production.json');assert.equal(controls.result,'PASS');assert.deepEqual(controls.controls,require('./putback-block-controls.json').controls);assert.deepEqual(controls.defensiveDifferentiation,require('./putback-block-controls.json').defensiveDifferentiation);
+for(const file of ['possession','headless','rules'])assert(fs.readFileSync('/tmp/putback-prod-'+file+'.log','utf8').includes('PASS:'));
+for(const file of ['ownership','context'])assert(fs.readFileSync('/tmp/putback-prod-'+file+'.log','utf8').includes('"result": "PASS"'));
+const aftermath={},slotTotals={baseline:0,candidate:0,baselineRegulation:0,candidateRegulation:0,baselineOT:0,candidateOT:0},overtimeChanges=[];
+for(let i=0;i<150;i++){
+ const g=c.games[i],prev=a.games[i];assert.equal(g.ownershipErrors+g.tokenErrors,0);
+ if(prev.firstLayup){for(const key of ['root','side','shotIndex','rngStart','preStateHash','eventIndex','prefixHash','makeProbability'])assert.equal(g.firstLayup[key],prev.firstLayup[key]);assert.equal(prev.firstLayup.blockDraws,0);assert(g.firstLayup.blockDraws>0)}else{assert.equal(g.gameHash,prev.gameHash);assert.equal(g.stateHash,prev.stateHash)}
+ for(const [key,game]of [['baseline',prev],['candidate',g]]){slotTotals[key]+=game.slots.length;slotTotals[key+'Regulation']+=game.slots.filter(s=>s.start<2880).length;slotTotals[key+'OT']+=game.clock.overtime;for(const s of game.slots.filter(s=>s.start>=2880))assert.equal(s.end-s.start,15);assert.equal(game.clock.elapsedSeconds,2880+game.clock.overtime*300);assert.equal(game.slots.filter(s=>s.start>=2880).length,20*game.clock.overtime)}
+ if(g.clock.overtime!==prev.clock.overtime)overtimeChanges.push({seed:g.seed,baseline:prev.clock.overtime,candidate:g.clock.overtime});
+ for(const b of g.blocks){const board=b.trace.find(e=>e.index>b.eventIndex&&['OREB','DREB'].includes(e.type));assert(board);const next=b.trace.find(e=>e.index>board.index&&e.type==='core entry');let status;
+  if(board.type==='OREB'){assert.equal(board.owner,b.side);assert(next?.recursive);assert.equal(next.clock,14);assert.equal(next.side,b.side);status='OREB: same-side recursive entry at 14';}
+  else {assert.equal(board.owner,1-b.side);if(!next)status='DREB: game ended';else if(next.expected===null)status='DREB: period boundary';else{assert.equal(next.side,board.owner);assert.equal(next.token,board.owner);status='DREB: immediate intended token consumption';}}
+  aftermath[status]=(aftermath[status]||0)+1;
+ }
+}
+assert.equal(slotTotals.baselineRegulation,slotTotals.candidateRegulation);
+const l=c.puts.filter(p=>!p.dunk),blocked=l.filter(p=>p.denied),sum=(r,f)=>r.reduce((n,p)=>n+f(p),0),dif=c.games.map((g,i)=>(g.score[0]+g.score[1]-a.games[i].score[0]-a.games[i].score[1])/2),mean=sum(dif,x=>x)/150,sd=Math.sqrt(sum(dif,x=>(x-mean)**2)/149),se=sd/Math.sqrt(150);
+const result={parentCommit:a.parentCommit,recommendation:'ADOPT',rationale:'Corrects a block-resolution bypass with the existing inside-shot formula; no ownership errors, no other pathway changes, all regressions pass. Not a claim of league scoring reduction.',fixture:c.fixture,productionReproduction:'EXACT MATCH',parity:150,metrics:c.metrics,totals:c.totals,running:c.running,putback:c.putback,tokens:c.tokens,aftermath,repeatPutbacks:sum(blocked,p=>p.repeatPutbacks),slotTotals,overtimeChanges,ownershipErrors:0,tokenErrors:0,firstDivergenceVerifiedGames:150,blockerRatings:Object.fromEntries(['rim','sbl','rawRim','rawBlock'].map(k=>[k,{mean:sum(blocked,p=>p[k])/blocked.length,min:Math.min(...blocked.map(p=>p[k])),max:Math.max(...blocked.map(p=>p[k]))}])),frozenArithmetic:{makeOnly:sum(l,p=>p.makeProbability)/l.length,withBlock:sum(l,p=>p.makeProbability*(1-p.blockRate))/l.length,averageBlockRisk:sum(l,p=>p.blockRate)/l.length},pairedPPG:{mean,standardError:se,approximate95Interval:[mean-1.96*se,mean+1.96*se]},regressions:{putbackControls:'PASS',ownershipControls:16,contextControls:32,possession:'PASS',headless:'PASS',simulationRules:'PASS'}};
+fs.writeFileSync('dev/putback-block-adopted-baseline.json',JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));

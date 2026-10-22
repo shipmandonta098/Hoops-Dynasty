@@ -1,0 +1,194 @@
+[
+  {
+    "file": "context-nba-identical-902.json.gz",
+    "games": 160,
+    "rawSHA256": "90c963247be4096dc1f927320bbba57e89d1555cf897d4ab727a89520e32924a",
+    "bytes": 4111625
+  },
+  {
+    "file": "context-wnba-identical-902.json.gz",
+    "games": 160,
+    "rawSHA256": "ef6bab7fe666a278c6a10128179e10b930f68af7c1ee5fb5c6eb42728642758c",
+    "bytes": 3469807
+  },
+  {
+    "file": "nba-bench-901.json.gz",
+    "games": 160,
+    "rawSHA256": "db5b439aa46842877e09cd7d33334a108ce1d608c6866011e260a76d3bec598c",
+    "bytes": 3939489
+  },
+  {
+    "file": "nba-coaching-901.json.gz",
+    "games": 160,
+    "rawSHA256": "69678daa70a45429534e7fa1d23fba7911cc1dfc0c06c0112d68f96bf9e8da4c",
+    "bytes": 3919380
+  },
+  {
+    "file": "nba-defense-901.json.gz",
+    "games": 160,
+    "rawSHA256": "4cb191f5dd27cdeeb83b57de3c6c1b63e56f7ac6590bcd7a8b220ed605aabc35",
+    "bytes": 3909775
+  },
+  {
+    "file": "nba-fatigue-901.json.gz",
+    "games": 160,
+    "rawSHA256": "8264c3b3e857a0d09456825bd66fe7b46761de3038eef34cb4feada4f95c943c",
+    "bytes": 4020992
+  },
+  {
+    "file": "nba-handling-901.json.gz",
+    "games": 160,
+    "rawSHA256": "0c857b17d6ec755d6d21a977dd825933753028d5b8d7365f59e7cf9b7aad29a7",
+    "bytes": 3963383
+  },
+  {
+    "file": "nba-identical-901.json.gz",
+    "games": 160,
+    "rawSHA256": "ece39b884868b7cbb4aea92be3748209e526fdcaa8306e3ad6b3321f59bb444b",
+    "bytes": 3897046
+  },
+  {
+    "file": "nba-league-301.json.gz",
+    "games": 160,
+    "rawSHA256": "5d4df3795b83311b4eb9f72dec1637d8e139df97634df48187f3071875c30a16",
+    "bytes": 4166258
+  },
+  {
+    "file": "nba-league-302.json.gz",
+    "games": 160,
+    "rawSHA256": "3280463cc8b9eaf22e7680fc6065e121484cd051a70dc12a3f4ae60180ee7e90",
+    "bytes": 4068037
+  },
+  {
+    "file": "nba-league-303.json.gz",
+    "games": 160,
+    "rawSHA256": "838eef998fb2fa6376b1f48eb99a744bd26e33bc7f887392ec41834b44225caf",
+    "bytes": 4082501
+  },
+  {
+    "file": "nba-league-304.json.gz",
+    "games": 160,
+    "rawSHA256": "4ff96fea700d931342092865f38f0009578c90ac8d00c53d59e59c262607695c",
+    "bytes": 4082212
+  },
+  {
+    "file": "nba-pace-901.json.gz",
+    "games": 160,
+    "rawSHA256": "147cf5c85fabb75dd79e7273ac1af7772c8aeb3e15660c54685d3283761c35b9",
+    "bytes": 4107635
+  },
+  {
+    "file": "nba-poor-defense-901.json.gz",
+    "games": 160,
+    "rawSHA256": "dc49f6e6918a793e5a146b19ee80286bc21a380bc682e19d43548867a1ed9947",
+    "bytes": 3972739
+  },
+  {
+    "file": "nba-rebounds-901.json.gz",
+    "games": 160,
+    "rawSHA256": "4dca408c06a6095ed4be730aa48664a82e603dec72df3f4a8446ce6e8952c4a5",
+    "bytes": 3901874
+  },
+  {
+    "file": "nba-selection-901.json.gz",
+    "games": 160,
+    "rawSHA256": "00e3deeae27c985ce768a09ca00ca5d42c86cf36621f569b2ce3edb7fd51a29b",
+    "bytes": 3890084
+  },
+  {
+    "file": "nba-three-901.json.gz",
+    "games": 160,
+    "rawSHA256": "2255cb38b210583abc1d21045bc49abffe33b3ae562fdf3cc3efff0c1e78098c",
+    "bytes": 3920939
+  },
+  {
+    "file": "wnba-bench-901.json.gz",
+    "games": 160,
+    "rawSHA256": "005d69c475e6f7d8f1acc89df2d10802210283a4b96682bb1e8e1dc391e4da68",
+    "bytes": 3380722
+  },
+  {
+    "file": "wnba-coaching-901.json.gz",
+    "games": 160,
+    "rawSHA256": "8119fbbf9a90ebe9acf5b78fbc0fc0f29e158573d2124dc077ee547a7acd2cfd",
+    "bytes": 3357228
+  },
+  {
+    "file": "wnba-defense-901.json.gz",
+    "games": 160,
+    "rawSHA256": "b7b11ca95a88ef5a058ab45a6faf59f33593df40325f1bdfc1ab536fa89eb093",
+    "bytes": 3349445
+  },
+  {
+    "file": "wnba-fatigue-901.json.gz",
+    "games": 160,
+    "rawSHA256": "d352337cf4afb69c6a932cccd5016b193ef97ae09d5871c5dbb8f5fbe3cf979b",
+    "bytes": 3452888
+  },
+  {
+    "file": "wnba-handling-901.json.gz",
+    "games": 160,
+    "rawSHA256": "092d6784077f7c096aaf0e1036f704b6714bb13e502690ee285a13e851053042",
+    "bytes": 3374284
+  },
+  {
+    "file": "wnba-identical-901.json.gz",
+    "games": 160,
+    "rawSHA256": "374c45df4316f532a2095b09e07657e04982316750378fa1b28790828eb03793",
+    "bytes": 3359392
+  },
+  {
+    "file": "wnba-league-301.json.gz",
+    "games": 160,
+    "rawSHA256": "f4a06596a5a7011ab75105e50782040bf7be9995f6528a3022ac7a1139f6405e",
+    "bytes": 3429930
+  },
+  {
+    "file": "wnba-league-302.json.gz",
+    "games": 160,
+    "rawSHA256": "ead779ca018326e7a7391ef2ae5559158b08f18c626b582ae002f50fc0d21380",
+    "bytes": 3428271
+  },
+  {
+    "file": "wnba-league-303.json.gz",
+    "games": 160,
+    "rawSHA256": "38d87a6af2403e37af922d08dcfe21e4591d91b85b922b94117281296e65f804",
+    "bytes": 3435629
+  },
+  {
+    "file": "wnba-league-304.json.gz",
+    "games": 160,
+    "rawSHA256": "d5ec6c349c7fda442fa3901d6ded7a72d12f51f6d02faf0e8ba475c8ff6148c0",
+    "bytes": 3405127
+  },
+  {
+    "file": "wnba-pace-901.json.gz",
+    "games": 160,
+    "rawSHA256": "ecea5f24cabb1b74f28fb57c2e6bad5f1f40385faab9e33c2fbe7202cda9237f",
+    "bytes": 3506806
+  },
+  {
+    "file": "wnba-poor-defense-901.json.gz",
+    "games": 160,
+    "rawSHA256": "e486090b58c534db5f424af52733871ccf0d9aaff74432762698bd877d48aa31",
+    "bytes": 3394751
+  },
+  {
+    "file": "wnba-rebounds-901.json.gz",
+    "games": 160,
+    "rawSHA256": "34e8d1006d6cf625aff108314c8c6209a2913ed2b7450c589d20542cb1c717e1",
+    "bytes": 3351438
+  },
+  {
+    "file": "wnba-selection-901.json.gz",
+    "games": 160,
+    "rawSHA256": "bb294d962d92747e057eb51a0483bd8f75b1cf70b5cc360198886f913855dee9",
+    "bytes": 3340304
+  },
+  {
+    "file": "wnba-three-901.json.gz",
+    "games": 160,
+    "rawSHA256": "a82893976bb850cdc55b76b3ef0eb5dcd98212dc92714438b0d2428ed22eb0d9",
+    "bytes": 3346406
+  }
+]

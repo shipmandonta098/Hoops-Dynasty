@@ -1,0 +1,1332 @@
+{
+  "games": 136,
+  "validatedGames": 134,
+  "possessions": 26876,
+  "mean": 1.1241628218484894,
+  "variance": 1.4256834597221162,
+  "distribution": {
+    "0": 50.070695043905346,
+    "1": 3.0101205536538176,
+    "2": 31.52626878999851,
+    "3": 15.24780473284715,
+    "4+": 0.14511087959517785
+  },
+  "checks": [
+    {
+      "file": "nba-0022400001.json",
+      "valid": true,
+      "errors": [],
+      "points": 233,
+      "accounted": 233,
+      "administrativeFT": 0,
+      "possessions": 198
+    },
+    {
+      "file": "nba-0022400002.json",
+      "valid": true,
+      "errors": [],
+      "points": 244,
+      "accounted": 244,
+      "administrativeFT": 1,
+      "possessions": 211
+    },
+    {
+      "file": "nba-0022400003.json",
+      "valid": true,
+      "errors": [],
+      "points": 203,
+      "accounted": 203,
+      "administrativeFT": 3,
+      "possessions": 201
+    },
+    {
+      "file": "nba-0022400004.json",
+      "valid": true,
+      "errors": [],
+      "points": 210,
+      "accounted": 210,
+      "administrativeFT": 0,
+      "possessions": 201
+    },
+    {
+      "file": "nba-0022400005.json",
+      "valid": true,
+      "errors": [],
+      "points": 184,
+      "accounted": 184,
+      "administrativeFT": 0,
+      "possessions": 198
+    },
+    {
+      "file": "nba-0022400006.json",
+      "valid": true,
+      "errors": [],
+      "points": 232,
+      "accounted": 232,
+      "administrativeFT": 0,
+      "possessions": 192
+    },
+    {
+      "file": "nba-0022400007.json",
+      "valid": true,
+      "errors": [],
+      "points": 237,
+      "accounted": 237,
+      "administrativeFT": 0,
+      "possessions": 207
+    },
+    {
+      "file": "nba-0022400008.json",
+      "valid": true,
+      "errors": [],
+      "points": 230,
+      "accounted": 230,
+      "administrativeFT": 0,
+      "possessions": 200
+    },
+    {
+      "file": "nba-0022400009.json",
+      "valid": true,
+      "errors": [],
+      "points": 235,
+      "accounted": 235,
+      "administrativeFT": 1,
+      "possessions": 201
+    },
+    {
+      "file": "nba-0022400010.json",
+      "valid": true,
+      "errors": [],
+      "points": 184,
+      "accounted": 184,
+      "administrativeFT": 1,
+      "possessions": 183
+    },
+    {
+      "file": "nba-0022400011.json",
+      "valid": true,
+      "errors": [],
+      "points": 194,
+      "accounted": 194,
+      "administrativeFT": 0,
+      "possessions": 204
+    },
+    {
+      "file": "nba-0022400012.json",
+      "valid": true,
+      "errors": [],
+      "points": 246,
+      "accounted": 246,
+      "administrativeFT": 1,
+      "possessions": 223
+    },
+    {
+      "file": "nba-0022400013.json",
+      "valid": true,
+      "errors": [],
+      "points": 270,
+      "accounted": 270,
+      "administrativeFT": 0,
+      "possessions": 215
+    },
+    {
+      "file": "nba-0022400014.json",
+      "valid": true,
+      "errors": [],
+      "points": 246,
+      "accounted": 246,
+      "administrativeFT": 1,
+      "possessions": 195
+    },
+    {
+      "file": "nba-0022400015.json",
+      "valid": true,
+      "errors": [],
+      "points": 235,
+      "accounted": 235,
+      "administrativeFT": 0,
+      "possessions": 196
+    },
+    {
+      "file": "nba-0022400016.json",
+      "valid": true,
+      "errors": [],
+      "points": 229,
+      "accounted": 229,
+      "administrativeFT": 1,
+      "possessions": 210
+    },
+    {
+      "file": "nba-0022400017.json",
+      "valid": true,
+      "errors": [],
+      "points": 195,
+      "accounted": 195,
+      "administrativeFT": 0,
+      "possessions": 186
+    },
+    {
+      "file": "nba-0022400018.json",
+      "valid": true,
+      "errors": [],
+      "points": 182,
+      "accounted": 182,
+      "administrativeFT": 0,
+      "possessions": 194
+    },
+    {
+      "file": "nba-0022400019.json",
+      "valid": true,
+      "errors": [],
+      "points": 241,
+      "accounted": 241,
+      "administrativeFT": 3,
+      "possessions": 218
+    },
+    {
+      "file": "nba-0022400020.json",
+      "valid": true,
+      "errors": [],
+      "points": 256,
+      "accounted": 256,
+      "administrativeFT": 0,
+      "possessions": 212
+    },
+    {
+      "file": "nba-0022400021.json",
+      "valid": true,
+      "errors": [],
+      "points": 237,
+      "accounted": 237,
+      "administrativeFT": 0,
+      "possessions": 188
+    },
+    {
+      "file": "nba-0022400022.json",
+      "valid": true,
+      "errors": [],
+      "points": 231,
+      "accounted": 231,
+      "administrativeFT": 2,
+      "possessions": 196
+    },
+    {
+      "file": "nba-0022400023.json",
+      "valid": true,
+      "errors": [],
+      "points": 232,
+      "accounted": 232,
+      "administrativeFT": 1,
+      "possessions": 224
+    },
+    {
+      "file": "nba-0022400024.json",
+      "valid": true,
+      "errors": [],
+      "points": 223,
+      "accounted": 223,
+      "administrativeFT": 1,
+      "possessions": 201
+    },
+    {
+      "file": "nba-0022400025.json",
+      "valid": true,
+      "errors": [],
+      "points": 214,
+      "accounted": 214,
+      "administrativeFT": 0,
+      "possessions": 200
+    },
+    {
+      "file": "nba-0022400026.json",
+      "valid": true,
+      "errors": [],
+      "points": 242,
+      "accounted": 242,
+      "administrativeFT": 0,
+      "possessions": 200
+    },
+    {
+      "file": "nba-0022400027.json",
+      "valid": true,
+      "errors": [],
+      "points": 211,
+      "accounted": 211,
+      "administrativeFT": 1,
+      "possessions": 185
+    },
+    {
+      "file": "nba-0022400028.json",
+      "valid": true,
+      "errors": [],
+      "points": 204,
+      "accounted": 204,
+      "administrativeFT": 0,
+      "possessions": 206
+    },
+    {
+      "file": "nba-0022400029.json",
+      "valid": true,
+      "errors": [],
+      "points": 246,
+      "accounted": 246,
+      "administrativeFT": 1,
+      "possessions": 210
+    },
+    {
+      "file": "nba-0022400030.json",
+      "valid": true,
+      "errors": [],
+      "points": 258,
+      "accounted": 258,
+      "administrativeFT": 1,
+      "possessions": 216
+    },
+    {
+      "file": "nba-0022400031.json",
+      "valid": true,
+      "errors": [],
+      "points": 204,
+      "accounted": 204,
+      "administrativeFT": 0,
+      "possessions": 207
+    },
+    {
+      "file": "nba-0022400032.json",
+      "valid": true,
+      "errors": [],
+      "points": 220,
+      "accounted": 220,
+      "administrativeFT": 1,
+      "possessions": 200
+    },
+    {
+      "file": "nba-0022400033.json",
+      "valid": true,
+      "errors": [],
+      "points": 243,
+      "accounted": 243,
+      "administrativeFT": 0,
+      "possessions": 202
+    },
+    {
+      "file": "nba-0022400034.json",
+      "valid": true,
+      "errors": [],
+      "points": 192,
+      "accounted": 192,
+      "administrativeFT": 1,
+      "possessions": 198
+    },
+    {
+      "file": "nba-0022400035.json",
+      "valid": true,
+      "errors": [],
+      "points": 235,
+      "accounted": 235,
+      "administrativeFT": 0,
+      "possessions": 216
+    },
+    {
+      "file": "nba-0022400036.json",
+      "valid": true,
+      "errors": [],
+      "points": 209,
+      "accounted": 209,
+      "administrativeFT": 0,
+      "possessions": 175
+    },
+    {
+      "file": "nba-0022400037.json",
+      "valid": true,
+      "errors": [],
+      "points": 228,
+      "accounted": 228,
+      "administrativeFT": 1,
+      "possessions": 214
+    },
+    {
+      "file": "nba-0022400038.json",
+      "valid": true,
+      "errors": [],
+      "points": 243,
+      "accounted": 243,
+      "administrativeFT": 2,
+      "possessions": 201
+    },
+    {
+      "file": "nba-0022400039.json",
+      "valid": true,
+      "errors": [],
+      "points": 227,
+      "accounted": 227,
+      "administrativeFT": 1,
+      "possessions": 200
+    },
+    {
+      "file": "nba-0022400040.json",
+      "valid": true,
+      "errors": [],
+      "points": 197,
+      "accounted": 197,
+      "administrativeFT": 1,
+      "possessions": 187
+    },
+    {
+      "file": "nba-0022400041.json",
+      "valid": true,
+      "errors": [],
+      "points": 218,
+      "accounted": 218,
+      "administrativeFT": 1,
+      "possessions": 206
+    },
+    {
+      "file": "nba-0022400042.json",
+      "valid": true,
+      "errors": [],
+      "points": 229,
+      "accounted": 229,
+      "administrativeFT": 0,
+      "possessions": 206
+    },
+    {
+      "file": "nba-0022400043.json",
+      "valid": true,
+      "errors": [],
+      "points": 223,
+      "accounted": 223,
+      "administrativeFT": 2,
+      "possessions": 193
+    },
+    {
+      "file": "nba-0022400044.json",
+      "valid": true,
+      "errors": [],
+      "points": 185,
+      "accounted": 185,
+      "administrativeFT": 0,
+      "possessions": 190
+    },
+    {
+      "file": "nba-0022400045.json",
+      "valid": true,
+      "errors": [],
+      "points": 236,
+      "accounted": 236,
+      "administrativeFT": 0,
+      "possessions": 202
+    },
+    {
+      "file": "nba-0022400046.json",
+      "valid": true,
+      "errors": [],
+      "points": 232,
+      "accounted": 232,
+      "administrativeFT": 0,
+      "possessions": 193
+    },
+    {
+      "file": "nba-0022400047.json",
+      "valid": true,
+      "errors": [],
+      "points": 267,
+      "accounted": 267,
+      "administrativeFT": 0,
+      "possessions": 208
+    },
+    {
+      "file": "nba-0022400048.json",
+      "valid": true,
+      "errors": [],
+      "points": 194,
+      "accounted": 194,
+      "administrativeFT": 1,
+      "possessions": 185
+    },
+    {
+      "file": "nba-0022400049.json",
+      "valid": true,
+      "errors": [],
+      "points": 221,
+      "accounted": 221,
+      "administrativeFT": 0,
+      "possessions": 196
+    },
+    {
+      "file": "nba-0022400050.json",
+      "valid": true,
+      "errors": [],
+      "points": 214,
+      "accounted": 214,
+      "administrativeFT": 1,
+      "possessions": 189
+    },
+    {
+      "file": "nba-0022400051.json",
+      "valid": true,
+      "errors": [],
+      "points": 205,
+      "accounted": 205,
+      "administrativeFT": 1,
+      "possessions": 205
+    },
+    {
+      "file": "nba-0022400052.json",
+      "valid": false,
+      "errors": [
+        "unclassified score"
+      ],
+      "points": 235,
+      "accounted": 233,
+      "administrativeFT": 2,
+      "possessions": 202
+    },
+    {
+      "file": "nba-0022400053.json",
+      "valid": true,
+      "errors": [],
+      "points": 227,
+      "accounted": 227,
+      "administrativeFT": 0,
+      "possessions": 205
+    },
+    {
+      "file": "nba-0022400054.json",
+      "valid": true,
+      "errors": [],
+      "points": 233,
+      "accounted": 233,
+      "administrativeFT": 1,
+      "possessions": 216
+    },
+    {
+      "file": "nba-0022400055.json",
+      "valid": true,
+      "errors": [],
+      "points": 239,
+      "accounted": 239,
+      "administrativeFT": 0,
+      "possessions": 191
+    },
+    {
+      "file": "nba-0022400056.json",
+      "valid": true,
+      "errors": [],
+      "points": 237,
+      "accounted": 237,
+      "administrativeFT": 2,
+      "possessions": 214
+    },
+    {
+      "file": "nba-0022400057.json",
+      "valid": true,
+      "errors": [],
+      "points": 197,
+      "accounted": 197,
+      "administrativeFT": 0,
+      "possessions": 200
+    },
+    {
+      "file": "nba-0022400058.json",
+      "valid": true,
+      "errors": [],
+      "points": 234,
+      "accounted": 234,
+      "administrativeFT": 0,
+      "possessions": 211
+    },
+    {
+      "file": "nba-0022400059.json",
+      "valid": true,
+      "errors": [],
+      "points": 231,
+      "accounted": 231,
+      "administrativeFT": 4,
+      "possessions": 188
+    },
+    {
+      "file": "nba-0022400060.json",
+      "valid": true,
+      "errors": [],
+      "points": 232,
+      "accounted": 232,
+      "administrativeFT": 0,
+      "possessions": 186
+    },
+    {
+      "file": "nba-0022400061.json",
+      "valid": true,
+      "errors": [],
+      "points": 241,
+      "accounted": 241,
+      "administrativeFT": 0,
+      "possessions": 179
+    },
+    {
+      "file": "nba-0022400062.json",
+      "valid": true,
+      "errors": [],
+      "points": 213,
+      "accounted": 213,
+      "administrativeFT": 0,
+      "possessions": 189
+    },
+    {
+      "file": "nba-0022400063.json",
+      "valid": true,
+      "errors": [],
+      "points": 224,
+      "accounted": 224,
+      "administrativeFT": 2,
+      "possessions": 197
+    },
+    {
+      "file": "nba-0022400064.json",
+      "valid": true,
+      "errors": [],
+      "points": 236,
+      "accounted": 236,
+      "administrativeFT": 1,
+      "possessions": 211
+    },
+    {
+      "file": "nba-0022400065.json",
+      "valid": true,
+      "errors": [],
+      "points": 213,
+      "accounted": 213,
+      "administrativeFT": 1,
+      "possessions": 196
+    },
+    {
+      "file": "nba-0022400066.json",
+      "valid": true,
+      "errors": [],
+      "points": 233,
+      "accounted": 233,
+      "administrativeFT": 1,
+      "possessions": 198
+    },
+    {
+      "file": "nba-0022400067.json",
+      "valid": true,
+      "errors": [],
+      "points": 242,
+      "accounted": 242,
+      "administrativeFT": 0,
+      "possessions": 202
+    },
+    {
+      "file": "nba-0022400068.json",
+      "valid": true,
+      "errors": [],
+      "points": 215,
+      "accounted": 215,
+      "administrativeFT": 0,
+      "possessions": 193
+    },
+    {
+      "file": "nba-0022400069.json",
+      "valid": true,
+      "errors": [],
+      "points": 234,
+      "accounted": 234,
+      "administrativeFT": 0,
+      "possessions": 215
+    },
+    {
+      "file": "nba-0022400070.json",
+      "valid": true,
+      "errors": [],
+      "points": 250,
+      "accounted": 250,
+      "administrativeFT": 1,
+      "possessions": 210
+    },
+    {
+      "file": "nba-0022400071.json",
+      "valid": true,
+      "errors": [],
+      "points": 229,
+      "accounted": 229,
+      "administrativeFT": 0,
+      "possessions": 226
+    },
+    {
+      "file": "nba-0022400072.json",
+      "valid": true,
+      "errors": [],
+      "points": 244,
+      "accounted": 244,
+      "administrativeFT": 1,
+      "possessions": 216
+    },
+    {
+      "file": "nba-0022400073.json",
+      "valid": true,
+      "errors": [],
+      "points": 224,
+      "accounted": 224,
+      "administrativeFT": 0,
+      "possessions": 208
+    },
+    {
+      "file": "nba-0022400074.json",
+      "valid": true,
+      "errors": [],
+      "points": 229,
+      "accounted": 229,
+      "administrativeFT": 0,
+      "possessions": 209
+    },
+    {
+      "file": "nba-0022400075.json",
+      "valid": true,
+      "errors": [],
+      "points": 189,
+      "accounted": 189,
+      "administrativeFT": 1,
+      "possessions": 197
+    },
+    {
+      "file": "nba-0022400076.json",
+      "valid": true,
+      "errors": [],
+      "points": 232,
+      "accounted": 232,
+      "administrativeFT": 0,
+      "possessions": 203
+    },
+    {
+      "file": "nba-0022400077.json",
+      "valid": true,
+      "errors": [],
+      "points": 217,
+      "accounted": 217,
+      "administrativeFT": 1,
+      "possessions": 198
+    },
+    {
+      "file": "nba-0022400078.json",
+      "valid": true,
+      "errors": [],
+      "points": 222,
+      "accounted": 222,
+      "administrativeFT": 1,
+      "possessions": 203
+    },
+    {
+      "file": "nba-0022400079.json",
+      "valid": true,
+      "errors": [],
+      "points": 245,
+      "accounted": 245,
+      "administrativeFT": 1,
+      "possessions": 210
+    },
+    {
+      "file": "nba-0022400080.json",
+      "valid": true,
+      "errors": [],
+      "points": 214,
+      "accounted": 214,
+      "administrativeFT": 3,
+      "possessions": 196
+    },
+    {
+      "file": "nba-0022400081.json",
+      "valid": true,
+      "errors": [],
+      "points": 221,
+      "accounted": 221,
+      "administrativeFT": 0,
+      "possessions": 196
+    },
+    {
+      "file": "nba-0022400082.json",
+      "valid": true,
+      "errors": [],
+      "points": 236,
+      "accounted": 236,
+      "administrativeFT": 0,
+      "possessions": 218
+    },
+    {
+      "file": "nba-0022400083.json",
+      "valid": true,
+      "errors": [],
+      "points": 255,
+      "accounted": 255,
+      "administrativeFT": 1,
+      "possessions": 217
+    },
+    {
+      "file": "nba-0022400084.json",
+      "valid": true,
+      "errors": [],
+      "points": 213,
+      "accounted": 213,
+      "administrativeFT": 0,
+      "possessions": 206
+    },
+    {
+      "file": "nba-0022400085.json",
+      "valid": true,
+      "errors": [],
+      "points": 239,
+      "accounted": 239,
+      "administrativeFT": 0,
+      "possessions": 204
+    },
+    {
+      "file": "nba-0022400086.json",
+      "valid": true,
+      "errors": [],
+      "points": 208,
+      "accounted": 208,
+      "administrativeFT": 5,
+      "possessions": 205
+    },
+    {
+      "file": "nba-0022400087.json",
+      "valid": true,
+      "errors": [],
+      "points": 213,
+      "accounted": 213,
+      "administrativeFT": 1,
+      "possessions": 191
+    },
+    {
+      "file": "nba-0022400088.json",
+      "valid": true,
+      "errors": [],
+      "points": 220,
+      "accounted": 220,
+      "administrativeFT": 0,
+      "possessions": 199
+    },
+    {
+      "file": "nba-0022400089.json",
+      "valid": true,
+      "errors": [],
+      "points": 242,
+      "accounted": 242,
+      "administrativeFT": 1,
+      "possessions": 195
+    },
+    {
+      "file": "nba-0022400090.json",
+      "valid": true,
+      "errors": [],
+      "points": 251,
+      "accounted": 251,
+      "administrativeFT": 0,
+      "possessions": 209
+    },
+    {
+      "file": "nba-0022400091.json",
+      "valid": true,
+      "errors": [],
+      "points": 209,
+      "accounted": 209,
+      "administrativeFT": 1,
+      "possessions": 227
+    },
+    {
+      "file": "nba-0022400092.json",
+      "valid": true,
+      "errors": [],
+      "points": 235,
+      "accounted": 235,
+      "administrativeFT": 2,
+      "possessions": 205
+    },
+    {
+      "file": "nba-0022400093.json",
+      "valid": true,
+      "errors": [],
+      "points": 213,
+      "accounted": 213,
+      "administrativeFT": 0,
+      "possessions": 199
+    },
+    {
+      "file": "nba-0022400094.json",
+      "valid": true,
+      "errors": [],
+      "points": 215,
+      "accounted": 215,
+      "administrativeFT": 2,
+      "possessions": 192
+    },
+    {
+      "file": "nba-0022400095.json",
+      "valid": false,
+      "errors": [
+        "score correction",
+        "unclassified score"
+      ],
+      "points": 216,
+      "accounted": 217,
+      "administrativeFT": 1,
+      "possessions": 195
+    },
+    {
+      "file": "nba-0022400096.json",
+      "valid": true,
+      "errors": [],
+      "points": 258,
+      "accounted": 258,
+      "administrativeFT": 0,
+      "possessions": 212
+    },
+    {
+      "file": "nba-0022400097.json",
+      "valid": true,
+      "errors": [],
+      "points": 232,
+      "accounted": 232,
+      "administrativeFT": 1,
+      "possessions": 217
+    },
+    {
+      "file": "nba-0022400098.json",
+      "valid": true,
+      "errors": [],
+      "points": 217,
+      "accounted": 217,
+      "administrativeFT": 0,
+      "possessions": 197
+    },
+    {
+      "file": "nba-0022400099.json",
+      "valid": true,
+      "errors": [],
+      "points": 228,
+      "accounted": 228,
+      "administrativeFT": 1,
+      "possessions": 194
+    },
+    {
+      "file": "nba-0022400100.json",
+      "valid": true,
+      "errors": [],
+      "points": 232,
+      "accounted": 232,
+      "administrativeFT": 3,
+      "possessions": 200
+    },
+    {
+      "file": "nba-0022400127.json",
+      "valid": true,
+      "errors": [],
+      "points": 211,
+      "accounted": 211,
+      "administrativeFT": 0,
+      "possessions": 189
+    },
+    {
+      "file": "nba-0022400158.json",
+      "valid": true,
+      "errors": [],
+      "points": 210,
+      "accounted": 210,
+      "administrativeFT": 0,
+      "possessions": 187
+    },
+    {
+      "file": "nba-0022400190.json",
+      "valid": true,
+      "errors": [],
+      "points": 227,
+      "accounted": 227,
+      "administrativeFT": 0,
+      "possessions": 183
+    },
+    {
+      "file": "nba-0022400221.json",
+      "valid": true,
+      "errors": [],
+      "points": 194,
+      "accounted": 194,
+      "administrativeFT": 1,
+      "possessions": 189
+    },
+    {
+      "file": "nba-0022400253.json",
+      "valid": true,
+      "errors": [],
+      "points": 228,
+      "accounted": 228,
+      "administrativeFT": 0,
+      "possessions": 192
+    },
+    {
+      "file": "nba-0022400284.json",
+      "valid": true,
+      "errors": [],
+      "points": 248,
+      "accounted": 248,
+      "administrativeFT": 3,
+      "possessions": 199
+    },
+    {
+      "file": "nba-0022400316.json",
+      "valid": true,
+      "errors": [],
+      "points": 197,
+      "accounted": 197,
+      "administrativeFT": 0,
+      "possessions": 192
+    },
+    {
+      "file": "nba-0022400347.json",
+      "valid": true,
+      "errors": [],
+      "points": 208,
+      "accounted": 208,
+      "administrativeFT": 0,
+      "possessions": 205
+    },
+    {
+      "file": "nba-0022400379.json",
+      "valid": true,
+      "errors": [],
+      "points": 199,
+      "accounted": 199,
+      "administrativeFT": 2,
+      "possessions": 202
+    },
+    {
+      "file": "nba-0022400410.json",
+      "valid": true,
+      "errors": [],
+      "points": 234,
+      "accounted": 234,
+      "administrativeFT": 0,
+      "possessions": 197
+    },
+    {
+      "file": "nba-0022400442.json",
+      "valid": true,
+      "errors": [],
+      "points": 223,
+      "accounted": 223,
+      "administrativeFT": 0,
+      "possessions": 227
+    },
+    {
+      "file": "nba-0022400473.json",
+      "valid": true,
+      "errors": [],
+      "points": 224,
+      "accounted": 224,
+      "administrativeFT": 1,
+      "possessions": 198
+    },
+    {
+      "file": "nba-0022400505.json",
+      "valid": true,
+      "errors": [],
+      "points": 201,
+      "accounted": 201,
+      "administrativeFT": 1,
+      "possessions": 196
+    },
+    {
+      "file": "nba-0022400536.json",
+      "valid": true,
+      "errors": [],
+      "points": 217,
+      "accounted": 217,
+      "administrativeFT": 0,
+      "possessions": 195
+    },
+    {
+      "file": "nba-0022400568.json",
+      "valid": true,
+      "errors": [],
+      "points": 236,
+      "accounted": 236,
+      "administrativeFT": 0,
+      "possessions": 188
+    },
+    {
+      "file": "nba-0022400599.json",
+      "valid": true,
+      "errors": [],
+      "points": 215,
+      "accounted": 215,
+      "administrativeFT": 0,
+      "possessions": 194
+    },
+    {
+      "file": "nba-0022400631.json",
+      "valid": true,
+      "errors": [],
+      "points": 261,
+      "accounted": 261,
+      "administrativeFT": 1,
+      "possessions": 199
+    },
+    {
+      "file": "nba-0022400662.json",
+      "valid": true,
+      "errors": [],
+      "points": 237,
+      "accounted": 237,
+      "administrativeFT": 2,
+      "possessions": 193
+    },
+    {
+      "file": "nba-0022400694.json",
+      "valid": true,
+      "errors": [],
+      "points": 235,
+      "accounted": 235,
+      "administrativeFT": 0,
+      "possessions": 206
+    },
+    {
+      "file": "nba-0022400725.json",
+      "valid": true,
+      "errors": [],
+      "points": 259,
+      "accounted": 259,
+      "administrativeFT": 1,
+      "possessions": 206
+    },
+    {
+      "file": "nba-0022400757.json",
+      "valid": true,
+      "errors": [],
+      "points": 252,
+      "accounted": 252,
+      "administrativeFT": 1,
+      "possessions": 203
+    },
+    {
+      "file": "nba-0022400788.json",
+      "valid": true,
+      "errors": [],
+      "points": 240,
+      "accounted": 240,
+      "administrativeFT": 0,
+      "possessions": 203
+    },
+    {
+      "file": "nba-0022400820.json",
+      "valid": true,
+      "errors": [],
+      "points": 253,
+      "accounted": 253,
+      "administrativeFT": 1,
+      "possessions": 198
+    },
+    {
+      "file": "nba-0022400851.json",
+      "valid": true,
+      "errors": [],
+      "points": 254,
+      "accounted": 254,
+      "administrativeFT": 1,
+      "possessions": 215
+    },
+    {
+      "file": "nba-0022400883.json",
+      "valid": true,
+      "errors": [],
+      "points": 227,
+      "accounted": 227,
+      "administrativeFT": 1,
+      "possessions": 193
+    },
+    {
+      "file": "nba-0022400914.json",
+      "valid": true,
+      "errors": [],
+      "points": 238,
+      "accounted": 238,
+      "administrativeFT": 1,
+      "possessions": 204
+    },
+    {
+      "file": "nba-0022400946.json",
+      "valid": true,
+      "errors": [],
+      "points": 230,
+      "accounted": 230,
+      "administrativeFT": 1,
+      "possessions": 191
+    },
+    {
+      "file": "nba-0022400977.json",
+      "valid": true,
+      "errors": [],
+      "points": 203,
+      "accounted": 203,
+      "administrativeFT": 0,
+      "possessions": 189
+    },
+    {
+      "file": "nba-0022401009.json",
+      "valid": true,
+      "errors": [],
+      "points": 242,
+      "accounted": 242,
+      "administrativeFT": 1,
+      "possessions": 193
+    },
+    {
+      "file": "nba-0022401040.json",
+      "valid": true,
+      "errors": [],
+      "points": 221,
+      "accounted": 221,
+      "administrativeFT": 0,
+      "possessions": 189
+    },
+    {
+      "file": "nba-0022401072.json",
+      "valid": true,
+      "errors": [],
+      "points": 206,
+      "accounted": 206,
+      "administrativeFT": 0,
+      "possessions": 189
+    },
+    {
+      "file": "nba-0022401103.json",
+      "valid": true,
+      "errors": [],
+      "points": 229,
+      "accounted": 229,
+      "administrativeFT": 0,
+      "possessions": 193
+    },
+    {
+      "file": "nba-0022401135.json",
+      "valid": true,
+      "errors": [],
+      "points": 225,
+      "accounted": 225,
+      "administrativeFT": 0,
+      "possessions": 190
+    },
+    {
+      "file": "nba-0022401166.json",
+      "valid": true,
+      "errors": [],
+      "points": 251,
+      "accounted": 251,
+      "administrativeFT": 0,
+      "possessions": 198
+    },
+    {
+      "file": "nba-0022401198.json",
+      "valid": true,
+      "errors": [],
+      "points": 243,
+      "accounted": 243,
+      "administrativeFT": 0,
+      "possessions": 199
+    },
+    {
+      "file": "nba-0022401230.json",
+      "valid": true,
+      "errors": [],
+      "points": 207,
+      "accounted": 207,
+      "administrativeFT": 1,
+      "possessions": 198
+    }
+  ],
+  "transitionTables": {
+    "60": {
+      "1": [
+        1,
+        1,
+        3
+      ],
+      "6": [
+        1,
+        0,
+        5
+      ],
+      "7+": [
+        0,
+        0,
+        84
+      ],
+      "2": [
+        2,
+        2,
+        9
+      ],
+      "5": [
+        0,
+        0,
+        10
+      ],
+      "4": [
+        0,
+        0,
+        6
+      ],
+      "3": [
+        2,
+        1,
+        4
+      ],
+      "tie": [
+        1,
+        4,
+        0
+      ]
+    },
+    "30": {
+      "1": [
+        1,
+        1,
+        5
+      ],
+      "tie": [
+        4,
+        4,
+        0
+      ],
+      "7+": [
+        0,
+        0,
+        88
+      ],
+      "2": [
+        1,
+        1,
+        12
+      ],
+      "5": [
+        0,
+        0,
+        6
+      ],
+      "6": [
+        0,
+        0,
+        5
+      ],
+      "3": [
+        1,
+        0,
+        6
+      ],
+      "4": [
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "method": "Reconstructed from retained official PBP: offensive event or rebound control switches; offensive rebounds retained; consecutive same-team made FG and FT retained; technical FT excluded as administrative points; period endings close control. Not official Synergy possession segmentation; team rebounds and retained-ball violations can differ."
+}

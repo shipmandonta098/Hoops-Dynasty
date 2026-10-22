@@ -1,0 +1,10 @@
+[
+  {
+    "url": "https://stats.nba.com/stats/leaguegamelog?Counter=0&DateFrom=&DateTo=&Direction=ASC&LeagueID=00&PlayerOrTeam=T&Season=2023-24&SeasonType=Regular+Season&Sorter=DATE",
+    "ok": true
+  },
+  {
+    "url": "https://stats.wnba.com/stats/leaguegamelog?Counter=0&DateFrom=&DateTo=&Direction=ASC&LeagueID=10&PlayerOrTeam=T&Season=2023&SeasonType=Regular+Season&Sorter=DATE",
+    "ok": true
+  }
+]

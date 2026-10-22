@@ -1,0 +1,19 @@
+/* Snapshot yesterday's workload before either club records tonight's minutes. */
+// Residual back-to-back exertion is applied once, through stamina drain.
+const B2B_MAX_EXTRA_DRAIN=.12;
+let b2bMatch=null;
+function b2bFatigue(p,club,homeClub){const w=p.workload,empty={minutes:0,travel:1,physical:0,shooting:0,mental:0,energy:0,exertion:0,drain:0};if(!w||w.stamp!==medicalStamp()-1||w.minutes<=0)return empty;const venue=homeClub.key||String(homeClub.id),travel=w.venue&&w.venue!==venue?1.1:1;return {...empty,minutes:w.minutes,travel,drain:Math.min(B2B_MAX_EXTRA_DRAIN,.10*w.minutes/36*travel)}}
+function b2bPlayer(p){return b2bMatch?.players.get(p.id)||{minutes:0,physical:0,shooting:0,mental:0,travel:1}}
+// Workload recovery sets starting energy; effectiveAttribute owns fatigue effects.
+// Do not also lower ratings, subtract exertion points, or reduce starting energy again.
+function b2bAttribute(value,key,f){return value}
+function b2bInjuryMultiplier(p,minutes){return b2bPlayer(p).minutes>0&&minutes>0?1.5:1}
+function b2bManagedStar(p,club){return !!(leagueRules().restLoadManagement&&club.id!==controlledTeamId()&&b2bMatch?.weakOpponent.has(club.id)&&p.ovr>=85&&b2bPlayer(p).minutes>0)}
+const b2bSimBefore=simulateAttributeGame;
+simulateAttributeGame=function(a,b,...args){const prior=b2bMatch,clubs=[state.teams[a],state.teams[b]],originals=new Map();b2bMatch={players:new Map(),weakOpponent:new Set()};try{for(const club of clubs){const opponent=clubs.find(t=>t.id!==club.id),quality=t=>t.roster.slice().sort((p,q)=>q.ovr-p.ovr).slice(0,leagueRules().courtPlayers).reduce((n,p)=>n+p.ovr,0)/leagueRules().courtPlayers;if(quality(opponent)<=quality(club)-8&&(opponent.w+opponent.l<10||opponent.w/(opponent.w+opponent.l)<.4))b2bMatch.weakOpponent.add(club.id);for(const p of club.roster){withBasketballAttributes(p);b2bMatch.players.set(p.id,b2bFatigue(p,club,clubs[0]));originals.set(p,p.attributes);p.attributes=Object.fromEntries(Object.entries(p.attributes).map(([k,v])=>[k,b2bAttribute(v,k,b2bPlayer(p))]))}}return b2bSimBefore(a,b,...args)}finally{for(const [p,attributes]of originals)p.attributes=attributes;b2bMatch=prior}};
+const b2bRecordBefore=recordWorkload;recordWorkload=function(club,result){b2bRecordBefore(club,result);for(const p of club.roster){if(p.workload?.stamp===medicalStamp()&&result.box.some(r=>r.playerId===p.id&&r.mp>0)){p.workload.home=club.id===result.a;p.workload.venue=state.teams[result.a].key||String(result.a)}}};
+const b2bReadBefore=readWorkload;readWorkload=function(raw,bad){const w=b2bReadBefore(raw,bad);if(!w)return w;if(raw.home!==undefined){if(typeof raw.home!=='boolean')bad('invalid workload home venue');w.home=raw.home}if(raw.venue!==undefined){if(typeof raw.venue!=='string'||raw.venue.length>80)bad('invalid workload venue');w.venue=raw.venue}return w};
+// Replaces the old flat team-wide tired-legs shooting deduction.
+workloadShootingPenalty=()=>0;
+function b2bPregameLines(club){return club.roster.filter(p=>b2bPlayer(p).minutes>0).map(p=>{const f=b2bPlayer(p);return p.name+': second night of a back-to-back after '+f.minutes.toFixed(1)+' minutes; stamina consumption +'+(f.drain*100).toFixed(1)+'%'+(f.travel>1?' after a venue change':'')+'.'})}
+const b2bProfileBefore=playerOverview;playerOverview=function(ctx){let next=state.schedule[state.day]?.find(g=>g.includes(ctx.club?.id));if(!ctx.club||!next)return b2bProfileBefore(ctx);const f=b2bFatigue(ctx.p,ctx.club,state.teams[next[0]]);return b2bProfileBefore(ctx)+(f.minutes?playerCard('BACK-TO-BACK FATIGUE',`<p>${f.minutes.toFixed(1)} minutes yesterday · Stamina ${ctx.p.attributes.endu}/100 · Current energy ${playerEnergy(ctx.p,ctx.club).toFixed(0)}%</p><p>Stamina consumption increases by ${(f.drain*100).toFixed(1)}%${f.travel>1?' after a venue change':''}. Workload recovery and in-game stamina determine fatigue effects. Ratings are not independently reduced again. Injury risk remains 1.5×.</p>`):'')};

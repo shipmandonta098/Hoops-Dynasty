@@ -1,0 +1,6062 @@
+{
+  "nba-bench-901": {
+    "n": 160,
+    "meanAbs": 15.85625,
+    "medianAbs": 13.0,
+    "signedSD": 16.152533421649373,
+    "absSD": 11.465081157039403,
+    "within5%": 20.0,
+    "within10%": 38.75,
+    "over20%": 31.874999999999996,
+    "over30%": 14.374999999999998,
+    "over40%": 4.375,
+    "over50%": 0.0,
+    "points": 112.178125,
+    "OTpct": 1.25,
+    "scoreCorrelation": 0.09139999861018808,
+    "full": {
+      "meanExpectedMargin": 10.402832651467236,
+      "meanActualMargin": 11.04375,
+      "residualMean": 0.6409173485327643,
+      "residualVariance": 216.8494538461935,
+      "meanConditionalVariance": 251.2264062784428,
+      "residualMSEtoConditionalVariance": 0.8647985381482822,
+      "expectedMarginVariance": 115.34881547664195,
+      "actualMarginVariance": 260.9043359375,
+      "meanRatingDifference": 11.284060755528944
+    },
+    "early": {
+      "meanExpectedMargin": 6.153823096409886,
+      "meanActualMargin": 7.10625,
+      "residualMean": 0.9524269035901135,
+      "residualVariance": 165.0366196330205,
+      "meanConditionalVariance": 187.8405510984223,
+      "residualMSEtoConditionalVariance": 0.8834287147760426,
+      "expectedMarginVariance": 82.5246427511415,
+      "actualMarginVariance": 188.2574609375,
+      "meanRatingDifference": 9.488794527752017
+    },
+    "league": "nba",
+    "label": "bench",
+    "world": 901,
+    "runs": {
+      "count": 69.51875,
+      "max": 11.225,
+      "mean": 3.2592015588744134,
+      "changes": 6.525,
+      "ties": 5.19375
+    },
+    "quarterRuns": [
+      {
+        "count": 17.65,
+        "max": 7.875,
+        "mean": 3.2039646368952006,
+        "changes": 2.8,
+        "ties": 2.29375
+      },
+      {
+        "count": 17.5125,
+        "max": 8.25625,
+        "mean": 3.28895485586479,
+        "changes": 2.8625,
+        "ties": 2.1375
+      },
+      {
+        "count": 17.55,
+        "max": 8.2875,
+        "mean": 3.30024390764205,
+        "changes": 2.93125,
+        "ties": 2.34375
+      },
+      {
+        "count": 17.9625,
+        "max": 8.5375,
+        "mean": 3.2915831286329102,
+        "changes": 2.86875,
+        "ties": 2.08125
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 11183,
+        "FGA": 10096,
+        "expectedMake%": 58.552644696603664,
+        "actualMake%": 58.401144594473756,
+        "pointsPerDraw": 1.168022891889475,
+        "expectedPointsPerDraw": 1.1710528939320732,
+        "off": 78.60684951899063,
+        "def": 70.67096705346475,
+        "fatigue": 0.15019145508092474
+      },
+      "mid": {
+        "draws": 6765,
+        "FGA": 5810,
+        "expectedMake%": 41.18694998407301,
+        "actualMake%": 42.03991130820399,
+        "pointsPerDraw": 0.8407982261640798,
+        "expectedPointsPerDraw": 0.8237389996814601,
+        "off": 75.89581864293528,
+        "def": 70.27269528184009,
+        "fatigue": 0.1419740700711812
+      },
+      "three": {
+        "draws": 12430,
+        "FGA": 12327,
+        "expectedMake%": 32.52474017173416,
+        "actualMake%": 32.51810136765889,
+        "pointsPerDraw": 0.9755430410297667,
+        "expectedPointsPerDraw": 0.9757422051520246,
+        "off": 79.24950441447913,
+        "def": 72.62828626616107,
+        "fatigue": 0.145302827384494
+      },
+      "open": {
+        "draws": 8848,
+        "FGA": 8479,
+        "expectedMake%": 39.06688709775198,
+        "actualMake%": 39.00316455696203,
+        "pointsPerDraw": 1.044868896925859,
+        "expectedPointsPerDraw": 1.04704263439192,
+        "off": 80.05921583649125,
+        "def": 72.84744212189109,
+        "fatigue": 0.14877721895632098
+      },
+      "contest": {
+        "draws": 5714,
+        "FGA": 5063,
+        "expectedMake%": 46.55453090907922,
+        "actualMake%": 46.97234861743087,
+        "pointsPerDraw": 0.9926496324816241,
+        "expectedPointsPerDraw": 0.983617293375799,
+        "off": 78.88972827628609,
+        "def": 71.7457135925537,
+        "fatigue": 0.1459878660210129
+      },
+      "assisted": {
+        "draws": 19459,
+        "FGA": 17930,
+        "expectedMake%": 42.98945922628695,
+        "actualMake%": 43.05462767870908,
+        "pointsPerDraw": 1.0253353204172877,
+        "expectedPointsPerDraw": 1.0232623657755304,
+        "off": 78.2484160709313,
+        "def": 71.1191842722959,
+        "fatigue": 0.14774499790002324
+      },
+      "selfCreated": {
+        "draws": 1404,
+        "FGA": 1393,
+        "expectedMake%": 29.097026644800934,
+        "actualMake%": 28.63247863247863,
+        "pointsPerDraw": 0.8589743589743589,
+        "expectedPointsPerDraw": 0.872910799344028,
+        "off": 79.14528226459063,
+        "def": 71.88106373057735,
+        "fatigue": 0.14049881202170808
+      },
+      "transition": {
+        "draws": 14768,
+        "FGA": 13705,
+        "expectedMake%": 41.524146205949386,
+        "actualMake%": 41.40709642470206,
+        "pointsPerDraw": 0.9987134344528711,
+        "expectedPointsPerDraw": 1.0030564064510599,
+        "off": 78.03567023434353,
+        "def": 71.94945010313899,
+        "fatigue": 0.14927413767398204
+      },
+      "late": {
+        "draws": 300,
+        "FGA": 258,
+        "expectedMake%": 48.911366248745935,
+        "actualMake%": 47.0,
+        "pointsPerDraw": 0.9866666666666667,
+        "expectedPointsPerDraw": 1.038616381688185,
+        "off": 78.91453148783299,
+        "def": 69.08794736695206,
+        "fatigue": 0.13712616019489385
+      },
+      "secondChance": {
+        "draws": 3254,
+        "FGA": 3254,
+        "expectedMake%": 60.10373493814946,
+        "actualMake%": 59.987707437000616,
+        "pointsPerDraw": 1.217578365089121,
+        "expectedPointsPerDraw": 1.2199688008212033,
+        "off": 76.96537359394824,
+        "def": 68.13758642083236,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 6588,
+        "FGA": 0,
+        "expectedMake%": 76.03157255616271,
+        "actualMake%": 76.21432908318154,
+        "pointsPerDraw": 0.7621432908318154,
+        "expectedPointsPerDraw": 0.7603157255616272,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.05518529524132954
+  },
+  "nba-coaching-901": {
+    "n": 160,
+    "meanAbs": 11.73125,
+    "medianAbs": 10.0,
+    "signedSD": 14.523040691862704,
+    "absSD": 8.64416123389077,
+    "within5%": 26.875,
+    "within10%": 54.37499999999999,
+    "over20%": 18.125,
+    "over30%": 3.125,
+    "over40%": 1.25,
+    "over50%": 0.0,
+    "points": 111.240625,
+    "OTpct": 1.875,
+    "scoreCorrelation": 0.33889893008822375,
+    "full": {
+      "meanExpectedMargin": -0.9000541021139128,
+      "meanActualMargin": -1.19375,
+      "residualMean": -0.29369589788608685,
+      "residualVariance": 301.14490950484344,
+      "meanConditionalVariance": 254.92678553131782,
+      "residualMSEtoConditionalVariance": 1.181637959924271,
+      "expectedMarginVariance": 88.83694968116689,
+      "actualMarginVariance": 210.91871093749995,
+      "meanRatingDifference": -1.2916303997345056
+    },
+    "early": {
+      "meanExpectedMargin": -0.4646374911027008,
+      "meanActualMargin": -1.3,
+      "residualMean": -0.835362508897299,
+      "residualVariance": 216.38872413742646,
+      "meanConditionalVariance": 189.34118217906467,
+      "residualMSEtoConditionalVariance": 1.1465363855888127,
+      "expectedMarginVariance": 70.11115418397496,
+      "actualMarginVariance": 173.95999999999998,
+      "meanRatingDifference": -1.742510118937212
+    },
+    "league": "nba",
+    "label": "coaching",
+    "world": 901,
+    "runs": {
+      "count": 68.8125,
+      "max": 10.75625,
+      "mean": 3.249987738109504,
+      "changes": 7.05,
+      "ties": 5.4
+    },
+    "quarterRuns": [
+      {
+        "count": 17.325,
+        "max": 7.8375,
+        "mean": 3.2288483416681544,
+        "changes": 3.2,
+        "ties": 2.3875
+      },
+      {
+        "count": 16.86875,
+        "max": 8.13125,
+        "mean": 3.34218817880184,
+        "changes": 2.96875,
+        "ties": 2.0
+      },
+      {
+        "count": 17.00625,
+        "max": 8.19375,
+        "mean": 3.303813744436591,
+        "changes": 2.95625,
+        "ties": 2.14375
+      },
+      {
+        "count": 18.79375,
+        "max": 7.85625,
+        "mean": 3.1729441718180977,
+        "changes": 3.25625,
+        "ties": 2.51875
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 11217,
+        "FGA": 10213,
+        "expectedMake%": 58.475553973597435,
+        "actualMake%": 57.90318266916288,
+        "pointsPerDraw": 1.1580636533832576,
+        "expectedPointsPerDraw": 1.1695110794719488,
+        "off": 80.38399798771935,
+        "def": 73.52197591433207,
+        "fatigue": 0.1481204760790518
+      },
+      "mid": {
+        "draws": 6791,
+        "FGA": 5910,
+        "expectedMake%": 41.100323507598226,
+        "actualMake%": 41.672802238256516,
+        "pointsPerDraw": 0.8334560447651304,
+        "expectedPointsPerDraw": 0.8220064701519645,
+        "off": 78.83535851748893,
+        "def": 73.757931748015,
+        "fatigue": 0.13437113421598892
+      },
+      "three": {
+        "draws": 12721,
+        "FGA": 12596,
+        "expectedMake%": 32.244327506960495,
+        "actualMake%": 31.931451929879728,
+        "pointsPerDraw": 0.9579435578963917,
+        "expectedPointsPerDraw": 0.9673298252088147,
+        "off": 82.00757543784829,
+        "def": 75.8698931484682,
+        "fatigue": 0.1399201268011613
+      },
+      "open": {
+        "draws": 9068,
+        "FGA": 8733,
+        "expectedMake%": 38.769208891282865,
+        "actualMake%": 38.56418173797971,
+        "pointsPerDraw": 1.0326422584913983,
+        "expectedPointsPerDraw": 1.039635661663608,
+        "off": 82.44566189256932,
+        "def": 76.05526036785692,
+        "fatigue": 0.13990530640014928
+      },
+      "contest": {
+        "draws": 5573,
+        "FGA": 4995,
+        "expectedMake%": 46.495178607984975,
+        "actualMake%": 46.097254620491654,
+        "pointsPerDraw": 0.9766732460075364,
+        "expectedPointsPerDraw": 0.9848023689963077,
+        "off": 81.37107134828673,
+        "def": 74.81335642981048,
+        "fatigue": 0.1443090704418262
+      },
+      "assisted": {
+        "draws": 19656,
+        "FGA": 18252,
+        "expectedMake%": 42.71482646282144,
+        "actualMake%": 42.55189255189255,
+        "pointsPerDraw": 1.013990638990639,
+        "expectedPointsPerDraw": 1.0180976964894761,
+        "off": 80.74670136868367,
+        "def": 74.37641092337331,
+        "fatigue": 0.14361880296513907
+      },
+      "selfCreated": {
+        "draws": 1432,
+        "FGA": 1415,
+        "expectedMake%": 28.722279396943446,
+        "actualMake%": 29.608938547486037,
+        "pointsPerDraw": 0.888268156424581,
+        "expectedPointsPerDraw": 0.8616683819083034,
+        "off": 81.50487592045577,
+        "def": 74.93860894383587,
+        "fatigue": 0.13410286108279387
+      },
+      "transition": {
+        "draws": 14995,
+        "FGA": 13974,
+        "expectedMake%": 41.3007586293383,
+        "actualMake%": 41.05368456152051,
+        "pointsPerDraw": 0.9893964654884961,
+        "expectedPointsPerDraw": 0.9982334022475186,
+        "off": 80.67379127853461,
+        "def": 75.24034125124905,
+        "fatigue": 0.14371018971750654
+      },
+      "late": {
+        "draws": 290,
+        "FGA": 255,
+        "expectedMake%": 47.79343923760273,
+        "actualMake%": 46.55172413793103,
+        "pointsPerDraw": 0.9862068965517241,
+        "expectedPointsPerDraw": 1.0271728853674205,
+        "off": 81.00612583332797,
+        "def": 74.91964745699993,
+        "fatigue": 0.14064172773901648
+      },
+      "secondChance": {
+        "draws": 3410,
+        "FGA": 3410,
+        "expectedMake%": 59.720188955764584,
+        "actualMake%": 58.79765395894429,
+        "pointsPerDraw": 1.1941348973607038,
+        "expectedPointsPerDraw": 1.2141548056989264,
+        "off": 78.86276830814009,
+        "def": 70.52625712693654,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 6147,
+        "FGA": 0,
+        "expectedMake%": 77.76289246787049,
+        "actualMake%": 77.45241581259151,
+        "pointsPerDraw": 0.7745241581259151,
+        "expectedPointsPerDraw": 0.7776289246787049,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.020922252908193155
+  },
+  "nba-defense-901": {
+    "n": 160,
+    "meanAbs": 14.4,
+    "medianAbs": 11.5,
+    "signedSD": 16.261995572499703,
+    "absSD": 10.716925865191007,
+    "within5%": 21.25,
+    "within10%": 48.125,
+    "over20%": 28.749999999999996,
+    "over30%": 11.25,
+    "over40%": 1.25,
+    "over50%": 0.625,
+    "points": 108.91875,
+    "OTpct": 1.875,
+    "scoreCorrelation": 0.25204321098879634,
+    "full": {
+      "meanExpectedMargin": -7.101898235047626,
+      "meanActualMargin": -7.6,
+      "residualMean": -0.498101764952373,
+      "residualVariance": 255.02203310507974,
+      "meanConditionalVariance": 250.57233513723185,
+      "residualMSEtoConditionalVariance": 1.0187482921190154,
+      "expectedMarginVariance": 100.48783906119714,
+      "actualMarginVariance": 264.4525,
+      "meanRatingDifference": -7.784566573557749
+    },
+    "early": {
+      "meanExpectedMargin": -5.887623035100502,
+      "meanActualMargin": -6.09375,
+      "residualMean": -0.20612696489949736,
+      "residualVariance": 205.3438721386006,
+      "meanConditionalVariance": 186.2058078607123,
+      "residualMSEtoConditionalVariance": 1.1030072736393626,
+      "expectedMarginVariance": 76.52691418491261,
+      "actualMarginVariance": 207.2474609375,
+      "meanRatingDifference": -8.122856290679744
+    },
+    "league": "nba",
+    "label": "defense",
+    "world": 901,
+    "runs": {
+      "count": 65.81875,
+      "max": 11.0375,
+      "mean": 3.3368844957125248,
+      "changes": 6.65,
+      "ties": 4.95625
+    },
+    "quarterRuns": [
+      {
+        "count": 16.44375,
+        "max": 7.95,
+        "mean": 3.3193770446345647,
+        "changes": 2.8125,
+        "ties": 2.2375
+      },
+      {
+        "count": 16.69375,
+        "max": 8.2375,
+        "mean": 3.329361377463658,
+        "changes": 2.58125,
+        "ties": 2.05625
+      },
+      {
+        "count": 16.80625,
+        "max": 8.2,
+        "mean": 3.3243962018849103,
+        "changes": 2.80625,
+        "ties": 2.10625
+      },
+      {
+        "count": 17.075,
+        "max": 8.0875,
+        "mean": 3.3996164041264576,
+        "changes": 2.825,
+        "ties": 2.075
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 11257,
+        "FGA": 10244,
+        "expectedMake%": 57.491748580980484,
+        "actualMake%": 57.71519943146487,
+        "pointsPerDraw": 1.1543039886292974,
+        "expectedPointsPerDraw": 1.1498349716196097,
+        "off": 80.28238069056819,
+        "def": 77.61550808365237,
+        "fatigue": 0.15142056898723877
+      },
+      "mid": {
+        "draws": 6725,
+        "FGA": 5882,
+        "expectedMake%": 40.54567813790613,
+        "actualMake%": 40.07434944237918,
+        "pointsPerDraw": 0.8014869888475836,
+        "expectedPointsPerDraw": 0.8109135627581225,
+        "off": 78.56655340171612,
+        "def": 77.88190239003038,
+        "fatigue": 0.14054827718128787
+      },
+      "three": {
+        "draws": 12542,
+        "FGA": 12443,
+        "expectedMake%": 31.416493597536583,
+        "actualMake%": 31.502152766703873,
+        "pointsPerDraw": 0.9450645830011163,
+        "expectedPointsPerDraw": 0.9424948079260974,
+        "off": 81.80772561978225,
+        "def": 79.8463362008527,
+        "fatigue": 0.14356175486987335
+      },
+      "open": {
+        "draws": 8863,
+        "FGA": 8534,
+        "expectedMake%": 37.804603213789775,
+        "actualMake%": 38.00067697168002,
+        "pointsPerDraw": 1.0256120952273498,
+        "expectedPointsPerDraw": 1.0175210771957754,
+        "off": 82.25273722976685,
+        "def": 79.66837863736221,
+        "fatigue": 0.14669952627792807
+      },
+      "contest": {
+        "draws": 5681,
+        "FGA": 5089,
+        "expectedMake%": 45.047936331211105,
+        "actualMake%": 45.04488646365077,
+        "pointsPerDraw": 0.9535293082203837,
+        "expectedPointsPerDraw": 0.9541311200554219,
+        "off": 81.33407921398442,
+        "def": 79.22499918093752,
+        "fatigue": 0.1475696330743785
+      },
+      "assisted": {
+        "draws": 19381,
+        "FGA": 18034,
+        "expectedMake%": 42.117994990971056,
+        "actualMake%": 42.03085496104432,
+        "pointsPerDraw": 1.001289923120582,
+        "expectedPointsPerDraw": 1.0021382253057276,
+        "off": 80.56909769582813,
+        "def": 78.32717437479673,
+        "fatigue": 0.147478712705145
+      },
+      "selfCreated": {
+        "draws": 1400,
+        "FGA": 1384,
+        "expectedMake%": 27.583428163173828,
+        "actualMake%": 26.42857142857143,
+        "pointsPerDraw": 0.7928571428571428,
+        "expectedPointsPerDraw": 0.8275028448952145,
+        "off": 81.10076214513383,
+        "def": 77.8315118935002,
+        "fatigue": 0.1341426542705528
+      },
+      "transition": {
+        "draws": 14897,
+        "FGA": 13889,
+        "expectedMake%": 40.53300185123844,
+        "actualMake%": 40.43767201449956,
+        "pointsPerDraw": 0.9778478888366785,
+        "expectedPointsPerDraw": 0.9787725139227718,
+        "off": 80.47839109951776,
+        "def": 79.17429018744744,
+        "fatigue": 0.14654077950286254
+      },
+      "late": {
+        "draws": 273,
+        "FGA": 248,
+        "expectedMake%": 48.35844202130388,
+        "actualMake%": 46.52014652014652,
+        "pointsPerDraw": 0.9816849816849816,
+        "expectedPointsPerDraw": 1.0367849216349583,
+        "off": 80.59079718783354,
+        "def": 76.19312740029586,
+        "fatigue": 0.144640952524743
+      },
+      "secondChance": {
+        "draws": 3534,
+        "FGA": 3534,
+        "expectedMake%": 58.839368394157695,
+        "actualMake%": 60.38483305036786,
+        "pointsPerDraw": 1.2294850028296547,
+        "expectedPointsPerDraw": 1.1961660538321635,
+        "off": 78.86320462056943,
+        "def": 75.52899517893668,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 5934,
+        "FGA": 0,
+        "expectedMake%": 77.51432423323223,
+        "actualMake%": 77.80586450960566,
+        "pointsPerDraw": 0.7780586450960566,
+        "expectedPointsPerDraw": 0.7751432423323223,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.021181952976064393
+  },
+  "nba-fatigue-901": {
+    "n": 160,
+    "meanAbs": 12.93125,
+    "medianAbs": 11.0,
+    "signedSD": 15.850393084636734,
+    "absSD": 9.166598247850727,
+    "within5%": 23.125,
+    "within10%": 49.375,
+    "over20%": 23.75,
+    "over30%": 5.625,
+    "over40%": 1.25,
+    "over50%": 0.0,
+    "points": 113.509375,
+    "OTpct": 3.75,
+    "scoreCorrelation": 0.30086929260557677,
+    "full": {
+      "meanExpectedMargin": 1.6883870471559823,
+      "meanActualMargin": -0.09375,
+      "residualMean": -1.7821370471559823,
+      "residualVariance": 262.4222770658486,
+      "meanConditionalVariance": 255.3942302265068,
+      "residualMSEtoConditionalVariance": 1.0399541496498876,
+      "expectedMarginVariance": 109.90160211440862,
+      "actualMarginVariance": 251.2349609375,
+      "meanRatingDifference": -0.004721732553813052
+    },
+    "early": {
+      "meanExpectedMargin": 1.4281322138409558,
+      "meanActualMargin": 1.375,
+      "residualMean": -0.05313221384095561,
+      "residualVariance": 210.2451048364715,
+      "meanConditionalVariance": 189.63785747760411,
+      "residualMSEtoConditionalVariance": 1.1086812025043524,
+      "expectedMarginVariance": 80.61229846537468,
+      "actualMarginVariance": 221.446875,
+      "meanRatingDifference": 1.8849105001908644
+    },
+    "league": "nba",
+    "label": "fatigue",
+    "world": 901,
+    "runs": {
+      "count": 69.575,
+      "max": 11.01875,
+      "mean": 3.2828976485839627,
+      "changes": 6.5625,
+      "ties": 4.9
+    },
+    "quarterRuns": [
+      {
+        "count": 17.53125,
+        "max": 7.93125,
+        "mean": 3.2309239698421957,
+        "changes": 2.86875,
+        "ties": 2.25625
+      },
+      {
+        "count": 17.61875,
+        "max": 8.175,
+        "mean": 3.2971270048936474,
+        "changes": 2.71875,
+        "ties": 1.93125
+      },
+      {
+        "count": 17.375,
+        "max": 8.26875,
+        "mean": 3.302661579409592,
+        "changes": 2.75625,
+        "ties": 2.16875
+      },
+      {
+        "count": 18.24375,
+        "max": 8.09375,
+        "mean": 3.255053929194142,
+        "changes": 2.69375,
+        "ties": 2.1
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 11029,
+        "FGA": 9979,
+        "expectedMake%": 58.55986315338426,
+        "actualMake%": 58.92646658808596,
+        "pointsPerDraw": 1.1785293317617191,
+        "expectedPointsPerDraw": 1.1711972630676852,
+        "off": 79.72444082628544,
+        "def": 72.99074847173574,
+        "fatigue": 0.18339145804408125
+      },
+      "mid": {
+        "draws": 6759,
+        "FGA": 5888,
+        "expectedMake%": 41.60036159222647,
+        "actualMake%": 42.092025447551414,
+        "pointsPerDraw": 0.8418405089510282,
+        "expectedPointsPerDraw": 0.8320072318445294,
+        "off": 78.11099048201102,
+        "def": 73.2710740085521,
+        "fatigue": 0.17202626784941832
+      },
+      "three": {
+        "draws": 12827,
+        "FGA": 12694,
+        "expectedMake%": 32.47201896661359,
+        "actualMake%": 33.29695174241834,
+        "pointsPerDraw": 0.99890855227255,
+        "expectedPointsPerDraw": 0.9741605689984079,
+        "off": 81.24877641346352,
+        "def": 75.26564853084578,
+        "fatigue": 0.17928487257110276
+      },
+      "open": {
+        "draws": 8995,
+        "FGA": 8646,
+        "expectedMake%": 39.14310614582824,
+        "actualMake%": 40.38910505836576,
+        "pointsPerDraw": 1.0847137298499165,
+        "expectedPointsPerDraw": 1.0483761356630297,
+        "off": 81.72391049002242,
+        "def": 75.53372994507461,
+        "fatigue": 0.17931793285068187
+      },
+      "contest": {
+        "draws": 5712,
+        "FGA": 5131,
+        "expectedMake%": 46.12807683792531,
+        "actualMake%": 45.74579831932773,
+        "pointsPerDraw": 0.9744397759103641,
+        "expectedPointsPerDraw": 0.9818594223789655,
+        "off": 80.67141455792697,
+        "def": 74.26488438414603,
+        "fatigue": 0.18336936274715948
+      },
+      "assisted": {
+        "draws": 19615,
+        "FGA": 18177,
+        "expectedMake%": 42.912984269206405,
+        "actualMake%": 43.41065511088453,
+        "pointsPerDraw": 1.038490950802957,
+        "expectedPointsPerDraw": 1.0257836250349808,
+        "off": 80.03475478369066,
+        "def": 73.79557085849628,
+        "fatigue": 0.18085404082616416
+      },
+      "selfCreated": {
+        "draws": 1452,
+        "FGA": 1437,
+        "expectedMake%": 28.958210758469804,
+        "actualMake%": 29.88980716253444,
+        "pointsPerDraw": 0.8966942148760331,
+        "expectedPointsPerDraw": 0.8687463227540942,
+        "off": 80.50631392306174,
+        "def": 73.62808417324428,
+        "fatigue": 0.17040907048294984
+      },
+      "transition": {
+        "draws": 14754,
+        "FGA": 13757,
+        "expectedMake%": 41.36565183230624,
+        "actualMake%": 42.083502778907416,
+        "pointsPerDraw": 1.0233834892232614,
+        "expectedPointsPerDraw": 1.0031177122583248,
+        "off": 79.91982676847961,
+        "def": 74.9052386535527,
+        "fatigue": 0.18156815106068178
+      },
+      "late": {
+        "draws": 285,
+        "FGA": 255,
+        "expectedMake%": 46.246189081773835,
+        "actualMake%": 44.91228070175438,
+        "pointsPerDraw": 1.0,
+        "expectedPointsPerDraw": 1.0180732553379352,
+        "off": 80.28108958885012,
+        "def": 73.88077372657028,
+        "fatigue": 0.1563577176148164
+      },
+      "secondChance": {
+        "draws": 3346,
+        "FGA": 3346,
+        "expectedMake%": 59.531269724263225,
+        "actualMake%": 59.68320382546324,
+        "pointsPerDraw": 1.2118947997609086,
+        "expectedPointsPerDraw": 1.210874884545014,
+        "off": 78.1188032548755,
+        "def": 70.25313972991839,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 6244,
+        "FGA": 0,
+        "expectedMake%": 77.72757847533632,
+        "actualMake%": 77.22613709160794,
+        "pointsPerDraw": 0.7722613709160794,
+        "expectedPointsPerDraw": 0.7772757847533631,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.004202210362650754
+  },
+  "nba-handling-901": {
+    "n": 160,
+    "meanAbs": 13.09375,
+    "medianAbs": 10.0,
+    "signedSD": 15.772046821433799,
+    "absSD": 9.256617143292683,
+    "within5%": 23.125,
+    "within10%": 52.5,
+    "over20%": 23.125,
+    "over30%": 5.0,
+    "over40%": 1.25,
+    "over50%": 0.0,
+    "points": 115.003125,
+    "OTpct": 6.875000000000001,
+    "scoreCorrelation": 0.24430574579480535,
+    "full": {
+      "meanExpectedMargin": -3.4837486991887743,
+      "meanActualMargin": -2.89375,
+      "residualMean": 0.589998699188775,
+      "residualVariance": 260.77681560607897,
+      "meanConditionalVariance": 260.02561230175354,
+      "residualMSEtoConditionalVariance": 1.0042276672656927,
+      "expectedMarginVariance": 90.35089437046142,
+      "actualMarginVariance": 248.75746093749999,
+      "meanRatingDifference": -2.7739580808811892
+    },
+    "early": {
+      "meanExpectedMargin": -1.8742464253276296,
+      "meanActualMargin": -1.8125,
+      "residualMean": 0.06174642532762942,
+      "residualVariance": 178.81850579513238,
+      "meanConditionalVariance": 192.4763119215484,
+      "residualMSEtoConditionalVariance": 0.9290614342665684,
+      "expectedMarginVariance": 66.55202815701844,
+      "actualMarginVariance": 174.41484375,
+      "meanRatingDifference": -2.268168369322184
+    },
+    "league": "nba",
+    "label": "handling",
+    "world": 901,
+    "runs": {
+      "count": 71.825,
+      "max": 10.55,
+      "mean": 3.219909667834945,
+      "changes": 7.34375,
+      "ties": 5.74375
+    },
+    "quarterRuns": [
+      {
+        "count": 17.89375,
+        "max": 7.9125,
+        "mean": 3.207683802450201,
+        "changes": 3.01875,
+        "ties": 2.46875
+      },
+      {
+        "count": 18.1875,
+        "max": 7.95625,
+        "mean": 3.205932896274331,
+        "changes": 2.78125,
+        "ties": 2.49375
+      },
+      {
+        "count": 17.69375,
+        "max": 7.9,
+        "mean": 3.2458180397942287,
+        "changes": 2.6625,
+        "ties": 2.2625
+      },
+      {
+        "count": 18.825,
+        "max": 8.125,
+        "mean": 3.2172795269336403,
+        "changes": 2.66875,
+        "ties": 2.1875
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 11317,
+        "FGA": 10267,
+        "expectedMake%": 58.75155814214966,
+        "actualMake%": 58.41654148625961,
+        "pointsPerDraw": 1.1683308297251922,
+        "expectedPointsPerDraw": 1.1750311628429932,
+        "off": 80.4542837391551,
+        "def": 73.18536211047297,
+        "fatigue": 0.15336381937131152
+      },
+      "mid": {
+        "draws": 6886,
+        "FGA": 5967,
+        "expectedMake%": 41.931839511420044,
+        "actualMake%": 42.33226837060703,
+        "pointsPerDraw": 0.8466453674121406,
+        "expectedPointsPerDraw": 0.8386367902284009,
+        "off": 78.73498870361922,
+        "def": 73.59299692246468,
+        "fatigue": 0.14112310790849925
+      },
+      "three": {
+        "draws": 12984,
+        "FGA": 12862,
+        "expectedMake%": 32.80618217762893,
+        "actualMake%": 32.86352433764633,
+        "pointsPerDraw": 0.98590573012939,
+        "expectedPointsPerDraw": 0.9841854653288679,
+        "off": 81.86013812507274,
+        "def": 75.74055776501427,
+        "fatigue": 0.1447152720347255
+      },
+      "open": {
+        "draws": 9256,
+        "FGA": 8866,
+        "expectedMake%": 39.27722811619727,
+        "actualMake%": 39.60674157303371,
+        "pointsPerDraw": 1.067847882454624,
+        "expectedPointsPerDraw": 1.0546832604777994,
+        "off": 82.4628764570679,
+        "def": 75.92193778953732,
+        "fatigue": 0.14853188083187555
+      },
+      "contest": {
+        "draws": 5695,
+        "FGA": 5116,
+        "expectedMake%": 46.94415267474638,
+        "actualMake%": 47.07638279192274,
+        "pointsPerDraw": 0.9971905179982441,
+        "expectedPointsPerDraw": 0.9956562890211565,
+        "off": 81.02877995688642,
+        "def": 74.74657075797948,
+        "fatigue": 0.14708336075319406
+      },
+      "assisted": {
+        "draws": 19993,
+        "FGA": 18517,
+        "expectedMake%": 43.34821886745064,
+        "actualMake%": 43.31516030610714,
+        "pointsPerDraw": 1.0324113439703897,
+        "expectedPointsPerDraw": 1.0343457843330723,
+        "off": 80.6159509655753,
+        "def": 74.12226786088696,
+        "fatigue": 0.14894680722563447
+      },
+      "selfCreated": {
+        "draws": 1473,
+        "FGA": 1463,
+        "expectedMake%": 29.59007030247433,
+        "actualMake%": 28.98845892735913,
+        "pointsPerDraw": 0.869653767820774,
+        "expectedPointsPerDraw": 0.88770210907423,
+        "off": 81.93024516023527,
+        "def": 74.7947093407167,
+        "fatigue": 0.13346645153968698
+      },
+      "transition": {
+        "draws": 14940,
+        "FGA": 13868,
+        "expectedMake%": 41.58856516565568,
+        "actualMake%": 41.52610441767068,
+        "pointsPerDraw": 1.0085006693440428,
+        "expectedPointsPerDraw": 1.009493496914542,
+        "off": 80.54950544601168,
+        "def": 75.06866981291488,
+        "fatigue": 0.14765439787490495
+      },
+      "late": {
+        "draws": 259,
+        "FGA": 232,
+        "expectedMake%": 49.226031716025055,
+        "actualMake%": 51.737451737451735,
+        "pointsPerDraw": 1.1196911196911197,
+        "expectedPointsPerDraw": 1.0657697986063617,
+        "off": 80.98833615730531,
+        "def": 74.3225657116492,
+        "fatigue": 0.14214058910798624
+      },
+      "secondChance": {
+        "draws": 3433,
+        "FGA": 3433,
+        "expectedMake%": 60.13454855269777,
+        "actualMake%": 59.976696766676376,
+        "pointsPerDraw": 1.213807165744247,
+        "expectedPointsPerDraw": 1.220585636220013,
+        "off": 79.0770104516317,
+        "def": 69.90718303466583,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 6393,
+        "FGA": 0,
+        "expectedMake%": 77.77272016267793,
+        "actualMake%": 77.39715313624276,
+        "pointsPerDraw": 0.7739715313624277,
+        "expectedPointsPerDraw": 0.7777272016267793,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.033021009617369056
+  },
+  "nba-identical-901": {
+    "n": 160,
+    "meanAbs": 12.53125,
+    "medianAbs": 11.0,
+    "signedSD": 14.88321070661502,
+    "absSD": 8.080781115554363,
+    "within5%": 21.875,
+    "within10%": 46.25,
+    "over20%": 20.625,
+    "over30%": 2.5,
+    "over40%": 0.0,
+    "over50%": 0.0,
+    "points": 111.865625,
+    "OTpct": 2.5,
+    "scoreCorrelation": 0.26288186326775553,
+    "full": {
+      "meanExpectedMargin": 0.19340764491337764,
+      "meanActualMargin": 0.90625,
+      "residualMean": 0.7128423550866223,
+      "residualVariance": 245.8390480946794,
+      "meanConditionalVariance": 254.12243555782615,
+      "residualMSEtoConditionalVariance": 0.9694035545390796,
+      "expectedMarginVariance": 91.29177674488281,
+      "actualMarginVariance": 221.5099609375,
+      "meanRatingDifference": 0.8790717850147953
+    },
+    "early": {
+      "meanExpectedMargin": 0.2865111812268307,
+      "meanActualMargin": 0.63125,
+      "residualMean": 0.34473881877316925,
+      "residualVariance": 197.43468134405978,
+      "meanConditionalVariance": 189.25724591484874,
+      "residualMSEtoConditionalVariance": 1.0438359981530791,
+      "expectedMarginVariance": 74.91791018673132,
+      "actualMarginVariance": 185.44527343750002,
+      "meanRatingDifference": 0.7559766979850308
+    },
+    "league": "nba",
+    "label": "identical",
+    "world": 901,
+    "runs": {
+      "count": 69.31875,
+      "max": 10.775,
+      "mean": 3.247749429978525,
+      "changes": 6.5125,
+      "ties": 5.125
+    },
+    "quarterRuns": [
+      {
+        "count": 17.5375,
+        "max": 7.8625,
+        "mean": 3.2155110170776964,
+        "changes": 2.90625,
+        "ties": 2.33125
+      },
+      {
+        "count": 17.2,
+        "max": 8.0375,
+        "mean": 3.2866806111595013,
+        "changes": 2.95625,
+        "ties": 2.24375
+      },
+      {
+        "count": 17.3375,
+        "max": 8.38125,
+        "mean": 3.3085635873433192,
+        "changes": 2.76875,
+        "ties": 2.0125
+      },
+      {
+        "count": 18.425,
+        "max": 8.0,
+        "mean": 3.1874553044744256,
+        "changes": 3.0,
+        "ties": 2.31875
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 11245,
+        "FGA": 10234,
+        "expectedMake%": 58.699835494199924,
+        "actualMake%": 58.86171631836372,
+        "pointsPerDraw": 1.1772343263672744,
+        "expectedPointsPerDraw": 1.1739967098839985,
+        "off": 80.49500195544134,
+        "def": 73.35017433639932,
+        "fatigue": 0.15060414363734204
+      },
+      "mid": {
+        "draws": 6791,
+        "FGA": 5924,
+        "expectedMake%": 41.564096841485274,
+        "actualMake%": 41.56972463554705,
+        "pointsPerDraw": 0.8313944927109409,
+        "expectedPointsPerDraw": 0.8312819368297054,
+        "off": 78.76850319784393,
+        "def": 73.91740852490763,
+        "fatigue": 0.1369317232290889
+      },
+      "three": {
+        "draws": 12575,
+        "FGA": 12447,
+        "expectedMake%": 32.67950513661868,
+        "actualMake%": 32.14314115308151,
+        "pointsPerDraw": 0.9642942345924453,
+        "expectedPointsPerDraw": 0.9803851540985605,
+        "off": 81.73324089787909,
+        "def": 75.58155104475438,
+        "fatigue": 0.14173727803911942
+      },
+      "open": {
+        "draws": 8976,
+        "FGA": 8609,
+        "expectedMake%": 39.0386194228158,
+        "actualMake%": 38.89260249554367,
+        "pointsPerDraw": 1.0387700534759359,
+        "expectedPointsPerDraw": 1.0480911761758107,
+        "off": 82.28485411790248,
+        "def": 75.78745945183678,
+        "fatigue": 0.14378515437170494
+      },
+      "contest": {
+        "draws": 5646,
+        "FGA": 5063,
+        "expectedMake%": 47.09580578364779,
+        "actualMake%": 47.1484236627701,
+        "pointsPerDraw": 0.9968119022316685,
+        "expectedPointsPerDraw": 0.9948072833380108,
+        "off": 81.13975047489927,
+        "def": 74.66710106370748,
+        "fatigue": 0.1457063497339211
+      },
+      "assisted": {
+        "draws": 19639,
+        "FGA": 18251,
+        "expectedMake%": 43.35478291381977,
+        "actualMake%": 43.21503131524008,
+        "pointsPerDraw": 1.0272926320077398,
+        "expectedPointsPerDraw": 1.0320665043065864,
+        "off": 80.62366520937434,
+        "def": 74.2304656793618,
+        "fatigue": 0.14560412172499296
+      },
+      "selfCreated": {
+        "draws": 1337,
+        "FGA": 1323,
+        "expectedMake%": 29.361543858983392,
+        "actualMake%": 29.31937172774869,
+        "pointsPerDraw": 0.8795811518324608,
+        "expectedPointsPerDraw": 0.8808463157695017,
+        "off": 80.9062174011424,
+        "def": 74.00025310136272,
+        "fatigue": 0.13802973243090502
+      },
+      "transition": {
+        "draws": 14749,
+        "FGA": 13734,
+        "expectedMake%": 41.754973225043464,
+        "actualMake%": 41.48755847854092,
+        "pointsPerDraw": 0.9995253915519696,
+        "expectedPointsPerDraw": 1.0085872572167074,
+        "off": 80.50220548268553,
+        "def": 75.05549069313162,
+        "fatigue": 0.1458185324016954
+      },
+      "late": {
+        "draws": 284,
+        "FGA": 251,
+        "expectedMake%": 48.60590364768504,
+        "actualMake%": 46.12676056338028,
+        "pointsPerDraw": 0.9683098591549296,
+        "expectedPointsPerDraw": 1.0460206925183368,
+        "off": 81.14178269204783,
+        "def": 73.611767173705,
+        "fatigue": 0.1439553708071372
+      },
+      "secondChance": {
+        "draws": 3433,
+        "FGA": 3433,
+        "expectedMake%": 59.266116271679024,
+        "actualMake%": 58.49111564229537,
+        "pointsPerDraw": 1.1867171570055346,
+        "expectedPointsPerDraw": 1.2059373546055072,
+        "off": 78.97337555679088,
+        "def": 70.53075981867153,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 6156,
+        "FGA": 0,
+        "expectedMake%": 77.71263807667316,
+        "actualMake%": 77.76153346328785,
+        "pointsPerDraw": 0.7776153346328785,
+        "expectedPointsPerDraw": 0.7771263807667316,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.016830766641420518
+  },
+  "nba-league-301": {
+    "n": 160,
+    "meanAbs": 14.6625,
+    "medianAbs": 13.0,
+    "signedSD": 17.34005028106897,
+    "absSD": 9.790229504460045,
+    "within5%": 18.125,
+    "within10%": 40.625,
+    "over20%": 28.125,
+    "over30%": 9.375,
+    "over40%": 1.875,
+    "over50%": 0.0,
+    "points": 114.8875,
+    "OTpct": 1.875,
+    "scoreCorrelation": 0.19411888555943127,
+    "full": {
+      "meanExpectedMargin": 2.482583175125236,
+      "meanActualMargin": 3.1875,
+      "residualMean": 0.7049168248747637,
+      "residualVariance": 247.55921113736696,
+      "meanConditionalVariance": 263.06473247656714,
+      "residualMSEtoConditionalVariance": 0.9429470706015466,
+      "expectedMarginVariance": 204.44334304272078,
+      "actualMarginVariance": 300.67734375,
+      "meanRatingDifference": 3.238378144415422
+    },
+    "early": {
+      "meanExpectedMargin": 2.10239107696827,
+      "meanActualMargin": 2.55625,
+      "residualMean": 0.4538589230317303,
+      "residualVariance": 193.25727289320804,
+      "meanConditionalVariance": 196.38153679898738,
+      "residualMSEtoConditionalVariance": 0.9851397639954773,
+      "expectedMarginVariance": 146.72995065518805,
+      "actualMarginVariance": 240.1343359375,
+      "meanRatingDifference": 3.184547302961331
+    },
+    "league": "nba",
+    "label": "league",
+    "world": 301,
+    "runs": {
+      "count": 69.7,
+      "max": 11.25625,
+      "mean": 3.324113498247729,
+      "changes": 6.24375,
+      "ties": 4.71875
+    },
+    "quarterRuns": [
+      {
+        "count": 17.4375,
+        "max": 8.20625,
+        "mean": 3.373035357537642,
+        "changes": 2.73125,
+        "ties": 2.1375
+      },
+      {
+        "count": 18.0625,
+        "max": 8.575,
+        "mean": 3.315566470279827,
+        "changes": 3.08125,
+        "ties": 2.5125
+      },
+      {
+        "count": 17.10625,
+        "max": 8.3,
+        "mean": 3.3823857684682594,
+        "changes": 2.85,
+        "ties": 1.9375
+      },
+      {
+        "count": 18.33125,
+        "max": 7.96875,
+        "mean": 3.2465948623918215,
+        "changes": 2.6125,
+        "ties": 2.11875
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 10787,
+        "FGA": 9898,
+        "expectedMake%": 60.005824438106,
+        "actualMake%": 60.415314730694355,
+        "pointsPerDraw": 1.2083062946138872,
+        "expectedPointsPerDraw": 1.20011648876212,
+        "off": 82.3657215170838,
+        "def": 73.0378424963909,
+        "fatigue": 0.16077634963878604
+      },
+      "mid": {
+        "draws": 6753,
+        "FGA": 5895,
+        "expectedMake%": 42.78464727686469,
+        "actualMake%": 41.89249222567747,
+        "pointsPerDraw": 0.8378498445135495,
+        "expectedPointsPerDraw": 0.8556929455372938,
+        "off": 81.68790839875413,
+        "def": 72.98389781983543,
+        "fatigue": 0.1562564904749379
+      },
+      "three": {
+        "draws": 13359,
+        "FGA": 13246,
+        "expectedMake%": 34.37771858848225,
+        "actualMake%": 34.1342914888839,
+        "pointsPerDraw": 1.024028744666517,
+        "expectedPointsPerDraw": 1.031331557654468,
+        "off": 84.30037015766995,
+        "def": 72.43195156325656,
+        "fatigue": 0.16352982744289626
+      },
+      "open": {
+        "draws": 9510,
+        "FGA": 9161,
+        "expectedMake%": 40.86413281790993,
+        "actualMake%": 39.94742376445847,
+        "pointsPerDraw": 1.0744479495268138,
+        "expectedPointsPerDraw": 1.099891314413732,
+        "off": 84.72836961513633,
+        "def": 72.71806753019672,
+        "fatigue": 0.16541492772912753
+      },
+      "contest": {
+        "draws": 5365,
+        "FGA": 4813,
+        "expectedMake%": 48.20871698924331,
+        "actualMake%": 47.828518173345756,
+        "pointsPerDraw": 1.0177073625349486,
+        "expectedPointsPerDraw": 1.0274997801078105,
+        "off": 83.55184909236736,
+        "def": 72.701496295159,
+        "fatigue": 0.1616654816860034
+      },
+      "assisted": {
+        "draws": 19677,
+        "FGA": 18430,
+        "expectedMake%": 44.04029410491242,
+        "actualMake%": 43.817655130355234,
+        "pointsPerDraw": 1.063678406261117,
+        "expectedPointsPerDraw": 1.0692168848662533,
+        "off": 82.90642497818594,
+        "def": 72.23996511341016,
+        "fatigue": 0.16192587393148664
+      },
+      "selfCreated": {
+        "draws": 1356,
+        "FGA": 1343,
+        "expectedMake%": 30.775410605917646,
+        "actualMake%": 31.858407079646017,
+        "pointsPerDraw": 0.9557522123893806,
+        "expectedPointsPerDraw": 0.9232623181775296,
+        "off": 83.60216366606588,
+        "def": 73.01504778376011,
+        "fatigue": 0.15597353692003482
+      },
+      "transition": {
+        "draws": 14989,
+        "FGA": 14048,
+        "expectedMake%": 43.365618873286486,
+        "actualMake%": 42.684635399292816,
+        "pointsPerDraw": 1.0386283274401227,
+        "expectedPointsPerDraw": 1.0570092056127018,
+        "off": 83.26105746611347,
+        "def": 72.72753221973727,
+        "fatigue": 0.1654656570726007
+      },
+      "late": {
+        "draws": 278,
+        "FGA": 257,
+        "expectedMake%": 49.459492882654295,
+        "actualMake%": 48.561151079136685,
+        "pointsPerDraw": 1.0863309352517985,
+        "expectedPointsPerDraw": 1.0948087354815221,
+        "off": 83.85997277507418,
+        "def": 71.52103994487756,
+        "fatigue": 0.14270242688495974
+      },
+      "secondChance": {
+        "draws": 3511,
+        "FGA": 3511,
+        "expectedMake%": 59.842449885725436,
+        "actualMake%": 61.2361150669325,
+        "pointsPerDraw": 1.2509256622045002,
+        "expectedPointsPerDraw": 1.221706027460044,
+        "off": 80.72401883421396,
+        "def": 70.64980470951907,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 5605,
+        "FGA": 0,
+        "expectedMake%": 78.57270849756854,
+        "actualMake%": 78.3586083853702,
+        "pointsPerDraw": 0.7835860838537021,
+        "expectedPointsPerDraw": 0.7857270849756854,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.016607847207805688
+  },
+  "nba-league-302": {
+    "n": 160,
+    "meanAbs": 15.7125,
+    "medianAbs": 13.0,
+    "signedSD": 18.94362937111049,
+    "absSD": 11.095825510073597,
+    "within5%": 16.25,
+    "within10%": 38.125,
+    "over20%": 28.749999999999996,
+    "over30%": 11.25,
+    "over40%": 4.375,
+    "over50%": 1.875,
+    "points": 114.7,
+    "OTpct": 1.875,
+    "scoreCorrelation": 0.12067824009412106,
+    "full": {
+      "meanExpectedMargin": 2.3210108265204203,
+      "meanActualMargin": 3.3375,
+      "residualMean": 1.01648917347958,
+      "residualVariance": 304.08689965043146,
+      "meanConditionalVariance": 253.67524203521407,
+      "residualMSEtoConditionalVariance": 1.2027983000717004,
+      "expectedMarginVariance": 145.78714194553498,
+      "actualMarginVariance": 358.86109374999995,
+      "meanRatingDifference": 3.5683715183703044
+    },
+    "early": {
+      "meanExpectedMargin": 2.414030736703668,
+      "meanActualMargin": 3.0,
+      "residualMean": 0.5859692632963316,
+      "residualVariance": 223.05022946578282,
+      "meanConditionalVariance": 189.49832466732389,
+      "residualMSEtoConditionalVariance": 1.17886841393185,
+      "expectedMarginVariance": 101.02533710929143,
+      "actualMarginVariance": 268.5875,
+      "meanRatingDifference": 4.150749581969783
+    },
+    "league": "nba",
+    "label": "league",
+    "world": 302,
+    "runs": {
+      "count": 70.03125,
+      "max": 11.375,
+      "mean": 3.292420918529541,
+      "changes": 5.98125,
+      "ties": 4.6125
+    },
+    "quarterRuns": [
+      {
+        "count": 17.34375,
+        "max": 8.0625,
+        "mean": 3.3110483309328744,
+        "changes": 2.7,
+        "ties": 2.19375
+      },
+      {
+        "count": 17.975,
+        "max": 8.55,
+        "mean": 3.3143095768162225,
+        "changes": 2.6125,
+        "ties": 2.31875
+      },
+      {
+        "count": 17.93125,
+        "max": 8.26875,
+        "mean": 3.2805039380389887,
+        "changes": 2.86875,
+        "ties": 2.10625
+      },
+      {
+        "count": 17.86875,
+        "max": 8.4,
+        "mean": 3.3222129912827896,
+        "changes": 2.89375,
+        "ties": 2.225
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 11088,
+        "FGA": 10092,
+        "expectedMake%": 58.41120255136328,
+        "actualMake%": 59.14502164502164,
+        "pointsPerDraw": 1.182900432900433,
+        "expectedPointsPerDraw": 1.1682240510272657,
+        "off": 80.19962837429333,
+        "def": 74.33003786173417,
+        "fatigue": 0.1837803547658159
+      },
+      "mid": {
+        "draws": 7241,
+        "FGA": 6247,
+        "expectedMake%": 41.99162025580273,
+        "actualMake%": 42.16268471205635,
+        "pointsPerDraw": 0.843253694241127,
+        "expectedPointsPerDraw": 0.8398324051160546,
+        "off": 81.43142041876564,
+        "def": 70.75833148375024,
+        "fatigue": 0.1703329547813653
+      },
+      "three": {
+        "draws": 12235,
+        "FGA": 12112,
+        "expectedMake%": 33.39596966842354,
+        "actualMake%": 34.098896608091536,
+        "pointsPerDraw": 1.0229668982427462,
+        "expectedPointsPerDraw": 1.0018790900527064,
+        "off": 82.38184251834497,
+        "def": 71.83451202896386,
+        "fatigue": 0.1758835153094085
+      },
+      "open": {
+        "draws": 8478,
+        "FGA": 8111,
+        "expectedMake%": 40.77383331669269,
+        "actualMake%": 41.3658881811748,
+        "pointsPerDraw": 1.086694975230007,
+        "expectedPointsPerDraw": 1.073562638475976,
+        "off": 83.04780597015676,
+        "def": 72.52591491699414,
+        "fatigue": 0.17734535787901692
+      },
+      "contest": {
+        "draws": 5716,
+        "FGA": 5087,
+        "expectedMake%": 46.146418339658354,
+        "actualMake%": 46.39608117564731,
+        "pointsPerDraw": 0.9881035689293212,
+        "expectedPointsPerDraw": 0.9831903021510988,
+        "off": 81.62493735049485,
+        "def": 73.97089746408088,
+        "fatigue": 0.1812289632424284
+      },
+      "assisted": {
+        "draws": 19147,
+        "FGA": 17715,
+        "expectedMake%": 43.42105286405042,
+        "actualMake%": 43.89199352378963,
+        "pointsPerDraw": 1.0452812451036715,
+        "expectedPointsPerDraw": 1.0347460030692193,
+        "off": 80.87628561432386,
+        "def": 71.87027903485765,
+        "fatigue": 0.17946125058275275
+      },
+      "selfCreated": {
+        "draws": 1498,
+        "FGA": 1481,
+        "expectedMake%": 30.677676107743345,
+        "actualMake%": 33.177570093457945,
+        "pointsPerDraw": 0.9953271028037384,
+        "expectedPointsPerDraw": 0.9203302832323003,
+        "off": 82.69371575334169,
+        "def": 70.68207883002572,
+        "fatigue": 0.16664257850577896
+      },
+      "transition": {
+        "draws": 14705,
+        "FGA": 13653,
+        "expectedMake%": 42.61119572396637,
+        "actualMake%": 43.44100646038762,
+        "pointsPerDraw": 1.0467868072084325,
+        "expectedPointsPerDraw": 1.0249295566655372,
+        "off": 81.61959729638673,
+        "def": 72.641097603322,
+        "fatigue": 0.1806788387786473
+      },
+      "late": {
+        "draws": 289,
+        "FGA": 253,
+        "expectedMake%": 46.636539964388476,
+        "actualMake%": 47.75086505190311,
+        "pointsPerDraw": 1.0380622837370241,
+        "expectedPointsPerDraw": 1.0217640301064395,
+        "off": 80.74766133306626,
+        "def": 70.08445365583032,
+        "fatigue": 0.175730284433046
+      },
+      "secondChance": {
+        "draws": 3300,
+        "FGA": 3300,
+        "expectedMake%": 60.05484889017282,
+        "actualMake%": 60.75757575757576,
+        "pointsPerDraw": 1.2393939393939395,
+        "expectedPointsPerDraw": 1.2234720653666435,
+        "off": 79.56706383013093,
+        "def": 71.42929605340397,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 6473,
+        "FGA": 0,
+        "expectedMake%": 77.20762099601181,
+        "actualMake%": 76.71867758380967,
+        "pointsPerDraw": 0.7671867758380967,
+        "expectedPointsPerDraw": 0.7720762099601182,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.01695921309251251
+  },
+  "nba-league-303": {
+    "n": 160,
+    "meanAbs": 13.525,
+    "medianAbs": 13.0,
+    "signedSD": 16.27516800988549,
+    "absSD": 9.053970123652938,
+    "within5%": 21.25,
+    "within10%": 43.125,
+    "over20%": 21.25,
+    "over30%": 6.25,
+    "over40%": 1.25,
+    "over50%": 0.0,
+    "points": 113.36875,
+    "OTpct": 3.125,
+    "scoreCorrelation": 0.2541910117151448,
+    "full": {
+      "meanExpectedMargin": 2.719273971217843,
+      "meanActualMargin": 0.1375,
+      "residualMean": -2.581773971217843,
+      "residualVariance": 252.564655628304,
+      "meanConditionalVariance": 252.04984377511636,
+      "residualMSEtoConditionalVariance": 1.0284878918554379,
+      "expectedMarginVariance": 131.7433630168935,
+      "actualMarginVariance": 264.88109375,
+      "meanRatingDifference": 0.2983181653458421
+    },
+    "early": {
+      "meanExpectedMargin": 3.170312532714329,
+      "meanActualMargin": 1.4625,
+      "residualMean": -1.707812532714329,
+      "residualVariance": 182.00252709314577,
+      "meanConditionalVariance": 187.94425214988613,
+      "residualMSEtoConditionalVariance": 0.9839042621668914,
+      "expectedMarginVariance": 92.33220911407639,
+      "actualMarginVariance": 201.14859375,
+      "meanRatingDifference": 1.9278777445464006
+    },
+    "league": "nba",
+    "label": "league",
+    "world": 303,
+    "runs": {
+      "count": 70.53125,
+      "max": 10.80625,
+      "mean": 3.2365413505028853,
+      "changes": 6.19375,
+      "ties": 4.95625
+    },
+    "quarterRuns": [
+      {
+        "count": 17.86875,
+        "max": 7.7125,
+        "mean": 3.1858007528091825,
+        "changes": 2.7,
+        "ties": 2.1375
+      },
+      {
+        "count": 17.98125,
+        "max": 8.05625,
+        "mean": 3.240204858807546,
+        "changes": 3.01875,
+        "ties": 2.125
+      },
+      {
+        "count": 17.51875,
+        "max": 8.28125,
+        "mean": 3.280324628665295,
+        "changes": 2.83125,
+        "ties": 2.2
+      },
+      {
+        "count": 18.15,
+        "max": 7.9125,
+        "mean": 3.2306410892044113,
+        "changes": 2.78125,
+        "ties": 2.4
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 11671,
+        "FGA": 10609,
+        "expectedMake%": 58.23259468066671,
+        "actualMake%": 58.25550509810642,
+        "pointsPerDraw": 1.1651101019621284,
+        "expectedPointsPerDraw": 1.164651893613334,
+        "off": 80.76274856970514,
+        "def": 74.51149891711776,
+        "fatigue": 0.18809845973252126
+      },
+      "mid": {
+        "draws": 7295,
+        "FGA": 6343,
+        "expectedMake%": 41.75463209571179,
+        "actualMake%": 41.795750514050724,
+        "pointsPerDraw": 0.8359150102810144,
+        "expectedPointsPerDraw": 0.8350926419142358,
+        "off": 80.19906322205304,
+        "def": 71.85689195242098,
+        "fatigue": 0.1782455568439395
+      },
+      "three": {
+        "draws": 11873,
+        "FGA": 11757,
+        "expectedMake%": 33.157182272786436,
+        "actualMake%": 32.47704876610798,
+        "pointsPerDraw": 0.9743114629832392,
+        "expectedPointsPerDraw": 0.9947154681835931,
+        "off": 82.82788825963189,
+        "def": 73.58368929068737,
+        "fatigue": 0.17843418206161069
+      },
+      "open": {
+        "draws": 8218,
+        "FGA": 7884,
+        "expectedMake%": 40.54154742486692,
+        "actualMake%": 39.79070333414456,
+        "pointsPerDraw": 1.0497688001946945,
+        "expectedPointsPerDraw": 1.0684636628983268,
+        "off": 83.02103685503188,
+        "def": 73.98863483820563,
+        "fatigue": 0.178658966317186
+      },
+      "contest": {
+        "draws": 5866,
+        "FGA": 5234,
+        "expectedMake%": 46.539891753035974,
+        "actualMake%": 47.562222979884076,
+        "pointsPerDraw": 1.0061370610296625,
+        "expectedPointsPerDraw": 0.9858820857293981,
+        "off": 81.77947662545937,
+        "def": 74.29671488937223,
+        "fatigue": 0.18050240430939923
+      },
+      "assisted": {
+        "draws": 19387,
+        "FGA": 17911,
+        "expectedMake%": 43.772638091800644,
+        "actualMake%": 43.524010935162735,
+        "pointsPerDraw": 1.0253778305049777,
+        "expectedPointsPerDraw": 1.034390459972831,
+        "off": 81.10886343470852,
+        "def": 73.04836178535635,
+        "fatigue": 0.18340907515917418
+      },
+      "selfCreated": {
+        "draws": 1356,
+        "FGA": 1340,
+        "expectedMake%": 30.188053468668237,
+        "actualMake%": 28.31858407079646,
+        "pointsPerDraw": 0.8495575221238938,
+        "expectedPointsPerDraw": 0.9056416040600469,
+        "off": 82.55334792347861,
+        "def": 73.1366634527276,
+        "fatigue": 0.17007858154863043
+      },
+      "transition": {
+        "draws": 14844,
+        "FGA": 13765,
+        "expectedMake%": 42.66550810666944,
+        "actualMake%": 42.3807599029911,
+        "pointsPerDraw": 1.0091619509566154,
+        "expectedPointsPerDraw": 1.0199904287346964,
+        "off": 81.57223030544587,
+        "def": 73.60949549294948,
+        "fatigue": 0.18679113453253193
+      },
+      "late": {
+        "draws": 295,
+        "FGA": 267,
+        "expectedMake%": 46.83158211036439,
+        "actualMake%": 46.101694915254235,
+        "pointsPerDraw": 0.9932203389830508,
+        "expectedPointsPerDraw": 1.0105897565638147,
+        "off": 79.98535936287188,
+        "def": 74.99334879386221,
+        "fatigue": 0.18187130898043052
+      },
+      "secondChance": {
+        "draws": 3511,
+        "FGA": 3511,
+        "expectedMake%": 60.1809320520867,
+        "actualMake%": 60.15380233551695,
+        "pointsPerDraw": 1.2241526630589576,
+        "expectedPointsPerDraw": 1.2238742663611988,
+        "off": 80.31021165049034,
+        "def": 71.53501503429455,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 6541,
+        "FGA": 0,
+        "expectedMake%": 77.42891342711584,
+        "actualMake%": 76.65494572695306,
+        "pointsPerDraw": 0.7665494572695306,
+        "expectedPointsPerDraw": 0.7742891342711584,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.03387103603031458
+  },
+  "nba-league-304": {
+    "n": 160,
+    "meanAbs": 14.9375,
+    "medianAbs": 12.5,
+    "signedSD": 18.05650419516469,
+    "absSD": 10.162853622383823,
+    "within5%": 17.5,
+    "within10%": 43.125,
+    "over20%": 33.75,
+    "over30%": 11.25,
+    "over40%": 1.875,
+    "over50%": 0.0,
+    "points": 113.31875,
+    "OTpct": 1.875,
+    "scoreCorrelation": 0.11681104750376059,
+    "full": {
+      "meanExpectedMargin": 0.5277098851193089,
+      "meanActualMargin": 0.6125,
+      "residualMean": 0.08479011488069102,
+      "residualVariance": 230.16060598208907,
+      "meanConditionalVariance": 254.91223725667714,
+      "residualMSEtoConditionalVariance": 0.9029295643971346,
+      "expectedMarginVariance": 128.09612566045092,
+      "actualMarginVariance": 326.03734374999993,
+      "meanRatingDifference": 0.5655907895407511
+    },
+    "early": {
+      "meanExpectedMargin": -0.39557467908673855,
+      "meanActualMargin": -0.01875,
+      "residualMean": 0.37682467908673856,
+      "residualVariance": 178.32691884464253,
+      "meanConditionalVariance": 189.79612407196078,
+      "residualMSEtoConditionalVariance": 0.9403190742490889,
+      "expectedMarginVariance": 88.70881383711752,
+      "actualMarginVariance": 277.30589843750005,
+      "meanRatingDifference": -0.13164449267877334
+    },
+    "league": "nba",
+    "label": "league",
+    "world": 304,
+    "runs": {
+      "count": 70.01875,
+      "max": 11.31875,
+      "mean": 3.26131949420533,
+      "changes": 5.975,
+      "ties": 4.95
+    },
+    "quarterRuns": [
+      {
+        "count": 17.8375,
+        "max": 8.175,
+        "mean": 3.221937366837267,
+        "changes": 2.59375,
+        "ties": 2.31875
+      },
+      {
+        "count": 17.8125,
+        "max": 8.175,
+        "mean": 3.273131571330725,
+        "changes": 2.5875,
+        "ties": 1.91875
+      },
+      {
+        "count": 18.16875,
+        "max": 7.88125,
+        "mean": 3.2074622474627055,
+        "changes": 3.125,
+        "ties": 2.24375
+      },
+      {
+        "count": 17.3375,
+        "max": 8.4875,
+        "mean": 3.366532396394738,
+        "changes": 3.1125,
+        "ties": 2.275
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 11333,
+        "FGA": 10251,
+        "expectedMake%": 58.15203723559458,
+        "actualMake%": 58.289949704403064,
+        "pointsPerDraw": 1.1657989940880613,
+        "expectedPointsPerDraw": 1.1630407447118916,
+        "off": 79.45388135017117,
+        "def": 74.88540155523953,
+        "fatigue": 0.191730901822627
+      },
+      "mid": {
+        "draws": 7141,
+        "FGA": 6239,
+        "expectedMake%": 42.007661023155414,
+        "actualMake%": 41.15670074219297,
+        "pointsPerDraw": 0.8231340148438594,
+        "expectedPointsPerDraw": 0.8401532204631083,
+        "off": 78.11986692058709,
+        "def": 70.24289395905893,
+        "fatigue": 0.17948321957176105
+      },
+      "three": {
+        "draws": 12235,
+        "FGA": 12114,
+        "expectedMake%": 33.460692072576315,
+        "actualMake%": 33.19983653453208,
+        "pointsPerDraw": 0.9959950960359624,
+        "expectedPointsPerDraw": 1.0038207621772897,
+        "off": 82.31879296921625,
+        "def": 71.72378221323773,
+        "fatigue": 0.1825782493033777
+      },
+      "open": {
+        "draws": 8496,
+        "FGA": 8134,
+        "expectedMake%": 40.53926820607155,
+        "actualMake%": 40.63088512241055,
+        "pointsPerDraw": 1.0765065913371,
+        "expectedPointsPerDraw": 1.073648355335793,
+        "off": 82.61982016337245,
+        "def": 72.2084333781353,
+        "fatigue": 0.1867282152658883
+      },
+      "contest": {
+        "draws": 5744,
+        "FGA": 5123,
+        "expectedMake%": 46.09067356257216,
+        "actualMake%": 45.21239554317549,
+        "pointsPerDraw": 0.9622214484679665,
+        "expectedPointsPerDraw": 0.9812252773054922,
+        "off": 80.87545975601552,
+        "def": 74.28349681678438,
+        "fatigue": 0.1816317149314597
+      },
+      "assisted": {
+        "draws": 19404,
+        "FGA": 17922,
+        "expectedMake%": 43.47915151705763,
+        "actualMake%": 42.6149247577819,
+        "pointsPerDraw": 1.0143269428983714,
+        "expectedPointsPerDraw": 1.0352826034834708,
+        "off": 80.12849231052128,
+        "def": 71.93454353152892,
+        "fatigue": 0.1859831107822586
+      },
+      "selfCreated": {
+        "draws": 1458,
+        "FGA": 1445,
+        "expectedMake%": 30.15095244208815,
+        "actualMake%": 29.01234567901235,
+        "pointsPerDraw": 0.8703703703703703,
+        "expectedPointsPerDraw": 0.9045285732626446,
+        "off": 81.3034130936291,
+        "def": 71.67254425213851,
+        "fatigue": 0.1778102664844513
+      },
+      "transition": {
+        "draws": 14836,
+        "FGA": 13770,
+        "expectedMake%": 42.75305599684708,
+        "actualMake%": 42.41035319493125,
+        "pointsPerDraw": 1.0187382043677542,
+        "expectedPointsPerDraw": 1.024535793267361,
+        "off": 80.54967333501213,
+        "def": 72.6874034540778,
+        "fatigue": 0.1859607477550051
+      },
+      "late": {
+        "draws": 263,
+        "FGA": 237,
+        "expectedMake%": 48.25625047391513,
+        "actualMake%": 47.14828897338403,
+        "pointsPerDraw": 1.0228136882129277,
+        "expectedPointsPerDraw": 1.0481999806253115,
+        "off": 79.22503198846249,
+        "def": 73.13711867386233,
+        "fatigue": 0.1845612580874374
+      },
+      "secondChance": {
+        "draws": 3390,
+        "FGA": 3390,
+        "expectedMake%": 59.698970685825245,
+        "actualMake%": 61.6519174041298,
+        "pointsPerDraw": 1.26047197640118,
+        "expectedPointsPerDraw": 1.2163106472254896,
+        "off": 78.34858102944752,
+        "def": 71.31904475864532,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 6463,
+        "FGA": 0,
+        "expectedMake%": 77.38690495878913,
+        "actualMake%": 77.14683583475166,
+        "pointsPerDraw": 0.7714683583475166,
+        "expectedPointsPerDraw": 0.7738690495878913,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.016854879487611663
+  },
+  "nba-pace-901": {
+    "n": 160,
+    "meanAbs": 13.34375,
+    "medianAbs": 11.5,
+    "signedSD": 16.1105058405222,
+    "absSD": 9.064385579701472,
+    "within5%": 19.375,
+    "within10%": 46.25,
+    "over20%": 23.125,
+    "over30%": 6.25,
+    "over40%": 0.625,
+    "over50%": 0.625,
+    "points": 115.946875,
+    "OTpct": 1.875,
+    "scoreCorrelation": 0.10920692039102661,
+    "full": {
+      "meanExpectedMargin": 0.4093968490513099,
+      "meanActualMargin": 0.81875,
+      "residualMean": 0.4093531509486901,
+      "residualVariance": 262.9771409995806,
+      "meanConditionalVariance": 263.31191860345115,
+      "residualMSEtoConditionalVariance": 0.999364982783287,
+      "expectedMarginVariance": 97.95313285947358,
+      "actualMarginVariance": 259.5483984375,
+      "meanRatingDifference": 0.8279575359308591
+    },
+    "early": {
+      "meanExpectedMargin": 0.5236312739127038,
+      "meanActualMargin": 0.1375,
+      "residualMean": -0.38613127391270374,
+      "residualVariance": 213.75626043453076,
+      "meanConditionalVariance": 196.33689144648574,
+      "residualMSEtoConditionalVariance": 1.0894812290207163,
+      "expectedMarginVariance": 81.81684564830582,
+      "actualMarginVariance": 213.03109375,
+      "meanRatingDifference": 0.14198595359829397
+    },
+    "league": "nba",
+    "label": "pace",
+    "world": 901,
+    "runs": {
+      "count": 71.59375,
+      "max": 11.125,
+      "mean": 3.258606071604787,
+      "changes": 5.86875,
+      "ties": 4.90625
+    },
+    "quarterRuns": [
+      {
+        "count": 17.90625,
+        "max": 7.8375,
+        "mean": 3.221211964569116,
+        "changes": 3.0,
+        "ties": 2.35
+      },
+      {
+        "count": 18.1875,
+        "max": 7.88125,
+        "mean": 3.2668209986259966,
+        "changes": 3.06875,
+        "ties": 2.40625
+      },
+      {
+        "count": 18.025,
+        "max": 8.4375,
+        "mean": 3.331374573077646,
+        "changes": 2.93125,
+        "ties": 2.25
+      },
+      {
+        "count": 18.54375,
+        "max": 8.13125,
+        "mean": 3.2508508593674144,
+        "changes": 2.8875,
+        "ties": 2.1625
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 11372,
+        "FGA": 10391,
+        "expectedMake%": 59.0004929018518,
+        "actualMake%": 58.978192050650726,
+        "pointsPerDraw": 1.1795638410130145,
+        "expectedPointsPerDraw": 1.180009858037036,
+        "off": 80.31411395890544,
+        "def": 73.35577633392629,
+        "fatigue": 0.15742733966312006
+      },
+      "mid": {
+        "draws": 6963,
+        "FGA": 6034,
+        "expectedMake%": 41.68945305786235,
+        "actualMake%": 42.43860404997846,
+        "pointsPerDraw": 0.8487720809995691,
+        "expectedPointsPerDraw": 0.833789061157247,
+        "off": 78.57571847457982,
+        "def": 73.2409134008089,
+        "fatigue": 0.14473199890677346
+      },
+      "three": {
+        "draws": 13161,
+        "FGA": 13034,
+        "expectedMake%": 32.78018462162645,
+        "actualMake%": 32.550718030544786,
+        "pointsPerDraw": 0.9765215409163437,
+        "expectedPointsPerDraw": 0.9834055386487933,
+        "off": 81.91260259418604,
+        "def": 75.7688706775746,
+        "fatigue": 0.14752386493381342
+      },
+      "open": {
+        "draws": 9769,
+        "FGA": 9403,
+        "expectedMake%": 39.23974300341402,
+        "actualMake%": 39.30801514996417,
+        "pointsPerDraw": 1.0520012283754734,
+        "expectedPointsPerDraw": 1.052223466009569,
+        "off": 82.50902628944031,
+        "def": 75.94170407047723,
+        "fatigue": 0.1482736535840546
+      },
+      "contest": {
+        "draws": 5744,
+        "FGA": 5151,
+        "expectedMake%": 47.39519922582273,
+        "actualMake%": 47.2841225626741,
+        "pointsPerDraw": 0.9973885793871866,
+        "expectedPointsPerDraw": 0.9985586130183561,
+        "off": 81.04998548411417,
+        "def": 74.58730094955018,
+        "fatigue": 0.15277629891045807
+      },
+      "assisted": {
+        "draws": 19656,
+        "FGA": 18225,
+        "expectedMake%": 43.11865282451179,
+        "actualMake%": 43.25396825396825,
+        "pointsPerDraw": 1.0316951566951567,
+        "expectedPointsPerDraw": 1.0293627098243192,
+        "off": 80.48210503581636,
+        "def": 74.08524603311314,
+        "fatigue": 0.15274613661591332
+      },
+      "selfCreated": {
+        "draws": 1450,
+        "FGA": 1435,
+        "expectedMake%": 29.477431312464336,
+        "actualMake%": 29.931034482758623,
+        "pointsPerDraw": 0.8979310344827586,
+        "expectedPointsPerDraw": 0.88432293937393,
+        "off": 81.37745974073074,
+        "def": 74.40812779082887,
+        "fatigue": 0.1457990268937242
+      },
+      "transition": {
+        "draws": 16310,
+        "FGA": 15170,
+        "expectedMake%": 41.853341027112094,
+        "actualMake%": 41.84549356223176,
+        "pointsPerDraw": 1.0119558553034949,
+        "expectedPointsPerDraw": 1.012704834686425,
+        "off": 80.59571616494856,
+        "def": 75.03431655948475,
+        "fatigue": 0.15150093618714505
+      },
+      "late": {
+        "draws": 309,
+        "FGA": 281,
+        "expectedMake%": 48.88309987011051,
+        "actualMake%": 45.307443365695796,
+        "pointsPerDraw": 0.948220064724919,
+        "expectedPointsPerDraw": 1.0396640540593542,
+        "off": 80.67082414524175,
+        "def": 74.64304906843941,
+        "fatigue": 0.14683221230694102
+      },
+      "secondChance": {
+        "draws": 3470,
+        "FGA": 3470,
+        "expectedMake%": 60.008655601130826,
+        "actualMake%": 59.048991354466864,
+        "pointsPerDraw": 1.1979827089337176,
+        "expectedPointsPerDraw": 1.2197273695494741,
+        "off": 78.9963783693341,
+        "def": 70.23226703622926,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 6339,
+        "FGA": 0,
+        "expectedMake%": 77.5970184571699,
+        "actualMake%": 77.7251932481464,
+        "pointsPerDraw": 0.777251932481464,
+        "expectedPointsPerDraw": 0.775970184571699,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.016292615372082604
+  },
+  "nba-poor-defense-901": {
+    "n": 160,
+    "meanAbs": 15.40625,
+    "medianAbs": 12.0,
+    "signedSD": 16.840797514889253,
+    "absSD": 11.6888284672802,
+    "within5%": 18.125,
+    "within10%": 40.625,
+    "over20%": 27.500000000000004,
+    "over30%": 13.125,
+    "over40%": 5.0,
+    "over50%": 1.25,
+    "points": 117.246875,
+    "OTpct": 3.125,
+    "scoreCorrelation": 0.22107878656858565,
+    "full": {
+      "meanExpectedMargin": 8.600761890214798,
+      "meanActualMargin": 9.50625,
+      "residualMean": 0.9054881097852021,
+      "residualVariance": 304.4350479724896,
+      "meanConditionalVariance": 259.3105284559058,
+      "residualMSEtoConditionalVariance": 1.1771791855391587,
+      "expectedMarginVariance": 110.46364705665815,
+      "actualMarginVariance": 283.61246093750003,
+      "meanRatingDifference": 9.7487442026607
+    },
+    "early": {
+      "meanExpectedMargin": 6.610799325920399,
+      "meanActualMargin": 6.80625,
+      "residualMean": 0.1954506740796001,
+      "residualVariance": 220.6629357148432,
+      "meanConditionalVariance": 192.95485668246616,
+      "residualMSEtoConditionalVariance": 1.1437967433182339,
+      "expectedMarginVariance": 85.55867530138595,
+      "actualMarginVariance": 232.8937109375,
+      "meanRatingDifference": 8.997258647515855
+    },
+    "league": "nba",
+    "label": "poor-defense",
+    "world": 901,
+    "runs": {
+      "count": 73.1875,
+      "max": 11.2,
+      "mean": 3.221577220972083,
+      "changes": 6.16875,
+      "ties": 4.68125
+    },
+    "quarterRuns": [
+      {
+        "count": 18.34375,
+        "max": 7.85,
+        "mean": 3.2233016316205765,
+        "changes": 2.6125,
+        "ties": 2.025
+      },
+      {
+        "count": 18.4875,
+        "max": 7.9875,
+        "mean": 3.215832636506799,
+        "changes": 2.94375,
+        "ties": 2.525
+      },
+      {
+        "count": 18.35625,
+        "max": 7.90625,
+        "mean": 3.236407854261125,
+        "changes": 3.0125,
+        "ties": 2.09375
+      },
+      {
+        "count": 18.95,
+        "max": 8.56875,
+        "mean": 3.2080498461365266,
+        "changes": 3.0875,
+        "ties": 2.14375
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 11161,
+        "FGA": 10081,
+        "expectedMake%": 59.79780863487355,
+        "actualMake%": 59.59143445927785,
+        "pointsPerDraw": 1.191828689185557,
+        "expectedPointsPerDraw": 1.195956172697471,
+        "off": 80.2676655022413,
+        "def": 68.4642608365574,
+        "fatigue": 0.14712995136801202
+      },
+      "mid": {
+        "draws": 6810,
+        "FGA": 5838,
+        "expectedMake%": 42.79591809793182,
+        "actualMake%": 43.30396475770925,
+        "pointsPerDraw": 0.866079295154185,
+        "expectedPointsPerDraw": 0.8559183619586364,
+        "off": 78.14004023869387,
+        "def": 67.16386960476831,
+        "fatigue": 0.14132798963696136
+      },
+      "three": {
+        "draws": 12750,
+        "FGA": 12612,
+        "expectedMake%": 34.32992905310194,
+        "actualMake%": 33.976470588235294,
+        "pointsPerDraw": 1.019294117647059,
+        "expectedPointsPerDraw": 1.0298978715930585,
+        "off": 81.70861341701882,
+        "def": 69.43277446216591,
+        "fatigue": 0.14221861260877988
+      },
+      "open": {
+        "draws": 9175,
+        "FGA": 8770,
+        "expectedMake%": 40.974016279808616,
+        "actualMake%": 40.73024523160763,
+        "pointsPerDraw": 1.0885013623978201,
+        "expectedPointsPerDraw": 1.0967029615053252,
+        "off": 82.25957152622036,
+        "def": 69.53026666922531,
+        "fatigue": 0.14490276361861334
+      },
+      "contest": {
+        "draws": 5455,
+        "FGA": 4856,
+        "expectedMake%": 48.206324043852064,
+        "actualMake%": 48.707607699358384,
+        "pointsPerDraw": 1.0348304307974336,
+        "expectedPointsPerDraw": 1.0246057841928788,
+        "off": 81.06077638782678,
+        "def": 69.21129773895598,
+        "fatigue": 0.14681944450278342
+      },
+      "assisted": {
+        "draws": 19773,
+        "FGA": 18283,
+        "expectedMake%": 44.58099024916715,
+        "actualMake%": 44.26743539169575,
+        "pointsPerDraw": 1.0569969149850806,
+        "expectedPointsPerDraw": 1.0658416582751797,
+        "off": 80.34477167790239,
+        "def": 68.2722993479396,
+        "fatigue": 0.14581613793267478
+      },
+      "selfCreated": {
+        "draws": 1448,
+        "FGA": 1429,
+        "expectedMake%": 31.116726425018133,
+        "actualMake%": 31.077348066298345,
+        "pointsPerDraw": 0.9323204419889503,
+        "expectedPointsPerDraw": 0.9335017927505439,
+        "off": 80.91144884355607,
+        "def": 69.12151544175843,
+        "fatigue": 0.13226096409248236
+      },
+      "transition": {
+        "draws": 14613,
+        "FGA": 13517,
+        "expectedMake%": 43.08952434618133,
+        "actualMake%": 42.96858961198932,
+        "pointsPerDraw": 1.0435228905768836,
+        "expectedPointsPerDraw": 1.04704356524102,
+        "off": 80.24029311409753,
+        "def": 69.01539073380428,
+        "fatigue": 0.14465935417236395
+      },
+      "late": {
+        "draws": 299,
+        "FGA": 272,
+        "expectedMake%": 50.56210007077184,
+        "actualMake%": 49.163879598662206,
+        "pointsPerDraw": 1.060200668896321,
+        "expectedPointsPerDraw": 1.074988157438748,
+        "off": 80.05572024157668,
+        "def": 70.9429153354708,
+        "fatigue": 0.13496055536432816
+      },
+      "secondChance": {
+        "draws": 3230,
+        "FGA": 3230,
+        "expectedMake%": 61.08542949519683,
+        "actualMake%": 60.12383900928793,
+        "pointsPerDraw": 1.2198142414860682,
+        "expectedPointsPerDraw": 1.2417216990984994,
+        "off": 79.08069192620539,
+        "def": 65.51626040399195,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 6943,
+        "FGA": 0,
+        "expectedMake%": 77.57381535359355,
+        "actualMake%": 76.66714676652744,
+        "pointsPerDraw": 0.7666714676652744,
+        "expectedPointsPerDraw": 0.7757381535359354,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.012598160668542392
+  },
+  "nba-rebounds-901": {
+    "n": 160,
+    "meanAbs": 14.83125,
+    "medianAbs": 12.0,
+    "signedSD": 17.632222589268206,
+    "absSD": 9.633419612863337,
+    "within5%": 13.125,
+    "within10%": 45.625,
+    "over20%": 28.125,
+    "over30%": 7.5,
+    "over40%": 1.875,
+    "over50%": 1.25,
+    "points": 111.040625,
+    "OTpct": 3.125,
+    "scoreCorrelation": 0.11740786571076336,
+    "full": {
+      "meanExpectedMargin": -1.3982868642400628,
+      "meanActualMargin": -1.36875,
+      "residualMean": 0.029536864240062587,
+      "residualVariance": 333.99449643160983,
+      "meanConditionalVariance": 255.30795018186737,
+      "residualMSEtoConditionalVariance": 1.3082059082768045,
+      "expectedMarginVariance": 107.97037011790303,
+      "actualMarginVariance": 310.8952734375,
+      "meanRatingDifference": -1.3193712154360056
+    },
+    "early": {
+      "meanExpectedMargin": -0.7181278985557464,
+      "meanActualMargin": -0.86875,
+      "residualMean": -0.15062210144425361,
+      "residualVariance": 238.64356151681469,
+      "meanConditionalVariance": 190.24047644317528,
+      "residualMSEtoConditionalVariance": 1.2545503091480517,
+      "expectedMarginVariance": 91.73303485074251,
+      "actualMarginVariance": 217.0515234375,
+      "meanRatingDifference": -1.1715707260148007
+    },
+    "league": "nba",
+    "label": "rebounds",
+    "world": 901,
+    "runs": {
+      "count": 68.35625,
+      "max": 11.0375,
+      "mean": 3.2657214365210043,
+      "changes": 5.76875,
+      "ties": 4.55
+    },
+    "quarterRuns": [
+      {
+        "count": 17.6,
+        "max": 7.78125,
+        "mean": 3.2085973647587283,
+        "changes": 2.6625,
+        "ties": 2.1875
+      },
+      {
+        "count": 17.1,
+        "max": 8.15625,
+        "mean": 3.28003632638156,
+        "changes": 2.55,
+        "ties": 2.0
+      },
+      {
+        "count": 17.29375,
+        "max": 8.14375,
+        "mean": 3.2832191986792223,
+        "changes": 2.65625,
+        "ties": 1.98125
+      },
+      {
+        "count": 17.44375,
+        "max": 8.34375,
+        "mean": 3.2798925106096077,
+        "changes": 2.75625,
+        "ties": 2.09375
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 11164,
+        "FGA": 10149,
+        "expectedMake%": 58.628639526008854,
+        "actualMake%": 58.285560730920814,
+        "pointsPerDraw": 1.1657112146184163,
+        "expectedPointsPerDraw": 1.172572790520177,
+        "off": 80.73273522458159,
+        "def": 73.39756145063183,
+        "fatigue": 0.15004472464708865
+      },
+      "mid": {
+        "draws": 6847,
+        "FGA": 5964,
+        "expectedMake%": 41.64989109815248,
+        "actualMake%": 40.70395793778297,
+        "pointsPerDraw": 0.8140791587556594,
+        "expectedPointsPerDraw": 0.8329978219630496,
+        "off": 78.81529329833891,
+        "def": 73.57173788694521,
+        "fatigue": 0.1358523544772551
+      },
+      "three": {
+        "draws": 12701,
+        "FGA": 12574,
+        "expectedMake%": 32.61923712512739,
+        "actualMake%": 31.989607117549802,
+        "pointsPerDraw": 0.959688213526494,
+        "expectedPointsPerDraw": 0.978577113753822,
+        "off": 81.67569459805321,
+        "def": 75.61369991964122,
+        "fatigue": 0.14221791401931322
+      },
+      "open": {
+        "draws": 8935,
+        "FGA": 8579,
+        "expectedMake%": 39.125021590847595,
+        "actualMake%": 38.321208729714606,
+        "pointsPerDraw": 1.0245103525461667,
+        "expectedPointsPerDraw": 1.048810131882051,
+        "off": 82.3965841456849,
+        "def": 75.77714233028462,
+        "fatigue": 0.14548790961873445
+      },
+      "contest": {
+        "draws": 5693,
+        "FGA": 5102,
+        "expectedMake%": 46.81752648313356,
+        "actualMake%": 46.61865448796768,
+        "pointsPerDraw": 0.9859476550149306,
+        "expectedPointsPerDraw": 0.9905363742962331,
+        "off": 81.16839137807334,
+        "def": 74.79514608067957,
+        "fatigue": 0.14479944377030102
+      },
+      "assisted": {
+        "draws": 19612,
+        "FGA": 18197,
+        "expectedMake%": 43.19453867774685,
+        "actualMake%": 42.74423822149704,
+        "pointsPerDraw": 1.0188660004079135,
+        "expectedPointsPerDraw": 1.0294671068012855,
+        "off": 80.66905594070572,
+        "def": 74.35096171715259,
+        "fatigue": 0.14493536904084903
+      },
+      "selfCreated": {
+        "draws": 1423,
+        "FGA": 1406,
+        "expectedMake%": 29.253927063647566,
+        "actualMake%": 28.109627547434997,
+        "pointsPerDraw": 0.8432888264230499,
+        "expectedPointsPerDraw": 0.8776178119094271,
+        "off": 80.86919588396239,
+        "def": 73.9867797140632,
+        "fatigue": 0.1352971194252332
+      },
+      "transition": {
+        "draws": 14876,
+        "FGA": 13846,
+        "expectedMake%": 41.67188658977328,
+        "actualMake%": 41.07286905082012,
+        "pointsPerDraw": 0.9915972035493412,
+        "expectedPointsPerDraw": 1.00786580628371,
+        "off": 80.6371324086871,
+        "def": 75.18592972163673,
+        "fatigue": 0.1449896039270107
+      },
+      "late": {
+        "draws": 292,
+        "FGA": 263,
+        "expectedMake%": 48.44608121356595,
+        "actualMake%": 44.178082191780824,
+        "pointsPerDraw": 0.9212328767123288,
+        "expectedPointsPerDraw": 1.0396849272020274,
+        "off": 80.64651635039392,
+        "def": 73.52495502026093,
+        "fatigue": 0.1470392686578772
+      },
+      "secondChance": {
+        "draws": 3438,
+        "FGA": 3438,
+        "expectedMake%": 59.284635186993896,
+        "actualMake%": 57.85340314136126,
+        "pointsPerDraw": 1.1748109365910413,
+        "expectedPointsPerDraw": 1.2080911964628944,
+        "off": 79.37191737091709,
+        "def": 69.85234651927398,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 6138,
+        "FGA": 0,
+        "expectedMake%": 77.55140110785273,
+        "actualMake%": 77.48452264581297,
+        "pointsPerDraw": 0.7748452264581297,
+        "expectedPointsPerDraw": 0.7755140110785272,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.020964360587002094
+  },
+  "nba-selection-901": {
+    "n": 160,
+    "meanAbs": 12.5,
+    "medianAbs": 10.0,
+    "signedSD": 15.43605762492483,
+    "absSD": 9.057455492576267,
+    "within5%": 19.375,
+    "within10%": 55.00000000000001,
+    "over20%": 20.625,
+    "over30%": 3.75,
+    "over40%": 1.875,
+    "over50%": 1.25,
+    "points": 111.79375,
+    "OTpct": 2.5,
+    "scoreCorrelation": 0.2602121116867934,
+    "full": {
+      "meanExpectedMargin": -0.8205754858866694,
+      "meanActualMargin": -0.125,
+      "residualMean": 0.6955754858866694,
+      "residualVariance": 249.1237356529984,
+      "meanConditionalVariance": 262.8926400060701,
+      "residualMSEtoConditionalVariance": 0.9494657625401817,
+      "expectedMarginVariance": 97.50315913213836,
+      "actualMarginVariance": 238.271875,
+      "meanRatingDifference": 0.12975412740833098
+    },
+    "early": {
+      "meanExpectedMargin": -0.8977904933814473,
+      "meanActualMargin": 0.5,
+      "residualMean": 1.3977904933814473,
+      "residualVariance": 191.34468902972878,
+      "meanConditionalVariance": 195.9972342988241,
+      "residualMSEtoConditionalVariance": 0.9862307903712906,
+      "expectedMarginVariance": 89.36490350278986,
+      "actualMarginVariance": 200.6875,
+      "meanRatingDifference": 1.025711353137007
+    },
+    "league": "nba",
+    "label": "selection",
+    "world": 901,
+    "runs": {
+      "count": 67.825,
+      "max": 11.13125,
+      "mean": 3.315679360755941,
+      "changes": 6.525,
+      "ties": 4.64375
+    },
+    "quarterRuns": [
+      {
+        "count": 17.1125,
+        "max": 7.89375,
+        "mean": 3.2810413487781425,
+        "changes": 2.94375,
+        "ties": 2.1875
+      },
+      {
+        "count": 17.1125,
+        "max": 8.43125,
+        "mean": 3.3189810018883774,
+        "changes": 2.775,
+        "ties": 1.91875
+      },
+      {
+        "count": 16.96875,
+        "max": 8.23125,
+        "mean": 3.363071589284438,
+        "changes": 2.73125,
+        "ties": 1.95
+      },
+      {
+        "count": 17.6375,
+        "max": 8.225,
+        "mean": 3.312220698464354,
+        "changes": 2.75625,
+        "ties": 2.125
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 11874,
+        "FGA": 10803,
+        "expectedMake%": 58.557412100503484,
+        "actualMake%": 58.18595250126326,
+        "pointsPerDraw": 1.1637190500252652,
+        "expectedPointsPerDraw": 1.1711482420100696,
+        "off": 80.32854819627832,
+        "def": 73.5558338116614,
+        "fatigue": 0.14896609212741801
+      },
+      "mid": {
+        "draws": 4707,
+        "FGA": 4087,
+        "expectedMake%": 41.434872491579114,
+        "actualMake%": 40.79031230082855,
+        "pointsPerDraw": 0.815806246016571,
+        "expectedPointsPerDraw": 0.8286974498315822,
+        "off": 78.48911639544163,
+        "def": 73.28851969001656,
+        "fatigue": 0.13695661064937492
+      },
+      "three": {
+        "draws": 14155,
+        "FGA": 14023,
+        "expectedMake%": 32.35799379189251,
+        "actualMake%": 32.235959025079474,
+        "pointsPerDraw": 0.9670787707523844,
+        "expectedPointsPerDraw": 0.9707398137567752,
+        "off": 81.35851945124004,
+        "def": 75.62881290069495,
+        "fatigue": 0.1419233851119175
+      },
+      "open": {
+        "draws": 9061,
+        "FGA": 8729,
+        "expectedMake%": 38.832910124176806,
+        "actualMake%": 38.925063458779384,
+        "pointsPerDraw": 1.0503255711290145,
+        "expectedPointsPerDraw": 1.0472467103492493,
+        "off": 82.03594195771609,
+        "def": 75.75722302016541,
+        "fatigue": 0.1439999470197542
+      },
+      "contest": {
+        "draws": 5549,
+        "FGA": 5013,
+        "expectedMake%": 46.447044334392835,
+        "actualMake%": 46.26058749324203,
+        "pointsPerDraw": 0.986844476482249,
+        "expectedPointsPerDraw": 0.9952913902403443,
+        "off": 81.14761550798922,
+        "def": 74.88050316997989,
+        "fatigue": 0.1469824358112664
+      },
+      "assisted": {
+        "draws": 19468,
+        "FGA": 18205,
+        "expectedMake%": 42.94515900236326,
+        "actualMake%": 42.284775015409906,
+        "pointsPerDraw": 1.0256831723854531,
+        "expectedPointsPerDraw": 1.0410237935747881,
+        "off": 80.45484538612654,
+        "def": 74.26570950457207,
+        "fatigue": 0.14611428274847857
+      },
+      "selfCreated": {
+        "draws": 1902,
+        "FGA": 1887,
+        "expectedMake%": 29.414692676225464,
+        "actualMake%": 29.02208201892745,
+        "pointsPerDraw": 0.8706624605678234,
+        "expectedPointsPerDraw": 0.8824407802867638,
+        "off": 80.79955241215762,
+        "def": 73.62207435823838,
+        "fatigue": 0.12975080203456565
+      },
+      "transition": {
+        "draws": 14804,
+        "FGA": 13945,
+        "expectedMake%": 41.397479535316776,
+        "actualMake%": 41.13753039718995,
+        "pointsPerDraw": 1.0156714401513105,
+        "expectedPointsPerDraw": 1.02014760144038,
+        "off": 80.31888673137304,
+        "def": 75.16029150814971,
+        "fatigue": 0.14541858987146697
+      },
+      "late": {
+        "draws": 266,
+        "FGA": 240,
+        "expectedMake%": 47.0439431442225,
+        "actualMake%": 41.72932330827068,
+        "pointsPerDraw": 0.8984962406015038,
+        "expectedPointsPerDraw": 1.0297866874092703,
+        "off": 79.44069837860773,
+        "def": 74.89922501626681,
+        "fatigue": 0.1459917919310355
+      },
+      "secondChance": {
+        "draws": 3537,
+        "FGA": 3537,
+        "expectedMake%": 59.7727155792729,
+        "actualMake%": 60.13570822731128,
+        "pointsPerDraw": 1.228724908114221,
+        "expectedPointsPerDraw": 1.219355384059858,
+        "off": 79.31599526044555,
+        "def": 70.6804865530448,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 5722,
+        "FGA": 0,
+        "expectedMake%": 77.75270884306187,
+        "actualMake%": 77.36805312827683,
+        "pointsPerDraw": 0.7736805312827683,
+        "expectedPointsPerDraw": 0.7775270884306187,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.029181257295314324
+  },
+  "nba-three-901": {
+    "n": 160,
+    "meanAbs": 12.59375,
+    "medianAbs": 10.0,
+    "signedSD": 15.642788624075312,
+    "absSD": 9.390352013503009,
+    "within5%": 25.624999999999996,
+    "within10%": 53.75,
+    "over20%": 20.625,
+    "over30%": 6.875000000000001,
+    "over40%": 1.875,
+    "over50%": 0.0,
+    "points": 113.965625,
+    "OTpct": 4.375,
+    "scoreCorrelation": 0.2577150940842905,
+    "full": {
+      "meanExpectedMargin": -2.423165176295032,
+      "meanActualMargin": -1.44375,
+      "residualMean": 0.9794151762950316,
+      "residualVariance": 274.93127854037857,
+      "meanConditionalVariance": 259.14809677886444,
+      "residualMSEtoConditionalVariance": 1.064605667790637,
+      "expectedMarginVariance": 88.95757125032443,
+      "actualMarginVariance": 244.6968359375,
+      "meanRatingDifference": -1.2732335715577616
+    },
+    "early": {
+      "meanExpectedMargin": -1.2941959145700903,
+      "meanActualMargin": -0.225,
+      "residualMean": 1.06919591457009,
+      "residualVariance": 201.35274511279908,
+      "meanConditionalVariance": 192.74942829186543,
+      "residualMSEtoConditionalVariance": 1.050565632339561,
+      "expectedMarginVariance": 61.1277002437134,
+      "actualMarginVariance": 206.39937500000002,
+      "meanRatingDifference": -0.16825951933443087
+    },
+    "league": "nba",
+    "label": "three",
+    "world": 901,
+    "runs": {
+      "count": 69.93125,
+      "max": 10.8125,
+      "mean": 3.2824891465628214,
+      "changes": 7.3,
+      "ties": 5.5375
+    },
+    "quarterRuns": [
+      {
+        "count": 17.68125,
+        "max": 7.91875,
+        "mean": 3.235106013160062,
+        "changes": 2.81875,
+        "ties": 2.21875
+      },
+      {
+        "count": 17.6625,
+        "max": 8.0,
+        "mean": 3.2993665394669307,
+        "changes": 3.25,
+        "ties": 2.26875
+      },
+      {
+        "count": 17.43125,
+        "max": 8.4,
+        "mean": 3.2968512581229534,
+        "changes": 2.49375,
+        "ties": 1.825
+      },
+      {
+        "count": 18.21875,
+        "max": 8.33125,
+        "mean": 3.288391470743933,
+        "changes": 2.99375,
+        "ties": 2.2
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 11065,
+        "FGA": 10024,
+        "expectedMake%": 58.68388516247857,
+        "actualMake%": 58.45458653411658,
+        "pointsPerDraw": 1.1690917306823316,
+        "expectedPointsPerDraw": 1.1736777032495713,
+        "off": 80.30915424817641,
+        "def": 73.6779721390183,
+        "fatigue": 0.15074615930403656
+      },
+      "mid": {
+        "draws": 6724,
+        "FGA": 5863,
+        "expectedMake%": 41.8221256857394,
+        "actualMake%": 41.61213563355145,
+        "pointsPerDraw": 0.8322427126710291,
+        "expectedPointsPerDraw": 0.8364425137147881,
+        "off": 78.75721645763296,
+        "def": 73.78376955596639,
+        "fatigue": 0.13920012964466652
+      },
+      "three": {
+        "draws": 12854,
+        "FGA": 12711,
+        "expectedMake%": 33.86878670064934,
+        "actualMake%": 34.090555469114676,
+        "pointsPerDraw": 1.0227166640734402,
+        "expectedPointsPerDraw": 1.0160636010194801,
+        "off": 86.88826735120989,
+        "def": 75.50899501805813,
+        "fatigue": 0.14435634149803486
+      },
+      "open": {
+        "draws": 9024,
+        "FGA": 8654,
+        "expectedMake%": 40.012760532671706,
+        "actualMake%": 40.49202127659575,
+        "pointsPerDraw": 1.092863475177305,
+        "expectedPointsPerDraw": 1.078520082685813,
+        "off": 86.21474437631437,
+        "def": 75.48640965413647,
+        "fatigue": 0.14839474128599095
+      },
+      "contest": {
+        "draws": 5597,
+        "FGA": 5022,
+        "expectedMake%": 47.12838481587588,
+        "actualMake%": 46.7214579238878,
+        "pointsPerDraw": 0.993925317134179,
+        "expectedPointsPerDraw": 1.001360338736377,
+        "off": 82.39413084406797,
+        "def": 74.95736472579476,
+        "fatigue": 0.14522689843328435
+      },
+      "assisted": {
+        "draws": 19824,
+        "FGA": 18424,
+        "expectedMake%": 43.82539296770215,
+        "actualMake%": 43.820621468926554,
+        "pointsPerDraw": 1.0518058918482647,
+        "expectedPointsPerDraw": 1.050117424014128,
+        "off": 83.20361113258593,
+        "def": 74.39368547814531,
+        "fatigue": 0.14800555703538779
+      },
+      "selfCreated": {
+        "draws": 1406,
+        "FGA": 1381,
+        "expectedMake%": 30.304706698585417,
+        "actualMake%": 29.089615931721198,
+        "pointsPerDraw": 0.8726884779516358,
+        "expectedPointsPerDraw": 0.9091412009575625,
+        "off": 84.77195607805977,
+        "def": 73.48119950440312,
+        "fatigue": 0.14184344959776288
+      },
+      "transition": {
+        "draws": 14788,
+        "FGA": 13740,
+        "expectedMake%": 42.16679369573856,
+        "actualMake%": 41.96645929131728,
+        "pointsPerDraw": 1.0219772788747634,
+        "expectedPointsPerDraw": 1.026352861835149,
+        "off": 83.36048208629968,
+        "def": 75.3505804777028,
+        "fatigue": 0.14783381987823285
+      },
+      "late": {
+        "draws": 292,
+        "FGA": 265,
+        "expectedMake%": 51.41882826097244,
+        "actualMake%": 51.71232876712328,
+        "pointsPerDraw": 1.0924657534246576,
+        "expectedPointsPerDraw": 1.0972709878822975,
+        "off": 82.06956379487461,
+        "def": 72.49064023682679,
+        "fatigue": 0.13919313110268505
+      },
+      "secondChance": {
+        "draws": 3288,
+        "FGA": 3288,
+        "expectedMake%": 59.51087375266363,
+        "actualMake%": 59.397810218978094,
+        "pointsPerDraw": 1.2101581508515815,
+        "expectedPointsPerDraw": 1.2127992975924733,
+        "off": 79.08608002737681,
+        "def": 70.43679392454457,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 6214,
+        "FGA": 0,
+        "expectedMake%": 77.7775989700676,
+        "actualMake%": 77.10009655616349,
+        "pointsPerDraw": 0.771000965561635,
+        "expectedPointsPerDraw": 0.777775989700676,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.00418147606104955
+  },
+  "wnba-bench-901": {
+    "n": 160,
+    "meanAbs": 13.11875,
+    "medianAbs": 10.0,
+    "signedSD": 13.895411506590944,
+    "absSD": 10.003981629206443,
+    "within5%": 25.0,
+    "within10%": 51.87500000000001,
+    "over20%": 25.624999999999996,
+    "over30%": 8.125,
+    "over40%": 0.625,
+    "over50%": 0.0,
+    "points": 86.659375,
+    "OTpct": 3.75,
+    "scoreCorrelation": 0.2509177773014145,
+    "full": {
+      "meanExpectedMargin": 9.19081215643763,
+      "meanActualMargin": 8.89375,
+      "residualMean": -0.2970621564376304,
+      "residualVariance": 177.11685521848855,
+      "meanConditionalVariance": 197.1954763008025,
+      "residualMSEtoConditionalVariance": 0.8986266037511267,
+      "expectedMarginVariance": 102.0547019310986,
+      "actualMarginVariance": 193.0824609375,
+      "meanRatingDifference": 11.490716297288419
+    },
+    "early": {
+      "meanExpectedMargin": 6.160119551212434,
+      "meanActualMargin": 5.95,
+      "residualMean": -0.21011955121243467,
+      "residualVariance": 151.88320088805477,
+      "meanConditionalVariance": 145.47798788168205,
+      "residualMSEtoConditionalVariance": 1.0443322273430105,
+      "expectedMarginVariance": 63.83680277033225,
+      "actualMarginVariance": 136.67249999999999,
+      "meanRatingDifference": 10.073809117399472
+    },
+    "league": "wnba",
+    "label": "bench",
+    "world": 901,
+    "runs": {
+      "count": 53.99375,
+      "max": 10.6875,
+      "mean": 3.2473457437692743,
+      "changes": 4.99375,
+      "ties": 4.2625
+    },
+    "quarterRuns": [
+      {
+        "count": 13.425,
+        "max": 7.88125,
+        "mean": 3.2952105668960963,
+        "changes": 1.98125,
+        "ties": 1.9125
+      },
+      {
+        "count": 13.825,
+        "max": 7.525,
+        "mean": 3.1999409489231154,
+        "changes": 2.28125,
+        "ties": 2.0
+      },
+      {
+        "count": 13.25,
+        "max": 7.5,
+        "mean": 3.296446561398912,
+        "changes": 2.03125,
+        "ties": 1.83125
+      },
+      {
+        "count": 14.45625,
+        "max": 7.675,
+        "mean": 3.230350265060017,
+        "changes": 2.3125,
+        "ties": 1.75625
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 9386,
+        "FGA": 8346,
+        "expectedMake%": 52.85941648302829,
+        "actualMake%": 52.21606648199446,
+        "pointsPerDraw": 1.0443213296398892,
+        "expectedPointsPerDraw": 1.0571883296605658,
+        "off": 76.86711766065316,
+        "def": 66.57454106541283,
+        "fatigue": 0.19355273762486216
+      },
+      "mid": {
+        "draws": 6503,
+        "FGA": 5607,
+        "expectedMake%": 37.68999263809646,
+        "actualMake%": 37.67491926803014,
+        "pointsPerDraw": 0.7534983853606028,
+        "expectedPointsPerDraw": 0.7537998527619293,
+        "off": 78.65930056793162,
+        "def": 68.62660175135021,
+        "fatigue": 0.18977088239545237
+      },
+      "three": {
+        "draws": 8777,
+        "FGA": 8686,
+        "expectedMake%": 31.275234355309095,
+        "actualMake%": 30.978694314686113,
+        "pointsPerDraw": 0.9293608294405833,
+        "expectedPointsPerDraw": 0.9382570306592729,
+        "off": 78.30742274389914,
+        "def": 70.18549928273697,
+        "fatigue": 0.17790717287070903
+      },
+      "open": {
+        "draws": 6252,
+        "FGA": 5947,
+        "expectedMake%": 37.22417084695693,
+        "actualMake%": 37.09213051823417,
+        "pointsPerDraw": 0.9852847088931542,
+        "expectedPointsPerDraw": 0.9865434697468413,
+        "off": 79.30935934585402,
+        "def": 70.57709072318391,
+        "fatigue": 0.17519045454416282
+      },
+      "contest": {
+        "draws": 4978,
+        "FGA": 4377,
+        "expectedMake%": 41.06322865972219,
+        "actualMake%": 40.65889915628767,
+        "pointsPerDraw": 0.8579750903977501,
+        "expectedPointsPerDraw": 0.8664388762745487,
+        "off": 77.73937435269468,
+        "def": 68.79392634400682,
+        "fatigue": 0.19391551523789646
+      },
+      "assisted": {
+        "draws": 15999,
+        "FGA": 14597,
+        "expectedMake%": 39.951584566053874,
+        "actualMake%": 39.833739608725544,
+        "pointsPerDraw": 0.9321832614538409,
+        "expectedPointsPerDraw": 0.9354685954294905,
+        "off": 77.33222971567513,
+        "def": 68.53583913639572,
+        "fatigue": 0.18714651515186387
+      },
+      "selfCreated": {
+        "draws": 1198,
+        "FGA": 1186,
+        "expectedMake%": 27.853792792010264,
+        "actualMake%": 27.545909849749584,
+        "pointsPerDraw": 0.8263772954924875,
+        "expectedPointsPerDraw": 0.835613783760308,
+        "off": 78.4838625521811,
+        "def": 70.04680256891253,
+        "fatigue": 0.1751080506370119
+      },
+      "transition": {
+        "draws": 12049,
+        "FGA": 11009,
+        "expectedMake%": 39.25655866897925,
+        "actualMake%": 38.949290397543365,
+        "pointsPerDraw": 0.9203253382023404,
+        "expectedPointsPerDraw": 0.9282718029605949,
+        "off": 78.45534776993061,
+        "def": 68.67115605283774,
+        "fatigue": 0.18959329518774398
+      },
+      "late": {
+        "draws": 231,
+        "FGA": 213,
+        "expectedMake%": 45.95906065223013,
+        "actualMake%": 45.02164502164502,
+        "pointsPerDraw": 0.9567099567099567,
+        "expectedPointsPerDraw": 0.9874756266148018,
+        "off": 77.94419262825697,
+        "def": 67.01731641113138,
+        "fatigue": 0.1945084179616372
+      },
+      "secondChance": {
+        "draws": 2684,
+        "FGA": 2684,
+        "expectedMake%": 55.02107354134901,
+        "actualMake%": 54.582712369597616,
+        "pointsPerDraw": 1.1095380029806259,
+        "expectedPointsPerDraw": 1.1166808167711513,
+        "off": 74.25594117094006,
+        "def": 64.10695305214882,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 6263,
+        "FGA": 0,
+        "expectedMake%": 77.6039932939486,
+        "actualMake%": 77.79019639150567,
+        "pointsPerDraw": 0.7779019639150567,
+        "expectedPointsPerDraw": 0.776039932939486,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.020929259104227712
+  },
+  "wnba-coaching-901": {
+    "n": 160,
+    "meanAbs": 11.84375,
+    "medianAbs": 9.0,
+    "signedSD": 14.762863829132206,
+    "absSD": 8.818692416537726,
+    "within5%": 27.500000000000004,
+    "within10%": 58.75,
+    "over20%": 20.0,
+    "over30%": 5.625,
+    "over40%": 0.0,
+    "over50%": 0.0,
+    "points": 86.496875,
+    "OTpct": 4.375,
+    "scoreCorrelation": 0.23806264164262694,
+    "full": {
+      "meanExpectedMargin": -1.4861202461413956,
+      "meanActualMargin": 0.31875,
+      "residualMean": 1.8048702461413957,
+      "residualVariance": 211.12343447695213,
+      "meanConditionalVariance": 197.32851221991086,
+      "residualMSEtoConditionalVariance": 1.086416700103854,
+      "expectedMarginVariance": 81.19012930814688,
+      "actualMarginVariance": 217.9421484375,
+      "meanRatingDifference": 0.5861942112683078
+    },
+    "early": {
+      "meanExpectedMargin": -1.1693996735936856,
+      "meanActualMargin": -0.14375,
+      "residualMean": 1.0256496735936858,
+      "residualVariance": 162.61660164999506,
+      "meanConditionalVariance": 145.04793569712157,
+      "residualMSEtoConditionalVariance": 1.1283756512377987,
+      "expectedMarginVariance": 49.85734533143601,
+      "actualMarginVariance": 183.6605859375,
+      "meanRatingDifference": -0.15677925402214363
+    },
+    "league": "wnba",
+    "label": "coaching",
+    "world": 901,
+    "runs": {
+      "count": 53.125,
+      "max": 10.29375,
+      "mean": 3.2819911364719045,
+      "changes": 5.2625,
+      "ties": 4.3375
+    },
+    "quarterRuns": [
+      {
+        "count": 12.91875,
+        "max": 7.88125,
+        "mean": 3.3227281591924593,
+        "changes": 1.85625,
+        "ties": 1.80625
+      },
+      {
+        "count": 13.13125,
+        "max": 7.56875,
+        "mean": 3.320520331115823,
+        "changes": 2.23125,
+        "ties": 1.83125
+      },
+      {
+        "count": 13.525,
+        "max": 7.425,
+        "mean": 3.2538496750908408,
+        "changes": 2.25625,
+        "ties": 2.06875
+      },
+      {
+        "count": 14.48125,
+        "max": 7.4875,
+        "mean": 3.2647243588650996,
+        "changes": 2.35625,
+        "ties": 1.925
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 9343,
+        "FGA": 8418,
+        "expectedMake%": 52.98763024817891,
+        "actualMake%": 53.29123407898961,
+        "pointsPerDraw": 1.0658246815797923,
+        "expectedPointsPerDraw": 1.0597526049635781,
+        "off": 79.36896127462893,
+        "def": 69.31949689891373,
+        "fatigue": 0.19456438395110479
+      },
+      "mid": {
+        "draws": 6553,
+        "FGA": 5638,
+        "expectedMake%": 37.242753246139685,
+        "actualMake%": 36.44132458415993,
+        "pointsPerDraw": 0.7288264916831986,
+        "expectedPointsPerDraw": 0.7448550649227936,
+        "off": 80.88009421428697,
+        "def": 71.31140488902251,
+        "fatigue": 0.18937929283740393
+      },
+      "three": {
+        "draws": 8857,
+        "FGA": 8759,
+        "expectedMake%": 30.888215196658603,
+        "actualMake%": 30.8456588009484,
+        "pointsPerDraw": 0.9253697640284521,
+        "expectedPointsPerDraw": 0.9266464558997579,
+        "off": 80.5915924671113,
+        "def": 72.76815398078375,
+        "fatigue": 0.17270041539225817
+      },
+      "open": {
+        "draws": 6116,
+        "FGA": 5840,
+        "expectedMake%": 36.80514108956279,
+        "actualMake%": 37.11576193590582,
+        "pointsPerDraw": 0.9882275997383911,
+        "expectedPointsPerDraw": 0.9804564229892581,
+        "off": 81.40637651345877,
+        "def": 73.23915549257259,
+        "fatigue": 0.17375114561321878
+      },
+      "contest": {
+        "draws": 5110,
+        "FGA": 4517,
+        "expectedMake%": 40.815465748494425,
+        "actualMake%": 41.05675146771037,
+        "pointsPerDraw": 0.8675146771037182,
+        "expectedPointsPerDraw": 0.8651408042221846,
+        "off": 80.21687989514827,
+        "def": 70.82468824037795,
+        "fatigue": 0.18993392293056546
+      },
+      "assisted": {
+        "draws": 16095,
+        "FGA": 14724,
+        "expectedMake%": 39.5412285423494,
+        "actualMake%": 39.316557937247595,
+        "pointsPerDraw": 0.9200372786579684,
+        "expectedPointsPerDraw": 0.9255459074244174,
+        "off": 79.70784292415976,
+        "def": 71.3030959268344,
+        "fatigue": 0.1846967075296169
+      },
+      "selfCreated": {
+        "draws": 1251,
+        "FGA": 1238,
+        "expectedMake%": 27.475566578908488,
+        "actualMake%": 27.418065547561948,
+        "pointsPerDraw": 0.8225419664268585,
+        "expectedPointsPerDraw": 0.8242669973672547,
+        "off": 80.96391006308873,
+        "def": 72.37149444600409,
+        "fatigue": 0.16995567518271806
+      },
+      "transition": {
+        "draws": 12184,
+        "FGA": 11166,
+        "expectedMake%": 38.95095886202701,
+        "actualMake%": 38.90347997373605,
+        "pointsPerDraw": 0.9193204202232436,
+        "expectedPointsPerDraw": 0.9205071813034367,
+        "off": 80.63166202967909,
+        "def": 71.4340484470396,
+        "fatigue": 0.18760263984915881
+      },
+      "late": {
+        "draws": 220,
+        "FGA": 199,
+        "expectedMake%": 43.417388260683346,
+        "actualMake%": 47.72727272727273,
+        "pointsPerDraw": 1.018181818181818,
+        "expectedPointsPerDraw": 0.9257372977822265,
+        "off": 79.24325054885502,
+        "def": 69.18326153384389,
+        "fatigue": 0.20098087947879978
+      },
+      "secondChance": {
+        "draws": 2724,
+        "FGA": 2724,
+        "expectedMake%": 55.2846831981143,
+        "actualMake%": 55.543318649045524,
+        "pointsPerDraw": 1.1270190895741556,
+        "expectedPointsPerDraw": 1.1208264483919823,
+        "off": 77.51622267503988,
+        "def": 67.19683889660799,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 5978,
+        "FGA": 0,
+        "expectedMake%": 78.53565005018402,
+        "actualMake%": 79.44128471060556,
+        "pointsPerDraw": 0.7944128471060555,
+        "expectedPointsPerDraw": 0.7853565005018401,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.0
+  },
+  "wnba-defense-901": {
+    "n": 160,
+    "meanAbs": 12.4125,
+    "medianAbs": 10.0,
+    "signedSD": 13.57980462856517,
+    "absSD": 8.936853123443397,
+    "within5%": 26.875,
+    "within10%": 54.37499999999999,
+    "over20%": 20.625,
+    "over30%": 5.0,
+    "over40%": 0.625,
+    "over50%": 0.0,
+    "points": 84.13125,
+    "OTpct": 3.75,
+    "scoreCorrelation": 0.1427210011196332,
+    "full": {
+      "meanExpectedMargin": -6.543011104063268,
+      "meanActualMargin": -7.0375,
+      "residualMean": -0.4944888959367321,
+      "residualVariance": 223.76443173332555,
+      "meanConditionalVariance": 193.4468149397519,
+      "residualMSEtoConditionalVariance": 1.1579872797145654,
+      "expectedMarginVariance": 59.0866978559405,
+      "actualMarginVariance": 184.41109375000002,
+      "meanRatingDifference": -8.970894316380177
+    },
+    "early": {
+      "meanExpectedMargin": -5.2923718366826815,
+      "meanActualMargin": -5.825,
+      "residualMean": -0.532628163317319,
+      "residualVariance": 153.4263849952106,
+      "meanConditionalVariance": 142.82854412446076,
+      "residualMSEtoConditionalVariance": 1.07618598717653,
+      "expectedMarginVariance": 52.918180426366156,
+      "actualMarginVariance": 149.181875,
+      "meanRatingDifference": -9.526125825450368
+    },
+    "league": "wnba",
+    "label": "defense",
+    "world": 901,
+    "runs": {
+      "count": 51.475,
+      "max": 10.95625,
+      "mean": 3.295528645854315,
+      "changes": 4.89375,
+      "ties": 3.9875
+    },
+    "quarterRuns": [
+      {
+        "count": 12.1375,
+        "max": 7.80625,
+        "mean": 3.3388646570953555,
+        "changes": 1.94375,
+        "ties": 1.74375
+      },
+      {
+        "count": 12.9,
+        "max": 7.9375,
+        "mean": 3.3589354449078486,
+        "changes": 2.46875,
+        "ties": 1.8625
+      },
+      {
+        "count": 13.2875,
+        "max": 7.65625,
+        "mean": 3.243304576991206,
+        "changes": 2.21875,
+        "ties": 2.0
+      },
+      {
+        "count": 14.1875,
+        "max": 7.8875,
+        "mean": 3.276536498070615,
+        "changes": 2.6625,
+        "ties": 1.925
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 9378,
+        "FGA": 8453,
+        "expectedMake%": 51.9684723730091,
+        "actualMake%": 52.32458946470463,
+        "pointsPerDraw": 1.0464917892940926,
+        "expectedPointsPerDraw": 1.039369447460182,
+        "off": 79.19853424530437,
+        "def": 73.94039916200052,
+        "fatigue": 0.1957193479460938
+      },
+      "mid": {
+        "draws": 6547,
+        "FGA": 5714,
+        "expectedMake%": 36.63223966371916,
+        "actualMake%": 37.40644570032076,
+        "pointsPerDraw": 0.7481289140064151,
+        "expectedPointsPerDraw": 0.7326447932743833,
+        "off": 80.7789006383607,
+        "def": 76.62553452950691,
+        "fatigue": 0.19113092960233616
+      },
+      "three": {
+        "draws": 8686,
+        "FGA": 8601,
+        "expectedMake%": 29.873955656220712,
+        "actualMake%": 29.749021413769285,
+        "pointsPerDraw": 0.8924706424130785,
+        "expectedPointsPerDraw": 0.8962186696866214,
+        "off": 80.41522468458328,
+        "def": 77.68989639432417,
+        "fatigue": 0.17612721956222296
+      },
+      "open": {
+        "draws": 6064,
+        "FGA": 5835,
+        "expectedMake%": 35.86517101504433,
+        "actualMake%": 35.8179419525066,
+        "pointsPerDraw": 0.9495382585751979,
+        "expectedPointsPerDraw": 0.9553733930014733,
+        "off": 81.32671462796557,
+        "def": 77.68272216612085,
+        "fatigue": 0.17464975964806942
+      },
+      "contest": {
+        "draws": 5125,
+        "FGA": 4552,
+        "expectedMake%": 39.921135755030015,
+        "actualMake%": 40.19512195121951,
+        "pointsPerDraw": 0.8511219512195122,
+        "expectedPointsPerDraw": 0.8447844054612708,
+        "off": 79.95864981750037,
+        "def": 76.2609599773361,
+        "fatigue": 0.1916841738086557
+      },
+      "assisted": {
+        "draws": 15861,
+        "FGA": 14538,
+        "expectedMake%": 38.84280228081215,
+        "actualMake%": 39.12111468381565,
+        "pointsPerDraw": 0.9105352752033289,
+        "expectedPointsPerDraw": 0.9063678135962188,
+        "off": 79.4741702354367,
+        "def": 76.10726168918126,
+        "fatigue": 0.18839336865762352
+      },
+      "selfCreated": {
+        "draws": 1232,
+        "FGA": 1223,
+        "expectedMake%": 26.051592591938977,
+        "actualMake%": 27.5974025974026,
+        "pointsPerDraw": 0.827922077922078,
+        "expectedPointsPerDraw": 0.7815477777581693,
+        "off": 81.29986173306571,
+        "def": 78.35745909272077,
+        "fatigue": 0.17130048826429348
+      },
+      "transition": {
+        "draws": 12248,
+        "FGA": 11260,
+        "expectedMake%": 38.13754995836229,
+        "actualMake%": 38.57772697583279,
+        "pointsPerDraw": 0.9054539516655781,
+        "expectedPointsPerDraw": 0.897032388374369,
+        "off": 80.3755265343276,
+        "def": 76.16220294716678,
+        "fatigue": 0.19030071981734473
+      },
+      "late": {
+        "draws": 235,
+        "FGA": 204,
+        "expectedMake%": 41.14338258208282,
+        "actualMake%": 30.21276595744681,
+        "pointsPerDraw": 0.6510638297872341,
+        "expectedPointsPerDraw": 0.8871559948937137,
+        "off": 79.38580359196652,
+        "def": 74.64115753058712,
+        "fatigue": 0.1819821823195336
+      },
+      "secondChance": {
+        "draws": 2741,
+        "FGA": 2741,
+        "expectedMake%": 54.342991210084776,
+        "actualMake%": 54.25027362276541,
+        "pointsPerDraw": 1.1021524990879241,
+        "expectedPointsPerDraw": 1.1029268607329363,
+        "off": 77.3850505056216,
+        "def": 72.08964946873745,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 5722,
+        "FGA": 0,
+        "expectedMake%": 78.5740150297099,
+        "actualMake%": 77.90982174065012,
+        "pointsPerDraw": 0.7790982174065012,
+        "expectedPointsPerDraw": 0.785740150297099,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.005221659443371103
+  },
+  "wnba-fatigue-901": {
+    "n": 160,
+    "meanAbs": 13.1375,
+    "medianAbs": 12.5,
+    "signedSD": 15.643988462025916,
+    "absSD": 8.604132364741956,
+    "within5%": 23.125,
+    "within10%": 44.375,
+    "over20%": 22.5,
+    "over30%": 5.0,
+    "over40%": 0.625,
+    "over50%": 0.0,
+    "points": 86.56875,
+    "OTpct": 3.75,
+    "scoreCorrelation": 0.05218107433906775,
+    "full": {
+      "meanExpectedMargin": 1.9723646220013777,
+      "meanActualMargin": 1.375,
+      "residualMean": -0.5973646220013779,
+      "residualVariance": 193.7806660215089,
+      "meanConditionalVariance": 199.83262220821467,
+      "residualMSEtoConditionalVariance": 0.9715005906835725,
+      "expectedMarginVariance": 66.84727032566695,
+      "actualMarginVariance": 244.734375,
+      "meanRatingDifference": 1.73254459428256
+    },
+    "early": {
+      "meanExpectedMargin": 1.4806176006730918,
+      "meanActualMargin": 0.275,
+      "residualMean": -1.2056176006730916,
+      "residualVariance": 146.44197902236436,
+      "meanConditionalVariance": 146.98931360786574,
+      "residualMSEtoConditionalVariance": 1.0061649326152298,
+      "expectedMarginVariance": 54.610938981595744,
+      "actualMarginVariance": 184.12437500000001,
+      "meanRatingDifference": 0.5871479395953109
+    },
+    "league": "wnba",
+    "label": "fatigue",
+    "world": 901,
+    "runs": {
+      "count": 53.025,
+      "max": 10.6,
+      "mean": 3.2911908491677044,
+      "changes": 4.55625,
+      "ties": 3.94375
+    },
+    "quarterRuns": [
+      {
+        "count": 12.96875,
+        "max": 7.76875,
+        "mean": 3.3174850227440684,
+        "changes": 1.99375,
+        "ties": 1.81875
+      },
+      {
+        "count": 13.1875,
+        "max": 7.79375,
+        "mean": 3.310638173534477,
+        "changes": 2.11875,
+        "ties": 1.76875
+      },
+      {
+        "count": 13.58125,
+        "max": 7.5875,
+        "mean": 3.3007533049219875,
+        "changes": 2.15625,
+        "ties": 2.00625
+      },
+      {
+        "count": 14.2625,
+        "max": 7.7875,
+        "mean": 3.270613876644269,
+        "changes": 2.19375,
+        "ties": 1.98125
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 9397,
+        "FGA": 8453,
+        "expectedMake%": 53.2133514319587,
+        "actualMake%": 52.86793657550282,
+        "pointsPerDraw": 1.0573587315100563,
+        "expectedPointsPerDraw": 1.064267028639174,
+        "off": 78.70052622342548,
+        "def": 68.60091716805448,
+        "fatigue": 0.23783126891893694
+      },
+      "mid": {
+        "draws": 6536,
+        "FGA": 5607,
+        "expectedMake%": 37.39529265286309,
+        "actualMake%": 37.30110159118727,
+        "pointsPerDraw": 0.7460220318237454,
+        "expectedPointsPerDraw": 0.7479058530572619,
+        "off": 80.32897154418023,
+        "def": 71.2484046334359,
+        "fatigue": 0.2367140607474135
+      },
+      "three": {
+        "draws": 9002,
+        "FGA": 8907,
+        "expectedMake%": 31.213581995885388,
+        "actualMake%": 30.259942235058872,
+        "pointsPerDraw": 0.9077982670517663,
+        "expectedPointsPerDraw": 0.9364074598765614,
+        "off": 80.06126044886926,
+        "def": 72.58176966968185,
+        "fatigue": 0.21945606094147802
+      },
+      "open": {
+        "draws": 6313,
+        "FGA": 6049,
+        "expectedMake%": 37.19969046521935,
+        "actualMake%": 36.0842705528275,
+        "pointsPerDraw": 0.9592903532393474,
+        "expectedPointsPerDraw": 0.9914458187699043,
+        "off": 80.94954957827477,
+        "def": 72.99806019208762,
+        "fatigue": 0.2201004910544526
+      },
+      "contest": {
+        "draws": 4974,
+        "FGA": 4392,
+        "expectedMake%": 41.31643288646643,
+        "actualMake%": 42.05870526739043,
+        "pointsPerDraw": 0.8900281463610776,
+        "expectedPointsPerDraw": 0.8747827739092204,
+        "off": 79.6683509006366,
+        "def": 70.46158584728816,
+        "fatigue": 0.23724561954350426
+      },
+      "assisted": {
+        "draws": 16086,
+        "FGA": 14655,
+        "expectedMake%": 39.84988954795675,
+        "actualMake%": 39.251523063533504,
+        "pointsPerDraw": 0.917319408181027,
+        "expectedPointsPerDraw": 0.9345079833101515,
+        "off": 79.1098738988938,
+        "def": 70.91868544291333,
+        "fatigue": 0.2304423056235819
+      },
+      "selfCreated": {
+        "draws": 1260,
+        "FGA": 1245,
+        "expectedMake%": 27.915982501522528,
+        "actualMake%": 28.49206349206349,
+        "pointsPerDraw": 0.8547619047619047,
+        "expectedPointsPerDraw": 0.8374794750456755,
+        "off": 80.42665974888928,
+        "def": 71.51684832154703,
+        "fatigue": 0.2204183704009662
+      },
+      "transition": {
+        "draws": 12206,
+        "FGA": 11220,
+        "expectedMake%": 39.32923126592066,
+        "actualMake%": 39.34130755366213,
+        "pointsPerDraw": 0.9269211863018187,
+        "expectedPointsPerDraw": 0.9294095074224263,
+        "off": 79.9858170147093,
+        "def": 71.06184232714486,
+        "fatigue": 0.23599071533819554
+      },
+      "late": {
+        "draws": 223,
+        "FGA": 190,
+        "expectedMake%": 44.06816035628517,
+        "actualMake%": 43.04932735426009,
+        "pointsPerDraw": 0.9327354260089686,
+        "expectedPointsPerDraw": 0.9402354524772726,
+        "off": 79.79152379647135,
+        "def": 67.27758397430654,
+        "fatigue": 0.2383400981664359
+      },
+      "secondChance": {
+        "draws": 2826,
+        "FGA": 2826,
+        "expectedMake%": 54.76821608721334,
+        "actualMake%": 53.326256192498235,
+        "pointsPerDraw": 1.0820948336871903,
+        "expectedPointsPerDraw": 1.1129327801804383,
+        "off": 76.7167557347163,
+        "def": 66.37878459160862,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 6041,
+        "FGA": 0,
+        "expectedMake%": 78.63602747889423,
+        "actualMake%": 78.09965237543453,
+        "pointsPerDraw": 0.7809965237543454,
+        "expectedPointsPerDraw": 0.7863602747889423,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.005191029900332226
+  },
+  "wnba-handling-901": {
+    "n": 160,
+    "meanAbs": 13.2625,
+    "medianAbs": 11.0,
+    "signedSD": 15.518129518405237,
+    "absSD": 9.489130294710892,
+    "within5%": 17.5,
+    "within10%": 46.875,
+    "over20%": 21.25,
+    "over30%": 6.25,
+    "over40%": 3.125,
+    "over50%": 0.0,
+    "points": 89.26875,
+    "OTpct": 1.25,
+    "scoreCorrelation": 0.15431273480264385,
+    "full": {
+      "meanExpectedMargin": -3.7520649353144067,
+      "meanActualMargin": -5.0125,
+      "residualMean": -1.2604350646855935,
+      "residualVariance": 228.4705692971307,
+      "meanConditionalVariance": 200.3842994870572,
+      "residualMSEtoConditionalVariance": 1.1480902767248946,
+      "expectedMarginVariance": 71.14614087285719,
+      "actualMarginVariance": 240.81234374999994,
+      "meanRatingDifference": -6.252134527206264
+    },
+    "early": {
+      "meanExpectedMargin": -3.004954277660974,
+      "meanActualMargin": -3.84375,
+      "residualMean": -0.8387957223390259,
+      "residualVariance": 188.58699138226615,
+      "meanConditionalVariance": 148.61565305096943,
+      "residualMSEtoConditionalVariance": 1.273692008614739,
+      "expectedMarginVariance": 61.77982319780472,
+      "actualMarginVariance": 197.9693359375,
+      "meanRatingDifference": -6.210335260206152
+    },
+    "league": "wnba",
+    "label": "handling",
+    "world": 901,
+    "runs": {
+      "count": 55.3875,
+      "max": 10.63125,
+      "mean": 3.247584656925047,
+      "changes": 4.85,
+      "ties": 3.9125
+    },
+    "quarterRuns": [
+      {
+        "count": 13.9,
+        "max": 7.88125,
+        "mean": 3.2908805177772864,
+        "changes": 2.08125,
+        "ties": 1.89375
+      },
+      {
+        "count": 14.06875,
+        "max": 7.89375,
+        "mean": 3.3500194660162252,
+        "changes": 2.01875,
+        "ties": 1.78125
+      },
+      {
+        "count": 13.94375,
+        "max": 7.6625,
+        "mean": 3.2245018801019674,
+        "changes": 2.2,
+        "ties": 2.01875
+      },
+      {
+        "count": 14.66875,
+        "max": 7.5,
+        "mean": 3.1899878635511376,
+        "changes": 2.26875,
+        "ties": 1.85625
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 9523,
+        "FGA": 8524,
+        "expectedMake%": 53.184550770746675,
+        "actualMake%": 52.87199411950015,
+        "pointsPerDraw": 1.057439882390003,
+        "expectedPointsPerDraw": 1.0636910154149335,
+        "off": 78.94525822046862,
+        "def": 69.42691019505794,
+        "fatigue": 0.19344060310290923
+      },
+      "mid": {
+        "draws": 6602,
+        "FGA": 5685,
+        "expectedMake%": 37.79153734864916,
+        "actualMake%": 37.443199030596794,
+        "pointsPerDraw": 0.7488639806119358,
+        "expectedPointsPerDraw": 0.7558307469729831,
+        "off": 80.6830069625345,
+        "def": 71.05819939301831,
+        "fatigue": 0.18828706355247762
+      },
+      "three": {
+        "draws": 8885,
+        "FGA": 8781,
+        "expectedMake%": 31.492709065353065,
+        "actualMake%": 32.447945976364664,
+        "pointsPerDraw": 0.9734383792909398,
+        "expectedPointsPerDraw": 0.944781271960592,
+        "off": 80.47054653169339,
+        "def": 72.77674687265613,
+        "fatigue": 0.17362470127249444
+      },
+      "open": {
+        "draws": 6240,
+        "FGA": 5956,
+        "expectedMake%": 37.485603428726485,
+        "actualMake%": 38.092948717948715,
+        "pointsPerDraw": 1.0203525641025641,
+        "expectedPointsPerDraw": 0.997895745863388,
+        "off": 81.38195901190505,
+        "def": 73.03412845891756,
+        "fatigue": 0.17206538492586068
+      },
+      "contest": {
+        "draws": 5235,
+        "FGA": 4627,
+        "expectedMake%": 41.57798853449346,
+        "actualMake%": 42.65520534861509,
+        "pointsPerDraw": 0.9056351480420248,
+        "expectedPointsPerDraw": 0.8810647871975109,
+        "off": 79.83536793873014,
+        "def": 71.14157683608616,
+        "fatigue": 0.19023342815945812
+      },
+      "assisted": {
+        "draws": 16404,
+        "FGA": 14949,
+        "expectedMake%": 40.2232913296784,
+        "actualMake%": 40.56327724945135,
+        "pointsPerDraw": 0.9497073884418434,
+        "expectedPointsPerDraw": 0.9402606605082372,
+        "off": 79.43660340808798,
+        "def": 71.02062525099942,
+        "fatigue": 0.18531072515157238
+      },
+      "selfCreated": {
+        "draws": 1239,
+        "FGA": 1222,
+        "expectedMake%": 28.208603089690833,
+        "actualMake%": 29.701372074253428,
+        "pointsPerDraw": 0.8910411622276029,
+        "expectedPointsPerDraw": 0.846258092690725,
+        "off": 81.51943739154146,
+        "def": 72.7893428115914,
+        "fatigue": 0.1740584868760036
+      },
+      "transition": {
+        "draws": 12216,
+        "FGA": 11149,
+        "expectedMake%": 39.61032646258645,
+        "actualMake%": 40.08677144728225,
+        "pointsPerDraw": 0.9499836280288146,
+        "expectedPointsPerDraw": 0.9349114440943787,
+        "off": 80.44365036213075,
+        "def": 71.21940991951489,
+        "fatigue": 0.18837149574937248
+      },
+      "late": {
+        "draws": 226,
+        "FGA": 206,
+        "expectedMake%": 44.23276331352555,
+        "actualMake%": 45.57522123893805,
+        "pointsPerDraw": 0.9690265486725663,
+        "expectedPointsPerDraw": 0.9527039220311938,
+        "off": 79.5010126927564,
+        "def": 69.998083950612,
+        "fatigue": 0.18442322540476724
+      },
+      "secondChance": {
+        "draws": 2706,
+        "FGA": 2706,
+        "expectedMake%": 54.7645391826093,
+        "actualMake%": 53.88026607538803,
+        "pointsPerDraw": 1.0942350332594235,
+        "expectedPointsPerDraw": 1.1112397639554314,
+        "off": 76.97555270395979,
+        "def": 67.47971761666902,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 6214,
+        "FGA": 0,
+        "expectedMake%": 78.52919536530416,
+        "actualMake%": 78.90247827486321,
+        "pointsPerDraw": 0.7890247827486321,
+        "expectedPointsPerDraw": 0.7852919536530416,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.005145885864251531
+  },
+  "wnba-identical-901": {
+    "n": 160,
+    "meanAbs": 11.4625,
+    "medianAbs": 10.0,
+    "signedSD": 13.843404341057152,
+    "absSD": 8.0644958769907,
+    "within5%": 25.624999999999996,
+    "within10%": 57.49999999999999,
+    "over20%": 16.25,
+    "over30%": 4.375,
+    "over40%": 0.0,
+    "over50%": 0.0,
+    "points": 87.18125,
+    "OTpct": 5.0,
+    "scoreCorrelation": 0.2641702200446288,
+    "full": {
+      "meanExpectedMargin": 0.16242672428535423,
+      "meanActualMargin": 2.1875,
+      "residualMean": 2.0250732757146457,
+      "residualVariance": 210.2515314057585,
+      "meanConditionalVariance": 198.43805247800736,
+      "residualMSEtoConditionalVariance": 1.0801983314240022,
+      "expectedMarginVariance": 73.04596999787151,
+      "actualMarginVariance": 191.63984375,
+      "meanRatingDifference": 2.8757942455697796
+    },
+    "early": {
+      "meanExpectedMargin": 0.14587313969753418,
+      "meanActualMargin": 0.75625,
+      "residualMean": 0.610376860302466,
+      "residualVariance": 172.28702045708906,
+      "meanConditionalVariance": 145.62257451564906,
+      "residualMSEtoConditionalVariance": 1.1856649351445656,
+      "expectedMarginVariance": 46.139042737164246,
+      "actualMarginVariance": 180.2593359375,
+      "meanRatingDifference": 1.423607757586622
+    },
+    "league": "wnba",
+    "label": "identical",
+    "world": 901,
+    "runs": {
+      "count": 53.65625,
+      "max": 10.4,
+      "mean": 3.276215038731894,
+      "changes": 5.5875,
+      "ties": 4.5625
+    },
+    "quarterRuns": [
+      {
+        "count": 12.94375,
+        "max": 7.89375,
+        "mean": 3.3391234656779845,
+        "changes": 1.88125,
+        "ties": 1.825
+      },
+      {
+        "count": 13.53125,
+        "max": 7.75,
+        "mean": 3.2707637282845297,
+        "changes": 2.225,
+        "ties": 1.88125
+      },
+      {
+        "count": 13.66875,
+        "max": 7.63125,
+        "mean": 3.263001979262138,
+        "changes": 2.275,
+        "ties": 1.975
+      },
+      {
+        "count": 14.4,
+        "max": 7.475,
+        "mean": 3.2588888754228975,
+        "changes": 2.23125,
+        "ties": 2.08125
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 9347,
+        "FGA": 8396,
+        "expectedMake%": 53.28891424071551,
+        "actualMake%": 53.32192147213009,
+        "pointsPerDraw": 1.066438429442602,
+        "expectedPointsPerDraw": 1.0657782848143103,
+        "off": 79.33371192826499,
+        "def": 69.2573945384183,
+        "fatigue": 0.1979019468706443
+      },
+      "mid": {
+        "draws": 6613,
+        "FGA": 5710,
+        "expectedMake%": 37.71099526845629,
+        "actualMake%": 37.18433388779677,
+        "pointsPerDraw": 0.7436866777559353,
+        "expectedPointsPerDraw": 0.7542199053691258,
+        "off": 80.81314779313279,
+        "def": 71.33064294686365,
+        "fatigue": 0.18921804344402104
+      },
+      "three": {
+        "draws": 8844,
+        "FGA": 8752,
+        "expectedMake%": 31.271090493263337,
+        "actualMake%": 30.98145635459068,
+        "pointsPerDraw": 0.9294436906377205,
+        "expectedPointsPerDraw": 0.9381327147979001,
+        "off": 80.76327811994555,
+        "def": 72.91342149625608,
+        "fatigue": 0.17240874161564504
+      },
+      "open": {
+        "draws": 6104,
+        "FGA": 5831,
+        "expectedMake%": 37.11513347247221,
+        "actualMake%": 36.41874180865007,
+        "pointsPerDraw": 0.9724770642201835,
+        "expectedPointsPerDraw": 0.9910836594274202,
+        "off": 81.50061682624145,
+        "def": 73.15923287252316,
+        "fatigue": 0.17333864592168682
+      },
+      "contest": {
+        "draws": 5098,
+        "FGA": 4499,
+        "expectedMake%": 41.18818160642467,
+        "actualMake%": 41.60455080423696,
+        "pointsPerDraw": 0.8834837191055316,
+        "expectedPointsPerDraw": 0.8728353621479602,
+        "off": 80.18786253845718,
+        "def": 70.99789217974752,
+        "fatigue": 0.18793530438192185
+      },
+      "assisted": {
+        "draws": 16084,
+        "FGA": 14730,
+        "expectedMake%": 40.029754757398564,
+        "actualMake%": 39.90300920169112,
+        "pointsPerDraw": 0.9321686147724446,
+        "expectedPointsPerDraw": 0.9366173652388209,
+        "off": 79.68571525083392,
+        "def": 71.33192140183556,
+        "fatigue": 0.18616671969720283
+      },
+      "selfCreated": {
+        "draws": 1228,
+        "FGA": 1212,
+        "expectedMake%": 27.84461271448246,
+        "actualMake%": 28.175895765472315,
+        "pointsPerDraw": 0.8452768729641694,
+        "expectedPointsPerDraw": 0.8353383814344736,
+        "off": 81.32121867072237,
+        "def": 72.63833153677984,
+        "fatigue": 0.1699662739542356
+      },
+      "transition": {
+        "draws": 12217,
+        "FGA": 11214,
+        "expectedMake%": 39.371667599700466,
+        "actualMake%": 39.011213882295166,
+        "pointsPerDraw": 0.9198657608250798,
+        "expectedPointsPerDraw": 0.9300581355428398,
+        "off": 80.63373184171739,
+        "def": 71.47799928837318,
+        "fatigue": 0.18933206734620434
+      },
+      "late": {
+        "draws": 221,
+        "FGA": 201,
+        "expectedMake%": 43.77568283969002,
+        "actualMake%": 47.963800904977376,
+        "pointsPerDraw": 1.0180995475113122,
+        "expectedPointsPerDraw": 0.9328341762440461,
+        "off": 79.79433817575072,
+        "def": 72.08674658741484,
+        "fatigue": 0.19917205269213392
+      },
+      "secondChance": {
+        "draws": 2732,
+        "FGA": 2732,
+        "expectedMake%": 55.30718487280378,
+        "actualMake%": 55.30746705710102,
+        "pointsPerDraw": 1.1211566617862372,
+        "expectedPointsPerDraw": 1.1217562303846302,
+        "off": 77.54531243584047,
+        "def": 67.03526747245115,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 6067,
+        "FGA": 0,
+        "expectedMake%": 78.5994913466293,
+        "actualMake%": 78.98467117191363,
+        "pointsPerDraw": 0.7898467117191363,
+        "expectedPointsPerDraw": 0.785994913466293,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.0
+  },
+  "wnba-league-301": {
+    "n": 160,
+    "meanAbs": 12.6875,
+    "medianAbs": 10.0,
+    "signedSD": 15.308984290278698,
+    "absSD": 8.95278413399988,
+    "within5%": 18.75,
+    "within10%": 51.24999999999999,
+    "over20%": 20.0,
+    "over30%": 5.0,
+    "over40%": 1.25,
+    "over50%": 0.625,
+    "points": 86.05625,
+    "OTpct": 3.125,
+    "scoreCorrelation": 0.028821861405132296,
+    "full": {
+      "meanExpectedMargin": 2.404858292363312,
+      "meanActualMargin": 2.6,
+      "residualMean": 0.19514170763668828,
+      "residualVariance": 195.03049315484762,
+      "meanConditionalVariance": 193.86041191825754,
+      "residualMSEtoConditionalVariance": 1.0062321208889151,
+      "expectedMarginVariance": 110.07657273071831,
+      "actualMarginVariance": 234.36499999999995,
+      "meanRatingDifference": 3.173045461183672
+    },
+    "early": {
+      "meanExpectedMargin": 1.5983790691846806,
+      "meanActualMargin": 2.18125,
+      "residualMean": 0.5828709308153195,
+      "residualVariance": 142.21939224015134,
+      "meanConditionalVariance": 143.57356737402637,
+      "residualMSEtoConditionalVariance": 0.9929343776125393,
+      "expectedMarginVariance": 75.27307346057282,
+      "actualMarginVariance": 170.96089843750002,
+      "meanRatingDifference": 3.395292584609976
+    },
+    "league": "wnba",
+    "label": "league",
+    "world": 301,
+    "runs": {
+      "count": 53.71875,
+      "max": 10.7375,
+      "mean": 3.231708586846448,
+      "changes": 5.04375,
+      "ties": 4.0
+    },
+    "quarterRuns": [
+      {
+        "count": 13.2375,
+        "max": 7.36875,
+        "mean": 3.2663059651154653,
+        "changes": 2.4,
+        "ties": 1.81875
+      },
+      {
+        "count": 13.90625,
+        "max": 7.51875,
+        "mean": 3.2169021599906373,
+        "changes": 2.43125,
+        "ties": 1.93125
+      },
+      {
+        "count": 13.8125,
+        "max": 7.71875,
+        "mean": 3.250816951447031,
+        "changes": 2.29375,
+        "ties": 1.8875
+      },
+      {
+        "count": 13.66875,
+        "max": 7.725,
+        "mean": 3.3096350468690177,
+        "changes": 2.24375,
+        "ties": 1.8625
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 10264,
+        "FGA": 9250,
+        "expectedMake%": 51.88484093911798,
+        "actualMake%": 52.15315666406859,
+        "pointsPerDraw": 1.0430631332813718,
+        "expectedPointsPerDraw": 1.0376968187823596,
+        "off": 81.40924655987669,
+        "def": 74.13558648725729,
+        "fatigue": 0.18547436532177666
+      },
+      "mid": {
+        "draws": 6213,
+        "FGA": 5424,
+        "expectedMake%": 37.182172324261494,
+        "actualMake%": 36.69724770642202,
+        "pointsPerDraw": 0.7339449541284404,
+        "expectedPointsPerDraw": 0.7436434464852298,
+        "off": 81.4549450937449,
+        "def": 75.04869363123245,
+        "fatigue": 0.1709645493548463
+      },
+      "three": {
+        "draws": 8351,
+        "FGA": 8262,
+        "expectedMake%": 30.918673677739484,
+        "actualMake%": 31.062148245719072,
+        "pointsPerDraw": 0.9318644473715723,
+        "expectedPointsPerDraw": 0.9275602103321843,
+        "off": 84.2305136260887,
+        "def": 77.77408042186907,
+        "fatigue": 0.16136061355028725
+      },
+      "open": {
+        "draws": 5987,
+        "FGA": 5748,
+        "expectedMake%": 36.91235254726849,
+        "actualMake%": 37.347586437280775,
+        "pointsPerDraw": 0.9854685151160848,
+        "expectedPointsPerDraw": 0.9755208443488709,
+        "off": 84.52857545046913,
+        "def": 77.67160634715832,
+        "fatigue": 0.16049576175142868
+      },
+      "contest": {
+        "draws": 4794,
+        "FGA": 4242,
+        "expectedMake%": 42.47277203757433,
+        "actualMake%": 42.657488527325825,
+        "pointsPerDraw": 0.8900709219858156,
+        "expectedPointsPerDraw": 0.8867798197174281,
+        "off": 81.10402524450151,
+        "def": 75.1606946973765,
+        "fatigue": 0.17756003757931416
+      },
+      "assisted": {
+        "draws": 16068,
+        "FGA": 14705,
+        "expectedMake%": 40.16646732412779,
+        "actualMake%": 40.160567587752055,
+        "pointsPerDraw": 0.9325989544436146,
+        "expectedPointsPerDraw": 0.9314417700904106,
+        "off": 81.7742427636772,
+        "def": 75.63529836941551,
+        "fatigue": 0.17592269610070904
+      },
+      "selfCreated": {
+        "draws": 1092,
+        "FGA": 1074,
+        "expectedMake%": 27.646555301892946,
+        "actualMake%": 27.106227106227106,
+        "pointsPerDraw": 0.8131868131868132,
+        "expectedPointsPerDraw": 0.8293966590567884,
+        "off": 83.43995774907137,
+        "def": 75.34999894416154,
+        "fatigue": 0.1682770795941657
+      },
+      "transition": {
+        "draws": 12223,
+        "FGA": 11217,
+        "expectedMake%": 39.22184735607414,
+        "actualMake%": 39.02478933158799,
+        "pointsPerDraw": 0.9122146772478115,
+        "expectedPointsPerDraw": 0.9183518276398275,
+        "off": 82.66541980124954,
+        "def": 76.3692946067068,
+        "fatigue": 0.17502782517164964
+      },
+      "late": {
+        "draws": 231,
+        "FGA": 201,
+        "expectedMake%": 43.169726768586756,
+        "actualMake%": 44.58874458874459,
+        "pointsPerDraw": 0.9437229437229437,
+        "expectedPointsPerDraw": 0.9046844396000088,
+        "off": 80.55335504804276,
+        "def": 73.4068057261503,
+        "fatigue": 0.19647357471873614
+      },
+      "secondChance": {
+        "draws": 2747,
+        "FGA": 2747,
+        "expectedMake%": 54.89298594182059,
+        "actualMake%": 55.11467054969057,
+        "pointsPerDraw": 1.1172187841281398,
+        "expectedPointsPerDraw": 1.1120071317222846,
+        "off": 80.8987565756816,
+        "def": 71.77907495267442,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 5690,
+        "FGA": 0,
+        "expectedMake%": 79.23142299767815,
+        "actualMake%": 78.9103690685413,
+        "pointsPerDraw": 0.789103690685413,
+        "expectedPointsPerDraw": 0.7923142299767815,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.031133250311332503
+  },
+  "wnba-league-302": {
+    "n": 160,
+    "meanAbs": 13.0,
+    "medianAbs": 10.0,
+    "signedSD": 16.33121531760573,
+    "absSD": 10.007497189607399,
+    "within5%": 25.0,
+    "within10%": 51.24999999999999,
+    "over20%": 23.75,
+    "over30%": 8.125,
+    "over40%": 1.875,
+    "over50%": 0.0,
+    "points": 87.08125,
+    "OTpct": 1.875,
+    "scoreCorrelation": 0.04831355267619301,
+    "full": {
+      "meanExpectedMargin": 3.341603912804169,
+      "meanActualMargin": 1.5625,
+      "residualMean": -1.7791039128041686,
+      "residualVariance": 203.21004223310263,
+      "meanConditionalVariance": 198.5757189818334,
+      "residualMSEtoConditionalVariance": 1.0392773800533883,
+      "expectedMarginVariance": 126.19939239816168,
+      "actualMarginVariance": 266.70859375,
+      "meanRatingDifference": 1.9054384603148624
+    },
+    "early": {
+      "meanExpectedMargin": 2.1283643725698944,
+      "meanActualMargin": 1.45,
+      "residualMean": -0.6783643725698945,
+      "residualVariance": 144.4253875021487,
+      "meanConditionalVariance": 146.93997522554997,
+      "residualMSEtoConditionalVariance": 0.9860187161575626,
+      "expectedMarginVariance": 79.58281054477943,
+      "actualMarginVariance": 198.1225,
+      "meanRatingDifference": 2.467974449085305
+    },
+    "league": "wnba",
+    "label": "league",
+    "world": 302,
+    "runs": {
+      "count": 53.85625,
+      "max": 10.9875,
+      "mean": 3.2650748186145746,
+      "changes": 5.5375,
+      "ties": 4.1125
+    },
+    "quarterRuns": [
+      {
+        "count": 13.275,
+        "max": 7.83125,
+        "mean": 3.2728747776292764,
+        "changes": 2.44375,
+        "ties": 1.86875
+      },
+      {
+        "count": 13.64375,
+        "max": 7.85,
+        "mean": 3.2962226963787358,
+        "changes": 2.54375,
+        "ties": 2.0375
+      },
+      {
+        "count": 13.825,
+        "max": 7.75625,
+        "mean": 3.2378934238974386,
+        "changes": 2.4125,
+        "ties": 2.075
+      },
+      {
+        "count": 14.45,
+        "max": 7.6375,
+        "mean": 3.2296189944201203,
+        "changes": 2.6375,
+        "ties": 2.25625
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 9406,
+        "FGA": 8537,
+        "expectedMake%": 53.43744873904873,
+        "actualMake%": 55.10312566446949,
+        "pointsPerDraw": 1.1020625132893898,
+        "expectedPointsPerDraw": 1.0687489747809746,
+        "off": 81.04867517806008,
+        "def": 70.86428145275588,
+        "fatigue": 0.18016050807280198
+      },
+      "mid": {
+        "draws": 6215,
+        "FGA": 5410,
+        "expectedMake%": 36.921584032044166,
+        "actualMake%": 37.61866452131939,
+        "pointsPerDraw": 0.7523732904263878,
+        "expectedPointsPerDraw": 0.7384316806408833,
+        "off": 80.62164036732854,
+        "def": 76.14656880347243,
+        "fatigue": 0.16695993757462999
+      },
+      "three": {
+        "draws": 9140,
+        "FGA": 9040,
+        "expectedMake%": 30.962699377149004,
+        "actualMake%": 31.61925601750547,
+        "pointsPerDraw": 0.9485776805251641,
+        "expectedPointsPerDraw": 0.92888098131447,
+        "off": 82.8875288060281,
+        "def": 76.72939870150718,
+        "fatigue": 0.1678082052722753
+      },
+      "open": {
+        "draws": 6983,
+        "FGA": 6697,
+        "expectedMake%": 36.65531644398365,
+        "actualMake%": 37.31920378061005,
+        "pointsPerDraw": 0.9949878275812688,
+        "expectedPointsPerDraw": 0.9811141786965912,
+        "off": 83.2671798862279,
+        "def": 76.15713224940474,
+        "fatigue": 0.16871594476004081
+      },
+      "contest": {
+        "draws": 5107,
+        "FGA": 4552,
+        "expectedMake%": 42.335468848502,
+        "actualMake%": 44.03759545721559,
+        "pointsPerDraw": 0.9267671822988056,
+        "expectedPointsPerDraw": 0.8873206792499546,
+        "off": 81.07365925716465,
+        "def": 74.52080956039485,
+        "fatigue": 0.17766318502600956
+      },
+      "assisted": {
+        "draws": 16394,
+        "FGA": 15151,
+        "expectedMake%": 39.70565304292437,
+        "actualMake%": 40.86861046724412,
+        "pointsPerDraw": 0.9626692692448456,
+        "expectedPointsPerDraw": 0.9369906509084578,
+        "off": 81.05889823413759,
+        "def": 74.57477077851938,
+        "fatigue": 0.17431381136153826
+      },
+      "selfCreated": {
+        "draws": 1105,
+        "FGA": 1096,
+        "expectedMake%": 27.149319433775204,
+        "actualMake%": 28.5972850678733,
+        "pointsPerDraw": 0.857918552036199,
+        "expectedPointsPerDraw": 0.8144795830132562,
+        "off": 82.3530242528945,
+        "def": 75.92577650401282,
+        "fatigue": 0.16174279899115984
+      },
+      "transition": {
+        "draws": 12235,
+        "FGA": 11304,
+        "expectedMake%": 38.860929112591656,
+        "actualMake%": 40.18798528810789,
+        "pointsPerDraw": 0.9530854107069882,
+        "expectedPointsPerDraw": 0.9243450092617523,
+        "off": 81.95422051380196,
+        "def": 75.16909792076092,
+        "fatigue": 0.17391688583540013
+      },
+      "late": {
+        "draws": 241,
+        "FGA": 224,
+        "expectedMake%": 43.99298417094455,
+        "actualMake%": 44.81327800829876,
+        "pointsPerDraw": 0.979253112033195,
+        "expectedPointsPerDraw": 0.947480319794224,
+        "off": 80.50730098940765,
+        "def": 73.66746170302189,
+        "fatigue": 0.1942648032353439
+      },
+      "secondChance": {
+        "draws": 2619,
+        "FGA": 2619,
+        "expectedMake%": 55.29611087063168,
+        "actualMake%": 55.250095456281024,
+        "pointsPerDraw": 1.122565864833906,
+        "expectedPointsPerDraw": 1.1223686150979932,
+        "off": 79.84270398576685,
+        "def": 69.2982755979572,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 5319,
+        "FGA": 0,
+        "expectedMake%": 79.02962189393453,
+        "actualMake%": 78.09738672682836,
+        "pointsPerDraw": 0.7809738672682836,
+        "expectedPointsPerDraw": 0.7902962189393453,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.005123475765959627
+  },
+  "wnba-league-303": {
+    "n": 160,
+    "meanAbs": 13.76875,
+    "medianAbs": 11.0,
+    "signedSD": 16.65595684545022,
+    "absSD": 9.451337124317384,
+    "within5%": 20.625,
+    "within10%": 43.75,
+    "over20%": 24.375,
+    "over30%": 6.25,
+    "over40%": 2.5,
+    "over50%": 0.0,
+    "points": 85.159375,
+    "OTpct": 3.75,
+    "scoreCorrelation": 0.07542514209147887,
+    "full": {
+      "meanExpectedMargin": 1.8704564572844542,
+      "meanActualMargin": 1.21875,
+      "residualMean": -0.6517064572844544,
+      "residualVariance": 239.3471265576075,
+      "meanConditionalVariance": 197.5692337191525,
+      "residualMSEtoConditionalVariance": 1.21360924143135,
+      "expectedMarginVariance": 95.59599500976613,
+      "actualMarginVariance": 277.4208984375,
+      "meanRatingDifference": 1.6765738140228224
+    },
+    "early": {
+      "meanExpectedMargin": 1.2305998832036076,
+      "meanActualMargin": 1.625,
+      "residualMean": 0.3944001167963922,
+      "residualVariance": 164.86671351015758,
+      "meanConditionalVariance": 146.08349820299736,
+      "residualMSEtoConditionalVariance": 1.1296434367485637,
+      "expectedMarginVariance": 81.37784392426201,
+      "actualMarginVariance": 199.009375,
+      "meanRatingDifference": 2.7370905324914694
+    },
+    "league": "wnba",
+    "label": "league",
+    "world": 303,
+    "runs": {
+      "count": 52.2875,
+      "max": 10.91875,
+      "mean": 3.2855414213168785,
+      "changes": 4.51875,
+      "ties": 3.6375
+    },
+    "quarterRuns": [
+      {
+        "count": 13.18125,
+        "max": 7.58125,
+        "mean": 3.257872213839222,
+        "changes": 1.93125,
+        "ties": 1.6875
+      },
+      {
+        "count": 13.1,
+        "max": 7.825,
+        "mean": 3.3457943828831986,
+        "changes": 2.2,
+        "ties": 1.7625
+      },
+      {
+        "count": 13.10625,
+        "max": 7.84375,
+        "mean": 3.269041173180105,
+        "changes": 1.7375,
+        "ties": 1.55
+      },
+      {
+        "count": 13.9625,
+        "max": 8.04375,
+        "mean": 3.2356041219200264,
+        "changes": 2.2875,
+        "ties": 1.825
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 9742,
+        "FGA": 8802,
+        "expectedMake%": 52.86467922340275,
+        "actualMake%": 53.02812564155204,
+        "pointsPerDraw": 1.0605625128310407,
+        "expectedPointsPerDraw": 1.057293584468055,
+        "off": 79.13002914114402,
+        "def": 69.15776266513221,
+        "fatigue": 0.19016767232376577
+      },
+      "mid": {
+        "draws": 6261,
+        "FGA": 5419,
+        "expectedMake%": 36.33783399388412,
+        "actualMake%": 35.92077942820636,
+        "pointsPerDraw": 0.7184155885641271,
+        "expectedPointsPerDraw": 0.7267566798776823,
+        "off": 78.02529699061543,
+        "def": 75.50537687154115,
+        "fatigue": 0.1756503934663493
+      },
+      "three": {
+        "draws": 8966,
+        "FGA": 8884,
+        "expectedMake%": 30.568515387930113,
+        "actualMake%": 30.437207227303148,
+        "pointsPerDraw": 0.9131162168190944,
+        "expectedPointsPerDraw": 0.9170554616379034,
+        "off": 81.00576684523918,
+        "def": 75.35878000287613,
+        "fatigue": 0.17291561063256938
+      },
+      "open": {
+        "draws": 6718,
+        "FGA": 6450,
+        "expectedMake%": 36.38300777815729,
+        "actualMake%": 36.7817802917535,
+        "pointsPerDraw": 0.9791604644239357,
+        "expectedPointsPerDraw": 0.971895833692099,
+        "off": 80.98135181412165,
+        "def": 74.71790402741887,
+        "fatigue": 0.17496392454863646
+      },
+      "contest": {
+        "draws": 5241,
+        "FGA": 4627,
+        "expectedMake%": 41.00031023096143,
+        "actualMake%": 40.889143293264645,
+        "pointsPerDraw": 0.8645296699103224,
+        "expectedPointsPerDraw": 0.8626609277376555,
+        "off": 79.18694248285355,
+        "def": 74.03095778466931,
+        "fatigue": 0.1891815797818639
+      },
+      "assisted": {
+        "draws": 16434,
+        "FGA": 15096,
+        "expectedMake%": 39.36961807871297,
+        "actualMake%": 39.241815747839844,
+        "pointsPerDraw": 0.9223560910307899,
+        "expectedPointsPerDraw": 0.9251754866576477,
+        "off": 79.07176900699857,
+        "def": 73.07387798991816,
+        "fatigue": 0.18252072106539408
+      },
+      "selfCreated": {
+        "draws": 1031,
+        "FGA": 1024,
+        "expectedMake%": 26.36747394914979,
+        "actualMake%": 25.41222114451988,
+        "pointsPerDraw": 0.7623666343355965,
+        "expectedPointsPerDraw": 0.7910242184744936,
+        "off": 81.04533090056682,
+        "def": 76.50146533090265,
+        "fatigue": 0.16277013178966762
+      },
+      "transition": {
+        "draws": 12249,
+        "FGA": 11288,
+        "expectedMake%": 38.499774078141094,
+        "actualMake%": 38.174544860804964,
+        "pointsPerDraw": 0.9028492121805862,
+        "expectedPointsPerDraw": 0.9121418130567134,
+        "off": 79.65668202593986,
+        "def": 73.9446787552132,
+        "fatigue": 0.18244281602388548
+      },
+      "late": {
+        "draws": 236,
+        "FGA": 205,
+        "expectedMake%": 42.45867191605422,
+        "actualMake%": 40.67796610169492,
+        "pointsPerDraw": 0.8983050847457628,
+        "expectedPointsPerDraw": 0.9149694976166809,
+        "off": 78.67188724490283,
+        "def": 72.68988783490336,
+        "fatigue": 0.18236596145003534
+      },
+      "secondChance": {
+        "draws": 2788,
+        "FGA": 2788,
+        "expectedMake%": 55.59486533996129,
+        "actualMake%": 56.3845050215208,
+        "pointsPerDraw": 1.1434720229555237,
+        "expectedPointsPerDraw": 1.1248910231282934,
+        "off": 78.65631998322145,
+        "def": 66.92687788386118,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 5420,
+        "FGA": 0,
+        "expectedMake%": 77.47849106831592,
+        "actualMake%": 78.1180811808118,
+        "pointsPerDraw": 0.781180811808118,
+        "expectedPointsPerDraw": 0.7747849106831591,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.015391719255040789
+  },
+  "wnba-league-304": {
+    "n": 160,
+    "meanAbs": 12.6875,
+    "medianAbs": 11.0,
+    "signedSD": 15.277741161572283,
+    "absSD": 8.621330741248707,
+    "within5%": 18.125,
+    "within10%": 48.125,
+    "over20%": 20.0,
+    "over30%": 4.375,
+    "over40%": 1.25,
+    "over50%": 0.0,
+    "points": 84.6875,
+    "OTpct": 0.625,
+    "scoreCorrelation": 0.16443969539764017,
+    "full": {
+      "meanExpectedMargin": 2.4668314622797416,
+      "meanActualMargin": 1.375,
+      "residualMean": -1.0918314622797411,
+      "residualVariance": 239.16418061362634,
+      "meanConditionalVariance": 191.84584296996263,
+      "residualMSEtoConditionalVariance": 1.2528615310850542,
+      "expectedMarginVariance": 94.26699271659416,
+      "actualMarginVariance": 233.409375,
+      "meanRatingDifference": 1.728238632545409
+    },
+    "early": {
+      "meanExpectedMargin": 1.4422333313116151,
+      "meanActualMargin": 0.95,
+      "residualMean": -0.4922333313116152,
+      "residualVariance": 140.3022531490894,
+      "meanConditionalVariance": 142.72568492501486,
+      "residualMSEtoConditionalVariance": 0.9847179705277487,
+      "expectedMarginVariance": 71.47645623611368,
+      "actualMarginVariance": 147.1725,
+      "meanRatingDifference": 1.5312595450382598
+    },
+    "league": "wnba",
+    "label": "league",
+    "world": 304,
+    "runs": {
+      "count": 52.31875,
+      "max": 10.475,
+      "mean": 3.2782567929193704,
+      "changes": 5.23125,
+      "ties": 4.3625
+    },
+    "quarterRuns": [
+      {
+        "count": 13.01875,
+        "max": 7.33125,
+        "mean": 3.2559952320587477,
+        "changes": 1.95,
+        "ties": 1.6875
+      },
+      {
+        "count": 13.1375,
+        "max": 7.81875,
+        "mean": 3.3571728373750434,
+        "changes": 2.2125,
+        "ties": 2.05625
+      },
+      {
+        "count": 13.41875,
+        "max": 7.725,
+        "mean": 3.301938093323301,
+        "changes": 1.9625,
+        "ties": 1.83125
+      },
+      {
+        "count": 14.2,
+        "max": 7.46875,
+        "mean": 3.214225302982612,
+        "changes": 2.1625,
+        "ties": 1.88125
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 10022,
+        "FGA": 9075,
+        "expectedMake%": 52.100221307865155,
+        "actualMake%": 52.94352424665736,
+        "pointsPerDraw": 1.0588704849331472,
+        "expectedPointsPerDraw": 1.0420044261573032,
+        "off": 80.42882950091418,
+        "def": 73.37176960305364,
+        "fatigue": 0.19128149507542308
+      },
+      "mid": {
+        "draws": 6298,
+        "FGA": 5434,
+        "expectedMake%": 36.95029994698795,
+        "actualMake%": 36.21784693553509,
+        "pointsPerDraw": 0.7243569387107018,
+        "expectedPointsPerDraw": 0.7390059989397589,
+        "off": 77.89728429847517,
+        "def": 71.82658130363028,
+        "fatigue": 0.1749369284825361
+      },
+      "three": {
+        "draws": 8235,
+        "FGA": 8141,
+        "expectedMake%": 30.9167980007533,
+        "actualMake%": 30.34608378870674,
+        "pointsPerDraw": 0.9103825136612022,
+        "expectedPointsPerDraw": 0.9275039400225988,
+        "off": 81.43146866035944,
+        "def": 73.46775961561497,
+        "fatigue": 0.17238539885571255
+      },
+      "open": {
+        "draws": 5883,
+        "FGA": 5619,
+        "expectedMake%": 36.562438413797935,
+        "actualMake%": 35.968043515213324,
+        "pointsPerDraw": 0.9590345062043175,
+        "expectedPointsPerDraw": 0.9747151924686864,
+        "off": 81.88858619579823,
+        "def": 73.78237226414359,
+        "fatigue": 0.1725061430811574
+      },
+      "contest": {
+        "draws": 4839,
+        "FGA": 4280,
+        "expectedMake%": 42.29815945515117,
+        "actualMake%": 42.67410622029345,
+        "pointsPerDraw": 0.8954329406902253,
+        "expectedPointsPerDraw": 0.886282203147437,
+        "off": 79.49398441242865,
+        "def": 73.55481979760617,
+        "fatigue": 0.18494796724199877
+      },
+      "assisted": {
+        "draws": 16392,
+        "FGA": 15007,
+        "expectedMake%": 40.23649417410567,
+        "actualMake%": 40.373352855051245,
+        "pointsPerDraw": 0.9335041483650561,
+        "expectedPointsPerDraw": 0.932635280814038,
+        "off": 79.5734390945268,
+        "def": 72.83410728644526,
+        "fatigue": 0.18515534931018854
+      },
+      "selfCreated": {
+        "draws": 952,
+        "FGA": 935,
+        "expectedMake%": 26.85167611299034,
+        "actualMake%": 26.785714285714285,
+        "pointsPerDraw": 0.8035714285714286,
+        "expectedPointsPerDraw": 0.8055502833897102,
+        "off": 79.58427246830966,
+        "def": 72.71862723292857,
+        "fatigue": 0.17151346502850434
+      },
+      "transition": {
+        "draws": 12064,
+        "FGA": 11064,
+        "expectedMake%": 39.35104819834528,
+        "actualMake%": 39.26558355437666,
+        "pointsPerDraw": 0.9166942970822282,
+        "expectedPointsPerDraw": 0.9198185837730674,
+        "off": 80.21035080731122,
+        "def": 73.36460988119443,
+        "fatigue": 0.18206456036809174
+      },
+      "late": {
+        "draws": 231,
+        "FGA": 204,
+        "expectedMake%": 42.29529071579178,
+        "actualMake%": 41.55844155844156,
+        "pointsPerDraw": 0.8874458874458875,
+        "expectedPointsPerDraw": 0.9091173073189543,
+        "off": 79.2459873082847,
+        "def": 73.6707239834117,
+        "fatigue": 0.1915325332039823
+      },
+      "secondChance": {
+        "draws": 2683,
+        "FGA": 2683,
+        "expectedMake%": 55.05591700805164,
+        "actualMake%": 55.38576220648528,
+        "pointsPerDraw": 1.1185240402534475,
+        "expectedPointsPerDraw": 1.1133795930683785,
+        "off": 80.30161681992573,
+        "def": 71.48044331463774,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 5654,
+        "FGA": 0,
+        "expectedMake%": 78.14817219918771,
+        "actualMake%": 78.33392288645207,
+        "pointsPerDraw": 0.7833392288645207,
+        "expectedPointsPerDraw": 0.7814817219918772,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.015737292136599693
+  },
+  "wnba-pace-901": {
+    "n": 160,
+    "meanAbs": 11.39375,
+    "medianAbs": 10.0,
+    "signedSD": 13.676049719765572,
+    "absSD": 7.722610370690729,
+    "within5%": 22.5,
+    "within10%": 53.125,
+    "over20%": 12.5,
+    "over30%": 4.375,
+    "over40%": 0.0,
+    "over50%": 0.0,
+    "points": 89.553125,
+    "OTpct": 4.375,
+    "scoreCorrelation": 0.29735095704390424,
+    "full": {
+      "meanExpectedMargin": 1.8103006672693458,
+      "meanActualMargin": 1.55625,
+      "residualMean": -0.2540506672693457,
+      "residualVariance": 190.63880693584798,
+      "meanConditionalVariance": 202.86016546067867,
+      "residualMSEtoConditionalVariance": 0.940072922864459,
+      "expectedMarginVariance": 70.94757382386311,
+      "actualMarginVariance": 187.03433593749997,
+      "meanRatingDifference": 2.15146042266428
+    },
+    "early": {
+      "meanExpectedMargin": 1.4298996666776556,
+      "meanActualMargin": 1.33125,
+      "residualMean": -0.09864966667765547,
+      "residualVariance": 150.61265778363298,
+      "meanConditionalVariance": 149.53741589328985,
+      "residualMSEtoConditionalVariance": 1.007255532942023,
+      "expectedMarginVariance": 57.31037313784081,
+      "actualMarginVariance": 165.2590234375,
+      "meanRatingDifference": 2.271800576523269
+    },
+    "league": "wnba",
+    "label": "pace",
+    "world": 901,
+    "runs": {
+      "count": 54.98125,
+      "max": 10.4375,
+      "mean": 3.2900669771799094,
+      "changes": 5.59375,
+      "ties": 4.325
+    },
+    "quarterRuns": [
+      {
+        "count": 13.25,
+        "max": 7.98125,
+        "mean": 3.3949120532857195,
+        "changes": 2.075,
+        "ties": 1.73125
+      },
+      {
+        "count": 13.63125,
+        "max": 7.8625,
+        "mean": 3.3186771261343146,
+        "changes": 2.53125,
+        "ties": 1.925
+      },
+      {
+        "count": 14.3375,
+        "max": 7.70625,
+        "mean": 3.2378309151704583,
+        "changes": 2.575,
+        "ties": 2.13125
+      },
+      {
+        "count": 14.63125,
+        "max": 7.55,
+        "mean": 3.2558904670038595,
+        "changes": 2.28125,
+        "ties": 1.925
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 9501,
+        "FGA": 8509,
+        "expectedMake%": 53.1526732865224,
+        "actualMake%": 53.12072413430165,
+        "pointsPerDraw": 1.0624144826860331,
+        "expectedPointsPerDraw": 1.063053465730448,
+        "off": 79.22894597312498,
+        "def": 69.26813968019687,
+        "fatigue": 0.20260731435162221
+      },
+      "mid": {
+        "draws": 6603,
+        "FGA": 5700,
+        "expectedMake%": 37.645550850299614,
+        "actualMake%": 37.270937452673024,
+        "pointsPerDraw": 0.7454187490534605,
+        "expectedPointsPerDraw": 0.7529110170059923,
+        "off": 80.83219191027361,
+        "def": 71.37567308416841,
+        "fatigue": 0.19321265078981797
+      },
+      "three": {
+        "draws": 9143,
+        "FGA": 9046,
+        "expectedMake%": 31.24616765518574,
+        "actualMake%": 32.046374275401945,
+        "pointsPerDraw": 0.9613912282620584,
+        "expectedPointsPerDraw": 0.937385029655572,
+        "off": 80.66129700409758,
+        "def": 73.40854597302618,
+        "fatigue": 0.17812261326333162
+      },
+      "open": {
+        "draws": 6666,
+        "FGA": 6373,
+        "expectedMake%": 37.16393770272551,
+        "actualMake%": 38.04380438043805,
+        "pointsPerDraw": 1.0156015601560155,
+        "expectedPointsPerDraw": 0.9894710091426243,
+        "off": 81.40031442311928,
+        "def": 73.84172105242236,
+        "fatigue": 0.1783420511367362
+      },
+      "contest": {
+        "draws": 5162,
+        "FGA": 4547,
+        "expectedMake%": 41.1282438112022,
+        "actualMake%": 41.04998062766369,
+        "pointsPerDraw": 0.8686555598605192,
+        "expectedPointsPerDraw": 0.8702543759524372,
+        "off": 80.05079376203203,
+        "def": 71.2000088630054,
+        "fatigue": 0.19693964418964194
+      },
+      "assisted": {
+        "draws": 16219,
+        "FGA": 14816,
+        "expectedMake%": 39.99291133636552,
+        "actualMake%": 40.10111597509095,
+        "pointsPerDraw": 0.940810160922375,
+        "expectedPointsPerDraw": 0.9366938366002848,
+        "off": 79.56360805870703,
+        "def": 71.34083233524679,
+        "fatigue": 0.19276383396034702
+      },
+      "selfCreated": {
+        "draws": 1241,
+        "FGA": 1223,
+        "expectedMake%": 27.8529905424027,
+        "actualMake%": 30.05640612409347,
+        "pointsPerDraw": 0.9016921837228042,
+        "expectedPointsPerDraw": 0.8355897162720807,
+        "off": 81.30155494038915,
+        "def": 73.26898153879029,
+        "fatigue": 0.1785829855472914
+      },
+      "transition": {
+        "draws": 13381,
+        "FGA": 12265,
+        "expectedMake%": 39.28932726469284,
+        "actualMake%": 39.49630072490845,
+        "pointsPerDraw": 0.9370002241984904,
+        "expectedPointsPerDraw": 0.9291288435238658,
+        "off": 80.5537364520822,
+        "def": 71.8877019826043,
+        "fatigue": 0.19297792030794533
+      },
+      "late": {
+        "draws": 235,
+        "FGA": 207,
+        "expectedMake%": 44.1705342208892,
+        "actualMake%": 48.08510638297872,
+        "pointsPerDraw": 1.025531914893617,
+        "expectedPointsPerDraw": 0.9367302870554947,
+        "off": 80.49440094644396,
+        "def": 69.45483501583905,
+        "fatigue": 0.20404516109093715
+      },
+      "secondChance": {
+        "draws": 2694,
+        "FGA": 2694,
+        "expectedMake%": 55.50385560750938,
+        "actualMake%": 56.60727542687454,
+        "pointsPerDraw": 1.151818856718634,
+        "expectedPointsPerDraw": 1.1253893617728985,
+        "off": 77.15116299523767,
+        "def": 66.7641391997606,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 6193,
+        "FGA": 0,
+        "expectedMake%": 78.64692927498788,
+        "actualMake%": 78.3303730017762,
+        "pointsPerDraw": 0.783303730017762,
+        "expectedPointsPerDraw": 0.7864692927498789,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.005078720162519045
+  },
+  "wnba-poor-defense-901": {
+    "n": 160,
+    "meanAbs": 12.5,
+    "medianAbs": 10.0,
+    "signedSD": 13.817781795570518,
+    "absSD": 8.948463555270257,
+    "within5%": 27.500000000000004,
+    "within10%": 50.625,
+    "over20%": 21.25,
+    "over30%": 5.625,
+    "over40%": 0.625,
+    "over50%": 0.0,
+    "points": 90.91875,
+    "OTpct": 3.125,
+    "scoreCorrelation": 0.2888361570961429,
+    "full": {
+      "meanExpectedMargin": 7.678904519842663,
+      "meanActualMargin": 6.7375,
+      "residualMean": -0.9414045198426626,
+      "residualVariance": 181.51714281847876,
+      "meanConditionalVariance": 201.47450265826504,
+      "residualMSEtoConditionalVariance": 0.9053422784611416,
+      "expectedMarginVariance": 70.90108518931135,
+      "actualMarginVariance": 190.93109375,
+      "meanRatingDifference": 8.630049890515327
+    },
+    "early": {
+      "meanExpectedMargin": 5.512957080163359,
+      "meanActualMargin": 4.7375,
+      "residualMean": -0.7754570801633586,
+      "residualVariance": 155.844155797729,
+      "meanConditionalVariance": 148.59810375904144,
+      "residualMSEtoConditionalVariance": 1.052809460708785,
+      "expectedMarginVariance": 53.722876706531636,
+      "actualMarginVariance": 165.68109375,
+      "meanRatingDifference": 7.944427292919667
+    },
+    "league": "wnba",
+    "label": "poor-defense",
+    "world": 901,
+    "runs": {
+      "count": 57.29375,
+      "max": 10.30625,
+      "mean": 3.2032823263582073,
+      "changes": 5.85625,
+      "ties": 4.3375
+    },
+    "quarterRuns": [
+      {
+        "count": 14.0125,
+        "max": 7.56875,
+        "mean": 3.237792260333621,
+        "changes": 2.23125,
+        "ties": 1.775
+      },
+      {
+        "count": 14.6375,
+        "max": 7.775,
+        "mean": 3.190746253848276,
+        "changes": 2.44375,
+        "ties": 2.0
+      },
+      {
+        "count": 14.13125,
+        "max": 7.4625,
+        "mean": 3.213339004040205,
+        "changes": 2.4625,
+        "ties": 2.11875
+      },
+      {
+        "count": 15.59375,
+        "max": 7.225,
+        "mean": 3.1429170679791243,
+        "changes": 2.48125,
+        "ties": 2.1375
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 9380,
+        "FGA": 8316,
+        "expectedMake%": 54.09778453045521,
+        "actualMake%": 53.80597014925373,
+        "pointsPerDraw": 1.0761194029850747,
+        "expectedPointsPerDraw": 1.0819556906091041,
+        "off": 79.14796930049171,
+        "def": 63.73471360959282,
+        "fatigue": 0.1935859745458836
+      },
+      "mid": {
+        "draws": 6625,
+        "FGA": 5674,
+        "expectedMake%": 38.725575797491636,
+        "actualMake%": 39.06415094339623,
+        "pointsPerDraw": 0.7812830188679245,
+        "expectedPointsPerDraw": 0.7745115159498327,
+        "off": 80.94509947019705,
+        "def": 66.09202200367538,
+        "fatigue": 0.18530198643665363
+      },
+      "three": {
+        "draws": 8858,
+        "FGA": 8767,
+        "expectedMake%": 32.78880766955456,
+        "actualMake%": 32.772634906299395,
+        "pointsPerDraw": 0.9831790471889817,
+        "expectedPointsPerDraw": 0.9836642300866366,
+        "off": 80.4473445215372,
+        "def": 66.81979756143149,
+        "fatigue": 0.17414742321446225
+      },
+      "open": {
+        "draws": 6250,
+        "FGA": 5947,
+        "expectedMake%": 38.852518547305664,
+        "actualMake%": 38.896,
+        "pointsPerDraw": 1.03216,
+        "expectedPointsPerDraw": 1.0319643798306428,
+        "off": 81.41157355682367,
+        "def": 67.51243596601923,
+        "fatigue": 0.1725442708719072
+      },
+      "contest": {
+        "draws": 5095,
+        "FGA": 4421,
+        "expectedMake%": 41.989956382851304,
+        "actualMake%": 41.31501472031404,
+        "pointsPerDraw": 0.8792934249263984,
+        "expectedPointsPerDraw": 0.8919369553752441,
+        "off": 79.93527038930353,
+        "def": 65.50556818520695,
+        "fatigue": 0.18851335638223654
+      },
+      "assisted": {
+        "draws": 16328,
+        "FGA": 14855,
+        "expectedMake%": 41.30750086535775,
+        "actualMake%": 41.07055365017148,
+        "pointsPerDraw": 0.962702106810387,
+        "expectedPointsPerDraw": 0.9674364546029449,
+        "off": 79.55568036646443,
+        "def": 65.35827850430483,
+        "fatigue": 0.1859009699704931
+      },
+      "selfCreated": {
+        "draws": 1255,
+        "FGA": 1234,
+        "expectedMake%": 29.53898401478241,
+        "actualMake%": 30.1195219123506,
+        "pointsPerDraw": 0.9035856573705179,
+        "expectedPointsPerDraw": 0.8861695204434721,
+        "off": 80.91355716221821,
+        "def": 66.920940433668,
+        "fatigue": 0.18324360429680786
+      },
+      "transition": {
+        "draws": 11999,
+        "FGA": 10943,
+        "expectedMake%": 40.66190416158365,
+        "actualMake%": 40.39503291940995,
+        "pointsPerDraw": 0.9569130760896741,
+        "expectedPointsPerDraw": 0.9620127641377413,
+        "off": 80.46306597738872,
+        "def": 65.6208343432842,
+        "fatigue": 0.18590487575976966
+      },
+      "late": {
+        "draws": 247,
+        "FGA": 221,
+        "expectedMake%": 45.01351440202653,
+        "actualMake%": 44.534412955465584,
+        "pointsPerDraw": 0.9635627530364372,
+        "expectedPointsPerDraw": 0.9745333768708261,
+        "off": 79.71656590040661,
+        "def": 63.278227497103664,
+        "fatigue": 0.20759979520254992
+      },
+      "secondChance": {
+        "draws": 2614,
+        "FGA": 2614,
+        "expectedMake%": 56.333266364403656,
+        "actualMake%": 56.3504208110176,
+        "pointsPerDraw": 1.1430757459831675,
+        "expectedPointsPerDraw": 1.1434255610077788,
+        "off": 77.33539772430483,
+        "def": 61.823280828631276,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 6537,
+        "FGA": 0,
+        "expectedMake%": 78.62951093773903,
+        "actualMake%": 78.24690224873795,
+        "pointsPerDraw": 0.7824690224873795,
+        "expectedPointsPerDraw": 0.7862951093773903,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.0
+  },
+  "wnba-rebounds-901": {
+    "n": 160,
+    "meanAbs": 11.8375,
+    "medianAbs": 10.0,
+    "signedSD": 14.435151324111569,
+    "absSD": 8.42680804041483,
+    "within5%": 23.75,
+    "within10%": 55.00000000000001,
+    "over20%": 18.75,
+    "over30%": 6.875000000000001,
+    "over40%": 0.0,
+    "over50%": 0.0,
+    "points": 86.5375,
+    "OTpct": 2.5,
+    "scoreCorrelation": 0.18702211496124235,
+    "full": {
+      "meanExpectedMargin": -0.8325908951332182,
+      "meanActualMargin": 1.6625,
+      "residualMean": 2.495090895133218,
+      "residualVariance": 197.30037597512364,
+      "meanConditionalVariance": 199.1775967269247,
+      "residualMSEtoConditionalVariance": 1.021831058786883,
+      "expectedMarginVariance": 79.17316620553495,
+      "actualMarginVariance": 208.37359375,
+      "meanRatingDifference": 2.3754515453195575
+    },
+    "early": {
+      "meanExpectedMargin": -0.030783872430739833,
+      "meanActualMargin": 0.84375,
+      "residualMean": 0.8745338724307397,
+      "residualVariance": 159.72304773595428,
+      "meanConditionalVariance": 146.42745383579376,
+      "residualMSEtoConditionalVariance": 1.09602299996254,
+      "expectedMarginVariance": 49.72845700095952,
+      "actualMarginVariance": 182.7568359375,
+      "meanRatingDifference": 1.7319431280377535
+    },
+    "league": "wnba",
+    "label": "rebounds",
+    "world": 901,
+    "runs": {
+      "count": 52.90625,
+      "max": 10.63125,
+      "mean": 3.3061592888006066,
+      "changes": 5.45625,
+      "ties": 4.46875
+    },
+    "quarterRuns": [
+      {
+        "count": 13.1375,
+        "max": 7.7625,
+        "mean": 3.3154669045591865,
+        "changes": 1.96875,
+        "ties": 1.9375
+      },
+      {
+        "count": 13.73125,
+        "max": 7.6375,
+        "mean": 3.2682766463305355,
+        "changes": 2.35625,
+        "ties": 1.9
+      },
+      {
+        "count": 13.125,
+        "max": 7.725,
+        "mean": 3.3772569423582426,
+        "changes": 2.25,
+        "ties": 2.0875
+      },
+      {
+        "count": 14.16875,
+        "max": 7.7375,
+        "mean": 3.3079533685075204,
+        "changes": 2.41875,
+        "ties": 1.99375
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 9326,
+        "FGA": 8408,
+        "expectedMake%": 53.373905133676345,
+        "actualMake%": 52.884409178640354,
+        "pointsPerDraw": 1.0576881835728071,
+        "expectedPointsPerDraw": 1.067478102673527,
+        "off": 79.25329487421992,
+        "def": 69.1789942847282,
+        "fatigue": 0.19768992135184008
+      },
+      "mid": {
+        "draws": 6565,
+        "FGA": 5666,
+        "expectedMake%": 37.76472175062449,
+        "actualMake%": 36.87738004569688,
+        "pointsPerDraw": 0.7375476009139376,
+        "expectedPointsPerDraw": 0.7552944350124898,
+        "off": 80.84834281822909,
+        "def": 71.13216632434877,
+        "fatigue": 0.18682546730238078
+      },
+      "three": {
+        "draws": 8954,
+        "FGA": 8861,
+        "expectedMake%": 31.232678799960368,
+        "actualMake%": 31.237435782890326,
+        "pointsPerDraw": 0.9371230734867099,
+        "expectedPointsPerDraw": 0.9369803639988111,
+        "off": 80.52939308990716,
+        "def": 72.79132197016624,
+        "fatigue": 0.17208484274983352
+      },
+      "open": {
+        "draws": 6163,
+        "FGA": 5896,
+        "expectedMake%": 37.30547839923896,
+        "actualMake%": 36.80025961382444,
+        "pointsPerDraw": 0.9810157390881065,
+        "expectedPointsPerDraw": 0.9940533500345731,
+        "off": 81.31777189121613,
+        "def": 73.0834820665564,
+        "fatigue": 0.17016392195022664
+      },
+      "contest": {
+        "draws": 5127,
+        "FGA": 4534,
+        "expectedMake%": 41.06422052312816,
+        "actualMake%": 41.15467134776672,
+        "pointsPerDraw": 0.8759508484493856,
+        "expectedPointsPerDraw": 0.8714325764139272,
+        "off": 80.08701822054171,
+        "def": 71.00618262207746,
+        "fatigue": 0.1936533824532047
+      },
+      "assisted": {
+        "draws": 16092,
+        "FGA": 14773,
+        "expectedMake%": 40.03035116884289,
+        "actualMake%": 39.76510067114094,
+        "pointsPerDraw": 0.9319537658463833,
+        "expectedPointsPerDraw": 0.9380996153995111,
+        "off": 79.63343437337912,
+        "def": 71.13745834361886,
+        "fatigue": 0.1854394233785601
+      },
+      "selfCreated": {
+        "draws": 1265,
+        "FGA": 1250,
+        "expectedMake%": 27.845821374651152,
+        "actualMake%": 30.8300395256917,
+        "pointsPerDraw": 0.924901185770751,
+        "expectedPointsPerDraw": 0.8353746412395346,
+        "off": 81.04046699867122,
+        "def": 72.90989592965283,
+        "fatigue": 0.17769668623895793
+      },
+      "transition": {
+        "draws": 12262,
+        "FGA": 11293,
+        "expectedMake%": 39.44227917752273,
+        "actualMake%": 38.9985320502365,
+        "pointsPerDraw": 0.9208938183004404,
+        "expectedPointsPerDraw": 0.9322409133860735,
+        "off": 80.46844332377879,
+        "def": 71.39350865427097,
+        "fatigue": 0.1870084410649233
+      },
+      "late": {
+        "draws": 216,
+        "FGA": 195,
+        "expectedMake%": 43.508381830560076,
+        "actualMake%": 45.83333333333333,
+        "pointsPerDraw": 0.9953703703703703,
+        "expectedPointsPerDraw": 0.9376877937007877,
+        "off": 80.69282813355518,
+        "def": 72.04379519820492,
+        "fatigue": 0.18739032461800592
+      },
+      "secondChance": {
+        "draws": 2769,
+        "FGA": 2769,
+        "expectedMake%": 55.17067319444398,
+        "actualMake%": 53.7016973636692,
+        "pointsPerDraw": 1.0884795955218491,
+        "expectedPointsPerDraw": 1.1199759051083247,
+        "off": 77.3879931798134,
+        "def": 66.74644521812962,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 5823,
+        "FGA": 0,
+        "expectedMake%": 78.60595139962219,
+        "actualMake%": 78.91121415078139,
+        "pointsPerDraw": 0.7891121415078138,
+        "expectedPointsPerDraw": 0.7860595139962219,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.005173305742369374
+  },
+  "wnba-selection-901": {
+    "n": 160,
+    "meanAbs": 12.8,
+    "medianAbs": 11.0,
+    "signedSD": 15.448199733302259,
+    "absSD": 8.671649208772228,
+    "within5%": 20.0,
+    "within10%": 49.375,
+    "over20%": 20.625,
+    "over30%": 5.625,
+    "over40%": 0.625,
+    "over50%": 0.0,
+    "points": 85.6,
+    "OTpct": 3.75,
+    "scoreCorrelation": 0.17678360182180045,
+    "full": {
+      "meanExpectedMargin": 0.10014891870820444,
+      "meanActualMargin": -0.625,
+      "residualMean": -0.7251489187082044,
+      "residualVariance": 224.10567575484106,
+      "meanConditionalVariance": 206.19050563666025,
+      "residualMSEtoConditionalVariance": 1.0894367614820266,
+      "expectedMarginVariance": 73.99786576636575,
+      "actualMarginVariance": 238.646875,
+      "meanRatingDifference": -0.6533719739003708
+    },
+    "early": {
+      "meanExpectedMargin": 0.18042772464050288,
+      "meanActualMargin": -0.3125,
+      "residualMean": -0.49292772464050294,
+      "residualVariance": 166.4427861335861,
+      "meanConditionalVariance": 152.66933865409288,
+      "residualMSEtoConditionalVariance": 1.0918090387027215,
+      "expectedMarginVariance": 56.74025354761577,
+      "actualMarginVariance": 193.51484375,
+      "meanRatingDifference": -0.42149509720618905
+    },
+    "league": "wnba",
+    "label": "selection",
+    "world": 901,
+    "runs": {
+      "count": 51.48125,
+      "max": 11.11875,
+      "mean": 3.356775381025939,
+      "changes": 5.86875,
+      "ties": 4.39375
+    },
+    "quarterRuns": [
+      {
+        "count": 12.5625,
+        "max": 7.9375,
+        "mean": 3.567398512730604,
+        "changes": 2.14375,
+        "ties": 1.66875
+      },
+      {
+        "count": 13.45,
+        "max": 7.59375,
+        "mean": 3.3270881276873525,
+        "changes": 2.1375,
+        "ties": 1.75
+      },
+      {
+        "count": 12.7875,
+        "max": 8.13125,
+        "mean": 3.4607299148649773,
+        "changes": 2.125,
+        "ties": 1.825
+      },
+      {
+        "count": 13.58125,
+        "max": 7.98125,
+        "mean": 3.3351883769189934,
+        "changes": 2.425,
+        "ties": 1.96875
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 9948,
+        "FGA": 8927,
+        "expectedMake%": 52.99167858866113,
+        "actualMake%": 52.885002010454365,
+        "pointsPerDraw": 1.0577000402090873,
+        "expectedPointsPerDraw": 1.0598335717732226,
+        "off": 79.00769662959662,
+        "def": 69.35007381773369,
+        "fatigue": 0.20012830673497553
+      },
+      "mid": {
+        "draws": 4556,
+        "FGA": 3900,
+        "expectedMake%": 37.2351690997609,
+        "actualMake%": 37.09394205443372,
+        "pointsPerDraw": 0.7418788410886743,
+        "expectedPointsPerDraw": 0.744703381995218,
+        "off": 80.65666269598641,
+        "def": 71.48257318317758,
+        "fatigue": 0.19169051660448147
+      },
+      "three": {
+        "draws": 10331,
+        "FGA": 10228,
+        "expectedMake%": 30.812601886890505,
+        "actualMake%": 29.68734875617075,
+        "pointsPerDraw": 0.8906204626851224,
+        "expectedPointsPerDraw": 0.924378056606715,
+        "off": 80.19752077704567,
+        "def": 73.26587398611358,
+        "fatigue": 0.17630142188943684
+      },
+      "open": {
+        "draws": 6201,
+        "FGA": 5954,
+        "expectedMake%": 36.876924077463194,
+        "actualMake%": 35.75229801644896,
+        "pointsPerDraw": 0.9588776003870344,
+        "expectedPointsPerDraw": 0.991665345652345,
+        "off": 81.11589411502214,
+        "def": 73.44101819943602,
+        "fatigue": 0.1749986143658979
+      },
+      "contest": {
+        "draws": 5188,
+        "FGA": 4632,
+        "expectedMake%": 40.67800269386685,
+        "actualMake%": 40.11179645335389,
+        "pointsPerDraw": 0.8577486507324595,
+        "expectedPointsPerDraw": 0.8766781097639386,
+        "off": 79.50402226650297,
+        "def": 71.01818674944005,
+        "fatigue": 0.19575686328660213
+      },
+      "assisted": {
+        "draws": 16183,
+        "FGA": 14928,
+        "expectedMake%": 39.786610213085474,
+        "actualMake%": 39.22016931347711,
+        "pointsPerDraw": 0.9327689550763146,
+        "expectedPointsPerDraw": 0.9494182229881969,
+        "off": 79.32413231519496,
+        "def": 71.49334870792208,
+        "fatigue": 0.1905712816803908
+      },
+      "selfCreated": {
+        "draws": 1731,
+        "FGA": 1707,
+        "expectedMake%": 27.70646422807102,
+        "actualMake%": 26.51646447140381,
+        "pointsPerDraw": 0.7954939341421143,
+        "expectedPointsPerDraw": 0.8311939268421304,
+        "off": 80.76262256697231,
+        "def": 73.6026559501072,
+        "fatigue": 0.1706300570221939
+      },
+      "transition": {
+        "draws": 12322,
+        "FGA": 11396,
+        "expectedMake%": 39.04171295891879,
+        "actualMake%": 38.63009251744847,
+        "pointsPerDraw": 0.9319104041551696,
+        "expectedPointsPerDraw": 0.9430499217463958,
+        "off": 80.17299069288514,
+        "def": 71.85000459567908,
+        "fatigue": 0.18866512051682022
+      },
+      "late": {
+        "draws": 246,
+        "FGA": 227,
+        "expectedMake%": 42.84197681510899,
+        "actualMake%": 42.27642276422765,
+        "pointsPerDraw": 0.9349593495934959,
+        "expectedPointsPerDraw": 0.942325954891496,
+        "off": 81.17767663342306,
+        "def": 72.11341464689193,
+        "fatigue": 0.20626142856860813
+      },
+      "secondChance": {
+        "draws": 2741,
+        "FGA": 2741,
+        "expectedMake%": 54.71385957266993,
+        "actualMake%": 54.797519153593576,
+        "pointsPerDraw": 1.1185698650127691,
+        "expectedPointsPerDraw": 1.114574637981455,
+        "off": 77.02341525898687,
+        "def": 67.31732337152128,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 5485,
+        "FGA": 0,
+        "expectedMake%": 78.52430665451232,
+        "actualMake%": 78.1950774840474,
+        "pointsPerDraw": 0.781950774840474,
+        "expectedPointsPerDraw": 0.7852430665451232,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.025644971021182746
+  },
+  "wnba-three-901": {
+    "n": 160,
+    "meanAbs": 11.1125,
+    "medianAbs": 10.0,
+    "signedSD": 13.478912929090388,
+    "absSD": 7.712803883802571,
+    "within5%": 23.75,
+    "within10%": 56.25,
+    "over20%": 11.25,
+    "over30%": 3.125,
+    "over40%": 1.25,
+    "over50%": 0.0,
+    "points": 88.075,
+    "OTpct": 2.5,
+    "scoreCorrelation": 0.17677680219848252,
+    "full": {
+      "meanExpectedMargin": -1.975442619762233,
+      "meanActualMargin": -1.1375,
+      "residualMean": 0.8379426197622329,
+      "residualVariance": 206.4257881226985,
+      "meanConditionalVariance": 199.07234906248746,
+      "residualMSEtoConditionalVariance": 1.0404656243429191,
+      "expectedMarginVariance": 81.55505788615861,
+      "actualMarginVariance": 181.68109375,
+      "meanRatingDifference": -1.4278976814913924
+    },
+    "early": {
+      "meanExpectedMargin": -1.0348276582499882,
+      "meanActualMargin": 0.2625,
+      "residualMean": 1.297327658249988,
+      "residualVariance": 171.76639575203143,
+      "meanConditionalVariance": 147.26791216559565,
+      "residualMSEtoConditionalVariance": 1.1777817194139093,
+      "expectedMarginVariance": 58.81264418396172,
+      "actualMarginVariance": 148.05609375,
+      "meanRatingDifference": 0.33949596813624866
+    },
+    "league": "wnba",
+    "label": "three",
+    "world": 901,
+    "runs": {
+      "count": 54.40625,
+      "max": 10.3125,
+      "mean": 3.262308463635766,
+      "changes": 5.28125,
+      "ties": 4.23125
+    },
+    "quarterRuns": [
+      {
+        "count": 13.525,
+        "max": 7.88125,
+        "mean": 3.334146328390149,
+        "changes": 1.95,
+        "ties": 1.69375
+      },
+      {
+        "count": 13.9625,
+        "max": 7.45,
+        "mean": 3.2497854838015443,
+        "changes": 2.16875,
+        "ties": 2.04375
+      },
+      {
+        "count": 13.55,
+        "max": 7.48125,
+        "mean": 3.2619232777619884,
+        "changes": 2.29375,
+        "ties": 2.00625
+      },
+      {
+        "count": 14.36875,
+        "max": 7.6625,
+        "mean": 3.2796840914529133,
+        "changes": 2.45625,
+        "ties": 2.0125
+      }
+    ],
+    "shots": {
+      "inside": {
+        "draws": 9224,
+        "FGA": 8233,
+        "expectedMake%": 53.199879964382234,
+        "actualMake%": 53.32827406764961,
+        "pointsPerDraw": 1.0665654813529921,
+        "expectedPointsPerDraw": 1.0639975992876447,
+        "off": 79.52053594558608,
+        "def": 69.14765233244562,
+        "fatigue": 0.1976598356344814
+      },
+      "mid": {
+        "draws": 6593,
+        "FGA": 5634,
+        "expectedMake%": 37.72479240045632,
+        "actualMake%": 38.116183831336265,
+        "pointsPerDraw": 0.7623236766267253,
+        "expectedPointsPerDraw": 0.7544958480091264,
+        "off": 80.47664920872893,
+        "def": 71.22919308621648,
+        "fatigue": 0.19169467177661273
+      },
+      "three": {
+        "draws": 8785,
+        "FGA": 8684,
+        "expectedMake%": 32.52322384693462,
+        "actualMake%": 31.678998292544108,
+        "pointsPerDraw": 0.9503699487763233,
+        "expectedPointsPerDraw": 0.9756967154080384,
+        "off": 86.42906154284233,
+        "def": 72.82277468403699,
+        "fatigue": 0.17369463438015476
+      },
+      "open": {
+        "draws": 6174,
+        "FGA": 5929,
+        "expectedMake%": 38.098170395606665,
+        "actualMake%": 37.60932944606414,
+        "pointsPerDraw": 1.004697116942015,
+        "expectedPointsPerDraw": 1.02265208579476,
+        "off": 86.09968049507107,
+        "def": 73.29176199791225,
+        "fatigue": 0.17314570867084877
+      },
+      "contest": {
+        "draws": 5069,
+        "FGA": 4417,
+        "expectedMake%": 41.04175892464262,
+        "actualMake%": 41.7242059577826,
+        "pointsPerDraw": 0.8901163937660288,
+        "expectedPointsPerDraw": 0.8726959866645269,
+        "off": 81.02754025691162,
+        "def": 70.94230021324341,
+        "fatigue": 0.19229866206672525
+      },
+      "assisted": {
+        "draws": 16208,
+        "FGA": 14730,
+        "expectedMake%": 40.522318482195054,
+        "actualMake%": 40.30108588351432,
+        "pointsPerDraw": 0.9407699901283317,
+        "expectedPointsPerDraw": 0.9503668843147185,
+        "off": 82.09618157389079,
+        "def": 71.17507782754105,
+        "fatigue": 0.18723997413280802
+      },
+      "selfCreated": {
+        "draws": 1200,
+        "FGA": 1185,
+        "expectedMake%": 29.02094093621117,
+        "actualMake%": 30.916666666666664,
+        "pointsPerDraw": 0.9275,
+        "expectedPointsPerDraw": 0.870628228086335,
+        "off": 85.27461280732027,
+        "def": 72.70496256154371,
+        "fatigue": 0.1786914891211377
+      },
+      "transition": {
+        "draws": 12014,
+        "FGA": 10952,
+        "expectedMake%": 39.9031595829407,
+        "actualMake%": 40.03662393873814,
+        "pointsPerDraw": 0.9465623439320793,
+        "expectedPointsPerDraw": 0.9457690294707254,
+        "off": 83.02714677993369,
+        "def": 71.22468627972665,
+        "fatigue": 0.18943083526885862
+      },
+      "late": {
+        "draws": 203,
+        "FGA": 181,
+        "expectedMake%": 42.47859077781708,
+        "actualMake%": 41.37931034482759,
+        "pointsPerDraw": 0.8916256157635468,
+        "expectedPointsPerDraw": 0.9323768158701577,
+        "off": 82.29986747623192,
+        "def": 72.08537868850904,
+        "fatigue": 0.19809285091825288
+      },
+      "secondChance": {
+        "draws": 2647,
+        "FGA": 2647,
+        "expectedMake%": 55.6053923954355,
+        "actualMake%": 55.6101246694371,
+        "pointsPerDraw": 1.1261805817907065,
+        "expectedPointsPerDraw": 1.1288833972692398,
+        "off": 78.03552092407978,
+        "def": 66.54122174600502,
+        "fatigue": null
+      },
+      "freeThrow": {
+        "draws": 6251,
+        "FGA": 0,
+        "expectedMake%": 78.73354151335788,
+        "actualMake%": 79.52327627579588,
+        "pointsPerDraw": 0.7952327627579587,
+        "expectedPointsPerDraw": 0.7873354151335787,
+        "off": null,
+        "def": null,
+        "fatigue": null
+      }
+    },
+    "primaryClamp%": 0.0
+  }
+}

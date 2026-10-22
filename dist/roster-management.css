@@ -1,0 +1,22 @@
+.roster-heading{flex-wrap:wrap}.roster-brand{display:flex;align-items:center;gap:16px}.roster-brand .franchise-logo{width:64px;height:64px;flex-shrink:0;margin:0}.roster-switch{display:grid;gap:7px;font-size:14px;max-width:100%}.roster-switch select{min-width:220px}.roster-actions{max-width:280px;min-width:230px;gap:6px}.roster-actions button{font-size:13px;padding:9px 11px}.morale-badge{color:#376e59!important;background:#376e5912!important;border:1px solid #376e5940!important;padding:6px 10px!important}.morale-badge small{display:block;font-size:12px}.morale-badge.morale-low{color:#a14d3b!important}.morale-heading{display:flex;align-items:center;gap:15px}.morale-reasons{padding-left:20px;font-size:14px;line-height:1.7;color:var(--pp-muted)}.pp-rating-bars>div{grid-template-columns:90px 1fr 30px}.league-dark .morale-badge{color:#a8cfb5!important}.roster-panel .scroll{max-width:100%}@media(max-width:600px){.roster-heading{align-items:stretch}.roster-switch{width:100%}.roster-brand h2{font-size:24px}.roster-panel td,.roster-panel th{padding:12px}.roster-panel td:first-child{min-width:150px}}
+
+.roster-team-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:16px 22px;border-bottom:1px solid var(--gm-line)}.roster-team-summary>div{min-width:0;border-left:2px solid var(--gm-line);padding-left:12px}.roster-team-summary>div:first-child{border-color:#fa782f}.roster-team-summary span{display:block;font-size:11px;letter-spacing:.7px;text-transform:uppercase;color:var(--gm-muted);line-height:1.4}.roster-team-summary strong{display:block;font:700 29px 'Barlow Condensed',sans-serif;margin-top:5px}.roster-team-summary .rating-value{font:inherit}@media(max-width:700px){.roster-team-summary{grid-template-columns:repeat(2,minmax(0,1fr));padding:14px;gap:16px}}
+
+.roster-panel .namebutton .roster-player-meta{display:flex;flex-wrap:wrap;align-items:center;gap:5px 8px;margin-top:6px;font-size:.875rem;line-height:1.4;white-space:normal}.roster-archetype{display:inline-block;border:1px solid var(--gm-line,var(--line));border-radius:4px;padding:2px 6px;color:var(--gm-ink,#edf0f4);font-weight:500;white-space:normal}
+
+/* Neon morale faces: use shape as well as color to communicate mood. */
+.roster-panel .morale-face-badge{--morale-neon:#59ffa0;display:inline-flex;align-items:center;justify-content:center;gap:8px;color:var(--gm-ink)!important;background:var(--gm-paper)!important;border-color:var(--gm-line)!important;min-height:48px}
+.roster-panel .morale-face-badge.morale-neutral{--morale-neon:#ffe16b}
+.roster-panel .morale-face-badge.morale-sad{--morale-neon:#ff718c}
+.roster-panel .morale-face-icon{width:30px;height:30px;flex:none;color:var(--morale-neon);filter:drop-shadow(0 0 3px var(--morale-neon))}
+.roster-panel .morale-face-badge small{color:var(--gm-muted)}
+.league-light .roster-panel .morale-face-badge{--morale-neon:#087d42}
+.league-light .roster-panel .morale-neutral{--morale-neon:#896000}
+.league-light .roster-panel .morale-sad{--morale-neon:#c42f51}
+.league-light .roster-panel .morale-face-icon{filter:drop-shadow(0 0 2px color-mix(in srgb,var(--morale-neon) 35%,transparent))}
+
+/* Injury status uses text as well as red; works with either global theme. */
+.injured-player{background:rgba(220,53,69,.09)!important;border-left:3px solid #c83349}
+.injured-player .namebutton,.injured-player .roster-player-meta>span:first-child,.injured-player .rotation-player-name>small,.injury-status{color:#b62239!important}
+.league-dark .injured-player .namebutton,.league-dark .injured-player .roster-player-meta>span:first-child,.league-dark .injured-player .rotation-player-name>small,.league-dark .injury-status{color:#ff8595!important}
+.injury-rotation-note{line-height:1.6}.injury-rotation-note button{margin:8px}

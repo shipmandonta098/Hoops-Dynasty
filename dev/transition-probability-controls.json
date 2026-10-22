@@ -1,0 +1,45 @@
+{
+  "scope": "Same 75-rated cloned shooter/defender, identical drive action and build, 50% block tendency, default sliders, neutral home court/context. No full-game simulation.",
+  "results": [
+    {
+      "contest": false,
+      "variant": "Driving Layup",
+      "base": 0.625,
+      "context": 0.64,
+      "probability": 0.64,
+      "blockRisk": 0.0475,
+      "expectedNonFoulFG": 0.6096,
+      "adjustment": 0
+    },
+    {
+      "contest": false,
+      "variant": "Running Layup",
+      "base": 0.625,
+      "context": 0.6950000000000001,
+      "probability": 0.6950000000000001,
+      "blockRisk": 0.02375,
+      "expectedNonFoulFG": 0.67849375,
+      "adjustment": 0.055
+    },
+    {
+      "contest": true,
+      "variant": "Driving Layup",
+      "base": 0.625,
+      "context": 0.61,
+      "probability": 0.61,
+      "blockRisk": 0.0475,
+      "expectedNonFoulFG": 0.581025,
+      "adjustment": 0
+    },
+    {
+      "contest": true,
+      "variant": "Running Layup",
+      "base": 0.625,
+      "context": 0.665,
+      "probability": 0.665,
+      "blockRisk": 0.02375,
+      "expectedNonFoulFG": 0.64920625,
+      "adjustment": 0.055
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+const {spawn}=require('child_process'),fs=require('fs');
+const jobs=['wnba'].flatMap(league=>Array.from({length:10},(_,i)=>[league,101+i]));let failed=0;
+async function worker(){while(jobs.length){const [league,seed]=jobs.shift(),file=`dev/balance-audit/phase2-${league}-${seed}.json`;if(fs.existsSync(file))continue;await new Promise(resolve=>{const p=spawn(process.execPath,['dev/audit-competitiveness.cjs',league,''+seed,'phase2'],{stdio:['ignore','pipe','pipe']});p.stdout.on('data',s=>process.stdout.write(s));p.stderr.on('data',s=>process.stderr.write(s));p.on('error',()=>{failed++});p.on('close',(code,signal)=>{if(code||signal||!fs.existsSync(file)){failed++;console.error('FAILED',league,seed,code,signal)}resolve()})})}}
+Promise.all(Array.from({length:2},worker)).then(()=>{console.log('COMPLETE failures',failed);process.exitCode=failed?1:0});

@@ -1,0 +1,59 @@
+{
+  "fixture": {
+    "creationSeed": 61005,
+    "games": 150,
+    "seeds": "100000–100149",
+    "teams": 30,
+    "playersPerTeam": 15,
+    "preseasonReset": true
+  },
+  "eligibility": "transitionAdvantage && shotClock >= 14",
+  "fullGameAndStateParity": 150,
+  "retainedCandidateTotals": "EXACT MATCH",
+  "running": 628,
+  "event": 628,
+  "tempo": 0,
+  "pnr": 0,
+  "below14": 0,
+  "runningFGA": 586,
+  "runningMakes": 394,
+  "runningFG": 0.6723549488054608,
+  "totals": {
+    "pts": 36854,
+    "poss": 153570,
+    "fga": 28559,
+    "fgm": 14045,
+    "tpa": 10703,
+    "tpm": 4099,
+    "fta": 6079,
+    "ftm": 4665,
+    "tov": 3920,
+    "orb": 3783,
+    "pf": 4070,
+    "blk": 935
+  },
+  "league": {
+    "PPG": 122.84666666666666,
+    "pace": 102.38,
+    "ORtg": 119.99088363612684,
+    "twoP": 0.5570116487455197,
+    "threeP": 0.3829767354947211,
+    "FGA": 95.19666666666667,
+    "TOV": 13.066666666666666,
+    "PF": 13.566666666666666,
+    "OREB": 12.61,
+    "BLK": 3.1166666666666667
+  },
+  "controls": {
+    "unchangedOtherShotCases": 32,
+    "runningAccuracy": 0.055,
+    "runningBlock": 0.5,
+    "productionUnmodified": false,
+    "productionChange": "Only approved Running eligibility clock gate"
+  },
+  "regressions": {
+    "possession": "PASS",
+    "headless": "PASS",
+    "simulationRules": "PASS"
+  }
+}

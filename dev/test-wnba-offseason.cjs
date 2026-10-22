@@ -1,0 +1,6 @@
+const assert=require('node:assert/strict'),{loadLeague}=require('./load-league.cjs');
+(async()=>{for(const y of [1997,2008,2014,2020,2025,2026]){const l=loadLeague({seed:31,strictDOM:false});l.context.startYear=y;l.context.assert=assert;
+l.run(`const d=makeDraft();d.gmName='WNBA Lifecycle';const plan=historicalPlan('wnba',startYear,setupLeagueRules(d),d.cap,d.teams);d.teams=d.teams.slice(0,4);Object.assign(d,{year:startYear,leagueGender:'female',cap:plan.cap,leagueSettings:{...plan.rules,playoffFormat:'top4',splitPlayoffs:false,firstRoundByes:0},meetings:2});state=buildSetupCareer(d);simulationExecution.mode='headless';simulationExecution.autopilot=true;state.champion=0;state.day=state.schedule.length;`);
+await l.run('headlessOffseason({boundary:async()=>{}})');
+l.run(`for(const t of state.teams){assert.ok(t.roster.length>=wnbaRules(state.year+1).rosterMin);assert.equal(wnbaValidateTransaction(t,{year:state.year+1}),'');}const old=state.year;newSeason();assert.equal(state.year,old+1);for(const t of state.teams)for(const p of t.roster){assert.ok(p.wnbaContract);const a=wnbaAnnual(p,state.year);assert.ok(a);assert.equal(wnbaDollars(p.salary),a.base);}validateCareerData(state);`);
+console.log('PASS real lottery/draft, AI market to legal full rosters, newSeason and save validation: '+y+' → '+(y+1));}})().catch(e=>{console.error(e);process.exitCode=1});

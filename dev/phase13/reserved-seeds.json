@@ -1,0 +1,32 @@
+{
+  "reservedAtUTC": "2026-10-21T21:37:15.498868+00:00",
+  "seeds": {
+    "nba": [
+      3101300001,
+      3101300002,
+      3101300003,
+      3101300004,
+      3101300005,
+      3101300006,
+      3101300007,
+      3101300008,
+      3101300009,
+      3101300010
+    ],
+    "wnba": [
+      3101300101,
+      3101300102,
+      3101300103,
+      3101300104,
+      3101300105,
+      3101300106,
+      3101300107,
+      3101300108,
+      3101300109,
+      3101300110
+    ]
+  },
+  "priorAuditFilesChecked": 1605,
+  "priorMatches": [],
+  "scope": "All retained dev JSON/gzip source, logs and scripts outside this phase; no claim about discarded unrecorded runs. Seeds are uint32 and never used by calibration or smoke tests."
+}

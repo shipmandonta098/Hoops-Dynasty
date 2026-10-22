@@ -1,0 +1,15 @@
+{
+  "baselineCommit": "9d057ddd3af5f6dfb24de35013db440dc34becae",
+  "variant": "446d72a9fe2e8a3a210b4be35a30ea4c45ae45d221d8663084027f0f9e1481c2",
+  "modernOnly": "2023+; historical era rates otherwise unchanged",
+  "fixedParameters": {
+    "twoContactNBA": 1.8,
+    "twoContactWNBA": 1.6,
+    "threeContact": 0.12,
+    "completionNBA": 0.45,
+    "completionWNBA": 0.35
+  },
+  "originalTransformFile": "dev/phase3-transform.cjs",
+  "testedAttributesSHA256": "60a6687713ec1ec580f1001c7ffec8163d20d3667b47fca23e1c981f16e3944c",
+  "reproductionWrapper": "dev/phase3-candidate.cjs"
+}

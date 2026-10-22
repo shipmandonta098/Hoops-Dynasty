@@ -1,0 +1,87 @@
+{
+  "parent": "96f5b681a7059b345c3aa0b6abf813156d272535",
+  "fixture": {
+    "creationSeed": 61005,
+    "gameSeeds": "100000–100149",
+    "teams": 30,
+    "rosterSize": 15,
+    "circleRounds": 10,
+    "reset": "full preseason before each normal-mode game"
+  },
+  "recommendation": "ADOPT",
+  "metrics": {
+    "PPG": 123.93333333333334,
+    "pace": 102.64666666666666,
+    "ORtg": 120.73780606611678,
+    "two": 55.65938623168372,
+    "three": 38.893633172027705,
+    "TOV": 12.926666666666666,
+    "shotClockTOV": 0.12666666666666668,
+    "OREB": 12.43,
+    "blocks": 3.5033333333333334,
+    "fouls": 13.576666666666666,
+    "secondChancePoints": 14.826666666666666,
+    "putbacks": 8.86,
+    "putbackFG": 61.55003762227238,
+    "RunningFG": 66.94078947368422
+  },
+  "totals": {
+    "pts": 37180,
+    "poss": 153970,
+    "defPoss": 153970,
+    "fga": 28624,
+    "fgm": 14165,
+    "tpa": 10539,
+    "tpm": 4099,
+    "fta": 6124,
+    "ftm": 4751,
+    "tov": 3878,
+    "orb": 3729,
+    "drb": 11269,
+    "pf": 4073,
+    "blk": 1051
+  },
+  "running": {
+    "evaluations": 643,
+    "FGA": 608,
+    "makes": 407,
+    "below14": 0,
+    "tempoOnly": 0,
+    "PNR": 0
+  },
+  "putback": {
+    "all": {
+      "evaluations": 2658,
+      "FGA": 2658,
+      "makes": 1636,
+      "FG": 61.55003762227238,
+      "blocks": 163
+    },
+    "layups": {
+      "evaluations": 1608,
+      "FGA": 1608,
+      "makes": 978,
+      "FG": 60.820895522388064,
+      "blocks": 106
+    },
+    "dunks": {
+      "evaluations": 1050,
+      "FGA": 1050,
+      "makes": 658,
+      "FG": 62.66666666666667,
+      "blocks": 57
+    }
+  },
+  "clockTurnovers": 38,
+  "exhaustions": 2,
+  "zeroShots": 0,
+  "parity": 150,
+  "unchangedGames": 148,
+  "changedSeeds": [
+    100063,
+    100069
+  ],
+  "differentScheduledSlotTraces": 109,
+  "differentScoringSlots": 70,
+  "sourceSHA256": "823bbbdd003804d5f8b77b857a9370e8ab7930d6b71f79c158a771e3762fb3c5"
+}

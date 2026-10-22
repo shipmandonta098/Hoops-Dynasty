@@ -1,0 +1,101 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Phase 8 promotion and follow-up</title><style>body{background:#111820;color:#e7ebf0;font:15px/1.6 system-ui;margin:24px}main{max-width:1100px;margin:auto}a{color:#ffb66b}pre{white-space:pre-wrap;overflow-wrap:anywhere}</style><main><a href="phase9.txt" download>Download TXT</a> · <a href="phase9.zip" download>Download report ZIP</a><pre>Hoops Dynasty — Phase 8 promotion and follow-up audit
+21 October 2026
+Phase 8 is ACCEPTED by explicit user override of the earlier mirror gate. The original candidate attributes.js and tendencies.js are promoted byte-for-byte. Phase 7 late-game and rotation improvements remain. The earlier Phase 8 report records a historical rejection; it is no longer the deployment decision. The tied last-shot change below is an experiment only and is NOT in production.
+
+1. Five complete WNBA regular seasons
+Seeds 101–105, modern 2024 format, 12 fictional teams, 40 games per team: 240 games per season, 1,200 games total. Five independently generated universes, not a five-year longitudinal career. Production Phase 8, with no experimental tied-hold logic.
+Metric | Five-season result
+--- | ---
+Points/team | 83.48
+Mean winning margin | 11.22
+Within ten | 58.25%
+20+ margins | 15.83%
+30+ margins | 4.33%
+Overtime | 48/1200 (4.00%)
+
+Seed | Games | Points/team | Mean margin | 20+ | OT
+--- | --- | --- | --- | --- | ---
+101 | 240 | 82.56 | 12.13 | 18.33% | 9/240 (3.75%)
+102 | 240 | 84.15 | 10.72 | 14.17% | 13/240 (5.42%)
+103 | 240 | 84.54 | 10.49 | 14.17% | 7/240 (2.92%)
+104 | 240 | 83.01 | 10.95 | 17.08% | 13/240 (5.42%)
+105 | 240 | 83.12 | 11.79 | 15.42% | 6/240 (2.50%)
+
+Four matched seeds 101–104 are available from Phase 7; no fifth Phase 7 season is fabricated. Career outcomes can change subsequent simulation states, so these comparisons pair initial season seeds, not every subsequent random draw.
+Metric | Phase 7 / four seasons | Phase 8 / same four seeds
+--- | --- | ---
+points | 84.48 | 83.56
+meanMargin | 12.31 | 11.07
+within10 | 53.96 | 58.54
+blow20 | 18.44 | 15.94
+blow30 | 6.67 | 4.06
+OT | 32/960 (3.33%) | 42/960 (4.38%)
+
+
+2. NBA standings and talent expression
+Standings reconstructed from all 82 regular-season results for each team. Standard deviation is the population SD across 30 team win percentages, expressed in percentage points; each season is computed separately. Real data are the retained official NBA LeagueGameLog datasets for 2023–24 and 2024–25 (2,460 team-game rows each). Every team has 82 games, and each season sums to 1,230 wins.
+Season/seed | Win% SD (pp) | Worst wins | Best wins | 60+ teams | 25-or-fewer teams
+--- | --- | --- | --- | --- | ---
+2024-25 | 16.01 | 17 | 68 | 3 | 5
+2023-24 | 16.08 | 14 | 64 | 1 | 6
+101 | 13.85 | 24 | 73 | 1 | 3
+102 | 13.85 | 22 | 65 | 2 | 2
+103 | 13.72 | 22 | 62 | 2 | 4
+104 | 10.00 | 27 | 68 | 1 | 0
+105 | 13.69 | 20 | 65 | 2 | 3
+
+Simulation mean SD: 13.02 percentage points; seed range 10.00–13.85. The real references are 16.01 and 16.08 pp. The simulated standings are narrower, although a strong team can still reach 73 wins.
+Across the five universes, average 10th-percentile win% is 33.00%, versus 25.37% in 2024–25; average 90th-percentile win% is 65.63%, versus 64.51%. Thus compression is especially visible among the weaker teams. Each simulated team’s first observed pregame OVR strength correlates with final wins at 0.68–0.83 across seeds. Talent is expressed, but this does not validate its magnitude. The OVR metric is the existing simple strength estimate; standings alone cannot isolate roster-generation spread, injury/tanking behavior, schedule effects and gameplay sensitivity. These are associations, not causal estimates.
+Limited same-seed Phase 7 comparison: win% SD changed 15.61 → 13.85 pp in seed 101 and 14.13 → 13.85 pp in seed 102. Thus the narrower standings are not solely a comparison with real rosters, although two paired career seeds cannot establish the general effect and changed outcomes alter later career state.
+Sources: https://www.nba.com/standings?Season=2024-25 and https://www.nba.com/standings?Season=2023-24 ; underlying archived official endpoint: https://stats.nba.com/stats/leaguegamelog . Local provenance: dev/phase3/real-nba-2025.json and dev/phase4/real-nba-2023-24.json. Full per-team tables are included in standings.json.
+
+3. Naturally occurring ties with fewer than 24 seconds left
+Definition: one observation per game if a positive-duration tied-score interval intersects the final 24 seconds of regulation. A tie existing at 24 seconds and continuing below it counts; a score tying the game exactly at the regulation buzzer does not count in this cohort. Multiple ties in one game do not create duplicate observations. Outcomes are OT versus a winner decided in regulation. Regulation and overtime are not combined.
+Independent reset-game tests: 1,000 NBA and 400 WNBA varied-roster games per arm, world 603, matching starting states and seeds. These are NOT the five full-season samples. Changed decisions can consume RNG differently. Results are conditional on the generated fixtures, not estimates from real NBA/WNBA play-by-play.
+NBA
+Arm | All games | Tied-under-24 games | To OT | Decided in regulation | Overall OT
+--- | --- | --- | --- | --- | ---
+production | 1000 | 60 | 24/60 (40.00%) | 36/60 (60.00%) | 34/1000 (3.40%)
+hold | 1000 | 60 | 25/60 (41.67%) | 35/60 (58.33%) | 35/1000 (3.50%)
+
+production conditional OT Wilson 95% interval: [28.57, 52.63]%.
+hold conditional OT Wilson 95% interval: [30.06, 54.27]%.
+Paired outcome switches: {&#x27;regulationToOT&#x27;: 8, &#x27;OTToRegulation&#x27;: 7}.
+Same eligible game seeds across both arms: True. The intervals reflect binomial sampling within this fixture sample, not uncertainty across every possible roster distribution.
+WNBA
+Arm | All games | Tied-under-24 games | To OT | Decided in regulation | Overall OT
+--- | --- | --- | --- | --- | ---
+production | 400 | 30 | 13/30 (43.33%) | 17/30 (56.67%) | 14/400 (3.50%)
+hold | 400 | 30 | 13/30 (43.33%) | 17/30 (56.67%) | 14/400 (3.50%)
+
+production conditional OT Wilson 95% interval: [27.38, 60.8]%.
+hold conditional OT Wilson 95% interval: [27.38, 60.8]%.
+Paired outcome switches: {&#x27;regulationToOT&#x27;: 4, &#x27;OTToRegulation&#x27;: 4}.
+Same eligible game seeds across both arms: True. The intervals reflect binomial sampling within this fixture sample, not uncertainty across every possible roster distribution.
+
+4. Tied hold-for-last-shot experiment
+When tied, 4 &lt; remaining seconds &lt;=24, and the shot clock can cover all remaining game time, the test spends remaining−4 seconds setting up. It then uses the ordinary final-shot resolver. It does not hold without attempting a shot, force a miss, alter shooting accuracy or guarantee overtime. A shorter shot clock keeps existing behavior. Fouls, turnovers, rebounds and legal replies remain possible. The treatment also applies to qualifying overtime-period endings.
+Synthetic controlled starts: 100 seeds/configurations per row and arm, tied at 100–100 with 23, 15, 5 or zero regulation seconds remaining. These injected starting scores are not full-game records. Both arms include the same lower-three-point-ability variation. They are useful mechanism tests, not league-frequency estimates.
+NBA
+Start | Production OT | Hold OT | Production first shot seconds left | Hold first shot seconds left
+--- | --- | --- | --- | ---
+tie23 | 29/100 (29.00%) | 62/100 (62.00%) | 8.69 | 0.93
+tie15 | 71/100 (71.00%) | 62/100 (62.00%) | 3.19 | 0.93
+tie5 | 65/100 (65.00%) | 62/100 (62.00%) | 0.12 | 0.93
+I | 100/100 (100.00%) | 100/100 (100.00%) | None | None
+
+WNBA
+Start | Production OT | Hold OT | Production first shot seconds left | Hold first shot seconds left
+--- | --- | --- | --- | ---
+tie23 | 44/100 (44.00%) | 69/100 (69.00%) | 9.33 | 0.85
+tie15 | 72/100 (72.00%) | 69/100 (69.00%) | 3.85 | 0.85
+tie5 | 74/100 (74.00%) | 68/100 (68.00%) | 0.24 | 0.85
+I | 100/100 (100.00%) | 100/100 (100.00%) | None | None
+
+Interpretation: evaluate the natural-game conditional rates and their sample sizes, not only the synthetic 23-second case. Holding is a basketball decision with costs as well as benefits: it reduces the opponent’s reply time but may remove opportunities to rebound and retry. The experiment is kept separate from the explicitly requested Phase 8 promotion. No additional gameplay acceptance gate is imposed on Phase 8.
+
+5. Verification, preservation and files
+Passed: five complete WNBA regular-season schedules and scoring/box identities; 2,800 full-length reset games across production/hold arms with legal winners, score/box and minute identities; 1,600 synthetic ending cases with chronological events and correct OT initiation; loading a Phase 7 save preserves completed scores, boxes and summary events. The prior Phase 8 150-game historical-format validation remains applicable because the two promoted modules are identical to that tested candidate. No new schema, completed-result rewrite, player-rating change, city-photo change or UI redesign.
+Production modified: dist/attributes.js and dist/tendencies.js. Existing dist/late-game.js is unchanged; the hold experiment is only dev/phase9/hold-variant.cjs. Evidence/harnesses: dev/phase9/, dev/run-phase9-wnba.cjs, dev/phase9-ot-matches.cjs, dev/run-phase9-ot.cjs, dev/test-phase9-endings.cjs, dev/test-phase9-save.cjs, dev/phase9-standings.py, dev/phase9-analysis.py and dev/report-phase9.py. WNBA season results: dev/balance-audit/phase9-wnba-101..105.json. NBA standings reuse the five completed Phase 8 NBA seasons, seeds 101–105.
+Reproduce: node dev/run-phase9-wnba.cjs; node dev/run-phase9-ot.cjs; node dev/test-phase9-endings.cjs nba production; node dev/test-phase9-endings.cjs nba hold; node dev/test-phase9-endings.cjs wnba production; node dev/test-phase9-endings.cjs wnba hold; node dev/test-phase9-save.cjs; python dev/phase9-standings.py; python dev/phase9-analysis.py; python dev/report-phase9.py. Preserve archived outputs before intentionally rerunning. The hold source transform must remain audit-only unless separately promoted.
+</pre></main></html>

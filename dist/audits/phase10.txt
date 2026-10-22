@@ -1,0 +1,119 @@
+Hoops Dynasty — Phase 10: Paired roster/transition candidate and late-game tests
+21 October 2026
+
+Joint numerical gate: ACCEPTED. The paired candidate qualifies for production; late-game variants remain audit-only.
+
+1. Acceptance test
+Five independent complete NBA regular seasons, seeds 101–105, 30 teams × 82 games: 6,150 games per arm. Phase 8 is the retained baseline. This is not a five-year longitudinal career. Changed roster allocations and RNG consumption cause subsequent career states to diverge; seed pairing does not mean identical later random draws.
+Ranges declared before the acceptance results: mean margin 12.0–13.5; 20+ rate 18–24%; average across-season population SD of team season scoring margins 5.0–6.0 points. All three must pass together. These are practical tolerances around the requested reference, not confidence intervals or newly verified universal standards.
+Metric | Phase 8 | Paired candidate | Reference
+points | 110.697 | 111.121 | 113.83
+meanMargin | 12.998 | 13.152 | 12.75
+blow20 | 21.870 | 22.179 | 21.06%
+teamMarginSD | 4.955 | 5.748 | 5.46 (2023–24); 5.89 (2024–25)
+OT | 2.976 | 3.236 | 4.88%
+
+Seed | Mean margin | 20+ % | Team margin SD | Points/team | OT %
+101 | 14.058 | 25.122 | 7.062 | 110.988 | 2.276
+102 | 13.000 | 22.439 | 5.333 | 111.638 | 2.764
+103 | 13.447 | 22.764 | 6.003 | 111.378 | 3.821
+104 | 12.084 | 18.943 | 4.363 | 110.565 | 4.309
+105 | 13.173 | 21.626 | 5.978 | 111.036 | 3.008
+
+Approximate 95% t intervals for the mean across five independent seeds (df=4):
+points: 110.614–111.628
+meanMargin: 12.259–14.046
+blow20: 19.413–24.945
+teamMarginSD: 4.516–6.980
+OT: 2.218–4.254
+Only five universes underpin these intervals; they do not cover every roster distribution, season or parameter uncertainty. The same retained seed family is used for comparability, not a fresh out-of-sample validation set.
+
+2. Roster allocation
+The paired candidate widens initial fictional NBA team quality by about 15% through deterministic same-position player swaps. It preserves the entire league-wide player pool, IDs, names, attributes, salaries and positional counts. It does not inflate individual ratings or move players in existing saves. Applied only during new male-league fictional generation for 2020 onward. The target is preseason quality spread; season margin SD is measured afterward, never forced.
+The first pilot chose tiny swaps and failed to produce the intended spread. Its three completed seasons and interrupted runs are retained separately and excluded from acceptance. The corrected roster allocation passes identity/attribute preservation checks for five seeds. One to four swaps reach the target in those fixtures.
+
+3. Points-per-possession distribution and transition mechanism
+Real comparison: 134 of 136 retained official NBA 2024–25 PBP games pass score reconciliation; two score-correction files are excluded. This is an availability sample, not a complete season or guaranteed random sample. Offensive rebounds continue possessions; opposing offensive actions or defensive rebounds switch control; period ends close possession. Technical free throws are separate administrative points. Team rebounds, retained-ball violations and official possession conventions can still differ.
+Simulation comparison: 120 reset games per arm, world 604 and matching trial seeds. Full possessions include secondary shots and free throws. Simulation totals reconcile to final scores. Simulation technical points remain attached to their execution slot, so the PPP definitions are close but not identical.
+Points | Real reconstructed % | Phase 8 % | Paired candidate %
+0 | 50.071 | 49.408 | 48.596
+1 | 3.010 | 2.752 | 3.008
+2 | 31.526 | 32.768 | 34.380
+3 | 15.248 | 14.885 | 13.802
+4+ | 0.145 | 0.187 | 0.213
+Real: n=26876; mean=1.1242; variance=1.4257
+Phase 8: n=23581; mean=1.1369; variance=1.4155
+Candidate: n=23467; mean=1.1407; variance=1.3845
+There is no demonstrated excess in the marginal points-per-possession variance. This does not rule out excessive whole-game variance from conditional efficiency differences, roster effects or within-game dependence. No reduction in random shot variance was introduced.
+The confirmed modeling mismatch: every defensive rebound activated transition, and a second independent tempo draw could label a shot transition even after a settled possession. The candidate admits a transition opportunity probabilistically after rebounds (.43 base) and steals (.85 base), modified modestly by tempo and active-player speed; it removes that additional settled-possession transition draw for modern NBA. No accuracy multiplier, score adjustment, comeback boost or cap is added.
+NBA Synergy recorded 51,335 transition plays. Weighted published play-type frequency is 18.613%. Its implied all-play-type denominator is about 275,796, which is not the same as complete possessions (putbacks and coding differ). Dividing the count by 250,805.28 box-score-estimated possessions gives 20.468 per 100 estimated possessions. That denominator conversion is approximate, not an official transition-possession classification.
+production: transition opportunity used in 41.894% of sampled complete possessions; shot reached with transition flag in 47.547%.
+pair: transition opportunity used in 20.378% of sampled complete possessions; shot reached with transition flag in 16.951%.
+An opportunity flag is not a guarantee of an actual transition finish. Rate agreement alone does not establish causal attribution for blowouts. The final candidate combines roster and transition changes as requested; it does not isolate their full-season effects. Earlier .32-rebound calibration trials are excluded from the final gate.
+
+4. Outcome transition tables
+Phase 8 baseline: 6,150 NBA and 1,200 WNBA games. One observation per game per checkpoint. Non-tied rows follow the team trailing at that checkpoint. Tied rows follow the home team. OT wins/losses refer to the eventual winner; regulation and OT columns are disjoint. Scores include events at the checkpoint. Tables do not condition on who has possession, bonus or timeout inventory.
+
+NBA — 60 seconds left
+State | N | Regulation win | OT win | OT loss | Regulation loss
+Tied (home perspective) | 142 | 63 | 16 | 9 | 54
+Down 1 | 354 | 112 | 27 | 19 | 196
+Down 2 | 325 | 57 | 26 | 18 | 224
+Down 3 | 298 | 35 | 14 | 13 | 236
+Down 4 | 281 | 13 | 11 | 6 | 251
+Down 5 | 289 | 7 | 8 | 7 | 267
+Down 6 | 274 | 1 | 1 | 3 | 269
+Down 7–10 | 1060 | 1 | 1 | 4 | 1054
+Down 11+ | 3127 | 0 | 0 | 0 | 3127
+
+NBA — 30 seconds left
+State | N | Regulation win | OT win | OT loss | Regulation loss
+Tied (home perspective) | 154 | 47 | 21 | 23 | 63
+Down 1 | 356 | 95 | 21 | 26 | 214
+Down 2 | 358 | 33 | 31 | 21 | 273
+Down 3 | 292 | 19 | 15 | 12 | 246
+Down 4 | 267 | 3 | 2 | 3 | 259
+Down 5 | 269 | 1 | 3 | 5 | 260
+Down 6 | 303 | 0 | 0 | 0 | 303
+Down 7–10 | 1075 | 0 | 0 | 0 | 1075
+Down 11+ | 3076 | 0 | 0 | 0 | 3076
+Full NBA/WNBA tables are in outcome-tables.csv and outcome-tables.json.
+
+5. Trailing-team tests
+Eight injected NBA endings, 80 paired seeds per arm, five arms (3,200 final test cases). Synthetic starting score and clock; these are not full-game or league-frequency estimates. Half the seed configurations reduce three-point ability equally in both arms.
+Foul arm: extends the intentional-foul window to 55 seconds when down 4–6; permits another prompt intentional foul after a foul-to-give rather than immediately resuming a long setup. The existing bonus, player foul and FT mechanics resolve it.
+Quick-two arm: when down two within 30 seconds, weights inside opportunities ×1.3 and three-point opportunities ×.7; it does not force a two or change accuracy.
+Timeout arm: at eligible acquisition before advancing the ball, uses an available timeout and reduces setup to at most one second. At most two added advancement timeouts per team and the existing four-timeout budget. This is a timing approximation: the engine lacks explicit backcourt/frontcourt coordinates and a complete NBA mandatory-timeout inventory. It is not a fully verified advance-the-ball implementation and is NOT promoted.
+Combined arm tests these together. All late-game arms remain experimental; their results must not be represented as a full-season OT improvement.
+Case | N/arm | Baseline final wins / OT | Combined final wins / OT
+down2_30 | 80 | 20 / 20 | 22 / 17
+down2_10 | 80 | 14 / 17 | 17 / 22
+down4_60_defend | 80 | 3 / 3 | 3 / 5
+down4_30_defend | 80 | 0 / 0 | 1 / 1
+down6_60_defend | 80 | 0 / 0 | 0 / 0
+down6_30_defend | 80 | 0 / 0 | 0 / 0
+down2_15_advance | 80 | 16 / 26 | 18 / 26
+down3_15_advance | 80 | 12 / 17 | 12 / 15
+Final wins include OT wins, so wins and OT are not disjoint in this synthetic-test summary. Separate foul, quick-two and timeout arms are retained in results.json. Small observed differences at n=80 per condition are inconclusive; zero successes is not proof of impossibility.
+Bonus-state sensitivity: four additional scenarios already in the team-foul penalty, 80 seeds × two arms = 640 cases.
+down4_60_bonus: baseline wins/OT 4/4; combined 4/5; n=80 per arm.
+down4_30_bonus: baseline wins/OT 0/0; combined 0/0; n=80 per arm.
+down6_60_bonus: baseline wins/OT 0/1; combined 0/0; n=80 per arm.
+down6_30_bonus: baseline wins/OT 0/0; combined 0/0; n=80 per arm.
+
+6. Verification and limits
+Passed: complete 82-game schedules in all five acceptance seasons; box/scoring identities; 50 format smoke games across NBA 1997/2025 and WNBA 1997/2006/2024, with chronological scoring, nonnegative stats, legal final winners and correct minute totals; completed Phase 8 scores, boxes and summary records preserved on save load. These are format/regression checks, not historical statistical calibration.
+No WNBA or pre-2020 gameplay calibration is accepted from this NBA experiment. No existing careers are reallocated; no completed results, custom photographs, player ratings, contracts, morale, GM employment or UI layouts are intentionally modified.
+Production files changed: dist/game.js (initial fictional allocation), dist/attributes.js (transition opportunities), dist/index.html (cache versions). Ten identical-state full-game checks confirm exact score, box-score and summary equality between the promoted implementation and tested candidate. No late-game experiment was promoted.
+Production decision follows the three joint gates above. Scoring distribution and OT limitations are reported separately. Even an accepted candidate does not prove all competitiveness issues solved.
+
+7. Files and reproducibility
+Acceptance variant: dev/phase10/candidate-pair.cjs plus dev/phase10/roster.js. Candidate source is applied by the existing loader, not a second simulation engine. Main harness: dev/run-phase10-pair.cjs and existing dev/audit-phase8-season.cjs. Acceptance results: dev/balance-audit/phase10pair-nba-101..105.json.
+Diagnostics: dev/phase10-matches.cjs; dev/phase10/instrument.cjs; dev/phase10/reference.py; dev/phase10/tables.py; dev/phase10/analyze.py; dev/phase10/report.py; dev/test-phase10-endings.cjs; dev/test-phase10-bonus.cjs; dev/test-phase10-rosters.cjs; dev/phase10-historical.cjs; dev/test-phase10-save.cjs.
+Reproduce from the retained Phase 8 source commit 8b07bb778ca08f020296d045eb0165605e4f143b. Preserve existing outputs before rerunning. Run node dev/run-phase10-pair.cjs, python dev/phase10/tables.py, python dev/phase10/analyze.py, then python dev/phase10/report.py. Candidate transforms expect the Phase 8 anchors; after any promotion, use the retained baseline commit for exact reproduction.
+
+Sources
+Official NBA transition play types: https://www.nba.com/stats/teams/transition?SeasonYear=2024-25
+Downloaded official stats.nba.com/stats/synergyplaytypes response retained as dev/phase10/real-transition.json (parameters included).
+Official NBA LeagueGameLog references retained in dev/phase3/real-nba-2025.json and dev/phase4/real-nba-2023-24.json. PBP uses official stats.nba.com/stats/playbyplayv3, game IDs listed in real-possession-summary.json.
+NBA timeout/advancement rules: https://official.nba.com/rule-no-5-scoring-and-timing/

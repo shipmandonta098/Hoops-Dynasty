@@ -1,0 +1,54 @@
+[
+  {
+    "gameAtmosphere": {
+      "attendance": 3500,
+      "capacity": 3500,
+      "fillRate": 1.0,
+      "fanEnergy": 3,
+      "ticketPrice": 42,
+      "revenue": 147000,
+      "seasonAverageAttendance": 3120,
+      "factors": {
+        "teamPerformance": 0.12,
+        "opponentQuality": 0.2,
+        "fanSentiment": -0.05,
+        "ticketPriceEffect": -0.02
+      },
+      "recentHomeAttendance": [
+        2740,
+        3500
+      ],
+      "fanSentimentScore": -10,
+      "context": {
+        "homeWinningStreak": 4,
+        "visitingStar": "Jordan Ellis"
+      }
+    }
+  },
+  {
+    "gameAtmosphere": {
+      "attendance": 1645,
+      "capacity": 3500,
+      "fillRate": 0.47,
+      "fanEnergy": 1,
+      "ticketPrice": 60,
+      "revenue": 98700,
+      "seasonAverageAttendance": 2400,
+      "factors": {
+        "teamPerformance": -0.08,
+        "opponentQuality": 0,
+        "fanSentiment": -0.05,
+        "ticketPriceEffect": -0.15
+      },
+      "recentHomeAttendance": [
+        3155,
+        1645
+      ],
+      "fanSentimentScore": -10,
+      "context": {
+        "homeWinningStreak": 0,
+        "visitingStar": null
+      }
+    }
+  }
+]

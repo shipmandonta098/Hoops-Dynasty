@@ -1,0 +1,12 @@
+/* The shared base reuses .po-hero typography/spacing. Existing Draft and
+   championship variant rules retain their original layout and decorations. */
+.page-header{background-image:var(--page-header-overlay),var(--page-header-image);background-position:var(--page-header-position);background-size:cover;background-repeat:no-repeat;max-width:100%;min-width:0;--po-gold:#c4a15f}
+.page-header-copy{min-width:0}
+.page-header--standard,.page-header--minimal{margin-bottom:20px;background-color:#0c151e;border-bottom:2px solid #c4a15f;container-type:inline-size}
+.page-header--standard .page-header-copy,.page-header--minimal .page-header-copy{width:100%;max-width:760px}
+.page-header--standard .eyebrow,.page-header--minimal .eyebrow{color:#d7c9a9;font:500 14px/1.5 'Barlow Condensed',sans-serif;letter-spacing:2.5px;overflow-wrap:anywhere}
+.page-header--standard h1,.page-header--minimal h1{font-size:clamp(40px,7cqi,76px);overflow-wrap:anywhere;text-wrap:balance;text-shadow:0 2px 12px #0006}
+.page-header--standard p,.page-header--minimal p{color:#e8e7e2;max-width:620px;margin-bottom:0;text-wrap:balance;overflow-wrap:anywhere}
+.page-header--minimal{min-height:145px;padding:24px 32px;border-bottom-color:#7f7359}
+.page-header--minimal h1{font-size:clamp(36px,6cqi,56px);margin:8px 0}
+@media(max-width:650px){.page-header{background-position:var(--page-header-mobile-position)}.page-header--standard,.page-header--minimal{padding:22px 18px;margin-bottom:16px;min-height:180px}.page-header--minimal{min-height:135px}.page-header--standard h1,.page-header--minimal h1{font-size:clamp(34px,10cqi,58px);letter-spacing:-.5px}.page-header--standard .eyebrow,.page-header--minimal .eyebrow{font-size:14px;letter-spacing:1.6px}.page-header--standard p,.page-header--minimal p{font-size:14px;letter-spacing:1.5px}.page-header--draft .page-header-copy{overflow-wrap:anywhere}.page-header--draft .eyebrow{overflow-wrap:anywhere}}

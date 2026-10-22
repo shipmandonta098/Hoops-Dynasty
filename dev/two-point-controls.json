@@ -1,0 +1,673 @@
+{
+  "scope": "Actual engine shot construction and extracted primary probability block, neutral context: no fatigue, sag, home court, rivalry, morale clutch, IQ differential, coaching advantage or sliders. Block tendency fixed at 50%. Non-foul attempts. Neutral is a basic uncontested driving layup; engine has no third/neutral contest state.",
+  "equal": [
+    {
+      "rating": 60,
+      "scenario": "neutral",
+      "base": 0.625,
+      "context": 0.64,
+      "probability": 0.64,
+      "blockRisk": 0.043,
+      "expectedNonFoulFG": 0.61248,
+      "adjustment": 0,
+      "variant": "Driving Layup"
+    },
+    {
+      "rating": 60,
+      "scenario": "contested",
+      "base": 0.625,
+      "context": 0.61,
+      "probability": 0.61,
+      "blockRisk": 0.043,
+      "expectedNonFoulFG": 0.58377,
+      "adjustment": 0,
+      "variant": "Driving Layup"
+    },
+    {
+      "rating": 60,
+      "scenario": "uncontested",
+      "base": 0.625,
+      "context": 0.64,
+      "probability": 0.64,
+      "blockRisk": 0.043,
+      "expectedNonFoulFG": 0.61248,
+      "adjustment": 0,
+      "variant": "Driving Layup"
+    },
+    {
+      "rating": 60,
+      "scenario": "driving",
+      "base": 0.625,
+      "context": 0.64,
+      "probability": 0.64,
+      "blockRisk": 0.043,
+      "expectedNonFoulFG": 0.61248,
+      "adjustment": 0,
+      "variant": "Driving Layup"
+    },
+    {
+      "rating": 60,
+      "scenario": "cutting",
+      "base": 0.625,
+      "context": 0.66,
+      "probability": 0.66,
+      "blockRisk": 0.0344,
+      "expectedNonFoulFG": 0.6372960000000001,
+      "adjustment": 0.02,
+      "variant": "Cutting Layup"
+    },
+    {
+      "rating": 60,
+      "scenario": "running",
+      "base": 0.625,
+      "context": 0.6950000000000001,
+      "probability": 0.6950000000000001,
+      "blockRisk": 0.0215,
+      "expectedNonFoulFG": 0.6800575000000001,
+      "adjustment": 0.055,
+      "variant": "Running Layup"
+    },
+    {
+      "rating": 60,
+      "scenario": "dunk",
+      "base": 0.625,
+      "context": 0.64,
+      "probability": 0.64,
+      "blockRisk": 0.043,
+      "expectedNonFoulFG": 0.61248,
+      "adjustment": 0,
+      "variant": "Standing Power Dunk"
+    },
+    {
+      "rating": 60,
+      "scenario": "floater",
+      "base": 0.625,
+      "context": 0.57,
+      "probability": 0.57,
+      "blockRisk": 0.0172,
+      "expectedNonFoulFG": 0.5601959999999999,
+      "adjustment": -0.07,
+      "variant": "9′ Driving Floating Jumpshot"
+    },
+    {
+      "rating": 60,
+      "scenario": "postHook",
+      "base": 0.625,
+      "context": 0.63,
+      "probability": 0.63,
+      "blockRisk": 0.043,
+      "expectedNonFoulFG": 0.60291,
+      "adjustment": -0.01,
+      "variant": "postHook"
+    },
+    {
+      "rating": 70,
+      "scenario": "neutral",
+      "base": 0.625,
+      "context": 0.64,
+      "probability": 0.64,
+      "blockRisk": 0.046,
+      "expectedNonFoulFG": 0.61056,
+      "adjustment": 0,
+      "variant": "Driving Layup"
+    },
+    {
+      "rating": 70,
+      "scenario": "contested",
+      "base": 0.625,
+      "context": 0.61,
+      "probability": 0.61,
+      "blockRisk": 0.046,
+      "expectedNonFoulFG": 0.58194,
+      "adjustment": 0,
+      "variant": "Driving Layup"
+    },
+    {
+      "rating": 70,
+      "scenario": "uncontested",
+      "base": 0.625,
+      "context": 0.64,
+      "probability": 0.64,
+      "blockRisk": 0.046,
+      "expectedNonFoulFG": 0.61056,
+      "adjustment": 0,
+      "variant": "Driving Layup"
+    },
+    {
+      "rating": 70,
+      "scenario": "driving",
+      "base": 0.625,
+      "context": 0.64,
+      "probability": 0.64,
+      "blockRisk": 0.046,
+      "expectedNonFoulFG": 0.61056,
+      "adjustment": 0,
+      "variant": "Driving Layup"
+    },
+    {
+      "rating": 70,
+      "scenario": "cutting",
+      "base": 0.625,
+      "context": 0.66,
+      "probability": 0.66,
+      "blockRisk": 0.0368,
+      "expectedNonFoulFG": 0.635712,
+      "adjustment": 0.02,
+      "variant": "Cutting Layup"
+    },
+    {
+      "rating": 70,
+      "scenario": "running",
+      "base": 0.625,
+      "context": 0.6950000000000001,
+      "probability": 0.6950000000000001,
+      "blockRisk": 0.023,
+      "expectedNonFoulFG": 0.679015,
+      "adjustment": 0.055,
+      "variant": "Running Layup"
+    },
+    {
+      "rating": 70,
+      "scenario": "dunk",
+      "base": 0.625,
+      "context": 0.646,
+      "probability": 0.646,
+      "blockRisk": 0.046,
+      "expectedNonFoulFG": 0.6162839999999999,
+      "adjustment": 0.005999999999999999,
+      "variant": "Standing Power Dunk"
+    },
+    {
+      "rating": 70,
+      "scenario": "floater",
+      "base": 0.625,
+      "context": 0.57,
+      "probability": 0.57,
+      "blockRisk": 0.0184,
+      "expectedNonFoulFG": 0.559512,
+      "adjustment": -0.07,
+      "variant": "6′ Driving Floating Jumpshot"
+    },
+    {
+      "rating": 70,
+      "scenario": "postHook",
+      "base": 0.625,
+      "context": 0.63,
+      "probability": 0.63,
+      "blockRisk": 0.046,
+      "expectedNonFoulFG": 0.60102,
+      "adjustment": -0.01,
+      "variant": "postHook"
+    },
+    {
+      "rating": 75,
+      "scenario": "neutral",
+      "base": 0.625,
+      "context": 0.64,
+      "probability": 0.64,
+      "blockRisk": 0.0475,
+      "expectedNonFoulFG": 0.6096,
+      "adjustment": 0,
+      "variant": "Driving Layup"
+    },
+    {
+      "rating": 75,
+      "scenario": "contested",
+      "base": 0.625,
+      "context": 0.61,
+      "probability": 0.61,
+      "blockRisk": 0.0475,
+      "expectedNonFoulFG": 0.581025,
+      "adjustment": 0,
+      "variant": "Driving Layup"
+    },
+    {
+      "rating": 75,
+      "scenario": "uncontested",
+      "base": 0.625,
+      "context": 0.64,
+      "probability": 0.64,
+      "blockRisk": 0.0475,
+      "expectedNonFoulFG": 0.6096,
+      "adjustment": 0,
+      "variant": "Driving Layup"
+    },
+    {
+      "rating": 75,
+      "scenario": "driving",
+      "base": 0.625,
+      "context": 0.64,
+      "probability": 0.64,
+      "blockRisk": 0.0475,
+      "expectedNonFoulFG": 0.6096,
+      "adjustment": 0,
+      "variant": "Driving Layup"
+    },
+    {
+      "rating": 75,
+      "scenario": "cutting",
+      "base": 0.625,
+      "context": 0.66,
+      "probability": 0.66,
+      "blockRisk": 0.038000000000000006,
+      "expectedNonFoulFG": 0.63492,
+      "adjustment": 0.02,
+      "variant": "Cutting Layup"
+    },
+    {
+      "rating": 75,
+      "scenario": "running",
+      "base": 0.625,
+      "context": 0.6950000000000001,
+      "probability": 0.6950000000000001,
+      "blockRisk": 0.02375,
+      "expectedNonFoulFG": 0.67849375,
+      "adjustment": 0.055,
+      "variant": "Running Layup"
+    },
+    {
+      "rating": 75,
+      "scenario": "dunk",
+      "base": 0.625,
+      "context": 0.649,
+      "probability": 0.649,
+      "blockRisk": 0.0475,
+      "expectedNonFoulFG": 0.6181725,
+      "adjustment": 0.009,
+      "variant": "Standing Power Dunk"
+    },
+    {
+      "rating": 75,
+      "scenario": "floater",
+      "base": 0.625,
+      "context": 0.57,
+      "probability": 0.57,
+      "blockRisk": 0.019000000000000003,
+      "expectedNonFoulFG": 0.55917,
+      "adjustment": -0.07,
+      "variant": "5′ Driving Floating Jumpshot"
+    },
+    {
+      "rating": 75,
+      "scenario": "postHook",
+      "base": 0.625,
+      "context": 0.63,
+      "probability": 0.63,
+      "blockRisk": 0.0475,
+      "expectedNonFoulFG": 0.600075,
+      "adjustment": -0.01,
+      "variant": "postHook"
+    },
+    {
+      "rating": 80,
+      "scenario": "neutral",
+      "base": 0.625,
+      "context": 0.64,
+      "probability": 0.64,
+      "blockRisk": 0.049,
+      "expectedNonFoulFG": 0.60864,
+      "adjustment": 0,
+      "variant": "Driving Layup"
+    },
+    {
+      "rating": 80,
+      "scenario": "contested",
+      "base": 0.625,
+      "context": 0.61,
+      "probability": 0.61,
+      "blockRisk": 0.049,
+      "expectedNonFoulFG": 0.58011,
+      "adjustment": 0,
+      "variant": "Driving Layup"
+    },
+    {
+      "rating": 80,
+      "scenario": "uncontested",
+      "base": 0.625,
+      "context": 0.64,
+      "probability": 0.64,
+      "blockRisk": 0.049,
+      "expectedNonFoulFG": 0.60864,
+      "adjustment": 0,
+      "variant": "Driving Layup"
+    },
+    {
+      "rating": 80,
+      "scenario": "driving",
+      "base": 0.625,
+      "context": 0.64,
+      "probability": 0.64,
+      "blockRisk": 0.049,
+      "expectedNonFoulFG": 0.60864,
+      "adjustment": 0,
+      "variant": "Driving Layup"
+    },
+    {
+      "rating": 80,
+      "scenario": "cutting",
+      "base": 0.625,
+      "context": 0.66,
+      "probability": 0.66,
+      "blockRisk": 0.039200000000000006,
+      "expectedNonFoulFG": 0.634128,
+      "adjustment": 0.02,
+      "variant": "Cutting Layup"
+    },
+    {
+      "rating": 80,
+      "scenario": "running",
+      "base": 0.625,
+      "context": 0.6950000000000001,
+      "probability": 0.6950000000000001,
+      "blockRisk": 0.0245,
+      "expectedNonFoulFG": 0.6779725000000001,
+      "adjustment": 0.055,
+      "variant": "Running Layup"
+    },
+    {
+      "rating": 80,
+      "scenario": "dunk",
+      "base": 0.625,
+      "context": 0.652,
+      "probability": 0.652,
+      "blockRisk": 0.049,
+      "expectedNonFoulFG": 0.620052,
+      "adjustment": 0.011999999999999999,
+      "variant": "Standing Power Dunk"
+    },
+    {
+      "rating": 80,
+      "scenario": "floater",
+      "base": 0.625,
+      "context": 0.57,
+      "probability": 0.57,
+      "blockRisk": 0.019600000000000003,
+      "expectedNonFoulFG": 0.558828,
+      "adjustment": -0.07,
+      "variant": "8′ Driving Floating Jumpshot"
+    },
+    {
+      "rating": 80,
+      "scenario": "postHook",
+      "base": 0.625,
+      "context": 0.63,
+      "probability": 0.63,
+      "blockRisk": 0.049,
+      "expectedNonFoulFG": 0.5991299999999999,
+      "adjustment": -0.01,
+      "variant": "postHook"
+    },
+    {
+      "rating": 90,
+      "scenario": "neutral",
+      "base": 0.625,
+      "context": 0.64,
+      "probability": 0.64,
+      "blockRisk": 0.052,
+      "expectedNonFoulFG": 0.60672,
+      "adjustment": 0,
+      "variant": "Driving Layup"
+    },
+    {
+      "rating": 90,
+      "scenario": "contested",
+      "base": 0.625,
+      "context": 0.61,
+      "probability": 0.61,
+      "blockRisk": 0.052,
+      "expectedNonFoulFG": 0.5782799999999999,
+      "adjustment": 0,
+      "variant": "Driving Layup"
+    },
+    {
+      "rating": 90,
+      "scenario": "uncontested",
+      "base": 0.625,
+      "context": 0.64,
+      "probability": 0.64,
+      "blockRisk": 0.052,
+      "expectedNonFoulFG": 0.60672,
+      "adjustment": 0,
+      "variant": "Driving Layup"
+    },
+    {
+      "rating": 90,
+      "scenario": "driving",
+      "base": 0.625,
+      "context": 0.64,
+      "probability": 0.64,
+      "blockRisk": 0.052,
+      "expectedNonFoulFG": 0.60672,
+      "adjustment": 0,
+      "variant": "Driving Layup"
+    },
+    {
+      "rating": 90,
+      "scenario": "cutting",
+      "base": 0.625,
+      "context": 0.66,
+      "probability": 0.66,
+      "blockRisk": 0.0416,
+      "expectedNonFoulFG": 0.632544,
+      "adjustment": 0.02,
+      "variant": "Cutting Layup"
+    },
+    {
+      "rating": 90,
+      "scenario": "running",
+      "base": 0.625,
+      "context": 0.6950000000000001,
+      "probability": 0.6950000000000001,
+      "blockRisk": 0.026,
+      "expectedNonFoulFG": 0.67693,
+      "adjustment": 0.055,
+      "variant": "Running Layup"
+    },
+    {
+      "rating": 90,
+      "scenario": "dunk",
+      "base": 0.625,
+      "context": 0.658,
+      "probability": 0.658,
+      "blockRisk": 0.052,
+      "expectedNonFoulFG": 0.623784,
+      "adjustment": 0.018,
+      "variant": "Standing Power Dunk"
+    },
+    {
+      "rating": 90,
+      "scenario": "floater",
+      "base": 0.625,
+      "context": 0.57,
+      "probability": 0.57,
+      "blockRisk": 0.0208,
+      "expectedNonFoulFG": 0.558144,
+      "adjustment": -0.07,
+      "variant": "4′ Driving Floating Jumpshot"
+    },
+    {
+      "rating": 90,
+      "scenario": "postHook",
+      "base": 0.625,
+      "context": 0.63,
+      "probability": 0.63,
+      "blockRisk": 0.052,
+      "expectedNonFoulFG": 0.59724,
+      "adjustment": -0.01,
+      "variant": "postHook"
+    }
+  ],
+  "putbacks": [
+    {
+      "defense": 60,
+      "uncontested": {
+        "base": 0.655,
+        "context": 0.67,
+        "probability": 0.67,
+        "blockRisk": 0.0475,
+        "expectedNonFoulFG": 0.638175,
+        "adjustment": 0,
+        "variant": "Driving Layup"
+      },
+      "contested": {
+        "base": 0.655,
+        "context": 0.64,
+        "probability": 0.64,
+        "blockRisk": 0.0475,
+        "expectedNonFoulFG": 0.6096,
+        "adjustment": 0,
+        "variant": "Driving Layup"
+      },
+      "layupPutback": {
+        "base": 0.655,
+        "probability": 0.655,
+        "blockRisk": 0,
+        "expectedNonFoulFG": 0.655
+      },
+      "dunkPutback": {
+        "base": 0.655,
+        "probability": 0.655,
+        "blockRisk": 0.04,
+        "expectedNonFoulFG": 0.6288
+      }
+    },
+    {
+      "defense": 75,
+      "uncontested": {
+        "base": 0.625,
+        "context": 0.64,
+        "probability": 0.64,
+        "blockRisk": 0.0475,
+        "expectedNonFoulFG": 0.6096,
+        "adjustment": 0,
+        "variant": "Driving Layup"
+      },
+      "contested": {
+        "base": 0.625,
+        "context": 0.61,
+        "probability": 0.61,
+        "blockRisk": 0.0475,
+        "expectedNonFoulFG": 0.581025,
+        "adjustment": 0,
+        "variant": "Driving Layup"
+      },
+      "layupPutback": {
+        "base": 0.625,
+        "probability": 0.625,
+        "blockRisk": 0,
+        "expectedNonFoulFG": 0.625
+      },
+      "dunkPutback": {
+        "base": 0.625,
+        "probability": 0.625,
+        "blockRisk": 0.04,
+        "expectedNonFoulFG": 0.6
+      }
+    },
+    {
+      "defense": 90,
+      "uncontested": {
+        "base": 0.595,
+        "context": 0.61,
+        "probability": 0.61,
+        "blockRisk": 0.0475,
+        "expectedNonFoulFG": 0.581025,
+        "adjustment": 0,
+        "variant": "Driving Layup"
+      },
+      "contested": {
+        "base": 0.595,
+        "context": 0.58,
+        "probability": 0.58,
+        "blockRisk": 0.0475,
+        "expectedNonFoulFG": 0.55245,
+        "adjustment": 0,
+        "variant": "Driving Layup"
+      },
+      "layupPutback": {
+        "base": 0.595,
+        "probability": 0.595,
+        "blockRisk": 0,
+        "expectedNonFoulFG": 0.595
+      },
+      "dunkPutback": {
+        "base": 0.595,
+        "probability": 0.595,
+        "blockRisk": 0.04,
+        "expectedNonFoulFG": 0.5711999999999999
+      }
+    }
+  ],
+  "dunkSensitivity": [
+    {
+      "dunkRating": 50,
+      "base": 0.575,
+      "context": 0.599,
+      "probability": 0.599,
+      "blockRisk": 0.0475,
+      "expectedNonFoulFG": 0.5705475,
+      "adjustment": 0.009,
+      "variant": "Standing Power Dunk"
+    },
+    {
+      "dunkRating": 60,
+      "base": 0.595,
+      "context": 0.619,
+      "probability": 0.619,
+      "blockRisk": 0.0475,
+      "expectedNonFoulFG": 0.5895975,
+      "adjustment": 0.009,
+      "variant": "Standing Power Dunk"
+    },
+    {
+      "dunkRating": 70,
+      "base": 0.615,
+      "context": 0.639,
+      "probability": 0.639,
+      "blockRisk": 0.0475,
+      "expectedNonFoulFG": 0.6086475,
+      "adjustment": 0.009,
+      "variant": "Standing Power Dunk"
+    },
+    {
+      "dunkRating": 75,
+      "base": 0.625,
+      "context": 0.649,
+      "probability": 0.649,
+      "blockRisk": 0.0475,
+      "expectedNonFoulFG": 0.6181725,
+      "adjustment": 0.009,
+      "variant": "Standing Power Dunk"
+    },
+    {
+      "dunkRating": 80,
+      "base": 0.635,
+      "context": 0.659,
+      "probability": 0.659,
+      "blockRisk": 0.0475,
+      "expectedNonFoulFG": 0.6276975,
+      "adjustment": 0.009,
+      "variant": "Standing Power Dunk"
+    },
+    {
+      "dunkRating": 90,
+      "base": 0.655,
+      "context": 0.679,
+      "probability": 0.679,
+      "blockRisk": 0.0475,
+      "expectedNonFoulFG": 0.6467475,
+      "adjustment": 0.009,
+      "variant": "Standing Power Dunk"
+    },
+    {
+      "dunkRating": 99,
+      "base": 0.673,
+      "context": 0.6970000000000001,
+      "probability": 0.6970000000000001,
+      "blockRisk": 0.0475,
+      "expectedNonFoulFG": 0.6638925000000001,
+      "adjustment": 0.009,
+      "variant": "Standing Power Dunk"
+    }
+  ]
+}

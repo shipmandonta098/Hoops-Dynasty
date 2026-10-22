@@ -1,0 +1,870 @@
+{
+  "candidate-nba-diagnostics": {
+    "n": 200,
+    "meanMargin": 14.715,
+    "signedMarginSD": 16.92139991253679,
+    "points": 112.2175,
+    "OT%": 2.0,
+    "close10%": 39.5,
+    "blow20": 28.499999999999996,
+    "blow30": 10.0,
+    "blow40": 2.0,
+    "close5Final120": 29.5,
+    "close3Final60": 22.0,
+    "tiedFinal60": 7.000000000000001,
+    "regulationTie": 0.5,
+    "three%": 32.96451486185675,
+    "slots": 2117,
+    "actionOverruns": 0,
+    "zeroTimeBoardThenScore": 0,
+    "lateBackwardsEvents": 0,
+    "threeDecisionGroups": {
+      "open": {
+        "n": 8199,
+        "probability": 0.34896197836386195,
+        "off": 79.99305650805871,
+        "def": 73.05904356144467,
+        "fatigue": 0.16970320952823537,
+        "adjustment": 0.008242163678497378
+      },
+      "contested": {
+        "n": 1626,
+        "probability": 0.256604584520188,
+        "off": 80.74968577223716,
+        "def": 76.83777821087345,
+        "fatigue": 0.15781920035272215,
+        "adjustment": -0.00043265682656826616
+      },
+      "assisted": {
+        "n": 11888,
+        "probability": 0.34018325523762694,
+        "off": 79.92087756937433,
+        "def": 72.43149937516257,
+        "fatigue": 0.16561686397268438,
+        "adjustment": 0.009118918236877525
+      },
+      "selfCreated": {
+        "n": 1796,
+        "probability": 0.2985600975387068,
+        "off": 80.3900115452421,
+        "def": 72.37668755607983,
+        "fatigue": 0.14333374610418292,
+        "adjustment": -0.035
+      },
+      "lateClock": {
+        "n": 88,
+        "probability": 0.3205689141740025,
+        "off": 81.47032847778446,
+        "def": 74.07668620802355,
+        "fatigue": 0.20822472185718924,
+        "adjustment": 0.007154545454545454
+      }
+    }
+  },
+  "no-choice-nba-diagnostics": {
+    "n": 200,
+    "meanMargin": 14.95,
+    "signedMarginSD": 17.001032321597414,
+    "points": 112.085,
+    "OT%": 2.5,
+    "close10%": 38.0,
+    "blow20": 28.499999999999996,
+    "blow30": 10.5,
+    "blow40": 2.0,
+    "close5Final120": 28.499999999999996,
+    "close3Final60": 21.5,
+    "tiedFinal60": 6.0,
+    "regulationTie": 1.5,
+    "three%": 33.00301876886731,
+    "slots": 2103,
+    "actionOverruns": 0,
+    "zeroTimeBoardThenScore": 0,
+    "lateBackwardsEvents": 0,
+    "threeDecisionGroups": {
+      "open": {
+        "n": 8207,
+        "probability": 0.348994212461281,
+        "off": 80.00916466805268,
+        "def": 73.06215175209971,
+        "fatigue": 0.16976002764767573,
+        "adjustment": 0.008236359205556232
+      },
+      "contested": {
+        "n": 1620,
+        "probability": 0.25696467363002107,
+        "off": 80.73655659771244,
+        "def": 76.80199467376391,
+        "fatigue": 0.15756650290712512,
+        "adjustment": -0.0002696296296296301
+      },
+      "assisted": {
+        "n": 11894,
+        "probability": 0.3401990536745078,
+        "off": 79.9301863665417,
+        "def": 72.43506170066782,
+        "fatigue": 0.16558325428865298,
+        "adjustment": 0.009121330082394486
+      },
+      "selfCreated": {
+        "n": 1764,
+        "probability": 0.2994460138732798,
+        "off": 80.41393133456812,
+        "def": 72.31496235135458,
+        "fatigue": 0.14168442115282437,
+        "adjustment": -0.035
+      },
+      "lateClock": {
+        "n": 87,
+        "probability": 0.32087533205090857,
+        "off": 81.31832065144022,
+        "def": 73.82278831942256,
+        "fatigue": 0.20395377937415823,
+        "adjustment": 0.007113793103448276
+      }
+    }
+  },
+  "baseline-nba-diagnostics": {
+    "n": 200,
+    "meanMargin": 14.375,
+    "signedMarginSD": 16.561816778361003,
+    "points": 112.4225,
+    "OT%": 1.5,
+    "close10%": 40.0,
+    "blow20": 28.000000000000004,
+    "blow30": 7.000000000000001,
+    "blow40": 3.5000000000000004,
+    "close5Final120": 32.5,
+    "close3Final60": 22.0,
+    "tiedFinal60": 5.0,
+    "regulationTie": 0.5,
+    "three%": 33.12135317642431,
+    "slots": 1932,
+    "actionOverruns": 103,
+    "zeroTimeBoardThenScore": 23,
+    "lateBackwardsEvents": 0,
+    "threeDecisionGroups": {
+      "open": {
+        "n": 8183,
+        "probability": 0.3491755677270272,
+        "off": 80.08722728992852,
+        "def": 73.09700399250158,
+        "fatigue": 0.1693938329104423,
+        "adjustment": 0.0082993767566907
+      },
+      "contested": {
+        "n": 1643,
+        "probability": 0.2576686553167177,
+        "off": 80.69425239501447,
+        "def": 76.65400934220767,
+        "fatigue": 0.15529124190461874,
+        "adjustment": -0.0002902008520998179
+      },
+      "assisted": {
+        "n": 11932,
+        "probability": 0.3404814859561856,
+        "off": 80.01163920311298,
+        "def": 72.47790418977866,
+        "fatigue": 0.16406274869279652,
+        "adjustment": 0.009205631914180355
+      },
+      "selfCreated": {
+        "n": 1745,
+        "probability": 0.29941364249096597,
+        "off": 80.46609050249909,
+        "def": 72.26933625752577,
+        "fatigue": 0.14057507578852235,
+        "adjustment": -0.035
+      },
+      "lateClock": {
+        "n": 77,
+        "probability": 0.3234520089126684,
+        "off": 82.4572073152143,
+        "def": 72.86526764901684,
+        "fatigue": 0.20771935058062793,
+        "adjustment": 0.006396103896103896
+      }
+    }
+  },
+  "timing-only-nba-diagnostics": {
+    "n": 200,
+    "meanMargin": 15.155,
+    "signedMarginSD": 17.21838479649006,
+    "points": 112.2575,
+    "OT%": 3.5000000000000004,
+    "close10%": 36.5,
+    "blow20": 29.5,
+    "blow30": 10.0,
+    "blow40": 2.0,
+    "close5Final120": 28.499999999999996,
+    "close3Final60": 21.5,
+    "tiedFinal60": 6.5,
+    "regulationTie": 1.5,
+    "three%": 33.01763553233181,
+    "slots": 2208,
+    "actionOverruns": 0,
+    "zeroTimeBoardThenScore": 0,
+    "lateBackwardsEvents": 0,
+    "threeDecisionGroups": {
+      "open": {
+        "n": 8245,
+        "probability": 0.34899529312109956,
+        "off": 80.01223571673677,
+        "def": 73.06337355735258,
+        "fatigue": 0.16979717230652128,
+        "adjustment": 0.008217744087325653
+      },
+      "contested": {
+        "n": 1627,
+        "probability": 0.2570237375621294,
+        "off": 80.73466251695699,
+        "def": 76.76517198751317,
+        "fatigue": 0.1577483184753243,
+        "adjustment": -0.00030633066994468393
+      },
+      "assisted": {
+        "n": 11940,
+        "probability": 0.34021724787289387,
+        "off": 79.9337629489076,
+        "def": 72.43350162696031,
+        "fatigue": 0.16577919858861243,
+        "adjustment": 0.009127546063651591
+      },
+      "selfCreated": {
+        "n": 1772,
+        "probability": 0.29944754757066483,
+        "off": 80.40761642338563,
+        "def": 72.30648201391219,
+        "fatigue": 0.14212042309939085,
+        "adjustment": -0.035
+      },
+      "lateClock": {
+        "n": 89,
+        "probability": 0.32045554116859204,
+        "off": 81.20729912415459,
+        "def": 73.65431007488493,
+        "fatigue": 0.2081210947814286,
+        "adjustment": 0.006726966292134831
+      }
+    }
+  },
+  "baseline-wnba-diagnostics": {
+    "n": 200,
+    "meanMargin": 14.925,
+    "signedMarginSD": 18.444700458397257,
+    "points": 86.7675,
+    "OT%": 0,
+    "close10%": 44.5,
+    "blow20": 31.0,
+    "blow30": 13.5,
+    "blow40": 3.0,
+    "close5Final120": 35.0,
+    "close3Final60": 20.5,
+    "tiedFinal60": 3.5000000000000004,
+    "regulationTie": 0,
+    "three%": 31.663988573469023,
+    "slots": 1672,
+    "actionOverruns": 84,
+    "zeroTimeBoardThenScore": 12,
+    "lateBackwardsEvents": 0,
+    "threeDecisionGroups": {
+      "open": {
+        "n": 6231,
+        "probability": 0.3563295801185855,
+        "off": 82.48673536695777,
+        "def": 73.60580341093453,
+        "fatigue": 0.18010606028153164,
+        "adjustment": 0.009303017172203498
+      },
+      "contested": {
+        "n": 1085,
+        "probability": 0.2670055504716962,
+        "off": 82.97407220042392,
+        "def": 75.43612097822178,
+        "fatigue": 0.18009227341449288,
+        "adjustment": 0.00016046082949308714
+      },
+      "assisted": {
+        "n": 9111,
+        "probability": 0.34588600353406257,
+        "off": 82.38373710733806,
+        "def": 73.68875025414616,
+        "fatigue": 0.17874677975239864,
+        "adjustment": 0.008773800900010975
+      },
+      "selfCreated": {
+        "n": 1409,
+        "probability": 0.30590824829970414,
+        "off": 81.77946097471498,
+        "def": 71.99064504143354,
+        "fatigue": 0.16624203344155816,
+        "adjustment": -0.035
+      },
+      "lateClock": {
+        "n": 65,
+        "probability": 0.3185268859649942,
+        "off": 84.86664029368139,
+        "def": 75.79094262450036,
+        "fatigue": 0.15858426126089667,
+        "adjustment": 0.004747692307692308
+      }
+    }
+  },
+  "no-fouling-nba-diagnostics": {
+    "n": 200,
+    "meanMargin": 14.45,
+    "signedMarginSD": 16.839759499470293,
+    "points": 111.69,
+    "OT%": 1.5,
+    "close10%": 39.5,
+    "blow20": 28.499999999999996,
+    "blow30": 10.0,
+    "blow40": 2.0,
+    "close5Final120": 28.499999999999996,
+    "close3Final60": 21.5,
+    "tiedFinal60": 6.0,
+    "regulationTie": 0.5,
+    "three%": 32.959022852639876,
+    "slots": 1992,
+    "actionOverruns": 0,
+    "zeroTimeBoardThenScore": 0,
+    "lateBackwardsEvents": 0,
+    "threeDecisionGroups": {
+      "open": {
+        "n": 8196,
+        "probability": 0.34897065028139823,
+        "off": 79.99395956694723,
+        "def": 73.05906408194306,
+        "fatigue": 0.1696657210274736,
+        "adjustment": 0.008245705222059542
+      },
+      "contested": {
+        "n": 1617,
+        "probability": 0.25679068317181447,
+        "off": 80.71890075999868,
+        "def": 76.80198828703112,
+        "fatigue": 0.15747890624829042,
+        "adjustment": -0.0003227581941867661
+      },
+      "assisted": {
+        "n": 11876,
+        "probability": 0.3402068400137314,
+        "off": 79.92369736011534,
+        "def": 72.43330787202896,
+        "fatigue": 0.165552676981853,
+        "adjustment": 0.009127559784439205
+      },
+      "selfCreated": {
+        "n": 1764,
+        "probability": 0.29910843200545223,
+        "off": 80.3917145590927,
+        "def": 72.3335403546205,
+        "fatigue": 0.14177490560426037,
+        "adjustment": -0.035
+      },
+      "lateClock": {
+        "n": 88,
+        "probability": 0.3205689141740025,
+        "off": 81.47032847778446,
+        "def": 74.07668620802355,
+        "fatigue": 0.20822472185718924,
+        "adjustment": 0.007154545454545454
+      }
+    }
+  },
+  "baseline-identical-nba-diagnostics": {
+    "n": 200,
+    "meanMargin": 12.97,
+    "signedMarginSD": 15.983363225554251,
+    "points": 111.68,
+    "OT%": 1.5,
+    "close10%": 48.0,
+    "blow20": 22.0,
+    "blow30": 6.0,
+    "blow40": 1.5,
+    "close5Final120": 37.5,
+    "close3Final60": 22.5,
+    "tiedFinal60": 6.5,
+    "regulationTie": 1.0,
+    "three%": 33.031237948322406,
+    "slots": 1900,
+    "actionOverruns": 98,
+    "zeroTimeBoardThenScore": 31,
+    "lateBackwardsEvents": 0,
+    "threeDecisionGroups": {
+      "open": {
+        "n": 8724,
+        "probability": 0.3465973218654445,
+        "off": 81.71287091388226,
+        "def": 74.9748044873016,
+        "fatigue": 0.14937938462022374,
+        "adjustment": 0.00858360843649702
+      },
+      "contested": {
+        "n": 1558,
+        "probability": 0.25444469478458587,
+        "off": 81.84246578693521,
+        "def": 77.53891859287872,
+        "fatigue": 0.14786484021934834,
+        "adjustment": 0.0004758023106546851
+      },
+      "assisted": {
+        "n": 12218,
+        "probability": 0.33977429657219654,
+        "off": 81.79585882559306,
+        "def": 74.77997187832497,
+        "fatigue": 0.1463241765027619,
+        "adjustment": 0.009595596660664594
+      },
+      "selfCreated": {
+        "n": 1813,
+        "probability": 0.29756377748643087,
+        "off": 81.18744889093531,
+        "def": 73.26699512591384,
+        "fatigue": 0.13218726698177338,
+        "adjustment": -0.035
+      },
+      "lateClock": {
+        "n": 81,
+        "probability": 0.31538557966590564,
+        "off": 83.33722210528217,
+        "def": 72.86009898263421,
+        "fatigue": 0.16075859329317624,
+        "adjustment": 0.0030444444444444442
+      }
+    }
+  },
+  "no-choice-wnba-diagnostics": {
+    "n": 200,
+    "meanMargin": 14.4,
+    "signedMarginSD": 17.75692540954092,
+    "points": 87.775,
+    "OT%": 3.0,
+    "close10%": 45.5,
+    "blow20": 24.0,
+    "blow30": 8.5,
+    "blow40": 3.5000000000000004,
+    "close5Final120": 36.0,
+    "close3Final60": 21.5,
+    "tiedFinal60": 6.5,
+    "regulationTie": 1.0,
+    "three%": 31.9751442521083,
+    "slots": 2201,
+    "actionOverruns": 4,
+    "zeroTimeBoardThenScore": 2,
+    "lateBackwardsEvents": 0,
+    "threeDecisionGroups": {
+      "open": {
+        "n": 6259,
+        "probability": 0.35670223482683283,
+        "off": 82.62011954264527,
+        "def": 73.65734040910283,
+        "fatigue": 0.17911741728658573,
+        "adjustment": 0.009261910848378336
+      },
+      "contested": {
+        "n": 1110,
+        "probability": 0.2675482419671189,
+        "off": 82.72047555790498,
+        "def": 74.87383934618278,
+        "fatigue": 0.17993080289707558,
+        "adjustment": 9.135135135135093e-05
+      },
+      "assisted": {
+        "n": 9135,
+        "probability": 0.3458751603116338,
+        "off": 82.43667584871439,
+        "def": 73.74094279961781,
+        "fatigue": 0.17863227447978297,
+        "adjustment": 0.00880592227695676
+      },
+      "selfCreated": {
+        "n": 1423,
+        "probability": 0.30507604637495156,
+        "off": 81.7033242236684,
+        "def": 72.35414806111848,
+        "fatigue": 0.17066334582311343,
+        "adjustment": -0.035
+      },
+      "lateClock": {
+        "n": 76,
+        "probability": 0.31762405777676145,
+        "off": 83.55069274088885,
+        "def": 75.88935410888611,
+        "fatigue": 0.16898807280757,
+        "adjustment": 0.0034460526315789474
+      }
+    }
+  },
+  "baseline-identical-wnba-diagnostics": {
+    "n": 200,
+    "meanMargin": 11.66,
+    "signedMarginSD": 14.602314884976286,
+    "points": 85.73,
+    "OT%": 3.5000000000000004,
+    "close10%": 52.0,
+    "blow20": 15.5,
+    "blow30": 5.0,
+    "blow40": 1.0,
+    "close5Final120": 42.5,
+    "close3Final60": 33.0,
+    "tiedFinal60": 9.0,
+    "regulationTie": 3.5000000000000004,
+    "three%": 31.811052680136545,
+    "slots": 1800,
+    "actionOverruns": 65,
+    "zeroTimeBoardThenScore": 15,
+    "lateBackwardsEvents": 0,
+    "threeDecisionGroups": {
+      "open": {
+        "n": 5813,
+        "probability": 0.3569805162814415,
+        "off": 80.76225869427118,
+        "def": 72.28054025795315,
+        "fatigue": 0.17512565357333432,
+        "adjustment": 0.008812988130053328
+      },
+      "contested": {
+        "n": 1321,
+        "probability": 0.2676073891147334,
+        "off": 80.1633364429038,
+        "def": 73.39750000907974,
+        "fatigue": 0.17456095321867943,
+        "adjustment": -0.0001531415594246787
+      },
+      "assisted": {
+        "n": 8800,
+        "probability": 0.3434102142652059,
+        "off": 80.16716535619732,
+        "def": 72.49983496961482,
+        "fatigue": 0.17200341046365936,
+        "adjustment": 0.008238954545454546
+      },
+      "selfCreated": {
+        "n": 1500,
+        "probability": 0.30204031983413554,
+        "off": 80.85329424825143,
+        "def": 72.44857412358434,
+        "fatigue": 0.17705416064824286,
+        "adjustment": -0.035
+      },
+      "lateClock": {
+        "n": 58,
+        "probability": 0.31632467449245066,
+        "off": 80.32534907783662,
+        "def": 71.68870112586704,
+        "fatigue": 0.14002604567083365,
+        "adjustment": 0.0036586206896551724
+      }
+    }
+  },
+  "candidate-identical-nba-diagnostics": {
+    "n": 200,
+    "meanMargin": 13.28,
+    "signedMarginSD": 15.918655722139354,
+    "points": 112.49,
+    "OT%": 4.5,
+    "close10%": 44.0,
+    "blow20": 22.5,
+    "blow30": 6.5,
+    "blow40": 1.0,
+    "close5Final120": 38.5,
+    "close3Final60": 24.5,
+    "tiedFinal60": 8.0,
+    "regulationTie": 2.0,
+    "three%": 32.97431648715824,
+    "slots": 2323,
+    "actionOverruns": 4,
+    "zeroTimeBoardThenScore": 0,
+    "lateBackwardsEvents": 0,
+    "threeDecisionGroups": {
+      "open": {
+        "n": 8795,
+        "probability": 0.34648836738202704,
+        "off": 81.83692096815295,
+        "def": 75.0756736974431,
+        "fatigue": 0.15105358659460405,
+        "adjustment": 0.008618101193860148
+      },
+      "contested": {
+        "n": 1591,
+        "probability": 0.25480589717230845,
+        "off": 82.0353924352324,
+        "def": 77.66500150994885,
+        "fatigue": 0.1485431710121519,
+        "adjustment": 0.0005336266499057192
+      },
+      "assisted": {
+        "n": 12280,
+        "probability": 0.3398441134995774,
+        "off": 81.92328390365702,
+        "def": 74.84793520120483,
+        "fatigue": 0.14750356778291127,
+        "adjustment": 0.009608778501628664
+      },
+      "selfCreated": {
+        "n": 1857,
+        "probability": 0.2966253763246108,
+        "off": 81.2746386294071,
+        "def": 73.49744078661277,
+        "fatigue": 0.13662891082564854,
+        "adjustment": -0.035
+      },
+      "lateClock": {
+        "n": 94,
+        "probability": 0.30665561290431465,
+        "off": 83.53438675038356,
+        "def": 74.8253850224579,
+        "fatigue": 0.14664938314712656,
+        "adjustment": 0.0018478723404255317
+      }
+    }
+  },
+  "timing-only-wnba-diagnostics": {
+    "n": 200,
+    "meanMargin": 14.31,
+    "signedMarginSD": 17.896323644815993,
+    "points": 87.655,
+    "OT%": 2.5,
+    "close10%": 43.5,
+    "blow20": 25.0,
+    "blow30": 10.5,
+    "blow40": 4.0,
+    "close5Final120": 36.0,
+    "close3Final60": 23.0,
+    "tiedFinal60": 6.0,
+    "regulationTie": 1.0,
+    "three%": 31.95145717069714,
+    "slots": 2190,
+    "actionOverruns": 4,
+    "zeroTimeBoardThenScore": 2,
+    "lateBackwardsEvents": 0,
+    "threeDecisionGroups": {
+      "open": {
+        "n": 6272,
+        "probability": 0.35670105257961243,
+        "off": 82.62720820370015,
+        "def": 73.66329012255086,
+        "fatigue": 0.17914219911980805,
+        "adjustment": 0.009246285076530613
+      },
+      "contested": {
+        "n": 1114,
+        "probability": 0.26757865925122354,
+        "off": 82.62715435647726,
+        "def": 74.78335881463222,
+        "fatigue": 0.17983014184525017,
+        "adjustment": 3.500897666068179e-05
+      },
+      "assisted": {
+        "n": 9140,
+        "probability": 0.3458513949023176,
+        "off": 82.41946485491668,
+        "def": 73.72710491797868,
+        "fatigue": 0.17856115119915883,
+        "adjustment": 0.00879586433260394
+      },
+      "selfCreated": {
+        "n": 1427,
+        "probability": 0.30511326094733,
+        "off": 81.69337304407968,
+        "def": 72.29761870117069,
+        "fatigue": 0.1708013340477409,
+        "adjustment": -0.035
+      },
+      "lateClock": {
+        "n": 76,
+        "probability": 0.3179213816565387,
+        "off": 83.60897428814611,
+        "def": 75.81302312338025,
+        "fatigue": 0.16848852105676987,
+        "adjustment": 0.0034842105263157893
+      }
+    }
+  },
+  "candidate-wnba-diagnostics": {
+    "n": 200,
+    "meanMargin": 14.305,
+    "signedMarginSD": 17.719756629254253,
+    "points": 87.6275,
+    "OT%": 1.5,
+    "close10%": 46.0,
+    "blow20": 24.0,
+    "blow30": 8.5,
+    "blow40": 3.5000000000000004,
+    "close5Final120": 37.0,
+    "close3Final60": 21.5,
+    "tiedFinal60": 6.5,
+    "regulationTie": 1.0,
+    "three%": 31.909235951072503,
+    "slots": 2126,
+    "actionOverruns": 1,
+    "zeroTimeBoardThenScore": 1,
+    "lateBackwardsEvents": 0,
+    "threeDecisionGroups": {
+      "open": {
+        "n": 6236,
+        "probability": 0.3566742417372614,
+        "off": 82.60158680842446,
+        "def": 73.62947782640464,
+        "fatigue": 0.1783335293832302,
+        "adjustment": 0.009256270044900577
+      },
+      "contested": {
+        "n": 1112,
+        "probability": 0.2675545967094383,
+        "off": 82.7215541230248,
+        "def": 74.84118629377146,
+        "fatigue": 0.1796854854569976,
+        "adjustment": -1.609712230215871e-05
+      },
+      "assisted": {
+        "n": 9112,
+        "probability": 0.3458192255903768,
+        "off": 82.40715791334748,
+        "def": 73.71223867516338,
+        "fatigue": 0.17819095829643034,
+        "adjustment": 0.008799275680421423
+      },
+      "selfCreated": {
+        "n": 1461,
+        "probability": 0.30449537267261423,
+        "off": 81.7556252037923,
+        "def": 72.48837722898385,
+        "fatigue": 0.17267698752133503,
+        "adjustment": -0.035
+      },
+      "lateClock": {
+        "n": 76,
+        "probability": 0.3190681947518543,
+        "off": 83.31022413460144,
+        "def": 75.45296028491612,
+        "fatigue": 0.16648755921514896,
+        "adjustment": 0.004078947368421053
+      }
+    }
+  },
+  "candidate-identical-wnba-diagnostics": {
+    "n": 200,
+    "meanMargin": 11.505,
+    "signedMarginSD": 14.110456229335748,
+    "points": 87.8725,
+    "OT%": 6.0,
+    "close10%": 55.00000000000001,
+    "blow20": 14.499999999999998,
+    "blow30": 5.0,
+    "blow40": 0,
+    "close5Final120": 42.5,
+    "close3Final60": 32.0,
+    "tiedFinal60": 13.0,
+    "regulationTie": 3.0,
+    "three%": 32.14350922037612,
+    "slots": 2447,
+    "actionOverruns": 2,
+    "zeroTimeBoardThenScore": 1,
+    "lateBackwardsEvents": 0,
+    "threeDecisionGroups": {
+      "open": {
+        "n": 5882,
+        "probability": 0.3570911849700172,
+        "off": 80.74352429713217,
+        "def": 72.1057029497741,
+        "fatigue": 0.17739532349773643,
+        "adjustment": 0.008761390683441006
+      },
+      "contested": {
+        "n": 1326,
+        "probability": 0.26738107759948,
+        "off": 80.27648575240903,
+        "def": 73.36837747261268,
+        "fatigue": 0.17541870653040734,
+        "adjustment": -0.00069185520361991
+      },
+      "assisted": {
+        "n": 8825,
+        "probability": 0.34388829636843826,
+        "off": 80.13449914169959,
+        "def": 72.26930371665232,
+        "fatigue": 0.17400394158626936,
+        "adjustment": 0.00827102549575071
+      },
+      "selfCreated": {
+        "n": 1563,
+        "probability": 0.3018099686376406,
+        "off": 80.9930157602347,
+        "def": 72.67916721205735,
+        "fatigue": 0.1792451102794017,
+        "adjustment": -0.035
+      },
+      "lateClock": {
+        "n": 71,
+        "probability": 0.31488624518566916,
+        "off": 79.34278220424206,
+        "def": 70.08566703649443,
+        "fatigue": 0.1584096101546489,
+        "adjustment": 0.003919718309859155
+      }
+    }
+  },
+  "no-fouling-wnba-diagnostics": {
+    "n": 200,
+    "meanMargin": 13.94,
+    "signedMarginSD": 17.600656237765683,
+    "points": 87.16,
+    "OT%": 1.5,
+    "close10%": 46.0,
+    "blow20": 24.0,
+    "blow30": 8.5,
+    "blow40": 3.5000000000000004,
+    "close5Final120": 35.5,
+    "close3Final60": 22.0,
+    "tiedFinal60": 6.0,
+    "regulationTie": 1.0,
+    "three%": 31.983265088125332,
+    "slots": 2005,
+    "actionOverruns": 1,
+    "zeroTimeBoardThenScore": 1,
+    "lateBackwardsEvents": 0,
+    "threeDecisionGroups": {
+      "open": {
+        "n": 6225,
+        "probability": 0.3566636849468407,
+        "off": 82.60285706323302,
+        "def": 73.63018874045774,
+        "fatigue": 0.1781085444486989,
+        "adjustment": 0.009250650602409639
+      },
+      "contested": {
+        "n": 1107,
+        "probability": 0.2677863813795146,
+        "off": 82.67662967920481,
+        "def": 74.78772112979512,
+        "fatigue": 0.17972225652787643,
+        "adjustment": 9.747064137307997e-05
+      },
+      "assisted": {
+        "n": 9099,
+        "probability": 0.345806392492159,
+        "off": 82.40460645461715,
+        "def": 73.70926608528417,
+        "fatigue": 0.1781369481310849,
+        "adjustment": 0.008797208484448841
+      },
+      "selfCreated": {
+        "n": 1427,
+        "probability": 0.30522398400465584,
+        "off": 81.68290563594026,
+        "def": 72.29841021313986,
+        "fatigue": 0.17128787794536787,
+        "adjustment": -0.035
+      },
+      "lateClock": {
+        "n": 76,
+        "probability": 0.31936551863163154,
+        "off": 83.3685056818587,
+        "def": 75.37662929941025,
+        "fatigue": 0.16598800746434883,
+        "adjustment": 0.004117105263157895
+      }
+    }
+  }
+}

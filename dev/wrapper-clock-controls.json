@@ -1,0 +1,1603 @@
+{
+  "pass": true,
+  "cases": 17,
+  "results": [
+    {
+      "kind": "drive-kick",
+      "clock": 2,
+      "production": {
+        "clock": 2,
+        "kind": "drive-kick",
+        "remaining": 0,
+        "decision": {
+          "p": {
+            "id": 2,
+            "name": "Receiver",
+            "attributes": {
+              "tp": 75
+            }
+          },
+          "lastPasser": {
+            "id": 1,
+            "name": "Handler",
+            "attributes": {
+              "spd": 100,
+              "pss": 75
+            }
+          },
+          "action": "shoot",
+          "forced": false,
+          "iso": false,
+          "earlyThree": false,
+          "openLook": true,
+          "shotOverride": {
+            "kind": "three",
+            "skill": "tp",
+            "key": "three",
+            "adjustment": 0
+          }
+        },
+        "turnovers": [],
+        "transitions": [
+          {
+            "phase": "pass",
+            "seconds": 3,
+            "before": 2,
+            "after": 0,
+            "ok": false,
+            "draws": 1
+          },
+          {
+            "phase": "shot",
+            "seconds": 5,
+            "before": 0,
+            "after": 0,
+            "ok": false,
+            "draws": 2
+          }
+        ],
+        "draws": 2
+      },
+      "candidate": {
+        "clock": 2,
+        "kind": "drive-kick",
+        "remaining": 0,
+        "decision": null,
+        "turnovers": [
+          {
+            "type": "shotClock",
+            "player": 1,
+            "draws": 1
+          }
+        ],
+        "transitions": [
+          {
+            "phase": "pass",
+            "seconds": 3,
+            "before": 2,
+            "after": 0,
+            "ok": false,
+            "draws": 1
+          },
+          {
+            "phase": "turnover",
+            "seconds": 0,
+            "before": 0,
+            "after": 0,
+            "ok": false,
+            "draws": 1
+          }
+        ],
+        "draws": 1
+      }
+    },
+    {
+      "kind": "drive-kick",
+      "clock": 3,
+      "production": {
+        "clock": 3,
+        "kind": "drive-kick",
+        "remaining": 0,
+        "decision": {
+          "p": {
+            "id": 2,
+            "name": "Receiver",
+            "attributes": {
+              "tp": 75
+            }
+          },
+          "lastPasser": {
+            "id": 1,
+            "name": "Handler",
+            "attributes": {
+              "spd": 100,
+              "pss": 75
+            }
+          },
+          "action": "shoot",
+          "forced": false,
+          "iso": false,
+          "earlyThree": false,
+          "openLook": true,
+          "shotOverride": {
+            "kind": "three",
+            "skill": "tp",
+            "key": "three",
+            "adjustment": 0
+          }
+        },
+        "turnovers": [],
+        "transitions": [
+          {
+            "phase": "pass",
+            "seconds": 3,
+            "before": 3,
+            "after": 0,
+            "ok": false,
+            "draws": 1
+          },
+          {
+            "phase": "shot",
+            "seconds": 5,
+            "before": 0,
+            "after": 0,
+            "ok": false,
+            "draws": 2
+          }
+        ],
+        "draws": 2
+      },
+      "candidate": {
+        "clock": 3,
+        "kind": "drive-kick",
+        "remaining": 0,
+        "decision": null,
+        "turnovers": [
+          {
+            "type": "shotClock",
+            "player": 1,
+            "draws": 1
+          }
+        ],
+        "transitions": [
+          {
+            "phase": "pass",
+            "seconds": 3,
+            "before": 3,
+            "after": 0,
+            "ok": false,
+            "draws": 1
+          },
+          {
+            "phase": "turnover",
+            "seconds": 0,
+            "before": 0,
+            "after": 0,
+            "ok": false,
+            "draws": 1
+          }
+        ],
+        "draws": 1
+      }
+    },
+    {
+      "kind": "drive-kick",
+      "clock": 4,
+      "production": {
+        "clock": 4,
+        "kind": "drive-kick",
+        "remaining": 0,
+        "decision": {
+          "p": {
+            "id": 2,
+            "name": "Receiver",
+            "attributes": {
+              "tp": 75
+            }
+          },
+          "lastPasser": {
+            "id": 1,
+            "name": "Handler",
+            "attributes": {
+              "spd": 100,
+              "pss": 75
+            }
+          },
+          "action": "shoot",
+          "forced": false,
+          "iso": false,
+          "earlyThree": false,
+          "openLook": true,
+          "shotOverride": {
+            "kind": "three",
+            "skill": "tp",
+            "key": "three",
+            "adjustment": 0
+          }
+        },
+        "turnovers": [],
+        "transitions": [
+          {
+            "phase": "pass",
+            "seconds": 3,
+            "before": 4,
+            "after": 1,
+            "ok": true,
+            "draws": 1
+          },
+          {
+            "phase": "shot",
+            "seconds": 5,
+            "before": 1,
+            "after": 0,
+            "ok": false,
+            "draws": 2
+          }
+        ],
+        "draws": 2
+      },
+      "candidate": {
+        "clock": 4,
+        "kind": "drive-kick",
+        "remaining": 0,
+        "decision": null,
+        "turnovers": [
+          {
+            "type": "shotClock",
+            "player": 2,
+            "draws": 2
+          }
+        ],
+        "transitions": [
+          {
+            "phase": "pass",
+            "seconds": 3,
+            "before": 4,
+            "after": 1,
+            "ok": true,
+            "draws": 1
+          },
+          {
+            "phase": "shot",
+            "seconds": 5,
+            "before": 1,
+            "after": 0,
+            "ok": false,
+            "draws": 2
+          },
+          {
+            "phase": "turnover",
+            "seconds": 0,
+            "before": 0,
+            "after": 0,
+            "ok": false,
+            "draws": 2
+          }
+        ],
+        "draws": 2
+      }
+    },
+    {
+      "kind": "drive-kick",
+      "clock": 6,
+      "production": {
+        "clock": 6,
+        "kind": "drive-kick",
+        "remaining": 0,
+        "decision": {
+          "p": {
+            "id": 2,
+            "name": "Receiver",
+            "attributes": {
+              "tp": 75
+            }
+          },
+          "lastPasser": {
+            "id": 1,
+            "name": "Handler",
+            "attributes": {
+              "spd": 100,
+              "pss": 75
+            }
+          },
+          "action": "shoot",
+          "forced": false,
+          "iso": false,
+          "earlyThree": false,
+          "openLook": true,
+          "shotOverride": {
+            "kind": "three",
+            "skill": "tp",
+            "key": "three",
+            "adjustment": 0
+          }
+        },
+        "turnovers": [],
+        "transitions": [
+          {
+            "phase": "pass",
+            "seconds": 3,
+            "before": 6,
+            "after": 3,
+            "ok": true,
+            "draws": 1
+          },
+          {
+            "phase": "shot",
+            "seconds": 5,
+            "before": 3,
+            "after": 0,
+            "ok": false,
+            "draws": 2
+          }
+        ],
+        "draws": 2
+      },
+      "candidate": {
+        "clock": 6,
+        "kind": "drive-kick",
+        "remaining": 0,
+        "decision": null,
+        "turnovers": [
+          {
+            "type": "shotClock",
+            "player": 2,
+            "draws": 2
+          }
+        ],
+        "transitions": [
+          {
+            "phase": "pass",
+            "seconds": 3,
+            "before": 6,
+            "after": 3,
+            "ok": true,
+            "draws": 1
+          },
+          {
+            "phase": "shot",
+            "seconds": 5,
+            "before": 3,
+            "after": 0,
+            "ok": false,
+            "draws": 2
+          },
+          {
+            "phase": "turnover",
+            "seconds": 0,
+            "before": 0,
+            "after": 0,
+            "ok": false,
+            "draws": 2
+          }
+        ],
+        "draws": 2
+      }
+    },
+    {
+      "kind": "drive-kick",
+      "clock": 7,
+      "production": {
+        "clock": 7,
+        "kind": "drive-kick",
+        "remaining": 0,
+        "decision": {
+          "p": {
+            "id": 2,
+            "name": "Receiver",
+            "attributes": {
+              "tp": 75
+            }
+          },
+          "lastPasser": {
+            "id": 1,
+            "name": "Handler",
+            "attributes": {
+              "spd": 100,
+              "pss": 75
+            }
+          },
+          "action": "shoot",
+          "forced": false,
+          "iso": false,
+          "earlyThree": false,
+          "openLook": true,
+          "shotOverride": {
+            "kind": "three",
+            "skill": "tp",
+            "key": "three",
+            "adjustment": 0
+          }
+        },
+        "turnovers": [],
+        "transitions": [
+          {
+            "phase": "pass",
+            "seconds": 3,
+            "before": 7,
+            "after": 4,
+            "ok": true,
+            "draws": 1
+          },
+          {
+            "phase": "shot",
+            "seconds": 5,
+            "before": 4,
+            "after": 0,
+            "ok": false,
+            "draws": 2
+          }
+        ],
+        "draws": 2
+      },
+      "candidate": {
+        "clock": 7,
+        "kind": "drive-kick",
+        "remaining": 0,
+        "decision": null,
+        "turnovers": [
+          {
+            "type": "shotClock",
+            "player": 2,
+            "draws": 2
+          }
+        ],
+        "transitions": [
+          {
+            "phase": "pass",
+            "seconds": 3,
+            "before": 7,
+            "after": 4,
+            "ok": true,
+            "draws": 1
+          },
+          {
+            "phase": "shot",
+            "seconds": 5,
+            "before": 4,
+            "after": 0,
+            "ok": false,
+            "draws": 2
+          },
+          {
+            "phase": "turnover",
+            "seconds": 0,
+            "before": 0,
+            "after": 0,
+            "ok": false,
+            "draws": 2
+          }
+        ],
+        "draws": 2
+      }
+    },
+    {
+      "kind": "drive-kick",
+      "clock": 8,
+      "production": {
+        "clock": 8,
+        "kind": "drive-kick",
+        "remaining": 0,
+        "decision": {
+          "p": {
+            "id": 2,
+            "name": "Receiver",
+            "attributes": {
+              "tp": 75
+            }
+          },
+          "lastPasser": {
+            "id": 1,
+            "name": "Handler",
+            "attributes": {
+              "spd": 100,
+              "pss": 75
+            }
+          },
+          "action": "shoot",
+          "forced": false,
+          "iso": false,
+          "earlyThree": false,
+          "openLook": true,
+          "shotOverride": {
+            "kind": "three",
+            "skill": "tp",
+            "key": "three",
+            "adjustment": 0
+          }
+        },
+        "turnovers": [],
+        "transitions": [
+          {
+            "phase": "pass",
+            "seconds": 3,
+            "before": 8,
+            "after": 5,
+            "ok": true,
+            "draws": 1
+          },
+          {
+            "phase": "shot",
+            "seconds": 5,
+            "before": 5,
+            "after": 0,
+            "ok": false,
+            "draws": 2
+          }
+        ],
+        "draws": 2
+      },
+      "candidate": {
+        "clock": 8,
+        "kind": "drive-kick",
+        "remaining": 0,
+        "decision": null,
+        "turnovers": [
+          {
+            "type": "shotClock",
+            "player": 2,
+            "draws": 2
+          }
+        ],
+        "transitions": [
+          {
+            "phase": "pass",
+            "seconds": 3,
+            "before": 8,
+            "after": 5,
+            "ok": true,
+            "draws": 1
+          },
+          {
+            "phase": "shot",
+            "seconds": 5,
+            "before": 5,
+            "after": 0,
+            "ok": false,
+            "draws": 2
+          },
+          {
+            "phase": "turnover",
+            "seconds": 0,
+            "before": 0,
+            "after": 0,
+            "ok": false,
+            "draws": 2
+          }
+        ],
+        "draws": 2
+      }
+    },
+    {
+      "kind": "drive-kick",
+      "clock": 9,
+      "production": {
+        "clock": 9,
+        "kind": "drive-kick",
+        "remaining": 1,
+        "decision": {
+          "p": {
+            "id": 2,
+            "name": "Receiver",
+            "attributes": {
+              "tp": 75
+            }
+          },
+          "lastPasser": {
+            "id": 1,
+            "name": "Handler",
+            "attributes": {
+              "spd": 100,
+              "pss": 75
+            }
+          },
+          "action": "shoot",
+          "forced": false,
+          "iso": false,
+          "earlyThree": false,
+          "openLook": true,
+          "shotOverride": {
+            "kind": "three",
+            "skill": "tp",
+            "key": "three",
+            "adjustment": 0
+          }
+        },
+        "turnovers": [],
+        "transitions": [
+          {
+            "phase": "pass",
+            "seconds": 3,
+            "before": 9,
+            "after": 6,
+            "ok": true,
+            "draws": 1
+          },
+          {
+            "phase": "shot",
+            "seconds": 5,
+            "before": 6,
+            "after": 1,
+            "ok": true,
+            "draws": 2
+          }
+        ],
+        "draws": 2
+      },
+      "candidate": {
+        "clock": 9,
+        "kind": "drive-kick",
+        "remaining": 1,
+        "decision": {
+          "p": {
+            "id": 2,
+            "name": "Receiver",
+            "attributes": {
+              "tp": 75
+            }
+          },
+          "lastPasser": {
+            "id": 1,
+            "name": "Handler",
+            "attributes": {
+              "spd": 100,
+              "pss": 75
+            }
+          },
+          "action": "shoot",
+          "forced": false,
+          "iso": false,
+          "earlyThree": false,
+          "openLook": true,
+          "shotOverride": {
+            "kind": "three",
+            "skill": "tp",
+            "key": "three",
+            "adjustment": 0
+          }
+        },
+        "turnovers": [],
+        "transitions": [
+          {
+            "phase": "pass",
+            "seconds": 3,
+            "before": 9,
+            "after": 6,
+            "ok": true,
+            "draws": 1
+          },
+          {
+            "phase": "shot",
+            "seconds": 5,
+            "before": 6,
+            "after": 1,
+            "ok": true,
+            "draws": 2
+          }
+        ],
+        "draws": 2
+      }
+    },
+    {
+      "kind": "drive-kick",
+      "clock": 14,
+      "production": {
+        "clock": 14,
+        "kind": "drive-kick",
+        "remaining": 6,
+        "decision": {
+          "p": {
+            "id": 2,
+            "name": "Receiver",
+            "attributes": {
+              "tp": 75
+            }
+          },
+          "lastPasser": {
+            "id": 1,
+            "name": "Handler",
+            "attributes": {
+              "spd": 100,
+              "pss": 75
+            }
+          },
+          "action": "shoot",
+          "forced": false,
+          "iso": false,
+          "earlyThree": false,
+          "openLook": true,
+          "shotOverride": {
+            "kind": "three",
+            "skill": "tp",
+            "key": "three",
+            "adjustment": 0
+          }
+        },
+        "turnovers": [],
+        "transitions": [
+          {
+            "phase": "pass",
+            "seconds": 3,
+            "before": 14,
+            "after": 11,
+            "ok": true,
+            "draws": 1
+          },
+          {
+            "phase": "shot",
+            "seconds": 5,
+            "before": 11,
+            "after": 6,
+            "ok": true,
+            "draws": 2
+          }
+        ],
+        "draws": 2
+      },
+      "candidate": {
+        "clock": 14,
+        "kind": "drive-kick",
+        "remaining": 6,
+        "decision": {
+          "p": {
+            "id": 2,
+            "name": "Receiver",
+            "attributes": {
+              "tp": 75
+            }
+          },
+          "lastPasser": {
+            "id": 1,
+            "name": "Handler",
+            "attributes": {
+              "spd": 100,
+              "pss": 75
+            }
+          },
+          "action": "shoot",
+          "forced": false,
+          "iso": false,
+          "earlyThree": false,
+          "openLook": true,
+          "shotOverride": {
+            "kind": "three",
+            "skill": "tp",
+            "key": "three",
+            "adjustment": 0
+          }
+        },
+        "turnovers": [],
+        "transitions": [
+          {
+            "phase": "pass",
+            "seconds": 3,
+            "before": 14,
+            "after": 11,
+            "ok": true,
+            "draws": 1
+          },
+          {
+            "phase": "shot",
+            "seconds": 5,
+            "before": 11,
+            "after": 6,
+            "ok": true,
+            "draws": 2
+          }
+        ],
+        "draws": 2
+      }
+    },
+    {
+      "kind": "early-no-pass",
+      "clock": 2,
+      "production": {
+        "clock": 2,
+        "kind": "early-no-pass",
+        "remaining": 0,
+        "decision": {
+          "p": {
+            "id": 1,
+            "name": "Handler",
+            "attributes": {
+              "spd": 100,
+              "pss": 75
+            }
+          },
+          "lastPasser": null,
+          "action": "shoot",
+          "forced": false,
+          "iso": false,
+          "earlyThree": true,
+          "openLook": true,
+          "shotOverride": {
+            "kind": "three",
+            "skill": "tp",
+            "key": "runningThree",
+            "adjustment": 0
+          }
+        },
+        "turnovers": [],
+        "transitions": [
+          {
+            "phase": "shot",
+            "seconds": 3,
+            "before": 2,
+            "after": 0,
+            "ok": false,
+            "draws": 2
+          }
+        ],
+        "draws": 2
+      },
+      "candidate": {
+        "clock": 2,
+        "kind": "early-no-pass",
+        "remaining": 0,
+        "decision": null,
+        "turnovers": [
+          {
+            "type": "shotClock",
+            "player": 1,
+            "draws": 2
+          }
+        ],
+        "transitions": [
+          {
+            "phase": "shot",
+            "seconds": 3,
+            "before": 2,
+            "after": 0,
+            "ok": false,
+            "draws": 2
+          },
+          {
+            "phase": "turnover",
+            "seconds": 0,
+            "before": 0,
+            "after": 0,
+            "ok": false,
+            "draws": 2
+          }
+        ],
+        "draws": 2
+      }
+    },
+    {
+      "kind": "early-no-pass",
+      "clock": 3,
+      "production": {
+        "clock": 3,
+        "kind": "early-no-pass",
+        "remaining": 0,
+        "decision": {
+          "p": {
+            "id": 1,
+            "name": "Handler",
+            "attributes": {
+              "spd": 100,
+              "pss": 75
+            }
+          },
+          "lastPasser": null,
+          "action": "shoot",
+          "forced": false,
+          "iso": false,
+          "earlyThree": true,
+          "openLook": true,
+          "shotOverride": {
+            "kind": "three",
+            "skill": "tp",
+            "key": "runningThree",
+            "adjustment": 0
+          }
+        },
+        "turnovers": [],
+        "transitions": [
+          {
+            "phase": "shot",
+            "seconds": 3,
+            "before": 3,
+            "after": 0,
+            "ok": false,
+            "draws": 2
+          }
+        ],
+        "draws": 2
+      },
+      "candidate": {
+        "clock": 3,
+        "kind": "early-no-pass",
+        "remaining": 0,
+        "decision": null,
+        "turnovers": [
+          {
+            "type": "shotClock",
+            "player": 1,
+            "draws": 2
+          }
+        ],
+        "transitions": [
+          {
+            "phase": "shot",
+            "seconds": 3,
+            "before": 3,
+            "after": 0,
+            "ok": false,
+            "draws": 2
+          },
+          {
+            "phase": "turnover",
+            "seconds": 0,
+            "before": 0,
+            "after": 0,
+            "ok": false,
+            "draws": 2
+          }
+        ],
+        "draws": 2
+      }
+    },
+    {
+      "kind": "early-no-pass",
+      "clock": 4,
+      "production": {
+        "clock": 4,
+        "kind": "early-no-pass",
+        "remaining": 1,
+        "decision": {
+          "p": {
+            "id": 1,
+            "name": "Handler",
+            "attributes": {
+              "spd": 100,
+              "pss": 75
+            }
+          },
+          "lastPasser": null,
+          "action": "shoot",
+          "forced": false,
+          "iso": false,
+          "earlyThree": true,
+          "openLook": true,
+          "shotOverride": {
+            "kind": "three",
+            "skill": "tp",
+            "key": "runningThree",
+            "adjustment": 0
+          }
+        },
+        "turnovers": [],
+        "transitions": [
+          {
+            "phase": "shot",
+            "seconds": 3,
+            "before": 4,
+            "after": 1,
+            "ok": true,
+            "draws": 2
+          }
+        ],
+        "draws": 2
+      },
+      "candidate": {
+        "clock": 4,
+        "kind": "early-no-pass",
+        "remaining": 1,
+        "decision": {
+          "p": {
+            "id": 1,
+            "name": "Handler",
+            "attributes": {
+              "spd": 100,
+              "pss": 75
+            }
+          },
+          "lastPasser": null,
+          "action": "shoot",
+          "forced": false,
+          "iso": false,
+          "earlyThree": true,
+          "openLook": true,
+          "shotOverride": {
+            "kind": "three",
+            "skill": "tp",
+            "key": "runningThree",
+            "adjustment": 0
+          }
+        },
+        "turnovers": [],
+        "transitions": [
+          {
+            "phase": "shot",
+            "seconds": 3,
+            "before": 4,
+            "after": 1,
+            "ok": true,
+            "draws": 2
+          }
+        ],
+        "draws": 2
+      }
+    },
+    {
+      "kind": "early-pass",
+      "clock": 2,
+      "production": {
+        "clock": 2,
+        "kind": "early-pass",
+        "remaining": 0,
+        "decision": {
+          "p": {
+            "id": 2,
+            "name": "Receiver",
+            "attributes": {
+              "tp": 75
+            }
+          },
+          "lastPasser": {
+            "id": 1,
+            "name": "Handler",
+            "attributes": {
+              "spd": 100,
+              "pss": 75
+            }
+          },
+          "action": "shoot",
+          "forced": false,
+          "iso": false,
+          "earlyThree": true,
+          "openLook": true,
+          "shotOverride": {
+            "kind": "three",
+            "skill": "tp",
+            "key": "runningThree",
+            "adjustment": 0
+          }
+        },
+        "turnovers": [],
+        "transitions": [
+          {
+            "phase": "pass",
+            "seconds": 3,
+            "before": 2,
+            "after": 0,
+            "ok": false,
+            "draws": 2
+          },
+          {
+            "phase": "shot",
+            "seconds": 3,
+            "before": 0,
+            "after": 0,
+            "ok": false,
+            "draws": 3
+          }
+        ],
+        "draws": 3
+      },
+      "candidate": {
+        "clock": 2,
+        "kind": "early-pass",
+        "remaining": 0,
+        "decision": null,
+        "turnovers": [
+          {
+            "type": "shotClock",
+            "player": 1,
+            "draws": 2
+          }
+        ],
+        "transitions": [
+          {
+            "phase": "pass",
+            "seconds": 3,
+            "before": 2,
+            "after": 0,
+            "ok": false,
+            "draws": 2
+          },
+          {
+            "phase": "turnover",
+            "seconds": 0,
+            "before": 0,
+            "after": 0,
+            "ok": false,
+            "draws": 2
+          }
+        ],
+        "draws": 2
+      }
+    },
+    {
+      "kind": "early-pass",
+      "clock": 3,
+      "production": {
+        "clock": 3,
+        "kind": "early-pass",
+        "remaining": 0,
+        "decision": {
+          "p": {
+            "id": 2,
+            "name": "Receiver",
+            "attributes": {
+              "tp": 75
+            }
+          },
+          "lastPasser": {
+            "id": 1,
+            "name": "Handler",
+            "attributes": {
+              "spd": 100,
+              "pss": 75
+            }
+          },
+          "action": "shoot",
+          "forced": false,
+          "iso": false,
+          "earlyThree": true,
+          "openLook": true,
+          "shotOverride": {
+            "kind": "three",
+            "skill": "tp",
+            "key": "runningThree",
+            "adjustment": 0
+          }
+        },
+        "turnovers": [],
+        "transitions": [
+          {
+            "phase": "pass",
+            "seconds": 3,
+            "before": 3,
+            "after": 0,
+            "ok": false,
+            "draws": 2
+          },
+          {
+            "phase": "shot",
+            "seconds": 3,
+            "before": 0,
+            "after": 0,
+            "ok": false,
+            "draws": 3
+          }
+        ],
+        "draws": 3
+      },
+      "candidate": {
+        "clock": 3,
+        "kind": "early-pass",
+        "remaining": 0,
+        "decision": null,
+        "turnovers": [
+          {
+            "type": "shotClock",
+            "player": 1,
+            "draws": 2
+          }
+        ],
+        "transitions": [
+          {
+            "phase": "pass",
+            "seconds": 3,
+            "before": 3,
+            "after": 0,
+            "ok": false,
+            "draws": 2
+          },
+          {
+            "phase": "turnover",
+            "seconds": 0,
+            "before": 0,
+            "after": 0,
+            "ok": false,
+            "draws": 2
+          }
+        ],
+        "draws": 2
+      }
+    },
+    {
+      "kind": "early-pass",
+      "clock": 4,
+      "production": {
+        "clock": 4,
+        "kind": "early-pass",
+        "remaining": 0,
+        "decision": {
+          "p": {
+            "id": 2,
+            "name": "Receiver",
+            "attributes": {
+              "tp": 75
+            }
+          },
+          "lastPasser": {
+            "id": 1,
+            "name": "Handler",
+            "attributes": {
+              "spd": 100,
+              "pss": 75
+            }
+          },
+          "action": "shoot",
+          "forced": false,
+          "iso": false,
+          "earlyThree": true,
+          "openLook": true,
+          "shotOverride": {
+            "kind": "three",
+            "skill": "tp",
+            "key": "runningThree",
+            "adjustment": 0
+          }
+        },
+        "turnovers": [],
+        "transitions": [
+          {
+            "phase": "pass",
+            "seconds": 3,
+            "before": 4,
+            "after": 1,
+            "ok": true,
+            "draws": 2
+          },
+          {
+            "phase": "shot",
+            "seconds": 3,
+            "before": 1,
+            "after": 0,
+            "ok": false,
+            "draws": 3
+          }
+        ],
+        "draws": 3
+      },
+      "candidate": {
+        "clock": 4,
+        "kind": "early-pass",
+        "remaining": 0,
+        "decision": null,
+        "turnovers": [
+          {
+            "type": "shotClock",
+            "player": 2,
+            "draws": 3
+          }
+        ],
+        "transitions": [
+          {
+            "phase": "pass",
+            "seconds": 3,
+            "before": 4,
+            "after": 1,
+            "ok": true,
+            "draws": 2
+          },
+          {
+            "phase": "shot",
+            "seconds": 3,
+            "before": 1,
+            "after": 0,
+            "ok": false,
+            "draws": 3
+          },
+          {
+            "phase": "turnover",
+            "seconds": 0,
+            "before": 0,
+            "after": 0,
+            "ok": false,
+            "draws": 3
+          }
+        ],
+        "draws": 3
+      }
+    },
+    {
+      "kind": "early-pass",
+      "clock": 5,
+      "production": {
+        "clock": 5,
+        "kind": "early-pass",
+        "remaining": 0,
+        "decision": {
+          "p": {
+            "id": 2,
+            "name": "Receiver",
+            "attributes": {
+              "tp": 75
+            }
+          },
+          "lastPasser": {
+            "id": 1,
+            "name": "Handler",
+            "attributes": {
+              "spd": 100,
+              "pss": 75
+            }
+          },
+          "action": "shoot",
+          "forced": false,
+          "iso": false,
+          "earlyThree": true,
+          "openLook": true,
+          "shotOverride": {
+            "kind": "three",
+            "skill": "tp",
+            "key": "runningThree",
+            "adjustment": 0
+          }
+        },
+        "turnovers": [],
+        "transitions": [
+          {
+            "phase": "pass",
+            "seconds": 3,
+            "before": 5,
+            "after": 2,
+            "ok": true,
+            "draws": 2
+          },
+          {
+            "phase": "shot",
+            "seconds": 3,
+            "before": 2,
+            "after": 0,
+            "ok": false,
+            "draws": 3
+          }
+        ],
+        "draws": 3
+      },
+      "candidate": {
+        "clock": 5,
+        "kind": "early-pass",
+        "remaining": 0,
+        "decision": null,
+        "turnovers": [
+          {
+            "type": "shotClock",
+            "player": 2,
+            "draws": 3
+          }
+        ],
+        "transitions": [
+          {
+            "phase": "pass",
+            "seconds": 3,
+            "before": 5,
+            "after": 2,
+            "ok": true,
+            "draws": 2
+          },
+          {
+            "phase": "shot",
+            "seconds": 3,
+            "before": 2,
+            "after": 0,
+            "ok": false,
+            "draws": 3
+          },
+          {
+            "phase": "turnover",
+            "seconds": 0,
+            "before": 0,
+            "after": 0,
+            "ok": false,
+            "draws": 3
+          }
+        ],
+        "draws": 3
+      }
+    },
+    {
+      "kind": "early-pass",
+      "clock": 6,
+      "production": {
+        "clock": 6,
+        "kind": "early-pass",
+        "remaining": 0,
+        "decision": {
+          "p": {
+            "id": 2,
+            "name": "Receiver",
+            "attributes": {
+              "tp": 75
+            }
+          },
+          "lastPasser": {
+            "id": 1,
+            "name": "Handler",
+            "attributes": {
+              "spd": 100,
+              "pss": 75
+            }
+          },
+          "action": "shoot",
+          "forced": false,
+          "iso": false,
+          "earlyThree": true,
+          "openLook": true,
+          "shotOverride": {
+            "kind": "three",
+            "skill": "tp",
+            "key": "runningThree",
+            "adjustment": 0
+          }
+        },
+        "turnovers": [],
+        "transitions": [
+          {
+            "phase": "pass",
+            "seconds": 3,
+            "before": 6,
+            "after": 3,
+            "ok": true,
+            "draws": 2
+          },
+          {
+            "phase": "shot",
+            "seconds": 3,
+            "before": 3,
+            "after": 0,
+            "ok": false,
+            "draws": 3
+          }
+        ],
+        "draws": 3
+      },
+      "candidate": {
+        "clock": 6,
+        "kind": "early-pass",
+        "remaining": 0,
+        "decision": null,
+        "turnovers": [
+          {
+            "type": "shotClock",
+            "player": 2,
+            "draws": 3
+          }
+        ],
+        "transitions": [
+          {
+            "phase": "pass",
+            "seconds": 3,
+            "before": 6,
+            "after": 3,
+            "ok": true,
+            "draws": 2
+          },
+          {
+            "phase": "shot",
+            "seconds": 3,
+            "before": 3,
+            "after": 0,
+            "ok": false,
+            "draws": 3
+          },
+          {
+            "phase": "turnover",
+            "seconds": 0,
+            "before": 0,
+            "after": 0,
+            "ok": false,
+            "draws": 3
+          }
+        ],
+        "draws": 3
+      }
+    },
+    {
+      "kind": "early-pass",
+      "clock": 7,
+      "production": {
+        "clock": 7,
+        "kind": "early-pass",
+        "remaining": 1,
+        "decision": {
+          "p": {
+            "id": 2,
+            "name": "Receiver",
+            "attributes": {
+              "tp": 75
+            }
+          },
+          "lastPasser": {
+            "id": 1,
+            "name": "Handler",
+            "attributes": {
+              "spd": 100,
+              "pss": 75
+            }
+          },
+          "action": "shoot",
+          "forced": false,
+          "iso": false,
+          "earlyThree": true,
+          "openLook": true,
+          "shotOverride": {
+            "kind": "three",
+            "skill": "tp",
+            "key": "runningThree",
+            "adjustment": 0
+          }
+        },
+        "turnovers": [],
+        "transitions": [
+          {
+            "phase": "pass",
+            "seconds": 3,
+            "before": 7,
+            "after": 4,
+            "ok": true,
+            "draws": 2
+          },
+          {
+            "phase": "shot",
+            "seconds": 3,
+            "before": 4,
+            "after": 1,
+            "ok": true,
+            "draws": 3
+          }
+        ],
+        "draws": 3
+      },
+      "candidate": {
+        "clock": 7,
+        "kind": "early-pass",
+        "remaining": 1,
+        "decision": {
+          "p": {
+            "id": 2,
+            "name": "Receiver",
+            "attributes": {
+              "tp": 75
+            }
+          },
+          "lastPasser": {
+            "id": 1,
+            "name": "Handler",
+            "attributes": {
+              "spd": 100,
+              "pss": 75
+            }
+          },
+          "action": "shoot",
+          "forced": false,
+          "iso": false,
+          "earlyThree": true,
+          "openLook": true,
+          "shotOverride": {
+            "kind": "three",
+            "skill": "tp",
+            "key": "runningThree",
+            "adjustment": 0
+          }
+        },
+        "turnovers": [],
+        "transitions": [
+          {
+            "phase": "pass",
+            "seconds": 3,
+            "before": 7,
+            "after": 4,
+            "ok": true,
+            "draws": 2
+          },
+          {
+            "phase": "shot",
+            "seconds": 3,
+            "before": 4,
+            "after": 1,
+            "ok": true,
+            "draws": 3
+          }
+        ],
+        "draws": 3
+      }
+    }
+  ]
+}

@@ -1,0 +1,4077 @@
+{
+  "fixture": {
+    "games": 150,
+    "creationSeed": 61005,
+    "seeds": "100000–100149",
+    "teams": 30,
+    "playersPerTeam": 15,
+    "preseasonReset": true
+  },
+  "runtimeSeconds": 47.055219462000004,
+  "checks": {
+    "fullGameAndStateParity": 150,
+    "acceptedBaselineTotals": "EXACT MATCH",
+    "tempoOnlyRunning": 0,
+    "runningPNR": 0,
+    "allRunningMappedToEvent": 761
+  },
+  "totals": {
+    "pts": 36924,
+    "fga": 28547,
+    "fgm": 14041,
+    "tpa": 10694,
+    "tpm": 4114,
+    "fta": 6151,
+    "ftm": 4728,
+    "poss": 153570,
+    "tov": 3907,
+    "orb": 3789
+  },
+  "opportunities": {
+    "created": 13023,
+    "consumed": 12757,
+    "status": {
+      "consumed": 12757,
+      "unused: period boundary": 202,
+      "unused: game ended": 63,
+      "unused: next entry wrong side": 1
+    },
+    "exclusiveFirstResolution": {
+      "other three": 2932,
+      "post": 1412,
+      "dunk": 663,
+      "floater": 682,
+      "turnover": 1740,
+      "Running Layup": 688,
+      "shooting foul": 1227,
+      "midrange": 1207,
+      "early three": 1914,
+      "other transition three": 265,
+      "non-shooting foul": 27
+    },
+    "shotIncidence": {
+      "Running Layup": 761,
+      "early three": 2158,
+      "other transition three": 304,
+      "other three": 3392,
+      "dunk": 1204,
+      "floater": 800,
+      "other rim": 711,
+      "midrange": 1433,
+      "post": 1691
+    },
+    "directShotEvaluations": {
+      "Running Layup": 761,
+      "early three": 2158,
+      "other transition three": 303,
+      "other three": 3281,
+      "dunk": 734,
+      "floater": 773,
+      "other rim": 0,
+      "midrange": 1356,
+      "post": 1617
+    },
+    "incidence": {
+      "turnover": 1783,
+      "foul": 1504,
+      "restart": 241,
+      "OREB": 1438,
+      "PNR": 61
+    },
+    "noShot": 1767,
+    "meanPoints": 1.185074860860704
+  },
+  "byOrigin": {
+    "primary missed shot + defensive rebound": {
+      "created": 9123,
+      "consumed": 8932,
+      "status": {
+        "consumed": 8932,
+        "unused: period boundary": 141,
+        "unused: game ended": 49,
+        "unused: next entry wrong side": 1
+      },
+      "exclusiveFirstResolution": {
+        "other three": 2081,
+        "post": 991,
+        "dunk": 462,
+        "floater": 482,
+        "Running Layup": 475,
+        "shooting foul": 865,
+        "turnover": 1235,
+        "early three": 1294,
+        "midrange": 848,
+        "other transition three": 176,
+        "non-shooting foul": 23
+      },
+      "shotIncidence": {
+        "Running Layup": 525,
+        "early three": 1460,
+        "other transition three": 202,
+        "other three": 2412,
+        "dunk": 835,
+        "floater": 565,
+        "other rim": 499,
+        "midrange": 1008,
+        "post": 1182
+      },
+      "directShotEvaluations": {
+        "Running Layup": 525,
+        "early three": 1460,
+        "other transition three": 202,
+        "other three": 2337,
+        "dunk": 507,
+        "floater": 544,
+        "other rim": 0,
+        "midrange": 956,
+        "post": 1137
+      },
+      "incidence": {
+        "turnover": 1263,
+        "foul": 1057,
+        "restart": 166,
+        "OREB": 995,
+        "PNR": 44
+      },
+      "noShot": 1258,
+      "meanPoints": 1.1860725481415137
+    },
+    "blocked shot + defensive rebound": {
+      "created": 713,
+      "consumed": 703,
+      "status": {
+        "consumed": 703,
+        "unused: period boundary": 9,
+        "unused: game ended": 1
+      },
+      "exclusiveFirstResolution": {
+        "other three": 148,
+        "post": 79,
+        "midrange": 76,
+        "early three": 110,
+        "dunk": 38,
+        "shooting foul": 65,
+        "other transition three": 14,
+        "turnover": 94,
+        "Running Layup": 50,
+        "floater": 28,
+        "non-shooting foul": 1
+      },
+      "shotIncidence": {
+        "Running Layup": 55,
+        "early three": 121,
+        "other transition three": 17,
+        "other three": 168,
+        "dunk": 64,
+        "floater": 37,
+        "other rim": 42,
+        "midrange": 87,
+        "post": 94
+      },
+      "directShotEvaluations": {
+        "Running Layup": 55,
+        "early three": 121,
+        "other transition three": 17,
+        "other three": 165,
+        "dunk": 43,
+        "floater": 35,
+        "other rim": 0,
+        "midrange": 84,
+        "post": 88
+      },
+      "incidence": {
+        "turnover": 97,
+        "foul": 84,
+        "restart": 12,
+        "OREB": 74,
+        "PNR": 2
+      },
+      "noShot": 95,
+      "meanPoints": 1.1522048364153628
+    },
+    "steal": {
+      "created": 1716,
+      "consumed": 1678,
+      "status": {
+        "consumed": 1678,
+        "unused: period boundary": 30,
+        "unused: game ended": 8
+      },
+      "exclusiveFirstResolution": {
+        "turnover": 206,
+        "shooting foul": 169,
+        "post": 180,
+        "early three": 278,
+        "midrange": 144,
+        "other three": 393,
+        "other transition three": 49,
+        "Running Layup": 89,
+        "dunk": 81,
+        "floater": 88,
+        "non-shooting foul": 1
+      },
+      "shotIncidence": {
+        "Running Layup": 104,
+        "early three": 315,
+        "other transition three": 55,
+        "other three": 456,
+        "dunk": 161,
+        "floater": 100,
+        "other rim": 90,
+        "midrange": 181,
+        "post": 218
+      },
+      "directShotEvaluations": {
+        "Running Layup": 104,
+        "early three": 315,
+        "other transition three": 54,
+        "other three": 435,
+        "dunk": 93,
+        "floater": 98,
+        "other rim": 0,
+        "midrange": 166,
+        "post": 206
+      },
+      "incidence": {
+        "turnover": 213,
+        "foul": 203,
+        "restart": 41,
+        "OREB": 205,
+        "PNR": 10
+      },
+      "noShot": 207,
+      "meanPoints": 1.227056019070322
+    },
+    "missed free throw + defensive rebound": {
+      "created": 545,
+      "consumed": 539,
+      "status": {
+        "consumed": 539,
+        "unused: period boundary": 5,
+        "unused: game ended": 1
+      },
+      "exclusiveFirstResolution": {
+        "midrange": 57,
+        "dunk": 34,
+        "early three": 85,
+        "shooting foul": 50,
+        "turnover": 74,
+        "post": 64,
+        "other three": 106,
+        "other transition three": 8,
+        "Running Layup": 33,
+        "floater": 27,
+        "non-shooting foul": 1
+      },
+      "shotIncidence": {
+        "Running Layup": 35,
+        "early three": 96,
+        "other transition three": 8,
+        "other three": 121,
+        "dunk": 62,
+        "floater": 33,
+        "other rim": 23,
+        "midrange": 63,
+        "post": 78
+      },
+      "directShotEvaluations": {
+        "Running Layup": 35,
+        "early three": 96,
+        "other transition three": 8,
+        "other three": 119,
+        "dunk": 39,
+        "floater": 32,
+        "other rim": 0,
+        "midrange": 61,
+        "post": 74
+      },
+      "incidence": {
+        "turnover": 75,
+        "foul": 64,
+        "restart": 5,
+        "OREB": 58,
+        "PNR": 1
+      },
+      "noShot": 75,
+      "meanPoints": 1.1910946196660481
+    },
+    "secondary missed shot + defensive rebound": {
+      "created": 926,
+      "consumed": 905,
+      "status": {
+        "consumed": 905,
+        "unused: game ended": 4,
+        "unused: period boundary": 17
+      },
+      "exclusiveFirstResolution": {
+        "other three": 204,
+        "dunk": 48,
+        "Running Layup": 41,
+        "post": 98,
+        "turnover": 131,
+        "other transition three": 18,
+        "midrange": 82,
+        "early three": 147,
+        "shooting foul": 78,
+        "floater": 57,
+        "non-shooting foul": 1
+      },
+      "shotIncidence": {
+        "Running Layup": 42,
+        "early three": 166,
+        "other transition three": 22,
+        "other three": 235,
+        "dunk": 82,
+        "floater": 65,
+        "other rim": 57,
+        "midrange": 94,
+        "post": 119
+      },
+      "directShotEvaluations": {
+        "Running Layup": 42,
+        "early three": 166,
+        "other transition three": 22,
+        "other three": 225,
+        "dunk": 52,
+        "floater": 64,
+        "other rim": 0,
+        "midrange": 89,
+        "post": 112
+      },
+      "incidence": {
+        "turnover": 135,
+        "foul": 96,
+        "restart": 17,
+        "OREB": 106,
+        "PNR": 4
+      },
+      "noShot": 132,
+      "meanPoints": 1.1193370165745857
+    }
+  },
+  "running": {
+    "count": 761,
+    "meanClock": 15.678055190538764,
+    "medianClock": 17,
+    "minClock": 1,
+    "maxClock": 21,
+    "fullClock": {
+      "1": 1,
+      "3": 1,
+      "4": 4,
+      "5": 1,
+      "6": 2,
+      "7": 7,
+      "8": 16,
+      "9": 5,
+      "10": 22,
+      "11": 25,
+      "13": 42,
+      "14": 188,
+      "16": 7,
+      "17": 321,
+      "18": 2,
+      "20": 63,
+      "21": 54
+    },
+    "buckets": {
+      "17–19": 323,
+      "14–16": 195,
+      "20+": 117,
+      "0–4": 6,
+      "10–13": 89,
+      "5–9": 31
+    },
+    "depth": {
+      "0": 44,
+      "1": 389,
+      "2": 261,
+      "3": 57,
+      "4": 9,
+      "5": 1
+    },
+    "meanDepth": 1.4756898817345598,
+    "medianDepth": 1,
+    "actions": {
+      "passes": {
+        "evaluations": 619,
+        "total": 707
+      },
+      "drives": {
+        "evaluations": 246,
+        "total": 246
+      },
+      "posts": {
+        "evaluations": 0,
+        "total": 0
+      },
+      "holds": {
+        "evaluations": 63,
+        "total": 64
+      },
+      "ISO": {
+        "evaluations": 106,
+        "total": 106
+      },
+      "screens": {
+        "evaluations": 0,
+        "total": 0
+      },
+      "restarts": {
+        "evaluations": 0,
+        "total": 0
+      },
+      "fouls": {
+        "evaluations": 10,
+        "total": 10
+      },
+      "help": {
+        "evaluations": 85,
+        "total": 85
+      }
+    },
+    "thresholds": {
+      "0": {
+        "count": 44,
+        "share": 0.05781865965834428,
+        "buckets": {
+          "20+": 44
+        }
+      },
+      "1": {
+        "count": 433,
+        "share": 0.568988173455979,
+        "buckets": {
+          "17–19": 310,
+          "20+": 117,
+          "14–16": 6
+        }
+      },
+      "2": {
+        "count": 694,
+        "share": 0.911957950065703,
+        "buckets": {
+          "17–19": 323,
+          "14–16": 194,
+          "20+": 117,
+          "10–13": 60
+        }
+      },
+      "3": {
+        "count": 751,
+        "share": 0.9868593955321945,
+        "buckets": {
+          "17–19": 323,
+          "14–16": 195,
+          "20+": 117,
+          "10–13": 89,
+          "5–9": 27
+        }
+      }
+    },
+    "depthClock": {
+      "0": {
+        "20+": 44
+      },
+      "1": {
+        "17–19": 310,
+        "20+": 73,
+        "14–16": 6
+      },
+      "2": {
+        "14–16": 188,
+        "10–13": 60,
+        "17–19": 13
+      },
+      "3": {
+        "10–13": 29,
+        "5–9": 27,
+        "14–16": 1
+      },
+      "4": {
+        "0–4": 5,
+        "5–9": 4
+      },
+      "5": {
+        "0–4": 1
+      }
+    }
+  },
+  "runningByOrigin": {
+    "primary missed shot + defensive rebound": {
+      "count": 525,
+      "meanClock": 15.678095238095239,
+      "medianClock": 17,
+      "minClock": 1,
+      "maxClock": 21,
+      "fullClock": {
+        "1": 1,
+        "3": 1,
+        "4": 4,
+        "5": 1,
+        "6": 2,
+        "7": 4,
+        "8": 10,
+        "9": 5,
+        "10": 15,
+        "11": 15,
+        "13": 30,
+        "14": 129,
+        "16": 4,
+        "17": 217,
+        "18": 2,
+        "20": 44,
+        "21": 41
+      },
+      "buckets": {
+        "17–19": 219,
+        "14–16": 133,
+        "20+": 85,
+        "0–4": 6,
+        "10–13": 60,
+        "5–9": 22
+      },
+      "depth": {
+        "0": 33,
+        "1": 264,
+        "2": 180,
+        "3": 38,
+        "4": 9,
+        "5": 1
+      },
+      "meanDepth": 1.483809523809524,
+      "medianDepth": 1,
+      "actions": {
+        "passes": {
+          "evaluations": 425,
+          "total": 493
+        },
+        "drives": {
+          "evaluations": 172,
+          "total": 172
+        },
+        "posts": {
+          "evaluations": 0,
+          "total": 0
+        },
+        "holds": {
+          "evaluations": 39,
+          "total": 40
+        },
+        "ISO": {
+          "evaluations": 74,
+          "total": 74
+        },
+        "screens": {
+          "evaluations": 0,
+          "total": 0
+        },
+        "restarts": {
+          "evaluations": 0,
+          "total": 0
+        },
+        "fouls": {
+          "evaluations": 6,
+          "total": 6
+        },
+        "help": {
+          "evaluations": 60,
+          "total": 60
+        }
+      },
+      "thresholds": {
+        "0": {
+          "count": 33,
+          "share": 0.06285714285714286,
+          "buckets": {
+            "20+": 33
+          }
+        },
+        "1": {
+          "count": 297,
+          "share": 0.5657142857142857,
+          "buckets": {
+            "17–19": 211,
+            "20+": 85,
+            "14–16": 1
+          }
+        },
+        "2": {
+          "count": 477,
+          "share": 0.9085714285714286,
+          "buckets": {
+            "17–19": 219,
+            "14–16": 132,
+            "20+": 85,
+            "10–13": 41
+          }
+        },
+        "3": {
+          "count": 515,
+          "share": 0.9809523809523809,
+          "buckets": {
+            "17–19": 219,
+            "14–16": 133,
+            "20+": 85,
+            "10–13": 60,
+            "5–9": 18
+          }
+        }
+      },
+      "depthClock": {
+        "0": {
+          "20+": 33
+        },
+        "1": {
+          "17–19": 211,
+          "20+": 52,
+          "14–16": 1
+        },
+        "2": {
+          "14–16": 131,
+          "10–13": 41,
+          "17–19": 8
+        },
+        "3": {
+          "10–13": 19,
+          "5–9": 18,
+          "14–16": 1
+        },
+        "4": {
+          "0–4": 5,
+          "5–9": 4
+        },
+        "5": {
+          "0–4": 1
+        }
+      }
+    },
+    "blocked shot + defensive rebound": {
+      "count": 55,
+      "meanClock": 15,
+      "medianClock": 14,
+      "minClock": 7,
+      "maxClock": 21,
+      "fullClock": {
+        "7": 1,
+        "8": 2,
+        "10": 1,
+        "11": 2,
+        "13": 4,
+        "14": 20,
+        "17": 21,
+        "20": 3,
+        "21": 1
+      },
+      "buckets": {
+        "10–13": 7,
+        "14–16": 20,
+        "17–19": 21,
+        "5–9": 3,
+        "20+": 4
+      },
+      "depth": {
+        "0": 1,
+        "1": 25,
+        "2": 23,
+        "3": 6
+      },
+      "meanDepth": 1.6181818181818182,
+      "medianDepth": 2,
+      "actions": {
+        "passes": {
+          "evaluations": 50,
+          "total": 56
+        },
+        "drives": {
+          "evaluations": 22,
+          "total": 22
+        },
+        "posts": {
+          "evaluations": 0,
+          "total": 0
+        },
+        "holds": {
+          "evaluations": 6,
+          "total": 6
+        },
+        "ISO": {
+          "evaluations": 5,
+          "total": 5
+        },
+        "screens": {
+          "evaluations": 0,
+          "total": 0
+        },
+        "restarts": {
+          "evaluations": 0,
+          "total": 0
+        },
+        "fouls": {
+          "evaluations": 1,
+          "total": 1
+        },
+        "help": {
+          "evaluations": 3,
+          "total": 3
+        }
+      },
+      "thresholds": {
+        "0": {
+          "count": 1,
+          "share": 0.01818181818181818,
+          "buckets": {
+            "20+": 1
+          }
+        },
+        "1": {
+          "count": 26,
+          "share": 0.4727272727272727,
+          "buckets": {
+            "17–19": 21,
+            "14–16": 1,
+            "20+": 4
+          }
+        },
+        "2": {
+          "count": 49,
+          "share": 0.8909090909090909,
+          "buckets": {
+            "10–13": 4,
+            "14–16": 20,
+            "17–19": 21,
+            "20+": 4
+          }
+        },
+        "3": {
+          "count": 55,
+          "share": 1,
+          "buckets": {
+            "10–13": 7,
+            "14–16": 20,
+            "17–19": 21,
+            "5–9": 3,
+            "20+": 4
+          }
+        }
+      },
+      "depthClock": {
+        "0": {
+          "20+": 1
+        },
+        "1": {
+          "17–19": 21,
+          "14–16": 1,
+          "20+": 3
+        },
+        "2": {
+          "10–13": 4,
+          "14–16": 19
+        },
+        "3": {
+          "10–13": 3,
+          "5–9": 3
+        }
+      }
+    },
+    "steal": {
+      "count": 104,
+      "meanClock": 15.89423076923077,
+      "medianClock": 17,
+      "minClock": 8,
+      "maxClock": 21,
+      "fullClock": {
+        "8": 2,
+        "10": 5,
+        "11": 4,
+        "13": 6,
+        "14": 22,
+        "16": 2,
+        "17": 47,
+        "20": 10,
+        "21": 6
+      },
+      "buckets": {
+        "17–19": 47,
+        "20+": 16,
+        "14–16": 24,
+        "10–13": 15,
+        "5–9": 2
+      },
+      "depth": {
+        "0": 6,
+        "1": 57,
+        "2": 35,
+        "3": 6
+      },
+      "meanDepth": 1.3942307692307692,
+      "medianDepth": 1,
+      "actions": {
+        "passes": {
+          "evaluations": 80,
+          "total": 90
+        },
+        "drives": {
+          "evaluations": 30,
+          "total": 30
+        },
+        "posts": {
+          "evaluations": 0,
+          "total": 0
+        },
+        "holds": {
+          "evaluations": 10,
+          "total": 10
+        },
+        "ISO": {
+          "evaluations": 15,
+          "total": 15
+        },
+        "screens": {
+          "evaluations": 0,
+          "total": 0
+        },
+        "restarts": {
+          "evaluations": 0,
+          "total": 0
+        },
+        "fouls": {
+          "evaluations": 3,
+          "total": 3
+        },
+        "help": {
+          "evaluations": 14,
+          "total": 14
+        }
+      },
+      "thresholds": {
+        "0": {
+          "count": 6,
+          "share": 0.057692307692307696,
+          "buckets": {
+            "20+": 6
+          }
+        },
+        "1": {
+          "count": 63,
+          "share": 0.6057692307692307,
+          "buckets": {
+            "17–19": 44,
+            "20+": 16,
+            "14–16": 3
+          }
+        },
+        "2": {
+          "count": 98,
+          "share": 0.9423076923076923,
+          "buckets": {
+            "17–19": 47,
+            "20+": 16,
+            "14–16": 24,
+            "10–13": 11
+          }
+        },
+        "3": {
+          "count": 104,
+          "share": 1,
+          "buckets": {
+            "17–19": 47,
+            "20+": 16,
+            "14–16": 24,
+            "10–13": 15,
+            "5–9": 2
+          }
+        }
+      },
+      "depthClock": {
+        "0": {
+          "20+": 6
+        },
+        "1": {
+          "17–19": 44,
+          "20+": 10,
+          "14–16": 3
+        },
+        "2": {
+          "14–16": 21,
+          "10–13": 11,
+          "17–19": 3
+        },
+        "3": {
+          "5–9": 2,
+          "10–13": 4
+        }
+      }
+    },
+    "missed free throw + defensive rebound": {
+      "count": 35,
+      "meanClock": 15.4,
+      "medianClock": 17,
+      "minClock": 7,
+      "maxClock": 21,
+      "fullClock": {
+        "7": 1,
+        "8": 1,
+        "10": 1,
+        "11": 2,
+        "13": 1,
+        "14": 10,
+        "16": 1,
+        "17": 13,
+        "20": 3,
+        "21": 2
+      },
+      "buckets": {
+        "20+": 5,
+        "14–16": 11,
+        "5–9": 2,
+        "17–19": 13,
+        "10–13": 4
+      },
+      "depth": {
+        "0": 2,
+        "1": 16,
+        "2": 12,
+        "3": 5
+      },
+      "meanDepth": 1.5714285714285714,
+      "medianDepth": 1,
+      "actions": {
+        "passes": {
+          "evaluations": 29,
+          "total": 31
+        },
+        "drives": {
+          "evaluations": 14,
+          "total": 14
+        },
+        "posts": {
+          "evaluations": 0,
+          "total": 0
+        },
+        "holds": {
+          "evaluations": 4,
+          "total": 4
+        },
+        "ISO": {
+          "evaluations": 6,
+          "total": 6
+        },
+        "screens": {
+          "evaluations": 0,
+          "total": 0
+        },
+        "restarts": {
+          "evaluations": 0,
+          "total": 0
+        },
+        "fouls": {
+          "evaluations": 0,
+          "total": 0
+        },
+        "help": {
+          "evaluations": 3,
+          "total": 3
+        }
+      },
+      "thresholds": {
+        "0": {
+          "count": 2,
+          "share": 0.05714285714285714,
+          "buckets": {
+            "20+": 2
+          }
+        },
+        "1": {
+          "count": 18,
+          "share": 0.5142857142857142,
+          "buckets": {
+            "20+": 5,
+            "17–19": 12,
+            "14–16": 1
+          }
+        },
+        "2": {
+          "count": 30,
+          "share": 0.8571428571428571,
+          "buckets": {
+            "20+": 5,
+            "14–16": 11,
+            "17–19": 13,
+            "10–13": 1
+          }
+        },
+        "3": {
+          "count": 35,
+          "share": 1,
+          "buckets": {
+            "20+": 5,
+            "14–16": 11,
+            "5–9": 2,
+            "17–19": 13,
+            "10–13": 4
+          }
+        }
+      },
+      "depthClock": {
+        "0": {
+          "20+": 2
+        },
+        "1": {
+          "20+": 3,
+          "17–19": 12,
+          "14–16": 1
+        },
+        "2": {
+          "14–16": 10,
+          "17–19": 1,
+          "10–13": 1
+        },
+        "3": {
+          "5–9": 2,
+          "10–13": 3
+        }
+      }
+    },
+    "secondary missed shot + defensive rebound": {
+      "count": 42,
+      "meanClock": 16.261904761904763,
+      "medianClock": 17,
+      "minClock": 7,
+      "maxClock": 21,
+      "fullClock": {
+        "7": 1,
+        "8": 1,
+        "11": 2,
+        "13": 1,
+        "14": 7,
+        "17": 23,
+        "20": 3,
+        "21": 4
+      },
+      "buckets": {
+        "17–19": 23,
+        "20+": 7,
+        "14–16": 7,
+        "10–13": 3,
+        "5–9": 2
+      },
+      "depth": {
+        "0": 2,
+        "1": 27,
+        "2": 11,
+        "3": 2
+      },
+      "meanDepth": 1.3095238095238095,
+      "medianDepth": 1,
+      "actions": {
+        "passes": {
+          "evaluations": 35,
+          "total": 37
+        },
+        "drives": {
+          "evaluations": 8,
+          "total": 8
+        },
+        "posts": {
+          "evaluations": 0,
+          "total": 0
+        },
+        "holds": {
+          "evaluations": 4,
+          "total": 4
+        },
+        "ISO": {
+          "evaluations": 6,
+          "total": 6
+        },
+        "screens": {
+          "evaluations": 0,
+          "total": 0
+        },
+        "restarts": {
+          "evaluations": 0,
+          "total": 0
+        },
+        "fouls": {
+          "evaluations": 0,
+          "total": 0
+        },
+        "help": {
+          "evaluations": 5,
+          "total": 5
+        }
+      },
+      "thresholds": {
+        "0": {
+          "count": 2,
+          "share": 0.047619047619047616,
+          "buckets": {
+            "20+": 2
+          }
+        },
+        "1": {
+          "count": 29,
+          "share": 0.6904761904761905,
+          "buckets": {
+            "17–19": 22,
+            "20+": 7
+          }
+        },
+        "2": {
+          "count": 40,
+          "share": 0.9523809523809523,
+          "buckets": {
+            "17–19": 23,
+            "20+": 7,
+            "14–16": 7,
+            "10–13": 3
+          }
+        },
+        "3": {
+          "count": 42,
+          "share": 1,
+          "buckets": {
+            "17–19": 23,
+            "20+": 7,
+            "14–16": 7,
+            "10–13": 3,
+            "5–9": 2
+          }
+        }
+      },
+      "depthClock": {
+        "0": {
+          "20+": 2
+        },
+        "1": {
+          "17–19": 22,
+          "20+": 5
+        },
+        "2": {
+          "14–16": 7,
+          "10–13": 3,
+          "17–19": 1
+        },
+        "3": {
+          "5–9": 2
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "origin": "primary missed shot + defensive rebound",
+      "score": 1.7008908922897632,
+      "early": {
+        "game": 75,
+        "seed": 100075,
+        "teams": [
+          24,
+          0
+        ],
+        "opportunityId": 28,
+        "origin": "primary missed shot + defensive rebound",
+        "shooter": 4,
+        "shooterName": "Petros Georgiou",
+        "defender": 734,
+        "defenderName": "Kenji Washington",
+        "finishing": 80.65288974651853,
+        "defense": 92.94283869667498,
+        "clock": 17,
+        "bucket": "17–19",
+        "depth": 1,
+        "passes": 1,
+        "drives": 0,
+        "posts": 0,
+        "holds": 0,
+        "ISO": 0,
+        "screens": 0,
+        "restarts": 0,
+        "fouls": 0,
+        "help": 0,
+        "nominalSeconds": 7,
+        "actions": [
+          {
+            "i": 570,
+            "root": 58,
+            "side": 0,
+            "type": "phase",
+            "phase": "rebound",
+            "seconds": 0,
+            "before": 17,
+            "after": 17
+          },
+          {
+            "i": 571,
+            "root": null,
+            "side": null,
+            "type": "phase",
+            "phase": "end",
+            "seconds": 0,
+            "before": 17,
+            "after": 17
+          },
+          {
+            "i": 572,
+            "root": 59,
+            "side": 1,
+            "type": "phase",
+            "phase": "decision",
+            "seconds": 0,
+            "before": 24,
+            "after": 24
+          },
+          {
+            "i": 573,
+            "root": 59,
+            "side": 1,
+            "type": "core entry",
+            "actual": true,
+            "recursive": false,
+            "clock": 24,
+            "extraBoards": 0
+          },
+          {
+            "i": 574,
+            "root": 59,
+            "side": 1,
+            "type": "phase",
+            "phase": "pass",
+            "seconds": 3,
+            "before": 24,
+            "after": 21
+          },
+          {
+            "i": 575,
+            "root": 59,
+            "side": 1,
+            "type": "phase",
+            "phase": "decision",
+            "seconds": 0,
+            "before": 21,
+            "after": 21
+          },
+          {
+            "i": 576,
+            "root": 59,
+            "side": 1,
+            "type": "phase",
+            "phase": "shot",
+            "seconds": 4,
+            "before": 21,
+            "after": 17
+          }
+        ],
+        "recorded": true,
+        "made": true,
+        "blocked": false,
+        "foul": false,
+        "probability": 0.6208364595957042,
+        "trigger": {
+          "i": 569,
+          "root": 58,
+          "side": 0,
+          "type": "trigger",
+          "origin": "primary missed shot + defensive rebound",
+          "targetSide": 1
+        }
+      },
+      "late": {
+        "game": 15,
+        "seed": 100015,
+        "teams": [
+          28,
+          0
+        ],
+        "opportunityId": 13,
+        "origin": "primary missed shot + defensive rebound",
+        "shooter": 4,
+        "shooterName": "Petros Georgiou",
+        "defender": 849,
+        "defenderName": "Jordan Reed",
+        "finishing": 82.32582327333333,
+        "defense": 92.91488133120002,
+        "clock": 5,
+        "bucket": "5–9",
+        "depth": 4,
+        "passes": 4,
+        "drives": 0,
+        "posts": 0,
+        "holds": 0,
+        "ISO": 0,
+        "screens": 0,
+        "restarts": 0,
+        "fouls": 0,
+        "help": 0,
+        "nominalSeconds": 19,
+        "actions": [
+          {
+            "i": 313,
+            "root": 29,
+            "side": 0,
+            "type": "phase",
+            "phase": "rebound",
+            "seconds": 0,
+            "before": 14,
+            "after": 14
+          },
+          {
+            "i": 314,
+            "root": null,
+            "side": null,
+            "type": "phase",
+            "phase": "end",
+            "seconds": 0,
+            "before": 14,
+            "after": 14
+          },
+          {
+            "i": 315,
+            "root": 30,
+            "side": 1,
+            "type": "phase",
+            "phase": "decision",
+            "seconds": 0,
+            "before": 24,
+            "after": 24
+          },
+          {
+            "i": 316,
+            "root": 30,
+            "side": 1,
+            "type": "core entry",
+            "actual": true,
+            "recursive": false,
+            "clock": 24,
+            "extraBoards": 0
+          },
+          {
+            "i": 317,
+            "root": 30,
+            "side": 1,
+            "type": "phase",
+            "phase": "pass",
+            "seconds": 3,
+            "before": 24,
+            "after": 21
+          },
+          {
+            "i": 318,
+            "root": 30,
+            "side": 1,
+            "type": "phase",
+            "phase": "decision",
+            "seconds": 0,
+            "before": 21,
+            "after": 21
+          },
+          {
+            "i": 319,
+            "root": 30,
+            "side": 1,
+            "type": "phase",
+            "phase": "pass",
+            "seconds": 4,
+            "before": 21,
+            "after": 17
+          },
+          {
+            "i": 320,
+            "root": 30,
+            "side": 1,
+            "type": "phase",
+            "phase": "decision",
+            "seconds": 0,
+            "before": 17,
+            "after": 17
+          },
+          {
+            "i": 321,
+            "root": 30,
+            "side": 1,
+            "type": "phase",
+            "phase": "pass",
+            "seconds": 4,
+            "before": 17,
+            "after": 13
+          },
+          {
+            "i": 322,
+            "root": 30,
+            "side": 1,
+            "type": "phase",
+            "phase": "decision",
+            "seconds": 0,
+            "before": 13,
+            "after": 13
+          },
+          {
+            "i": 323,
+            "root": 30,
+            "side": 1,
+            "type": "phase",
+            "phase": "pass",
+            "seconds": 4,
+            "before": 13,
+            "after": 9
+          },
+          {
+            "i": 324,
+            "root": 30,
+            "side": 1,
+            "type": "phase",
+            "phase": "decision",
+            "seconds": 0,
+            "before": 9,
+            "after": 9
+          },
+          {
+            "i": 325,
+            "root": 30,
+            "side": 1,
+            "type": "phase",
+            "phase": "shot",
+            "seconds": 4,
+            "before": 9,
+            "after": 5
+          }
+        ],
+        "recorded": true,
+        "made": true,
+        "blocked": false,
+        "foul": false,
+        "probability": 0.6047881741478932,
+        "trigger": {
+          "i": 312,
+          "root": 29,
+          "side": 0,
+          "type": "trigger",
+          "origin": "primary missed shot + defensive rebound",
+          "targetSide": 1
+        }
+      }
+    },
+    {
+      "origin": "blocked shot + defensive rebound",
+      "score": 103.58841208284,
+      "early": {
+        "game": 98,
+        "seed": 100098,
+        "teams": [
+          2,
+          15
+        ],
+        "opportunityId": 32,
+        "origin": "blocked shot + defensive rebound",
+        "shooter": 455,
+        "shooterName": "Nathan Bennett",
+        "defender": 67,
+        "defenderName": "Dante Okafor",
+        "finishing": 94.04972227199998,
+        "defense": 75.20692109700002,
+        "clock": 17,
+        "bucket": "17–19",
+        "depth": 1,
+        "passes": 1,
+        "drives": 0,
+        "posts": 0,
+        "holds": 0,
+        "ISO": 0,
+        "screens": 0,
+        "restarts": 0,
+        "fouls": 0,
+        "help": 0,
+        "nominalSeconds": 7,
+        "actions": [
+          {
+            "i": 998,
+            "root": 94,
+            "side": 0,
+            "type": "phase",
+            "phase": "rebound",
+            "seconds": 0,
+            "before": 20,
+            "after": 20
+          },
+          {
+            "i": 999,
+            "root": null,
+            "side": null,
+            "type": "phase",
+            "phase": "end",
+            "seconds": 0,
+            "before": 20,
+            "after": 20
+          },
+          {
+            "i": 1000,
+            "root": 95,
+            "side": 1,
+            "type": "phase",
+            "phase": "decision",
+            "seconds": 0,
+            "before": 24,
+            "after": 24
+          },
+          {
+            "i": 1001,
+            "root": 95,
+            "side": 1,
+            "type": "core entry",
+            "actual": true,
+            "recursive": false,
+            "clock": 24,
+            "extraBoards": 0
+          },
+          {
+            "i": 1002,
+            "root": 95,
+            "side": 1,
+            "type": "phase",
+            "phase": "pass",
+            "seconds": 3,
+            "before": 24,
+            "after": 21
+          },
+          {
+            "i": 1003,
+            "root": 95,
+            "side": 1,
+            "type": "phase",
+            "phase": "decision",
+            "seconds": 0,
+            "before": 21,
+            "after": 21
+          },
+          {
+            "i": 1004,
+            "root": 95,
+            "side": 1,
+            "type": "phase",
+            "phase": "shot",
+            "seconds": 4,
+            "before": 21,
+            "after": 17
+          }
+        ],
+        "recorded": true,
+        "made": true,
+        "blocked": false,
+        "foul": false,
+        "probability": 0.7088149683328,
+        "trigger": {
+          "i": 997,
+          "root": 94,
+          "side": 0,
+          "type": "trigger",
+          "origin": "blocked shot + defensive rebound",
+          "targetSide": 1
+        }
+      },
+      "late": {
+        "game": 84,
+        "seed": 100084,
+        "teams": [
+          15,
+          4
+        ],
+        "opportunityId": 5,
+        "origin": "blocked shot + defensive rebound",
+        "shooter": 121,
+        "shooterName": "Darius Davis",
+        "defender": 462,
+        "defenderName": "Marcus Santos",
+        "finishing": 95.28744883184,
+        "defense": 77.55760662,
+        "clock": 8,
+        "bucket": "5–9",
+        "depth": 3,
+        "passes": 1,
+        "drives": 1,
+        "posts": 0,
+        "holds": 1,
+        "ISO": 0,
+        "screens": 0,
+        "restarts": 0,
+        "fouls": 0,
+        "help": 0,
+        "nominalSeconds": 16,
+        "actions": [
+          {
+            "i": 140,
+            "root": 12,
+            "side": 0,
+            "type": "phase",
+            "phase": "rebound",
+            "seconds": 0,
+            "before": 11,
+            "after": 11
+          },
+          {
+            "i": 141,
+            "root": null,
+            "side": null,
+            "type": "phase",
+            "phase": "end",
+            "seconds": 0,
+            "before": 11,
+            "after": 11
+          },
+          {
+            "i": 142,
+            "root": 13,
+            "side": 1,
+            "type": "phase",
+            "phase": "decision",
+            "seconds": 0,
+            "before": 24,
+            "after": 24
+          },
+          {
+            "i": 143,
+            "root": 13,
+            "side": 1,
+            "type": "core entry",
+            "actual": true,
+            "recursive": false,
+            "clock": 24,
+            "extraBoards": 0
+          },
+          {
+            "i": 144,
+            "root": 13,
+            "side": 1,
+            "type": "phase",
+            "phase": "pass",
+            "seconds": 3,
+            "before": 24,
+            "after": 21
+          },
+          {
+            "i": 145,
+            "root": 13,
+            "side": 1,
+            "type": "phase",
+            "phase": "decision",
+            "seconds": 0,
+            "before": 21,
+            "after": 21
+          },
+          {
+            "i": 146,
+            "root": 13,
+            "side": 1,
+            "type": "phase",
+            "phase": "decision",
+            "seconds": 6,
+            "before": 21,
+            "after": 15
+          },
+          {
+            "i": 147,
+            "root": 13,
+            "side": 1,
+            "type": "phase",
+            "phase": "drive",
+            "seconds": 4,
+            "before": 15,
+            "after": 11
+          },
+          {
+            "i": 148,
+            "root": 13,
+            "side": 1,
+            "type": "phase",
+            "phase": "shot",
+            "seconds": 3,
+            "before": 11,
+            "after": 8
+          }
+        ],
+        "recorded": true,
+        "made": false,
+        "blocked": false,
+        "foul": false,
+        "probability": 0.5569867072769393,
+        "trigger": {
+          "i": 139,
+          "root": 12,
+          "side": 0,
+          "type": "trigger",
+          "origin": "blocked shot + defensive rebound",
+          "targetSide": 1
+        }
+      }
+    },
+    {
+      "origin": "steal",
+      "score": 100.60294890140001,
+      "early": {
+        "game": 98,
+        "seed": 100098,
+        "teams": [
+          2,
+          15
+        ],
+        "opportunityId": 52,
+        "origin": "steal",
+        "shooter": 454,
+        "shooterName": "Nico Williams",
+        "defender": 64,
+        "defenderName": "Terrence Young",
+        "finishing": 86.61709056000001,
+        "defense": 95.7386310144,
+        "clock": 17,
+        "bucket": "17–19",
+        "depth": 1,
+        "passes": 1,
+        "drives": 0,
+        "posts": 0,
+        "holds": 0,
+        "ISO": 0,
+        "screens": 0,
+        "restarts": 0,
+        "fouls": 0,
+        "help": 0,
+        "nominalSeconds": 7,
+        "actions": [
+          {
+            "i": 1441,
+            "root": 140,
+            "side": 0,
+            "type": "phase",
+            "phase": "turnover",
+            "seconds": 0,
+            "before": 18,
+            "after": 18
+          },
+          {
+            "i": 1442,
+            "root": null,
+            "side": null,
+            "type": "phase",
+            "phase": "end",
+            "seconds": 0,
+            "before": 18,
+            "after": 18
+          },
+          {
+            "i": 1443,
+            "root": 141,
+            "side": 1,
+            "type": "phase",
+            "phase": "decision",
+            "seconds": 0,
+            "before": 24,
+            "after": 24
+          },
+          {
+            "i": 1444,
+            "root": 141,
+            "side": 1,
+            "type": "core entry",
+            "actual": true,
+            "recursive": false,
+            "clock": 24,
+            "extraBoards": 0
+          },
+          {
+            "i": 1445,
+            "root": 141,
+            "side": 1,
+            "type": "phase",
+            "phase": "pass",
+            "seconds": 3,
+            "before": 24,
+            "after": 21
+          },
+          {
+            "i": 1446,
+            "root": 141,
+            "side": 1,
+            "type": "phase",
+            "phase": "decision",
+            "seconds": 0,
+            "before": 21,
+            "after": 21
+          },
+          {
+            "i": 1447,
+            "root": 141,
+            "side": 1,
+            "type": "phase",
+            "phase": "shot",
+            "seconds": 4,
+            "before": 21,
+            "after": 17
+          }
+        ],
+        "recorded": true,
+        "made": true,
+        "blocked": false,
+        "foul": false,
+        "probability": 0.6353758309592002,
+        "trigger": {
+          "i": 1440,
+          "root": 140,
+          "side": 0,
+          "type": "trigger",
+          "origin": "steal",
+          "targetSide": 1
+        }
+      },
+      "late": {
+        "game": 28,
+        "seed": 100028,
+        "teams": [
+          15,
+          12
+        ],
+        "opportunityId": 72,
+        "origin": "steal",
+        "shooter": 450,
+        "shooterName": "Caleb Campbell",
+        "defender": 374,
+        "defenderName": "Sergio Romero",
+        "finishing": 86.950255807,
+        "defense": 95.46884735999998,
+        "clock": 8,
+        "bucket": "5–9",
+        "depth": 3,
+        "passes": 1,
+        "drives": 1,
+        "posts": 0,
+        "holds": 1,
+        "ISO": 0,
+        "screens": 0,
+        "restarts": 0,
+        "fouls": 0,
+        "help": 0,
+        "nominalSeconds": 16,
+        "actions": [
+          {
+            "i": 2094,
+            "root": 196,
+            "side": 1,
+            "type": "phase",
+            "phase": "turnover",
+            "seconds": 0,
+            "before": 20,
+            "after": 20
+          },
+          {
+            "i": 2095,
+            "root": null,
+            "side": null,
+            "type": "phase",
+            "phase": "end",
+            "seconds": 0,
+            "before": 20,
+            "after": 20
+          },
+          {
+            "i": 2096,
+            "root": 197,
+            "side": 0,
+            "type": "phase",
+            "phase": "decision",
+            "seconds": 0,
+            "before": 24,
+            "after": 24
+          },
+          {
+            "i": 2097,
+            "root": 197,
+            "side": 0,
+            "type": "core entry",
+            "actual": true,
+            "recursive": false,
+            "clock": 24,
+            "extraBoards": 0
+          },
+          {
+            "i": 2098,
+            "root": 197,
+            "side": 0,
+            "type": "phase",
+            "phase": "pass",
+            "seconds": 3,
+            "before": 24,
+            "after": 21
+          },
+          {
+            "i": 2099,
+            "root": 197,
+            "side": 0,
+            "type": "phase",
+            "phase": "decision",
+            "seconds": 0,
+            "before": 21,
+            "after": 21
+          },
+          {
+            "i": 2100,
+            "root": 197,
+            "side": 0,
+            "type": "phase",
+            "phase": "decision",
+            "seconds": 6,
+            "before": 21,
+            "after": 15
+          },
+          {
+            "i": 2101,
+            "root": 197,
+            "side": 0,
+            "type": "phase",
+            "phase": "drive",
+            "seconds": 4,
+            "before": 15,
+            "after": 11
+          },
+          {
+            "i": 2102,
+            "root": 197,
+            "side": 0,
+            "type": "phase",
+            "phase": "shot",
+            "seconds": 3,
+            "before": 11,
+            "after": 8
+          }
+        ],
+        "recorded": true,
+        "made": true,
+        "blocked": false,
+        "foul": false,
+        "probability": 0.6490558296217336,
+        "trigger": {
+          "i": 2093,
+          "root": 196,
+          "side": 1,
+          "type": "trigger",
+          "origin": "steal",
+          "targetSide": 0
+        }
+      }
+    },
+    {
+      "origin": "missed free throw + defensive rebound",
+      "score": 112.48229596537954,
+      "early": {
+        "game": 30,
+        "seed": 100030,
+        "teams": [
+          0,
+          27
+        ],
+        "opportunityId": 18,
+        "origin": "missed free throw + defensive rebound",
+        "shooter": 13,
+        "shooterName": "Luca King",
+        "defender": 823,
+        "defenderName": "Devin Mitchell",
+        "finishing": 71.99329262594668,
+        "defense": 90.75473396974044,
+        "clock": 17,
+        "bucket": "17–19",
+        "depth": 1,
+        "passes": 1,
+        "drives": 0,
+        "posts": 0,
+        "holds": 0,
+        "ISO": 0,
+        "screens": 0,
+        "restarts": 0,
+        "fouls": 0,
+        "help": 0,
+        "nominalSeconds": 7,
+        "actions": [
+          {
+            "i": 493,
+            "root": 45,
+            "side": 1,
+            "type": "phase",
+            "phase": "rebound",
+            "seconds": 0,
+            "before": 16,
+            "after": 16
+          },
+          {
+            "i": 494,
+            "root": null,
+            "side": null,
+            "type": "phase",
+            "phase": "end",
+            "seconds": 0,
+            "before": 16,
+            "after": 16
+          },
+          {
+            "i": 495,
+            "root": 46,
+            "side": 0,
+            "type": "phase",
+            "phase": "decision",
+            "seconds": 0,
+            "before": 24,
+            "after": 24
+          },
+          {
+            "i": 496,
+            "root": 46,
+            "side": 0,
+            "type": "core entry",
+            "actual": true,
+            "recursive": false,
+            "clock": 24,
+            "extraBoards": 0
+          },
+          {
+            "i": 497,
+            "root": 46,
+            "side": 0,
+            "type": "phase",
+            "phase": "pass",
+            "seconds": 3,
+            "before": 24,
+            "after": 21
+          },
+          {
+            "i": 498,
+            "root": 46,
+            "side": 0,
+            "type": "phase",
+            "phase": "decision",
+            "seconds": 0,
+            "before": 21,
+            "after": 21
+          },
+          {
+            "i": 499,
+            "root": 46,
+            "side": 0,
+            "type": "phase",
+            "phase": "shot",
+            "seconds": 4,
+            "before": 21,
+            "after": 17
+          }
+        ],
+        "recorded": true,
+        "made": false,
+        "blocked": false,
+        "foul": false,
+        "probability": 0.6167087687531727,
+        "trigger": {
+          "i": 492,
+          "root": 45,
+          "side": 1,
+          "type": "trigger",
+          "origin": "missed free throw + defensive rebound",
+          "targetSide": 0
+        }
+      },
+      "late": {
+        "game": 10,
+        "seed": 100010,
+        "teams": [
+          10,
+          19
+        ],
+        "opportunityId": 47,
+        "origin": "missed free throw + defensive rebound",
+        "shooter": 571,
+        "shooterName": "Mathis Moreau",
+        "defender": 308,
+        "defenderName": "Jamal Washington",
+        "finishing": 84.23032256106666,
+        "defense": 91,
+        "clock": 8,
+        "bucket": "5–9",
+        "depth": 3,
+        "passes": 1,
+        "drives": 1,
+        "posts": 0,
+        "holds": 1,
+        "ISO": 0,
+        "screens": 0,
+        "restarts": 0,
+        "fouls": 0,
+        "help": 0,
+        "nominalSeconds": 16,
+        "actions": [
+          {
+            "i": 1201,
+            "root": 117,
+            "side": 0,
+            "type": "phase",
+            "phase": "rebound",
+            "seconds": 0,
+            "before": 21,
+            "after": 21
+          },
+          {
+            "i": 1202,
+            "root": null,
+            "side": null,
+            "type": "phase",
+            "phase": "end",
+            "seconds": 0,
+            "before": 21,
+            "after": 21
+          },
+          {
+            "i": 1203,
+            "root": 118,
+            "side": 1,
+            "type": "phase",
+            "phase": "decision",
+            "seconds": 0,
+            "before": 24,
+            "after": 24
+          },
+          {
+            "i": 1204,
+            "root": 118,
+            "side": 1,
+            "type": "core entry",
+            "actual": true,
+            "recursive": false,
+            "clock": 24,
+            "extraBoards": 0
+          },
+          {
+            "i": 1205,
+            "root": 118,
+            "side": 1,
+            "type": "phase",
+            "phase": "pass",
+            "seconds": 3,
+            "before": 24,
+            "after": 21
+          },
+          {
+            "i": 1206,
+            "root": 118,
+            "side": 1,
+            "type": "phase",
+            "phase": "decision",
+            "seconds": 0,
+            "before": 21,
+            "after": 21
+          },
+          {
+            "i": 1207,
+            "root": 118,
+            "side": 1,
+            "type": "phase",
+            "phase": "decision",
+            "seconds": 6,
+            "before": 21,
+            "after": 15
+          },
+          {
+            "i": 1208,
+            "root": 118,
+            "side": 1,
+            "type": "phase",
+            "phase": "drive",
+            "seconds": 4,
+            "before": 15,
+            "after": 11
+          },
+          {
+            "i": 1209,
+            "root": 118,
+            "side": 1,
+            "type": "phase",
+            "phase": "shot",
+            "seconds": 3,
+            "before": 11,
+            "after": 8
+          }
+        ],
+        "recorded": true,
+        "made": true,
+        "blocked": false,
+        "foul": false,
+        "probability": 0.6872070596440589,
+        "trigger": {
+          "i": 1200,
+          "root": 117,
+          "side": 0,
+          "type": "trigger",
+          "origin": "missed free throw + defensive rebound",
+          "targetSide": 1
+        }
+      }
+    },
+    {
+      "origin": "secondary missed shot + defensive rebound",
+      "score": 102.39079421696005,
+      "early": {
+        "game": 8,
+        "seed": 100008,
+        "teams": [
+          8,
+          21
+        ],
+        "opportunityId": 38,
+        "origin": "secondary missed shot + defensive rebound",
+        "shooter": 634,
+        "shooterName": "Tyrese Brooks",
+        "defender": 254,
+        "defenderName": "Kenji Davis",
+        "finishing": 73.91915238400003,
+        "defense": 91.48119388159996,
+        "clock": 17,
+        "bucket": "17–19",
+        "depth": 1,
+        "passes": 1,
+        "drives": 0,
+        "posts": 0,
+        "holds": 0,
+        "ISO": 0,
+        "screens": 0,
+        "restarts": 0,
+        "fouls": 0,
+        "help": 0,
+        "nominalSeconds": 7,
+        "actions": [
+          {
+            "i": 1150,
+            "root": 114,
+            "side": 0,
+            "type": "phase",
+            "phase": "rebound",
+            "seconds": 0,
+            "before": 14,
+            "after": 14
+          },
+          {
+            "i": 1151,
+            "root": null,
+            "side": null,
+            "type": "phase",
+            "phase": "end",
+            "seconds": 0,
+            "before": 14,
+            "after": 14
+          },
+          {
+            "i": 1152,
+            "root": 115,
+            "side": 1,
+            "type": "phase",
+            "phase": "decision",
+            "seconds": 0,
+            "before": 24,
+            "after": 24
+          },
+          {
+            "i": 1153,
+            "root": 115,
+            "side": 1,
+            "type": "core entry",
+            "actual": true,
+            "recursive": false,
+            "clock": 24,
+            "extraBoards": 0
+          },
+          {
+            "i": 1154,
+            "root": 115,
+            "side": 1,
+            "type": "phase",
+            "phase": "pass",
+            "seconds": 3,
+            "before": 24,
+            "after": 21
+          },
+          {
+            "i": 1155,
+            "root": 115,
+            "side": 1,
+            "type": "phase",
+            "phase": "decision",
+            "seconds": 0,
+            "before": 21,
+            "after": 21
+          },
+          {
+            "i": 1156,
+            "root": 115,
+            "side": 1,
+            "type": "phase",
+            "phase": "shot",
+            "seconds": 4,
+            "before": 21,
+            "after": 17
+          }
+        ],
+        "recorded": true,
+        "made": true,
+        "blocked": false,
+        "foul": false,
+        "probability": 0.6207137780635201,
+        "trigger": {
+          "i": 1149,
+          "root": 114,
+          "side": 0,
+          "type": "trigger",
+          "origin": "secondary missed shot + defensive rebound",
+          "targetSide": 1
+        }
+      },
+      "late": {
+        "game": 81,
+        "seed": 100081,
+        "teams": [
+          18,
+          1
+        ],
+        "opportunityId": 38,
+        "origin": "secondary missed shot + defensive rebound",
+        "shooter": 543,
+        "shooterName": "Xavier Hayes",
+        "defender": 33,
+        "defenderName": "Hugo Martin",
+        "finishing": 75.35392309162668,
+        "defense": 92.43721739093336,
+        "clock": 7,
+        "bucket": "5–9",
+        "depth": 3,
+        "passes": 2,
+        "drives": 0,
+        "posts": 0,
+        "holds": 1,
+        "ISO": 0,
+        "screens": 0,
+        "restarts": 0,
+        "fouls": 0,
+        "help": 0,
+        "nominalSeconds": 17,
+        "actions": [
+          {
+            "i": 948,
+            "root": 93,
+            "side": 1,
+            "type": "phase",
+            "phase": "rebound",
+            "seconds": 0,
+            "before": 14,
+            "after": 14
+          },
+          {
+            "i": 949,
+            "root": null,
+            "side": null,
+            "type": "phase",
+            "phase": "end",
+            "seconds": 0,
+            "before": 14,
+            "after": 14
+          },
+          {
+            "i": 950,
+            "root": 94,
+            "side": 0,
+            "type": "phase",
+            "phase": "decision",
+            "seconds": 0,
+            "before": 24,
+            "after": 24
+          },
+          {
+            "i": 951,
+            "root": 94,
+            "side": 0,
+            "type": "core entry",
+            "actual": true,
+            "recursive": false,
+            "clock": 24,
+            "extraBoards": 0
+          },
+          {
+            "i": 952,
+            "root": 94,
+            "side": 0,
+            "type": "phase",
+            "phase": "pass",
+            "seconds": 3,
+            "before": 24,
+            "after": 21
+          },
+          {
+            "i": 953,
+            "root": 94,
+            "side": 0,
+            "type": "phase",
+            "phase": "decision",
+            "seconds": 0,
+            "before": 21,
+            "after": 21
+          },
+          {
+            "i": 954,
+            "root": 94,
+            "side": 0,
+            "type": "phase",
+            "phase": "pass",
+            "seconds": 4,
+            "before": 21,
+            "after": 17
+          },
+          {
+            "i": 955,
+            "root": 94,
+            "side": 0,
+            "type": "phase",
+            "phase": "decision",
+            "seconds": 0,
+            "before": 17,
+            "after": 17
+          },
+          {
+            "i": 956,
+            "root": 94,
+            "side": 0,
+            "type": "phase",
+            "phase": "decision",
+            "seconds": 6,
+            "before": 17,
+            "after": 11
+          },
+          {
+            "i": 957,
+            "root": 94,
+            "side": 0,
+            "type": "phase",
+            "phase": "shot",
+            "seconds": 4,
+            "before": 11,
+            "after": 7
+          }
+        ],
+        "recorded": true,
+        "made": true,
+        "blocked": false,
+        "foul": false,
+        "probability": 0.6233812691026845,
+        "trigger": {
+          "i": 947,
+          "root": 93,
+          "side": 1,
+          "type": "trigger",
+          "origin": "secondary missed shot + defensive rebound",
+          "targetSide": 0
+        }
+      }
+    }
+  ],
+  "flags": {
+    "evaluations": 27305,
+    "event": 10983,
+    "tempoOnly": 4171
+  },
+  "unused": [
+    {
+      "seed": 100000,
+      "id": 20,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100000,
+      "id": 46,
+      "origin": "missed free throw + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100000,
+      "id": 72,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100000,
+      "id": 95,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100001,
+      "id": 71,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100002,
+      "id": 22,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100002,
+      "id": 104,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100003,
+      "id": 27,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100003,
+      "id": 41,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100003,
+      "id": 95,
+      "origin": "secondary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100004,
+      "id": 45,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100004,
+      "id": 64,
+      "origin": "secondary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100005,
+      "id": 20,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100005,
+      "id": 45,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100005,
+      "id": 65,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100006,
+      "id": 40,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100006,
+      "id": 60,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100007,
+      "id": 91,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100008,
+      "id": 22,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100008,
+      "id": 34,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100008,
+      "id": 60,
+      "origin": "missed free throw + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100010,
+      "id": 17,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100010,
+      "id": 63,
+      "origin": "secondary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100010,
+      "id": 80,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100011,
+      "id": 15,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100011,
+      "id": 60,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100011,
+      "id": 80,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100012,
+      "id": 19,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100012,
+      "id": 80,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100013,
+      "id": 39,
+      "origin": "secondary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100013,
+      "id": 60,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100013,
+      "id": 83,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100014,
+      "id": 24,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100014,
+      "id": 44,
+      "origin": "secondary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100014,
+      "id": 91,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100015,
+      "id": 23,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100015,
+      "id": 64,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100016,
+      "id": 53,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100017,
+      "id": 72,
+      "origin": "blocked shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100017,
+      "id": 93,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100018,
+      "id": 25,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100018,
+      "id": 82,
+      "origin": "secondary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100020,
+      "id": 20,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100020,
+      "id": 50,
+      "origin": "secondary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100021,
+      "id": 27,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100022,
+      "id": 44,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100023,
+      "id": 59,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100024,
+      "id": 46,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100024,
+      "id": 92,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100025,
+      "id": 18,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100026,
+      "id": 20,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100026,
+      "id": 40,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100029,
+      "id": 72,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100030,
+      "id": 48,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100030,
+      "id": 106,
+      "origin": "missed free throw + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100031,
+      "id": 24,
+      "origin": "blocked shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100031,
+      "id": 65,
+      "origin": "blocked shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100031,
+      "id": 86,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100032,
+      "id": 24,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100032,
+      "id": 46,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100032,
+      "id": 68,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100033,
+      "id": 48,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100034,
+      "id": 34,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100035,
+      "id": 25,
+      "origin": "secondary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100035,
+      "id": 50,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100035,
+      "id": 68,
+      "origin": "blocked shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100036,
+      "id": 22,
+      "origin": "secondary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100036,
+      "id": 85,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100037,
+      "id": 50,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100038,
+      "id": 25,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100038,
+      "id": 42,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100039,
+      "id": 25,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100039,
+      "id": 48,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100040,
+      "id": 46,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100040,
+      "id": 67,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100041,
+      "id": 37,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100041,
+      "id": 80,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100042,
+      "id": 85,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100044,
+      "id": 20,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100044,
+      "id": 67,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100045,
+      "id": 49,
+      "origin": "blocked shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100046,
+      "id": 71,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100047,
+      "id": 21,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100047,
+      "id": 63,
+      "origin": "blocked shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100048,
+      "id": 68,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100049,
+      "id": 34,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100050,
+      "id": 73,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100051,
+      "id": 69,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100051,
+      "id": 88,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100052,
+      "id": 20,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100052,
+      "id": 41,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100052,
+      "id": 66,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100053,
+      "id": 53,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100055,
+      "id": 46,
+      "origin": "secondary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100055,
+      "id": 65,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100056,
+      "id": 15,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100056,
+      "id": 31,
+      "origin": "secondary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100056,
+      "id": 52,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100056,
+      "id": 77,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100057,
+      "id": 58,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100057,
+      "id": 79,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100058,
+      "id": 38,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100058,
+      "id": 79,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100059,
+      "id": 18,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100059,
+      "id": 43,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100059,
+      "id": 64,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100059,
+      "id": 84,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100060,
+      "id": 61,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100060,
+      "id": 85,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100061,
+      "id": 50,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100061,
+      "id": 86,
+      "origin": "steal",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100062,
+      "id": 21,
+      "origin": "secondary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100062,
+      "id": 88,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100063,
+      "id": 37,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: next entry wrong side"
+    },
+    {
+      "seed": 100063,
+      "id": 62,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100063,
+      "id": 87,
+      "origin": "steal",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100064,
+      "id": 22,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100064,
+      "id": 45,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100064,
+      "id": 93,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100065,
+      "id": 39,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100066,
+      "id": 83,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100067,
+      "id": 25,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100067,
+      "id": 49,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100068,
+      "id": 53,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100069,
+      "id": 44,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100070,
+      "id": 32,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100070,
+      "id": 56,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100070,
+      "id": 78,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100071,
+      "id": 63,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100071,
+      "id": 89,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100072,
+      "id": 72,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100073,
+      "id": 18,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100073,
+      "id": 66,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100073,
+      "id": 87,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100074,
+      "id": 54,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100074,
+      "id": 74,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100075,
+      "id": 23,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100075,
+      "id": 47,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100075,
+      "id": 75,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100076,
+      "id": 63,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100077,
+      "id": 53,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100077,
+      "id": 84,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100078,
+      "id": 24,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100078,
+      "id": 67,
+      "origin": "missed free throw + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100079,
+      "id": 59,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100081,
+      "id": 42,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100081,
+      "id": 89,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100082,
+      "id": 36,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100083,
+      "id": 22,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100083,
+      "id": 47,
+      "origin": "secondary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100083,
+      "id": 66,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100084,
+      "id": 45,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100086,
+      "id": 62,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100088,
+      "id": 15,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100089,
+      "id": 27,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100089,
+      "id": 51,
+      "origin": "missed free throw + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100090,
+      "id": 49,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100090,
+      "id": 69,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100091,
+      "id": 21,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100091,
+      "id": 44,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100092,
+      "id": 22,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100092,
+      "id": 85,
+      "origin": "secondary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100093,
+      "id": 25,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100093,
+      "id": 46,
+      "origin": "blocked shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100094,
+      "id": 41,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100094,
+      "id": 62,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100095,
+      "id": 16,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100095,
+      "id": 64,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100096,
+      "id": 23,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100096,
+      "id": 84,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100097,
+      "id": 19,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100097,
+      "id": 63,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100098,
+      "id": 35,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100099,
+      "id": 18,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100099,
+      "id": 37,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100099,
+      "id": 89,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100100,
+      "id": 33,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100100,
+      "id": 53,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100102,
+      "id": 57,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100102,
+      "id": 80,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100103,
+      "id": 31,
+      "origin": "secondary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100103,
+      "id": 52,
+      "origin": "secondary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100104,
+      "id": 46,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100104,
+      "id": 98,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100105,
+      "id": 63,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100105,
+      "id": 91,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100106,
+      "id": 17,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100106,
+      "id": 33,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100106,
+      "id": 81,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100107,
+      "id": 42,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100108,
+      "id": 36,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100108,
+      "id": 55,
+      "origin": "missed free throw + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100109,
+      "id": 24,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100109,
+      "id": 68,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100110,
+      "id": 25,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100110,
+      "id": 91,
+      "origin": "blocked shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100111,
+      "id": 39,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100111,
+      "id": 62,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100112,
+      "id": 24,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100112,
+      "id": 63,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100113,
+      "id": 89,
+      "origin": "steal",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100115,
+      "id": 22,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100115,
+      "id": 92,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100116,
+      "id": 17,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100117,
+      "id": 83,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100119,
+      "id": 18,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100119,
+      "id": 64,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100119,
+      "id": 89,
+      "origin": "secondary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100120,
+      "id": 95,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100122,
+      "id": 25,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100122,
+      "id": 75,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100122,
+      "id": 99,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100123,
+      "id": 52,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100124,
+      "id": 57,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100126,
+      "id": 90,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100127,
+      "id": 40,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100127,
+      "id": 63,
+      "origin": "secondary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100127,
+      "id": 84,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100128,
+      "id": 20,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100128,
+      "id": 43,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100128,
+      "id": 94,
+      "origin": "steal",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100129,
+      "id": 14,
+      "origin": "secondary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100129,
+      "id": 53,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100130,
+      "id": 20,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100130,
+      "id": 62,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100130,
+      "id": 84,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100131,
+      "id": 18,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100131,
+      "id": 41,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100131,
+      "id": 68,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100131,
+      "id": 87,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100132,
+      "id": 94,
+      "origin": "steal",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100133,
+      "id": 25,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100133,
+      "id": 45,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100133,
+      "id": 68,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100134,
+      "id": 23,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100134,
+      "id": 46,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100134,
+      "id": 90,
+      "origin": "steal",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100135,
+      "id": 73,
+      "origin": "blocked shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100136,
+      "id": 25,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100137,
+      "id": 75,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100138,
+      "id": 21,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100138,
+      "id": 76,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100138,
+      "id": 98,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100139,
+      "id": 21,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100139,
+      "id": 45,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100139,
+      "id": 65,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100139,
+      "id": 91,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100140,
+      "id": 48,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100140,
+      "id": 85,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100142,
+      "id": 19,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100142,
+      "id": 71,
+      "origin": "secondary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100142,
+      "id": 93,
+      "origin": "steal",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100143,
+      "id": 12,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100143,
+      "id": 31,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100143,
+      "id": 52,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100143,
+      "id": 66,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100144,
+      "id": 20,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100144,
+      "id": 81,
+      "origin": "steal",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100145,
+      "id": 31,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100145,
+      "id": 55,
+      "origin": "steal",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100145,
+      "id": 81,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100146,
+      "id": 22,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100146,
+      "id": 75,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: game ended"
+    },
+    {
+      "seed": 100147,
+      "id": 20,
+      "origin": "blocked shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100149,
+      "id": 20,
+      "origin": "secondary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    },
+    {
+      "seed": 100149,
+      "id": 38,
+      "origin": "primary missed shot + defensive rebound",
+      "status": "unused: period boundary"
+    }
+  ]
+}

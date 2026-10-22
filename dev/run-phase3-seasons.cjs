@@ -1,0 +1,5 @@
+const {spawn}=require('child_process'),fs=require('fs'),crypto=require('crypto');
+const jobs=['nba','wnba'].flatMap(league=>Array.from({length:10},(_,i)=>[league,101+i]));let failed=0;
+async function worker(){while(jobs.length){const [league,seed]=jobs.shift(),file=`dev/balance-audit/phase3-${league}-${seed}.json`,pilot=`dev/balance-audit/phase3pilot-${league}-${seed}.json`;if(fs.existsSync(file))continue;if(fs.existsSync(pilot)){const r=JSON.parse(fs.readFileSync(pilot));if(r.games.length===(league==='nba'?1230:240)){r.sourcePilot={file:pilot,sha256:crypto.createHash('sha256').update(fs.readFileSync(pilot)).digest('hex')};r.label='phase3';fs.writeFileSync(file,JSON.stringify(r));console.log('ACCEPTED IDENTICAL ENGINE PILOT',league,seed);continue;}}
+await new Promise(resolve=>{const p=spawn(process.execPath,['dev/audit-competitiveness.cjs',league,''+seed,'phase3'],{env:{...process.env,HOOPS_VARIANT:'dev/phase3-candidate.cjs'},stdio:'inherit'});p.on('close',c=>{if(c||!fs.existsSync(file))failed++;resolve()})})}}
+Promise.all(Array.from({length:4},worker)).then(()=>{console.log('COMPLETE failures',failed);process.exitCode=failed?1:0});

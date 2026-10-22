@@ -1,0 +1,65 @@
+{
+  "temporary": {
+    "players": 1000,
+    "requests": 0,
+    "requestPercent": 0,
+    "publicRequests": 0,
+    "contractIntentChanges": 0,
+    "noRequest": 1000,
+    "meanGamesBeforeRequest": null
+  },
+  "morale_only": {
+    "players": 1000,
+    "requests": 0,
+    "requestPercent": 0,
+    "publicRequests": 0,
+    "contractIntentChanges": 0,
+    "noRequest": 1000,
+    "meanGamesBeforeRequest": null
+  },
+  "expiring": {
+    "players": 1000,
+    "requests": 35,
+    "requestPercent": 3.5,
+    "publicRequests": 2,
+    "contractIntentChanges": 697,
+    "noRequest": 965,
+    "meanGamesBeforeRequest": 49.371428571428574
+  },
+  "long_term": {
+    "players": 1000,
+    "requests": 183,
+    "requestPercent": 18.3,
+    "publicRequests": 16,
+    "contractIntentChanges": 390,
+    "noRequest": 817,
+    "meanGamesBeforeRequest": 51.759562841530055
+  },
+  "loyal": {
+    "players": 1000,
+    "requests": 130,
+    "requestPercent": 13,
+    "publicRequests": 6,
+    "contractIntentChanges": 267,
+    "noRequest": 870,
+    "meanGamesBeforeRequest": 50.76923076923077
+  },
+  "professional": {
+    "players": 1000,
+    "requests": 95,
+    "requestPercent": 9.5,
+    "publicRequests": 2,
+    "contractIntentChanges": 389,
+    "noRequest": 905,
+    "meanGamesBeforeRequest": 50.526315789473685
+  },
+  "star": {
+    "players": 1000,
+    "requests": 362,
+    "requestPercent": 36.2,
+    "publicRequests": 67,
+    "contractIntentChanges": 383,
+    "noRequest": 638,
+    "meanGamesBeforeRequest": 49.70165745856354
+  }
+}

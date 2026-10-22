@@ -1,0 +1,11 @@
+{
+  "dist/attributes.js": "a4c8a1e7c1d2aff06686f60e5be9daa47cdcd4e68c81495b16fa7865e02b27d3",
+  "dist/game.js": "fa666fad3de7fccdd89b8efe5a0a110fa77fcd20fb927d42dc24fe6eb8f30dcb",
+  "dist/late-game.js": "1b58e3d302304383a2ba1e7f2ae827fd49fafdbfdc90009a3e3f9afc27f66b8c",
+  "dist/index.html": "413cc9fe222b536361c7fcd324d2265d6fd3e7cc6091439c210064cd534a2513",
+  "dev/phase12/baseline-dist/tendencies.js": "422c11662a25b7f6d6cfa52fc9b338b5bd469de9ad0fede4c954f12725f77eb0",
+  "dev/phase12/baseline-dist/late-game.js": "03f107e324f2c5bca578ec7ff89e30933e7c0034dacf8d134bb0b09fa5563580",
+  "dev/phase12/baseline-dist/attributes.js": "2ff7f1fbc23ad3f6dda93daabe6c8a88b32356c3dbb57dd7869ba4c9c55fdd4d",
+  "dev/phase12/baseline-dist/game.js": "1b885f826c478b76567028238732c501eb566117b276f8163fa4114d32c4c471",
+  "dev/phase12/variant.cjs": "74154ed4890c0d23410078a001ac1b9c4e8f8e2e94114c0280951ae9b4ad770e"
+}

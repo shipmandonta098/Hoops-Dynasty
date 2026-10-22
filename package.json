@@ -1,0 +1,12 @@
+{
+  "name": "hoops-dynasty",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hoops Dynasty editable browser game",
+  "scripts": {
+    "start": "node scripts/start-local.cjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

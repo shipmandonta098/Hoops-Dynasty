@@ -1,0 +1,37 @@
+{
+  "factor": 1.4,
+  "checks": [
+    {
+      "gender": "male",
+      "year": 1997,
+      "poolPreserved": true,
+      "positionCountsPreserved": true,
+      "existingRosterPreservedOnLoad": true,
+      "unchangedTeams": true
+    },
+    {
+      "gender": "male",
+      "year": 2024,
+      "poolPreserved": true,
+      "positionCountsPreserved": true,
+      "existingRosterPreservedOnLoad": true,
+      "unchangedTeams": true
+    },
+    {
+      "gender": "female",
+      "year": 1997,
+      "poolPreserved": true,
+      "positionCountsPreserved": true,
+      "existingRosterPreservedOnLoad": true,
+      "unchangedTeams": true
+    },
+    {
+      "gender": "female",
+      "year": 2024,
+      "poolPreserved": true,
+      "positionCountsPreserved": true,
+      "existingRosterPreservedOnLoad": true,
+      "unchangedTeams": false
+    }
+  ]
+}

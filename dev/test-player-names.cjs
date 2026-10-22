@@ -1,0 +1,28 @@
+const assert=require('node:assert/strict'),fs=require('node:fs');
+const {loadLeague}=require('./load-league.cjs');const l=loadLeague({seed:47});l.context.assert={...assert,deepEqual:(a,b)=>assert.deepEqual(JSON.parse(JSON.stringify(a)),JSON.parse(JSON.stringify(b)))};
+const report=l.run(`(()=>{
+ const codes=Object.keys(PLAYER_NAME_DATA),s={year:2026},rows=[],byCountry={};
+ for(let i=0;i<10000;i++){const country=codes[i%codes.length],gender=Math.floor(i/codes.length)%2?'female':'male',x=generatePlayerName({country,gender,s});const pool=x.background==='local'?PLAYER_NAME_DATA[country]:PLAYER_NAME_DATA[country].variants.find(v=>v.key===x.background);assert.ok([...(gender==='female'?pool.female:pool.male),...(pool.neutral||[])].includes(x.given));rows.push(x);(byCountry[country]??=[]).push(x);assert.ok(!/\\s\\d+$/.test(x.name));}
+ assert.equal(new Set(rows.map(x=>nameKey(x.name))).size,10000);
+ const counts=values=>{const c={};for(const v of values)c[v]=(c[v]||0)+1;return {distinct:Object.keys(c).length,largestCount:Math.max(...Object.values(c))};};
+ const countries=Object.fromEntries(Object.entries(byCountry).map(([c,r])=>[c,{count:r.length,unique:new Set(r.map(x=>x.name)).size,given:counts(r.map(x=>x.given)),surname:counts(r.map(x=>x.surname))}]));
+ const large={};for(const country of ['US','FR','NG','RS','BR','JP','CN','CA']){const s={year:1997},batch=[];for(let i=0;i<(country==='US'?10000:1000);i++)batch.push(generatePlayerName({country,gender:i%2?'female':'male',s}));assert.equal(new Set(batch.map(x=>nameKey(x.name))).size,batch.length);large[country]={count:batch.length,unique:batch.length,given:counts(batch.map(x=>x.given)),surname:counts(batch.map(x=>x.surname))};}
+ const a={year:2026},b={year:2026};for(let i=0;i<40;i++)assert.equal(generatePlayerName({country:'FR',s:a}).name,generatePlayerName({country:'FR',s:b}).name);
+ const loaded=JSON.parse(JSON.stringify(a));for(let i=0;i<40;i++)assert.equal(generatePlayerName({country:'FR',s:a}).name,generatePlayerName({country:'FR',s:loaded}).name);
+ for(const country of ['CN','JP','KR']){const s={year:2026},n=generatePlayerName({country,s});assert.equal(n.name,n.surname+' '+n.given);nameRegistry(s).settings.order='western';const w=generatePlayerName({country,s});assert.equal(w.name,w.given+' '+w.surname);}
+ const collision=generatePlayerName({country:'FR',s:{},random:()=>0});const existing={teams:[{roster:[{name:collision.name}]}]};assert.notEqual(generatePlayerName({country:'FR',s:existing,random:()=>0}).name,collision.name);nameRegistry(existing).settings.allowDuplicates=true;assert.equal(generatePlayerName({country:'FR',s:existing,random:()=>0}).name,collision.name);
+ assert.throws(()=>generatePlayerName({country:'XX',s:{}}),/No naming dataset/);
+ const before=structuredClone(FAMILY_HISTORY_PEOPLE);const legacy=copy(state);delete legacy.nameGeneration;for(const p of familyPlayers(legacy))delete p.nameIdentity;const names=familyPlayers(legacy).map(p=>[p.id,p.name,p.salary]);const restored=validateCareerData(legacy);assert.deepEqual(familyPlayers(restored).map(p=>[p.id,p.name,p.salary]),names);assert.deepEqual(FAMILY_HISTORY_PEOPLE,before);
+ state=validateCareerData(state);const snap=copy(state);const saved=validateCareerData(JSON.parse(JSON.stringify(state)));assert.deepEqual(saved.nameGeneration,snap.nameGeneration);assert.deepEqual(familyPlayers(saved).map(p=>p.nameIdentity),familyPlayers(snap).map(p=>p.nameIdentity));
+ const storage=hdSplit({id:'name-storage',data:state});assert.deepEqual(storage.leagues[0].core.nameGeneration,state.nameGeneration);assert.ok(storage.players.every(r=>r.value.nameIdentity));
+ const oldNames=familyPlayers(state).map(p=>p.name);const d=ensureDraft();assert.equal(new Set([...oldNames,...d.prospects.map(p=>p.name)]).size,oldNames.length+d.prospects.length);assert.ok(d.prospects.every(p=>p.nameIdentity));
+ const f=familySync(),parent=f.people.find(n=>n.origin!=='historical'&&n.nameIdentity&&familyAge(n)>=20&&familyAge(n)<=40&&n.nameIdentity.country==='US');const child=familyChild(parent,state,()=>.4);assert.equal(child.nameIdentity.surname,parent.nameIdentity.surname);assert.notEqual(child.name,parent.name);assert.equal(familyRelationship(parent.id,child.id),'Daughter');
+ assert.ok(settingsView().includes('Fictional player names'));
+ const full=Object.values(PLAYER_NAME_DATA).flatMap(d=>[d,...(d.variants||[])]);
+ return {global:{generated:rows.length,unique:10000,duplicates:0,duplicateRate:0},countries,large,corpus:{countries:codes.length,givenEntries:full.reduce((n,d)=>n+d.male.length+d.female.length+(d.neutral||[]).length,0),surnameEntries:full.reduce((n,d)=>n+d.surnames.length+(d.femaleSurnames||[]).length,0),distinctGiven:new Set(full.flatMap(d=>[...d.male,...d.female,...(d.neutral||[])])).size,distinctSurnames:new Set(full.flatMap(d=>[...d.surnames,...(d.femaleSurnames||[])])).size}};
+})()`);
+// Real factory: 100 years, 100 recruits per year, male and female careers.
+for(const gender of ['male','female']){
+ const r=l.run(`(()=>{state=fresh(defaultTeams(),2,1997,'${gender}');const names=new Set(familyPlayers(state).map(p=>p.name));let count=0;for(let y=1997;y<2097;y++){state.year=y;for(let i=0;i<100;i++){const p=player(2000000+(y-1900)*500+i,i,0,'${gender}','draft');assert.ok(!names.has(p.name));names.add(p.name);assert.equal(p.gender,'${gender}');count++;}if(y%10===0)state=JSON.parse(JSON.stringify(state));}return {recruits:count,unique:names.size,duplicates:0};})()`);report[gender+'100Seasons']=r;
+}
+fs.writeFileSync('dev/player-name-test-results.json',JSON.stringify(report,null,2)+'\n');console.log('PASS: '+JSON.stringify({global:report.global,corpus:report.corpus,male:report.male100Seasons,female:report.female100Seasons}));

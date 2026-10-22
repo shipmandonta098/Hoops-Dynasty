@@ -1,0 +1,14 @@
+const assert=require('node:assert/strict'),{loadLeague}=require('./load-league.cjs');
+(async()=>{for(const gender of ['male','female']){
+ const l=loadLeague({seed:71,strictDOM:false});l.context.assert=assert;l.context.gender=gender;
+ l.run(`const draft=makeDraft();draft.gmName='Continuing GM';draft.teams=draft.teams.slice(0,6);draft.meetings='custom';draft.leagueSettings={...setupLeagueRules(draft),playoffFormat:'top4',splitPlayoffs:false,firstRoundByes:0,seriesSemiGames:1,seriesFinalGames:1};if(gender==='female'){const p=historicalPlan('wnba',2020,draft.leagueSettings,draft.cap,draft.teams);Object.assign(draft,{year:2020,leagueGender:'female',cap:p.cap,leagueSettings:{...p.rules,playoffFormat:'top4',splitPlayoffs:false,firstRoundByes:0,seriesSemiGames:1,seriesFinalGames:1}})}draft.conferences=[{id:'league',name:'League'}];draft.divisions=[];draft.teams.forEach(t=>{t.conferenceId='league';t.divisionId=''});Object.assign(draft.leagueSettings,{seasonGames:10,divisionGames:0,conferenceGames:10,seasonStart:'06-01',seasonEnd:'06-30'});syncAlignment(draft);state=validateCareerData(buildSetupCareer(draft));render=()=>{};simulationExecution.mode='headless';simulationExecution.autopilot=false;gmEnsure();ownerFor(team()).patience=0;team().owner.fired=true;gmCheckEmployment();state.gmCareer.dismissalAcknowledged=true;globalThis.originalGm=JSON.stringify(state.gmCareer.tenures);globalThis.oldYear=state.year;`);
+ for(let year=0;year<2;year++){
+  await l.run(`sim(seasonLength()-state.day)`);await l.run('playoffs()');assert(l.run('state.champion!==null'));const games=l.run('state.history.length');
+  await l.run('gmUnemployedOffseason()');assert.equal(l.run('state.year'),l.run('oldYear')+year+1);
+  l.run(`assert.equal(controlledTeamId(),-1);assert.equal(JSON.stringify(state.gmCareer.tenures),originalGm);state=validateCareerData(JSON.parse(JSON.stringify(state)));assert.equal(openingWeekAudit(state).delayed.length,0);assert(state.teams.every(t=>t.roster.length>=rosterMinimum()));if(wnbaEnabled())for(const t of state.teams)assert.equal(wnbaValidateTransaction(t),'');`);
+  console.log('PASS',gender,'unemployed season',year+1,games,'games, playoffs, AI draft/FA/rosters, rollover, save/load');
+ }
+ // Return to the original franchise after its same-season lockout expires.
+ await l.run(`(async()=>{ownerFor(state.teams[0]).patience=0;state.teams[0].owner.fired=true;state.gmCareer.marketEpoch=null;gmRefreshJobs();const j=state.gmCareer.jobs.filter(j=>j.teamId===0&&j.expires>=gmStamp()).at(-1);assert(j);state.gmCareer.reputation=95;await gmApply(j.id);await gmAccept(j.id);assert.equal(controlledTeamId(),0);assert.equal(state.gmCareer.tenures.length,2);assert.equal(JSON.stringify(state.gmCareer.tenures[0]),JSON.stringify(JSON.parse(originalGm)[0]));validateCareerData(state)})()`);
+ console.log('PASS',gender,'rehiring by former franchise');
+}})().catch(e=>{console.error(e.stack?.slice(0,2400));process.exitCode=1});

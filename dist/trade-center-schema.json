@@ -1,0 +1,221 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Hoops Dynasty Trade Center",
+  "type": "object",
+  "required": [
+    "tradeCenter"
+  ],
+  "properties": {
+    "tradeCenter": {
+      "type": "object",
+      "required": [
+        "deadline",
+        "daysRemaining",
+        "teamsInvolved",
+        "tradeOffer",
+        "capSpace",
+        "capLimit",
+        "ownerMood",
+        "coachPreference",
+        "tradeHistory",
+        "decisionLogLink"
+      ],
+      "properties": {
+        "deadline": {
+          "type": "string",
+          "format": "date"
+        },
+        "daysRemaining": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "teamsInvolved": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "string"
+          }
+        },
+        "tradeOffer": {
+          "type": "object",
+          "required": [
+            "outgoingPlayers",
+            "incomingPlayers",
+            "cash",
+            "capImpact",
+            "fairnessScore",
+            "status"
+          ],
+          "properties": {
+            "outgoingPlayers": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/player"
+              }
+            },
+            "incomingPlayers": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/player"
+              }
+            },
+            "cash": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 10
+            },
+            "capImpact": {
+              "type": "string",
+              "pattern": "^[+-][0-9]+\\.[0-9]+M$"
+            },
+            "fairnessScore": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "status": {
+              "enum": [
+                "Pending",
+                "Accepted",
+                "Declined"
+              ]
+            },
+            "outgoingPicks": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/pick"
+              }
+            },
+            "incomingPicks": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/pick"
+              }
+            }
+          }
+        },
+        "capSpace": {
+          "type": "number"
+        },
+        "capLimit": {
+          "type": "number",
+          "minimum": 0
+        },
+        "salaryCap": {
+          "type": "number",
+          "minimum": 0
+        },
+        "ownerMood": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "coachPreference": {
+          "type": "string"
+        },
+        "tradeHistory": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "year",
+              "day",
+              "description"
+            ],
+            "properties": {
+              "year": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "day": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "description": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "decisionLogLink": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "player": {
+      "type": "object",
+      "required": [
+        "name",
+        "pos",
+        "ovr",
+        "salary",
+        "age",
+        "contractYears"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "pos": {
+          "enum": [
+            "PG",
+            "SG",
+            "SF",
+            "PF",
+            "C"
+          ]
+        },
+        "ovr": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 99
+        },
+        "salary": {
+          "type": "number",
+          "minimum": 0
+        },
+        "age": {
+          "type": "integer",
+          "minimum": 16
+        },
+        "contractYears": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "pick": {
+      "type": "object",
+      "required": [
+        "year",
+        "origin",
+        "round"
+      ],
+      "properties": {
+        "year": {
+          "type": "integer"
+        },
+        "origin": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "round": {
+          "enum": [
+            1,
+            2
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "gender": "male",
+    "periods": 4,
+    "games": 10,
+    "eligibleHighlights": 4,
+    "decisiveWinners": 10,
+    "defensiveSeals": 0,
+    "overtimes": 0
+  },
+  {
+    "gender": "male",
+    "periods": 2,
+    "games": 10,
+    "eligibleHighlights": 1,
+    "decisiveWinners": 10,
+    "defensiveSeals": 0,
+    "overtimes": 0
+  },
+  {
+    "gender": "female",
+    "periods": 4,
+    "games": 10,
+    "eligibleHighlights": 4,
+    "decisiveWinners": 10,
+    "defensiveSeals": 1,
+    "overtimes": 0
+  },
+  {
+    "gender": "female",
+    "periods": 2,
+    "games": 10,
+    "eligibleHighlights": 3,
+    "decisiveWinners": 10,
+    "defensiveSeals": 1,
+    "overtimes": 0
+  }
+]

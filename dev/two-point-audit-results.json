@@ -1,0 +1,2593 @@
+{
+  "fixture": {
+    "creationSeed": 61005,
+    "gameSeedStart": 100000,
+    "teams": 30,
+    "games": 150,
+    "rosterSize": 15,
+    "reset": "preseason per game",
+    "matchups": "circle schedule first ten rounds, venue alternates by round",
+    "appearances": [
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10
+    ]
+  },
+  "runtimeSeconds": 51.46217854299999,
+  "checks": {
+    "fullGameAndStateParity": 150,
+    "boxReconciliation": 150,
+    "reboundReconciliation": 150,
+    "scoreReconciliation": 150,
+    "modifierReconciliation": 2789
+  },
+  "totals": {
+    "pts": 37152,
+    "fga": 28672,
+    "fgm": 14211,
+    "tpa": 10646,
+    "tpm": 4046,
+    "fta": 6052,
+    "ftm": 4684,
+    "orb": 3825,
+    "drb": 11201,
+    "poss": 153570,
+    "blk": 930,
+    "tov": 3876
+  },
+  "league": {
+    "PPG": 123.84,
+    "pace": 102.38,
+    "ORtg": 120.9611252197695,
+    "FG": 0.49564034598214285,
+    "twoP": 0.56390768889382,
+    "threeP": 0.3800488446364832
+  },
+  "rebounds": {
+    "total": 3825,
+    "perTeamGame": 12.75,
+    "rate": 0.2545587648076667,
+    "routes": {
+      "putback": 2720,
+      "kickout": 581,
+      "recursive": 524
+    },
+    "recursiveFirstEvents": {
+      "immediate putback": 2720,
+      "immediate kickout": 581,
+      "shot": 414,
+      "turnover": 78,
+      "foul": 32
+    },
+    "putbacksPerOreb": 0.7111111111111111,
+    "putbacksPerTeamGame": 9.066666666666666
+  },
+  "putbacks": {
+    "lay": {
+      "evaluations": 1654,
+      "attempts": 1654,
+      "made": 1056,
+      "FG": 0.6384522370012092,
+      "share": 0.05768694196428571,
+      "rating": 78.45102781136639,
+      "rawRating": 78.45102781136639,
+      "rim": 70.29883124407286,
+      "rawRim": 71.28839177750906,
+      "base": 0.6413043931345861,
+      "context": 0.6413043931345861,
+      "final": 0.6406869874492264,
+      "contextDelta": 0,
+      "contest": 0,
+      "blocks": 0,
+      "blockRate": 0,
+      "foulRate": 0,
+      "foulEvaluations": 0,
+      "makeRollMisses": 598,
+      "blockRisk": 0,
+      "effectiveVsRawDelta": 0,
+      "fatigueOnlyDelta": null
+    },
+    "dnk": {
+      "evaluations": 1066,
+      "attempts": 1066,
+      "made": 655,
+      "FG": 0.6144465290806754,
+      "share": 0.03717912946428571,
+      "rating": 88.1829268292683,
+      "rawRating": 88.1829268292683,
+      "rim": 71.33554961905365,
+      "rawRim": 72.43996247654785,
+      "base": 0.658694754420429,
+      "context": 0.658694754420429,
+      "final": 0.6580395708112039,
+      "contextDelta": 0,
+      "contest": 0,
+      "blocks": 61,
+      "blockRate": 0.05722326454033771,
+      "foulRate": 0,
+      "foulEvaluations": 0,
+      "makeRollMisses": 350,
+      "blockRisk": 0.05791741088180074,
+      "effectiveVsRawDelta": 0,
+      "fatigueOnlyDelta": null
+    }
+  },
+  "paths": {
+    "primary": {
+      "evaluations": 26895,
+      "attempts": 24952,
+      "made": 12039,
+      "FG": 0.4824863738377685,
+      "share": 0.8702566964285714,
+      "rating": 81.05859873302796,
+      "rawRating": 82.1566828310356,
+      "rim": 72.01563947199575,
+      "rawRim": 73.08560436037192,
+      "base": 0.46682314087202637,
+      "context": 0.4825997014487977,
+      "final": 0.4755296794620734,
+      "contextDelta": 0.01577656057677626,
+      "contest": 0.27288393715934595,
+      "blocks": 854,
+      "blockRate": 0.034225713369669765,
+      "foulRate": 0.11094999070459192,
+      "foulEvaluations": 2984,
+      "makeRollMisses": 12059,
+      "blockRisk": 0.033440241526783154,
+      "effectiveVsRawDelta": -1.098084098007669,
+      "fatigueOnlyDelta": -1.164092834782275
+    },
+    "putback": {
+      "evaluations": 2720,
+      "attempts": 2720,
+      "made": 1711,
+      "FG": 0.6290441176470588,
+      "share": 0.09486607142857142,
+      "rating": 82.26507352941177,
+      "rawRating": 82.26507352941177,
+      "rim": 70.70513337191457,
+      "rawRim": 71.73970588235294,
+      "base": 0.6481198803149925,
+      "context": 0.6481198803149925,
+      "final": 0.6474876690168239,
+      "contextDelta": 0,
+      "contest": 0,
+      "blocks": 61,
+      "blockRate": 0.022426470588235294,
+      "foulRate": 0,
+      "foulEvaluations": 0,
+      "makeRollMisses": 948,
+      "blockRisk": 0.0226985147058822,
+      "effectiveVsRawDelta": 0,
+      "fatigueOnlyDelta": null
+    },
+    "kickout": {
+      "evaluations": 581,
+      "attempts": 581,
+      "made": 262,
+      "FG": 0.4509466437177281,
+      "share": 0.020263671875,
+      "rating": 80.66678141135971,
+      "rawRating": 80.66678141135971,
+      "rim": 70.10434300703469,
+      "rawRim": 71.12048192771084,
+      "base": 0.4624546580893576,
+      "context": 0.4689378766779981,
+      "final": 0.46830345201666856,
+      "contextDelta": 0.006483218588640269,
+      "contest": 0,
+      "blocks": 0,
+      "blockRate": 0,
+      "foulRate": 0,
+      "foulEvaluations": 0,
+      "makeRollMisses": 319,
+      "blockRisk": 0,
+      "effectiveVsRawDelta": 0,
+      "fatigueOnlyDelta": null
+    },
+    "recursive": {
+      "evaluations": 444,
+      "attempts": 419,
+      "made": 199,
+      "FG": 0.47494033412887826,
+      "share": 0.014613560267857142,
+      "rating": 81.25353161181495,
+      "rawRating": 82.33436754176611,
+      "rim": 72.62362770919432,
+      "rawRim": 73.69928400954655,
+      "base": 0.48458067074354594,
+      "context": 0.4963748335682369,
+      "final": 0.48772245592771,
+      "contextDelta": 0.01179416282469073,
+      "contest": 0.3126491646778043,
+      "blocks": 15,
+      "blockRate": 0.03579952267303103,
+      "foulRate": 0.1036036036036036,
+      "foulEvaluations": 46,
+      "makeRollMisses": 205,
+      "blockRisk": 0.03667345124058178,
+      "effectiveVsRawDelta": -1.0808359299511183,
+      "fatigueOnlyDelta": -1.1992130182566074
+    }
+  },
+  "categories": {
+    "dunk": {
+      "evaluations": 4519,
+      "attempts": 4313,
+      "made": 2625,
+      "FG": 0.608625086946441,
+      "share": 0.15042550223214285,
+      "rating": 82.7665913205309,
+      "rawRating": 83.81103640157663,
+      "rim": 73.74370500264932,
+      "rawRim": 74.8931138418734,
+      "base": 0.6451444578025517,
+      "context": 0.6446712581185667,
+      "final": 0.6371535713197378,
+      "contextDelta": -0.0004731996839859396,
+      "contest": 0.3317876188268027,
+      "blocks": 300,
+      "blockRate": 0.06955715279387897,
+      "foulRate": 0.0798849302943129,
+      "foulEvaluations": 361,
+      "makeRollMisses": 1388,
+      "blockRisk": 0.06598406333814746,
+      "effectiveVsRawDelta": -1.0444450810455155,
+      "fatigueOnlyDelta": -1.4636337138261994
+    },
+    "rim": {
+      "evaluations": 4514,
+      "attempts": 4346,
+      "made": 2884,
+      "FG": 0.6635987114588127,
+      "share": 0.15157645089285715,
+      "rating": 79.8397830990505,
+      "rawRating": 80.43689599631844,
+      "rim": 72.35327513675868,
+      "rawRim": 73.39001380579843,
+      "base": 0.6435643229068837,
+      "context": 0.6711303444045832,
+      "final": 0.6624783710890009,
+      "contextDelta": 0.027566021497699204,
+      "contest": 0.23469857340082834,
+      "blocks": 133,
+      "blockRate": 0.030602853198343303,
+      "foulRate": 0.07399202481169695,
+      "foulEvaluations": 334,
+      "makeRollMisses": 1329,
+      "blockRisk": 0.030615701600998965,
+      "effectiveVsRawDelta": -0.5971128972679858,
+      "fatigueOnlyDelta": -1.0479223413957552
+    },
+    "three": {
+      "evaluations": 11515,
+      "attempts": 10646,
+      "made": 4046,
+      "FG": 0.3800488446364832,
+      "share": 0.37130301339285715,
+      "rating": 82.2915089134365,
+      "rawRating": 83.31763103513036,
+      "rim": 70.58759894744234,
+      "rawRim": 71.63112906255871,
+      "base": 0.33301771106159267,
+      "context": 0.37293258528618667,
+      "final": 0.36893286369398837,
+      "contextDelta": 0.03991487422459429,
+      "contest": 0.19387563404095434,
+      "blocks": 219,
+      "blockRate": 0.02057110651888033,
+      "foulRate": 0.10343030829353018,
+      "foulEvaluations": 1191,
+      "makeRollMisses": 6381,
+      "blockRisk": 0.020086716760794356,
+      "effectiveVsRawDelta": -1.0261221216935255,
+      "fatigueOnlyDelta": -1.0970006809954262
+    },
+    "post": {
+      "evaluations": 3819,
+      "attempts": 3546,
+      "made": 1704,
+      "FG": 0.4805414551607445,
+      "share": 0.12367466517857142,
+      "rating": 78.30097188987666,
+      "rawRating": 79.52842639593898,
+      "rim": 72.15661965784014,
+      "rawRim": 73.195149464185,
+      "base": 0.5039814517097994,
+      "context": 0.48218315089293307,
+      "final": 0.4748761776106232,
+      "contextDelta": -0.02179830081686771,
+      "contest": 0.2526790750141004,
+      "blocks": 138,
+      "blockRate": 0.038917089678511,
+      "foulRate": 0.11180937418172296,
+      "foulEvaluations": 427,
+      "makeRollMisses": 1704,
+      "blockRisk": 0.03555113812432238,
+      "effectiveVsRawDelta": -1.227454506062429,
+      "fatigueOnlyDelta": -1.3064714889237463
+    },
+    "floater": {
+      "evaluations": 1817,
+      "attempts": 1698,
+      "made": 987,
+      "FG": 0.5812720848056537,
+      "share": 0.05922154017857143,
+      "rating": 78.38370482003651,
+      "rawRating": 79.12193757361584,
+      "rim": 75.37583567107261,
+      "rawRim": 76.56301531213192,
+      "base": 0.6348843499634508,
+      "context": 0.5728640861818904,
+      "final": 0.5642646902629709,
+      "contextDelta": -0.06202026378155953,
+      "contest": 0.24028268551236748,
+      "blocks": 54,
+      "blockRate": 0.03180212014134275,
+      "foulRate": 0.11062190423775455,
+      "foulEvaluations": 201,
+      "makeRollMisses": 657,
+      "blockRisk": 0.02933040112885656,
+      "effectiveVsRawDelta": -0.7382327535793906,
+      "fatigueOnlyDelta": -1.076088047594381
+    },
+    "midrange": {
+      "evaluations": 4456,
+      "attempts": 4123,
+      "made": 1965,
+      "FG": 0.4765947125879214,
+      "share": 0.143798828125,
+      "rating": 81.60698487013421,
+      "rawRating": 82.63108173659968,
+      "rim": 70.96217998608701,
+      "rawRim": 72.0007276255154,
+      "base": 0.45910393962373686,
+      "context": 0.4693580400714609,
+      "final": 0.4623228342721388,
+      "contextDelta": 0.010254100447723876,
+      "contest": 0.271889400921659,
+      "blocks": 86,
+      "blockRate": 0.02085859810817366,
+      "foulRate": 0.11579892280071813,
+      "foulEvaluations": 516,
+      "makeRollMisses": 2072,
+      "blockRisk": 0.025261070766351743,
+      "effectiveVsRawDelta": -1.0240968664653023,
+      "fatigueOnlyDelta": -1.0986891559531589
+    }
+  },
+  "primaryCategories": {
+    "dunk": {
+      "evaluations": 3289,
+      "attempts": 3088,
+      "made": 1880,
+      "FG": 0.6088082901554405,
+      "share": 0.10770089285714286,
+      "rating": 81.01392881202268,
+      "rawRating": 82.44009067357513,
+      "rim": 74.65582718433585,
+      "rawRim": 75.8196243523316,
+      "base": 0.6405724545432321,
+      "context": 0.6399721653992739,
+      "final": 0.6300872908434139,
+      "contextDelta": -0.0006002891439567962,
+      "contest": 0.452720207253886,
+      "blocks": 235,
+      "blockRate": 0.07610103626943006,
+      "foulRate": 0.1067193675889328,
+      "foulEvaluations": 351,
+      "makeRollMisses": 973,
+      "blockRisk": 0.0706594074455802,
+      "effectiveVsRawDelta": -1.4261618615526916,
+      "fatigueOnlyDelta": -1.4608121206200486
+    },
+    "three": {
+      "evaluations": 11161,
+      "attempts": 10299,
+      "made": 3933,
+      "FG": 0.3818817360908826,
+      "share": 0.3592006138392857,
+      "rating": 82.27241787365541,
+      "rawRating": 83.31851636081156,
+      "rim": 70.5880961524309,
+      "rawRim": 71.6315176230702,
+      "base": 0.3330388922031227,
+      "context": 0.37339859810052484,
+      "final": 0.3693286640221206,
+      "contextDelta": 0.040359705897402766,
+      "contest": 0.19768909602874066,
+      "blocks": 216,
+      "blockRate": 0.020972909991261286,
+      "foulRate": 0.10563569572618942,
+      "foulEvaluations": 1179,
+      "makeRollMisses": 6150,
+      "blockRisk": 0.02047064781217277,
+      "effectiveVsRawDelta": -1.0460984871557992,
+      "fatigueOnlyDelta": -1.096812148676335
+    },
+    "post": {
+      "evaluations": 3651,
+      "attempts": 3379,
+      "made": 1621,
+      "FG": 0.479727730097662,
+      "share": 0.11785016741071429,
+      "rating": 78.30658117377314,
+      "rawRating": 79.58191772713815,
+      "rim": 72.29804422316937,
+      "rawRim": 73.35513465522344,
+      "base": 0.5046484518296417,
+      "context": 0.4820664803701448,
+      "final": 0.4745104501581309,
+      "contextDelta": -0.022581971459498213,
+      "contest": 0.2622077537733057,
+      "blocks": 137,
+      "blockRate": 0.04054453980467594,
+      "foulRate": 0.11613256642015886,
+      "foulEvaluations": 424,
+      "makeRollMisses": 1621,
+      "blockRisk": 0.036773418571915455,
+      "effectiveVsRawDelta": -1.2753365533650693,
+      "fatigueOnlyDelta": -1.3120190037941906
+    },
+    "floater": {
+      "evaluations": 1758,
+      "attempts": 1641,
+      "made": 954,
+      "FG": 0.5813528336380256,
+      "share": 0.05723353794642857,
+      "rating": 78.40588029833633,
+      "rawRating": 79.15188909201692,
+      "rim": 75.34145449214127,
+      "rawRim": 76.51919561243145,
+      "base": 0.6350302781850723,
+      "context": 0.5730609968865358,
+      "final": 0.5642988929243604,
+      "contextDelta": -0.06196928129853618,
+      "contest": 0.24192565508836075,
+      "blocks": 52,
+      "blockRate": 0.031687995124923825,
+      "foulRate": 0.11262798634812286,
+      "foulEvaluations": 198,
+      "makeRollMisses": 635,
+      "blockRisk": 0.02973740485801404,
+      "effectiveVsRawDelta": -0.7460087936806495,
+      "fatigueOnlyDelta": -1.0713896590066705
+    },
+    "midrange": {
+      "evaluations": 4247,
+      "attempts": 3921,
+      "made": 1870,
+      "FG": 0.47691915327722517,
+      "share": 0.13675362723214285,
+      "rating": 81.6349408657194,
+      "rawRating": 82.68899515429754,
+      "rim": 70.96330943110729,
+      "rawRim": 71.99923488905891,
+      "base": 0.45920179374136705,
+      "context": 0.46949075220898795,
+      "final": 0.4623060288941277,
+      "contextDelta": 0.010288958467620634,
+      "contest": 0.2790104565161948,
+      "blocks": 83,
+      "blockRate": 0.02116806937005866,
+      "foulRate": 0.1186720037673652,
+      "foulEvaluations": 504,
+      "makeRollMisses": 1968,
+      "blockRisk": 0.026016196269396556,
+      "effectiveVsRawDelta": -1.0540542885778326,
+      "fatigueOnlyDelta": -1.096199149582681
+    },
+    "rim": {
+      "evaluations": 2789,
+      "attempts": 2624,
+      "made": 1781,
+      "FG": 0.678734756097561,
+      "share": 0.09151785714285714,
+      "rating": 80.68861327895152,
+      "rawRating": 81.66236661585391,
+      "rim": 73.6405049371355,
+      "rawRim": 74.70426829268293,
+      "base": 0.6449289947085848,
+      "context": 0.6897075341033665,
+      "final": 0.6760304357402207,
+      "contextDelta": 0.04477853939478259,
+      "contest": 0.3803353658536585,
+      "blocks": 131,
+      "blockRate": 0.04992378048780488,
+      "foulRate": 0.11760487629974901,
+      "foulEvaluations": 328,
+      "makeRollMisses": 712,
+      "blockRisk": 0.04966138958383035,
+      "effectiveVsRawDelta": -0.9737533369020076,
+      "fatigueOnlyDelta": -1.047914922267861
+    }
+  },
+  "primaryRim": {
+    "evaluations": 2789,
+    "attempts": 2624,
+    "made": 1781,
+    "FG": 0.678734756097561,
+    "share": 0.09151785714285714,
+    "rating": 80.68861327895152,
+    "rawRating": 81.66236661585391,
+    "rim": 73.6405049371355,
+    "rawRim": 74.70426829268293,
+    "base": 0.6449289947085848,
+    "context": 0.6897075341033665,
+    "final": 0.6760304357402207,
+    "contextDelta": 0.04477853939478259,
+    "contest": 0.3803353658536585,
+    "blocks": 131,
+    "blockRate": 0.04992378048780488,
+    "foulRate": 0.11760487629974901,
+    "foulEvaluations": 328,
+    "makeRollMisses": 712,
+    "blockRisk": 0.04966138958383035,
+    "effectiveVsRawDelta": -0.9737533369020076,
+    "fatigueOnlyDelta": -1.047914922267861
+  },
+  "rimVariants": {
+    "Finger Roll Layup": {
+      "evaluations": 191,
+      "attempts": 183,
+      "made": 128,
+      "FG": 0.6994535519125683,
+      "share": 0.006382533482142857,
+      "rating": 84.34711411197124,
+      "rawRating": 85.32240437158468,
+      "rim": 74.74457311785221,
+      "rawRim": 75.87978142076503,
+      "base": 0.6524700779994699,
+      "context": 0.7036205634187407,
+      "final": 0.6916892325473449,
+      "contextDelta": 0.05115048541927073,
+      "contest": 0.3879781420765027,
+      "blocks": 13,
+      "blockRate": 0.07103825136612021,
+      "foulRate": 0.08900523560209424,
+      "foulEvaluations": 17,
+      "makeRollMisses": 42,
+      "blockRisk": 0.06827381792672807,
+      "effectiveVsRawDelta": -0.9752902596134735,
+      "fatigueOnlyDelta": -1.1209186749140196
+    },
+    "Running Layup": {
+      "evaluations": 1397,
+      "attempts": 1314,
+      "made": 914,
+      "FG": 0.69558599695586,
+      "share": 0.04582868303571429,
+      "rating": 80.02168820411062,
+      "rawRating": 81.15479452054788,
+      "rim": 74.567045527617,
+      "rawRim": 75.6765601217656,
+      "base": 0.6407499708781835,
+      "context": 0.7014298476660547,
+      "final": 0.6880432971215383,
+      "contextDelta": 0.060679876787870554,
+      "contest": 0.3158295281582953,
+      "blocks": 47,
+      "blockRate": 0.03576864535768645,
+      "foulRate": 0.11667859699355762,
+      "foulEvaluations": 163,
+      "makeRollMisses": 353,
+      "blockRisk": 0.03616591633127414,
+      "effectiveVsRawDelta": -1.1331063164373774,
+      "fatigueOnlyDelta": -1.16050357671135
+    },
+    "Scoop Layup": {
+      "evaluations": 159,
+      "attempts": 146,
+      "made": 98,
+      "FG": 0.6712328767123288,
+      "share": 0.005092075892857143,
+      "rating": 86.78448279736641,
+      "rawRating": 87.72123287671235,
+      "rim": 75.09704099965843,
+      "rawRim": 76.12328767123287,
+      "base": 0.6568760676208191,
+      "context": 0.6950589083926753,
+      "final": 0.6805228034308393,
+      "contextDelta": 0.038182840771856005,
+      "contest": 0.4520547945205479,
+      "blocks": 5,
+      "blockRate": 0.03424657534246575,
+      "foulRate": 0.13836477987421383,
+      "foulEvaluations": 22,
+      "makeRollMisses": 43,
+      "blockRisk": 0.06278003052165747,
+      "effectiveVsRawDelta": -0.9367500793459135,
+      "fatigueOnlyDelta": -0.9545582985239959
+    },
+    "Eurostep Layup": {
+      "evaluations": 92,
+      "attempts": 87,
+      "made": 67,
+      "FG": 0.7701149425287356,
+      "share": 0.0030343191964285715,
+      "rating": 89.05866849463956,
+      "rawRating": 89.90574712643678,
+      "rim": 72.31992382769884,
+      "rawRim": 73.39080459770115,
+      "base": 0.6682476042764102,
+      "context": 0.7050023815776514,
+      "final": 0.6754010907216588,
+      "contextDelta": 0.036754777301240944,
+      "contest": 0.5632183908045977,
+      "blocks": 2,
+      "blockRate": 0.022988505747126436,
+      "foulRate": 0.17391304347826086,
+      "foulEvaluations": 16,
+      "makeRollMisses": 18,
+      "blockRisk": 0.0502922985866568,
+      "effectiveVsRawDelta": -0.8470786317972069,
+      "fatigueOnlyDelta": -0.8470786317972069
+    },
+    "Driving Layup": {
+      "evaluations": 556,
+      "attempts": 521,
+      "made": 323,
+      "FG": 0.6199616122840691,
+      "share": 0.018171037946428572,
+      "rating": 79.17235619197051,
+      "rawRating": 80.01967370441459,
+      "rim": 72.42511061921485,
+      "rawRim": 73.34548944337811,
+      "base": 0.6450188730551387,
+      "context": 0.6707538646057607,
+      "final": 0.65875168381955,
+      "contextDelta": 0.025734991550621016,
+      "contest": 0.43378119001919385,
+      "blocks": 44,
+      "blockRate": 0.08445297504798464,
+      "foulRate": 0.11510791366906475,
+      "foulEvaluations": 64,
+      "makeRollMisses": 154,
+      "blockRisk": 0.07206467621529715,
+      "effectiveVsRawDelta": -0.8473175124440965,
+      "fatigueOnlyDelta": -0.9034595469930407
+    },
+    "Cutting Layup": {
+      "evaluations": 272,
+      "attempts": 256,
+      "made": 165,
+      "FG": 0.64453125,
+      "share": 0.008928571428571428,
+      "rating": 75.5394250162242,
+      "rawRating": 76.03789062499995,
+      "rim": 69.33102886864692,
+      "rawRim": 70.33203125,
+      "base": 0.6401967870009546,
+      "context": 0.6496187075412067,
+      "final": 0.6357782097149118,
+      "contextDelta": 0.009421920540251134,
+      "contest": 0.46484375,
+      "blocks": 15,
+      "blockRate": 0.05859375,
+      "foulRate": 0.125,
+      "foulEvaluations": 34,
+      "makeRollMisses": 76,
+      "blockRisk": 0.050697846165075555,
+      "effectiveVsRawDelta": -0.49846560877585394,
+      "fatigueOnlyDelta": -0.8617468587758547
+    },
+    "Reverse Layup": {
+      "evaluations": 122,
+      "attempts": 117,
+      "made": 86,
+      "FG": 0.7350427350427351,
+      "share": 0.004080636160714286,
+      "rating": 86.64420541588008,
+      "rawRating": 87.56923076923078,
+      "rim": 75.51369973712393,
+      "rawRim": 76.76923076923077,
+      "base": 0.657773831870333,
+      "context": 0.6903609071425073,
+      "final": 0.6765022928015468,
+      "contextDelta": 0.032587075272174505,
+      "contest": 0.4444444444444444,
+      "blocks": 5,
+      "blockRate": 0.042735042735042736,
+      "foulRate": 0.09836065573770492,
+      "foulEvaluations": 12,
+      "makeRollMisses": 26,
+      "blockRisk": 0.053245334773119796,
+      "effectiveVsRawDelta": -0.9250253533506901,
+      "fatigueOnlyDelta": -0.9857091140344508
+    }
+  },
+  "rimContest": {
+    "uncontested": {
+      "evaluations": 1737,
+      "attempts": 1626,
+      "made": 1124,
+      "FG": 0.6912669126691267,
+      "share": 0.05671037946428571,
+      "rating": 80.95044886903204,
+      "rawRating": 81.98597785977863,
+      "rim": 73.9036400547454,
+      "rawRim": 75.00123001230013,
+      "base": 0.6439613913063105,
+      "context": 0.6980670641704781,
+      "final": 0.683940767971958,
+      "contextDelta": 0.05410567286416804,
+      "contest": 0,
+      "blocks": 74,
+      "blockRate": 0.04551045510455105,
+      "foulRate": 0.12377662636729994,
+      "foulEvaluations": 215,
+      "makeRollMisses": 428,
+      "blockRisk": 0.04822544468817701,
+      "effectiveVsRawDelta": -1.0355289907465621,
+      "fatigueOnlyDelta": -1.1074232096887515
+    },
+    "contested": {
+      "evaluations": 1052,
+      "attempts": 998,
+      "made": 657,
+      "FG": 0.6583166332665331,
+      "share": 0.03480747767857143,
+      "rating": 80.26201541375053,
+      "rawRating": 81.135120240481,
+      "rim": 73.21178980563894,
+      "rawRim": 74.22044088176352,
+      "base": 0.6465054707928508,
+      "context": 0.6760876985431233,
+      "final": 0.6631424595790909,
+      "contextDelta": 0.029582227750273006,
+      "contest": 1,
+      "blocks": 57,
+      "blockRate": 0.05711422845691383,
+      "foulRate": 0.10741444866920152,
+      "foulEvaluations": 113,
+      "makeRollMisses": 284,
+      "blockRisk": 0.05200091503506516,
+      "effectiveVsRawDelta": -0.8731048267304145,
+      "fatigueOnlyDelta": -0.9509605381532599
+    }
+  },
+  "rimHelp": {
+    "not PNR help decision": {
+      "evaluations": 2452,
+      "attempts": 2302,
+      "made": 1582,
+      "FG": 0.687228496959166,
+      "share": 0.08028738839285714,
+      "rating": 81.72710440544022,
+      "rawRating": 82.72678105994802,
+      "rim": 73.83645899046773,
+      "rawRim": 74.91485664639444,
+      "base": 0.6469863835470497,
+      "context": 0.6960408781262579,
+      "final": 0.6822389313416216,
+      "contextDelta": 0.04905449457920832,
+      "contest": 0.32754126846220677,
+      "blocks": 110,
+      "blockRate": 0.04778453518679409,
+      "foulRate": 0.11908646003262642,
+      "foulEvaluations": 292,
+      "makeRollMisses": 610,
+      "blockRisk": 0.0494314485376557,
+      "effectiveVsRawDelta": -0.9996766545074643,
+      "fatigueOnlyDelta": -1.0590597995986906
+    },
+    "help arrived": {
+      "evaluations": 200,
+      "attempts": 192,
+      "made": 109,
+      "FG": 0.5677083333333334,
+      "share": 0.006696428571428571,
+      "rating": 72.93493292355843,
+      "rawRating": 73.67317708333331,
+      "rim": 72.30862119449623,
+      "rawRim": 73.36458333333333,
+      "base": 0.6309243415584376,
+      "context": 0.6365957994869192,
+      "final": 0.6248172693598476,
+      "contextDelta": 0.005671457928481556,
+      "contest": 0.9895833333333334,
+      "blocks": 17,
+      "blockRate": 0.08854166666666667,
+      "foulRate": 0.1,
+      "foulEvaluations": 20,
+      "makeRollMisses": 66,
+      "blockRisk": 0.0522107276114688,
+      "effectiveVsRawDelta": -0.73824415977492,
+      "fatigueOnlyDelta": -0.9207962431082528
+    },
+    "help did not arrive": {
+      "evaluations": 137,
+      "attempts": 130,
+      "made": 90,
+      "FG": 0.6923076923076923,
+      "share": 0.004534040178571429,
+      "rating": 73.7509213947854,
+      "rawRating": 74.61346153846158,
+      "rim": 72.13770068956346,
+      "rawRim": 72.95384615384616,
+      "base": 0.6291811816215135,
+      "context": 0.6560005733776939,
+      "final": 0.6417302132064187,
+      "contextDelta": 0.02681939175618046,
+      "contest": 0.4153846153846154,
+      "blocks": 4,
+      "blockRate": 0.03076923076923077,
+      "foulRate": 0.11678832116788321,
+      "foulEvaluations": 16,
+      "makeRollMisses": 36,
+      "blockRisk": 0.04996793871450277,
+      "effectiveVsRawDelta": -0.8625401436761331,
+      "fatigueOnlyDelta": -1.038309374445364
+    }
+  },
+  "rimDefenderPosition": {
+    "PF": {
+      "evaluations": 665,
+      "attempts": 618,
+      "made": 412,
+      "FG": 0.6666666666666666,
+      "share": 0.021554129464285716,
+      "rating": 79.94050215093331,
+      "rawRating": 80.93770226537214,
+      "rim": 85.38736222741913,
+      "rawRim": 86.8252427184466,
+      "base": 0.6215777068198794,
+      "context": 0.677212555059341,
+      "final": 0.6611349387493963,
+      "contextDelta": 0.055634848239460445,
+      "contest": 0.3705501618122977,
+      "blocks": 42,
+      "blockRate": 0.06796116504854369,
+      "foulRate": 0.13834586466165413,
+      "foulEvaluations": 92,
+      "makeRollMisses": 164,
+      "blockRisk": 0.06337634765458458,
+      "effectiveVsRawDelta": -0.9972001144389462,
+      "fatigueOnlyDelta": -1.05342988790173
+    },
+    "C": {
+      "evaluations": 638,
+      "attempts": 601,
+      "made": 394,
+      "FG": 0.6555740432612313,
+      "share": 0.020961216517857144,
+      "rating": 79.69175200084663,
+      "rawRating": 80.74392678868554,
+      "rim": 92.57731196042369,
+      "rawRim": 94.15640599001664,
+      "base": 0.6108922264644596,
+      "context": 0.6649400943966891,
+      "final": 0.6530522343359291,
+      "contextDelta": 0.05404786793222879,
+      "contest": 0.3527454242928453,
+      "blocks": 30,
+      "blockRate": 0.04991680532445923,
+      "foulRate": 0.11128526645768025,
+      "foulEvaluations": 71,
+      "makeRollMisses": 177,
+      "blockRisk": 0.06896948031256094,
+      "effectiveVsRawDelta": -1.0521747878389613,
+      "fatigueOnlyDelta": -1.1017588144612578
+    },
+    "SF": {
+      "evaluations": 546,
+      "attempts": 507,
+      "made": 333,
+      "FG": 0.6568047337278107,
+      "share": 0.017682756696428572,
+      "rating": 80.72010512773245,
+      "rawRating": 81.62850098619332,
+      "rim": 74.81390438008214,
+      "rawRim": 75.74161735700197,
+      "base": 0.6404960619520681,
+      "context": 0.6775342913169232,
+      "final": 0.6636632310549552,
+      "contextDelta": 0.0370382293648558,
+      "contest": 0.4161735700197239,
+      "blocks": 36,
+      "blockRate": 0.07100591715976332,
+      "foulRate": 0.1282051282051282,
+      "foulEvaluations": 70,
+      "makeRollMisses": 138,
+      "blockRisk": 0.046636501176500506,
+      "effectiveVsRawDelta": -0.9083958584608441,
+      "fatigueOnlyDelta": -1.016088166153152
+    },
+    "SG": {
+      "evaluations": 500,
+      "attempts": 473,
+      "made": 338,
+      "FG": 0.7145877378435518,
+      "share": 0.016496930803571428,
+      "rating": 82.32621317678672,
+      "rawRating": 83.27177589852002,
+      "rim": 56.977675988551134,
+      "rawRim": 57.5877378435518,
+      "base": 0.6778691895880097,
+      "context": 0.7115333874433443,
+      "final": 0.6948976123498263,
+      "contextDelta": 0.033664197855334525,
+      "contest": 0.42917547568710357,
+      "blocks": 15,
+      "blockRate": 0.03171247357293869,
+      "foulRate": 0.126,
+      "foulEvaluations": 63,
+      "makeRollMisses": 120,
+      "blockRisk": 0.03127006146206046,
+      "effectiveVsRawDelta": -0.9455627217334168,
+      "fatigueOnlyDelta": -1.0309749838898645
+    },
+    "PG": {
+      "evaluations": 440,
+      "attempts": 425,
+      "made": 304,
+      "FG": 0.7152941176470589,
+      "share": 0.014822823660714286,
+      "rating": 81.32601371718398,
+      "rawRating": 82.26411764705877,
+      "rim": 46.92527140470011,
+      "rawRim": 47.383529411764705,
+      "base": 0.6956442379074633,
+      "context": 0.7331318488700477,
+      "final": 0.723939410854085,
+      "contextDelta": 0.037487610962584336,
+      "contest": 0.33647058823529413,
+      "blocks": 8,
+      "blockRate": 0.018823529411764704,
+      "foulRate": 0.07272727272727272,
+      "foulEvaluations": 32,
+      "makeRollMisses": 113,
+      "blockRisk": 0.026491295485995395,
+      "effectiveVsRawDelta": -0.938103929874882,
+      "fatigueOnlyDelta": -1.0205745181101762
+    }
+  },
+  "rimModifiers": {
+    "moraleClutch": {
+      "applied": 0,
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "meanApplied": 0,
+      "contribution": 0
+    },
+    "miscommunication": {
+      "applied": 0,
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "meanApplied": 0,
+      "contribution": 0
+    },
+    "isolation": {
+      "applied": 106,
+      "sum": 3.3600000000000034,
+      "min": -0.09,
+      "max": 0.06,
+      "meanApplied": 0.0316981132075472,
+      "contribution": 0.001204732879168162
+    },
+    "pickAndRoll": {
+      "applied": 1328,
+      "sum": 42.216640000000076,
+      "min": -0.0644,
+      "max": 0.07,
+      "meanApplied": 0.031789638554216924,
+      "contribution": 0.01513683757619221
+    },
+    "screenBoost": {
+      "applied": 992,
+      "sum": 9.097999999999862,
+      "min": 0.004,
+      "max": 0.014,
+      "meanApplied": 0.009171370967741796,
+      "contribution": 0.003262101111509452
+    },
+    "workload": {
+      "applied": 0,
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "meanApplied": 0,
+      "contribution": 0
+    },
+    "lineup": {
+      "applied": 2783,
+      "sum": -3.254040000000006,
+      "min": -0.015539999999999998,
+      "max": 0.012479999999999998,
+      "meanApplied": -0.0011692561983471096,
+      "contribution": -0.0011667407673001098
+    },
+    "shotVariant": {
+      "applied": 2074,
+      "sum": 76.89500000000153,
+      "min": -0.015,
+      "max": 0.055,
+      "meanApplied": 0.0370756991321126,
+      "contribution": 0.02757081391179689
+    },
+    "forced": {
+      "applied": 131,
+      "sum": -4.585000000000009,
+      "min": -0.035,
+      "max": -0.035,
+      "meanApplied": -0.035000000000000066,
+      "contribution": -0.0016439584080315556
+    },
+    "individualIQ": {
+      "applied": 2786,
+      "sum": 3.8435820715361206,
+      "min": -0.01722896645504,
+      "max": 0.018781697145056,
+      "meanApplied": 0.0013796059122527353,
+      "contribution": 0.0013781219331431053
+    },
+    "teamIQ": {
+      "applied": 2750,
+      "sum": 2.9055199999999854,
+      "min": -0.0027599999999999994,
+      "max": 0.004160000000000002,
+      "meanApplied": 0.001056552727272722,
+      "contribution": 0.0010417784152025762
+    },
+    "rivalry": {
+      "applied": 0,
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "meanApplied": 0,
+      "contribution": 0
+    },
+    "contest": {
+      "applied": 2789,
+      "sum": 10.275000000000011,
+      "min": -0.015,
+      "max": 0.015,
+      "meanApplied": 0.003684116170670495,
+      "contribution": 0.003684116170670495
+    },
+    "sag": {
+      "applied": 979,
+      "sum": -19.57999999999967,
+      "min": -0.02,
+      "max": -0.02,
+      "meanApplied": -0.019999999999999664,
+      "contribution": -0.007020437432771485
+    },
+    "defensivePlan": {
+      "applied": 0,
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "meanApplied": 0,
+      "contribution": 0
+    },
+    "coach": {
+      "applied": 2789,
+      "sum": -2.2723808000000063,
+      "min": -0.018172,
+      "max": 0.020784,
+      "meanApplied": -0.0008147654356400166,
+      "contribution": -0.0008147654356400166
+    },
+    "fit": {
+      "applied": 2789,
+      "sum": 5.035799999999907,
+      "min": 0.0006000000000000001,
+      "max": 0.0028,
+      "meanApplied": 0.0018055934026532474,
+      "contribution": 0.0018055934026532474
+    },
+    "timeout": {
+      "applied": 213,
+      "sum": -3.1950000000000043,
+      "min": -0.015,
+      "max": -0.015,
+      "meanApplied": -0.01500000000000002,
+      "contribution": -0.0011455718895661542
+    },
+    "focus": {
+      "applied": 0,
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "meanApplied": 0,
+      "contribution": 0
+    },
+    "archetype": {
+      "applied": 896,
+      "sum": 4.239999999999978,
+      "min": -0.1,
+      "max": 0.04,
+      "meanApplied": 0.004732142857142832,
+      "contribution": 0.001520258157045528
+    }
+  },
+  "dunkBands": {
+    "90+": {
+      "evaluations": 1795,
+      "attempts": 1717,
+      "made": 1063,
+      "FG": 0.6191030867792662,
+      "share": 0.05988420758928571,
+      "rating": 94.68239330462512,
+      "rawRating": 96.27722772277228,
+      "rim": 75.87661624705734,
+      "rawRim": 77.13104251601631,
+      "base": 0.6647571795608572,
+      "context": 0.669507280429827,
+      "final": 0.6616468481043664,
+      "contextDelta": 0.004750100868969635,
+      "contest": 0.3075131042516016,
+      "blocks": 129,
+      "blockRate": 0.07513104251601631,
+      "foulRate": 0.07632311977715878,
+      "foulEvaluations": 137,
+      "makeRollMisses": 525,
+      "blockRisk": 0.0659028207039003,
+      "effectiveVsRawDelta": -1.5948344181473288,
+      "fatigueOnlyDelta": -2.438950305347717
+    },
+    "70–79": {
+      "evaluations": 974,
+      "attempts": 923,
+      "made": 580,
+      "FG": 0.628385698808234,
+      "share": 0.032191685267857144,
+      "rating": 74.43230483770566,
+      "rawRating": 75.12134344528711,
+      "rim": 73.06501555361463,
+      "rawRim": 74.12567713976165,
+      "base": 0.6296729141319195,
+      "context": 0.6265127613427259,
+      "final": 0.6193725903409794,
+      "contextDelta": -0.0031601527891932826,
+      "contest": 0.3304442036836403,
+      "blocks": 50,
+      "blockRate": 0.05417118093174431,
+      "foulRate": 0.08624229979466119,
+      "foulEvaluations": 84,
+      "makeRollMisses": 293,
+      "blockRisk": 0.06669754128239486,
+      "effectiveVsRawDelta": -0.6890386075813864,
+      "fatigueOnlyDelta": -0.9539318486296688
+    },
+    "80–89": {
+      "evaluations": 1111,
+      "attempts": 1072,
+      "made": 631,
+      "FG": 0.5886194029850746,
+      "share": 0.037388392857142856,
+      "rating": 83.56344815266985,
+      "rawRating": 84.38992537313433,
+      "rim": 74.45294872288521,
+      "rawRim": 75.65951492537313,
+      "base": 0.6449551417927453,
+      "context": 0.6458935875766775,
+      "final": 0.6386970172340414,
+      "contextDelta": 0.0009384457839329551,
+      "contest": 0.3619402985074627,
+      "blocks": 81,
+      "blockRate": 0.07555970149253731,
+      "foulRate": 0.0711071107110711,
+      "foulEvaluations": 79,
+      "makeRollMisses": 360,
+      "blockRisk": 0.0653166392694702,
+      "effectiveVsRawDelta": -0.8264772204643654,
+      "fatigueOnlyDelta": -1.1609424338882126
+    },
+    "<60": {
+      "evaluations": 239,
+      "attempts": 225,
+      "made": 138,
+      "FG": 0.6133333333333333,
+      "share": 0.007847377232142858,
+      "rating": 52.18499773855105,
+      "rawRating": 52.635555555555555,
+      "rim": 62.80626206457319,
+      "rawRim": 63.577777777777776,
+      "base": 0.6074840445704236,
+      "context": 0.5899170631819048,
+      "final": 0.5801700696245431,
+      "contextDelta": -0.01756698138851886,
+      "contest": 0.24,
+      "blocks": 13,
+      "blockRate": 0.057777777777777775,
+      "foulRate": 0.1087866108786611,
+      "foulEvaluations": 26,
+      "makeRollMisses": 74,
+      "blockRisk": 0.06316212951342104,
+      "effectiveVsRawDelta": -0.4505578170045216,
+      "fatigueOnlyDelta": -0.5133744596558947
+    },
+    "60–69": {
+      "evaluations": 400,
+      "attempts": 376,
+      "made": 213,
+      "FG": 0.5664893617021277,
+      "share": 0.013113839285714286,
+      "rating": 64.84037442917847,
+      "rawRating": 65.22074468085107,
+      "rim": 70.19273997016212,
+      "rawRim": 71.1436170212766,
+      "base": 0.6166384239959674,
+      "context": 0.6051132764624937,
+      "final": 0.5986525156428208,
+      "contextDelta": -0.011525147533473922,
+      "contest": 0.4148936170212766,
+      "blocks": 27,
+      "blockRate": 0.07180851063829788,
+      "foulRate": 0.0875,
+      "foulEvaluations": 35,
+      "makeRollMisses": 136,
+      "blockRisk": 0.06819514624411958,
+      "effectiveVsRawDelta": -0.38037025167260324,
+      "fatigueOnlyDelta": -0.5169821988581502
+    }
+  },
+  "primaryDunkBands": {
+    "90+": {
+      "evaluations": 1183,
+      "attempts": 1107,
+      "made": 697,
+      "FG": 0.6296296296296297,
+      "share": 0.038609095982142856,
+      "rating": 93.87566045946646,
+      "rawRating": 96.28816621499548,
+      "rim": 77.90220366316314,
+      "rawRim": 79.23667570009033,
+      "base": 0.6601765190556701,
+      "context": 0.6672300245927758,
+      "final": 0.6557415666327393,
+      "contextDelta": 0.007053505537104648,
+      "contest": 0.4670280036133695,
+      "blocks": 89,
+      "blockRate": 0.08039747064137308,
+      "foulRate": 0.1132713440405748,
+      "foulEvaluations": 134,
+      "makeRollMisses": 321,
+      "blockRisk": 0.07117470657105053,
+      "effectiveVsRawDelta": -2.4125057555290566,
+      "fatigueOnlyDelta": -2.4350893146979806
+    },
+    "70–79": {
+      "evaluations": 730,
+      "attempts": 679,
+      "made": 421,
+      "FG": 0.6200294550810015,
+      "share": 0.023681640625,
+      "rating": 74.07615068953734,
+      "rawRating": 75.00736377025036,
+      "rim": 73.9022605370345,
+      "rawRim": 74.9720176730486,
+      "base": 0.6279134843138515,
+      "context": 0.6236309335440139,
+      "final": 0.6144354939154247,
+      "contextDelta": -0.004282550769837325,
+      "contest": 0.43888070692194403,
+      "blocks": 39,
+      "blockRate": 0.05743740795287187,
+      "foulRate": 0.1136986301369863,
+      "foulEvaluations": 83,
+      "makeRollMisses": 219,
+      "blockRisk": 0.07160024529259078,
+      "effectiveVsRawDelta": -0.9312130807130352,
+      "fatigueOnlyDelta": -0.9621409157645819
+    },
+    "80–89": {
+      "evaluations": 810,
+      "attempts": 771,
+      "made": 454,
+      "FG": 0.5888456549935149,
+      "share": 0.026890345982142856,
+      "rating": 83.25301505506599,
+      "rawRating": 84.37224383916991,
+      "rim": 75.48655005444951,
+      "rawRim": 76.70817120622569,
+      "base": 0.6428600044450067,
+      "context": 0.6442281577365543,
+      "final": 0.6348993141495769,
+      "contextDelta": 0.0013681532915468444,
+      "contest": 0.4876783398184176,
+      "blocks": 67,
+      "blockRate": 0.08690012970168612,
+      "foulRate": 0.09506172839506173,
+      "foulEvaluations": 77,
+      "makeRollMisses": 250,
+      "blockRisk": 0.06942673938854187,
+      "effectiveVsRawDelta": -1.1192287841039612,
+      "fatigueOnlyDelta": -1.1581392899405372
+    },
+    "<60": {
+      "evaluations": 224,
+      "attempts": 210,
+      "made": 128,
+      "FG": 0.6095238095238096,
+      "share": 0.00732421875,
+      "rating": 52.29601575184124,
+      "rawRating": 52.74285714285714,
+      "rim": 63.0032660706461,
+      "rawRim": 63.77619047619048,
+      "base": 0.6075544468626536,
+      "context": 0.5904918965841672,
+      "final": 0.5802783220738154,
+      "contextDelta": -0.01706255027848631,
+      "contest": 0.2523809523809524,
+      "blocks": 13,
+      "blockRate": 0.06190476190476191,
+      "foulRate": 0.11607142857142858,
+      "foulEvaluations": 26,
+      "makeRollMisses": 69,
+      "blockRisk": 0.0662274646348966,
+      "effectiveVsRawDelta": -0.4468413910159301,
+      "fatigueOnlyDelta": -0.4896985338730728
+    },
+    "60–69": {
+      "evaluations": 342,
+      "attempts": 321,
+      "made": 180,
+      "FG": 0.5607476635514018,
+      "share": 0.011195591517857142,
+      "rating": 64.74365049644118,
+      "rawRating": 65.19314641744548,
+      "rim": 70.68225550979577,
+      "rawRim": 71.57320872274143,
+      "base": 0.6158491586215226,
+      "context": 0.602684728208144,
+      "final": 0.5957511546686102,
+      "contextDelta": -0.013164430413378113,
+      "contest": 0.4797507788161994,
+      "blocks": 27,
+      "blockRate": 0.08411214953271028,
+      "foulRate": 0.09064327485380116,
+      "foulEvaluations": 31,
+      "makeRollMisses": 114,
+      "blockRisk": 0.07275233589481346,
+      "effectiveVsRawDelta": -0.44949592100431834,
+      "fatigueOnlyDelta": -0.5180317465494898
+    }
+  },
+  "secondChance": {
+    "points": 4519,
+    "perTeamGame": 15.063333333333333,
+    "pointsPerOreb": 1.1814379084967321,
+    "withOrebPossessions": 3410,
+    "withOrebPPP": 1.403225806451613,
+    "withoutOrebPossessions": 27304,
+    "withoutOrebPPP": 1.1844052153530618,
+    "halfCourtWithoutOrebPossessions": 14356,
+    "halfCourtWithoutOrebPPP": 1.0049456673168013,
+    "immediatePutbackPoints": 3422,
+    "immediatePutbackPointsPerTeamGame": 11.406666666666666,
+    "pointsPer100Oreb": 118.14379084967321
+  },
+  "games": [
+    {
+      "seed": 100000,
+      "a": 0,
+      "b": 29,
+      "sa": 159,
+      "sb": 126
+    },
+    {
+      "seed": 100001,
+      "a": 1,
+      "b": 28,
+      "sa": 115,
+      "sb": 107
+    },
+    {
+      "seed": 100002,
+      "a": 2,
+      "b": 27,
+      "sa": 132,
+      "sb": 90
+    },
+    {
+      "seed": 100003,
+      "a": 3,
+      "b": 26,
+      "sa": 152,
+      "sb": 118
+    },
+    {
+      "seed": 100004,
+      "a": 4,
+      "b": 25,
+      "sa": 109,
+      "sb": 115
+    },
+    {
+      "seed": 100005,
+      "a": 5,
+      "b": 24,
+      "sa": 119,
+      "sb": 114
+    },
+    {
+      "seed": 100006,
+      "a": 6,
+      "b": 23,
+      "sa": 122,
+      "sb": 91
+    },
+    {
+      "seed": 100007,
+      "a": 7,
+      "b": 22,
+      "sa": 121,
+      "sb": 132
+    },
+    {
+      "seed": 100008,
+      "a": 8,
+      "b": 21,
+      "sa": 132,
+      "sb": 141
+    },
+    {
+      "seed": 100009,
+      "a": 9,
+      "b": 20,
+      "sa": 110,
+      "sb": 108
+    },
+    {
+      "seed": 100010,
+      "a": 10,
+      "b": 19,
+      "sa": 133,
+      "sb": 129
+    },
+    {
+      "seed": 100011,
+      "a": 11,
+      "b": 18,
+      "sa": 119,
+      "sb": 126
+    },
+    {
+      "seed": 100012,
+      "a": 12,
+      "b": 17,
+      "sa": 122,
+      "sb": 117
+    },
+    {
+      "seed": 100013,
+      "a": 13,
+      "b": 16,
+      "sa": 128,
+      "sb": 104
+    },
+    {
+      "seed": 100014,
+      "a": 14,
+      "b": 15,
+      "sa": 129,
+      "sb": 151
+    },
+    {
+      "seed": 100015,
+      "a": 28,
+      "b": 0,
+      "sa": 108,
+      "sb": 142
+    },
+    {
+      "seed": 100016,
+      "a": 27,
+      "b": 29,
+      "sa": 130,
+      "sb": 109
+    },
+    {
+      "seed": 100017,
+      "a": 26,
+      "b": 1,
+      "sa": 152,
+      "sb": 124
+    },
+    {
+      "seed": 100018,
+      "a": 25,
+      "b": 2,
+      "sa": 121,
+      "sb": 115
+    },
+    {
+      "seed": 100019,
+      "a": 24,
+      "b": 3,
+      "sa": 140,
+      "sb": 125
+    },
+    {
+      "seed": 100020,
+      "a": 23,
+      "b": 4,
+      "sa": 121,
+      "sb": 79
+    },
+    {
+      "seed": 100021,
+      "a": 22,
+      "b": 5,
+      "sa": 119,
+      "sb": 126
+    },
+    {
+      "seed": 100022,
+      "a": 21,
+      "b": 6,
+      "sa": 126,
+      "sb": 133
+    },
+    {
+      "seed": 100023,
+      "a": 20,
+      "b": 7,
+      "sa": 126,
+      "sb": 113
+    },
+    {
+      "seed": 100024,
+      "a": 19,
+      "b": 8,
+      "sa": 139,
+      "sb": 118
+    },
+    {
+      "seed": 100025,
+      "a": 18,
+      "b": 9,
+      "sa": 130,
+      "sb": 122
+    },
+    {
+      "seed": 100026,
+      "a": 17,
+      "b": 10,
+      "sa": 113,
+      "sb": 115
+    },
+    {
+      "seed": 100027,
+      "a": 16,
+      "b": 11,
+      "sa": 125,
+      "sb": 101
+    },
+    {
+      "seed": 100028,
+      "a": 15,
+      "b": 12,
+      "sa": 137,
+      "sb": 117
+    },
+    {
+      "seed": 100029,
+      "a": 14,
+      "b": 13,
+      "sa": 129,
+      "sb": 114
+    },
+    {
+      "seed": 100030,
+      "a": 0,
+      "b": 27,
+      "sa": 143,
+      "sb": 144
+    },
+    {
+      "seed": 100031,
+      "a": 28,
+      "b": 26,
+      "sa": 125,
+      "sb": 128
+    },
+    {
+      "seed": 100032,
+      "a": 29,
+      "b": 25,
+      "sa": 94,
+      "sb": 115
+    },
+    {
+      "seed": 100033,
+      "a": 1,
+      "b": 24,
+      "sa": 130,
+      "sb": 136
+    },
+    {
+      "seed": 100034,
+      "a": 2,
+      "b": 23,
+      "sa": 123,
+      "sb": 125
+    },
+    {
+      "seed": 100035,
+      "a": 3,
+      "b": 22,
+      "sa": 131,
+      "sb": 117
+    },
+    {
+      "seed": 100036,
+      "a": 4,
+      "b": 21,
+      "sa": 153,
+      "sb": 131
+    },
+    {
+      "seed": 100037,
+      "a": 5,
+      "b": 20,
+      "sa": 141,
+      "sb": 122
+    },
+    {
+      "seed": 100038,
+      "a": 6,
+      "b": 19,
+      "sa": 123,
+      "sb": 111
+    },
+    {
+      "seed": 100039,
+      "a": 7,
+      "b": 18,
+      "sa": 118,
+      "sb": 128
+    },
+    {
+      "seed": 100040,
+      "a": 8,
+      "b": 17,
+      "sa": 131,
+      "sb": 113
+    },
+    {
+      "seed": 100041,
+      "a": 9,
+      "b": 16,
+      "sa": 124,
+      "sb": 114
+    },
+    {
+      "seed": 100042,
+      "a": 10,
+      "b": 15,
+      "sa": 129,
+      "sb": 107
+    },
+    {
+      "seed": 100043,
+      "a": 11,
+      "b": 14,
+      "sa": 94,
+      "sb": 131
+    },
+    {
+      "seed": 100044,
+      "a": 12,
+      "b": 13,
+      "sa": 131,
+      "sb": 106
+    },
+    {
+      "seed": 100045,
+      "a": 26,
+      "b": 0,
+      "sa": 91,
+      "sb": 119
+    },
+    {
+      "seed": 100046,
+      "a": 25,
+      "b": 27,
+      "sa": 130,
+      "sb": 102
+    },
+    {
+      "seed": 100047,
+      "a": 24,
+      "b": 28,
+      "sa": 136,
+      "sb": 106
+    },
+    {
+      "seed": 100048,
+      "a": 23,
+      "b": 29,
+      "sa": 127,
+      "sb": 111
+    },
+    {
+      "seed": 100049,
+      "a": 22,
+      "b": 1,
+      "sa": 130,
+      "sb": 143
+    },
+    {
+      "seed": 100050,
+      "a": 21,
+      "b": 2,
+      "sa": 122,
+      "sb": 140
+    },
+    {
+      "seed": 100051,
+      "a": 20,
+      "b": 3,
+      "sa": 108,
+      "sb": 121
+    },
+    {
+      "seed": 100052,
+      "a": 19,
+      "b": 4,
+      "sa": 145,
+      "sb": 123
+    },
+    {
+      "seed": 100053,
+      "a": 18,
+      "b": 5,
+      "sa": 129,
+      "sb": 99
+    },
+    {
+      "seed": 100054,
+      "a": 17,
+      "b": 6,
+      "sa": 115,
+      "sb": 124
+    },
+    {
+      "seed": 100055,
+      "a": 16,
+      "b": 7,
+      "sa": 111,
+      "sb": 112
+    },
+    {
+      "seed": 100056,
+      "a": 15,
+      "b": 8,
+      "sa": 155,
+      "sb": 132
+    },
+    {
+      "seed": 100057,
+      "a": 14,
+      "b": 9,
+      "sa": 130,
+      "sb": 126
+    },
+    {
+      "seed": 100058,
+      "a": 13,
+      "b": 10,
+      "sa": 127,
+      "sb": 135
+    },
+    {
+      "seed": 100059,
+      "a": 12,
+      "b": 11,
+      "sa": 110,
+      "sb": 111
+    },
+    {
+      "seed": 100060,
+      "a": 0,
+      "b": 25,
+      "sa": 122,
+      "sb": 97
+    },
+    {
+      "seed": 100061,
+      "a": 26,
+      "b": 24,
+      "sa": 120,
+      "sb": 123
+    },
+    {
+      "seed": 100062,
+      "a": 27,
+      "b": 23,
+      "sa": 128,
+      "sb": 145
+    },
+    {
+      "seed": 100063,
+      "a": 28,
+      "b": 22,
+      "sa": 137,
+      "sb": 117
+    },
+    {
+      "seed": 100064,
+      "a": 29,
+      "b": 21,
+      "sa": 123,
+      "sb": 100
+    },
+    {
+      "seed": 100065,
+      "a": 1,
+      "b": 20,
+      "sa": 125,
+      "sb": 133
+    },
+    {
+      "seed": 100066,
+      "a": 2,
+      "b": 19,
+      "sa": 114,
+      "sb": 121
+    },
+    {
+      "seed": 100067,
+      "a": 3,
+      "b": 18,
+      "sa": 112,
+      "sb": 118
+    },
+    {
+      "seed": 100068,
+      "a": 4,
+      "b": 17,
+      "sa": 105,
+      "sb": 152
+    },
+    {
+      "seed": 100069,
+      "a": 5,
+      "b": 16,
+      "sa": 117,
+      "sb": 111
+    },
+    {
+      "seed": 100070,
+      "a": 6,
+      "b": 15,
+      "sa": 129,
+      "sb": 140
+    },
+    {
+      "seed": 100071,
+      "a": 7,
+      "b": 14,
+      "sa": 138,
+      "sb": 152
+    },
+    {
+      "seed": 100072,
+      "a": 8,
+      "b": 13,
+      "sa": 133,
+      "sb": 112
+    },
+    {
+      "seed": 100073,
+      "a": 9,
+      "b": 12,
+      "sa": 103,
+      "sb": 122
+    },
+    {
+      "seed": 100074,
+      "a": 10,
+      "b": 11,
+      "sa": 122,
+      "sb": 128
+    },
+    {
+      "seed": 100075,
+      "a": 24,
+      "b": 0,
+      "sa": 121,
+      "sb": 140
+    },
+    {
+      "seed": 100076,
+      "a": 23,
+      "b": 25,
+      "sa": 116,
+      "sb": 145
+    },
+    {
+      "seed": 100077,
+      "a": 22,
+      "b": 26,
+      "sa": 151,
+      "sb": 134
+    },
+    {
+      "seed": 100078,
+      "a": 21,
+      "b": 27,
+      "sa": 138,
+      "sb": 131
+    },
+    {
+      "seed": 100079,
+      "a": 20,
+      "b": 28,
+      "sa": 128,
+      "sb": 121
+    },
+    {
+      "seed": 100080,
+      "a": 19,
+      "b": 29,
+      "sa": 129,
+      "sb": 133
+    },
+    {
+      "seed": 100081,
+      "a": 18,
+      "b": 1,
+      "sa": 131,
+      "sb": 113
+    },
+    {
+      "seed": 100082,
+      "a": 17,
+      "b": 2,
+      "sa": 106,
+      "sb": 145
+    },
+    {
+      "seed": 100083,
+      "a": 16,
+      "b": 3,
+      "sa": 121,
+      "sb": 129
+    },
+    {
+      "seed": 100084,
+      "a": 15,
+      "b": 4,
+      "sa": 135,
+      "sb": 110
+    },
+    {
+      "seed": 100085,
+      "a": 14,
+      "b": 5,
+      "sa": 129,
+      "sb": 175
+    },
+    {
+      "seed": 100086,
+      "a": 13,
+      "b": 6,
+      "sa": 108,
+      "sb": 120
+    },
+    {
+      "seed": 100087,
+      "a": 12,
+      "b": 7,
+      "sa": 119,
+      "sb": 118
+    },
+    {
+      "seed": 100088,
+      "a": 11,
+      "b": 8,
+      "sa": 135,
+      "sb": 127
+    },
+    {
+      "seed": 100089,
+      "a": 10,
+      "b": 9,
+      "sa": 129,
+      "sb": 96
+    },
+    {
+      "seed": 100090,
+      "a": 0,
+      "b": 23,
+      "sa": 125,
+      "sb": 118
+    },
+    {
+      "seed": 100091,
+      "a": 24,
+      "b": 22,
+      "sa": 122,
+      "sb": 129
+    },
+    {
+      "seed": 100092,
+      "a": 25,
+      "b": 21,
+      "sa": 142,
+      "sb": 124
+    },
+    {
+      "seed": 100093,
+      "a": 26,
+      "b": 20,
+      "sa": 126,
+      "sb": 127
+    },
+    {
+      "seed": 100094,
+      "a": 27,
+      "b": 19,
+      "sa": 115,
+      "sb": 144
+    },
+    {
+      "seed": 100095,
+      "a": 28,
+      "b": 18,
+      "sa": 111,
+      "sb": 109
+    },
+    {
+      "seed": 100096,
+      "a": 29,
+      "b": 17,
+      "sa": 129,
+      "sb": 126
+    },
+    {
+      "seed": 100097,
+      "a": 1,
+      "b": 16,
+      "sa": 138,
+      "sb": 115
+    },
+    {
+      "seed": 100098,
+      "a": 2,
+      "b": 15,
+      "sa": 142,
+      "sb": 131
+    },
+    {
+      "seed": 100099,
+      "a": 3,
+      "b": 14,
+      "sa": 142,
+      "sb": 135
+    },
+    {
+      "seed": 100100,
+      "a": 4,
+      "b": 13,
+      "sa": 119,
+      "sb": 130
+    },
+    {
+      "seed": 100101,
+      "a": 5,
+      "b": 12,
+      "sa": 124,
+      "sb": 115
+    },
+    {
+      "seed": 100102,
+      "a": 6,
+      "b": 11,
+      "sa": 113,
+      "sb": 96
+    },
+    {
+      "seed": 100103,
+      "a": 7,
+      "b": 10,
+      "sa": 147,
+      "sb": 122
+    },
+    {
+      "seed": 100104,
+      "a": 8,
+      "b": 9,
+      "sa": 143,
+      "sb": 120
+    },
+    {
+      "seed": 100105,
+      "a": 22,
+      "b": 0,
+      "sa": 123,
+      "sb": 122
+    },
+    {
+      "seed": 100106,
+      "a": 21,
+      "b": 23,
+      "sa": 131,
+      "sb": 139
+    },
+    {
+      "seed": 100107,
+      "a": 20,
+      "b": 24,
+      "sa": 119,
+      "sb": 130
+    },
+    {
+      "seed": 100108,
+      "a": 19,
+      "b": 25,
+      "sa": 129,
+      "sb": 120
+    },
+    {
+      "seed": 100109,
+      "a": 18,
+      "b": 26,
+      "sa": 139,
+      "sb": 106
+    },
+    {
+      "seed": 100110,
+      "a": 17,
+      "b": 27,
+      "sa": 147,
+      "sb": 124
+    },
+    {
+      "seed": 100111,
+      "a": 16,
+      "b": 28,
+      "sa": 122,
+      "sb": 106
+    },
+    {
+      "seed": 100112,
+      "a": 15,
+      "b": 29,
+      "sa": 138,
+      "sb": 107
+    },
+    {
+      "seed": 100113,
+      "a": 14,
+      "b": 1,
+      "sa": 135,
+      "sb": 137
+    },
+    {
+      "seed": 100114,
+      "a": 13,
+      "b": 2,
+      "sa": 140,
+      "sb": 130
+    },
+    {
+      "seed": 100115,
+      "a": 12,
+      "b": 3,
+      "sa": 137,
+      "sb": 91
+    },
+    {
+      "seed": 100116,
+      "a": 11,
+      "b": 4,
+      "sa": 144,
+      "sb": 143
+    },
+    {
+      "seed": 100117,
+      "a": 10,
+      "b": 5,
+      "sa": 143,
+      "sb": 108
+    },
+    {
+      "seed": 100118,
+      "a": 9,
+      "b": 6,
+      "sa": 126,
+      "sb": 120
+    },
+    {
+      "seed": 100119,
+      "a": 8,
+      "b": 7,
+      "sa": 122,
+      "sb": 119
+    },
+    {
+      "seed": 100120,
+      "a": 0,
+      "b": 21,
+      "sa": 138,
+      "sb": 132
+    },
+    {
+      "seed": 100121,
+      "a": 22,
+      "b": 20,
+      "sa": 133,
+      "sb": 112
+    },
+    {
+      "seed": 100122,
+      "a": 23,
+      "b": 19,
+      "sa": 118,
+      "sb": 115
+    },
+    {
+      "seed": 100123,
+      "a": 24,
+      "b": 18,
+      "sa": 118,
+      "sb": 133
+    },
+    {
+      "seed": 100124,
+      "a": 25,
+      "b": 17,
+      "sa": 107,
+      "sb": 110
+    },
+    {
+      "seed": 100125,
+      "a": 26,
+      "b": 16,
+      "sa": 140,
+      "sb": 117
+    },
+    {
+      "seed": 100126,
+      "a": 27,
+      "b": 15,
+      "sa": 142,
+      "sb": 138
+    },
+    {
+      "seed": 100127,
+      "a": 28,
+      "b": 14,
+      "sa": 117,
+      "sb": 115
+    },
+    {
+      "seed": 100128,
+      "a": 29,
+      "b": 13,
+      "sa": 110,
+      "sb": 123
+    },
+    {
+      "seed": 100129,
+      "a": 1,
+      "b": 12,
+      "sa": 123,
+      "sb": 130
+    },
+    {
+      "seed": 100130,
+      "a": 2,
+      "b": 11,
+      "sa": 124,
+      "sb": 110
+    },
+    {
+      "seed": 100131,
+      "a": 3,
+      "b": 10,
+      "sa": 127,
+      "sb": 116
+    },
+    {
+      "seed": 100132,
+      "a": 4,
+      "b": 9,
+      "sa": 111,
+      "sb": 118
+    },
+    {
+      "seed": 100133,
+      "a": 5,
+      "b": 8,
+      "sa": 130,
+      "sb": 110
+    },
+    {
+      "seed": 100134,
+      "a": 6,
+      "b": 7,
+      "sa": 92,
+      "sb": 113
+    },
+    {
+      "seed": 100135,
+      "a": 20,
+      "b": 0,
+      "sa": 134,
+      "sb": 100
+    },
+    {
+      "seed": 100136,
+      "a": 19,
+      "b": 21,
+      "sa": 133,
+      "sb": 112
+    },
+    {
+      "seed": 100137,
+      "a": 18,
+      "b": 22,
+      "sa": 128,
+      "sb": 119
+    },
+    {
+      "seed": 100138,
+      "a": 17,
+      "b": 23,
+      "sa": 142,
+      "sb": 92
+    },
+    {
+      "seed": 100139,
+      "a": 16,
+      "b": 24,
+      "sa": 105,
+      "sb": 120
+    },
+    {
+      "seed": 100140,
+      "a": 15,
+      "b": 25,
+      "sa": 142,
+      "sb": 119
+    },
+    {
+      "seed": 100141,
+      "a": 14,
+      "b": 26,
+      "sa": 149,
+      "sb": 131
+    },
+    {
+      "seed": 100142,
+      "a": 13,
+      "b": 27,
+      "sa": 123,
+      "sb": 139
+    },
+    {
+      "seed": 100143,
+      "a": 12,
+      "b": 28,
+      "sa": 138,
+      "sb": 117
+    },
+    {
+      "seed": 100144,
+      "a": 11,
+      "b": 29,
+      "sa": 135,
+      "sb": 119
+    },
+    {
+      "seed": 100145,
+      "a": 10,
+      "b": 1,
+      "sa": 131,
+      "sb": 135
+    },
+    {
+      "seed": 100146,
+      "a": 9,
+      "b": 2,
+      "sa": 100,
+      "sb": 124
+    },
+    {
+      "seed": 100147,
+      "a": 8,
+      "b": 3,
+      "sa": 116,
+      "sb": 123
+    },
+    {
+      "seed": 100148,
+      "a": 7,
+      "b": 4,
+      "sa": 113,
+      "sb": 109
+    },
+    {
+      "seed": 100149,
+      "a": 6,
+      "b": 5,
+      "sa": 137,
+      "sb": 109
+    }
+  ],
+  "rimEvaluationPipeline": {
+    "n": 2789,
+    "base": 0.6447018259470647,
+    "ratingBase": 0.6395530270944302,
+    "context": 0.6895147055711347,
+    "net": 0.044812879624071864,
+    "positive": 0.07611447451442362,
+    "negative": -0.0313015948903518
+  },
+  "rimPhysicalModifiers": {
+    "post": {
+      "applied": 0,
+      "meanApplied": null,
+      "contribution": 0
+    },
+    "drive": {
+      "applied": 794,
+      "meanApplied": 0.01808564231738046,
+      "contribution": 0.005148798852635385
+    },
+    "recovery": {
+      "applied": 0,
+      "meanApplied": null,
+      "contribution": 0
+    }
+  },
+  "rimStacks": {
+    "Running layup": {
+      "n": 1397,
+      "base": 0.6406305574987066,
+      "ratingBase": 0.6363356398179617,
+      "context": 0.7013332545105853,
+      "net": 0.060702697011877936,
+      "positive": 0.09284596395809529,
+      "negative": -0.032143266946217615
+    },
+    "Running + PNR": {
+      "n": 405,
+      "base": 0.6413194764709765,
+      "ratingBase": 0.632949106100606,
+      "context": 0.7347542617550261,
+      "net": 0.09343478528405029,
+      "positive": 0.1197525569087766,
+      "negative": -0.02631777162472638
+    },
+    "Running + PNR + screen boost + uncontested": {
+      "n": 158,
+      "base": 0.649214238298422,
+      "ratingBase": 0.6377585420958904,
+      "context": 0.7785935287318686,
+      "net": 0.12937929043344662,
+      "positive": 0.14595606772176054,
+      "negative": -0.01657677728831394
+    },
+    "Cutting + PNR": {
+      "n": 122,
+      "base": 0.6344621321721916,
+      "ratingBase": 0.6344621321721916,
+      "context": 0.6444037167535863,
+      "net": 0.009941584581394738,
+      "positive": 0.03730667756305571,
+      "negative": -0.02736509298166099
+    }
+  },
+  "rimVariantAdjustment": {
+    "Finger Roll Layup": {
+      "n": 191,
+      "mean": 0.010000000000000007,
+      "contribution": 0.0006848332735747585
+    },
+    "Running Layup": {
+      "n": 1397,
+      "mean": 0.05175017895490413,
+      "contribution": 0.02592147723198317
+    },
+    "Scoop Layup": {
+      "n": 159,
+      "mean": 0,
+      "contribution": 0
+    },
+    "Eurostep Layup": {
+      "n": 92,
+      "mean": -0.010000000000000007,
+      "contribution": -0.00032986733596271085
+    },
+    "Driving Layup": {
+      "n": 556,
+      "mean": 0,
+      "contribution": 0
+    },
+    "Cutting Layup": {
+      "n": 272,
+      "mean": 0.019999999999999896,
+      "contribution": 0.0019505198996055833
+    },
+    "Reverse Layup": {
+      "n": 122,
+      "mean": -0.014999999999999963,
+      "contribution": -0.0006561491574040858
+    }
+  },
+  "dunkMisses": {
+    "total": 1688,
+    "blocked": 300,
+    "makeRoll": 1388
+  },
+  "dunkBandProbability": {
+    "90+": {
+      "n": 1717,
+      "rim": 75.87661624705734,
+      "rating": 94.68239330462512,
+      "prob": 0.6616468481043664,
+      "blocked": 0.07513104251601631,
+      "FG": 0.6191030867792662
+    },
+    "70–79": {
+      "n": 923,
+      "rim": 73.06501555361463,
+      "rating": 74.43230483770566,
+      "prob": 0.6193725903409794,
+      "blocked": 0.05417118093174431,
+      "FG": 0.628385698808234
+    },
+    "80–89": {
+      "n": 1072,
+      "rim": 74.45294872288521,
+      "rating": 83.56344815266985,
+      "prob": 0.6386970172340414,
+      "blocked": 0.07555970149253731,
+      "FG": 0.5886194029850746
+    },
+    "<60": {
+      "n": 225,
+      "rim": 62.80626206457319,
+      "rating": 52.18499773855105,
+      "prob": 0.5801700696245431,
+      "blocked": 0.057777777777777775,
+      "FG": 0.6133333333333333
+    },
+    "60–69": {
+      "n": 376,
+      "rim": 70.19273997016212,
+      "rating": 64.84037442917847,
+      "prob": 0.5986525156428208,
+      "blocked": 0.07180851063829788,
+      "FG": 0.5664893617021277
+    }
+  },
+  "rimSagCount": 979
+}

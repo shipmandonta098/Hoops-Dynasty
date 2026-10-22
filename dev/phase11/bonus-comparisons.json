@@ -1,0 +1,158 @@
+[
+  {
+    "scenario": "down4_60_bonus",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.0395,
+    "candidate": 0.0455,
+    "difference": 0.006,
+    "ci95": [
+      -0.0004968881765033475,
+      0.012496888176503348
+    ],
+    "p": 0.09614175442061423
+  },
+  {
+    "scenario": "down4_60_bonus",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.0335,
+    "candidate": 0.035,
+    "difference": 0.0015,
+    "ci95": [
+      -0.0042988353525275115,
+      0.0072988353525275124
+    ],
+    "p": 0.735878800856881
+  },
+  {
+    "scenario": "down4_60_bonus",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.0555,
+    "candidate": 0.0635,
+    "difference": 0.008,
+    "ci95": [
+      0.0010774983340805667,
+      0.014922501665919434
+    ],
+    "p": 0.032839137564268484
+  },
+  {
+    "scenario": "down4_30_bonus",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.0085,
+    "candidate": 0.008,
+    "difference": -0.0005,
+    "ci95": [
+      -0.0030933921109852756,
+      0.0020933921109852756
+    ],
+    "p": 1.0
+  },
+  {
+    "scenario": "down4_30_bonus",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.0055,
+    "candidate": 0.0035,
+    "difference": -0.002,
+    "ci95": [
+      -0.0043994990305892805,
+      0.00039949903058928045
+    ],
+    "p": 0.21875
+  },
+  {
+    "scenario": "down4_30_bonus",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.0105,
+    "candidate": 0.0085,
+    "difference": -0.002,
+    "ci95": [
+      -0.0043994990305892805,
+      0.00039949903058928045
+    ],
+    "p": 0.21875
+  },
+  {
+    "scenario": "down6_60_bonus",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.0055,
+    "candidate": 0.0075,
+    "difference": 0.002,
+    "ci95": [
+      4.147128758379484e-05,
+      0.003958528712416205
+    ],
+    "p": 0.125
+  },
+  {
+    "scenario": "down6_60_bonus",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.002,
+    "candidate": 0.003,
+    "difference": 0.001,
+    "ci95": [
+      -0.0003855825921105461,
+      0.002385582592110546
+    ],
+    "p": 0.5
+  },
+  {
+    "scenario": "down6_60_bonus",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.006,
+    "candidate": 0.008,
+    "difference": 0.002,
+    "ci95": [
+      4.147128758379484e-05,
+      0.003958528712416205
+    ],
+    "p": 0.125
+  },
+  {
+    "scenario": "down6_30_bonus",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.0005,
+    "candidate": 0.0005,
+    "difference": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "p": 1
+  },
+  {
+    "scenario": "down6_30_bonus",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.0005,
+    "candidate": 0.0,
+    "difference": -0.0005,
+    "ci95": [
+      -0.00148,
+      0.00047999999999999996
+    ],
+    "p": 1.0
+  },
+  {
+    "scenario": "down6_30_bonus",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.0005,
+    "candidate": 0.0005,
+    "difference": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "p": 1
+  }
+]

@@ -1,0 +1,174 @@
+{
+  "mode": "built-in image_gen",
+  "assets": [
+    {
+      "slug": "overview",
+      "prompt": "Use case: photorealistic-natural. Asset type: cinematic basketball general manager game header background. Create one 3:1 wide panoramic photograph: arena tunnel opening onto a brightly lit professional basketball court. Main subject and lit court center-right; left 45% dark uncluttered charcoal tunnel wall, usable for overlaid UI. Premium dramatic photography, black/charcoal palette and subtle warm gold lighting, highly visible well-lit right half with hardwood and hoop details, realistic materials, atmospheric depth. No text, UI, logos, watermark, collage.",
+      "file": "dist/header-overview.webp",
+      "width": 2172,
+      "height": 724,
+      "bytes": 150558
+    },
+    {
+      "slug": "news-feed",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium cinematic basketball general manager game header background. Create ONE standalone wide panoramic 3:1 photograph. Scene: arena press and media room with television camera and press microphones. Main subjects concentrated center-right; left 45% dark uncluttered charcoal negative space for UI overlay. Black/charcoal palette with subtle warm gold lighting. Right half well illuminated, visible recognizable subject with realistic material detail, rich cinematic depth. No readable text, UI, logos, watermarks, collage.",
+      "file": "dist/header-news-feed.webp",
+      "width": 2172,
+      "height": 724,
+      "bytes": 82932
+    },
+    {
+      "slug": "roster",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium cinematic basketball general manager game header background. Create ONE standalone wide panoramic 3:1 photograph. Scene: basketball jerseys hanging in illuminated premium team lockers. Main subjects concentrated center-right; left 45% dark uncluttered charcoal negative space for UI overlay. Black/charcoal palette with subtle warm gold lighting. Right half well illuminated, visible recognizable subject with realistic material detail, rich cinematic depth. No readable text, UI, logos, watermarks, collage.",
+      "file": "dist/header-roster.webp",
+      "width": 2172,
+      "height": 724,
+      "bytes": 128296
+    },
+    {
+      "slug": "players",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium cinematic basketball general manager game header background. Create ONE standalone wide panoramic 3:1 photograph. Scene: individual adult basketball player training with ball, cinematic rimlit silhouette. Main subjects concentrated center-right; left 45% dark uncluttered charcoal negative space for UI overlay. Black/charcoal palette with subtle warm gold lighting. Right half well illuminated, visible recognizable subject with realistic material detail, rich cinematic depth. No readable text, UI, logos, watermarks, collage.",
+      "file": "dist/header-players.webp",
+      "width": 2172,
+      "height": 724,
+      "bytes": 97416
+    },
+    {
+      "slug": "rotations",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium cinematic basketball general manager game header background. Create ONE standalone wide panoramic 3:1 photograph. Scene: basketball coach clipboard and empty team bench courtside. Main subjects concentrated center-right; left 45% dark uncluttered charcoal negative space for UI overlay. Black/charcoal palette with subtle warm gold lighting. Right half well illuminated, visible recognizable subject with realistic material detail, rich cinematic depth. No readable text, UI, logos, watermarks, collage.",
+      "file": "dist/header-rotations.webp",
+      "width": 2172,
+      "height": 724,
+      "bytes": 110928
+    },
+    {
+      "slug": "schedule",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium cinematic basketball general manager game header background. Create ONE standalone wide panoramic 3:1 photograph. Scene: empty arena basketball court before tipoff with overhead scoreboard. Main subjects concentrated center-right; left 45% dark uncluttered charcoal negative space for UI overlay. Black/charcoal palette with subtle warm gold lighting. Right half well illuminated, visible recognizable subject with realistic material detail, rich cinematic depth. No readable text, UI, logos, watermarks, collage.",
+      "file": "dist/header-schedule.webp",
+      "width": 2172,
+      "height": 724,
+      "bytes": 136738
+    },
+    {
+      "slug": "trades",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium cinematic basketball general manager game header background. Create ONE standalone wide panoramic 3:1 photograph. Scene: adult executives negotiating documents and phone in basketball operations conference room. Main subjects concentrated center-right; left 45% dark uncluttered charcoal negative space for UI overlay. Black/charcoal palette with subtle warm gold lighting. Right half well illuminated, visible recognizable subject with realistic material detail, rich cinematic depth. No readable text, UI, logos, watermarks, collage.",
+      "file": "dist/header-trades.webp",
+      "width": 2172,
+      "height": 724,
+      "bytes": 94348
+    },
+    {
+      "slug": "free-agency",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium cinematic basketball general manager game header background. Create ONE standalone wide panoramic 3:1 photograph. Scene: adult basketball player signing contract at desk with adult agent. Main subjects concentrated center-right; left 45% dark uncluttered charcoal negative space for UI overlay. Black/charcoal palette with subtle warm gold lighting. Right half well illuminated, visible recognizable subject with realistic material detail, rich cinematic depth. No readable text, UI, logos, watermarks, collage.",
+      "file": "dist/header-free-agency.webp",
+      "width": 2172,
+      "height": 724,
+      "bytes": 94458
+    },
+    {
+      "slug": "front-office",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium cinematic basketball general manager game header background. Create ONE standalone wide panoramic 3:1 photograph. Scene: basketball general manager office overlooking arena court. Main subjects concentrated center-right; left 45% dark uncluttered charcoal negative space for UI overlay. Black/charcoal palette with subtle warm gold lighting. Right half well illuminated, visible recognizable subject with realistic material detail, rich cinematic depth. No readable text, UI, logos, watermarks, collage.",
+      "file": "dist/header-front-office.webp",
+      "width": 2172,
+      "height": 724,
+      "bytes": 101998
+    },
+    {
+      "slug": "finances",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium cinematic basketball general manager game header background. Create ONE standalone wide panoramic 3:1 photograph. Scene: premium basketball arena seating and ticketing luxury suite. Main subjects concentrated center-right; left 45% dark uncluttered charcoal negative space for UI overlay. Black/charcoal palette with subtle warm gold lighting. Right half well illuminated, visible recognizable subject with realistic material detail, rich cinematic depth. No readable text, UI, logos, watermarks, collage.",
+      "file": "dist/header-finances.webp",
+      "width": 2172,
+      "height": 724,
+      "bytes": 125254
+    },
+    {
+      "slug": "team-management",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium cinematic basketball general manager game header background. Create ONE standalone wide panoramic 3:1 photograph. Scene: adult basketball team huddle inside practice gym. Main subjects concentrated center-right; left 45% dark uncluttered charcoal negative space for UI overlay. Black/charcoal palette with subtle warm gold lighting. Right half well illuminated, visible recognizable subject with realistic material detail, rich cinematic depth. No readable text, UI, logos, watermarks, collage.",
+      "file": "dist/header-team-management.webp",
+      "width": 2172,
+      "height": 724,
+      "bytes": 94032
+    },
+    {
+      "slug": "standings",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium cinematic basketball general manager game header background. Create ONE standalone wide panoramic 3:1 photograph. Scene: basketball arena scoreboards with abstract unreadable scores and competitive atmosphere. Main subjects concentrated center-right; left 45% dark uncluttered charcoal negative space for UI overlay. Black/charcoal palette with subtle warm gold lighting. Right half well illuminated, visible recognizable subject with realistic material detail, rich cinematic depth. No readable text, UI, logos, watermarks, collage.",
+      "file": "dist/header-standings.webp",
+      "width": 2172,
+      "height": 724,
+      "bytes": 100374
+    },
+    {
+      "slug": "player-stats",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium cinematic basketball general manager game header background. Create ONE standalone wide panoramic 3:1 photograph. Scene: single adult basketball player executing jump shot with subtle arena data screens showing abstract unreadable graphics. Main subjects concentrated center-right; left 45% dark uncluttered charcoal negative space for UI overlay. Black/charcoal palette with subtle warm gold lighting. Right half well illuminated, visible recognizable subject with realistic material detail, rich cinematic depth. No readable text, UI, logos, watermarks, collage.",
+      "file": "dist/header-player-stats.webp",
+      "width": 2164,
+      "height": 727,
+      "bytes": 80348
+    },
+    {
+      "slug": "team-stats",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium cinematic basketball general manager game header background. Create ONE standalone wide panoramic 3:1 photograph. Scene: adult basketball team halfcourt practice viewed from elevated analytics angle. Main subjects concentrated center-right; left 45% dark uncluttered charcoal negative space for UI overlay. Black/charcoal palette with subtle warm gold lighting. Right half well illuminated, visible recognizable subject with realistic material detail, rich cinematic depth. No readable text, UI, logos, watermarks, collage.",
+      "file": "dist/header-team-stats.webp",
+      "width": 2172,
+      "height": 724,
+      "bytes": 123356
+    },
+    {
+      "slug": "league-stats",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium cinematic basketball general manager game header background. Create ONE standalone wide panoramic 3:1 photograph. Scene: several basketball scouting video monitors with basketball court action. Main subjects concentrated center-right; left 45% dark uncluttered charcoal negative space for UI overlay. Black/charcoal palette with subtle warm gold lighting. Right half well illuminated, visible recognizable subject with realistic material detail, rich cinematic depth. No readable text, UI, logos, watermarks, collage.",
+      "file": "dist/header-league-stats.webp",
+      "width": 2172,
+      "height": 724,
+      "bytes": 126380
+    },
+    {
+      "slug": "franchise-history",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium cinematic basketball general manager game header background. Create ONE standalone wide panoramic 3:1 photograph. Scene: archival old basketball arena with retired jerseys, subtle sepia tone. Main subjects concentrated center-right; left 45% dark uncluttered charcoal negative space for UI overlay. Black/charcoal palette with subtle warm gold lighting. Right half well illuminated, visible recognizable subject with realistic material detail, rich cinematic depth. No readable text, UI, logos, watermarks, collage.",
+      "file": "dist/header-franchise-history.webp",
+      "width": 2172,
+      "height": 724,
+      "bytes": 122480
+    },
+    {
+      "slug": "settings",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium cinematic basketball general manager game header background. Create ONE standalone wide panoramic 3:1 photograph. Scene: understated basketball on hardwood beside sports equipment cabinet. Main subjects concentrated center-right; left 45% dark uncluttered charcoal negative space for UI overlay. Black/charcoal palette with subtle warm gold lighting. Right half well illuminated, visible recognizable subject with realistic material detail, rich cinematic depth. No readable text, UI, logos, watermarks, collage.",
+      "file": "dist/header-settings.webp",
+      "width": 2163,
+      "height": 727,
+      "bytes": 121506
+    },
+    {
+      "slug": "gm-office",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium cinematic basketball general manager game header background. Create ONE standalone wide panoramic 3:1 photograph. Scene: executive desk with basketball court blueprint and arena window. Main subjects concentrated center-right; left 45% dark uncluttered charcoal negative space for UI overlay. Black/charcoal palette with subtle warm gold lighting. Right half well illuminated, visible recognizable subject with realistic material detail, rich cinematic depth. No readable text, UI, logos, watermarks, collage.",
+      "file": "dist/header-gm-office.webp",
+      "width": 2172,
+      "height": 724,
+      "bytes": 124268
+    },
+    {
+      "slug": "gm-inbox",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium cinematic basketball general manager game header background. Create ONE standalone wide panoramic 3:1 photograph. Scene: desk phone, correspondence folders and basketball in basketball executive office. Main subjects concentrated center-right; left 45% dark uncluttered charcoal negative space for UI overlay. Black/charcoal palette with subtle warm gold lighting. Right half well illuminated, visible recognizable subject with realistic material detail, rich cinematic depth. No readable text, UI, logos, watermarks, collage.",
+      "file": "dist/header-gm-inbox.webp",
+      "width": 2172,
+      "height": 724,
+      "bytes": 116482
+    },
+    {
+      "slug": "attendance-rankings",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium cinematic basketball general manager game header background. Create ONE standalone wide panoramic 3:1 photograph. Scene: packed basketball arena stands with enthusiastic adult spectators. Main subjects concentrated center-right; left 45% dark uncluttered charcoal negative space for UI overlay. Black/charcoal palette with subtle warm gold lighting. Right half well illuminated, visible recognizable subject with realistic material detail, rich cinematic depth. No readable text, UI, logos, watermarks, collage.",
+      "file": "dist/header-attendance-rankings.webp",
+      "width": 2164,
+      "height": 727,
+      "bytes": 148372
+    },
+    {
+      "slug": "power-rankings",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium cinematic basketball general manager game header background. Create ONE standalone wide panoramic 3:1 photograph. Scene: basketball competition arena and scoreboard from elevated view. Main subjects concentrated center-right; left 45% dark uncluttered charcoal negative space for UI overlay. Black/charcoal palette with subtle warm gold lighting. Right half well illuminated, visible recognizable subject with realistic material detail, rich cinematic depth. No readable text, UI, logos, watermarks, collage.",
+      "file": "dist/header-power-rankings.webp",
+      "width": 2172,
+      "height": 724,
+      "bytes": 208770
+    }
+  ],
+  "processing": "WebP quality 85, no cropping or resizing; responsive crops controlled by page-headers.js."
+}

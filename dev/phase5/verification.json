@@ -1,0 +1,131 @@
+{
+  "passed": true,
+  "seasons": [
+    {
+      "league": "nba",
+      "seed": 101,
+      "games": 1230,
+      "checks": "schedule totals, scoring identity, period totals, shooting counts, overtime, minutes"
+    },
+    {
+      "league": "nba",
+      "seed": 102,
+      "games": 1230,
+      "checks": "schedule totals, scoring identity, period totals, shooting counts, overtime, minutes"
+    },
+    {
+      "league": "nba",
+      "seed": 103,
+      "games": 1230,
+      "checks": "schedule totals, scoring identity, period totals, shooting counts, overtime, minutes"
+    },
+    {
+      "league": "nba",
+      "seed": 104,
+      "games": 1230,
+      "checks": "schedule totals, scoring identity, period totals, shooting counts, overtime, minutes"
+    },
+    {
+      "league": "nba",
+      "seed": 105,
+      "games": 1230,
+      "checks": "schedule totals, scoring identity, period totals, shooting counts, overtime, minutes"
+    },
+    {
+      "league": "nba",
+      "seed": 106,
+      "games": 1230,
+      "checks": "schedule totals, scoring identity, period totals, shooting counts, overtime, minutes"
+    },
+    {
+      "league": "nba",
+      "seed": 107,
+      "games": 1230,
+      "checks": "schedule totals, scoring identity, period totals, shooting counts, overtime, minutes"
+    },
+    {
+      "league": "nba",
+      "seed": 108,
+      "games": 1230,
+      "checks": "schedule totals, scoring identity, period totals, shooting counts, overtime, minutes"
+    },
+    {
+      "league": "nba",
+      "seed": 109,
+      "games": 1230,
+      "checks": "schedule totals, scoring identity, period totals, shooting counts, overtime, minutes"
+    },
+    {
+      "league": "nba",
+      "seed": 110,
+      "games": 1230,
+      "checks": "schedule totals, scoring identity, period totals, shooting counts, overtime, minutes"
+    },
+    {
+      "league": "wnba",
+      "seed": 101,
+      "games": 240,
+      "checks": "schedule totals, scoring identity, period totals, shooting counts, overtime, minutes"
+    },
+    {
+      "league": "wnba",
+      "seed": 102,
+      "games": 240,
+      "checks": "schedule totals, scoring identity, period totals, shooting counts, overtime, minutes"
+    },
+    {
+      "league": "wnba",
+      "seed": 103,
+      "games": 240,
+      "checks": "schedule totals, scoring identity, period totals, shooting counts, overtime, minutes"
+    },
+    {
+      "league": "wnba",
+      "seed": 104,
+      "games": 240,
+      "checks": "schedule totals, scoring identity, period totals, shooting counts, overtime, minutes"
+    },
+    {
+      "league": "wnba",
+      "seed": 105,
+      "games": 240,
+      "checks": "schedule totals, scoring identity, period totals, shooting counts, overtime, minutes"
+    },
+    {
+      "league": "wnba",
+      "seed": 106,
+      "games": 240,
+      "checks": "schedule totals, scoring identity, period totals, shooting counts, overtime, minutes"
+    },
+    {
+      "league": "wnba",
+      "seed": 107,
+      "games": 240,
+      "checks": "schedule totals, scoring identity, period totals, shooting counts, overtime, minutes"
+    },
+    {
+      "league": "wnba",
+      "seed": 108,
+      "games": 240,
+      "checks": "schedule totals, scoring identity, period totals, shooting counts, overtime, minutes"
+    },
+    {
+      "league": "wnba",
+      "seed": 109,
+      "games": 240,
+      "checks": "schedule totals, scoring identity, period totals, shooting counts, overtime, minutes"
+    },
+    {
+      "league": "wnba",
+      "seed": 110,
+      "games": 240,
+      "checks": "schedule totals, scoring identity, period totals, shooting counts, overtime, minutes"
+    }
+  ],
+  "games": 14700,
+  "baselinePreservedExcept": [
+    "dist/attributes.js",
+    "dist/index.html",
+    "dist/possession-engine.js"
+  ]
+}

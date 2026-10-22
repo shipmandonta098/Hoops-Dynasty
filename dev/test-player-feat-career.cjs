@@ -1,0 +1,11 @@
+const assert=require('node:assert/strict'),{loadLeague}=require('./load-league.cjs');
+(async()=>{for(const gender of ['male','female']){
+ const l=loadLeague({seed:71,strictDOM:false});l.context.assert=assert;
+ l.run(require('./feat-fixture.cjs').replace('syncAlignment(d);',`d.leagueGender='${gender}';syncAlignment(d);`));
+ l.run(`render=()=>{};simulationExecution.mode='headless';gmEnsure();ownerFor(team()).patience=0;team().owner.fired=true;gmCheckEmployment();state.gmCareer.dismissalAcknowledged=true;var observedSeries=[];var playBeforeFeatTest=play;play=function(a,b,stage='Regular season'){if(stage!=='Regular season'){const context=featSeriesBefore(a,b,stage);assert(context);observedSeries.push({context,stage});}return playBeforeFeatTest(a,b,stage);};`);
+ await l.run('sim(seasonLength()-state.day)');await l.run('playoffs()');
+ l.run(`assert(state.champion!==null);assert.equal(observedSeries.length,3);assert(observedSeries.every(v=>v.context.gameNumber===1&&v.context.bestOf===1));var priorFeatGames=JSON.stringify(state.playerFeats.games);var ids=state.playerFeats.games.map(e=>e.id);assert(ids.length>0);assert(state.playerFeats.games.filter(e=>e.game.stage!=='Regular season').every(e=>e.context.gameNumber===1));`);
+ await l.run('gmUnemployedOffseason()');
+ l.run(`assert.equal(JSON.stringify(state.playerFeats.games),priorFeatGames);state=validateCareerData(JSON.parse(JSON.stringify(state)));assert.equal(JSON.stringify(state.playerFeats.games),priorFeatGames);var newsCount=state.newsFeed.items.length;featOpenGame(ids[0]);assert(document.getElementById('profile').innerHTML.includes('Game Summary'));assert.equal(state.newsFeed.items.length,newsCount);var box=state.playerFeats.games[0].game.box.find(p=>state.playerFeats.games[0].feats.some(f=>f.playerId===p.playerId));assert(featCareerMarkup(box.playerId).includes('Game Summary'));`);
+ console.log('PASS',gender,'33-game custom season + real playoff context + offseason/next-year save/load + archived game/profile navigation');
+}})().catch(e=>{console.error(e.message,e.stack.split('\n').slice(-8).join('\n'));process.exitCode=1});

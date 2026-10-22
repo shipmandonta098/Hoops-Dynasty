@@ -1,0 +1,149 @@
+{
+  "eligibilityTruthTable": "PASS: all four merged/event combinations",
+  "transitionThreeParityCases": 24,
+  "otherShotParityCases": 5,
+  "shotWeightParityCases": 2,
+  "runningCoefficients": "PASS: .055 accuracy and .5 block multiplier unchanged",
+  "curves": [
+    {
+      "rating": 50,
+      "variant": "Driving Layup",
+      "base": 0.5875,
+      "context": 0.6025,
+      "probability": 0.6025,
+      "blockRisk": 0.0475,
+      "expectedNonFoulFG": 0.57388125,
+      "adjustment": 0
+    },
+    {
+      "rating": 50,
+      "variant": "Running Layup",
+      "base": 0.585,
+      "context": 0.655,
+      "probability": 0.655,
+      "blockRisk": 0.02375,
+      "expectedNonFoulFG": 0.63944375,
+      "adjustment": 0.055
+    },
+    {
+      "rating": 60,
+      "variant": "Driving Layup",
+      "base": 0.6025,
+      "context": 0.6175,
+      "probability": 0.6175,
+      "blockRisk": 0.0475,
+      "expectedNonFoulFG": 0.58816875,
+      "adjustment": 0
+    },
+    {
+      "rating": 60,
+      "variant": "Running Layup",
+      "base": 0.601,
+      "context": 0.671,
+      "probability": 0.671,
+      "blockRisk": 0.02375,
+      "expectedNonFoulFG": 0.6550637500000001,
+      "adjustment": 0.055
+    },
+    {
+      "rating": 70,
+      "variant": "Driving Layup",
+      "base": 0.6175,
+      "context": 0.6325000000000001,
+      "probability": 0.6325000000000001,
+      "blockRisk": 0.0475,
+      "expectedNonFoulFG": 0.60245625,
+      "adjustment": 0
+    },
+    {
+      "rating": 70,
+      "variant": "Running Layup",
+      "base": 0.617,
+      "context": 0.687,
+      "probability": 0.687,
+      "blockRisk": 0.02375,
+      "expectedNonFoulFG": 0.67068375,
+      "adjustment": 0.055
+    },
+    {
+      "rating": 75,
+      "variant": "Driving Layup",
+      "base": 0.625,
+      "context": 0.64,
+      "probability": 0.64,
+      "blockRisk": 0.0475,
+      "expectedNonFoulFG": 0.6096,
+      "adjustment": 0
+    },
+    {
+      "rating": 75,
+      "variant": "Running Layup",
+      "base": 0.625,
+      "context": 0.6950000000000001,
+      "probability": 0.6950000000000001,
+      "blockRisk": 0.02375,
+      "expectedNonFoulFG": 0.67849375,
+      "adjustment": 0.055
+    },
+    {
+      "rating": 80,
+      "variant": "Driving Layup",
+      "base": 0.6325,
+      "context": 0.6475,
+      "probability": 0.6475,
+      "blockRisk": 0.0475,
+      "expectedNonFoulFG": 0.6167437499999999,
+      "adjustment": 0
+    },
+    {
+      "rating": 80,
+      "variant": "Running Layup",
+      "base": 0.633,
+      "context": 0.7030000000000001,
+      "probability": 0.7030000000000001,
+      "blockRisk": 0.02375,
+      "expectedNonFoulFG": 0.68630375,
+      "adjustment": 0.055
+    },
+    {
+      "rating": 90,
+      "variant": "Driving Layup",
+      "base": 0.6475,
+      "context": 0.6625,
+      "probability": 0.6625,
+      "blockRisk": 0.0475,
+      "expectedNonFoulFG": 0.6310312499999999,
+      "adjustment": 0
+    },
+    {
+      "rating": 90,
+      "variant": "Running Layup",
+      "base": 0.649,
+      "context": 0.7190000000000001,
+      "probability": 0.7190000000000001,
+      "blockRisk": 0.02375,
+      "expectedNonFoulFG": 0.7019237500000001,
+      "adjustment": 0.055
+    },
+    {
+      "rating": 99,
+      "variant": "Driving Layup",
+      "base": 0.661,
+      "context": 0.676,
+      "probability": 0.676,
+      "blockRisk": 0.0475,
+      "expectedNonFoulFG": 0.6438900000000001,
+      "adjustment": 0
+    },
+    {
+      "rating": 99,
+      "variant": "Running Layup",
+      "base": 0.6634,
+      "context": 0.7334,
+      "probability": 0.7334,
+      "blockRisk": 0.02375,
+      "expectedNonFoulFG": 0.71598175,
+      "adjustment": 0.055
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hoops Dynasty Phase 8</title><style>body{background:#111820;color:#e7ebf0;font:15px/1.6 system-ui;margin:24px}main{max-width:1100px;margin:auto}a{color:#ffb66b}pre{white-space:pre-wrap;overflow-wrap:anywhere}</style><main><p><strong>Update, 21 October 2026: Phase 8 has been accepted for production by user override. The rejection below records the earlier decision.</strong></p><a href="phase8.txt" download>Download TXT</a> · <a href="phase8.zip" download>Download report ZIP</a><pre>Hoops Dynasty — Phase 8 score-state acceptance test
+21 October 2026
+
+DECISION: REJECT CANDIDATE. KEEP PHASE 7 GAMEPLAY.
+
+The candidate is implemented in dev/phase8/candidate-dist for reproducible testing only. It is not loaded by the game. No production gameplay file changed. The mirror acceptance gate failed. No parameter sweep was used to force the requested variance number.
+
+1. Crowd momentum ablation
+400 NBA neutral mirror matches, identical starting fixtures and trial seeds to Phase 7. Crowd momentum callbacks and its shooting contribution were disabled. Regulation margin variance was 215.4204 before and 215.4204 after. All 400 final scores AND quarter scores matched exactly. Neutral mirrors already set home-court strength to zero; homeCourtEvent returns immediately and homeCourtShot returns zero. This rules out crowd momentum as the cause of variance in this fixture, not at non-neutral venues.
+
+2. Candidate policy
+Intensity = min(1, abs(lead)/20) × clamp(elapsed regulation fraction, 0, 1). At full intensity: leading offensive tempo preference 0.88, trailing 1.08; trailing three-point zone weight 1.65; leading difficult-shot weights 0.55 (fadeaways, turnarounds, pull-ups, running threes, alley-oops); leading contest attempt rate 0.92 and steal/lane gamble rate 0.70; trailing contest rate 1.04 and gamble rate 1.40. These are relative behavioral weights, not percentage-point accuracy changes. All shooting conversion, foul, interception and turnover success calculations remain unchanged.
+Pace uses the harmonic mean of both sides’ tempo preferences to scale the existing shared fixed-window opportunity count, carrying fractional counts across minutes. It does not allocate extra possessions to the trailing side. This is an approximation within the existing timing model, not a full elapsed-time possession rewrite. The existing Phase 7 final-two-minute timing/rotation logic remains intact. Existing historical game formats and individual abilities are retained.
+Safer shot selection changes the mix of shot types, not the conversion probability of a given shot. Defensive pressure changes contest/gamble attempts, with existing outcome handling. These effects are not guaranteed to narrow margins: safer shots can help a leader; more threes can increase a trailer’s variance. No accuracy boost, rating compression, score correction, forced tie or predetermined winner was introduced.
+
+3. Mirror results
+Regulation margin variance: Phase 7 215.4204 -&gt; candidate 213.0139
+Mean final margin: Phase 7 11.9725 -&gt; candidate 11.7425
+Points/team: Phase 7 111.1162 -&gt; candidate 109.9313
+Within ten (%): Phase 7 52.5000 -&gt; candidate 55.5000
+20+ (%): Phase 7 19.2500 -&gt; candidate 18.2500
+30+ (%): Phase 7 3.7500 -&gt; candidate 4.2500
+Overtime (%): Phase 7 2.7500 -&gt; candidate 2.0000
+Quarter stacking (points squared): Phase 7 -49.4870 -&gt; candidate -46.0784
+Mirror variance target: &lt;=160. FAILED.
+Paired bootstrap 95% interval for variance change: [-49.872288749999996, 41.54143000000002]. This resamples the same 400 trial indices in both arms (2,000 bootstrap draws). It does not cover uncertainty across every possible roster universe.
+The 400-game test cycles through three cloned roster pairs, using world 901 and seeds 9010000–9010399. “Mirror” means identical opponents, not one universal roster or shooting luck alone. Fatigue, fouls, substitutions and possession choices remain stochastic.
+
+4. Five complete NBA regular seasons
+Seeds 101–105, 1,230 games each, 6,150 games total. Candidate outputs are distinct from archived Phase 7 outputs. These are complete seasons, not shortened seasons or extrapolated mirror results.
+Regulation margin variance: 258.7646
+Mean final margin: 12.9982
+Points/team: 110.6972
+Within ten (%): 51.3008
+20+ (%): 21.8699
+30+ (%): 7.2846
+Overtime (%): 2.9756
+Quarter stacking (points squared): -11.1424
+Acceptance references supplied by user: mean margin approximately 12.75; 20+ approximately 21%; OT 4–6%. No post-hoc tolerance was assigned to “approximately.” The exact mirror gate independently rejects the candidate.
+Seed-level results:
+seed | games | points/team | mean margin | 20+ % | OT %
+101 | 1230 | 110.28 | 13.20 | 23.09 | 3.09
+102 | 1230 | 111.18 | 13.11 | 21.38 | 3.41
+103 | 1230 | 111.11 | 13.08 | 23.17 | 2.60
+104 | 1230 | 110.53 | 12.33 | 19.11 | 3.01
+105 | 1230 | 110.40 | 13.27 | 22.60 | 2.76
+Seed ranges (run-to-run variation, not confidence intervals): {&quot;meanMargin&quot;: [12.326016260162602, 13.269105691056911], &quot;blow20&quot;: [19.10569105691057, 23.170731707317074], &quot;OT&quot;: [2.6016260162601625, 3.414634146341464]}
+Five season seeds are a small independent sample. A narrow confidence interval treating 6,150 dependent career games as independent would overstate precision.
+
+5. Interpretation
+Disabling crowd momentum cannot repair the neutral mirror variance. The tested whole-game behavioral response changes choices but does not meaningfully reduce mirror variance to the acceptance threshold. Its variance-change interval includes zero. Full-season results do not override the failed mirror gate. Phase 7 stays live.
+The requested 160 variance would require a roughly 25.7% reduction from Phase 7. This candidate does not establish that such a reduction can be obtained through realistic score-state choices alone. Increasing defensive softness or shot selection weights merely until the threshold passes could become hidden outcome control; this report does not claim that is justified. The policy bundle was tested together; individual component effects were not isolated. Further work should isolate which modeled possession outcomes produce excess residual variance, or validate stronger coaching responses against actual play-by-play rather than fitting final scores.
+
+6. Verification
+Passed: 400 no-momentum mirror games, 400 candidate mirror games with scoring identities, legal winners and player-minute accounting; five full NBA regular seasons with schedule/game totals and box-score identities; 150 historical-format games (30 each: NBA 1997/2025, WNBA 1997/2006/2024) with score/event/box consistency; bounded policy/rating-preservation tests. Historical format compatibility is not historical statistical calibration. No five-season WNBA claim is made.
+Production dist files are byte-identical to Phase 7. Existing saves, completed results, UI and custom city photographs are therefore unaffected. Candidate save migration is unnecessary: no schema fields were added. The candidate has not been accepted or deployed as gameplay.
+
+7. Files and reproduction
+Candidate: dev/phase8/candidate-dist/attributes.js and tendencies.js. Original inspected files: dev/phase8/baseline-dist/. Harnesses: dev/phase8-matchups.cjs, dev/audit-phase8-season.cjs, dev/run-phase8-seasons.cjs, dev/phase8-analysis.py, dev/test-phase8.cjs, dev/phase8-historical.cjs, dev/report-phase8.py. Evidence: dev/phase8/ and dev/balance-audit/phase8-nba-101..105.json.
+From project root: node dev/phase8-matchups.cjs nba identical 400 901 no-momentum; node dev/phase8-matchups.cjs nba identical 400 901 candidate; node dev/run-phase8-seasons.cjs; node dev/test-phase8.cjs; node dev/phase8-historical.cjs; python dev/phase8-analysis.py; python dev/report-phase8.py. Existing completed outputs are reused. Preserve archived results before deliberately rerunning.
+</pre></main></html>

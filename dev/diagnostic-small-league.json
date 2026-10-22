@@ -1,0 +1,391 @@
+{
+  "requestedSeasons": 1,
+  "seasonsSimulated": 0,
+  "gamesSimulated": 43,
+  "playersProcessed": 1204,
+  "startingSeason": 2026,
+  "endingSeason": 2027,
+  "seed": 2026,
+  "mode": "headless",
+  "status": "failed",
+  "memoryStart": 12097024,
+  "memoryFinish": 55144568,
+  "peakSampledMemory": 56116384,
+  "errors": [
+    {
+      "season": 2027,
+      "day": 0,
+      "phase": "integrity-validation",
+      "error": "[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10000 (Free agents) aged 22 → 22; expected 23\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10001 (Free agents) aged 26 → 26; expected 27\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10004 (Free agents) aged 28 → 28; expected 29\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10005 (Free agents) aged 20 → 20; expected 21\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10006 (Free agents) aged 20 → 20; expected 21\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10007 (Free agents) aged 28 → 28; expected 29\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10008 (Free agents) aged 32 → 32; expected 33\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10009 (Free agents) aged 29 → 29; expected 30\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10011 (Free agents) aged 20 → 20; expected 21\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10013 (Free agents) aged 28 → 28; expected 29\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10014 (Free agents) aged 28 → 28; expected 29\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10017 (Free agents) aged 27 → 27; expected 28\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10018 (Free agents) aged 23 → 23; expected 24\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10020 (Free agents) aged 21 → 21; expected 22\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10022 (Free agents) aged 28 → 28; expected 29\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10027 (Free agents) aged 32 → 32; expected 33\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10028 (Free agents) aged 30 → 30; expected 31\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 7001512 (Free agents) aged 24 → 24; expected 25\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 12 (Free agents) aged 21 → 21; expected 22\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 8 (Free agents) aged 20 → 20; expected 21\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 0 (Free agents) aged 31 → 31; expected 32\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 43 (Free agents) aged 25 → 25; expected 26\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 32 (Free agents) aged 24 → 24; expected 25\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 41 (Free agents) aged 24 → 24; expected 25\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 63 (Free agents) aged 25 → 25; expected 26\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 68 (Free agents) aged 29 → 29; expected 30\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 61 (Free agents) aged 24 → 24; expected 25\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 103 (Free agents) aged 21 → 21; expected 22\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 96 (Free agents) aged 30 → 30; expected 31\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 91 (Free agents) aged 32 → 32; expected 33\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 121 (Free agents) aged 24 → 24; expected 25\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 122 (Free agents) aged 24 → 24; expected 25\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 127 (Free agents) aged 24 → 24; expected 25\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 155 (Free agents) aged 26 → 26; expected 27\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 156 (Free agents) aged 25 → 25; expected 26\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 152 (Free agents) aged 26 → 26; expected 27\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 160 (Free agents) aged 22 → 22; expected 23\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 2063009 (Draft rights 1) aged 20 → 20; expected 21\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 2063022 (Draft rights 4) aged 20 → 20; expected 21\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 2063007 (Draft rights 3) aged 21 → 21; expected 22\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 2063008 (Draft rights 5) aged 21 → 21; expected 22\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 2063018 (Draft rights 2) aged 22 → 22; expected 23\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 2063017 (Draft rights 0) aged 21 → 21; expected 22",
+      "issues": [
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 10000 (Free agents) aged 22 → 22; expected 23",
+          "playerId": 10000
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 10001 (Free agents) aged 26 → 26; expected 27",
+          "playerId": 10001
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 10004 (Free agents) aged 28 → 28; expected 29",
+          "playerId": 10004
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 10005 (Free agents) aged 20 → 20; expected 21",
+          "playerId": 10005
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 10006 (Free agents) aged 20 → 20; expected 21",
+          "playerId": 10006
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 10007 (Free agents) aged 28 → 28; expected 29",
+          "playerId": 10007
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 10008 (Free agents) aged 32 → 32; expected 33",
+          "playerId": 10008
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 10009 (Free agents) aged 29 → 29; expected 30",
+          "playerId": 10009
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 10011 (Free agents) aged 20 → 20; expected 21",
+          "playerId": 10011
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 10013 (Free agents) aged 28 → 28; expected 29",
+          "playerId": 10013
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 10014 (Free agents) aged 28 → 28; expected 29",
+          "playerId": 10014
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 10017 (Free agents) aged 27 → 27; expected 28",
+          "playerId": 10017
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 10018 (Free agents) aged 23 → 23; expected 24",
+          "playerId": 10018
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 10020 (Free agents) aged 21 → 21; expected 22",
+          "playerId": 10020
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 10022 (Free agents) aged 28 → 28; expected 29",
+          "playerId": 10022
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 10027 (Free agents) aged 32 → 32; expected 33",
+          "playerId": 10027
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 10028 (Free agents) aged 30 → 30; expected 31",
+          "playerId": 10028
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 7001512 (Free agents) aged 24 → 24; expected 25",
+          "playerId": 7001512
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 12 (Free agents) aged 21 → 21; expected 22",
+          "playerId": 12
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 8 (Free agents) aged 20 → 20; expected 21",
+          "playerId": 8
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 0 (Free agents) aged 31 → 31; expected 32",
+          "playerId": 0
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 43 (Free agents) aged 25 → 25; expected 26",
+          "playerId": 43
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 32 (Free agents) aged 24 → 24; expected 25",
+          "playerId": 32
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 41 (Free agents) aged 24 → 24; expected 25",
+          "playerId": 41
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 63 (Free agents) aged 25 → 25; expected 26",
+          "playerId": 63
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 68 (Free agents) aged 29 → 29; expected 30",
+          "playerId": 68
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 61 (Free agents) aged 24 → 24; expected 25",
+          "playerId": 61
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 103 (Free agents) aged 21 → 21; expected 22",
+          "playerId": 103
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 96 (Free agents) aged 30 → 30; expected 31",
+          "playerId": 96
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 91 (Free agents) aged 32 → 32; expected 33",
+          "playerId": 91
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 121 (Free agents) aged 24 → 24; expected 25",
+          "playerId": 121
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 122 (Free agents) aged 24 → 24; expected 25",
+          "playerId": 122
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 127 (Free agents) aged 24 → 24; expected 25",
+          "playerId": 127
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 155 (Free agents) aged 26 → 26; expected 27",
+          "playerId": 155
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 156 (Free agents) aged 25 → 25; expected 26",
+          "playerId": 156
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 152 (Free agents) aged 26 → 26; expected 27",
+          "playerId": 152
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 160 (Free agents) aged 22 → 22; expected 23",
+          "playerId": 160
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 2063009 (Draft rights 1) aged 20 → 20; expected 21",
+          "playerId": 2063009
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 2063022 (Draft rights 4) aged 20 → 20; expected 21",
+          "playerId": 2063022
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 2063007 (Draft rights 3) aged 21 → 21; expected 22",
+          "playerId": 2063007
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 2063008 (Draft rights 5) aged 21 → 21; expected 22",
+          "playerId": 2063008
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 2063018 (Draft rights 2) aged 22 → 22; expected 23",
+          "playerId": 2063018
+        },
+        {
+          "season": 2027,
+          "day": 0,
+          "system": "Aging",
+          "problem": "Player 2063017 (Draft rights 0) aged 21 → 21; expected 22",
+          "playerId": 2063017
+        }
+      ],
+      "stack": "Error: [LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10000 (Free agents) aged 22 → 22; expected 23\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10001 (Free agents) aged 26 → 26; expected 27\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10004 (Free agents) aged 28 → 28; expected 29\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10005 (Free agents) aged 20 → 20; expected 21\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10006 (Free agents) aged 20 → 20; expected 21\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10007 (Free agents) aged 28 → 28; expected 29\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10008 (Free agents) aged 32 → 32; expected 33\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10009 (Free agents) aged 29 → 29; expected 30\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10011 (Free agents) aged 20 → 20; expected 21\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10013 (Free agents) aged 28 → 28; expected 29\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10014 (Free agents) aged 28 → 28; expected 29\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10017 (Free agents) aged 27 → 27; expected 28\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10018 (Free agents) aged 23 → 23; expected 24\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10020 (Free agents) aged 21 → 21; expected 22\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10022 (Free agents) aged 28 → 28; expected 29\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10027 (Free agents) aged 32 → 32; expected 33\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 10028 (Free agents) aged 30 → 30; expected 31\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 7001512 (Free agents) aged 24 → 24; expected 25\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 12 (Free agents) aged 21 → 21; expected 22\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 8 (Free agents) aged 20 → 20; expected 21\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 0 (Free agents) aged 31 → 31; expected 32\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 43 (Free agents) aged 25 → 25; expected 26\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 32 (Free agents) aged 24 → 24; expected 25\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 41 (Free agents) aged 24 → 24; expected 25\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 63 (Free agents) aged 25 → 25; expected 26\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 68 (Free agents) aged 29 → 29; expected 30\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 61 (Free agents) aged 24 → 24; expected 25\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 103 (Free agents) aged 21 → 21; expected 22\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 96 (Free agents) aged 30 → 30; expected 31\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 91 (Free agents) aged 32 → 32; expected 33\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 121 (Free agents) aged 24 → 24; expected 25\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 122 (Free agents) aged 24 → 24; expected 25\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 127 (Free agents) aged 24 → 24; expected 25\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 155 (Free agents) aged 26 → 26; expected 27\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 156 (Free agents) aged 25 → 25; expected 26\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 152 (Free agents) aged 26 → 26; expected 27\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 160 (Free agents) aged 22 → 22; expected 23\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 2063009 (Draft rights 1) aged 20 → 20; expected 21\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 2063022 (Draft rights 4) aged 20 → 20; expected 21\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 2063007 (Draft rights 3) aged 21 → 21; expected 22\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 2063008 (Draft rights 5) aged 21 → 21; expected 22\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 2063018 (Draft rights 2) aged 22 → 22; expected 23\n[LEAGUE VALIDATION FAILED] Season 2027 · Aging · Player 2063017 (Draft rights 0) aged 21 → 21; expected 22\n    at validateHeadlessLeague (headless-runner.js:20:25)\n    at simulateSeasonHeadless (headless-runner.js:56:106)\n    at async simulateMultipleSeasonsHeadless (headless-runner.js:76:147)"
+    }
+  ],
+  "warnings": [
+    "Free agency complete. You can start the next season."
+  ],
+  "seasons": [],
+  "seasonDiagnostics": [
+    {
+      "season": 2026,
+      "activePlayers": 84,
+      "freeAgents": 30,
+      "draftRights": 0,
+      "averageAge": 26.833333333333332,
+      "averageOVR": 76.1547619047619,
+      "averagePOT": 82.88095238095238,
+      "rookies": 6,
+      "retirements": 0,
+      "teamPPG": 123.48333333333333,
+      "fg": 0.5069987275040901,
+      "three": 0.38964181994191677,
+      "ft": 0.7527512839325018,
+      "possessionsPerTeamGame": 101.16666666666667,
+      "averagePayroll": 149.61666666666665,
+      "payrollMin": 135.59999999999997,
+      "payrollMax": 160.7,
+      "aboveCap": 3,
+      "currentlyInjured": 3
+    }
+  ],
+  "growthStart": {
+    "history": 0,
+    "statsArchive": 0,
+    "playerPostseasonArchive": 0,
+    "teamStatsArchive": 0,
+    "teamSeasonArchive": 0,
+    "draftHistory": 0,
+    "draftRights": 0,
+    "free": 30,
+    "championsArchive": 0,
+    "leagueHistory": 0,
+    "hallPeople": 0,
+    "news": 0,
+    "decisions": 0,
+    "pbpStrings": 0,
+    "replayFrames": 0
+  },
+  "saveRequestsDeferred": 45,
+  "runtimeMs": 7461.8734460000005,
+  "averageMsPerSeason": null,
+  "averageMsPerGame": 173.53194060465117,
+  "growthFinish": {
+    "history": 0,
+    "statsArchive": 84,
+    "playerPostseasonArchive": 54,
+    "teamStatsArchive": 1,
+    "teamSeasonArchive": 6,
+    "draftHistory": 1,
+    "draftRights": 6,
+    "free": 37,
+    "championsArchive": 1,
+    "leagueHistory": 1,
+    "hallPeople": 129,
+    "news": 206,
+    "decisions": 13,
+    "pbpStrings": 0,
+    "replayFrames": 0
+  }
+}

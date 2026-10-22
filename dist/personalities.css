@@ -1,0 +1,1 @@
+.personality-cards{display:grid;gap:12px}.personality-cards>div{border-left:3px solid #b3975f;padding:2px 0 2px 12px}.personality-cards small{display:block;text-transform:uppercase;font-size:12px;letter-spacing:.8px;color:var(--pp-muted)}.personality-cards strong{display:block;margin-top:5px;font-size:16px}.personality-cards p{margin-bottom:0}

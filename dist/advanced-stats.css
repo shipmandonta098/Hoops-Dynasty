@@ -1,0 +1,12 @@
+.reference-controls>span{font-size:12px;color:var(--pp-muted)}
+.player-dialog .bref-table{border-radius:0}
+.player-dialog .bref-table table{width:max-content;min-width:100%;font-family:Arial,sans-serif;font-variant-numeric:tabular-nums}
+.player-dialog .bref-table td,.player-dialog .bref-table th{padding:6px 8px;white-space:nowrap;font-size:13px;font-weight:400}
+.player-dialog .bref-table thead th{font-weight:700;border-bottom:2px solid var(--pp-line)}
+.player-dialog .bref-table abbr{text-decoration:none;cursor:help}
+.player-dialog .bref-table tbody tr:nth-child(even){background:var(--pp-card)}
+.player-dialog .bref-table tbody tr:hover{background:color-mix(in srgb,var(--pp-bg) 78%,#c4a465 22%)}
+.player-dialog .bref-table .stat-total td,.player-dialog .bref-table .stat-total th{font-weight:700}
+.player-dialog .bref-table .high-result{padding:0;min-width:25px;min-height:28px;background:none;border:0;border-radius:0;font:inherit;color:var(--pp-green);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.player-dialog .bref-table .high-result:focus-visible{outline:2px solid #c4a465;outline-offset:2px}
+.stat-unavailable{color:var(--pp-muted)}

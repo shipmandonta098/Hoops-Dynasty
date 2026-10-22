@@ -1,0 +1,363 @@
+{
+  "matches": {
+    "pace-nba-league-712.json.gz": {
+      "games": 200,
+      "OT": 4,
+      "OTpct": 2.0,
+      "closeGames": 69,
+      "startsMean": 5.3768115942028984,
+      "startsCI95": [
+        5.072463768115942,
+        5.695652173913044
+      ],
+      "durationMean": 10.066059602649007,
+      "durationN": 302,
+      "inboundFoulDelayProxy": {
+        "n": 0,
+        "mean": null,
+        "median": null
+      },
+      "intentionalFoulDelay": {
+        "n": 0,
+        "mean": null,
+        "median": null
+      },
+      "transitionPossessions": 38888,
+      "opportunityPct": 19.97788520880477,
+      "shotFlagPossessionPct": 16.807241308372763,
+      "FGA": 34758,
+      "primaryTransitionFGA": 0,
+      "primaryOpportunityFGA": 0,
+      "primaryTransitionAllFGAPct": null,
+      "primaryOpportunityAllFGAPct": null
+    },
+    "pace-wnba-league-713.json.gz": {
+      "games": 400,
+      "OT": 24,
+      "OTpct": 6.0,
+      "closeGames": 156,
+      "startsMean": 5.711538461538462,
+      "startsCI95": [
+        5.493589743589744,
+        5.9423076923076925
+      ],
+      "durationMean": 9.562503401360544,
+      "durationN": 735,
+      "inboundFoulDelayProxy": {
+        "n": 47,
+        "mean": 2.0,
+        "median": 2
+      },
+      "intentionalFoulDelay": {
+        "n": 113,
+        "mean": 2.0,
+        "median": 2
+      },
+      "transitionPossessions": 64650,
+      "opportunityPct": 21.08894044856922,
+      "shotFlagPossessionPct": 17.124516627996904,
+      "FGA": 56502,
+      "primaryTransitionFGA": 10316,
+      "primaryOpportunityFGA": 10316,
+      "primaryTransitionAllFGAPct": 18.257760787228772,
+      "primaryOpportunityAllFGAPct": 18.257760787228772
+    },
+    "hq-wnba-league-713.json.gz": {
+      "games": 400,
+      "OT": 28,
+      "OTpct": 7.000000000000001,
+      "closeGames": 156,
+      "startsMean": 5.006410256410256,
+      "startsCI95": [
+        4.782051282051282,
+        5.237179487179487
+      ],
+      "durationMean": 11.355648,
+      "durationN": 625,
+      "inboundFoulDelayProxy": {
+        "n": 0,
+        "mean": null,
+        "median": null
+      },
+      "intentionalFoulDelay": {
+        "n": 0,
+        "mean": null,
+        "median": null
+      },
+      "transitionPossessions": 64446,
+      "opportunityPct": 21.149489495081152,
+      "shotFlagPossessionPct": 17.16320640536263,
+      "FGA": 56317,
+      "primaryTransitionFGA": 0,
+      "primaryOpportunityFGA": 0,
+      "primaryTransitionAllFGAPct": null,
+      "primaryOpportunityAllFGAPct": null
+    },
+    "port-wnba-league-715.json.gz": {
+      "games": 160,
+      "OT": 5,
+      "OTpct": 3.125,
+      "closeGames": 62,
+      "startsMean": 5.290322580645161,
+      "startsCI95": [
+        4.951612903225806,
+        5.629032258064516
+      ],
+      "durationMean": 11.016729323308267,
+      "durationN": 266,
+      "inboundFoulDelayProxy": {
+        "n": 9,
+        "mean": 2.0,
+        "median": 2.0
+      },
+      "intentionalFoulDelay": {
+        "n": 39,
+        "mean": 2.0,
+        "median": 2.0
+      },
+      "transitionPossessions": 25608,
+      "opportunityPct": 21.606529209621993,
+      "shotFlagPossessionPct": 17.64682911590128,
+      "FGA": 22500,
+      "primaryTransitionFGA": 4181,
+      "primaryOpportunityFGA": 4181,
+      "primaryTransitionAllFGAPct": 18.58222222222222,
+      "primaryOpportunityAllFGAPct": 18.58222222222222
+    },
+    "baseline-nba-league-714.json.gz": {
+      "games": 800,
+      "OT": 34,
+      "OTpct": 4.25,
+      "closeGames": 255,
+      "startsMean": 4.976470588235294,
+      "startsCI95": [
+        4.807843137254902,
+        5.145098039215687
+      ],
+      "durationMean": 11.446992110453651,
+      "durationN": 1014,
+      "inboundFoulDelayProxy": {
+        "n": 87,
+        "mean": 2.0,
+        "median": 2.0
+      },
+      "intentionalFoulDelay": {
+        "n": 172,
+        "mean": 2.0,
+        "median": 2.0
+      },
+      "transitionPossessions": 155755,
+      "opportunityPct": 20.231774260858398,
+      "shotFlagPossessionPct": 16.866874257648227,
+      "FGA": 139677,
+      "primaryTransitionFGA": 0,
+      "primaryOpportunityFGA": 0,
+      "primaryTransitionAllFGAPct": null,
+      "primaryOpportunityAllFGAPct": null
+    },
+    "pace-nba-league-714.json.gz": {
+      "games": 800,
+      "OT": 37,
+      "OTpct": 4.625,
+      "closeGames": 255,
+      "startsMean": 5.686274509803922,
+      "startsCI95": [
+        5.517647058823529,
+        5.858823529411764
+      ],
+      "durationMean": 9.61528870292887,
+      "durationN": 1195,
+      "inboundFoulDelayProxy": {
+        "n": 95,
+        "mean": 2.0,
+        "median": 2
+      },
+      "intentionalFoulDelay": {
+        "n": 202,
+        "mean": 2.0,
+        "median": 2.0
+      },
+      "transitionPossessions": 156000,
+      "opportunityPct": 20.223717948717947,
+      "shotFlagPossessionPct": 16.861538461538462,
+      "FGA": 139908,
+      "primaryTransitionFGA": 0,
+      "primaryOpportunityFGA": 0,
+      "primaryTransitionAllFGAPct": null,
+      "primaryOpportunityAllFGAPct": null
+    },
+    "baseline-wnba-league-715.json.gz": {
+      "games": 160,
+      "OT": 5,
+      "OTpct": 3.125,
+      "closeGames": 67,
+      "startsMean": 5.746268656716418,
+      "startsCI95": [
+        5.432835820895522,
+        6.059701492537314
+      ],
+      "durationMean": 9.722327044025157,
+      "durationN": 318,
+      "inboundFoulDelayProxy": {
+        "n": 27,
+        "mean": 2.0,
+        "median": 2
+      },
+      "intentionalFoulDelay": {
+        "n": 68,
+        "mean": 2.0,
+        "median": 2.0
+      },
+      "transitionPossessions": 25822,
+      "opportunityPct": 44.38850592518008,
+      "shotFlagPossessionPct": 47.11486329486485,
+      "FGA": 22644,
+      "primaryTransitionFGA": 11303,
+      "primaryOpportunityFGA": 8654,
+      "primaryTransitionAllFGAPct": 49.91609256315139,
+      "primaryOpportunityAllFGAPct": 38.21762939409998
+    },
+    "port-wnba-league-713.json.gz": {
+      "games": 400,
+      "OT": 31,
+      "OTpct": 7.75,
+      "closeGames": 156,
+      "startsMean": 5.044871794871795,
+      "startsCI95": [
+        4.826923076923077,
+        5.2756410256410255
+      ],
+      "durationMean": 11.21809825673534,
+      "durationN": 631,
+      "inboundFoulDelayProxy": {
+        "n": 0,
+        "mean": null,
+        "median": null
+      },
+      "intentionalFoulDelay": {
+        "n": 0,
+        "mean": null,
+        "median": null
+      },
+      "transitionPossessions": 64510,
+      "opportunityPct": 21.16261044799256,
+      "shotFlagPossessionPct": 17.163230506898156,
+      "FGA": 56357,
+      "primaryTransitionFGA": 0,
+      "primaryOpportunityFGA": 0,
+      "primaryTransitionAllFGAPct": null,
+      "primaryOpportunityAllFGAPct": null
+    },
+    "baseline-nba-league-712.json.gz": {
+      "games": 200,
+      "OT": 4,
+      "OTpct": 2.0,
+      "closeGames": 69,
+      "startsMean": 4.971014492753623,
+      "startsCI95": [
+        4.681159420289855,
+        5.260869565217392
+      ],
+      "durationMean": 11.147372262773724,
+      "durationN": 274,
+      "inboundFoulDelayProxy": {
+        "n": 0,
+        "mean": null,
+        "median": null
+      },
+      "intentionalFoulDelay": {
+        "n": 0,
+        "mean": null,
+        "median": null
+      },
+      "transitionPossessions": 38841,
+      "opportunityPct": 19.986612085167735,
+      "shotFlagPossessionPct": 16.830153703560672,
+      "FGA": 34727,
+      "primaryTransitionFGA": 0,
+      "primaryOpportunityFGA": 0,
+      "primaryTransitionAllFGAPct": null,
+      "primaryOpportunityAllFGAPct": null
+    }
+  },
+  "seasons": [
+    {
+      "seed": 111,
+      "games": 240,
+      "teamMarginSD": 5.480761808362046,
+      "OTpct": 3.3333333333333335
+    },
+    {
+      "seed": 112,
+      "games": 240,
+      "teamMarginSD": 5.277013833599454,
+      "OTpct": 2.5
+    },
+    {
+      "seed": 113,
+      "games": 240,
+      "teamMarginSD": 4.151342654290698,
+      "OTpct": 5.416666666666667
+    },
+    {
+      "seed": 114,
+      "games": 240,
+      "teamMarginSD": 3.6736959137449943,
+      "OTpct": 3.3333333333333335
+    },
+    {
+      "seed": 115,
+      "games": 240,
+      "teamMarginSD": 4.805628210754552,
+      "OTpct": 5.416666666666667
+    }
+  ],
+  "ties": {
+    "endings-wnba-hq-accepted": [
+      {
+        "name": "tie_60",
+        "n": 2000,
+        "OTpct": 28.849999999999998,
+        "regWinPct": 39.900000000000006,
+        "regLossPct": 31.25
+      },
+      {
+        "name": "tie_30",
+        "n": 1000,
+        "OTpct": 46.2,
+        "regWinPct": 34.0,
+        "regLossPct": 19.8
+      },
+      {
+        "name": "tie_20",
+        "n": 1000,
+        "OTpct": 65.2,
+        "regWinPct": 28.799999999999997,
+        "regLossPct": 6.0
+      }
+    ],
+    "endings-wnba-port-accepted": [
+      {
+        "name": "tie_60",
+        "n": 2000,
+        "OTpct": 22.85,
+        "regWinPct": 42.8,
+        "regLossPct": 34.35
+      },
+      {
+        "name": "tie_30",
+        "n": 1000,
+        "OTpct": 39.5,
+        "regWinPct": 39.7,
+        "regLossPct": 20.8
+      },
+      {
+        "name": "tie_20",
+        "n": 1000,
+        "OTpct": 45.6,
+        "regWinPct": 36.4,
+        "regLossPct": 18.0
+      }
+    ]
+  }
+}

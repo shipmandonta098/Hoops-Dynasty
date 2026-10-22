@@ -1,0 +1,14 @@
+[
+  {
+    "arm": "port",
+    "case": "tie_30",
+    "samples": 100,
+    "exactRegulationEquality": true
+  },
+  {
+    "arm": "hq",
+    "case": "tie_30",
+    "samples": 100,
+    "exactRegulationEquality": true
+  }
+]

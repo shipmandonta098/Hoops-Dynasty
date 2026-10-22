@@ -1,0 +1,296 @@
+Hoops Dynasty — Phase 11: Final-minute and overtime audit
+21 October 2026
+
+Promote hold-for-last-shot plus two-point shot preference in modern NBA games. NBA OT rises from 3.24% to 4.10%; mean margin changes from 13.15 to 13.13; the 20+ rate changes from 22.18% to 22.80%. The requested 4.5–5.5% OT target is NOT reached. WNBA and pre-2020 games retain Phase 10 behavior.
+
+Full-season NBA comparison
+Five independent full 82-game seasons per arm, seeds 101–105; 6,150 games per arm. Same initial seeds, not identical later career paths after changed results/RNG use. Phase10 remains the accepted baseline; its roster allocation and transition changes are preserved.
+Metric | Phase10 | Hold | Hold+quick two
+points | 111.121 | 111.304 | 111.265
+margin | 13.152 | 13.120 | 13.131
+blow20 | 22.179 | 22.715 | 22.797
+OT | 3.236 | 4.016 | 4.098
+teamSD | 5.748 | 5.761 | 5.589
+
+Target: OT 4.5–5.5%. Prespecified practical margin-preservation tolerances: +/-0.25point mean margin and +/-1percentage point20+rate. Point-estimate tolerances are not proof of statistical equivalence.
+All seasons were completed without changing production during the test. No result caps, forced ties, accuracy boosts or hidden score corrections were introduced.
+
+phase11hold seed-level results
+Seed | Games | Points/team | Mean margin |20+% |OT% |Team margin SD
+101 | 1230 | 111.522 | 13.572 | 25.285 | 4.390 | 6.972
+102 | 1230 | 111.566 | 12.718 | 20.732 | 3.984 | 5.126
+103 | 1230 | 111.868 | 13.331 | 23.089 | 4.553 | 5.889
+104 | 1230 | 110.522 | 12.942 | 21.789 | 3.577 | 5.033
+105 | 1230 | 111.039 | 13.035 | 22.683 | 3.577 | 5.784
+Paired seed differences vs Phase10, approximate95% t intervals(df4):
+points: +0.183, CI -0.193 to +0.558
+margin: -0.033, CI -0.678 to +0.612
+blow20: +0.537, CI -1.506 to +2.579
+OT: +0.780, CI -0.508 to +2.069
+teamSD: +0.013, CI -0.448 to +0.473
+
+phase11hq seed-level results
+Seed | Games | Points/team | Mean margin |20+% |OT% |Team margin SD
+101 | 1230 | 111.035 | 13.699 | 25.203 | 3.577 | 6.441
+102 | 1230 | 111.970 | 12.934 | 20.650 | 4.065 | 5.359
+103 | 1230 | 111.867 | 13.134 | 23.577 | 4.390 | 5.495
+104 | 1230 | 110.293 | 12.784 | 21.789 | 4.309 | 4.538
+105 | 1230 | 111.159 | 13.104 | 22.764 | 4.146 | 6.109
+Paired seed differences vs Phase10, approximate95% t intervals(df4):
+points: +0.144, CI -0.217 to +0.504
+margin: -0.021, CI -0.549 to +0.507
+blow20: +0.618, CI -1.474 to +2.709
+OT: +0.862, CI +0.157 to +1.567
+teamSD: -0.159, CI -0.626 to +0.308
+
+Late-game arms:132,000 synthetic endings
+Six arms × 11 scenarios × 2,000 seeds. Existing original 8 scenarios plus ties at60/30/20 seconds. Seeds 70000–71999, paired across arms;half retain the earlier lower-three-point-skill fixture. These are synthetic starting scores, not real completed games. They reuse the actual possession, shooting, foul, rebound and OT resolvers.
+Arms: production; expanded fouling/repeat nonbonus fouls; quick-two shot selection; timeout/advance approximation; combined old three arms; hold for last shot.
+Primary reported endpoints: OT, eventual win, avoiding regulation defeat. Exact paired discordant-outcome tests; Holm adjustment over 165 arm/scenario/endpoint comparisons. Paired difference95% CIs are descriptive and are not simultaneous intervals. Final wins and OT are overlapping outcomes. No promotion is justified solely by an uncorrected isolated p-value.
+Scenario | Arm | Baseline OT% | Arm OT% | Difference pp | Paired95%CI pp | Holm p
+tie_60 | combined | 21.95 | 23.35 | +1.40 | -0.05 to +2.85 | 1
+tie_30 | combined | 33.85 | 35.40 | +1.55 | +0.47 to +2.63 | 0.854962
+tie_20 | combined | 40.65 | 41.10 | +0.45 | -0.56 to +1.46 | 1
+down2_30 | combined | 20.80 | 22.50 | +1.70 | +0.08 to +3.32 | 1
+down2_10 | combined | 21.45 | 26.10 | +4.65 | +3.30 to +6.00 | 2.97439e-09
+down4_60_defend | combined | 2.95 | 3.45 | +0.50 | -0.28 to +1.28 | 1
+down4_30_defend | combined | 0.20 | 0.65 | +0.45 | +0.05 to +0.85 | 1
+down6_60_defend | combined | 0.70 | 1.00 | +0.30 | -0.04 to +0.64 | 1
+down6_30_defend | combined | 0.00 | 0.00 | +0.00 | +0.00 to +0.00 | 1
+down2_15_advance | combined | 22.90 | 25.65 | +2.75 | +1.57 to +3.93 | 0.00102747
+down3_15_advance | combined | 17.80 | 14.05 | -3.75 | -4.93 to -2.57 | 6.95161e-08
+tie_60 | hold | 21.95 | 26.75 | +4.80 | +3.05 to +6.55 | 1.52175e-05
+tie_30 | hold | 33.85 | 40.40 | +6.55 | +4.40 to +8.70 | 5.3311e-07
+tie_20 | hold | 40.65 | 62.30 | +21.65 | +18.60 to +24.70 | 5.57425e-39
+down2_30 | hold | 20.80 | 26.50 | +5.70 | +3.85 to +7.55 | 3.40438e-07
+down2_10 | hold | 21.45 | 20.40 | -1.05 | -1.98 to -0.12 | 1
+down4_60_defend | hold | 2.95 | 3.00 | +0.05 | -0.12 to +0.22 | 1
+down4_30_defend | hold | 0.20 | 0.20 | +0.00 | +0.00 to +0.00 | 1
+down6_60_defend | hold | 0.70 | 0.70 | +0.00 | +0.00 to +0.00 | 1
+down6_30_defend | hold | 0.00 | 0.00 | +0.00 | +0.00 to +0.00 | 1
+down2_15_advance | hold | 22.90 | 22.05 | -0.85 | -1.63 to -0.07 | 1
+down3_15_advance | hold | 17.80 | 16.80 | -1.00 | -1.54 to -0.46 | 0.049062
+tie_60 | foul | 21.95 | 22.30 | +0.35 | -0.42 to +1.12 | 1
+tie_30 | foul | 33.85 | 33.95 | +0.10 | -0.34 to +0.54 | 1
+tie_20 | foul | 40.65 | 40.75 | +0.10 | -0.04 to +0.24 | 1
+down2_30 | foul | 20.80 | 19.90 | -0.90 | -2.18 to +0.38 | 1
+down2_10 | foul | 21.45 | 21.80 | +0.35 | +0.09 to +0.61 | 1
+down4_60_defend | foul | 2.95 | 2.65 | -0.30 | -0.90 to +0.30 | 1
+down4_30_defend | foul | 0.20 | 0.45 | +0.25 | -0.10 to +0.60 | 1
+down6_60_defend | foul | 0.70 | 0.95 | +0.25 | -0.07 to +0.57 | 1
+down6_30_defend | foul | 0.00 | 0.00 | +0.00 | +0.00 to +0.00 | 1
+down2_15_advance | foul | 22.90 | 23.55 | +0.65 | +0.22 to +1.08 | 0.628357
+down3_15_advance | foul | 17.80 | 17.40 | -0.40 | -1.18 to +0.38 | 1
+tie_60 | quick | 21.95 | 23.20 | +1.25 | +0.51 to +1.99 | 0.183216
+tie_30 | quick | 33.85 | 35.10 | +1.25 | +0.57 to +1.93 | 0.0704636
+tie_20 | quick | 40.65 | 42.25 | +1.60 | +0.76 to +2.44 | 0.0389863
+down2_30 | quick | 20.80 | 23.45 | +2.65 | +1.54 to +3.76 | 0.00054046
+down2_10 | quick | 21.45 | 25.30 | +3.85 | +2.56 to +5.14 | 1.02398e-06
+down4_60_defend | quick | 2.95 | 3.85 | +0.90 | +0.40 to +1.40 | 0.0794947
+down4_30_defend | quick | 0.20 | 0.30 | +0.10 | -0.04 to +0.24 | 1
+down6_60_defend | quick | 0.70 | 0.70 | +0.00 | +0.00 to +0.00 | 1
+down6_30_defend | quick | 0.00 | 0.00 | +0.00 | +0.00 to +0.00 | 1
+down2_15_advance | quick | 22.90 | 24.20 | +1.30 | +0.41 to +2.19 | 0.766465
+down3_15_advance | quick | 17.80 | 17.95 | +0.15 | -0.23 to +0.53 | 1
+tie_60 | timeout | 21.95 | 22.35 | +0.40 | -0.72 to +1.52 | 1
+tie_30 | timeout | 33.85 | 34.10 | +0.25 | -0.50 to +1.00 | 1
+tie_20 | timeout | 40.65 | 39.65 | -1.00 | -1.65 to -0.35 | 0.523061
+down2_30 | timeout | 20.80 | 20.70 | -0.10 | -0.58 to +0.38 | 1
+down2_10 | timeout | 21.45 | 21.75 | +0.30 | +0.02 to +0.58 | 1
+down4_60_defend | timeout | 2.95 | 3.15 | +0.20 | -0.24 to +0.64 | 1
+down4_30_defend | timeout | 0.20 | 0.10 | -0.10 | -0.24 to +0.04 | 1
+down6_60_defend | timeout | 0.70 | 0.80 | +0.10 | -0.04 to +0.24 | 1
+down6_30_defend | timeout | 0.00 | 0.00 | +0.00 | +0.00 to +0.00 | 1
+down2_15_advance | timeout | 22.90 | 23.65 | +0.75 | +0.08 to +1.42 | 1
+down3_15_advance | timeout | 17.80 | 14.80 | -3.00 | -3.87 to -2.13 | 5.1529e-10
+
+All statistically significant corrected outcomes, including harms:
+combined down2_10 ot: 21.45% -> 26.10%; Holm p=2.97439e-09
+combined down2_10 avoidRegLoss: 29.40% -> 32.80%; Holm p=0.000745168
+combined down2_15_advance ot: 22.90% -> 25.65%; Holm p=0.00102747
+combined down3_15_advance ot: 17.80% -> 14.05%; Holm p=6.95161e-08
+hold tie_60 ot: 21.95% -> 26.75%; Holm p=1.52175e-05
+hold tie_30 ot: 33.85% -> 40.40%; Holm p=5.3311e-07
+hold tie_20 ot: 40.65% -> 62.30%; Holm p=5.57425e-39
+hold tie_20 avoidRegLoss: 79.85% -> 92.85%; Holm p=2.53592e-32
+hold down2_30 ot: 20.80% -> 26.50%; Holm p=3.40438e-07
+hold down3_15_advance ot: 17.80% -> 16.80%; Holm p=0.049062
+foul down2_30 avoidRegLoss: 36.80% -> 33.70%; Holm p=0.00191219
+quick tie_20 ot: 40.65% -> 42.25%; Holm p=0.0389863
+quick down2_30 ot: 20.80% -> 23.45%; Holm p=0.00054046
+quick down2_10 ot: 21.45% -> 25.30%; Holm p=1.02398e-06
+timeout down3_15_advance ot: 17.80% -> 14.80%; Holm p=5.1529e-10
+
+Bonus-state sensitivity:4 scenarios × 2,000 seeds × 2 arms = 16,000 additional endings. The baseline and combined arm begin already in the foul penalty. Separate evidence is included; exploratory comparisons are not used to claim a production benefit.
+Timeout advancement remains approximate: no explicit inbound coordinates and incomplete mandatory-timeout inventory. It cannot be promoted as a complete rules implementation merely because one fixture improves. Expanded fouling is not automatically beneficial; early fouls can trade defensive chances for opponent free throws.
+
+Final-minute possession timing
+The retained official NBA PBP sample has134 score-validated games; 52 were within 6 points at 60 seconds. Simulation:1,000 reset full games; 313 within 6 at 60 seconds. These are availability/repeated-fixture samples, not matched real-versus-sim leagues.
+Metric | Simulation | Real sample
+meanStartsFinal60 | 5.220447284345048 | 6.269230769230769
+completedDurationsN | 1321 | 259
+meanDuration | 10.900393641180921 | 9.17104247104247
+medianDuration | 10 | 7.2999999999999545
+tiedUnder24WithShot | 22 | 5
+tiedLastShotUnder4 | 15 | 5
+Completed possession duration by score state(seconds):
+tied | {'n': 78, 'mean': 13.6358974358974} | {'n': 22, 'mean': 14.095454545454546}
+leading | {'n': 542, 'mean': 11.87789667896679} | {'n': 106, 'mean': 9.945283018867922}
+trailing | {'n': 701, 'mean': 9.840228245363766} | {'n': 131, 'mean': 7.717557251908398}
+Game-cluster bootstrap95% intervals(5,000 resamples):
+{"real": {"nGames": 52, "startsCI95": [5.75, 6.788461538461538], "durationCI95": [8.37269015957447, 10.081248068542855]}, "simulation": {"nGames": 313, "startsCI95": [5.067012779552716, 5.373801916932908], "durationCI95": [10.564243902187956, 11.248719596736247]}}
+Definition: regulation final 60 seconds, games within 6 at 60. Count possessions starting in the window; duration uses completed positive-time possessions, excludes all period-boundary endings in both samples and ambiguous ownership changes. ORBs retain control, FTs consume no game-clock time, defensive rebounds and turnovers switch control. Real team rebounds/retained-ball exceptions can be imperfect;4 final-minute inferred ownership changes were excluded from duration estimates. 134 validated games are retained; 52 qualify for this timing comparison.
+Simulation possession starts include control retained through offensive rebounds. The comparison measures game-clock time, not real-world stoppage time. The timing gap is concentrated in leading/trailing possessions; tied durations are similar. It does not justify a universal clock-speed multiplier.
+The real sample has only 5 games tied at 60 seconds, 1 reaching OT (20%). Phase 10 has 154 such games, 33 reaching OT (21.43%). The previously cited18%was from an earlier baseline. This conditional statistic is not the full-season OT rate.
+Under 24 seconds, explicit hold logic is absent in Phase10. In the observed eligible shot sample, real 5/5 and simulation 15/22 first attempts occurred with<=4seconds left. Those small counts do not establish a precise real-world hold probability. The candidate explicitly reserves 4 seconds for the shot when tied and the shot clock covers the remaining period. It can still miss, turn over, foul or leave an opponent reply; a tie or winner is never forced.
+
+Promotion decision and limits
+{
+  "status": "Demonstrated improvement promoted; requested OT target not met",
+  "summary": "Promote hold-for-last-shot plus two-point shot preference in modern NBA games. NBA OT rises from 3.24% to 4.10%; mean margin changes from 13.15 to 13.13; the 20+ rate changes from 22.18% to 22.80%. The requested 4.5\u20135.5% OT target is NOT reached. WNBA and pre-2020 games retain Phase 10 behavior.",
+  "scope": "NBA/male league, season 2020 onward. Five-season calibration uses 2025 fictional NBA universes; this is not statistical calibration of every historical era.",
+  "preservationTolerancePassed": true,
+  "OTTargetMet": false,
+  "OTGainPairedSeedCI95": [
+    0.15659416315305097,
+    1.5669830726193066
+  ],
+  "rejectedArms": [
+    "Expanded/repeated intentional fouling: corrected adverse outcome and no broad benefit.",
+    "Timeout advance: no convincing corrected benefit, incomplete court/timeout representation.",
+    "Global/WNBA hold+quick deployment: five WNBA seasons show lowerOT and increased margins/blowouts."
+  ],
+  "acceptedMechanics": [
+    "When tied with more than 4 and at most 24 seconds left, and enough shot clock, wait until 4 seconds remain to initiate the final action. Ordinary shot, foul and turnover mechanics remain.",
+    "When down two within 30 seconds, inside-shot weight is multiplied by 1.3 and three-point weight by 0.7. This is shot preference, not an accuracy or clock-speed boost."
+  ],
+  "productionFiles": [
+    "dist/late-game.js",
+    "dist/attributes.js",
+    "dist/tendencies.js",
+    "dist/index.html"
+  ],
+  "schemaChanges": "None; transient possession context only. Existing completed games are unchanged.",
+  "limitations": [
+    "OT remains below 4.5\u20135.5%.",
+    "Final-minute possession starts remain lower and durations longer than the small real PBP sample. No universal clock-speed multiplier applied.",
+    "Margin preservation is within declared point-estimate tolerances, not statistical proof of equivalence.",
+    "Same retained five season seeds, not an independent holdout sample.",
+    "WNBA candidate rejected; its old engine remains."
+  ]
+}
+
+Verification
+Promoted source equivalence: 10 full NBA games exactly match the tested candidate. Scope checks: 20 full games across NBA 1997 and WNBA 1997/2006/2024 exactly match the unchanged baseline. No save-schema changes.
+Candidate timing-plan constraints: 1,800 combinations. Historical format smoke check: 50 full games acrossNBA 1997/2025, WNBA 1997/2006/2024. Score/box identities, chronological events, nonnegative stats, legal winners and accumulated minutes passed. These are format tests, not historical statistical calibration.
+The extra 2,000 tied-at-20 hold checks accounted for every initial possession: 1,566 field-goal attempts, 161 free-throw sequences, 273 turnovers, and zero unexplained no-outcome expirations. Two full-season workers were memory-terminated; their incomplete runs were discarded and their seeds rerun. The runner now treats signal exits as failures. No partial season enters the reported results.
+Completed baseline scores, boxes and summary records survive save/load under the candidate. Custom-city-photo hashes and unchanged production source files are checked separately. Existing completed games are not re-simulated.
+
+WNBA full-season regression results
+{
+  "phase9": {
+    "seeds": [
+      {
+        "seed": 101,
+        "n": 240,
+        "points": 82.56041666666667,
+        "margin": 12.129166666666666,
+        "blow20": 18.333333333333332,
+        "OT": 3.75
+      },
+      {
+        "seed": 102,
+        "n": 240,
+        "points": 84.14583333333333,
+        "margin": 10.725,
+        "blow20": 14.166666666666666,
+        "OT": 5.416666666666667
+      },
+      {
+        "seed": 103,
+        "n": 240,
+        "points": 84.53958333333334,
+        "margin": 10.4875,
+        "blow20": 14.166666666666666,
+        "OT": 2.9166666666666665
+      },
+      {
+        "seed": 104,
+        "n": 240,
+        "points": 83.00625,
+        "margin": 10.954166666666667,
+        "blow20": 17.083333333333332,
+        "OT": 5.416666666666667
+      },
+      {
+        "seed": 105,
+        "n": 240,
+        "points": 83.125,
+        "margin": 11.791666666666666,
+        "blow20": 15.416666666666668,
+        "OT": 2.5
+      }
+    ],
+    "means": {
+      "points": 83.47541666666666,
+      "margin": 11.2175,
+      "blow20": 15.833333333333334,
+      "OT": 4.0
+    }
+  },
+  "phase11hq": {
+    "seeds": [
+      {
+        "seed": 101,
+        "n": 240,
+        "points": 83.00208333333333,
+        "margin": 12.670833333333333,
+        "blow20": 20.833333333333336,
+        "OT": 3.75
+      },
+      {
+        "seed": 102,
+        "n": 240,
+        "points": 84.3375,
+        "margin": 10.808333333333334,
+        "blow20": 15.416666666666668,
+        "OT": 3.3333333333333335
+      },
+      {
+        "seed": 103,
+        "n": 240,
+        "points": 83.55,
+        "margin": 11.233333333333333,
+        "blow20": 14.166666666666666,
+        "OT": 3.75
+      },
+      {
+        "seed": 104,
+        "n": 240,
+        "points": 82.55208333333333,
+        "margin": 11.745833333333334,
+        "blow20": 19.583333333333332,
+        "OT": 2.5
+      },
+      {
+        "seed": 105,
+        "n": 240,
+        "points": 83.15833333333333,
+        "margin": 11.766666666666667,
+        "blow20": 17.083333333333332,
+        "OT": 4.583333333333333
+      }
+    ],
+    "means": {
+      "points": 83.32000000000001,
+      "margin": 11.645,
+      "blow20": 17.416666666666664,
+      "OT": 3.5833333333333335
+    }
+  }
+}
+
+Reproducibility
+Baseline source commit45924112bc23ea18cdb71d0f6ab1b8a9a9f639bb. Baseline late-game/attributes/tendencies snapshots in dev/phase11/baseline-dist. Candidate transforms expect baseline anchors; do not apply twice to promoted files.
+Synthetic:node dev/run-phase11-endings.cjs;node dev/run-phase11-bonus.cjs. FullNBA:node dev/run-phase11-seasons.cjs;node dev/run-phase11-seasons.cjs dev/phase11/hold-quick.cjs phase11hq. WNBA:node dev/run-phase11-wnba.cjs. Timing:node dev/phase11-timing-matches.cjs nba league 1000 607 production. Analysis scripts and raw outputs retained in dev/phase11 and dev/balance-audit.
+Official PBP source: https://stats.nba.com/stats/playbyplayv3?GameID=<ID>&StartPeriod=0&EndPeriod=0. Original game IDs and retrieval provenance retained in dev/phase6/reference-pbp and reference-pbp-fetch.json. No new invented reference data.

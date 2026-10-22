@@ -1,0 +1,72 @@
+{
+  "wnba": [
+    {
+      "season": 2022,
+      "games": 216,
+      "meanMargin": 11.148148148148149,
+      "blow20Pct": 14.351851851851851,
+      "within5Pct": 23.61111111111111,
+      "otPct": 5.092592592592593,
+      "teamMarginSD": 5.51626150091727,
+      "source": "dev/phase12/reference-gamelog-2022.json",
+      "sha256": "9f48fefd382a9525e0e94710f863c2652c0ff37f46d0f4b204ce52de29e2349e"
+    },
+    {
+      "season": 2023,
+      "games": 240,
+      "meanMargin": 11.670833333333333,
+      "blow20Pct": 16.25,
+      "within5Pct": 22.916666666666664,
+      "otPct": 4.166666666666666,
+      "teamMarginSD": 5.794708433850087,
+      "source": "dev/phase4/real-wnba-2023.json",
+      "sha256": "2a064de40da88c65227ab4c27035671574621c04e68f168a8c8e315f929b8e6d"
+    },
+    {
+      "season": 2024,
+      "games": 240,
+      "meanMargin": 10.816666666666666,
+      "blow20Pct": 9.166666666666666,
+      "within5Pct": 25.416666666666664,
+      "otPct": 3.3333333333333335,
+      "teamMarginSD": 5.717990614426248,
+      "source": "dev/phase3/real-wnba-2024.json",
+      "sha256": "35a6ebf2220591f2839ce9710d88248f8d7ebba8fd23926190503694455697d8"
+    },
+    {
+      "season": 2025,
+      "games": 286,
+      "meanMargin": 12.286713286713287,
+      "blow20Pct": 18.88111888111888,
+      "within5Pct": 24.475524475524477,
+      "otPct": 1.7482517482517483,
+      "teamMarginSD": 5.979735061435304,
+      "source": "dev/phase12/reference-gamelog-2025.json",
+      "sha256": "98646e58e9334d062726ffd543c9328c078daafe9af98ca5eb6b4c09c79113ef"
+    }
+  ],
+  "nba": [
+    {
+      "season": 2024,
+      "games": 1230,
+      "meanMargin": 12.583739837398374,
+      "blow20Pct": 19.10569105691057,
+      "within5Pct": 23.333333333333332,
+      "otPct": 4.796747967479675,
+      "teamMarginSD": 5.464091494076713,
+      "source": "dev/phase4/real-nba-2023-24.json",
+      "sha256": "f8e8154cc163c89641c78131cd2a77329e5b4eefae2b60c99c2bc9d4c3c4b0f4"
+    },
+    {
+      "season": 2025,
+      "games": 1230,
+      "meanMargin": 12.747967479674797,
+      "blow20Pct": 21.056910569105693,
+      "within5Pct": 25.121951219512194,
+      "otPct": 4.878048780487805,
+      "teamMarginSD": 5.893381480158248,
+      "source": "dev/phase3/real-nba-2025.json",
+      "sha256": "02279acf16f817b1baa6b9381723ea956931d2d7ec3b54cba8228ddd3173e5f1"
+    }
+  ]
+}

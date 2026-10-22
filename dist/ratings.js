@@ -1,0 +1,3 @@
+function ratingTier(value){return value>=90?['elite','Elite']:value>=80?['great','Great']:value>=70?['good','Good / Average']:value>=60?['below','Below Average']:['poor','Poor']}
+function ratingMarkup(value){const [key,label]=ratingTier(value);return `<span class="rating-chip rating-${key}" title="${label}" aria-label="${value}, ${label}">${value}</span>`}
+function ratingLegend(){return `<div class="rating-legend" aria-label="Rating tiers">${[[95,'90–99 Elite'],[85,'80–89 Great'],[75,'70–79 Good'],[65,'60–69 Below Average'],[50,'0–59 Poor']].map(([n,label])=>`<span class="rating-chip rating-${ratingTier(n)[0]}">${label}</span>`).join('')}</div>`}

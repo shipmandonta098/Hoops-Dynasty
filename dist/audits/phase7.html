@@ -1,0 +1,138 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hoops Dynasty score-state update</title><style>body{background:#111820;color:#e7ebf0;font:15px/1.6 system-ui;margin:24px}main{max-width:1200px;margin:auto}a{color:#ffb66b}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:14px/1.6 monospace}</style><main><p><a href="phase7.txt" download>Download TXT</a> · <a href="phase7.zip" download>Download report ZIP</a></p><pre># Hoops Dynasty — Score-state and late-game update
+21 October 2026. Baseline: published Phase 6 / unchanged Phase 5 engine, commit 87c30bf1d91881cb5eae09e0f0447089137bb3a4. This is a targeted coaching-policy implementation and paired evaluation, not a new broad engine rewrite.
+
+## Implemented behavior
+1. Lead protection: inside the final two minutes, non-transition offense with a lead spends more setup time, reserving at least nine shot-clock seconds for the existing passing/shot sequence. Setup is capped at 15 seconds. Fast-break opportunities remain available. If the remaining game clock is shorter than the shot clock, the existing hold/foul behavior remains. No field-goal or free-throw probability changes.
+2. Trailing offense: urgency extends to a 12-point deficit in the last minute. A team down exactly three seeks a three with 15 seconds or less, rather than 12; multi-possession deficits use three-point urgency with six seconds or less. Short-clock attempts respect the actual shot clock instead of always spending up to three seconds. Ordinary contest, turnover, foul and accuracy resolvers remain in use.
+3. Rotation response: the old policy immediately excluded starters on BOTH teams at a 20-point margin from the beginning of Q4. The revised settled-game thresholds are 30 points with six minutes left, 24 with four, and 18 with two. A team leading by 20 with eight minutes left may prioritize reserves for workload protection. A team down 8–26 during the final quarter of regulation time can prioritize better available players while they have at least 75 energy, remain below the existing stint limit, and have not exceeded their target minutes by three. Normal injury, ejection, foul and workload eligibility still applies.
+4. Substitution explanations identify “chasing the game” and “protecting workload with a large lead” in the existing game logs. These policies reverse when the score context changes. They do not alter stored player ratings, force a winner, cap scores, or apply a trailing-team accuracy boost.
+These thresholds are explicit simulation assumptions. They are not presented as measured NBA/WNBA coaching frequencies. The same clock-based policies operate within each league’s existing game length, shot clock and foul rules. Historical format compatibility is tested separately from historical statistical calibration.
+
+## What the requested targets actually measure
+Quarter stacking = Var(Q1+Q2+Q3+Q4 margins) − sum Var(individual quarter margins) = twice the sum of the six cross-quarter covariances. Units are points squared. Overtime is excluded from this statistic. Positive values indicate reinforcement across quarters; negative values indicate partial offset. This identity is descriptive, not causal.
+The retained full NBA baseline has +42.98 points²; the available official NBA sample has −44.18. However, the original 160-game identical-roster NBA fixture was already −25.70. Positive league stacking cannot therefore be attributed solely to the mirror fixture’s randomness. Different team-quality mixtures matter. Mirror games also retain stochastic possessions, fatigue, fouls and rotations; they do not isolate shooting luck alone.
+
+| Official quarter sample | Games | Stacking | Bootstrap 95% interval |
+| --- | --- | --- | --- |
+| NBA | 136 | -44.18 | -91.66 to 3.09 |
+| WNBA | 62 | -64.74 | -112.87 to -11.92 |
+
+Reference coverage is the same availability-biased 136 NBA / 62 WNBA subset from Phase 6; the WNBA supplement overrepresents Washington. These are diagnostic comparison points, not fixed constants to force the engine to match. The complete-season final-score references are separate samples (1,230 NBA and 240 WNBA games).
+
+## Paired mirror-match and roster-world results
+
+### NBA mirror matches: 400 per version
+
+| Metric | Baseline | Revised |
+| --- | --- | --- |
+| Points/team | 111.99 | 111.12 |
+| Mean margin | 12.94 | 11.97 |
+| Within five % | 23.75 | 25.50 |
+| Within ten % | 46.00 | 52.50 |
+| 20+ % | 22.25 | 19.25 |
+| 30+ % | 4.50 | 3.75 |
+| 40+ % | 1.25 | 1.25 |
+| OT % | 2.25 | 2.75 |
+| Three-point % | 32.51 | 32.42 |
+| Quarter stacking, points² | -23.15 | -49.49 |
+| Regulation margin variance | 247.09 | 215.42 |
+
+Paired mean-margin change: -0.97 points; bootstrap 95% interval [-1.73, -0.18]. The same trial seeds and starting fixtures are used in both versions, though changed decision paths consume RNG differently.
+
+| Evaluation subset | Games/version | Mean margin before → after | Stacking before → after | Paired margin-change 95% interval |
+| --- | --- | --- | --- | --- |
+| mirror-heldout-160plus | 240 | 13.22 → 12.29 | -21.24 → -41.48 | [-1.99, 0.16] |
+| league-303 | 160 | 13.53 → 13.46 | 14.51 → 13.00 | [-1.32, 1.26] |
+| league-304 | 160 | 14.94 → 13.56 | 25.69 → -1.98 | [-2.76, -0.06] |
+
+
+### WNBA mirror matches: 400 per version
+
+| Metric | Baseline | Revised |
+| --- | --- | --- |
+| Points/team | 86.29 | 85.35 |
+| Mean margin | 11.54 | 11.14 |
+| Within five % | 26.25 | 29.00 |
+| Within ten % | 55.50 | 59.50 |
+| 20+ % | 17.00 | 15.25 |
+| 30+ % | 3.75 | 4.75 |
+| 40+ % | 0.00 | 0.50 |
+| OT % | 3.75 | 5.00 |
+| Three-point % | 31.37 | 31.18 |
+| Quarter stacking, points² | -21.09 | -17.24 |
+| Regulation margin variance | 193.09 | 192.11 |
+
+Paired mean-margin change: -0.40 points; bootstrap 95% interval [-1.08, 0.26]. The same trial seeds and starting fixtures are used in both versions, though changed decision paths consume RNG differently.
+
+| Evaluation subset | Games/version | Mean margin before → after | Stacking before → after | Paired margin-change 95% interval |
+| --- | --- | --- | --- | --- |
+| mirror-heldout-160plus | 240 | 11.59 → 10.96 | -15.69 → -23.69 | [-1.5, 0.26] |
+| league-303 | 160 | 13.77 → 12.20 | 28.30 → -14.80 | [-2.88, -0.27] |
+| league-304 | 160 | 12.69 → 10.87 | 15.98 → -39.25 | [-2.79, -0.86] |
+
+Mirror trials 160–399 were not part of Phase 6’s original 160-game sample and provide an additional check. Roster worlds 303–304 remain separate varied-roster tests. No parameters were refitted to individual game results. Bootstrap intervals resample paired trial seeds within these fixtures and do not capture uncertainty across every possible roster universe.
+
+## Full-season validation: two NBA / four WNBA seeds
+Two complete NBA regular seasons (2,460 games) and four complete WNBA regular seasons (960 games), NBA seeds 101–102 and WNBA seeds 101–104, are compared with those exact retained baseline seasons. This is a six-season validation, NOT a repeat of the prior twenty-season audit. Career progression can diverge after changed game outcomes, so these are paired season starts, not identical random draws for every subsequent game. These small season samples are insufficient for a reliable season-level confidence interval; seed results are shown.
+
+### NBA
+
+| Metric | Same-seed baseline | Revised |
+| --- | --- | --- |
+| Points/team | 112.83 | 112.39 |
+| Mean margin | 14.79 | 13.84 |
+| Within five % | 20.00 | 23.17 |
+| Within ten % | 43.62 | 46.46 |
+| 20+ % | 28.70 | 24.39 |
+| 30+ % | 9.88 | 8.90 |
+| 40+ % | 2.89 | 2.36 |
+| OT % | 1.79 | 3.13 |
+| Three-point % | 33.72 | 33.66 |
+| Quarter stacking, points² | 43.71 | 16.71 |
+| Regulation margin variance | 325.78 | 291.51 |
+
+
+| Seed | Games | Points before → after | Mean margin before → after | 20+ before → after | Stacking before → after |
+| --- | --- | --- | --- | --- | --- |
+| 101 | 1230 | 112.61 → 112.03 | 14.85 → 14.03 | 28.94 → 24.80 | 51.22 → 14.49 |
+| 102 | 1230 | 113.04 → 112.75 | 14.74 → 13.65 | 28.46 → 23.98 | 36.13 → 18.80 |
+
+
+### WNBA
+
+| Metric | Same-seed baseline | Revised |
+| --- | --- | --- |
+| Points/team | 85.55 | 84.48 |
+| Mean margin | 12.81 | 12.31 |
+| Within five % | 22.40 | 26.25 |
+| Within ten % | 49.79 | 53.96 |
+| 20+ % | 20.31 | 18.44 |
+| 30+ % | 5.83 | 6.67 |
+| 40+ % | 1.15 | 0.94 |
+| OT % | 2.71 | 3.33 |
+| Three-point % | 30.91 | 31.30 |
+| Quarter stacking, points² | 14.62 | 12.39 |
+| Regulation margin variance | 232.47 | 233.08 |
+
+
+| Seed | Games | Points before → after | Mean margin before → after | 20+ before → after | Stacking before → after |
+| --- | --- | --- | --- | --- | --- |
+| 101 | 240 | 84.72 → 83.54 | 12.65 → 12.49 | 20.83 → 18.75 | 14.75 → 30.71 |
+| 102 | 240 | 86.09 → 84.96 | 12.05 → 12.33 | 18.33 → 17.50 | -11.69 → 18.67 |
+| 103 | 240 | 85.87 → 85.00 | 13.00 → 12.28 | 22.08 → 20.83 | 18.06 → -0.77 |
+| 104 | 240 | 85.51 → 84.43 | 13.54 → 12.14 | 20.00 → 16.67 | 37.70 → 1.88 |
+
+
+## Interpretation and remaining limits
+Observed outcome: NBA mean margin fell 14.79 → 13.84, 20+ margins fell 28.70% → 24.39%, and quarter stacking fell +43.71 → +16.71. NBA mirror mean margin fell 12.94 → 11.97 and stacking moved −23.15 → −49.49. The full-league negative-stacking target remains unmet. WNBA mean margin fell 12.81 → 12.31 and within-ten games rose 49.79% → 53.96%, but 30+ margins increased 5.83% → 6.67%, regulation-margin variance was essentially unchanged (232.47 → 233.08), and mirror stacking did not improve across all 400 trials. WNBA evidence is mixed, not a solved variance problem. No further tuning was justified solely to hit one covariance number.
+The changes address observable strategy weaknesses. They are not a calibrated universal solution for blowouts. The mirror and full-league results must be assessed separately: a mirror improvement does not prove the same effect across differing rosters. The first three quarters of a reset matchup are intentionally untouched by these late-game policies; early efficiency separation remains an unresolved issue. The two components were tested together, so their individual causal contributions are not estimated.
+The numerical quarter-stacking target was not enforced with score adjustments or a shared random multiplier. Wide real-sample uncertainty, roster-mixture differences and only two NBA/four WNBA season seeds limit conclusions. No claim is made that every league or historical era is now statistically balanced.
+
+## Verification and compatibility
+Passed: 2,880 baseline/candidate matchup games with score/box/minutes identities; 3,420 revised full-season games; 1,680 synthetic ending cases across NBA/WNBA; 150 full-length historical-format games across NBA 1997/2025 and WNBA 1997/2006/2024; save/load preservation of completed game records; Player Feat regression tests. Synthetic ending fixtures deliberately inject starting scores and are not counted as completed real-season games.
+Policy assertions cover lead protection, urgency, three-point decisions, regulation/OT boundaries and foul guards. Historical tests check legal winners, nonnegative counts, scoring identities, minutes and chronological events. Existing completed game results are not recalculated. The baseline hash manifest verifies that production files other than the two intended modules, including city photographs, remain unchanged.
+
+## Files and reproduction
+Production: dist/late-game.js (lateGameTimingPlan and final-shot timing); dist/rotations.js (rotationScoreState and refreshGameRotation). No schema changes. Audit: dev/phase7/, dev/phase7-matchups.cjs, dev/phase7-analysis.py, dev/run-phase7.cjs, dev/audit-phase7-season.cjs, dev/test-phase7-*.cjs, dev/phase7-historical.cjs, dev/verify-phase7.py and dev/report-phase7.py. Baseline copies of the three inspected modules are retained under dev/phase7/baseline-dist/.
+Reproduce from project root: node dev/run-phase7.cjs; node dev/run-phase7.cjs season; node dev/test-phase7-policy.cjs; node dev/test-phase7-endings.cjs nba; node dev/test-phase7-endings.cjs wnba; node dev/phase7-historical.cjs; node dev/test-phase7-save.cjs; node dev/test-phase7-feats.cjs; python dev/phase7-analysis.py; python dev/verify-phase7.py; python dev/report-phase7.py. Completed matchup/season outputs are reused. Preserve archived results before deliberately rerunning.
+</pre></main></html>

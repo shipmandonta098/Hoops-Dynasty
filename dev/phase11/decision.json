@@ -1,0 +1,34 @@
+{
+  "status": "Demonstrated improvement promoted; requested OT target not met",
+  "summary": "Promote hold-for-last-shot plus two-point shot preference in modern NBA games. NBA OT rises from 3.24% to 4.10%; mean margin changes from 13.15 to 13.13; the 20+ rate changes from 22.18% to 22.80%. The requested 4.5\u20135.5% OT target is NOT reached. WNBA and pre-2020 games retain Phase 10 behavior.",
+  "scope": "NBA/male league, season 2020 onward. Five-season calibration uses 2025 fictional NBA universes; this is not statistical calibration of every historical era.",
+  "preservationTolerancePassed": true,
+  "OTTargetMet": false,
+  "OTGainPairedSeedCI95": [
+    0.15659416315305097,
+    1.5669830726193066
+  ],
+  "rejectedArms": [
+    "Expanded/repeated intentional fouling: corrected adverse outcome and no broad benefit.",
+    "Timeout advance: no convincing corrected benefit, incomplete court/timeout representation.",
+    "Global/WNBA hold+quick deployment: five WNBA seasons show lowerOT and increased margins/blowouts."
+  ],
+  "acceptedMechanics": [
+    "When tied with more than 4 and at most 24 seconds left, and enough shot clock, wait until 4 seconds remain to initiate the final action. Ordinary shot, foul and turnover mechanics remain.",
+    "When down two within 30 seconds, inside-shot weight is multiplied by 1.3 and three-point weight by 0.7. This is shot preference, not an accuracy or clock-speed boost."
+  ],
+  "productionFiles": [
+    "dist/late-game.js",
+    "dist/attributes.js",
+    "dist/tendencies.js",
+    "dist/index.html"
+  ],
+  "schemaChanges": "None; transient possession context only. Existing completed games are unchanged.",
+  "limitations": [
+    "OT remains below 4.5\u20135.5%.",
+    "Final-minute possession starts remain lower and durations longer than the small real PBP sample. No universal clock-speed multiplier applied.",
+    "Margin preservation is within declared point-estimate tolerances, not statistical proof of equivalence.",
+    "Same retained five season seeds, not an independent holdout sample.",
+    "WNBA candidate rejected; its old engine remains."
+  ]
+}

@@ -1,0 +1,487 @@
+{
+  "result": "PASS",
+  "mode": "candidate",
+  "controls": [
+    {
+      "name": "matched layup: baseline cannot block; candidate blocks → DREB / ownership and token",
+      "status": "PASS",
+      "baseline": {
+        "rows": [
+          {
+            "fga": 1,
+            "fgm": 1,
+            "pts": 2,
+            "reb": 0,
+            "orb": 0,
+            "drb": 0,
+            "blk": 0
+          },
+          {
+            "fga": 0,
+            "fgm": 0,
+            "pts": 0,
+            "reb": 0,
+            "orb": 0,
+            "drb": 0,
+            "blk": 0
+          }
+        ],
+        "scores": [
+          2,
+          0
+        ],
+        "draws": 3,
+        "recursive": 0,
+        "recursion": [],
+        "terminalNextSide": 1,
+        "transitionTeam": null,
+        "logs": [
+          {
+            "side": 0,
+            "type": "made",
+            "player": "Hugo Bernard",
+            "layup": true,
+            "shot": "Putback Layup"
+          }
+        ],
+        "outcomes": [
+          {
+            "shot": {
+              "kind": "inside"
+            },
+            "made": true
+          }
+        ],
+        "phase": "made"
+      },
+      "candidate": {
+        "rows": [
+          {
+            "fga": 1,
+            "fgm": 0,
+            "pts": 0,
+            "reb": 0,
+            "orb": 0,
+            "drb": 0,
+            "blk": 0
+          },
+          {
+            "fga": 0,
+            "fgm": 0,
+            "pts": 0,
+            "reb": 1,
+            "orb": 0,
+            "drb": 1,
+            "blk": 1
+          }
+        ],
+        "scores": [
+          0,
+          0
+        ],
+        "draws": 4,
+        "recursive": 0,
+        "recursion": [],
+        "terminalNextSide": 1,
+        "transitionTeam": 1,
+        "logs": [
+          {
+            "side": 0,
+            "type": "block",
+            "player": "Hugo Bernard",
+            "defender": "Marcus King",
+            "blocks": 1,
+            "layup": true,
+            "shot": "Putback Layup"
+          }
+        ],
+        "outcomes": [
+          {
+            "shot": {
+              "kind": "inside"
+            },
+            "made": false
+          }
+        ],
+        "phase": "rebound"
+      }
+    },
+    {
+      "name": "matched layup: baseline cannot block; candidate blocks → OREB / existing recursion",
+      "status": "PASS",
+      "baseline": {
+        "rows": [
+          {
+            "fga": 1,
+            "fgm": 1,
+            "pts": 2,
+            "reb": 0,
+            "orb": 0,
+            "drb": 0,
+            "blk": 0
+          },
+          {
+            "fga": 0,
+            "fgm": 0,
+            "pts": 0,
+            "reb": 0,
+            "orb": 0,
+            "drb": 0,
+            "blk": 0
+          }
+        ],
+        "scores": [
+          2,
+          0
+        ],
+        "draws": 3,
+        "recursive": 0,
+        "recursion": [],
+        "terminalNextSide": 1,
+        "transitionTeam": null,
+        "logs": [
+          {
+            "side": 0,
+            "type": "made",
+            "player": "Hugo Bernard",
+            "layup": true,
+            "shot": "Putback Layup"
+          }
+        ],
+        "outcomes": [
+          {
+            "shot": {
+              "kind": "inside"
+            },
+            "made": true
+          }
+        ],
+        "phase": "made"
+      },
+      "candidate": {
+        "rows": [
+          {
+            "fga": 1,
+            "fgm": 0,
+            "pts": 0,
+            "reb": 1,
+            "orb": 1,
+            "drb": 0,
+            "blk": 0
+          },
+          {
+            "fga": 0,
+            "fgm": 0,
+            "pts": 0,
+            "reb": 0,
+            "orb": 0,
+            "drb": 0,
+            "blk": 1
+          }
+        ],
+        "scores": [
+          0,
+          0
+        ],
+        "draws": 4,
+        "recursive": 1,
+        "recursion": [
+          {
+            "side": 0,
+            "clock": 14,
+            "extraBoards": 2
+          }
+        ],
+        "terminalNextSide": null,
+        "transitionTeam": null,
+        "logs": [
+          {
+            "side": 0,
+            "type": "block",
+            "player": "Hugo Bernard",
+            "defender": "Marcus King",
+            "blocks": 1,
+            "layup": true,
+            "shot": "Putback Layup"
+          }
+        ],
+        "outcomes": [
+          {
+            "shot": {
+              "kind": "inside"
+            },
+            "made": false
+          }
+        ],
+        "phase": "decision"
+      }
+    },
+    {
+      "name": "putback dunk unchanged: blocked / offensive board false",
+      "status": "PASS",
+      "result": {
+        "rows": [
+          {
+            "fga": 1,
+            "fgm": 0,
+            "pts": 0,
+            "reb": 0,
+            "orb": 0,
+            "drb": 0,
+            "blk": 0
+          },
+          {
+            "fga": 0,
+            "fgm": 0,
+            "pts": 0,
+            "reb": 1,
+            "orb": 0,
+            "drb": 1,
+            "blk": 1
+          }
+        ],
+        "scores": [
+          0,
+          0
+        ],
+        "draws": 3,
+        "recursive": 0,
+        "recursion": [],
+        "terminalNextSide": 1,
+        "transitionTeam": 1,
+        "logs": [
+          {
+            "side": 0,
+            "type": "block",
+            "player": "Hugo Bernard",
+            "defender": "Marcus King",
+            "blocks": 1,
+            "layup": true,
+            "shot": "Putback Dunk"
+          }
+        ],
+        "outcomes": [
+          {
+            "shot": {
+              "kind": "inside"
+            },
+            "made": false
+          }
+        ],
+        "phase": "rebound"
+      }
+    },
+    {
+      "name": "putback dunk unchanged: made / offensive board false",
+      "status": "PASS",
+      "result": {
+        "rows": [
+          {
+            "fga": 1,
+            "fgm": 1,
+            "pts": 2,
+            "reb": 0,
+            "orb": 0,
+            "drb": 0,
+            "blk": 0
+          },
+          {
+            "fga": 0,
+            "fgm": 0,
+            "pts": 0,
+            "reb": 0,
+            "orb": 0,
+            "drb": 0,
+            "blk": 0
+          }
+        ],
+        "scores": [
+          2,
+          0
+        ],
+        "draws": 4,
+        "recursive": 0,
+        "recursion": [],
+        "terminalNextSide": 1,
+        "transitionTeam": null,
+        "logs": [
+          {
+            "side": 0,
+            "type": "made",
+            "player": "Hugo Bernard",
+            "layup": true,
+            "shot": "Putback Dunk"
+          }
+        ],
+        "outcomes": [
+          {
+            "shot": {
+              "kind": "inside"
+            },
+            "made": true
+          }
+        ],
+        "phase": "made"
+      }
+    },
+    {
+      "name": "putback dunk unchanged: blocked / offensive board true",
+      "status": "PASS",
+      "result": {
+        "rows": [
+          {
+            "fga": 1,
+            "fgm": 0,
+            "pts": 0,
+            "reb": 1,
+            "orb": 1,
+            "drb": 0,
+            "blk": 0
+          },
+          {
+            "fga": 0,
+            "fgm": 0,
+            "pts": 0,
+            "reb": 0,
+            "orb": 0,
+            "drb": 0,
+            "blk": 1
+          }
+        ],
+        "scores": [
+          0,
+          0
+        ],
+        "draws": 3,
+        "recursive": 1,
+        "recursion": [
+          {
+            "side": 0,
+            "clock": 14,
+            "extraBoards": 2
+          }
+        ],
+        "terminalNextSide": null,
+        "transitionTeam": null,
+        "logs": [
+          {
+            "side": 0,
+            "type": "block",
+            "player": "Hugo Bernard",
+            "defender": "Marcus King",
+            "blocks": 1,
+            "layup": true,
+            "shot": "Putback Dunk"
+          }
+        ],
+        "outcomes": [
+          {
+            "shot": {
+              "kind": "inside"
+            },
+            "made": false
+          }
+        ],
+        "phase": "decision"
+      }
+    },
+    {
+      "name": "putback dunk unchanged: made / offensive board true",
+      "status": "PASS",
+      "result": {
+        "rows": [
+          {
+            "fga": 1,
+            "fgm": 1,
+            "pts": 2,
+            "reb": 0,
+            "orb": 0,
+            "drb": 0,
+            "blk": 0
+          },
+          {
+            "fga": 0,
+            "fgm": 0,
+            "pts": 0,
+            "reb": 0,
+            "orb": 0,
+            "drb": 0,
+            "blk": 0
+          }
+        ],
+        "scores": [
+          2,
+          0
+        ],
+        "draws": 4,
+        "recursive": 0,
+        "recursion": [],
+        "terminalNextSide": 1,
+        "transitionTeam": null,
+        "logs": [
+          {
+            "side": 0,
+            "type": "made",
+            "player": "Hugo Bernard",
+            "layup": true,
+            "shot": "Putback Dunk"
+          }
+        ],
+        "outcomes": [
+          {
+            "shot": {
+              "kind": "inside"
+            },
+            "made": true
+          }
+        ],
+        "phase": "made"
+      }
+    },
+    {
+      "name": "primary layup block formula and decisions: 9 matched controls",
+      "status": "PASS"
+    },
+    {
+      "name": "putback selection can decline before any new block roll",
+      "status": "PASS"
+    },
+    {
+      "name": "100 matched actual rebound draws, including OREB disabled",
+      "status": "PASS"
+    },
+    {
+      "name": "whole game with putback selection disabled: exact result + state parity",
+      "status": "PASS"
+    }
+  ],
+  "defensiveDifferentiation": [
+    {
+      "blockRating": 60,
+      "tendency": 0.5,
+      "conditional": 0.086,
+      "theoretical": 0.043,
+      "trials": 10000,
+      "blocks": 433,
+      "observed": 0.0433
+    },
+    {
+      "blockRating": 75,
+      "tendency": 0.5,
+      "conditional": 0.095,
+      "theoretical": 0.0475,
+      "trials": 10000,
+      "blocks": 474,
+      "observed": 0.0474
+    },
+    {
+      "blockRating": 90,
+      "tendency": 0.5,
+      "conditional": 0.104,
+      "theoretical": 0.052,
+      "trials": 10000,
+      "blocks": 517,
+      "observed": 0.0517
+    }
+  ]
+}

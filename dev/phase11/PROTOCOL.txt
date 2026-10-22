@@ -1,0 +1,10 @@
+Phase 11 OT audit — prospective decisions
+Production baseline: Phase10 commit45924112bc23ea18cdb71d0f6ab1b8a9a9f639bb.
+Synthetic arms: production, foul, quick, timeout, combined, hold.
+Each scenario: seeds70000–71999, 2000 samples, paired across arms. Half lower three-point skill, as prior fixtures. Same original state; synthetic scores explicitly not full-game records.
+Outcomes: OT, final win, avoid regulation defeat. Paired discordant-outcome exact binomial test, paired difference CI; Holm correction across completed scenario/arm/outcome comparisons. Final fixed family includes all planned comparisons; interim p values are exploratory only.
+No promotion based solely on increased OT. Favor legitimate strategy improvement, assess regulation wins and losses, timing legality, and adverse scenarios.
+Full-season acceptance: NBA seeds101–105, 6150 games. OT target4.5–5.5%; compare mean margin to Phase10 13.1524 and20+22.1789%. Practical preservation tolerances: mean +/-0.25point,20+ +/-1percentage point, with paired seed variation reported. These are declared practical bounds, not proof of equivalence. Report failure rather than manipulate scores to pass.
+Real timing: retained official NBA PBP134 score-validated games; subset within6 at60seconds. Reconstruct control changes from scoring/free throws, rebounds,turnovers; report ambiguous events and censored intervals. Simulation compares actual possession starts and elapsed game-clock time. No wall-clock stoppage time.
+Hold: tied, shot clock >= remaining, remaining<=24 and>4; initiate final shot with4seconds left. No accuracy change. Test against existing no-explicit-tie-hold behavior.
+All old production modules/photos/records retained unless a tested arm qualifies.

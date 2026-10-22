@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "checks": [
+    "real Chromium database creation",
+    "new career",
+    "normal Advance Day",
+    "standings and box scores",
+    "reload exact scores",
+    "roster/player modal",
+    "schedule/standings/stats/history/draft navigation",
+    "complete backup/import separate slot"
+  ],
+  "day": {
+    "day": 1,
+    "games": 3,
+    "standings": 3,
+    "scores": [
+      [
+        128,
+        116
+      ],
+      [
+        109,
+        148
+      ],
+      [
+        122,
+        150
+      ]
+    ]
+  },
+  "storage": {
+    "database": "hoops-dynasty-careers",
+    "version": 2,
+    "estimate": {
+      "supported": true,
+      "usage": 588994,
+      "quota": 661573424,
+      "percentage": 0.0890292715264814
+    },
+    "persistence": {
+      "status": "denied"
+    }
+  },
+  "errors": []
+}

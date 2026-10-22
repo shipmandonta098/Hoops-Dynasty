@@ -1,0 +1,242 @@
+[
+  {
+    "league": "nba",
+    "id": "0022400001",
+    "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0022400001.json",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400065",
+    "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0022400065.json",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400130",
+    "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0022400130.json",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400195",
+    "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0022400195.json",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400259",
+    "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0022400259.json",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400324",
+    "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0022400324.json",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400389",
+    "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0022400389.json",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400453",
+    "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0022400453.json",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400518",
+    "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0022400518.json",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400583",
+    "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0022400583.json",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400647",
+    "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0022400647.json",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400712",
+    "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0022400712.json",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400777",
+    "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0022400777.json",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400841",
+    "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0022400841.json",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400906",
+    "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0022400906.json",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400971",
+    "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0022400971.json",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022401035",
+    "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0022401035.json",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022401100",
+    "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0022401100.json",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022401165",
+    "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0022401165.json",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022401230",
+    "url": "https://cdn.nba.com/static/json/liveData/playbyplay/playbyplay_0022401230.json",
+    "ok": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400001",
+    "url": "https://cdn.wnba.com/static/json/liveData/playbyplay/playbyplay_1022400001.json",
+    "ok": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400013",
+    "url": "https://cdn.wnba.com/static/json/liveData/playbyplay/playbyplay_1022400013.json",
+    "ok": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400026",
+    "url": "https://cdn.wnba.com/static/json/liveData/playbyplay/playbyplay_1022400026.json",
+    "ok": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400038",
+    "url": "https://cdn.wnba.com/static/json/liveData/playbyplay/playbyplay_1022400038.json",
+    "ok": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400051",
+    "url": "https://cdn.wnba.com/static/json/liveData/playbyplay/playbyplay_1022400051.json",
+    "ok": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400063",
+    "url": "https://cdn.wnba.com/static/json/liveData/playbyplay/playbyplay_1022400063.json",
+    "ok": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400076",
+    "url": "https://cdn.wnba.com/static/json/liveData/playbyplay/playbyplay_1022400076.json",
+    "ok": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400089",
+    "url": "https://cdn.wnba.com/static/json/liveData/playbyplay/playbyplay_1022400089.json",
+    "ok": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400101",
+    "url": "https://cdn.wnba.com/static/json/liveData/playbyplay/playbyplay_1022400101.json",
+    "ok": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400114",
+    "url": "https://cdn.wnba.com/static/json/liveData/playbyplay/playbyplay_1022400114.json",
+    "ok": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400126",
+    "url": "https://cdn.wnba.com/static/json/liveData/playbyplay/playbyplay_1022400126.json",
+    "ok": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400139",
+    "url": "https://cdn.wnba.com/static/json/liveData/playbyplay/playbyplay_1022400139.json",
+    "ok": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400151",
+    "url": "https://cdn.wnba.com/static/json/liveData/playbyplay/playbyplay_1022400151.json",
+    "ok": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400164",
+    "url": "https://cdn.wnba.com/static/json/liveData/playbyplay/playbyplay_1022400164.json",
+    "ok": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400177",
+    "url": "https://cdn.wnba.com/static/json/liveData/playbyplay/playbyplay_1022400177.json",
+    "ok": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400189",
+    "url": "https://cdn.wnba.com/static/json/liveData/playbyplay/playbyplay_1022400189.json",
+    "ok": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400202",
+    "url": "https://cdn.wnba.com/static/json/liveData/playbyplay/playbyplay_1022400202.json",
+    "ok": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400214",
+    "url": "https://cdn.wnba.com/static/json/liveData/playbyplay/playbyplay_1022400214.json",
+    "ok": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400227",
+    "url": "https://cdn.wnba.com/static/json/liveData/playbyplay/playbyplay_1022400227.json",
+    "ok": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400240",
+    "url": "https://cdn.wnba.com/static/json/liveData/playbyplay/playbyplay_1022400240.json",
+    "ok": true
+  }
+]

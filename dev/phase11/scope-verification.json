@@ -1,0 +1,26 @@
+[
+  {
+    "league": "nba",
+    "year": 1997,
+    "games": 5,
+    "identical": true
+  },
+  {
+    "league": "wnba",
+    "year": 1997,
+    "games": 5,
+    "identical": true
+  },
+  {
+    "league": "wnba",
+    "year": 2006,
+    "games": 5,
+    "identical": true
+  },
+  {
+    "league": "wnba",
+    "year": 2024,
+    "games": 5,
+    "identical": true
+  }
+]

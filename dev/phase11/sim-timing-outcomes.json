@@ -1,0 +1,14 @@
+{
+  "fieldGoalOrRebound": {
+    "n": 765,
+    "meanSeconds": 12.240993464052286
+  },
+  "freeThrow": {
+    "n": 385,
+    "meanSeconds": 6.452103896103894
+  },
+  "turnover": {
+    "n": 171,
+    "meanSeconds": 14.91812865497076
+  }
+}

@@ -1,0 +1,1355 @@
+{
+  "matchedPhase7Seeds": [
+    {
+      "seed": 101,
+      "phase7": {
+        "teams": 30,
+        "winPctSD_pp": 15.61102637107877,
+        "minPct": 21.951219512195124,
+        "maxPct": 81.70731707317073,
+        "p10": 27.80487804878049,
+        "p90": 69.51219512195121,
+        "minWins": 18,
+        "maxWins": 67,
+        "teams60plus": 2,
+        "teams25orFewer": 5
+      },
+      "phase8": 13.850995965366526
+    },
+    {
+      "seed": 102,
+      "phase7": {
+        "teams": 30,
+        "winPctSD_pp": 14.127405324463005,
+        "minPct": 21.951219512195124,
+        "maxPct": 71.95121951219512,
+        "p10": 28.90243902439024,
+        "p90": 68.41463414634147,
+        "minWins": 18,
+        "maxWins": 59,
+        "teams60plus": 0,
+        "teams25orFewer": 4
+      },
+      "phase8": 13.847416434110112
+    }
+  ],
+  "real": [
+    {
+      "season": "2024-25",
+      "teams": 30,
+      "winPctSD_pp": 16.01233908504376,
+      "minPct": 20.73170731707317,
+      "maxPct": 82.92682926829268,
+      "p10": 25.365853658536587,
+      "p90": 64.51219512195124,
+      "minWins": 17,
+      "maxWins": 68,
+      "teams60plus": 3,
+      "teams25orFewer": 5,
+      "standings": [
+        {
+          "name": "Oklahoma City Thunder",
+          "wins": 68,
+          "games": 82
+        },
+        {
+          "name": "Cleveland Cavaliers",
+          "wins": 64,
+          "games": 82
+        },
+        {
+          "name": "Boston Celtics",
+          "wins": 61,
+          "games": 82
+        },
+        {
+          "name": "Houston Rockets",
+          "wins": 52,
+          "games": 82
+        },
+        {
+          "name": "New York Knicks",
+          "wins": 51,
+          "games": 82
+        },
+        {
+          "name": "Los Angeles Lakers",
+          "wins": 50,
+          "games": 82
+        },
+        {
+          "name": "LA Clippers",
+          "wins": 50,
+          "games": 82
+        },
+        {
+          "name": "Indiana Pacers",
+          "wins": 50,
+          "games": 82
+        },
+        {
+          "name": "Denver Nuggets",
+          "wins": 50,
+          "games": 82
+        },
+        {
+          "name": "Minnesota Timberwolves",
+          "wins": 49,
+          "games": 82
+        },
+        {
+          "name": "Milwaukee Bucks",
+          "wins": 48,
+          "games": 82
+        },
+        {
+          "name": "Golden State Warriors",
+          "wins": 48,
+          "games": 82
+        },
+        {
+          "name": "Memphis Grizzlies",
+          "wins": 48,
+          "games": 82
+        },
+        {
+          "name": "Detroit Pistons",
+          "wins": 44,
+          "games": 82
+        },
+        {
+          "name": "Orlando Magic",
+          "wins": 41,
+          "games": 82
+        },
+        {
+          "name": "Atlanta Hawks",
+          "wins": 40,
+          "games": 82
+        },
+        {
+          "name": "Sacramento Kings",
+          "wins": 40,
+          "games": 82
+        },
+        {
+          "name": "Chicago Bulls",
+          "wins": 39,
+          "games": 82
+        },
+        {
+          "name": "Dallas Mavericks",
+          "wins": 39,
+          "games": 82
+        },
+        {
+          "name": "Miami Heat",
+          "wins": 37,
+          "games": 82
+        },
+        {
+          "name": "Phoenix Suns",
+          "wins": 36,
+          "games": 82
+        },
+        {
+          "name": "Portland Trail Blazers",
+          "wins": 36,
+          "games": 82
+        },
+        {
+          "name": "San Antonio Spurs",
+          "wins": 34,
+          "games": 82
+        },
+        {
+          "name": "Toronto Raptors",
+          "wins": 30,
+          "games": 82
+        },
+        {
+          "name": "Brooklyn Nets",
+          "wins": 26,
+          "games": 82
+        },
+        {
+          "name": "Philadelphia 76ers",
+          "wins": 24,
+          "games": 82
+        },
+        {
+          "name": "New Orleans Pelicans",
+          "wins": 21,
+          "games": 82
+        },
+        {
+          "name": "Charlotte Hornets",
+          "wins": 19,
+          "games": 82
+        },
+        {
+          "name": "Washington Wizards",
+          "wins": 18,
+          "games": 82
+        },
+        {
+          "name": "Utah Jazz",
+          "wins": 17,
+          "games": 82
+        }
+      ]
+    },
+    {
+      "season": "2023-24",
+      "teams": 30,
+      "winPctSD_pp": 16.08030610091202,
+      "minPct": 17.073170731707318,
+      "maxPct": 78.04878048780488,
+      "p10": 25.609756097560975,
+      "p90": 68.41463414634147,
+      "minWins": 14,
+      "maxWins": 64,
+      "teams60plus": 1,
+      "teams25orFewer": 6,
+      "standings": [
+        {
+          "name": "Boston Celtics",
+          "wins": 64,
+          "games": 82
+        },
+        {
+          "name": "Denver Nuggets",
+          "wins": 57,
+          "games": 82
+        },
+        {
+          "name": "Oklahoma City Thunder",
+          "wins": 57,
+          "games": 82
+        },
+        {
+          "name": "Minnesota Timberwolves",
+          "wins": 56,
+          "games": 82
+        },
+        {
+          "name": "LA Clippers",
+          "wins": 51,
+          "games": 82
+        },
+        {
+          "name": "Dallas Mavericks",
+          "wins": 50,
+          "games": 82
+        },
+        {
+          "name": "New York Knicks",
+          "wins": 50,
+          "games": 82
+        },
+        {
+          "name": "Phoenix Suns",
+          "wins": 49,
+          "games": 82
+        },
+        {
+          "name": "New Orleans Pelicans",
+          "wins": 49,
+          "games": 82
+        },
+        {
+          "name": "Milwaukee Bucks",
+          "wins": 49,
+          "games": 82
+        },
+        {
+          "name": "Cleveland Cavaliers",
+          "wins": 48,
+          "games": 82
+        },
+        {
+          "name": "Los Angeles Lakers",
+          "wins": 47,
+          "games": 82
+        },
+        {
+          "name": "Orlando Magic",
+          "wins": 47,
+          "games": 82
+        },
+        {
+          "name": "Indiana Pacers",
+          "wins": 47,
+          "games": 82
+        },
+        {
+          "name": "Philadelphia 76ers",
+          "wins": 47,
+          "games": 82
+        },
+        {
+          "name": "Golden State Warriors",
+          "wins": 46,
+          "games": 82
+        },
+        {
+          "name": "Sacramento Kings",
+          "wins": 46,
+          "games": 82
+        },
+        {
+          "name": "Miami Heat",
+          "wins": 46,
+          "games": 82
+        },
+        {
+          "name": "Houston Rockets",
+          "wins": 41,
+          "games": 82
+        },
+        {
+          "name": "Chicago Bulls",
+          "wins": 39,
+          "games": 82
+        },
+        {
+          "name": "Atlanta Hawks",
+          "wins": 36,
+          "games": 82
+        },
+        {
+          "name": "Brooklyn Nets",
+          "wins": 32,
+          "games": 82
+        },
+        {
+          "name": "Utah Jazz",
+          "wins": 31,
+          "games": 82
+        },
+        {
+          "name": "Memphis Grizzlies",
+          "wins": 27,
+          "games": 82
+        },
+        {
+          "name": "Toronto Raptors",
+          "wins": 25,
+          "games": 82
+        },
+        {
+          "name": "San Antonio Spurs",
+          "wins": 22,
+          "games": 82
+        },
+        {
+          "name": "Charlotte Hornets",
+          "wins": 21,
+          "games": 82
+        },
+        {
+          "name": "Portland Trail Blazers",
+          "wins": 21,
+          "games": 82
+        },
+        {
+          "name": "Washington Wizards",
+          "wins": 15,
+          "games": 82
+        },
+        {
+          "name": "Detroit Pistons",
+          "wins": 14,
+          "games": 82
+        }
+      ]
+    }
+  ],
+  "simulation": [
+    {
+      "seed": 101,
+      "teams": 30,
+      "winPctSD_pp": 13.850995965366526,
+      "minPct": 29.268292682926827,
+      "maxPct": 89.02439024390245,
+      "p10": 32.6829268292683,
+      "p90": 67.19512195121952,
+      "minWins": 24,
+      "maxWins": 73,
+      "teams60plus": 1,
+      "teams25orFewer": 3,
+      "initialOVRWinCorrelation": 0.8266328387403096,
+      "standings": [
+        {
+          "id": 13,
+          "wins": 73,
+          "games": 82,
+          "initialStrength": 85.60444444444445
+        },
+        {
+          "id": 7,
+          "wins": 58,
+          "games": 82,
+          "initialStrength": 87.29333333333335
+        },
+        {
+          "id": 25,
+          "wins": 56,
+          "games": 82,
+          "initialStrength": 84.64444444444446
+        },
+        {
+          "id": 1,
+          "wins": 55,
+          "games": 82,
+          "initialStrength": 85.37333333333333
+        },
+        {
+          "id": 9,
+          "wins": 54,
+          "games": 82,
+          "initialStrength": 81.17777777777778
+        },
+        {
+          "id": 19,
+          "wins": 53,
+          "games": 82,
+          "initialStrength": 83.83555555555556
+        },
+        {
+          "id": 17,
+          "wins": 50,
+          "games": 82,
+          "initialStrength": 78.14222222222223
+        },
+        {
+          "id": 14,
+          "wins": 46,
+          "games": 82,
+          "initialStrength": 83.30666666666667
+        },
+        {
+          "id": 2,
+          "wins": 45,
+          "games": 82,
+          "initialStrength": 81.34666666666666
+        },
+        {
+          "id": 27,
+          "wins": 45,
+          "games": 82,
+          "initialStrength": 79.90222222222222
+        },
+        {
+          "id": 10,
+          "wins": 44,
+          "games": 82,
+          "initialStrength": 82.30666666666667
+        },
+        {
+          "id": 16,
+          "wins": 44,
+          "games": 82,
+          "initialStrength": 81.50666666666667
+        },
+        {
+          "id": 15,
+          "wins": 42,
+          "games": 82,
+          "initialStrength": 80.34666666666666
+        },
+        {
+          "id": 24,
+          "wins": 42,
+          "games": 82,
+          "initialStrength": 79.4888888888889
+        },
+        {
+          "id": 21,
+          "wins": 41,
+          "games": 82,
+          "initialStrength": 81.53333333333333
+        },
+        {
+          "id": 28,
+          "wins": 41,
+          "games": 82,
+          "initialStrength": 80.98666666666668
+        },
+        {
+          "id": 11,
+          "wins": 39,
+          "games": 82,
+          "initialStrength": 77.94666666666666
+        },
+        {
+          "id": 4,
+          "wins": 39,
+          "games": 82,
+          "initialStrength": 81.13777777777779
+        },
+        {
+          "id": 20,
+          "wins": 37,
+          "games": 82,
+          "initialStrength": 79.66222222222223
+        },
+        {
+          "id": 23,
+          "wins": 37,
+          "games": 82,
+          "initialStrength": 80.31111111111112
+        },
+        {
+          "id": 6,
+          "wins": 36,
+          "games": 82,
+          "initialStrength": 76.51111111111112
+        },
+        {
+          "id": 18,
+          "wins": 35,
+          "games": 82,
+          "initialStrength": 78.42222222222222
+        },
+        {
+          "id": 0,
+          "wins": 31,
+          "games": 82,
+          "initialStrength": 77.35111111111111
+        },
+        {
+          "id": 26,
+          "wins": 30,
+          "games": 82,
+          "initialStrength": 79.74666666666667
+        },
+        {
+          "id": 29,
+          "wins": 29,
+          "games": 82,
+          "initialStrength": 80.29333333333334
+        },
+        {
+          "id": 22,
+          "wins": 28,
+          "games": 82,
+          "initialStrength": 79.49333333333334
+        },
+        {
+          "id": 8,
+          "wins": 27,
+          "games": 82,
+          "initialStrength": 77.35555555555555
+        },
+        {
+          "id": 12,
+          "wins": 25,
+          "games": 82,
+          "initialStrength": 76.84444444444445
+        },
+        {
+          "id": 3,
+          "wins": 24,
+          "games": 82,
+          "initialStrength": 75.52888888888889
+        },
+        {
+          "id": 5,
+          "wins": 24,
+          "games": 82,
+          "initialStrength": 75.89333333333335
+        }
+      ]
+    },
+    {
+      "seed": 102,
+      "teams": 30,
+      "winPctSD_pp": 13.847416434110112,
+      "minPct": 26.82926829268293,
+      "maxPct": 79.26829268292683,
+      "p10": 31.70731707317073,
+      "p90": 66.46341463414636,
+      "minWins": 22,
+      "maxWins": 65,
+      "teams60plus": 2,
+      "teams25orFewer": 2,
+      "initialOVRWinCorrelation": 0.794959388603027,
+      "standings": [
+        {
+          "id": 7,
+          "wins": 65,
+          "games": 82,
+          "initialStrength": 87.69333333333334
+        },
+        {
+          "id": 17,
+          "wins": 60,
+          "games": 82,
+          "initialStrength": 85.76888888888888
+        },
+        {
+          "id": 14,
+          "wins": 59,
+          "games": 82,
+          "initialStrength": 80.7511111111111
+        },
+        {
+          "id": 18,
+          "wins": 54,
+          "games": 82,
+          "initialStrength": 84.74666666666667
+        },
+        {
+          "id": 21,
+          "wins": 54,
+          "games": 82,
+          "initialStrength": 81.96888888888888
+        },
+        {
+          "id": 25,
+          "wins": 53,
+          "games": 82,
+          "initialStrength": 79.42666666666668
+        },
+        {
+          "id": 6,
+          "wins": 51,
+          "games": 82,
+          "initialStrength": 83.71555555555557
+        },
+        {
+          "id": 9,
+          "wins": 49,
+          "games": 82,
+          "initialStrength": 83.96000000000001
+        },
+        {
+          "id": 27,
+          "wins": 49,
+          "games": 82,
+          "initialStrength": 82.17333333333335
+        },
+        {
+          "id": 24,
+          "wins": 47,
+          "games": 82,
+          "initialStrength": 82.3288888888889
+        },
+        {
+          "id": 11,
+          "wins": 46,
+          "games": 82,
+          "initialStrength": 80.48444444444445
+        },
+        {
+          "id": 5,
+          "wins": 43,
+          "games": 82,
+          "initialStrength": 81.33777777777777
+        },
+        {
+          "id": 8,
+          "wins": 42,
+          "games": 82,
+          "initialStrength": 81.14222222222224
+        },
+        {
+          "id": 28,
+          "wins": 42,
+          "games": 82,
+          "initialStrength": 82.06666666666666
+        },
+        {
+          "id": 16,
+          "wins": 41,
+          "games": 82,
+          "initialStrength": 79.74222222222222
+        },
+        {
+          "id": 10,
+          "wins": 40,
+          "games": 82,
+          "initialStrength": 80.51111111111112
+        },
+        {
+          "id": 13,
+          "wins": 40,
+          "games": 82,
+          "initialStrength": 79.2
+        },
+        {
+          "id": 23,
+          "wins": 37,
+          "games": 82,
+          "initialStrength": 83.31555555555556
+        },
+        {
+          "id": 2,
+          "wins": 37,
+          "games": 82,
+          "initialStrength": 78.72888888888889
+        },
+        {
+          "id": 4,
+          "wins": 37,
+          "games": 82,
+          "initialStrength": 81.34222222222223
+        },
+        {
+          "id": 22,
+          "wins": 36,
+          "games": 82,
+          "initialStrength": 82.49333333333334
+        },
+        {
+          "id": 12,
+          "wins": 34,
+          "games": 82,
+          "initialStrength": 82.05777777777777
+        },
+        {
+          "id": 19,
+          "wins": 31,
+          "games": 82,
+          "initialStrength": 78.50222222222223
+        },
+        {
+          "id": 26,
+          "wins": 30,
+          "games": 82,
+          "initialStrength": 78.61777777777777
+        },
+        {
+          "id": 29,
+          "wins": 29,
+          "games": 82,
+          "initialStrength": 77.16444444444446
+        },
+        {
+          "id": 1,
+          "wins": 28,
+          "games": 82,
+          "initialStrength": 79.02222222222223
+        },
+        {
+          "id": 15,
+          "wins": 26,
+          "games": 82,
+          "initialStrength": 77.71111111111111
+        },
+        {
+          "id": 0,
+          "wins": 26,
+          "games": 82,
+          "initialStrength": 77.78222222222223
+        },
+        {
+          "id": 3,
+          "wins": 22,
+          "games": 82,
+          "initialStrength": 76.73777777777778
+        },
+        {
+          "id": 20,
+          "wins": 22,
+          "games": 82,
+          "initialStrength": 77.41333333333333
+        }
+      ]
+    },
+    {
+      "seed": 103,
+      "teams": 30,
+      "winPctSD_pp": 13.717931254891901,
+      "minPct": 26.82926829268293,
+      "maxPct": 75.60975609756098,
+      "p10": 30.24390243902439,
+      "p90": 67.4390243902439,
+      "minWins": 22,
+      "maxWins": 62,
+      "teams60plus": 2,
+      "teams25orFewer": 4,
+      "initialOVRWinCorrelation": 0.8152606577888308,
+      "standings": [
+        {
+          "id": 11,
+          "wins": 62,
+          "games": 82,
+          "initialStrength": 87.98222222222223
+        },
+        {
+          "id": 25,
+          "wins": 62,
+          "games": 82,
+          "initialStrength": 85.56888888888889
+        },
+        {
+          "id": 28,
+          "wins": 58,
+          "games": 82,
+          "initialStrength": 86.28
+        },
+        {
+          "id": 21,
+          "wins": 55,
+          "games": 82,
+          "initialStrength": 85.91555555555556
+        },
+        {
+          "id": 17,
+          "wins": 52,
+          "games": 82,
+          "initialStrength": 81.08444444444446
+        },
+        {
+          "id": 14,
+          "wins": 52,
+          "games": 82,
+          "initialStrength": 83.89333333333335
+        },
+        {
+          "id": 10,
+          "wins": 51,
+          "games": 82,
+          "initialStrength": 83.92444444444445
+        },
+        {
+          "id": 2,
+          "wins": 48,
+          "games": 82,
+          "initialStrength": 82.17777777777778
+        },
+        {
+          "id": 26,
+          "wins": 47,
+          "games": 82,
+          "initialStrength": 84.19555555555556
+        },
+        {
+          "id": 29,
+          "wins": 46,
+          "games": 82,
+          "initialStrength": 82.49777777777778
+        },
+        {
+          "id": 4,
+          "wins": 46,
+          "games": 82,
+          "initialStrength": 81.35111111111112
+        },
+        {
+          "id": 6,
+          "wins": 46,
+          "games": 82,
+          "initialStrength": 82.44444444444444
+        },
+        {
+          "id": 5,
+          "wins": 43,
+          "games": 82,
+          "initialStrength": 79.73333333333335
+        },
+        {
+          "id": 0,
+          "wins": 43,
+          "games": 82,
+          "initialStrength": 77.90222222222222
+        },
+        {
+          "id": 24,
+          "wins": 42,
+          "games": 82,
+          "initialStrength": 82.88
+        },
+        {
+          "id": 7,
+          "wins": 41,
+          "games": 82,
+          "initialStrength": 78.84
+        },
+        {
+          "id": 9,
+          "wins": 40,
+          "games": 82,
+          "initialStrength": 80.69333333333334
+        },
+        {
+          "id": 16,
+          "wins": 40,
+          "games": 82,
+          "initialStrength": 78.67555555555556
+        },
+        {
+          "id": 23,
+          "wins": 39,
+          "games": 82,
+          "initialStrength": 79.40444444444445
+        },
+        {
+          "id": 27,
+          "wins": 38,
+          "games": 82,
+          "initialStrength": 80.47555555555556
+        },
+        {
+          "id": 13,
+          "wins": 34,
+          "games": 82,
+          "initialStrength": 77.94222222222223
+        },
+        {
+          "id": 20,
+          "wins": 32,
+          "games": 82,
+          "initialStrength": 81.67111111111112
+        },
+        {
+          "id": 22,
+          "wins": 32,
+          "games": 82,
+          "initialStrength": 80.07111111111112
+        },
+        {
+          "id": 3,
+          "wins": 31,
+          "games": 82,
+          "initialStrength": 81.26222222222223
+        },
+        {
+          "id": 1,
+          "wins": 30,
+          "games": 82,
+          "initialStrength": 75.63111111111112
+        },
+        {
+          "id": 15,
+          "wins": 28,
+          "games": 82,
+          "initialStrength": 80.47555555555556
+        },
+        {
+          "id": 12,
+          "wins": 25,
+          "games": 82,
+          "initialStrength": 76.92888888888889
+        },
+        {
+          "id": 18,
+          "wins": 23,
+          "games": 82,
+          "initialStrength": 76.91555555555556
+        },
+        {
+          "id": 8,
+          "wins": 22,
+          "games": 82,
+          "initialStrength": 78.57777777777778
+        },
+        {
+          "id": 19,
+          "wins": 22,
+          "games": 82,
+          "initialStrength": 79.00444444444446
+        }
+      ]
+    },
+    {
+      "seed": 104,
+      "teams": 30,
+      "winPctSD_pp": 9.99702513752156,
+      "minPct": 32.926829268292686,
+      "maxPct": 82.92682926829268,
+      "p10": 37.68292682926829,
+      "p90": 59.8780487804878,
+      "minWins": 27,
+      "maxWins": 68,
+      "teams60plus": 1,
+      "teams25orFewer": 0,
+      "initialOVRWinCorrelation": 0.6821295414738229,
+      "standings": [
+        {
+          "id": 28,
+          "wins": 68,
+          "games": 82,
+          "initialStrength": 86.79111111111112
+        },
+        {
+          "id": 13,
+          "wins": 51,
+          "games": 82,
+          "initialStrength": 79.13777777777779
+        },
+        {
+          "id": 0,
+          "wins": 50,
+          "games": 82,
+          "initialStrength": 82.74666666666666
+        },
+        {
+          "id": 3,
+          "wins": 49,
+          "games": 82,
+          "initialStrength": 81.93333333333334
+        },
+        {
+          "id": 2,
+          "wins": 49,
+          "games": 82,
+          "initialStrength": 80.34666666666666
+        },
+        {
+          "id": 10,
+          "wins": 49,
+          "games": 82,
+          "initialStrength": 82.25333333333334
+        },
+        {
+          "id": 27,
+          "wins": 47,
+          "games": 82,
+          "initialStrength": 85.84444444444445
+        },
+        {
+          "id": 7,
+          "wins": 46,
+          "games": 82,
+          "initialStrength": 82.38666666666667
+        },
+        {
+          "id": 5,
+          "wins": 44,
+          "games": 82,
+          "initialStrength": 82.74666666666667
+        },
+        {
+          "id": 22,
+          "wins": 44,
+          "games": 82,
+          "initialStrength": 82.81333333333333
+        },
+        {
+          "id": 1,
+          "wins": 43,
+          "games": 82,
+          "initialStrength": 78.55111111111111
+        },
+        {
+          "id": 8,
+          "wins": 42,
+          "games": 82,
+          "initialStrength": 80.36
+        },
+        {
+          "id": 20,
+          "wins": 42,
+          "games": 82,
+          "initialStrength": 82.11111111111111
+        },
+        {
+          "id": 17,
+          "wins": 41,
+          "games": 82,
+          "initialStrength": 79.76
+        },
+        {
+          "id": 6,
+          "wins": 41,
+          "games": 82,
+          "initialStrength": 79.80444444444446
+        },
+        {
+          "id": 26,
+          "wins": 41,
+          "games": 82,
+          "initialStrength": 81.67555555555556
+        },
+        {
+          "id": 11,
+          "wins": 40,
+          "games": 82,
+          "initialStrength": 81.34222222222223
+        },
+        {
+          "id": 9,
+          "wins": 39,
+          "games": 82,
+          "initialStrength": 82.75111111111111
+        },
+        {
+          "id": 23,
+          "wins": 39,
+          "games": 82,
+          "initialStrength": 78.88000000000001
+        },
+        {
+          "id": 19,
+          "wins": 37,
+          "games": 82,
+          "initialStrength": 80.92444444444445
+        },
+        {
+          "id": 4,
+          "wins": 37,
+          "games": 82,
+          "initialStrength": 78.42222222222222
+        },
+        {
+          "id": 25,
+          "wins": 37,
+          "games": 82,
+          "initialStrength": 79.76444444444445
+        },
+        {
+          "id": 18,
+          "wins": 36,
+          "games": 82,
+          "initialStrength": 79.8488888888889
+        },
+        {
+          "id": 24,
+          "wins": 35,
+          "games": 82,
+          "initialStrength": 82.17777777777778
+        },
+        {
+          "id": 15,
+          "wins": 34,
+          "games": 82,
+          "initialStrength": 79.57333333333334
+        },
+        {
+          "id": 16,
+          "wins": 34,
+          "games": 82,
+          "initialStrength": 79.58222222222223
+        },
+        {
+          "id": 29,
+          "wins": 31,
+          "games": 82,
+          "initialStrength": 80.39111111111112
+        },
+        {
+          "id": 21,
+          "wins": 30,
+          "games": 82,
+          "initialStrength": 77.92444444444445
+        },
+        {
+          "id": 12,
+          "wins": 27,
+          "games": 82,
+          "initialStrength": 78.85777777777778
+        },
+        {
+          "id": 14,
+          "wins": 27,
+          "games": 82,
+          "initialStrength": 78.46222222222222
+        }
+      ]
+    },
+    {
+      "seed": 105,
+      "teams": 30,
+      "winPctSD_pp": 13.69261138656111,
+      "minPct": 24.390243902439025,
+      "maxPct": 79.26829268292683,
+      "p10": 32.6829268292683,
+      "p90": 67.19512195121952,
+      "minWins": 20,
+      "maxWins": 65,
+      "teams60plus": 2,
+      "teams25orFewer": 3,
+      "initialOVRWinCorrelation": 0.772544166066373,
+      "standings": [
+        {
+          "id": 13,
+          "wins": 65,
+          "games": 82,
+          "initialStrength": 86.2
+        },
+        {
+          "id": 2,
+          "wins": 60,
+          "games": 82,
+          "initialStrength": 86.54666666666665
+        },
+        {
+          "id": 17,
+          "wins": 56,
+          "games": 82,
+          "initialStrength": 85.13777777777779
+        },
+        {
+          "id": 28,
+          "wins": 55,
+          "games": 82,
+          "initialStrength": 82.83111111111111
+        },
+        {
+          "id": 16,
+          "wins": 53,
+          "games": 82,
+          "initialStrength": 81.22222222222223
+        },
+        {
+          "id": 4,
+          "wins": 50,
+          "games": 82,
+          "initialStrength": 84.33777777777779
+        },
+        {
+          "id": 0,
+          "wins": 50,
+          "games": 82,
+          "initialStrength": 82.16
+        },
+        {
+          "id": 25,
+          "wins": 50,
+          "games": 82,
+          "initialStrength": 79.14222222222223
+        },
+        {
+          "id": 7,
+          "wins": 49,
+          "games": 82,
+          "initialStrength": 86.56444444444446
+        },
+        {
+          "id": 20,
+          "wins": 49,
+          "games": 82,
+          "initialStrength": 82.03111111111113
+        },
+        {
+          "id": 8,
+          "wins": 48,
+          "games": 82,
+          "initialStrength": 84.73777777777778
+        },
+        {
+          "id": 3,
+          "wins": 44,
+          "games": 82,
+          "initialStrength": 82.00444444444446
+        },
+        {
+          "id": 9,
+          "wins": 44,
+          "games": 82,
+          "initialStrength": 78.48888888888888
+        },
+        {
+          "id": 21,
+          "wins": 43,
+          "games": 82,
+          "initialStrength": 80.82222222222222
+        },
+        {
+          "id": 27,
+          "wins": 43,
+          "games": 82,
+          "initialStrength": 79.59111111111112
+        },
+        {
+          "id": 12,
+          "wins": 40,
+          "games": 82,
+          "initialStrength": 80.77777777777779
+        },
+        {
+          "id": 11,
+          "wins": 38,
+          "games": 82,
+          "initialStrength": 77.39111111111112
+        },
+        {
+          "id": 19,
+          "wins": 38,
+          "games": 82,
+          "initialStrength": 80.16444444444446
+        },
+        {
+          "id": 14,
+          "wins": 36,
+          "games": 82,
+          "initialStrength": 79.33333333333333
+        },
+        {
+          "id": 5,
+          "wins": 35,
+          "games": 82,
+          "initialStrength": 84.57333333333334
+        },
+        {
+          "id": 26,
+          "wins": 34,
+          "games": 82,
+          "initialStrength": 80.82666666666667
+        },
+        {
+          "id": 6,
+          "wins": 32,
+          "games": 82,
+          "initialStrength": 79.82666666666667
+        },
+        {
+          "id": 29,
+          "wins": 31,
+          "games": 82,
+          "initialStrength": 81
+        },
+        {
+          "id": 18,
+          "wins": 31,
+          "games": 82,
+          "initialStrength": 78.97333333333333
+        },
+        {
+          "id": 10,
+          "wins": 30,
+          "games": 82,
+          "initialStrength": 78.64
+        },
+        {
+          "id": 23,
+          "wins": 30,
+          "games": 82,
+          "initialStrength": 79.00888888888889
+        },
+        {
+          "id": 24,
+          "wins": 27,
+          "games": 82,
+          "initialStrength": 78.61333333333334
+        },
+        {
+          "id": 15,
+          "wins": 25,
+          "games": 82,
+          "initialStrength": 78.87555555555556
+        },
+        {
+          "id": 1,
+          "wins": 24,
+          "games": 82,
+          "initialStrength": 76.71111111111112
+        },
+        {
+          "id": 22,
+          "wins": 20,
+          "games": 82,
+          "initialStrength": 74.28
+        }
+      ]
+    }
+  ],
+  "simulationMeanSD_pp": 13.021196035690242,
+  "simulationSDRange_pp": [
+    9.99702513752156,
+    13.850995965366526
+  ]
+}

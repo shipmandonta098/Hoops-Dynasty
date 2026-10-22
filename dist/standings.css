@@ -1,0 +1,22 @@
+.standings-scroll{max-width:100%;overflow:auto}
+.expanded-standings table{table-layout:fixed;min-width:1240px;width:100%;font-variant-numeric:tabular-nums}
+.expanded-standings td,.expanded-standings th{white-space:nowrap;text-align:right;vertical-align:middle;padding-left:10px;padding-right:10px}
+.expanded-standings tr>:first-child{box-sizing:border-box;width:44px;text-align:center;padding-left:6px;padding-right:6px}
+.expanded-standings tr>:nth-child(n+3){box-sizing:border-box;width:74px}
+.expanded-standings th abbr{text-decoration:none;cursor:help}
+.expanded-standings tbody th{font-weight:400}
+.expanded-standings tr>:nth-child(2){text-align:left;position:sticky;left:0;z-index:1;padding-left:8px;padding-right:16px}
+.expanded-standings .standings-team{display:flex;align-items:center;justify-content:flex-start;gap:12px;min-width:0;width:100%;max-width:100%;border:0!important;background:transparent!important;padding:4px 0!important;color:inherit!important;text-align:left;font:inherit}
+.secondary-team-logo{width:36px;height:36px;object-fit:contain;flex:0 0 36px;background:transparent}
+.expanded-standings .standings-team>span{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:left}
+.expanded-standings .me>:nth-child(2){box-shadow:inset 3px 0 #c3a161}
+.expanded-standings thead tr>:nth-child(2){z-index:2}
+.standings-scroll:focus-visible{outline:2px solid #c3a161;outline-offset:-2px}
+@media(max-width:600px){.expanded-standings table{min-width:1160px}}
+
+/* Opaque, shared row surfaces keep the sticky team cell matched while scrolling. */
+.expanded-standings tbody tr>*{background:var(--panel,#fff)}
+.expanded-standings tbody tr.me>*{background:linear-gradient(#ff803e0b,#ff803e0b),var(--panel,#fff)}
+.expanded-standings tbody th{color:inherit}
+
+.standings-view-toggle{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}.expanded-standings .panelhead h2{overflow-wrap:anywhere}

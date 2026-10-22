@@ -1,0 +1,4 @@
+Open Hoops-Dynasty in VS Code.
+Run: py -m http.server 8000 --directory dist --bind 127.0.0.1
+Visit http://localhost:8000
+Copy your memphis.jpg into dist/city-photos/. Keep your original project folder as a backup.

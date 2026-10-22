@@ -1,0 +1,9 @@
+const assert=require('node:assert/strict'),{loadLeague}=require('./load-league.cjs');
+(async()=>{for(const [gender,year] of [['male',1950],['male',2026],['female',1997],['female',2020],['female',2026]]){
+ const l=loadLeague({seed:121,strictDOM:false});l.context.assert=assert;
+ let fixture=require('./feat-fixture.cjs').replace('syncAlignment(d);',`d.year=${year};d.leagueGender='${gender}';var hp=historicalPlan('${gender==='female'?'wnba':'nba'}',${year},d.leagueSettings,d.cap,defaultTeams());d.cap=hp.cap;d.leagueSettings={...hp.rules,seasonGames:10,divisionGames:0,conferenceGames:10,seasonStart:'06-01',seasonEnd:'06-30',playoffFormat:'top4',splitPlayoffs:false,firstRoundByes:0,seriesSemiGames:1,seriesFinalGames:1};syncAlignment(d);`);
+ l.run(fixture);l.run("simulationExecution.mode='headless';render=()=>{};");await l.run('sim(6)');
+ const result=l.run(`var original=JSON.stringify(state.playerFeats);state=validateCareerData(JSON.parse(JSON.stringify(state)));assert.equal(JSON.stringify(state.playerFeats),original);for(const g of state.history){readGameSummaryData(g.summaryData,m=>{throw Error(m)});assert(summarizeGame(g).available);for(const f of recognizePlayerFeats(g)){assert(g.box.some(p=>p.playerId===f.playerId));if(f.e.type!=='stat')assert.equal(g.summaryData.featActions[f.e.seq].timeMs,f.e.timeMs);}}var originalNews=state.newsFeed.items.length;for(const e of state.playerFeats.games)featOpenGame(e.id);assert.equal(state.newsFeed.items.length,originalNews);({year:state.year,gender:state.leagueGender,games:state.history.length,news:state.newsFeed.items.filter(n=>n.category==='Player Feat').length,archived:state.playerFeats.games.length,periods:leagueRules().gamePeriods,minutes:leagueRules().periodMinutes})`);
+ console.log('PASS historical preset production progression / validated save-load',JSON.stringify(result));
+}
+})().catch(e=>{console.error(e.message,e.stack.split('\n').slice(-8).join('\n'));process.exitCode=1});

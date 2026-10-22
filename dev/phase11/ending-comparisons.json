@@ -1,0 +1,2807 @@
+[
+  {
+    "arm": "combined",
+    "scenario": "tie_60",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.2195,
+    "candidate": 0.2335,
+    "difference": 0.014,
+    "ci95": [
+      -0.0005264252903409757,
+      0.028526425290340975
+    ],
+    "gains": 124,
+    "losses": 96,
+    "p": 0.06846403133471504,
+    "holmP": 1
+  },
+  {
+    "arm": "combined",
+    "scenario": "tie_60",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.5425,
+    "candidate": 0.5365,
+    "difference": -0.006,
+    "ci95": [
+      -0.021558685276840454,
+      0.009558685276840452
+    ],
+    "gains": 120,
+    "losses": 132,
+    "p": 0.48842601828669663,
+    "holmP": 1
+  },
+  {
+    "arm": "combined",
+    "scenario": "tie_60",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.664,
+    "candidate": 0.6715,
+    "difference": 0.0075,
+    "ci95": [
+      -0.005828720208301908,
+      0.020828720208301905
+    ],
+    "gains": 100,
+    "losses": 85,
+    "p": 0.3033270526398916,
+    "holmP": 1
+  },
+  {
+    "arm": "combined",
+    "scenario": "tie_30",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.3385,
+    "candidate": 0.354,
+    "difference": 0.0155,
+    "ci95": [
+      0.004738734729823467,
+      0.026261265270176533
+    ],
+    "gains": 76,
+    "losses": 45,
+    "p": 0.0061508081499953545,
+    "holmP": 0.8549623328493543
+  },
+  {
+    "arm": "combined",
+    "scenario": "tie_30",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.585,
+    "candidate": 0.579,
+    "difference": -0.006,
+    "ci95": [
+      -0.017595433508028904,
+      0.005595433508028904
+    ],
+    "gains": 64,
+    "losses": 76,
+    "p": 0.3525838270722769,
+    "holmP": 1
+  },
+  {
+    "arm": "combined",
+    "scenario": "tie_30",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.78,
+    "candidate": 0.7785,
+    "difference": -0.0015,
+    "ci95": [
+      -0.009874959592385331,
+      0.006874959592385332
+    ],
+    "gains": 35,
+    "losses": 38,
+    "p": 0.8151212352249976,
+    "holmP": 1
+  },
+  {
+    "arm": "combined",
+    "scenario": "tie_20",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.4065,
+    "candidate": 0.411,
+    "difference": 0.0045,
+    "ci95": [
+      -0.005637814924613825,
+      0.014637814924613825
+    ],
+    "gains": 58,
+    "losses": 49,
+    "p": 0.43944010177908255,
+    "holmP": 1
+  },
+  {
+    "arm": "combined",
+    "scenario": "tie_20",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.569,
+    "candidate": 0.573,
+    "difference": 0.004,
+    "ci95": [
+      -0.008084000940887489,
+      0.016084000940887487
+    ],
+    "gains": 80,
+    "losses": 72,
+    "p": 0.5703330633303956,
+    "holmP": 1
+  },
+  {
+    "arm": "combined",
+    "scenario": "tie_20",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.7985,
+    "candidate": 0.8055,
+    "difference": 0.007,
+    "ci95": [
+      0.0006547015668210664,
+      0.013345298433178934
+    ],
+    "gains": 28,
+    "losses": 14,
+    "p": 0.04355852192384191,
+    "holmP": 1
+  },
+  {
+    "arm": "combined",
+    "scenario": "down2_30",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.208,
+    "candidate": 0.225,
+    "difference": 0.017,
+    "ci95": [
+      0.000791179816968083,
+      0.03320882018303192
+    ],
+    "gains": 154,
+    "losses": 120,
+    "p": 0.045997772262480106,
+    "holmP": 1
+  },
+  {
+    "arm": "combined",
+    "scenario": "down2_30",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.2515,
+    "candidate": 0.2375,
+    "difference": -0.014,
+    "ci95": [
+      -0.029854778781336008,
+      0.001854778781336006
+    ],
+    "gains": 117,
+    "losses": 145,
+    "p": 0.09511486944573175,
+    "holmP": 1
+  },
+  {
+    "arm": "combined",
+    "scenario": "down2_30",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.368,
+    "candidate": 0.36,
+    "difference": -0.008,
+    "ci95": [
+      -0.02585747220232271,
+      0.00985747220232271
+    ],
+    "gains": 158,
+    "losses": 174,
+    "p": 0.4104144705567767,
+    "holmP": 1
+  },
+  {
+    "arm": "combined",
+    "scenario": "down2_10",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.2145,
+    "candidate": 0.261,
+    "difference": 0.0465,
+    "ci95": [
+      0.03296425626796999,
+      0.06003574373203001
+    ],
+    "gains": 144,
+    "losses": 51,
+    "p": 1.836040585965523e-11,
+    "holmP": 2.974385749264147e-09
+  },
+  {
+    "arm": "combined",
+    "scenario": "down2_10",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.181,
+    "candidate": 0.181,
+    "difference": 0.0,
+    "ci95": [
+      -0.013368760671092156,
+      0.013368760671092156
+    ],
+    "gains": 93,
+    "losses": 93,
+    "p": 1.0,
+    "holmP": 1
+  },
+  {
+    "arm": "combined",
+    "scenario": "down2_10",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.294,
+    "candidate": 0.328,
+    "difference": 0.034,
+    "ci95": [
+      0.01960380673962054,
+      0.048396193260379465
+    ],
+    "gains": 143,
+    "losses": 75,
+    "p": 4.807536069149132e-06,
+    "holmP": 0.0007451680907181154
+  },
+  {
+    "arm": "combined",
+    "scenario": "down4_60_defend",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.0295,
+    "candidate": 0.0345,
+    "difference": 0.005,
+    "ci95": [
+      -0.0028388968708662086,
+      0.012838896870866208
+    ],
+    "gains": 37,
+    "losses": 27,
+    "p": 0.26043547657665356,
+    "holmP": 1
+  },
+  {
+    "arm": "combined",
+    "scenario": "down4_60_defend",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.042,
+    "candidate": 0.0435,
+    "difference": 0.0015,
+    "ci95": [
+      -0.005900396011739188,
+      0.00890039601173919
+    ],
+    "gains": 30,
+    "losses": 27,
+    "p": 0.7913664277791806,
+    "holmP": 1
+  },
+  {
+    "arm": "combined",
+    "scenario": "down4_60_defend",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.058,
+    "candidate": 0.0625,
+    "difference": 0.0045,
+    "ci95": [
+      -0.0044282787187923415,
+      0.01342827871879234
+    ],
+    "gains": 46,
+    "losses": 37,
+    "p": 0.37999939641191804,
+    "holmP": 1
+  },
+  {
+    "arm": "combined",
+    "scenario": "down4_30_defend",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.002,
+    "candidate": 0.0065,
+    "difference": 0.0045,
+    "ci95": [
+      0.0004631631410331972,
+      0.008536836858966803
+    ],
+    "gains": 13,
+    "losses": 4,
+    "p": 0.049041748046875,
+    "holmP": 1
+  },
+  {
+    "arm": "combined",
+    "scenario": "down4_30_defend",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.0015,
+    "candidate": 0.0045,
+    "difference": 0.003,
+    "ci95": [
+      -0.000393120898924374,
+      0.006393120898924375
+    ],
+    "gains": 9,
+    "losses": 3,
+    "p": 0.14599609375,
+    "holmP": 1
+  },
+  {
+    "arm": "combined",
+    "scenario": "down4_30_defend",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.002,
+    "candidate": 0.007,
+    "difference": 0.005,
+    "ci95": [
+      0.0008469524560931196,
+      0.00915304754390688
+    ],
+    "gains": 14,
+    "losses": 4,
+    "p": 0.0308837890625,
+    "holmP": 1
+  },
+  {
+    "arm": "combined",
+    "scenario": "down6_60_defend",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.007,
+    "candidate": 0.01,
+    "difference": 0.003,
+    "ci95": [
+      -0.00039312089892437445,
+      0.006393120898924375
+    ],
+    "gains": 9,
+    "losses": 3,
+    "p": 0.14599609375,
+    "holmP": 1
+  },
+  {
+    "arm": "combined",
+    "scenario": "down6_60_defend",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.0015,
+    "candidate": 0.005,
+    "difference": 0.0035,
+    "ci95": [
+      0.0009110578394341483,
+      0.006088942160565852
+    ],
+    "gains": 7,
+    "losses": 0,
+    "p": 0.015625,
+    "holmP": 1
+  },
+  {
+    "arm": "combined",
+    "scenario": "down6_60_defend",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.007,
+    "candidate": 0.0105,
+    "difference": 0.0035,
+    "ci95": [
+      -3.099195015735445e-05,
+      0.007030991950157354
+    ],
+    "gains": 10,
+    "losses": 3,
+    "p": 0.09228515625,
+    "holmP": 1
+  },
+  {
+    "arm": "combined",
+    "scenario": "down6_30_defend",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.0,
+    "candidate": 0.0,
+    "difference": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "gains": 0,
+    "losses": 0,
+    "p": 1,
+    "holmP": 1
+  },
+  {
+    "arm": "combined",
+    "scenario": "down6_30_defend",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.0,
+    "candidate": 0.0,
+    "difference": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "gains": 0,
+    "losses": 0,
+    "p": 1,
+    "holmP": 1
+  },
+  {
+    "arm": "combined",
+    "scenario": "down6_30_defend",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.0,
+    "candidate": 0.0,
+    "difference": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "gains": 0,
+    "losses": 0,
+    "p": 1,
+    "holmP": 1
+  },
+  {
+    "arm": "combined",
+    "scenario": "down2_15_advance",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.229,
+    "candidate": 0.2565,
+    "difference": 0.0275,
+    "ci95": [
+      0.01567646021504037,
+      0.03932353978495963
+    ],
+    "gains": 101,
+    "losses": 46,
+    "p": 6.671865694009476e-06,
+    "holmP": 0.0010274673168774592
+  },
+  {
+    "arm": "combined",
+    "scenario": "down2_15_advance",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.1825,
+    "candidate": 0.187,
+    "difference": 0.0045,
+    "ci95": [
+      -0.007623357278239716,
+      0.016623357278239714
+    ],
+    "gains": 81,
+    "losses": 72,
+    "p": 0.5179210307990446,
+    "holmP": 1
+  },
+  {
+    "arm": "combined",
+    "scenario": "down2_15_advance",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.3125,
+    "candidate": 0.335,
+    "difference": 0.0225,
+    "ci95": [
+      0.009276224853902074,
+      0.035723775146097925
+    ],
+    "gains": 114,
+    "losses": 69,
+    "p": 0.001086692996332912,
+    "holmP": 0.15974387046093808
+  },
+  {
+    "arm": "combined",
+    "scenario": "down3_15_advance",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.178,
+    "candidate": 0.1405,
+    "difference": -0.0375,
+    "ci95": [
+      -0.049270596776469625,
+      -0.025729403223530373
+    ],
+    "gains": 36,
+    "losses": 111,
+    "p": 4.317770275281865e-10,
+    "holmP": 6.951610143203803e-08
+  },
+  {
+    "arm": "combined",
+    "scenario": "down3_15_advance",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.093,
+    "candidate": 0.101,
+    "difference": 0.008,
+    "ci95": [
+      -0.004159465247187015,
+      0.020159465247187015
+    ],
+    "gains": 85,
+    "losses": 69,
+    "p": 0.22665066200791278,
+    "holmP": 1
+  },
+  {
+    "arm": "combined",
+    "scenario": "down3_15_advance",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.194,
+    "candidate": 0.186,
+    "difference": -0.008,
+    "ci95": [
+      -0.017697591992099,
+      0.0016975919920989967
+    ],
+    "gains": 41,
+    "losses": 57,
+    "p": 0.12929258395357315,
+    "holmP": 1
+  },
+  {
+    "arm": "hold",
+    "scenario": "tie_60",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.2195,
+    "candidate": 0.2675,
+    "difference": 0.048,
+    "ci95": [
+      0.03053644467233716,
+      0.06546355532766285
+    ],
+    "gains": 209,
+    "losses": 113,
+    "p": 9.692672818150226e-08,
+    "holmP": 1.5217496324495854e-05
+  },
+  {
+    "arm": "hold",
+    "scenario": "tie_60",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.5425,
+    "candidate": 0.5355,
+    "difference": -0.007,
+    "ci95": [
+      -0.02369015162845114,
+      0.009690151628451143
+    ],
+    "gains": 138,
+    "losses": 152,
+    "p": 0.44528827732449544,
+    "holmP": 1
+  },
+  {
+    "arm": "hold",
+    "scenario": "tie_60",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.664,
+    "candidate": 0.6815,
+    "difference": 0.0175,
+    "ci95": [
+      0.002881935870319572,
+      0.032118064129680435
+    ],
+    "gains": 129,
+    "losses": 94,
+    "p": 0.022584267057569066,
+    "holmP": 1
+  },
+  {
+    "arm": "hold",
+    "scenario": "tie_30",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.3385,
+    "candidate": 0.404,
+    "difference": 0.0655,
+    "ci95": [
+      0.04401452349492046,
+      0.08698547650507954
+    ],
+    "gains": 310,
+    "losses": 179,
+    "p": 3.3528950884271497e-09,
+    "holmP": 5.331103190599168e-07
+  },
+  {
+    "arm": "hold",
+    "scenario": "tie_30",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.585,
+    "candidate": 0.5625,
+    "difference": -0.0225,
+    "ci95": [
+      -0.04190755320901582,
+      -0.003092446790984176
+    ],
+    "gains": 174,
+    "losses": 219,
+    "p": 0.02632648171532203,
+    "holmP": 1
+  },
+  {
+    "arm": "hold",
+    "scenario": "tie_30",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.78,
+    "candidate": 0.7895,
+    "difference": 0.0095,
+    "ci95": [
+      -0.010368276775075522,
+      0.029368276775075523
+    ],
+    "gains": 215,
+    "losses": 196,
+    "p": 0.37462907848692456,
+    "holmP": 1
+  },
+  {
+    "arm": "hold",
+    "scenario": "tie_20",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.4065,
+    "candidate": 0.623,
+    "difference": 0.2165,
+    "ci95": [
+      0.18598215847203864,
+      0.24701784152796136
+    ],
+    "gains": 748,
+    "losses": 315,
+    "p": 3.378334959461137e-41,
+    "holmP": 5.574252683110876e-39
+  },
+  {
+    "arm": "hold",
+    "scenario": "tie_20",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.569,
+    "candidate": 0.588,
+    "difference": 0.019,
+    "ci95": [
+      -0.011074168633721276,
+      0.04907416863372127
+    ],
+    "gains": 490,
+    "losses": 452,
+    "p": 0.2279820321187226,
+    "holmP": 1
+  },
+  {
+    "arm": "hold",
+    "scenario": "tie_20",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.7985,
+    "candidate": 0.9285,
+    "difference": 0.13,
+    "ci95": [
+      0.10948030680286736,
+      0.15051969319713265
+    ],
+    "gains": 366,
+    "losses": 106,
+    "p": 1.5462926547229436e-34,
+    "holmP": 2.5359199537456276e-32
+  },
+  {
+    "arm": "hold",
+    "scenario": "down2_30",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.208,
+    "candidate": 0.265,
+    "difference": 0.057,
+    "ci95": [
+      0.038517713392030486,
+      0.07548228660796952
+    ],
+    "gains": 238,
+    "losses": 124,
+    "p": 2.1277397068720472e-09,
+    "holmP": 3.4043835309952754e-07
+  },
+  {
+    "arm": "hold",
+    "scenario": "down2_30",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.2515,
+    "candidate": 0.2475,
+    "difference": -0.004,
+    "ci95": [
+      -0.020806787356619505,
+      0.012806787356619505
+    ],
+    "gains": 143,
+    "losses": 151,
+    "p": 0.683162608005191,
+    "holmP": 1
+  },
+  {
+    "arm": "hold",
+    "scenario": "down2_30",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.368,
+    "candidate": 0.3975,
+    "difference": 0.0295,
+    "ci95": [
+      0.01182132664632968,
+      0.04717867335367032
+    ],
+    "gains": 193,
+    "losses": 134,
+    "p": 0.0013040575819412614,
+    "holmP": 0.18778429179954165
+  },
+  {
+    "arm": "hold",
+    "scenario": "down2_10",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.2145,
+    "candidate": 0.204,
+    "difference": -0.0105,
+    "ci95": [
+      -0.019839606304494932,
+      -0.0011603936955050694
+    ],
+    "gains": 35,
+    "losses": 56,
+    "p": 0.0354495948795191,
+    "holmP": 1
+  },
+  {
+    "arm": "hold",
+    "scenario": "down2_10",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.181,
+    "candidate": 0.1935,
+    "difference": 0.0125,
+    "ci95": [
+      0.0024704351497414033,
+      0.022529564850258598
+    ],
+    "gains": 65,
+    "losses": 40,
+    "p": 0.018740915408258018,
+    "holmP": 1
+  },
+  {
+    "arm": "hold",
+    "scenario": "down2_10",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.294,
+    "candidate": 0.2995,
+    "difference": 0.0055,
+    "ci95": [
+      -0.003427202432544912,
+      0.014427202432544911
+    ],
+    "gains": 47,
+    "losses": 36,
+    "p": 0.272268945972048,
+    "holmP": 1
+  },
+  {
+    "arm": "hold",
+    "scenario": "down4_60_defend",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.0295,
+    "candidate": 0.03,
+    "difference": 0.0005,
+    "ci95": [
+      -0.001197692810976185,
+      0.002197692810976185
+    ],
+    "gains": 2,
+    "losses": 1,
+    "p": 1.0,
+    "holmP": 1
+  },
+  {
+    "arm": "hold",
+    "scenario": "down4_60_defend",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.042,
+    "candidate": 0.0415,
+    "difference": -0.0005,
+    "ci95": [
+      -0.00148,
+      0.00047999999999999996
+    ],
+    "gains": 0,
+    "losses": 1,
+    "p": 1.0,
+    "holmP": 1
+  },
+  {
+    "arm": "hold",
+    "scenario": "down4_60_defend",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.058,
+    "candidate": 0.0585,
+    "difference": 0.0005,
+    "ci95": [
+      -0.00047999999999999996,
+      0.00148
+    ],
+    "gains": 1,
+    "losses": 0,
+    "p": 1.0,
+    "holmP": 1
+  },
+  {
+    "arm": "hold",
+    "scenario": "down4_30_defend",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.002,
+    "candidate": 0.002,
+    "difference": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "gains": 0,
+    "losses": 0,
+    "p": 1,
+    "holmP": 1
+  },
+  {
+    "arm": "hold",
+    "scenario": "down4_30_defend",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.0015,
+    "candidate": 0.002,
+    "difference": 0.0005,
+    "ci95": [
+      -0.00047999999999999996,
+      0.00148
+    ],
+    "gains": 1,
+    "losses": 0,
+    "p": 1.0,
+    "holmP": 1
+  },
+  {
+    "arm": "hold",
+    "scenario": "down4_30_defend",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.002,
+    "candidate": 0.0025,
+    "difference": 0.0005,
+    "ci95": [
+      -0.00047999999999999996,
+      0.00148
+    ],
+    "gains": 1,
+    "losses": 0,
+    "p": 1.0,
+    "holmP": 1
+  },
+  {
+    "arm": "hold",
+    "scenario": "down6_60_defend",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.007,
+    "candidate": 0.007,
+    "difference": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "gains": 0,
+    "losses": 0,
+    "p": 1,
+    "holmP": 1
+  },
+  {
+    "arm": "hold",
+    "scenario": "down6_60_defend",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.0015,
+    "candidate": 0.0015,
+    "difference": 0.0,
+    "ci95": [
+      -0.001386275903433447,
+      0.001386275903433447
+    ],
+    "gains": 1,
+    "losses": 1,
+    "p": 1.0,
+    "holmP": 1
+  },
+  {
+    "arm": "hold",
+    "scenario": "down6_60_defend",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.007,
+    "candidate": 0.007,
+    "difference": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "gains": 0,
+    "losses": 0,
+    "p": 1,
+    "holmP": 1
+  },
+  {
+    "arm": "hold",
+    "scenario": "down6_30_defend",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.0,
+    "candidate": 0.0,
+    "difference": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "gains": 0,
+    "losses": 0,
+    "p": 1,
+    "holmP": 1
+  },
+  {
+    "arm": "hold",
+    "scenario": "down6_30_defend",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.0,
+    "candidate": 0.0,
+    "difference": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "gains": 0,
+    "losses": 0,
+    "p": 1,
+    "holmP": 1
+  },
+  {
+    "arm": "hold",
+    "scenario": "down6_30_defend",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.0,
+    "candidate": 0.0,
+    "difference": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "gains": 0,
+    "losses": 0,
+    "p": 1,
+    "holmP": 1
+  },
+  {
+    "arm": "hold",
+    "scenario": "down2_15_advance",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.229,
+    "candidate": 0.2205,
+    "difference": -0.0085,
+    "ci95": [
+      -0.016271526266458548,
+      -0.0007284737335414536
+    ],
+    "gains": 23,
+    "losses": 40,
+    "p": 0.04295654552438921,
+    "holmP": 1
+  },
+  {
+    "arm": "hold",
+    "scenario": "down2_15_advance",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.1825,
+    "candidate": 0.19,
+    "difference": 0.0075,
+    "ci95": [
+      -0.0010953298277275973,
+      0.016095329827727597
+    ],
+    "gains": 46,
+    "losses": 31,
+    "p": 0.11001559898513334,
+    "holmP": 1
+  },
+  {
+    "arm": "hold",
+    "scenario": "down2_15_advance",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.3125,
+    "candidate": 0.3175,
+    "difference": 0.005,
+    "ci95": [
+      -0.0027153446631784242,
+      0.012715344663178425
+    ],
+    "gains": 36,
+    "losses": 26,
+    "p": 0.25285439418811073,
+    "holmP": 1
+  },
+  {
+    "arm": "hold",
+    "scenario": "down3_15_advance",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.178,
+    "candidate": 0.168,
+    "difference": -0.01,
+    "ci95": [
+      -0.015351096814538051,
+      -0.004648903185461949
+    ],
+    "gains": 5,
+    "losses": 25,
+    "p": 0.0003249142318964005,
+    "holmP": 0.049062049016356475
+  },
+  {
+    "arm": "hold",
+    "scenario": "down3_15_advance",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.093,
+    "candidate": 0.096,
+    "difference": 0.003,
+    "ci95": [
+      -0.0035008802113068406,
+      0.00950088021130684
+    ],
+    "gains": 25,
+    "losses": 19,
+    "p": 0.4513808323961257,
+    "holmP": 1
+  },
+  {
+    "arm": "hold",
+    "scenario": "down3_15_advance",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.194,
+    "candidate": 0.1865,
+    "difference": -0.0075,
+    "ci95": [
+      -0.01258288036810018,
+      -0.0024171196318998204
+    ],
+    "gains": 6,
+    "losses": 21,
+    "p": 0.005924612283706665,
+    "holmP": 0.8294457197189331
+  },
+  {
+    "arm": "foul",
+    "scenario": "tie_60",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.2195,
+    "candidate": 0.223,
+    "difference": 0.0035,
+    "ci95": [
+      -0.004154421289858648,
+      0.011154421289858647
+    ],
+    "gains": 34,
+    "losses": 27,
+    "p": 0.4426260049464714,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "tie_60",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.5425,
+    "candidate": 0.542,
+    "difference": -0.0005,
+    "ci95": [
+      -0.008523621941151468,
+      0.007523621941151467
+    ],
+    "gains": 33,
+    "losses": 34,
+    "p": 1.0,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "tie_60",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.664,
+    "candidate": 0.67,
+    "difference": 0.006,
+    "ci95": [
+      -0.0009263871260065774,
+      0.012926387126006578
+    ],
+    "gains": 31,
+    "losses": 19,
+    "p": 0.11892045255943628,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "tie_30",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.3385,
+    "candidate": 0.3395,
+    "difference": 0.001,
+    "ci95": [
+      -0.003383570125311303,
+      0.005383570125311303
+    ],
+    "gains": 11,
+    "losses": 9,
+    "p": 0.8238029479980469,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "tie_30",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.585,
+    "candidate": 0.586,
+    "difference": 0.001,
+    "ci95": [
+      -0.0038020005002500972,
+      0.005802000500250097
+    ],
+    "gains": 13,
+    "losses": 11,
+    "p": 0.8388197422027588,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "tie_30",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.78,
+    "candidate": 0.7805,
+    "difference": 0.0005,
+    "ci95": [
+      -0.001197692810976185,
+      0.002197692810976185
+    ],
+    "gains": 2,
+    "losses": 1,
+    "p": 1.0,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "tie_20",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.4065,
+    "candidate": 0.4075,
+    "difference": 0.001,
+    "ci95": [
+      -0.0003855825921105461,
+      0.002385582592110546
+    ],
+    "gains": 2,
+    "losses": 0,
+    "p": 0.5,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "tie_20",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.569,
+    "candidate": 0.5695,
+    "difference": 0.0005,
+    "ci95": [
+      -0.0045934557469092495,
+      0.00559345574690925
+    ],
+    "gains": 14,
+    "losses": 13,
+    "p": 1.0,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "tie_20",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.7985,
+    "candidate": 0.798,
+    "difference": -0.0005,
+    "ci95": [
+      -0.00148,
+      0.00047999999999999996
+    ],
+    "gains": 0,
+    "losses": 1,
+    "p": 1.0,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "down2_30",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.208,
+    "candidate": 0.199,
+    "difference": -0.009,
+    "ci95": [
+      -0.021774741179613113,
+      0.003774741179613114
+    ],
+    "gains": 76,
+    "losses": 94,
+    "p": 0.19213646543397706,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "down2_30",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.2515,
+    "candidate": 0.2325,
+    "difference": -0.019,
+    "ci95": [
+      -0.03023131614866288,
+      -0.007768683851337121
+    ],
+    "gains": 47,
+    "losses": 85,
+    "p": 0.0011951063526718705,
+    "holmP": 0.17448552749009308
+  },
+  {
+    "arm": "foul",
+    "scenario": "down2_30",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.368,
+    "candidate": 0.337,
+    "difference": -0.031,
+    "ci95": [
+      -0.04472616169792119,
+      -0.01727383830207881
+    ],
+    "gains": 68,
+    "losses": 130,
+    "p": 1.2497992572922223e-05,
+    "holmP": 0.0019121928636571
+  },
+  {
+    "arm": "foul",
+    "scenario": "down2_10",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.2145,
+    "candidate": 0.218,
+    "difference": 0.0035,
+    "ci95": [
+      0.0009110578394341483,
+      0.006088942160565852
+    ],
+    "gains": 7,
+    "losses": 0,
+    "p": 0.015625,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "down2_10",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.181,
+    "candidate": 0.1815,
+    "difference": 0.0005,
+    "ci95": [
+      -0.0030342559729936544,
+      0.004034255972993655
+    ],
+    "gains": 7,
+    "losses": 6,
+    "p": 1.0,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "down2_10",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.294,
+    "candidate": 0.2975,
+    "difference": 0.0035,
+    "ci95": [
+      0.0009110578394341483,
+      0.006088942160565852
+    ],
+    "gains": 7,
+    "losses": 0,
+    "p": 0.015625,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "down4_60_defend",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.0295,
+    "candidate": 0.0265,
+    "difference": -0.003,
+    "ci95": [
+      -0.009041205250646613,
+      0.003041205250646613
+    ],
+    "gains": 16,
+    "losses": 22,
+    "p": 0.417692190836533,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "down4_60_defend",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.042,
+    "candidate": 0.0375,
+    "difference": -0.0045,
+    "ci95": [
+      -0.010459333908274913,
+      0.0014593339082749138
+    ],
+    "gains": 14,
+    "losses": 23,
+    "p": 0.18774155899882317,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "down4_60_defend",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.058,
+    "candidate": 0.051,
+    "difference": -0.007,
+    "ci95": [
+      -0.014196761597325868,
+      0.00019676159732586775
+    ],
+    "gains": 20,
+    "losses": 34,
+    "p": 0.0759047294891014,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "down4_30_defend",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.002,
+    "candidate": 0.0045,
+    "difference": 0.0025,
+    "ci95": [
+      -0.0010326243385560653,
+      0.0060326243385560654
+    ],
+    "gains": 9,
+    "losses": 4,
+    "p": 0.266845703125,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "down4_30_defend",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.0015,
+    "candidate": 0.003,
+    "difference": 0.0015,
+    "ci95": [
+      -0.0014399999999999999,
+      0.0044399999999999995
+    ],
+    "gains": 6,
+    "losses": 3,
+    "p": 0.5078125,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "down4_30_defend",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.002,
+    "candidate": 0.005,
+    "difference": 0.003,
+    "ci95": [
+      -0.0006653826969577922,
+      0.006665382696957793
+    ],
+    "gains": 10,
+    "losses": 4,
+    "p": 0.1795654296875,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "down6_60_defend",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.007,
+    "candidate": 0.0095,
+    "difference": 0.0025,
+    "ci95": [
+      -0.0007492574285393972,
+      0.005749257428539397
+    ],
+    "gains": 8,
+    "losses": 3,
+    "p": 0.2265625,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "down6_60_defend",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.0015,
+    "candidate": 0.004,
+    "difference": 0.0025,
+    "ci95": [
+      0.0003108469227580731,
+      0.004689153077241927
+    ],
+    "gains": 5,
+    "losses": 0,
+    "p": 0.0625,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "down6_60_defend",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.007,
+    "candidate": 0.01,
+    "difference": 0.003,
+    "ci95": [
+      -0.00039312089892437445,
+      0.006393120898924375
+    ],
+    "gains": 9,
+    "losses": 3,
+    "p": 0.14599609375,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "down6_30_defend",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.0,
+    "candidate": 0.0,
+    "difference": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "gains": 0,
+    "losses": 0,
+    "p": 1,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "down6_30_defend",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.0,
+    "candidate": 0.0,
+    "difference": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "gains": 0,
+    "losses": 0,
+    "p": 1,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "down6_30_defend",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.0,
+    "candidate": 0.0,
+    "difference": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "gains": 0,
+    "losses": 0,
+    "p": 1,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "down2_15_advance",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.229,
+    "candidate": 0.2355,
+    "difference": 0.0065,
+    "ci95": [
+      0.00223672262607938,
+      0.010763277373920618
+    ],
+    "gains": 16,
+    "losses": 3,
+    "p": 0.004425048828125,
+    "holmP": 0.62835693359375
+  },
+  {
+    "arm": "foul",
+    "scenario": "down2_15_advance",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.1825,
+    "candidate": 0.183,
+    "difference": 0.0005,
+    "ci95": [
+      -0.004401176447066831,
+      0.00540117644706683
+    ],
+    "gains": 13,
+    "losses": 12,
+    "p": 1.0,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "down2_15_advance",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.3125,
+    "candidate": 0.3175,
+    "difference": 0.005,
+    "ci95": [
+      0.0004074706682666235,
+      0.009592529331733376
+    ],
+    "gains": 16,
+    "losses": 6,
+    "p": 0.052478790283203125,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "down3_15_advance",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.178,
+    "candidate": 0.174,
+    "difference": -0.004,
+    "ci95": [
+      -0.01184,
+      0.0038399999999999997
+    ],
+    "gains": 28,
+    "losses": 36,
+    "p": 0.3817327947933377,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "down3_15_advance",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.093,
+    "candidate": 0.092,
+    "difference": -0.001,
+    "ci95": [
+      -0.007648201146870077,
+      0.005648201146870077
+    ],
+    "gains": 22,
+    "losses": 24,
+    "p": 0.8829959121223965,
+    "holmP": 1
+  },
+  {
+    "arm": "foul",
+    "scenario": "down3_15_advance",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.194,
+    "candidate": 0.1915,
+    "difference": -0.0025,
+    "ci95": [
+      -0.010641789690828723,
+      0.005641789690828722
+    ],
+    "gains": 32,
+    "losses": 37,
+    "p": 0.6304564917867981,
+    "holmP": 1
+  },
+  {
+    "arm": "quick",
+    "scenario": "tie_60",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.2195,
+    "candidate": 0.232,
+    "difference": 0.0125,
+    "ci95": [
+      0.00511962670625818,
+      0.019880373293741822
+    ],
+    "gains": 41,
+    "losses": 16,
+    "p": 0.001263559472435463,
+    "holmP": 0.18321612350314212
+  },
+  {
+    "arm": "quick",
+    "scenario": "tie_60",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.5425,
+    "candidate": 0.538,
+    "difference": -0.0045,
+    "ci95": [
+      -0.012153416962089403,
+      0.003153416962089404
+    ],
+    "gains": 26,
+    "losses": 35,
+    "p": 0.30567741986311836,
+    "holmP": 1
+  },
+  {
+    "arm": "quick",
+    "scenario": "tie_60",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.664,
+    "candidate": 0.6715,
+    "difference": 0.0075,
+    "ci95": [
+      0.00064616585251287,
+      0.01435383414748713
+    ],
+    "gains": 32,
+    "losses": 17,
+    "p": 0.04438416098714981,
+    "holmP": 1
+  },
+  {
+    "arm": "quick",
+    "scenario": "tie_30",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.3385,
+    "candidate": 0.351,
+    "difference": 0.0125,
+    "ci95": [
+      0.005660199825052154,
+      0.01933980017494785
+    ],
+    "gains": 37,
+    "losses": 12,
+    "p": 0.0004697573180081349,
+    "holmP": 0.07046359770122024
+  },
+  {
+    "arm": "quick",
+    "scenario": "tie_30",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.585,
+    "candidate": 0.5785,
+    "difference": -0.0065,
+    "ci95": [
+      -0.012921578040658396,
+      -7.842195934160308e-05
+    ],
+    "gains": 15,
+    "losses": 28,
+    "p": 0.0659940344557981,
+    "holmP": 1
+  },
+  {
+    "arm": "quick",
+    "scenario": "tie_30",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.78,
+    "candidate": 0.7815,
+    "difference": 0.0015,
+    "ci95": [
+      -0.004130695389140017,
+      0.0071306953891400165
+    ],
+    "gains": 18,
+    "losses": 15,
+    "p": 0.7283324808813632,
+    "holmP": 1
+  },
+  {
+    "arm": "quick",
+    "scenario": "tie_20",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.4065,
+    "candidate": 0.4225,
+    "difference": 0.016,
+    "ci95": [
+      0.0075968350134669235,
+      0.024403164986533075
+    ],
+    "gains": 53,
+    "losses": 21,
+    "p": 0.0002564885942369215,
+    "holmP": 0.03898626632401207
+  },
+  {
+    "arm": "quick",
+    "scenario": "tie_20",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.569,
+    "candidate": 0.5625,
+    "difference": -0.0065,
+    "ci95": [
+      -0.014397849974335328,
+      0.0013978499743353282
+    ],
+    "gains": 26,
+    "losses": 39,
+    "p": 0.1360323948778921,
+    "holmP": 1
+  },
+  {
+    "arm": "quick",
+    "scenario": "tie_20",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.7985,
+    "candidate": 0.8045,
+    "difference": 0.006,
+    "ci95": [
+      0.0012050081153784226,
+      0.010794991884621578
+    ],
+    "gains": 18,
+    "losses": 6,
+    "p": 0.022655844688415527,
+    "holmP": 1
+  },
+  {
+    "arm": "quick",
+    "scenario": "down2_30",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.208,
+    "candidate": 0.2345,
+    "difference": 0.0265,
+    "ci95": [
+      0.015427330032458069,
+      0.03757266996754193
+    ],
+    "gains": 91,
+    "losses": 38,
+    "p": 3.4644887522337793e-06,
+    "holmP": 0.0005404602453484696
+  },
+  {
+    "arm": "quick",
+    "scenario": "down2_30",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.2515,
+    "candidate": 0.2495,
+    "difference": -0.002,
+    "ci95": [
+      -0.012465786312627004,
+      0.008465786312627004
+    ],
+    "gains": 55,
+    "losses": 59,
+    "p": 0.778876092002701,
+    "holmP": 1
+  },
+  {
+    "arm": "quick",
+    "scenario": "down2_30",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.368,
+    "candidate": 0.383,
+    "difference": 0.015,
+    "ci95": [
+      0.00392930444145107,
+      0.026070695558548927
+    ],
+    "gains": 79,
+    "losses": 49,
+    "p": 0.010090139809438573,
+    "holmP": 1
+  },
+  {
+    "arm": "quick",
+    "scenario": "down2_10",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.2145,
+    "candidate": 0.253,
+    "difference": 0.0385,
+    "ci95": [
+      0.025568360202436545,
+      0.051431639797563454
+    ],
+    "gains": 127,
+    "losses": 50,
+    "p": 6.480862454151632e-09,
+    "holmP": 1.023976267755958e-06
+  },
+  {
+    "arm": "quick",
+    "scenario": "down2_10",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.181,
+    "candidate": 0.173,
+    "difference": -0.008,
+    "ci95": [
+      -0.018997633507777285,
+      0.0029976335077772833
+    ],
+    "gains": 55,
+    "losses": 71,
+    "p": 0.18122406088142354,
+    "holmP": 1
+  },
+  {
+    "arm": "quick",
+    "scenario": "down2_10",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.294,
+    "candidate": 0.3165,
+    "difference": 0.0225,
+    "ci95": [
+      0.009349088691877014,
+      0.035650911308122986
+    ],
+    "gains": 113,
+    "losses": 68,
+    "p": 0.0010183334172665002,
+    "holmP": 0.150713345755442
+  },
+  {
+    "arm": "quick",
+    "scenario": "down4_60_defend",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.0295,
+    "candidate": 0.0385,
+    "difference": 0.009,
+    "ci95": [
+      0.004017307072033517,
+      0.013982692927966483
+    ],
+    "gains": 22,
+    "losses": 4,
+    "p": 0.0005335211753845215,
+    "holmP": 0.0794946551322937
+  },
+  {
+    "arm": "quick",
+    "scenario": "down4_60_defend",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.042,
+    "candidate": 0.045,
+    "difference": 0.003,
+    "ci95": [
+      -0.0006653826969577922,
+      0.006665382696957793
+    ],
+    "gains": 10,
+    "losses": 4,
+    "p": 0.1795654296875,
+    "holmP": 1
+  },
+  {
+    "arm": "quick",
+    "scenario": "down4_60_defend",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.058,
+    "candidate": 0.0645,
+    "difference": 0.0065,
+    "ci95": [
+      0.0016070646225088813,
+      0.011392935377491118
+    ],
+    "gains": 19,
+    "losses": 6,
+    "p": 0.01463329792022705,
+    "holmP": 1
+  },
+  {
+    "arm": "quick",
+    "scenario": "down4_30_defend",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.002,
+    "candidate": 0.003,
+    "difference": 0.001,
+    "ci95": [
+      -0.0003855825921105461,
+      0.002385582592110546
+    ],
+    "gains": 2,
+    "losses": 0,
+    "p": 0.5,
+    "holmP": 1
+  },
+  {
+    "arm": "quick",
+    "scenario": "down4_30_defend",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.0015,
+    "candidate": 0.0015,
+    "difference": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "gains": 0,
+    "losses": 0,
+    "p": 1,
+    "holmP": 1
+  },
+  {
+    "arm": "quick",
+    "scenario": "down4_30_defend",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.002,
+    "candidate": 0.003,
+    "difference": 0.001,
+    "ci95": [
+      -0.0003855825921105461,
+      0.002385582592110546
+    ],
+    "gains": 2,
+    "losses": 0,
+    "p": 0.5,
+    "holmP": 1
+  },
+  {
+    "arm": "quick",
+    "scenario": "down6_60_defend",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.007,
+    "candidate": 0.007,
+    "difference": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "gains": 0,
+    "losses": 0,
+    "p": 1,
+    "holmP": 1
+  },
+  {
+    "arm": "quick",
+    "scenario": "down6_60_defend",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.0015,
+    "candidate": 0.0015,
+    "difference": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "gains": 0,
+    "losses": 0,
+    "p": 1,
+    "holmP": 1
+  },
+  {
+    "arm": "quick",
+    "scenario": "down6_60_defend",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.007,
+    "candidate": 0.007,
+    "difference": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "gains": 0,
+    "losses": 0,
+    "p": 1,
+    "holmP": 1
+  },
+  {
+    "arm": "quick",
+    "scenario": "down6_30_defend",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.0,
+    "candidate": 0.0,
+    "difference": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "gains": 0,
+    "losses": 0,
+    "p": 1,
+    "holmP": 1
+  },
+  {
+    "arm": "quick",
+    "scenario": "down6_30_defend",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.0,
+    "candidate": 0.0,
+    "difference": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "gains": 0,
+    "losses": 0,
+    "p": 1,
+    "holmP": 1
+  },
+  {
+    "arm": "quick",
+    "scenario": "down6_30_defend",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.0,
+    "candidate": 0.0,
+    "difference": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "gains": 0,
+    "losses": 0,
+    "p": 1,
+    "holmP": 1
+  },
+  {
+    "arm": "quick",
+    "scenario": "down2_15_advance",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.229,
+    "candidate": 0.242,
+    "difference": 0.013,
+    "ci95": [
+      0.004141816297386093,
+      0.021858183702613908
+    ],
+    "gains": 54,
+    "losses": 28,
+    "p": 0.005435924877566281,
+    "holmP": 0.7664654077368456
+  },
+  {
+    "arm": "quick",
+    "scenario": "down2_15_advance",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.1825,
+    "candidate": 0.1865,
+    "difference": 0.004,
+    "ci95": [
+      -0.0032011662665014816,
+      0.011201166266501483
+    ],
+    "gains": 31,
+    "losses": 23,
+    "p": 0.3408909412200971,
+    "holmP": 1
+  },
+  {
+    "arm": "quick",
+    "scenario": "down2_15_advance",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.3125,
+    "candidate": 0.3225,
+    "difference": 0.01,
+    "ci95": [
+      0.0012433876910322925,
+      0.018756612308967708
+    ],
+    "gains": 50,
+    "losses": 30,
+    "p": 0.03299261842647619,
+    "holmP": 1
+  },
+  {
+    "arm": "quick",
+    "scenario": "down3_15_advance",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.178,
+    "candidate": 0.1795,
+    "difference": 0.0015,
+    "ci95": [
+      -0.0022959034025276065,
+      0.005295903402527606
+    ],
+    "gains": 9,
+    "losses": 6,
+    "p": 0.6072387695312499,
+    "holmP": 1
+  },
+  {
+    "arm": "quick",
+    "scenario": "down3_15_advance",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.093,
+    "candidate": 0.0935,
+    "difference": 0.0005,
+    "ci95": [
+      -0.0027510312828702677,
+      0.0037510312828702677
+    ],
+    "gains": 6,
+    "losses": 5,
+    "p": 1.0,
+    "holmP": 1
+  },
+  {
+    "arm": "quick",
+    "scenario": "down3_15_advance",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.194,
+    "candidate": 0.1945,
+    "difference": 0.0005,
+    "ci95": [
+      -0.0032964096411058617,
+      0.004296409641105862
+    ],
+    "gains": 8,
+    "losses": 7,
+    "p": 1.0,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "tie_60",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.2195,
+    "candidate": 0.2235,
+    "difference": 0.004,
+    "ci95": [
+      -0.0071751379881649455,
+      0.015175137988164946
+    ],
+    "gains": 69,
+    "losses": 61,
+    "p": 0.5394195522817194,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "tie_60",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.5425,
+    "candidate": 0.54,
+    "difference": -0.0025,
+    "ci95": [
+      -0.01554085223110272,
+      0.010540852231102718
+    ],
+    "gains": 86,
+    "losses": 91,
+    "p": 0.763774058865874,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "tie_60",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.664,
+    "candidate": 0.6655,
+    "difference": 0.0015,
+    "ci95": [
+      -0.00873384795773374,
+      0.01173384795773374
+    ],
+    "gains": 56,
+    "losses": 53,
+    "p": 0.8481947835965664,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "tie_30",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.3385,
+    "candidate": 0.341,
+    "difference": 0.0025,
+    "ci95": [
+      -0.005028607770862002,
+      0.010028607770862003
+    ],
+    "gains": 32,
+    "losses": 27,
+    "p": 0.6029232012571504,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "tie_30",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.585,
+    "candidate": 0.582,
+    "difference": -0.003,
+    "ci95": [
+      -0.012801568658846758,
+      0.006801568658846757
+    ],
+    "gains": 47,
+    "losses": 53,
+    "p": 0.6172994135892524,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "tie_30",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.78,
+    "candidate": 0.7745,
+    "difference": -0.0055,
+    "ci95": [
+      -0.011616878607750115,
+      0.0006168786077501145
+    ],
+    "gains": 14,
+    "losses": 25,
+    "p": 0.10812902140605732,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "tie_20",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.4065,
+    "candidate": 0.3965,
+    "difference": -0.01,
+    "ci95": [
+      -0.01648741576297071,
+      -0.003512584237029291
+    ],
+    "gains": 12,
+    "losses": 32,
+    "p": 0.003657766827927844,
+    "holmP": 0.5230606563936817
+  },
+  {
+    "arm": "timeout",
+    "scenario": "tie_20",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.569,
+    "candidate": 0.5795,
+    "difference": 0.0105,
+    "ci95": [
+      0.0008566847731559593,
+      0.020143315226844042
+    ],
+    "gains": 59,
+    "losses": 38,
+    "p": 0.041729321201286,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "tie_20",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.7985,
+    "candidate": 0.7995,
+    "difference": 0.001,
+    "ci95": [
+      -0.0035975480338939344,
+      0.0055975480338939345
+    ],
+    "gains": 12,
+    "losses": 10,
+    "p": 0.8318119049072266,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "down2_30",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.208,
+    "candidate": 0.207,
+    "difference": -0.001,
+    "ci95": [
+      -0.005802000500250098,
+      0.003802000500250098
+    ],
+    "gains": 11,
+    "losses": 13,
+    "p": 0.8388197422027588,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "down2_30",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.2515,
+    "candidate": 0.256,
+    "difference": 0.0045,
+    "ci95": [
+      -0.00432,
+      0.013319999999999999
+    ],
+    "gains": 45,
+    "losses": 36,
+    "p": 0.37417441760470777,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "down2_30",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.368,
+    "candidate": 0.369,
+    "difference": 0.001,
+    "ci95": [
+      -0.006465195494552431,
+      0.008465195494552432
+    ],
+    "gains": 30,
+    "losses": 28,
+    "p": 0.8956832138895906,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "down2_10",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.2145,
+    "candidate": 0.2175,
+    "difference": 0.003,
+    "ci95": [
+      0.00023056907039786974,
+      0.00576943092960213
+    ],
+    "gains": 7,
+    "losses": 1,
+    "p": 0.0703125,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "down2_10",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.181,
+    "candidate": 0.1845,
+    "difference": 0.0035,
+    "ci95": [
+      -0.003768072828564713,
+      0.010768072828564713
+    ],
+    "gains": 31,
+    "losses": 24,
+    "p": 0.4187541882690154,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "down2_10",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.294,
+    "candidate": 0.3005,
+    "difference": 0.0065,
+    "ci95": [
+      0.0012289148774484214,
+      0.011771085122551577
+    ],
+    "gains": 21,
+    "losses": 8,
+    "p": 0.0241195447742939,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "down4_60_defend",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.0295,
+    "candidate": 0.0315,
+    "difference": 0.002,
+    "ci95": [
+      -0.0023829124746999487,
+      0.006382912474699949
+    ],
+    "gains": 12,
+    "losses": 8,
+    "p": 0.5034446716308594,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "down4_60_defend",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.042,
+    "candidate": 0.0435,
+    "difference": 0.0015,
+    "ci95": [
+      -0.003400784329423379,
+      0.006400784329423379
+    ],
+    "gains": 14,
+    "losses": 11,
+    "p": 0.6900379657745361,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "down4_60_defend",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.058,
+    "candidate": 0.062,
+    "difference": 0.004,
+    "ci95": [
+      -0.0011840046442953764,
+      0.009184004644295377
+    ],
+    "gains": 18,
+    "losses": 10,
+    "p": 0.1849333420395851,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "down4_30_defend",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.002,
+    "candidate": 0.001,
+    "difference": -0.001,
+    "ci95": [
+      -0.0023855825921105457,
+      0.0003855825921105457
+    ],
+    "gains": 0,
+    "losses": 2,
+    "p": 0.5,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "down4_30_defend",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.0015,
+    "candidate": 0.0005,
+    "difference": -0.001,
+    "ci95": [
+      -0.002385582592110546,
+      0.0003855825921105461
+    ],
+    "gains": 0,
+    "losses": 2,
+    "p": 0.5,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "down4_30_defend",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.002,
+    "candidate": 0.001,
+    "difference": -0.001,
+    "ci95": [
+      -0.0023855825921105457,
+      0.0003855825921105457
+    ],
+    "gains": 0,
+    "losses": 2,
+    "p": 0.5,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "down6_60_defend",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.007,
+    "candidate": 0.008,
+    "difference": 0.001,
+    "ci95": [
+      -0.0003855825921105461,
+      0.002385582592110546
+    ],
+    "gains": 2,
+    "losses": 0,
+    "p": 0.5,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "down6_60_defend",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.0015,
+    "candidate": 0.002,
+    "difference": 0.0005,
+    "ci95": [
+      -0.00047999999999999996,
+      0.00148
+    ],
+    "gains": 1,
+    "losses": 0,
+    "p": 1.0,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "down6_60_defend",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.007,
+    "candidate": 0.008,
+    "difference": 0.001,
+    "ci95": [
+      -0.0003855825921105461,
+      0.002385582592110546
+    ],
+    "gains": 2,
+    "losses": 0,
+    "p": 0.5,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "down6_30_defend",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.0,
+    "candidate": 0.0,
+    "difference": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "gains": 0,
+    "losses": 0,
+    "p": 1,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "down6_30_defend",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.0,
+    "candidate": 0.0,
+    "difference": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "gains": 0,
+    "losses": 0,
+    "p": 1,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "down6_30_defend",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.0,
+    "candidate": 0.0,
+    "difference": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "gains": 0,
+    "losses": 0,
+    "p": 1,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "down2_15_advance",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.229,
+    "candidate": 0.2365,
+    "difference": 0.0075,
+    "ci95": [
+      0.0007878258633420105,
+      0.014212174136657988
+    ],
+    "gains": 31,
+    "losses": 16,
+    "p": 0.03998605682605215,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "down2_15_advance",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.1825,
+    "candidate": 0.1845,
+    "difference": 0.002,
+    "ci95": [
+      -0.007802058813253939,
+      0.011802058813253939
+    ],
+    "gains": 52,
+    "losses": 48,
+    "p": 0.7643534344026676,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "down2_15_advance",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.3125,
+    "candidate": 0.32,
+    "difference": 0.0075,
+    "ci95": [
+      -0.0018451602988127109,
+      0.01684516029881271
+    ],
+    "gains": 53,
+    "losses": 38,
+    "p": 0.14179337454474714,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "down3_15_advance",
+    "metric": "ot",
+    "n": 2000,
+    "baseline": 0.178,
+    "candidate": 0.148,
+    "difference": -0.03,
+    "ci95": [
+      -0.038668382226529505,
+      -0.021331617773470493
+    ],
+    "gains": 10,
+    "losses": 70,
+    "p": 3.161290522649495e-12,
+    "holmP": 5.152903551918677e-10
+  },
+  {
+    "arm": "timeout",
+    "scenario": "down3_15_advance",
+    "metric": "win",
+    "n": 2000,
+    "baseline": 0.093,
+    "candidate": 0.104,
+    "difference": 0.011,
+    "ci95": [
+      0.0005449611613079462,
+      0.021455038838692052
+    ],
+    "gains": 68,
+    "losses": 46,
+    "p": 0.048724686398681986,
+    "holmP": 1
+  },
+  {
+    "arm": "timeout",
+    "scenario": "down3_15_advance",
+    "metric": "avoidRegLoss",
+    "n": 2000,
+    "baseline": 0.194,
+    "candidate": 0.193,
+    "difference": -0.001,
+    "ci95": [
+      -0.005802000500250098,
+      0.003802000500250098
+    ],
+    "gains": 11,
+    "losses": 13,
+    "p": 0.8388197422027588,
+    "holmP": 1
+  }
+]

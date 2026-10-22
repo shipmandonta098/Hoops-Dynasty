@@ -1,0 +1,416 @@
+{
+  "baseline-nba-crowd-low": {
+    "reference": "baseline-nba-neutral",
+    "n": 300,
+    "meanMarginDelta": 0.6166666666666667,
+    "CI95": [
+      -0.6606011316489009,
+      1.8939344649822343
+    ]
+  },
+  "candidate-wnba-home": {
+    "reference": "baseline-wnba-home",
+    "n": 300,
+    "meanMarginDelta": -0.05,
+    "CI95": [
+      -1.4848220435106352,
+      1.384822043510635
+    ]
+  },
+  "baseline-wnba-rest-neutral2": {
+    "reference": "baseline-wnba-neutral",
+    "n": 200,
+    "meanMarginDelta": 0.295,
+    "CI95": [
+      -0.7932524388455402,
+      1.38325243884554
+    ]
+  },
+  "baseline-nba-deep": {
+    "reference": "baseline-nba-neutral",
+    "n": 300,
+    "meanMarginDelta": 1.34,
+    "CI95": [
+      -0.223340535167025,
+      2.9033405351670254
+    ]
+  },
+  "baseline-wnba-short-long": {
+    "reference": "baseline-wnba-neutral",
+    "n": 200,
+    "meanMarginDelta": 0.96,
+    "CI95": [
+      -0.6360557373675642,
+      2.556055737367564
+    ]
+  },
+  "baseline-nba-altitude": {
+    "reference": "baseline-nba-neutral",
+    "n": 300,
+    "meanMarginDelta": 1.6766666666666667,
+    "CI95": [
+      0.200454021072203,
+      3.1528793122611303
+    ]
+  },
+  "baseline-wnba-injured": {
+    "reference": "baseline-wnba-neutral",
+    "n": 300,
+    "meanMarginDelta": 1.2666666666666666,
+    "CI95": [
+      -0.05951975307915691,
+      2.5928530864124903
+    ]
+  },
+  "candidate-nba-home": {
+    "reference": "baseline-nba-home",
+    "n": 300,
+    "meanMarginDelta": 0.18333333333333332,
+    "CI95": [
+      -1.3329979013345021,
+      1.6996645680011688
+    ]
+  },
+  "baseline-nba-no-three-contest": {
+    "reference": "baseline-nba-neutral",
+    "n": 300,
+    "meanMarginDelta": 0.25666666666666665,
+    "CI95": [
+      -1.128818139067182,
+      1.6421514724005153
+    ]
+  },
+  "baseline-nba-rest-neutral2": {
+    "reference": "baseline-nba-neutral",
+    "n": 200,
+    "meanMarginDelta": 0.435,
+    "CI95": [
+      -0.7730316005550921,
+      1.6430316005550922
+    ]
+  },
+  "baseline-nba-crowd-high": {
+    "reference": "baseline-nba-neutral",
+    "n": 300,
+    "meanMarginDelta": 0.8533333333333334,
+    "CI95": [
+      -0.5427799115657624,
+      2.2494465782324293
+    ]
+  },
+  "baseline-nba-short": {
+    "reference": "baseline-nba-neutral",
+    "n": 300,
+    "meanMarginDelta": 0.8533333333333334,
+    "CI95": [
+      -0.6148198094881715,
+      2.3214864761548384
+    ]
+  },
+  "baseline-nba-home": {
+    "reference": "baseline-nba-neutral",
+    "n": 300,
+    "meanMarginDelta": 0.9466666666666667,
+    "CI95": [
+      -0.4016575413190121,
+      2.2949908746523455
+    ]
+  },
+  "candidate-nba-altitude": {
+    "reference": "baseline-nba-altitude",
+    "n": 300,
+    "meanMarginDelta": -1.72,
+    "CI95": [
+      -3.195209133816281,
+      -0.2447908661837188
+    ]
+  },
+  "baseline-wnba-no-three-contest": {
+    "reference": "baseline-wnba-neutral",
+    "n": 300,
+    "meanMarginDelta": 0.4866666666666667,
+    "CI95": [
+      -0.543402088356182,
+      1.5167354216895155
+    ]
+  },
+  "baseline-wnba-rest-home2": {
+    "reference": "baseline-wnba-neutral",
+    "n": 200,
+    "meanMarginDelta": 0.94,
+    "CI95": [
+      -0.5341236767216504,
+      2.4141236767216503
+    ]
+  },
+  "baseline-nba-short-long": {
+    "reference": "baseline-nba-neutral",
+    "n": 200,
+    "meanMarginDelta": 1.98,
+    "CI95": [
+      0.1993913759164243,
+      3.7606086240835754
+    ]
+  },
+  "candidate-nba-crowd-low": {
+    "reference": "baseline-nba-crowd-low",
+    "n": 300,
+    "meanMarginDelta": 0.38,
+    "CI95": [
+      -1.1965351092867622,
+      1.956535109286762
+    ]
+  },
+  "baseline-nba-injured": {
+    "reference": "baseline-nba-neutral",
+    "n": 300,
+    "meanMarginDelta": 0.056666666666666664,
+    "CI95": [
+      -1.452546197708761,
+      1.5658795310420943
+    ]
+  },
+  "baseline-wnba-no-physical": {
+    "reference": "baseline-wnba-neutral",
+    "n": 300,
+    "meanMarginDelta": 0.8066666666666666,
+    "CI95": [
+      -0.5276027268509575,
+      2.140936060184291
+    ]
+  },
+  "baseline-wnba-shallow": {
+    "reference": "baseline-wnba-neutral",
+    "n": 300,
+    "meanMarginDelta": 2.5866666666666664,
+    "CI95": [
+      1.0605405693056225,
+      4.11279276402771
+    ]
+  },
+  "candidate-nba-neutral": {
+    "reference": "baseline-nba-neutral",
+    "n": 300,
+    "meanMarginDelta": 1.5966666666666667,
+    "CI95": [
+      0.07741104774830565,
+      3.115922285585028
+    ]
+  },
+  "candidate-wnba-neutral": {
+    "reference": "baseline-wnba-neutral",
+    "n": 300,
+    "meanMarginDelta": 0.8166666666666667,
+    "CI95": [
+      -0.5446774976994151,
+      2.1780108310327484
+    ]
+  },
+  "baseline-nba-rest-unequal": {
+    "reference": "baseline-nba-neutral",
+    "n": 200,
+    "meanMarginDelta": 1.44,
+    "CI95": [
+      -0.18932147026525636,
+      3.0693214702652565
+    ]
+  },
+  "candidate-nba-crowd-high": {
+    "reference": "baseline-nba-crowd-high",
+    "n": 300,
+    "meanMarginDelta": 0.2733333333333333,
+    "CI95": [
+      -1.188974597012134,
+      1.7356412636788008
+    ]
+  },
+  "baseline-nba-no-physical": {
+    "reference": "baseline-nba-neutral",
+    "n": 300,
+    "meanMarginDelta": 0.23333333333333334,
+    "CI95": [
+      -1.1848474641792037,
+      1.6515141308458705
+    ]
+  },
+  "baseline-nba-fast-slow": {
+    "reference": "baseline-nba-neutral",
+    "n": 200,
+    "meanMarginDelta": 0.295,
+    "CI95": [
+      -1.4479611676568698,
+      2.03796116765687
+    ]
+  },
+  "baseline-nba-rest-home2": {
+    "reference": "baseline-nba-neutral",
+    "n": 200,
+    "meanMarginDelta": 1.615,
+    "CI95": [
+      -0.03106213032328209,
+      3.261062130323282
+    ]
+  },
+  "baseline-wnba-home": {
+    "reference": "baseline-wnba-neutral",
+    "n": 300,
+    "meanMarginDelta": 0.56,
+    "CI95": [
+      -0.5766274424065525,
+      1.6966274424065526
+    ]
+  },
+  "baseline-nba-shallow": {
+    "reference": "baseline-nba-neutral",
+    "n": 300,
+    "meanMarginDelta": 3.76,
+    "CI95": [
+      2.0738589030582326,
+      5.446141096941767
+    ]
+  },
+  "candidate-wnba-crowd-high": {
+    "reference": "baseline-wnba-crowd-high",
+    "n": 300,
+    "meanMarginDelta": -0.9166666666666666,
+    "CI95": [
+      -2.337792553272624,
+      0.5044592199392907
+    ]
+  },
+  "candidate-wnba-crowd-low": {
+    "reference": "baseline-wnba-crowd-low",
+    "n": 300,
+    "meanMarginDelta": -0.49666666666666665,
+    "CI95": [
+      -1.8336329258108264,
+      0.8402995924774932
+    ]
+  },
+  "baseline-wnba-fast-slow": {
+    "reference": "baseline-wnba-neutral",
+    "n": 200,
+    "meanMarginDelta": 1.665,
+    "CI95": [
+      0.0514754449813164,
+      3.2785245550186835
+    ]
+  },
+  "baseline-nba-no-fatigue": {
+    "reference": "baseline-nba-neutral",
+    "n": 300,
+    "meanMarginDelta": 0.03,
+    "CI95": [
+      -1.0077687988713158,
+      1.0677687988713158
+    ]
+  },
+  "baseline-wnba-crowd-low": {
+    "reference": "baseline-wnba-neutral",
+    "n": 300,
+    "meanMarginDelta": 0.9033333333333333,
+    "CI95": [
+      -0.14321875858563193,
+      1.9498854252522986
+    ]
+  },
+  "baseline-wnba-deep": {
+    "reference": "baseline-wnba-neutral",
+    "n": 300,
+    "meanMarginDelta": 1.0133333333333334,
+    "CI95": [
+      -0.3289550466073632,
+      2.3556217132740302
+    ]
+  },
+  "baseline-wnba-altitude": {
+    "reference": "baseline-wnba-neutral",
+    "n": 300,
+    "meanMarginDelta": 0.68,
+    "CI95": [
+      -0.538975700128098,
+      1.8989757001280982
+    ]
+  },
+  "baseline-wnba-crowd-high": {
+    "reference": "baseline-wnba-neutral",
+    "n": 300,
+    "meanMarginDelta": 1.1266666666666667,
+    "CI95": [
+      -0.16258680834865902,
+      2.415920141681992
+    ]
+  },
+  "baseline-wnba-starters-v-balanced": {
+    "reference": "baseline-wnba-neutral",
+    "n": 200,
+    "meanMarginDelta": 0.775,
+    "CI95": [
+      -0.8863404393068813,
+      2.4363404393068815
+    ]
+  },
+  "candidate-wnba-altitude": {
+    "reference": "baseline-wnba-altitude",
+    "n": 300,
+    "meanMarginDelta": 0.4766666666666667,
+    "CI95": [
+      -0.7713962968757114,
+      1.724729630209045
+    ]
+  },
+  "baseline-wnba-rest-unequal": {
+    "reference": "baseline-wnba-neutral",
+    "n": 200,
+    "meanMarginDelta": 1.075,
+    "CI95": [
+      -0.41244051019083905,
+      2.562440510190839
+    ]
+  },
+  "baseline-wnba-no-fatigue": {
+    "reference": "baseline-wnba-neutral",
+    "n": 300,
+    "meanMarginDelta": 0.8133333333333334,
+    "CI95": [
+      0.1791301607186031,
+      1.4475365059480636
+    ]
+  },
+  "baseline-nba-starters-v-balanced": {
+    "reference": "baseline-nba-neutral",
+    "n": 200,
+    "meanMarginDelta": 3.025,
+    "CI95": [
+      1.2897179207770393,
+      4.760282079222961
+    ]
+  },
+  "baseline-wnba-short": {
+    "reference": "baseline-wnba-neutral",
+    "n": 300,
+    "meanMarginDelta": 0.9333333333333333,
+    "CI95": [
+      -0.4408759618322031,
+      2.3075426284988696
+    ]
+  },
+  "baseline-wnba-fast-fast": {
+    "reference": "baseline-wnba-neutral",
+    "n": 200,
+    "meanMarginDelta": 0.9,
+    "CI95": [
+      -0.646304682413615,
+      2.446304682413615
+    ]
+  },
+  "baseline-nba-fast-fast": {
+    "reference": "baseline-nba-neutral",
+    "n": 200,
+    "meanMarginDelta": 2.09,
+    "CI95": [
+      0.20997294598745309,
+      3.9700270540125464
+    ]
+  }
+}

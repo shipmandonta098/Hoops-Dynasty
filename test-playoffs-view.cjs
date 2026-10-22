@@ -1,0 +1,12 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const element={style:{},classList:{add(){},remove(){},toggle(){}},addEventListener(){},querySelectorAll(){return []},setAttribute(){},removeAttribute(){},showModal(){},close(){},innerHTML:''};
+const context={console,Math:Object.create(Math),setTimeout,clearTimeout,localStorage:{getItem(){return null}},document:{getElementById(){return element},addEventListener(){},querySelectorAll(){return []},documentElement:element,body:element},window:{addEventListener(){},scrollTo(){}},assert};vm.createContext(context);
+for(const [,script] of fs.readFileSync('dist/index.html','utf8').matchAll(/<script src="([^"]+)"/g))vm.runInContext(fs.readFileSync('dist/'+script,'utf8').replace('careerReady=initializeCareers();',''),context,{filename:script});
+vm.runInContext(`
+state=validateCareerData(fresh(defaultTeams().slice(0,4),1));render=()=>{};save=()=>{};showResult=()=>{};ownerCanManage=()=>true;ownerTrack=()=>{};ownerDay=()=>{};ownerFinalize=()=>{};ownerNewSeason=()=>{};
+const original=JSON.stringify(state);assert(playoffsView().includes('Projected seeds'));assert(playoffsView().includes('Single elimination'));assert.equal(JSON.stringify(state),original);assert(Math.abs(playoffOdds().reduce((n,r)=>n+r.chance,0)-1)<.000001);
+for(const tab of ['bracket','games','teams','players','champions']){switchPlayoffTab(tab);assert(playoffsView().length>500)}
+sim(seasonLength());playoffs();assert.equal(playoffGames().length,3);assert(state.champion!==null);assert(playoffBracket().includes('View results'));assert(playoffStats().includes('OPPG'));assert(playoffStats(true).includes('PPG'));assert(playoffChampions().includes(state.teams[state.champion].name));assert.equal(playoffOdds().filter(r=>r.chance===1).length,1);
+archivePlayoffChampion();archivePlayoffChampion();assert.equal(state.championsArchive.length,1);const loaded=validateCareerData(copy(state));assert.deepEqual(loaded.championsArchive,state.championsArchive);newSeason();assert.equal(state.championsArchive.length,1);assert.equal(playoffGames().length,0);assert(playoffChampions().includes(String(state.year-1)));assert.throws(()=>readChampionsArchive([{year:2026,name:''}],m=>{throw Error(m)}));
+console.log('PASS: projected bracket, nonmutating views, all sub-tabs, championship results/stats, normalized estimates, archive persistence and next-season retention.');
+`,context);

@@ -1,0 +1,7 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const element={style:{},classList:{add(){},remove(){},toggle(){}},addEventListener(){},querySelectorAll(){return []},setAttribute(){},removeAttribute(){},showModal(){},close(){},innerHTML:''};
+const context={console,Math:Object.create(Math),setTimeout,clearTimeout,localStorage:{getItem(){return null}},document:{getElementById(){return element},addEventListener(){},querySelectorAll(){return []},documentElement:element,body:element},window:{addEventListener(){},scrollTo(){}},assert};vm.createContext(context);
+for(const [,script] of fs.readFileSync('dist/index.html','utf8').matchAll(/<script src="([^"]+)"/g))vm.runInContext(fs.readFileSync('dist/'+script,'utf8').replace('careerReady=initializeCareers();',''),context,{filename:script});
+vm.runInContext(`
+state=validateCareerData(fresh(defaultTeams(),82));const before=JSON.stringify(state);assert.equal(standingsGroups().length,2);assert(standings().includes('Eastern Conference'));standingsGrouping='division';const groups=standingsGroups();assert.equal(groups.length,6);assert(groups.every(g=>g.teams.length===5));assert.equal(new Set(groups.flatMap(g=>g.teams.map(t=>t.id))).size,30);assert(standings().includes('Atlantic Division'));assert(standings().includes('aria-pressed="true"'));assert.equal(JSON.stringify(state),before);console.log('PASS: conference/division grouping, 30 unique teams, toggle markup and unchanged career state');
+`,context);

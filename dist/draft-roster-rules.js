@@ -1,0 +1,7 @@
+function rosterMinimum(){return leagueRules().rosterMin}
+function rosterMaximum(){return leagueRules().rosterMax}
+function draftRoundCount(d=state.draft){return d?(d.rounds||2):leagueRules().draftRounds}
+function draftPoolSize(count,rounds){return Math.max(40,count*(rounds+1))}
+function draftBaseOrder(d){const count=state.teams.length,later=d.laterOrder||rank().slice().reverse().map(t=>t.id);return Array.from({length:draftRoundCount(d)},(_,r)=>r===0?d.order:d.type==='snake'?(r%2?[...d.order].reverse():d.order):later).flat()}
+function draftLotteryDescription(){const r=leagueRules();return r.lotteryMode==='record'?'Reverse standings in every round.':r.lotteryMode==='random'?'Random first-round order across all teams; later rounds follow reverse standings.':r.lotteryMode==='snake'?'Reverse standings to start; the order reverses each round.':`${r.lotteryMode==='equal'?'Equal-chance':r.lotteryMode==='custom'?'Custom weighted':'Weighted'} lottery for up to ${r.lotterySelections} first-round selections among non-playoff teams.`}
+const rosterDraftReadForm=readLeagueSettingsForm;readLeagueSettingsForm=function(v){const before=leagueRules(),next=rosterDraftReadForm(v);if(next.draftRounds<before.draftRounds&&(state.tradePickOwners||[]).some(p=>p.year>=state.year&&p.round>next.draftRounds&&p.owner!==p.origin))throw Error('Cannot remove rounds containing already traded future picks.');return next};

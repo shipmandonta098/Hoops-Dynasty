@@ -1,0 +1,75 @@
+{
+  "parentCommit": "cf8e0533593be4920ee22042f205a7480db86795",
+  "fixture": {
+    "creationSeed": 61005,
+    "games": 150,
+    "gameSeeds": "100000–100149",
+    "teams": 30,
+    "playersPerTeam": 15,
+    "preseasonReset": true
+  },
+  "productionSourceMatchesCandidate": true,
+  "productionReproduction": "EXACT MATCH",
+  "fullGameAndStateParity": 150,
+  "unchangedGames": 142,
+  "metrics": {
+    "PPG": 122.85333333333334,
+    "pace": 102.38,
+    "ORtg": 119.99739532460767,
+    "two": 55.65022421524664,
+    "three": 38.35526929898255,
+    "TOV": 13.103333333333333,
+    "OREB": 12.633333333333333,
+    "blocks": 3.1366666666666667,
+    "fouls": 13.563333333333333,
+    "RunningFG": 66.32478632478632
+  },
+  "totals": {
+    "pts": 36856,
+    "poss": 30714,
+    "defPoss": 30714,
+    "fgm": 14037,
+    "fga": 28553,
+    "tpm": 4109,
+    "tpa": 10713,
+    "ftm": 4673,
+    "fta": 6087,
+    "tov": 3931,
+    "orb": 3790,
+    "drb": 11310,
+    "blk": 941,
+    "pf": 4069,
+    "mp": 72050.01099999998
+  },
+  "running": {
+    "evaluations": 626,
+    "FGA": 585,
+    "makes": 388,
+    "below14": 0,
+    "tempoOnly": 0,
+    "PNR": 0
+  },
+  "earlyThrees": {
+    "evaluations": 2153,
+    "FGA": 1981,
+    "makes": 720
+  },
+  "tokens": {
+    "consumed": 12767,
+    "unused: period boundary": 200,
+    "unused: game ended": 67
+  },
+  "scheduledSlots": 30714,
+  "gameWindowsAndPeriods": "EXACT BASELINE MATCH, every game",
+  "ownershipMismatches": 0,
+  "wrongSideTokens": 0,
+  "wrongTeamEventAdvantage": 0,
+  "controls": 16,
+  "unchangedShotControls": 32,
+  "regressions": {
+    "possession": "PASS",
+    "headless": "PASS",
+    "rules": "PASS"
+  },
+  "runtimeSeconds": 76.067798688
+}

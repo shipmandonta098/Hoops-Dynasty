@@ -1,0 +1,12 @@
+{
+  "baselineCommit": "48d22fc668ff4c06c445bfcf119f025fffb335fe",
+  "files": {
+    "dist/attributes.js": "e88e81ea4f3ab1300227d7e8a010f969f87708583fba0316436d85a398f0c481",
+    "dist/statistical-balance.js": "96b7582f14e0ac87c00ff639329a2b75256279d5b1e71b62eb8910f60b3a369a",
+    "dist/possession-engine.js": "89501c5ce803b59c0284025e2cf74bea21403ac145d78574f3d563a0d1c34aea",
+    "dist/tendencies.js": "55bfe0421103924f777db0524aba301e4936d6dd2462ea02966a1bf4fd52f10b",
+    "dist/pick-and-roll.js": "1a93f5f5730b7a47ad9468fc309339da6ca0daf0f351d404fcf76816e3ed31f1",
+    "dist/index.html": "a7db5a9401e0c9c587b31d65b9b3aa81b46ee1b671e8cf355547019768530241"
+  },
+  "note": "Final full-season rerun includes retained-possession foul-out defender refresh and historical WNBA defensive resets. Candidate season data are excluded from final comparison."
+}

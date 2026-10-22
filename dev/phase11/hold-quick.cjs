@@ -1,0 +1,1 @@
+module.exports=(name,s)=>{s=require('../phase9/hold-variant.cjs')(name,s);const old=process.env.P10_LATE;process.env.P10_LATE='quick';try{return require('../phase10/late-variant.cjs')(name,s)}finally{if(old===undefined)delete process.env.P10_LATE;else process.env.P10_LATE=old}};

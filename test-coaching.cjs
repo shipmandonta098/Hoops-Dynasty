@@ -1,0 +1,31 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const element={style:{},classList:{add(){},remove(){},toggle(){}},addEventListener(){},querySelectorAll(){return []},setAttribute(){},removeAttribute(){},showModal(){},close(){},innerHTML:''};
+const context={console,Math:Object.create(Math),setTimeout,clearTimeout,localStorage:{getItem(){return null}},document:{getElementById(){return element},addEventListener(){},querySelectorAll(){return []},documentElement:element,body:element},window:{addEventListener(){},scrollTo(){}},assert};
+vm.createContext(context);
+const scripts=[...fs.readFileSync('dist/index.html','utf8').matchAll(/<script src="([^"]+)"/g)].map(m=>m[1]);
+for(const script of scripts)vm.runInContext(fs.readFileSync('dist/'+script,'utf8').replace('careerReady=initializeCareers();',''),context,{filename:script});
+vm.runInContext(`
+state=validateCareerData(fresh());
+assert.equal(state.teams.length,30);assert(state.teams.every(t=>t.coach.assistants.length===2));
+assert(new Set(state.teams.map(t=>t.coach.name)).size>20);
+const original=JSON.stringify(state);assert.deepEqual(validateCareerData(JSON.parse(original)),JSON.parse(original));
+const corrupt=JSON.parse(original);corrupt.teams[0].coach.attributes.offense=1000;assert.throws(()=>validateCareerData(corrupt));
+const c=team(),p=c.roster[0];p.injuredUntil=moraleStamp()+3;
+assert.equal(playerMinutes(p,c),0);assert.equal(c.roster.reduce((n,q)=>n+playerMinutes(q,c),0),240);assert(c.roster.every(q=>playerMinutes(q,c)<=48));
+const r=play(0,1);assert.equal(r.box.find(q=>q.playerId===p.id).played,false);assert.equal(p.gp,0);
+for(const t of [state.teams[0],state.teams[1]])assert.equal(r.box.filter(q=>q.team===t.abbr).reduce((n,q)=>n+q.pts,0),t.id===0?r.sa:r.sb);
+assert(Number.isFinite(r.sa)&&Number.isFinite(r.sb));assert(r.coachEvents.length<=8);
+state=validateCareerData(fresh());
+for(let day=0;day<4;day++){for(const [a,b] of state.schedule[state.day])play(a,b);state.day++}
+const reloaded=validateCareerData(JSON.parse(JSON.stringify(state)));assert.deepEqual(reloaded.teams[0].coach,state.teams[0].coach);assert.deepEqual(reloaded.history[0].coachEvents,state.history[0].coachEvents);
+assert(state.history.every(r=>r.box.every(p=>Object.values(p).filter(x=>typeof x==='number').every(Number.isFinite))));
+const young=team().roster[0];young.age=20;young.ovr=65;young.pot=95;const oldRandom=Math.random;Math.random=()=>0;
+team().coach.attributes.teaching=99;const highGrowth=traitDevelopment(young,team(),1);team().coach.attributes.teaching=1;assert(highGrowth>traitDevelopment(young,team(),1));
+team().coach.attributes.scouting=99;assert.equal(coachScoutedRating(young,'tp').value,young.attributes.tp);team().coach.attributes.scouting=1;assert(coachScoutedRating(young,'tp').range>0);
+team().coach.attributes.charisma=99;assert(coachMeetingChance(team())>.7);assert(coachDiscount(team())>0);
+team().coach.type='Developmental';const devValue=coachTradeValue(young,team());team().coach.type='Win-Now';assert(devValue>coachTradeValue(young,team()));
+Math.random=oldRandom;
+openCoachProfile(0);assert(document.getElementById('profile').innerHTML.includes('Personality / System Archetypes'));
+rosterTeamId=1;assert(roster().includes(state.teams[1].coach.name));
+console.log('PASS: 30 coaching staffs, migration/save validation, injuries/rotation, 61 simulations, score integrity, development, scouting, recruiting, trade preferences and profiles.');
+`,context);

@@ -1,0 +1,482 @@
+[
+  {
+    "league": "nba",
+    "id": "0022400001",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400032",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400032&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400064",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400064&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400095",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400095&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400127",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400127&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400158",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400158&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400190",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400190&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400221",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400221&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400253",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400253&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400284",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400284&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400316",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400316&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400347",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400347&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400379",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400379&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400410",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400410&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400442",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400442&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400473",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400473&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400505",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400505&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400536",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400536&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400568",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400568&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400599",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400599&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400631",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400631&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400662",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400662&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400694",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400694&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400725",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400725&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400757",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400757&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400788",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400788&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400820",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400820&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400851",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400851&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400883",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400883&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400914",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400914&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400946",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400946&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022400977",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022400977&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022401009",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022401009&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022401040",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022401040&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022401072",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022401072&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022401103",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022401103&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022401135",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022401135&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022401166",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022401166&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022401198",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022401198&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "nba",
+    "id": "0022401230",
+    "url": "https://stats.nba.com/stats/playbyplayv3?GameID=0022401230&StartPeriod=0&EndPeriod=0",
+    "ok": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400001",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400007",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400013",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400019",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400025",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400031",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400037",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400043",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400050",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400056",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400062",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400068",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400074",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400080",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400086",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400092",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400099",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400105",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400111",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400117",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400123",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400129",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400135",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400141",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400148",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400154",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400160",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400166",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400172",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400178",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400184",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400190",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400197",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400203",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400209",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400215",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400221",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400227",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400233",
+    "ok": true,
+    "retained": true
+  },
+  {
+    "league": "wnba",
+    "id": "1022400240",
+    "ok": true,
+    "retained": true
+  }
+]

@@ -1,0 +1,25 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const elements=new Map();const getElement=id=>{if(!elements.has(id))elements.set(id,{dataset:{},style:{},classList:{add(){},remove(){},toggle(){}},addEventListener(){},querySelectorAll(){return []},setAttribute(){},removeAttribute(){},showModal(){},close(){},innerHTML:''});return elements.get(id)};
+const badges=[];const context={console,Math:Object.create(Math),setTimeout,clearTimeout,localStorage:{getItem(){return null}},document:{getElementById:getElement,addEventListener(){},querySelectorAll(selector){return selector==='[data-rotation-minutes]'?badges:[]},documentElement:getElement('root'),body:getElement('body')},window:{addEventListener(){},scrollTo(){}},assert,badges};vm.createContext(context);
+for(const [,script] of fs.readFileSync('dist/index.html','utf8').matchAll(/<script src="([^"]+)"/g))vm.runInContext(fs.readFileSync('dist/'+script,'utf8').replace('careerReady=initializeCareers();',''),context,{filename:script});
+vm.runInContext(`(async()=>{
+ state=validateCareerData(fresh());render=()=>{};toast=()=>{};save=async()=>true;
+ const original=JSON.stringify(state);autoAllocateRotation();assert.equal(JSON.stringify(state),original);
+ let plan=draftRotation();const player=team().roster.find(p=>plan.targets[p.id]>0),before=plan.targets[player.id];badges.push({dataset:{rotationMinutes:String(player.id)}});
+ rotationChangeTarget(player.id,String(before-1));assert.equal(rotationAllocationStatus(plan).label,'INCOMPLETE');assert(document.getElementById('rotation-apply').disabled);assert.equal(badges[0].textContent,(before-1)+'m');
+ rotationChangeTarget(player.id,String(before+1));assert.equal(rotationAllocationStatus(plan).label,'INVALID');
+ rotationChangeTarget(player.id,String(before));assert.equal(rotationAllocationStatus(plan).label,'COMPLETE');assert(!document.getElementById('rotation-apply').disabled);
+ const a=plan.depth.PG[0],b=plan.depth.SG[0];rotationChangeDepth('PG',0,String(b));assert.equal(plan.depth.PG[0],b);assert.equal(plan.depth.SG[0],a);
+ rotationChangeDepth('PG',2,'');assert.equal(plan.depth.PG[2],null);
+ assert.equal(JSON.stringify(state),original,'Draft interactions never mutate simulation state');resetRotationDraft();assert.equal(JSON.stringify(state),original);
+ autoAllocateRotation();plan=draftRotation();plan.staggerStars=true;plan.foulThreshold=3;updateRotationPreview();
+ const appliedTargets=JSON.stringify(plan.targets);await applyRotationPlan();assert(team().rotationPlan.staggerStars);assert.equal(team().rotationPlan.foulThreshold,3);
+ assert.equal(JSON.stringify(Object.fromEntries(team().roster.map(p=>[p.id,p.rotationMinutes]))),appliedTargets);
+ const live=JSON.stringify(state);rotationChangeTarget(team().roster[0].id,'0');resetRotationDraft();assert.equal(JSON.stringify(state),live);assert.equal(rotationAllocationStatus(draftRotation()).label,'COMPLETE');
+ clearRotationMinutes();assert.equal(rotationAllocationStatus(draftRotation()).total,0);await applyRotationPlan();assert.equal(JSON.stringify(state),live,'Invalid draft cannot apply');resetRotationDraft();
+ const html=rotationsView();assert.equal((html.match(/class="rotation-depth-select"/g)||[]).length,15);assert.equal(html.split('Reserve / Deep Bench').length-1,5);assert.equal((html.match(/class="rotation-quarter"/g)||[]).length,team().roster.length*4);
+ for(const label of ['Auto-Allocate Minutes','Clear All','Copy to Simulation','Reset Draft','Stagger Stars','Q1 foul threshold','Sit until halftime','Starting Five &amp; Depth','Minutes &amp; Roles','Planned Playing Time'])assert(html.includes(label),label);
+ assert(!html.includes('<table'));assert(html.includes('Fallback'));
+ save=async()=>false;autoAllocateRotation();draftRotation().foulThreshold=2;await applyRotationPlan();assert.equal(JSON.stringify(state),live,'Failed save rolls back simulation state');
+ console.log('PASS: UI commands, minute status and badge updates, 15 depth selectors, reserve coverage, starter swaps, draft isolation/reset, apply/reload settings, invalid apply rejection, save rollback, full 48-minute timeline.');
+})()`,context).catch(e=>{console.error(e);process.exitCode=1});

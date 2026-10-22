@@ -1,0 +1,223 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Hoops Dynasty Decision Log Module",
+  "type": "object",
+  "required": [
+    "entries",
+    "agentTrust",
+    "fanSentiment",
+    "chemistry",
+    "payroll"
+  ],
+  "properties": {
+    "entries": {
+      "type": "array",
+      "maxItems": 100000,
+      "items": {
+        "$ref": "#/$defs/decision"
+      }
+    },
+    "agentTrust": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "fanSentiment": {
+      "type": "integer",
+      "minimum": -20,
+      "maximum": 20
+    },
+    "chemistry": {
+      "type": "integer",
+      "minimum": -15,
+      "maximum": 15
+    },
+    "payroll": {
+      "type": "object",
+      "required": [
+        "amount",
+        "capSpace"
+      ],
+      "properties": {
+        "amount": {
+          "type": "number",
+          "minimum": 0
+        },
+        "capSpace": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "decision": {
+      "type": "object",
+      "required": [
+        "id",
+        "date",
+        "season",
+        "teamRecord",
+        "ownerMood",
+        "type",
+        "description",
+        "reasoning",
+        "immediateOutcome",
+        "longTermOutcome",
+        "players",
+        "baseline",
+        "grade",
+        "teamKey"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[-a-zA-Z0-9]+$"
+        },
+        "date": {
+          "type": "string",
+          "format": "date"
+        },
+        "season": {
+          "type": "integer",
+          "minimum": 1900,
+          "maximum": 10000
+        },
+        "teamRecord": {
+          "type": "string",
+          "pattern": "^\\d+-\\d+$"
+        },
+        "ownerMood": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "type": {
+          "enum": [
+            "Trade",
+            "Signing",
+            "Release",
+            "Hire",
+            "Fire",
+            "TicketChange",
+            "StrategyShift"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 1000
+        },
+        "reasoning": {
+          "type": "string",
+          "maxLength": 2000
+        },
+        "immediateOutcome": {
+          "type": "object",
+          "required": [
+            "fanReaction",
+            "ownerReaction",
+            "chemistryChange",
+            "capChange"
+          ],
+          "properties": {
+            "fanReaction": {
+              "type": "integer",
+              "minimum": -10,
+              "maximum": 10
+            },
+            "ownerReaction": {
+              "type": "integer",
+              "minimum": -10,
+              "maximum": 10
+            },
+            "chemistryChange": {
+              "type": "integer",
+              "minimum": -10,
+              "maximum": 10
+            },
+            "capChange": {
+              "type": "string",
+              "pattern": "^[+-]\\d+\\.\\d+M$"
+            }
+          },
+          "additionalProperties": false
+        },
+        "longTermOutcome": {
+          "type": "object",
+          "required": [
+            "updated",
+            "notes"
+          ],
+          "properties": {
+            "updated": {
+              "type": "boolean"
+            },
+            "notes": {
+              "type": "string",
+              "maxLength": 3000
+            }
+          },
+          "additionalProperties": false
+        },
+        "players": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 10000000
+              },
+              "name": {
+                "type": "string",
+                "maxLength": 80
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "baseline": {
+          "type": "object",
+          "required": [
+            "wins",
+            "losses"
+          ],
+          "properties": {
+            "wins": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 120
+            },
+            "losses": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 120
+            }
+          },
+          "additionalProperties": false
+        },
+        "grade": {
+          "enum": [
+            null,
+            "A",
+            "B",
+            "C",
+            "D",
+            "F"
+          ]
+        },
+        "teamKey": {
+          "type": "string",
+          "maxLength": 80
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

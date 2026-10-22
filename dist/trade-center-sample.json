@@ -1,0 +1,45 @@
+{
+  "tradeCenter": {
+    "deadline": "2027-02-18",
+    "daysRemaining": 114,
+    "teamsInvolved": [
+      "Memphis Blues",
+      "Atlanta Flame"
+    ],
+    "tradeOffer": {
+      "outgoingPlayers": [
+        {
+          "id": 1,
+          "name": "Elijah Washington",
+          "pos": "PF",
+          "ovr": 86,
+          "salary": 15.9,
+          "age": 27,
+          "contractYears": 2
+        }
+      ],
+      "incomingPlayers": [
+        {
+          "id": 2,
+          "name": "Noah Ellis",
+          "pos": "SG",
+          "ovr": 82,
+          "salary": 13.8,
+          "age": 31,
+          "contractYears": 1
+        }
+      ],
+      "cash": 0,
+      "capImpact": "+2.1M",
+      "fairnessScore": 0.72,
+      "status": "Pending"
+    },
+    "capSpace": 55.6,
+    "capLimit": 195,
+    "salaryCap": 150,
+    "ownerMood": 75,
+    "coachPreference": "Grit & Grind \u00b7 Outside-in",
+    "tradeHistory": [],
+    "decisionLogLink": "/gm-office/decision-log"
+  }
+}

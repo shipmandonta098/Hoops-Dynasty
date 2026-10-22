@@ -1,0 +1,3 @@
+const {spawn}=require('child_process'),fs=require('fs');const seeds=[101,102,103,104,105];let i=0;
+async function worker(){while(i<seeds.length){const seed=seeds[i++];if(fs.existsSync(`dev/balance-audit/phase10-nba-${seed}.json`))continue;await new Promise((resolve,reject)=>{const p=spawn(process.execPath,['dev/audit-phase8-season.cjs','nba',String(seed),'phase10'],{env:{...process.env,HOOPS_VARIANT:'dev/phase10/candidate.cjs'},stdio:'inherit'});p.on('exit',c=>c?reject(Error('seed '+seed+' failed '+c)):resolve())})}}
+Promise.all([worker(),worker(),worker()]).then(()=>console.log('COMPLETE')).catch(e=>{console.error(e);process.exitCode=1});

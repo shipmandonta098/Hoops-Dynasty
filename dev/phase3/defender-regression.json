@@ -1,0 +1,14 @@
+[
+  {
+    "candidate": false,
+    "calls": 1373,
+    "mismatched": 117,
+    "maxDrift": 0.5135273977777786
+  },
+  {
+    "candidate": true,
+    "calls": 1348,
+    "mismatched": 0,
+    "maxDrift": 0
+  }
+]

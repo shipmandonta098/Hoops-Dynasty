@@ -1,0 +1,421 @@
+{
+  "before": {
+    "min": 1,
+    "max": 52.5,
+    "cap": 150,
+    "teams": [
+      {
+        "team": "Atlanta",
+        "payroll": 142200000,
+        "players": [
+          {
+            "name": "Naomi King",
+            "ovr": 85,
+            "salary": 15400000
+          },
+          {
+            "name": "Kayla Grant",
+            "ovr": 83,
+            "salary": 14300000
+          },
+          {
+            "name": "Aaliyah Brooks",
+            "ovr": 79,
+            "salary": 12200000
+          },
+          {
+            "name": "Brianna Hayes",
+            "ovr": 78,
+            "salary": 11700000
+          }
+        ]
+      },
+      {
+        "team": "New York",
+        "payroll": 148000000,
+        "players": [
+          {
+            "name": "Nia Bennett",
+            "ovr": 91,
+            "salary": 18600000
+          },
+          {
+            "name": "Camille Martin",
+            "ovr": 90,
+            "salary": 18000000
+          },
+          {
+            "name": "Chloe Clarke",
+            "ovr": 84,
+            "salary": 14800000
+          },
+          {
+            "name": "Marta García",
+            "ovr": 79,
+            "salary": 12200000
+          }
+        ]
+      },
+      {
+        "team": "Los Angeles",
+        "payroll": 156300000,
+        "players": [
+          {
+            "name": "Chloe Carter",
+            "ovr": 97,
+            "salary": 21700000
+          },
+          {
+            "name": "Amelia Martin",
+            "ovr": 88,
+            "salary": 17000000
+          },
+          {
+            "name": "Lucía Pérez",
+            "ovr": 86,
+            "salary": 15900000
+          },
+          {
+            "name": "Zoe Grant",
+            "ovr": 83,
+            "salary": 14300000
+          }
+        ]
+      }
+    ]
+  },
+  "after": {
+    "min": 0.015,
+    "max": 0.05,
+    "cap": 0.6,
+    "teams": [
+      {
+        "team": "Atlanta",
+        "payroll": 304932,
+        "players": [
+          {
+            "name": "Haley Coleman",
+            "ovr": 88,
+            "salary": 40237
+          },
+          {
+            "name": "Imani Washington",
+            "ovr": 85,
+            "salary": 36462
+          },
+          {
+            "name": "Jasmine Okafor",
+            "ovr": 83,
+            "salary": 34087
+          },
+          {
+            "name": "Aaliyah Brooks",
+            "ovr": 79,
+            "salary": 29687
+          }
+        ]
+      },
+      {
+        "team": "New York",
+        "payroll": 316127,
+        "players": [
+          {
+            "name": "Marta García",
+            "ovr": 93,
+            "salary": 47077
+          },
+          {
+            "name": "Nia Bennett",
+            "ovr": 85,
+            "salary": 36462
+          },
+          {
+            "name": "Isabella King",
+            "ovr": 82,
+            "salary": 32943
+          },
+          {
+            "name": "Paula Romero",
+            "ovr": 82,
+            "salary": 32943
+          }
+        ]
+      },
+      {
+        "team": "Los Angeles",
+        "payroll": 282707,
+        "players": [
+          {
+            "name": "Mia Müller",
+            "ovr": 89,
+            "salary": 41551
+          },
+          {
+            "name": "Renee Young",
+            "ovr": 79,
+            "salary": 29687
+          },
+          {
+            "name": "Camille Bernard",
+            "ovr": 79,
+            "salary": 29687
+          },
+          {
+            "name": "Olivia Williams",
+            "ovr": 77,
+            "salary": 27667
+          }
+        ]
+      }
+    ]
+  },
+  "comparisons": [
+    {
+      "name": "Kayla Grant",
+      "beforeOVR": 83,
+      "afterOVR": 67,
+      "before": 14300000,
+      "after": 19520
+    },
+    {
+      "name": "Aaliyah Brooks",
+      "beforeOVR": 79,
+      "afterOVR": 79,
+      "before": 12200000,
+      "after": 29687
+    },
+    {
+      "name": "Brianna Hayes",
+      "beforeOVR": 78,
+      "afterOVR": 75,
+      "before": 11700000,
+      "after": 25773
+    },
+    {
+      "name": "Danielle Lewis",
+      "beforeOVR": 78,
+      "afterOVR": 76,
+      "before": 11700000,
+      "after": 26704
+    },
+    {
+      "name": "Jasmine Okafor",
+      "beforeOVR": 77,
+      "afterOVR": 83,
+      "before": 11100000,
+      "after": 34087
+    }
+  ],
+  "years": [
+    {
+      "year": 1997,
+      "min": 16021,
+      "max": 50000,
+      "cap": 600000,
+      "capEvidence": "simulation_estimate"
+    },
+    {
+      "year": 1998,
+      "min": 16385,
+      "max": 62500,
+      "cap": 750000,
+      "capEvidence": "simulation_estimate"
+    },
+    {
+      "year": 1999,
+      "min": 27917,
+      "max": 70000,
+      "cap": 840000,
+      "capEvidence": "simulation_estimate"
+    },
+    {
+      "year": 2000,
+      "min": 27937,
+      "max": 75798,
+      "cap": 909576,
+      "capEvidence": "simulation_estimate"
+    },
+    {
+      "year": 2001,
+      "min": 30557,
+      "max": 77500,
+      "cap": 930000,
+      "capEvidence": "simulation_estimate"
+    },
+    {
+      "year": 2002,
+      "min": 32557,
+      "max": 79500,
+      "cap": 954000,
+      "capEvidence": "simulation_estimate"
+    },
+    {
+      "year": 2003,
+      "min": 32186,
+      "max": 83189,
+      "cap": 622000,
+      "capEvidence": "verified"
+    },
+    {
+      "year": 2004,
+      "min": 32842,
+      "max": 87000,
+      "cap": 647000,
+      "capEvidence": "verified"
+    },
+    {
+      "year": 2005,
+      "min": 32885,
+      "max": 89000,
+      "cap": 673000,
+      "capEvidence": "verified"
+    },
+    {
+      "year": 2006,
+      "min": 34858,
+      "max": 91000,
+      "cap": 700000,
+      "capEvidence": "verified"
+    },
+    {
+      "year": 2007,
+      "min": 34167,
+      "max": 93000,
+      "cap": 728000,
+      "capEvidence": "verified"
+    },
+    {
+      "year": 2008,
+      "min": 36264,
+      "max": 95000,
+      "cap": 772000,
+      "capEvidence": "verified"
+    },
+    {
+      "year": 2009,
+      "min": 37647,
+      "max": 97000,
+      "cap": 803000,
+      "capEvidence": "verified"
+    },
+    {
+      "year": 2010,
+      "min": 37720,
+      "max": 99000,
+      "cap": 775000,
+      "capEvidence": "reported_disputed"
+    },
+    {
+      "year": 2011,
+      "min": 38449,
+      "max": 101000,
+      "cap": 852000,
+      "capEvidence": "verified"
+    },
+    {
+      "year": 2012,
+      "min": 39873,
+      "max": 103000,
+      "cap": 878000,
+      "capEvidence": "verified"
+    },
+    {
+      "year": 2013,
+      "min": 41414,
+      "max": 105000,
+      "cap": 913000,
+      "capEvidence": "verified"
+    },
+    {
+      "year": 2014,
+      "min": 40807,
+      "max": 105000,
+      "cap": 901000,
+      "capEvidence": "verified"
+    },
+    {
+      "year": 2015,
+      "min": 40898,
+      "max": 107000,
+      "cap": 919300,
+      "capEvidence": "verified"
+    },
+    {
+      "year": 2016,
+      "min": 41697,
+      "max": 109000,
+      "cap": 937900,
+      "capEvidence": "verified"
+    },
+    {
+      "year": 2017,
+      "min": 42496,
+      "max": 111000,
+      "cap": 956900,
+      "capEvidence": "verified"
+    },
+    {
+      "year": 2018,
+      "min": 43295,
+      "max": 113000,
+      "cap": 976300,
+      "capEvidence": "verified"
+    },
+    {
+      "year": 2019,
+      "min": 45738,
+      "max": 115000,
+      "cap": 996100,
+      "capEvidence": "verified"
+    },
+    {
+      "year": 2020,
+      "min": 63613,
+      "max": 185000,
+      "cap": 1300000,
+      "capEvidence": "verified"
+    },
+    {
+      "year": 2021,
+      "min": 63951,
+      "max": 190550,
+      "cap": 1339000,
+      "capEvidence": "verified"
+    },
+    {
+      "year": 2022,
+      "min": 64430,
+      "max": 196267,
+      "cap": 1379200,
+      "capEvidence": "verified"
+    },
+    {
+      "year": 2023,
+      "min": 66363,
+      "max": 202154,
+      "cap": 1420500,
+      "capEvidence": "verified"
+    },
+    {
+      "year": 2024,
+      "min": 69881,
+      "max": 208219,
+      "cap": 1463200,
+      "capEvidence": "verified"
+    },
+    {
+      "year": 2025,
+      "min": 71978,
+      "max": 214466,
+      "cap": 1507100,
+      "capEvidence": "verified"
+    },
+    {
+      "year": 2026,
+      "min": 307964,
+      "max": 1190000,
+      "cap": 7000000,
+      "capEvidence": "verified"
+    }
+  ]
+}

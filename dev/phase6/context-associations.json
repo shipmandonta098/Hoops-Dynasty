@@ -1,0 +1,38 @@
+{
+  "wnba": {
+    "timeout": {
+      "n": 278,
+      "meanOpponentNetPointsNext6RecordedPossessions": 0.08633093525179857
+    },
+    "substitution": {
+      "n": 7885,
+      "meanOpponentNetPointsNext6RecordedPossessions": 0.009511731135066582
+    },
+    "turnover": {
+      "n": 4147,
+      "meanOpponentNetPointsNext6RecordedPossessions": 0.04075235109717868
+    },
+    "offensiveRebound": {
+      "n": 2704,
+      "meanOpponentNetPointsNext6RecordedPossessions": 0.03661242603550296
+    }
+  },
+  "nba": {
+    "timeout": {
+      "n": 356,
+      "meanOpponentNetPointsNext6RecordedPossessions": -0.12078651685393259
+    },
+    "substitution": {
+      "n": 8758,
+      "meanOpponentNetPointsNext6RecordedPossessions": 0.010047956154373145
+    },
+    "turnover": {
+      "n": 4116,
+      "meanOpponentNetPointsNext6RecordedPossessions": 0.10179786200194363
+    },
+    "offensiveRebound": {
+      "n": 3416,
+      "meanOpponentNetPointsNext6RecordedPossessions": -0.0857728337236534
+    }
+  }
+}

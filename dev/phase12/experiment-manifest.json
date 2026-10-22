@@ -1,0 +1,88 @@
+{
+  "baselineCommit": "26d2ac0fff15429cb679a8c768e77f7ad8ca3009",
+  "baseline": "Accepted Phase 11; retained production snapshots in baseline-dist",
+  "modernScope": "2020 onward; no historical statistical calibration claimed",
+  "seasonRuns": {
+    "label": "phase12port",
+    "league": "wnba",
+    "seeds": [
+      111,
+      112,
+      113,
+      114,
+      115
+    ],
+    "gamesPerSeason": 240,
+    "rulesYear": 2024,
+    "purpose": "five newly generated independent fictional WNBA seasons; team-margin SD vs four real seasons"
+  },
+  "resetSamples": [
+    {
+      "world": 712,
+      "league": "nba",
+      "n": 200,
+      "arms": [
+        "baseline",
+        "pace"
+      ],
+      "paceSetup": 8,
+      "purpose": "pilot only; variant-8second-pilot.cjs; no foul/primary-shot instrumentation"
+    },
+    {
+      "world": 714,
+      "league": "nba",
+      "n": 800,
+      "arms": [
+        "baseline",
+        "pace"
+      ],
+      "paceSetup": 4,
+      "purpose": "fresh paired timing/OT evaluation; foul instrumentation; no primary-shot instrumentation"
+    },
+    {
+      "world": 713,
+      "league": "wnba",
+      "n": 400,
+      "arms": [
+        "port",
+        "hq",
+        "pace"
+      ],
+      "paceSetup": 4,
+      "purpose": "hold+quick and pace OT evaluation; port/hq lack later foul/primary-shot instrumentation"
+    },
+    {
+      "world": 715,
+      "league": "wnba",
+      "n": 160,
+      "arms": [
+        "baseline",
+        "port"
+      ],
+      "purpose": "transition opportunity and primary fast-break FGA counters; includes foul instrumentation"
+    }
+  ],
+  "syntheticEndings": {
+    "league": "wnba",
+    "arms": [
+      "port",
+      "hq"
+    ],
+    "cases": [
+      "tie_60",
+      "tie_30",
+      "tie_20"
+    ],
+    "seeds": "70000\u201371999",
+    "nPerCasePerArm": {
+      "tie_60": 2000,
+      "tie_30": 1000,
+      "tie_20": 1000
+    },
+    "scope": "only tied-start scenarios; full-game OT reported separately; no margin/blowout promotion gates",
+    "samplePlanNote": "Remaining30/20-second cases bounded to1000 before any ending result was inspected; no outcome-dependent stopping. Identical seed ranges within each paired case.",
+    "endpoint": "Tied60 and tied30 use completed full-resolver runs. Tied20 stops the production regulation resolver at the buzzer; equality defines OT entry under unchanged engine rule. 100 paired tied30 samples per arm verify exact endpoint/full-resolver equality.",
+    "driver": "dev/test-phase12-regulation.cjs"
+  },
+  "interpretation": "Reset samples vary game seeds/matchups within one generated universe; not full season or independent league samples. Seed pairing stops assuring identical RNG after a branch diverges. NBA timing explicitly verifies identical scores at60. No forced outcomes or accuracy changes."
+}

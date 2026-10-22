@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Hoops Dynasty Game Atmosphere",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "gameAtmosphere"
+  ],
+  "properties": {
+    "gameAtmosphere": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "attendance",
+        "capacity",
+        "fillRate",
+        "fanEnergy",
+        "ticketPrice",
+        "revenue",
+        "seasonAverageAttendance",
+        "factors",
+        "recentHomeAttendance",
+        "fanSentimentScore",
+        "context"
+      ],
+      "properties": {
+        "attendance": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100000
+        },
+        "capacity": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100000
+        },
+        "fillRate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "fanEnergy": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+        },
+        "ticketPrice": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1000
+        },
+        "revenue": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100000000
+        },
+        "seasonAverageAttendance": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100000
+        },
+        "factors": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "teamPerformance",
+            "opponentQuality",
+            "fanSentiment",
+            "ticketPriceEffect"
+          ],
+          "properties": {
+            "teamPerformance": {
+              "type": "number",
+              "minimum": -1,
+              "maximum": 1
+            },
+            "opponentQuality": {
+              "type": "number",
+              "minimum": -1,
+              "maximum": 1
+            },
+            "fanSentiment": {
+              "type": "number",
+              "minimum": -1,
+              "maximum": 1
+            },
+            "ticketPriceEffect": {
+              "type": "number",
+              "minimum": -1,
+              "maximum": 1
+            }
+          }
+        },
+        "recentHomeAttendance": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 10,
+          "items": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100000
+          }
+        },
+        "fanSentimentScore": {
+          "type": "number",
+          "minimum": -20,
+          "maximum": 20
+        },
+        "context": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "homeWinningStreak",
+            "visitingStar"
+          ],
+          "properties": {
+            "homeWinningStreak": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10
+            },
+            "visitingStar": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 80
+            }
+          }
+        }
+      }
+    }
+  },
+  "$comment": "Cross-field invariants are checked at runtime: attendance <= capacity; fillRate = attendance / capacity; revenue = round(attendance * ticketPrice, 2); fanEnergy = clamp(round(fillRate * 3), 1, 3)."
+}

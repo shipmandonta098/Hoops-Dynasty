@@ -1,0 +1,24 @@
+const assert=require('node:assert/strict'),{loadLeague}=require('./load-league.cjs');
+(async()=>{
+ const l=loadLeague({seed:710,strictDOM:false});l.context.assert=assert;
+ await l.run(`(async()=>{
+ const d=makeDraft();d.gmName='Career GM';d.teams=d.teams.slice(0,6);d.meetings=2;state=validateCareerData(buildSetupCareer(d));render=()=>{};simulationExecution.mode='headless';simulationExecution.autopilot=false;
+ const gmId=gmEnsure().id,teamKeys=state.teams.map(t=>t.key),initialRoster=state.teams.map(t=>t.roster.map(p=>p.id));
+ await sim(1);assert.equal(state.day,1);assert.equal(gmTotals().w+gmTotals().l,team().w+team().l);
+ ownerFor(team()).patience=0;team().owner.fired=true;await save();assert.equal(controlledTeamId(),-1);assert.equal(ownerCanManage(),false);assert(ownerDismissal().includes('Continue GM Career'));assert.equal(state.gmCareer.tenures.length,1);const end=JSON.stringify(state.gmCareer.tenures[0]);
+ const rosterBefore=JSON.stringify(state.teams.map(t=>t.roster));promote(team().roster.at(-1).id);await financeUpgrade();assert.equal(JSON.stringify(state.teams.map(t=>t.roster)),rosterBefore);assert.equal(await submitFreeAgentOffer({preventDefault(){}},state.free[0].id),false);
+ await gmContinueCareer();assert.equal(state.gmCareer.dismissalAcknowledged,true);assert(gmJobsView().includes('Select Team'));
+ await sim(2);assert.equal(state.day,3);assert.equal(JSON.stringify(state.gmCareer.tenures[0]),end,'former GM record frozen while former franchise plays');assert.deepEqual(state.teams.map(t=>t.key),teamKeys);assert(state.history.some(g=>g.a===0||g.b===0));
+ // Make an actual AI owner vacancy, then let the model generate/review its offer.
+ const destination=state.teams[2];ownerFor(destination).patience=0;destination.owner.fired=true;state.gmCareer.marketEpoch=null;gmRefreshJobs();const job=state.gmCareer.jobs.find(j=>j.teamId===2&&j.expires>=gmStamp());assert(job);state.gmCareer.reputation=95;await gmApply(job.id);assert.equal(job.status,'Interested in Hiring');
+ const assets=JSON.stringify({rosters:state.teams.map(t=>t.roster),picks:state.tradePickOwners,history:state.history,schedule:state.schedule}),day=state.day,totals=gmTotals();
+ await gmAccept(job.id);assert.equal(controlledTeamId(),2);assert.equal(team(),destination);assert.equal(state.day,day);assert.equal(JSON.stringify({rosters:state.teams.map(t=>t.roster),picks:state.tradePickOwners,history:state.history,schedule:state.schedule}),assets);assert.deepEqual(gmTotals(),totals);assert.equal(state.gmCareer.id,gmId);assert.equal(rosterTeamId,2);assert.equal(managedTeamId,2);assert.equal(playerContext(destination.roster[0].id).own,true);assert.equal(playerContext(state.teams[0].roster[0].id).own,false);assert.equal(financeFor(),state.finances[2]);assert.notEqual(currentTradeDraft().club,2);assert(gmTeamBanner().includes(destination.name.toUpperCase()));
+ const restored=validateCareerData(JSON.parse(JSON.stringify(state)));assert.equal(JSON.stringify(restored.gmCareer),JSON.stringify(state.gmCareer));state=restored;assert.equal(controlledTeamId(),2);assert.equal(team().key,destination.key);await sim(2);assert.equal(JSON.stringify(state.gmCareer.tenures[0]),end);
+ // Idempotent firing, repeat tenure, rejected application, returning to prior franchise.
+ ownerFor(team()).patience=0;team().owner.fired=true;await save();await save();assert.equal(state.gmCareer.tenures.length,2);assert.equal(state.gmCareer.status,'unemployed');await gmContinueCareer();state.gmCareer.marketEpoch=null;ownerFor(state.teams[3]).patience=0;state.teams[3].owner.fired=true;gmRefreshJobs();const reject=state.gmCareer.jobs.find(j=>j.teamId===3&&j.expires>=gmStamp());state.gmCareer.reputation=0;await gmApply(reject.id);assert.equal(reject.status,'Not Interested');assert.equal(controlledTeamId(),-1);
+ const saved=JSON.parse(JSON.stringify(state));assert.equal(JSON.stringify(validateCareerData(saved).gmCareer),JSON.stringify(saved.gmCareer));const invalid=copy(saved);invalid.gmCareer.teamId=999;invalid.gmCareer.status='employed';assert.throws(()=>validateCareerData(invalid),/GM career/);
+ // Legacy migration preserves all players/contracts and never awards invented prior achievements.
+ const legacy=copy(saved);delete legacy.gmCareer;const select=s=>s.teams.map(t=>t.roster.map(p=>({id:p.id,name:p.name,salary:p.salary,contractThrough:p.contractThrough,pts:p.pts,reb:p.reb,ast:p.ast})));const players=JSON.stringify(select(legacy));const migrated=validateCareerData(legacy);assert.equal(JSON.stringify(select(migrated)),players);assert(migrated.gmCareer.legacyPartial);assert.equal(migrated.gmCareer.tenures.length,1);
+ })()`);
+ console.log('PASS GM firing, unemployment permissions, actual daily games, vacancy/application/rejection/hiring, stable IDs/assets, dashboard context, repeated firing, save/load and legacy migration');
+})().catch(e=>{console.error(e.stack?.slice(0,1500));process.exitCode=1});

@@ -1,0 +1,51 @@
+PASS synthetic recognition: 1/2/3 point winners, lost clutch leads, OT ties, exact buzzer timing, early permanent leads, defensive credit, later possession rejection, live visibility, comeback, Finals/clinch context, observed records, publication idempotence, JSON/validation, archive navigation
+PASS 40 actual games: deterministic current-engine results and boxes; event provenance, final permanent leads and live prefixes verified
+[
+  {
+    "gender": "male",
+    "periods": 4,
+    "games": 10,
+    "eligibleHighlights": 0,
+    "decisiveWinners": 10,
+    "defensiveSeals": 0,
+    "overtimes": 0
+  },
+  {
+    "gender": "male",
+    "periods": 2,
+    "games": 10,
+    "eligibleHighlights": 4,
+    "decisiveWinners": 10,
+    "defensiveSeals": 1,
+    "overtimes": 0
+  },
+  {
+    "gender": "female",
+    "periods": 4,
+    "games": 10,
+    "eligibleHighlights": 7,
+    "decisiveWinners": 10,
+    "defensiveSeals": 0,
+    "overtimes": 1
+  },
+  {
+    "gender": "female",
+    "periods": 2,
+    "games": 10,
+    "eligibleHighlights": 3,
+    "decisiveWinners": 10,
+    "defensiveSeals": 0,
+    "overtimes": 0
+  }
+]
+PASS production day progression, career save/load and repeat finalization
+PASS single/second technical, paired technicals, offset penalties, ejections, FF1/FF2, live visibility, one row per paired call and validation
+PASS male production simulation, foul-event/box totals and save/load { games: 13, techs: 3, flagrants: 3 }
+PASS female production simulation, foul-event/box totals and save/load { games: 13, techs: 3, flagrants: 0 }
+TOTAL {"games":26,"techs":6,"flagrants":3}
+PASS 30 fatigued full games: secondary shooting and block inputs use finite effective ratings; permanent attributes preserved; scores, boxes and event totals agree. 1007
+
+PASS baseline-version save loads with completed scores, boxes and summary events unchanged
+
+PASS male 5 forced non-bonus disqualifications: replacement defender, box row and stamina used on the retained possession
+PASS female 5 forced non-bonus disqualifications: replacement defender, box row and stamina used on the retained possession

@@ -1,0 +1,1 @@
+const {spawn}=require('child_process');Promise.all(['production','combined'].map(m=>new Promise((res,rej)=>{const p=spawn(process.execPath,['dev/test-phase11-bonus.cjs','nba',m],{stdio:'inherit'});p.on('exit',c=>c!==0?rej(Error(m)):res())}))).catch(e=>{console.error(e);process.exitCode=1});

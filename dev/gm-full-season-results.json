@@ -1,0 +1,18 @@
+[
+  {
+    "league": "nba",
+    "teams": 30,
+    "regularGames": 1230,
+    "playoffGames": 86,
+    "seconds": 303.9,
+    "status": "passed"
+  },
+  {
+    "league": "wnba",
+    "teams": 12,
+    "regularGames": 264,
+    "playoffGames": 10,
+    "seconds": 134.893,
+    "status": "passed"
+  }
+]

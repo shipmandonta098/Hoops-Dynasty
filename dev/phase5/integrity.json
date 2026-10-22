@@ -1,0 +1,26 @@
+[
+  {
+    "gender": "male",
+    "periods": 16,
+    "score": [
+      30,
+      29
+    ],
+    "minutes": 540,
+    "test": "10 zero-accuracy overtime periods followed by restored ordinary accuracy; no forced winner"
+  },
+  {
+    "gender": "female",
+    "periods": 15,
+    "score": [
+      12,
+      9
+    ],
+    "minutes": 475,
+    "test": "10 zero-accuracy overtime periods followed by restored ordinary accuracy; no forced winner"
+  },
+  {
+    "test": "20 identical-seed games before/after buzzer label correction",
+    "scoreBoxSummaryUnchanged": true
+  }
+]

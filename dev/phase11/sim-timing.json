@@ -1,0 +1,24 @@
+{
+  "sourceGames": 1000,
+  "closeGames": 313,
+  "meanStartsFinal60": 5.220447284345048,
+  "completedDurationsN": 1321,
+  "meanDuration": 10.900393641180921,
+  "medianDuration": 10,
+  "tiedUnder24WithShot": 22,
+  "tiedLastShotUnder4": 15,
+  "durationByState": {
+    "tied": {
+      "n": 78,
+      "mean": 13.6358974358974
+    },
+    "leading": {
+      "n": 542,
+      "mean": 11.87789667896679
+    },
+    "trailing": {
+      "n": 701,
+      "mean": 9.840228245363766
+    }
+  }
+}

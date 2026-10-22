@@ -1,0 +1,306 @@
+{
+  "nba": {
+    "source": "https://fixturedownload.com/results/nba-2024",
+    "games": 1230,
+    "excluded": [
+      {
+        "date": "18/12/2024 01:30",
+        "home": "Oklahoma City Thunder",
+        "away": "Milwaukee Bucks",
+        "score": [
+          81,
+          97
+        ]
+      }
+    ],
+    "teams": {
+      "Boston Celtics": {
+        "gp": 82,
+        "w": 61,
+        "pts": 9534,
+        "opp": 8787
+      },
+      "New York Knicks": {
+        "gp": 82,
+        "w": 51,
+        "pts": 9494,
+        "opp": 9158
+      },
+      "Los Angeles Lakers": {
+        "gp": 82,
+        "w": 50,
+        "pts": 9298,
+        "opp": 9198
+      },
+      "Minnesota Timberwolves": {
+        "gp": 82,
+        "w": 49,
+        "pts": 9372,
+        "opp": 8962
+      },
+      "Detroit Pistons": {
+        "gp": 82,
+        "w": 44,
+        "pts": 9471,
+        "opp": 9315
+      },
+      "Indiana Pacers": {
+        "gp": 82,
+        "w": 50,
+        "pts": 9624,
+        "opp": 9441
+      },
+      "Atlanta Hawks": {
+        "gp": 82,
+        "w": 40,
+        "pts": 9691,
+        "opp": 9784
+      },
+      "Brooklyn Nets": {
+        "gp": 82,
+        "w": 26,
+        "pts": 8629,
+        "opp": 9201
+      },
+      "Miami Heat": {
+        "gp": 82,
+        "w": 37,
+        "pts": 9069,
+        "opp": 9023
+      },
+      "Orlando Magic": {
+        "gp": 82,
+        "w": 41,
+        "pts": 8645,
+        "opp": 8655
+      },
+      "Philadelphia 76ers": {
+        "gp": 82,
+        "w": 24,
+        "pts": 8985,
+        "opp": 9499
+      },
+      "Milwaukee Bucks": {
+        "gp": 82,
+        "w": 48,
+        "pts": 9472,
+        "opp": 9269
+      },
+      "Toronto Raptors": {
+        "gp": 82,
+        "w": 30,
+        "pts": 9091,
+        "opp": 9443
+      },
+      "Cleveland Cavaliers": {
+        "gp": 82,
+        "w": 64,
+        "pts": 9999,
+        "opp": 9217
+      },
+      "Houston Rockets": {
+        "gp": 82,
+        "w": 52,
+        "pts": 9372,
+        "opp": 9002
+      },
+      "Charlotte Hornets": {
+        "gp": 82,
+        "w": 19,
+        "pts": 8618,
+        "opp": 9365
+      },
+      "New Orleans Pelicans": {
+        "gp": 82,
+        "w": 21,
+        "pts": 9006,
+        "opp": 9779
+      },
+      "Chicago Bulls": {
+        "gp": 82,
+        "w": 39,
+        "pts": 9660,
+        "opp": 9788
+      },
+      "Utah Jazz": {
+        "gp": 82,
+        "w": 17,
+        "pts": 9175,
+        "opp": 9939
+      },
+      "Memphis Grizzlies": {
+        "gp": 82,
+        "w": 48,
+        "pts": 9978,
+        "opp": 9579
+      },
+      "LA Clippers": {
+        "gp": 82,
+        "w": 50,
+        "pts": 9256,
+        "opp": 8874
+      },
+      "Phoenix Suns": {
+        "gp": 82,
+        "w": 36,
+        "pts": 9317,
+        "opp": 9573
+      },
+      "Portland Trail Blazers": {
+        "gp": 82,
+        "w": 36,
+        "pts": 9093,
+        "opp": 9337
+      },
+      "Golden State Warriors": {
+        "gp": 82,
+        "w": 48,
+        "pts": 9331,
+        "opp": 9060
+      },
+      "Washington Wizards": {
+        "gp": 82,
+        "w": 18,
+        "pts": 8856,
+        "opp": 9876
+      },
+      "Dallas Mavericks": {
+        "gp": 82,
+        "w": 39,
+        "pts": 9364,
+        "opp": 9462
+      },
+      "San Antonio Spurs": {
+        "gp": 82,
+        "w": 34,
+        "pts": 9341,
+        "opp": 9568
+      },
+      "Denver Nuggets": {
+        "gp": 82,
+        "w": 50,
+        "pts": 9902,
+        "opp": 9583
+      },
+      "Oklahoma City Thunder": {
+        "gp": 82,
+        "w": 68,
+        "pts": 9881,
+        "opp": 8826
+      },
+      "Sacramento Kings": {
+        "gp": 82,
+        "w": 40,
+        "pts": 9490,
+        "opp": 9451
+      }
+    },
+    "meanMargin": 12.739837398373984,
+    "medianMargin": 10,
+    "maxMargin": 59,
+    "ppg": 113.82682926829268,
+    "homeWinPct": 54.390243902439025,
+    "bins": {
+      "1-5": 25.121951219512194,
+      "6-10": 25.040650406504064,
+      "11-19": 28.78048780487805,
+      "20-29": 14.552845528455284,
+      "30-39": 4.715447154471545,
+      "40-49": 1.3821138211382114,
+      "50-999": 0.4065040650406504
+    }
+  },
+  "wnba": {
+    "source": "https://fixturedownload.com/results/wnba-2024",
+    "games": 240,
+    "excluded": [],
+    "teams": {
+      "Washington Mystics": {
+        "gp": 40,
+        "w": 14,
+        "pts": 3172,
+        "opp": 3291
+      },
+      "New York Liberty": {
+        "gp": 40,
+        "w": 32,
+        "pts": 3424,
+        "opp": 3058
+      },
+      "Connecticut Sun": {
+        "gp": 40,
+        "w": 28,
+        "pts": 3204,
+        "opp": 2944
+      },
+      "Indiana Fever": {
+        "gp": 40,
+        "w": 20,
+        "pts": 3399,
+        "opp": 3506
+      },
+      "Las Vegas Aces": {
+        "gp": 40,
+        "w": 27,
+        "pts": 3455,
+        "opp": 3236
+      },
+      "Phoenix Mercury": {
+        "gp": 40,
+        "w": 19,
+        "pts": 3258,
+        "opp": 3390
+      },
+      "Seattle Storm": {
+        "gp": 40,
+        "w": 25,
+        "pts": 3329,
+        "opp": 3150
+      },
+      "Minnesota Lynx": {
+        "gp": 40,
+        "w": 30,
+        "pts": 3279,
+        "opp": 3024
+      },
+      "Dallas Wings": {
+        "gp": 40,
+        "w": 9,
+        "pts": 3368,
+        "opp": 3685
+      },
+      "Chicago Sky": {
+        "gp": 40,
+        "w": 13,
+        "pts": 3096,
+        "opp": 3301
+      },
+      "Los Angeles Sparks": {
+        "gp": 40,
+        "w": 8,
+        "pts": 3136,
+        "opp": 3425
+      },
+      "Atlanta Dream": {
+        "gp": 40,
+        "w": 15,
+        "pts": 3080,
+        "opp": 3190
+      }
+    },
+    "meanMargin": 10.816666666666666,
+    "medianMargin": 9,
+    "maxMargin": 36,
+    "ppg": 81.66666666666667,
+    "homeWinPct": 52.5,
+    "bins": {
+      "1-5": 25.416666666666668,
+      "6-10": 27.5,
+      "11-19": 37.916666666666664,
+      "20-29": 6.25,
+      "30-39": 2.9166666666666665,
+      "40-49": 0,
+      "50-999": 0
+    }
+  }
+}

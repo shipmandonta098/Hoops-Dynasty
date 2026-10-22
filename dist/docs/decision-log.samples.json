@@ -1,0 +1,65 @@
+[
+  {
+    "id": "decision-example-1",
+    "date": "2026-12-15",
+    "season": 2026,
+    "teamRecord": "12-15",
+    "ownerMood": 64,
+    "type": "Trade",
+    "description": "Traded Andre Mitchell for Devin Coleman.",
+    "reasoning": "Add wing depth and free cap space.",
+    "immediateOutcome": {
+      "fanReaction": 2,
+      "ownerReaction": 1,
+      "chemistryChange": -1,
+      "capChange": "+3.2M"
+    },
+    "longTermOutcome": {
+      "updated": false,
+      "notes": ""
+    },
+    "players": [
+      {
+        "id": 12,
+        "name": "Andre Mitchell"
+      },
+      {
+        "id": 24,
+        "name": "Devin Coleman"
+      }
+    ],
+    "baseline": {
+      "wins": 12,
+      "losses": 15
+    },
+    "grade": null,
+    "teamKey": "team-CLE"
+  },
+  {
+    "id": "decision-example-2",
+    "date": "2027-01-10",
+    "season": 2026,
+    "teamRecord": "12-15",
+    "ownerMood": 64,
+    "type": "TicketChange",
+    "description": "Changed ticket price from $75 to $80.",
+    "reasoning": "Increase gate revenue while monitoring attendance.",
+    "immediateOutcome": {
+      "fanReaction": -1,
+      "ownerReaction": 0,
+      "chemistryChange": 0,
+      "capChange": "+0.0M"
+    },
+    "longTermOutcome": {
+      "updated": false,
+      "notes": ""
+    },
+    "players": [],
+    "baseline": {
+      "wins": 12,
+      "losses": 15
+    },
+    "grade": null,
+    "teamKey": "team-CLE"
+  }
+]

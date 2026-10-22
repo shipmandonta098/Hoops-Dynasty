@@ -1,0 +1,21 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const element={style:{},classList:{add(){},remove(){},toggle(){}},addEventListener(){},querySelectorAll(){return []},setAttribute(){},removeAttribute(){},showModal(){},close(){},innerHTML:'',scrollTop:0};
+let seed=4451;const math=Object.create(Math);math.random=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296};
+const context={console,Math:math,setTimeout,clearTimeout,localStorage:{getItem(){return null},setItem(){}},document:{getElementById(){return element},querySelector(){return element},addEventListener(){},querySelectorAll(){return []},documentElement:element,body:element},window:{addEventListener(){},scrollTo(){}},assert};vm.createContext(context);
+for(const [,script] of fs.readFileSync('dist/index.html','utf8').matchAll(/<script src="([^"]+)"/g))vm.runInContext(fs.readFileSync('dist/'+script,'utf8').replace('careerReady=initializeCareers();',''),context,{filename:script});
+
+
+vm.runInContext(`
+state=validateCareerData(fresh());state.day=5;const club=team(),p=club.roster[0],other=state.teams[1];p.attributes.endu=80;p.workload={energy:40,stamp:medicalStamp()-1,minutes:36};
+const home=b2bFatigue(p,club,club),away=b2bFatigue(p,club,other);assert.equal(away.physical,home.physical*2);assert.equal(away.energy,home.energy*2);assert(home.energy>=.15&&home.energy<=.20);assert(restManagedPlayer(p,club));
+state.leagueSettings.restLoadManagement=false;assert(!restManagedPlayer(p,club));state.leagueSettings.restLoadManagement=true;
+p.workload.stamp=medicalStamp()-3;assert.equal(playerEnergy(p,club),100);assert.equal(restDays(p),2);
+p.workload.stamp=medicalStamp()-5;const originals=JSON.stringify(p.attributes);restMatch={players:new Map([[p,{days:4,rust:false}]])};const passing=p.attributes.pss;restQuarter(0);assert.equal(p.attributes.pss,passing-2);restQuarter(1);assert.equal(p.attributes.pss,passing-2);restQuarter(leagueRules().periodMinutes);assert.equal(p.attributes.pss,passing);restMatch=null;
+const result=simulateAttributeGame(0,1);assert.equal(JSON.stringify(p.attributes),originals);assert.equal(restMatch,null);assert(result.playByPlay.some(x=>x.includes('shaking off rust')));for(const [id,score]of [[0,result.sa],[1,result.sb]])assert.equal(result.box.filter(x=>x.team===state.teams[id].abbr).reduce((n,x)=>n+x.pts,0),score);
+state=validateCareerData(fresh());state.day=1;const tired=team().roster[0];tired.workload={energy:35,stamp:medicalStamp()-1,minutes:36};const managed=simulateAttributeGame(0,1);assert(managed.box.find(r=>r.playerId===tired.id).mp<20);assert(managed.playByPlay.some(x=>x.includes('load management targets 18')));
+state=validateCareerData(fresh());const snapshot=JSON.stringify(state.schedule);validateCareerData(copy(state));assert.equal(JSON.stringify(state.schedule),snapshot);
+for(const length of [7,8]){const rules={...leagueRules(),allStarRestLength:length};const window=allStarWindow(174,rules);assert.equal(window.breakEnd-window.breakStart+1,length);assert.equal(window.end-window.start+1,rules.allStarEventDays)}
+const career={teams:state.teams,year:state.year,leagueSettings:{...leagueRules(),allStarEnabled:true},scheduleFormat:'roundRobin',schedule:copy(state.schedule)};applyAllStarCalendar(career);assert.equal(career.allStarCalendar.breakEnd-career.allStarCalendar.breakStart+1,7);assert(career.schedule.slice(career.allStarCalendar.breakStart-1,career.allStarCalendar.breakEnd).every(g=>!g.length));for(const games of career.schedule){const ids=games.flat();assert.equal(new Set(ids).size,ids.length)}
+const defs=defaultTeams(),rules={...leagueRules(),seasonGames:82,divisionGames:16,conferenceGames:36,seasonStart:'10-01',seasonEnd:'04-15'},custom={teams:defs,year:2026,leagueSettings:rules,scheduleFormat:'custom',schedule:customSeasonSchedule(defs,2026,rules)};applyAllStarCalendar(custom);assert(validateCustomSeason(custom.schedule,defs,rules,2026));assert(custom.schedule.slice(custom.allStarCalendar.breakStart-1,custom.allStarCalendar.breakEnd).every(g=>!g.length));
+console.log('PASS rest settings, recovery, travel, load toggle, first-period rust, temporary ratings, score accounting, calendar protection and saved-date preservation');
+`,context);

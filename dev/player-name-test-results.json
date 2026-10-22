@@ -1,0 +1,1109 @@
+{
+  "global": {
+    "generated": 10000,
+    "unique": 10000,
+    "duplicates": 0,
+    "duplicateRate": 0
+  },
+  "countries": {
+    "US": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 111,
+        "largestCount": 2
+      },
+      "surname": {
+        "distinct": 109,
+        "largestCount": 3
+      }
+    },
+    "FR": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 71,
+        "largestCount": 5
+      },
+      "surname": {
+        "distinct": 55,
+        "largestCount": 5
+      }
+    },
+    "RS": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 45,
+        "largestCount": 8
+      },
+      "surname": {
+        "distinct": 25,
+        "largestCount": 9
+      }
+    },
+    "HR": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 39,
+        "largestCount": 6
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 14
+      }
+    },
+    "SI": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 40,
+        "largestCount": 8
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 11
+      }
+    },
+    "BA": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 61,
+        "largestCount": 5
+      },
+      "surname": {
+        "distinct": 41,
+        "largestCount": 9
+      }
+    },
+    "ME": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 38,
+        "largestCount": 7
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 12
+      }
+    },
+    "DE": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 55,
+        "largestCount": 6
+      },
+      "surname": {
+        "distinct": 34,
+        "largestCount": 9
+      }
+    },
+    "ES": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 41,
+        "largestCount": 7
+      },
+      "surname": {
+        "distinct": 67,
+        "largestCount": 6
+      }
+    },
+    "PT": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 34,
+        "largestCount": 6
+      },
+      "surname": {
+        "distinct": 66,
+        "largestCount": 7
+      }
+    },
+    "BR": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 46,
+        "largestCount": 6
+      },
+      "surname": {
+        "distinct": 72,
+        "largestCount": 7
+      }
+    },
+    "IT": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 39,
+        "largestCount": 6
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 12
+      }
+    },
+    "GB": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 82,
+        "largestCount": 5
+      },
+      "surname": {
+        "distinct": 65,
+        "largestCount": 6
+      }
+    },
+    "IE": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 39,
+        "largestCount": 7
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 10
+      }
+    },
+    "GR": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 40,
+        "largestCount": 6
+      },
+      "surname": {
+        "distinct": 26,
+        "largestCount": 10
+      }
+    },
+    "LT": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 39,
+        "largestCount": 6
+      },
+      "surname": {
+        "distinct": 38,
+        "largestCount": 6
+      }
+    },
+    "LV": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 38,
+        "largestCount": 8
+      },
+      "surname": {
+        "distinct": 37,
+        "largestCount": 8
+      }
+    },
+    "EE": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 39,
+        "largestCount": 6
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 10
+      }
+    },
+    "PL": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 39,
+        "largestCount": 8
+      },
+      "surname": {
+        "distinct": 32,
+        "largestCount": 10
+      }
+    },
+    "CZ": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 39,
+        "largestCount": 8
+      },
+      "surname": {
+        "distinct": 39,
+        "largestCount": 5
+      }
+    },
+    "SK": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 39,
+        "largestCount": 7
+      },
+      "surname": {
+        "distinct": 38,
+        "largestCount": 7
+      }
+    },
+    "UA": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 38,
+        "largestCount": 7
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 10
+      }
+    },
+    "TR": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 39,
+        "largestCount": 7
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 12
+      }
+    },
+    "GE": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 39,
+        "largestCount": 5
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 11
+      }
+    },
+    "FI": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 38,
+        "largestCount": 8
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 10
+      }
+    },
+    "SE": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 38,
+        "largestCount": 7
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 9
+      }
+    },
+    "NO": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 37,
+        "largestCount": 7
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 13
+      }
+    },
+    "DK": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 37,
+        "largestCount": 7
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 11
+      }
+    },
+    "NL": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 36,
+        "largestCount": 8
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 12
+      }
+    },
+    "NG": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 80,
+        "largestCount": 4
+      },
+      "surname": {
+        "distinct": 54,
+        "largestCount": 6
+      }
+    },
+    "SN": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 38,
+        "largestCount": 8
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 9
+      }
+    },
+    "GH": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 65,
+        "largestCount": 6
+      },
+      "surname": {
+        "distinct": 42,
+        "largestCount": 12
+      }
+    },
+    "JP": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 56,
+        "largestCount": 6
+      },
+      "surname": {
+        "distinct": 29,
+        "largestCount": 9
+      }
+    },
+    "CN": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 51,
+        "largestCount": 6
+      },
+      "surname": {
+        "distinct": 30,
+        "largestCount": 9
+      }
+    },
+    "KR": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 39,
+        "largestCount": 6
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 10
+      }
+    },
+    "IN": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 82,
+        "largestCount": 4
+      },
+      "surname": {
+        "distinct": 56,
+        "largestCount": 6
+      }
+    },
+    "PH": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 37,
+        "largestCount": 8
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 13
+      }
+    },
+    "PK": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 40,
+        "largestCount": 6
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 12
+      }
+    },
+    "IR": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 36,
+        "largestCount": 8
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 11
+      }
+    },
+    "IL": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 36,
+        "largestCount": 7
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 11
+      }
+    },
+    "KZ": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 40,
+        "largestCount": 6
+      },
+      "surname": {
+        "distinct": 39,
+        "largestCount": 6
+      }
+    },
+    "UZ": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 38,
+        "largestCount": 7
+      },
+      "surname": {
+        "distinct": 37,
+        "largestCount": 7
+      }
+    },
+    "EG": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 35,
+        "largestCount": 8
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 12
+      }
+    },
+    "MA": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 40,
+        "largestCount": 7
+      },
+      "surname": {
+        "distinct": 19,
+        "largestCount": 12
+      }
+    },
+    "DZ": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 38,
+        "largestCount": 6
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 9
+      }
+    },
+    "TN": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 37,
+        "largestCount": 7
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 14
+      }
+    },
+    "CM": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 39,
+        "largestCount": 6
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 15
+      }
+    },
+    "CI": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 51,
+        "largestCount": 7
+      },
+      "surname": {
+        "distinct": 32,
+        "largestCount": 10
+      }
+    },
+    "ML": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 39,
+        "largestCount": 8
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 10
+      }
+    },
+    "GN": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 37,
+        "largestCount": 7
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 9
+      }
+    },
+    "CD": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 39,
+        "largestCount": 6
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 12
+      }
+    },
+    "CG": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 40,
+        "largestCount": 6
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 12
+      }
+    },
+    "AO": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 39,
+        "largestCount": 7
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 10
+      }
+    },
+    "ZA": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 63,
+        "largestCount": 5
+      },
+      "surname": {
+        "distinct": 39,
+        "largestCount": 10
+      }
+    },
+    "KE": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 66,
+        "largestCount": 5
+      },
+      "surname": {
+        "distinct": 28,
+        "largestCount": 15
+      }
+    },
+    "ET": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 37,
+        "largestCount": 7
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 10
+      }
+    },
+    "UG": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 38,
+        "largestCount": 9
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 12
+      }
+    },
+    "RW": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 38,
+        "largestCount": 6
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 12
+      }
+    },
+    "LB": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 39,
+        "largestCount": 7
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 11
+      }
+    },
+    "JO": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 39,
+        "largestCount": 7
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 12
+      }
+    },
+    "FJ": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 39,
+        "largestCount": 7
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 9
+      }
+    },
+    "WS": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 39,
+        "largestCount": 7
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 13
+      }
+    },
+    "TO": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 39,
+        "largestCount": 6
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 10
+      }
+    },
+    "HT": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 40,
+        "largestCount": 6
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 9
+      }
+    },
+    "MX": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 46,
+        "largestCount": 7
+      },
+      "surname": {
+        "distinct": 75,
+        "largestCount": 6
+      }
+    },
+    "AR": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 53,
+        "largestCount": 7
+      },
+      "surname": {
+        "distinct": 78,
+        "largestCount": 6
+      }
+    },
+    "CO": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 36,
+        "largestCount": 7
+      },
+      "surname": {
+        "distinct": 67,
+        "largestCount": 8
+      }
+    },
+    "VE": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 39,
+        "largestCount": 9
+      },
+      "surname": {
+        "distinct": 69,
+        "largestCount": 7
+      }
+    },
+    "CL": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 36,
+        "largestCount": 8
+      },
+      "surname": {
+        "distinct": 60,
+        "largestCount": 9
+      }
+    },
+    "UY": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 38,
+        "largestCount": 8
+      },
+      "surname": {
+        "distinct": 64,
+        "largestCount": 7
+      }
+    },
+    "PE": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 39,
+        "largestCount": 7
+      },
+      "surname": {
+        "distinct": 58,
+        "largestCount": 8
+      }
+    },
+    "DO": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 38,
+        "largestCount": 9
+      },
+      "surname": {
+        "distinct": 61,
+        "largestCount": 10
+      }
+    },
+    "PR": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 36,
+        "largestCount": 6
+      },
+      "surname": {
+        "distinct": 59,
+        "largestCount": 7
+      }
+    },
+    "CU": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 37,
+        "largestCount": 7
+      },
+      "surname": {
+        "distinct": 67,
+        "largestCount": 7
+      }
+    },
+    "JM": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 39,
+        "largestCount": 7
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 10
+      }
+    },
+    "BS": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 38,
+        "largestCount": 6
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 11
+      }
+    },
+    "TT": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 40,
+        "largestCount": 5
+      },
+      "surname": {
+        "distinct": 20,
+        "largestCount": 12
+      }
+    },
+    "CA": {
+      "count": 122,
+      "unique": 122,
+      "given": {
+        "distinct": 94,
+        "largestCount": 3
+      },
+      "surname": {
+        "distinct": 78,
+        "largestCount": 5
+      }
+    },
+    "AU": {
+      "count": 121,
+      "unique": 121,
+      "given": {
+        "distinct": 85,
+        "largestCount": 3
+      },
+      "surname": {
+        "distinct": 70,
+        "largestCount": 6
+      }
+    },
+    "NZ": {
+      "count": 121,
+      "unique": 121,
+      "given": {
+        "distinct": 95,
+        "largestCount": 4
+      },
+      "surname": {
+        "distinct": 76,
+        "largestCount": 4
+      }
+    },
+    "BE": {
+      "count": 121,
+      "unique": 121,
+      "given": {
+        "distinct": 45,
+        "largestCount": 7
+      },
+      "surname": {
+        "distinct": 27,
+        "largestCount": 11
+      }
+    },
+    "CH": {
+      "count": 121,
+      "unique": 121,
+      "given": {
+        "distinct": 61,
+        "largestCount": 6
+      },
+      "surname": {
+        "distinct": 45,
+        "largestCount": 8
+      }
+    }
+  },
+  "large": {
+    "US": {
+      "count": 10000,
+      "unique": 10000,
+      "given": {
+        "distinct": 752,
+        "largestCount": 36
+      },
+      "surname": {
+        "distinct": 573,
+        "largestCount": 51
+      }
+    },
+    "FR": {
+      "count": 1000,
+      "unique": 1000,
+      "given": {
+        "distinct": 134,
+        "largestCount": 21
+      },
+      "surname": {
+        "distinct": 80,
+        "largestCount": 30
+      }
+    },
+    "NG": {
+      "count": 1000,
+      "unique": 1000,
+      "given": {
+        "distinct": 126,
+        "largestCount": 17
+      },
+      "surname": {
+        "distinct": 65,
+        "largestCount": 33
+      }
+    },
+    "RS": {
+      "count": 1000,
+      "unique": 1000,
+      "given": {
+        "distinct": 50,
+        "largestCount": 25
+      },
+      "surname": {
+        "distinct": 25,
+        "largestCount": 47
+      }
+    },
+    "BR": {
+      "count": 1000,
+      "unique": 1000,
+      "given": {
+        "distinct": 50,
+        "largestCount": 32
+      },
+      "surname": {
+        "distinct": 338,
+        "largestCount": 36
+      }
+    },
+    "JP": {
+      "count": 1000,
+      "unique": 1000,
+      "given": {
+        "distinct": 60,
+        "largestCount": 25
+      },
+      "surname": {
+        "distinct": 30,
+        "largestCount": 50
+      }
+    },
+    "CN": {
+      "count": 1000,
+      "unique": 1000,
+      "given": {
+        "distinct": 60,
+        "largestCount": 25
+      },
+      "surname": {
+        "distinct": 30,
+        "largestCount": 50
+      }
+    },
+    "CA": {
+      "count": 1000,
+      "unique": 1000,
+      "given": {
+        "distinct": 279,
+        "largestCount": 10
+      },
+      "surname": {
+        "distinct": 174,
+        "largestCount": 15
+      }
+    }
+  },
+  "corpus": {
+    "countries": 82,
+    "givenEntries": 5867,
+    "surnameEntries": 3286,
+    "distinctGiven": 2931,
+    "distinctSurnames": 1886
+  },
+  "male100Seasons": {
+    "recruits": 10000,
+    "unique": 10330,
+    "duplicates": 0
+  },
+  "female100Seasons": {
+    "recruits": 10000,
+    "unique": 10330,
+    "duplicates": 0
+  }
+}

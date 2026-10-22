@@ -1,0 +1,3 @@
+module.exports=(name,s)=>{
+ if(name.split('?')[0]==='attributes.js')s=s.replace("function defensiveFoul(side,p,d,label,shots=0,retain=false){", "function defensiveFoul(side,p,d,label,shots=0,retain=false){if(label==='intentional personal'&&liveClockEnd!==null)globalThis.p12fouls?.push({time:elapsedSeconds,remaining:liveClockEnd-elapsedSeconds,lead:scores[side]-scores[1-side],side});");if(name.split('?')[0]==='attributes.js')s=s.replaceAll('trackShot(shot,true);','globalThis.p12shots?.push({transition,opportunity:transitionAdvantage});trackShot(shot,true);').replaceAll('trackShot(shot,false);','globalThis.p12shots?.push({transition,opportunity:transitionAdvantage});trackShot(shot,false);');return s;
+};

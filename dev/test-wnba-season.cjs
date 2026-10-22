@@ -1,0 +1,5 @@
+const assert=require('node:assert/strict'),{loadLeague}=require('./load-league.cjs');
+(async()=>{const l=loadLeague({seed:71,strictDOM:false});l.context.assert=assert;
+l.run(`const d=makeDraft();d.gmName='WNBA Game Test';const p=historicalPlan('wnba',1997,setupLeagueRules(d),d.cap,d.teams);d.teams=d.teams.slice(0,4);Object.assign(d,{year:1997,leagueGender:'female',cap:p.cap,leagueSettings:{...p.rules,playoffFormat:'top4',splitPlayoffs:false,firstRoundByes:0,seriesSemiGames:1,seriesFinalGames:1},meetings:2});state=validateCareerData(buildSetupCareer(d));`);
+const result=await l.run(`simulateMultipleSeasonsHeadless(1,{seed:71,log:false})`);assert.equal(result.status,'completed',JSON.stringify(result.errors));l.run(`assert.equal(state.year,1998);for(const t of state.teams){assert.equal(wnbaValidateTransaction(t),'');for(const p of t.roster){assert.ok(p.salary<.063);assert.ok(p.wnbaContract)}}`);console.log('PASS real basketball → playoffs → draft → AI free agency → 1998 rollover (4-team, six-game fixture): '+result.gamesSimulated+' games; contracts, cap and persistence checks passed');
+})().catch(e=>{console.error(e);process.exitCode=1});

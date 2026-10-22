@@ -1,0 +1,13 @@
+const assert=require('node:assert/strict'),{loadLeague}=require('./load-league.cjs');
+(async()=>{const l=loadLeague({seed:31,strictDOM:false});l.context.assert=assert;
+l.run(`var draftTasks=makeDraft();draftTasks.gmName='Tasks';draftTasks.teams=draftTasks.teams.slice(0,4);draftTasks.meetings=2;state=buildSetupCareer(draftTasks);render=()=>{};save=async()=>true;toast=()=>{};state.dashboardTasks=[true,true,true,true];assert(gmTaskFlags().every(v=>!v));state=validateCareerData(state);assert(gmTaskFlags().every(v=>!v));assert.equal(typeof setGMTask,'undefined');assert.equal((gmTasks().match(/ disabled /g)||[]).length,4);go('Overview');assert(gmTaskFlags().every(v=>!v));rosterTeamId=1;go('Roster');assert(!gmTaskFlags()[0]);openGMTask(0);assert(gmTaskFlags()[0]);assert(!gmTaskFlags()[3]);go('Trades');assert(!gmTaskFlags()[1]);tcPlayer('out',team().roster[0].id);assert(!gmTaskFlags()[1]);tcPlayer('into',state.teams[1].roster[0].id);assert(gmTaskFlags()[1]);go('Free agency');assert(gmTaskFlags()[2]);`);
+await l.run(`setStrategy('pace','Fast')`);
+l.run(`assert(gmTaskFlags().every(Boolean));assert.equal(state.pace,'Fast');state=validateCareerData(JSON.parse(JSON.stringify(state)));assert(gmTaskFlags().every(Boolean));state.dashboardTasks=[false,false,false,false];save=async()=>false;`);
+await l.run(`setStrategy('focus','Defense')`);
+l.run(`assert(!gmTaskFlags()[3]);assert.equal(state.focus,'Balanced');`);
+await l.run(`saveGMTask(2)`);
+l.run(`assert(!gmTaskFlags()[2]);save=async()=>true;`);
+await l.run(`setStrategy('pace','invalid')`);
+l.run(`assert(!gmTaskFlags()[3]);assert.equal(state.pace,'Fast');`);
+console.log('PASS read-only indicators, legacy manual marks reset, real navigation/target/plan actions, persistence validation, invalid actions and failed-save rollback');
+})().catch(e=>{console.error(e);process.exitCode=1});

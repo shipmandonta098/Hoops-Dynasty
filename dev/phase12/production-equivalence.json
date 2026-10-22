@@ -1,0 +1,20 @@
+[
+  {
+    "league": "nba",
+    "year": 2025,
+    "games": 5,
+    "exactCandidateEquality": true
+  },
+  {
+    "league": "wnba",
+    "year": 2024,
+    "games": 5,
+    "exactCandidateEquality": true
+  },
+  {
+    "league": "wnba",
+    "year": 2006,
+    "games": 5,
+    "exactCandidateEquality": true
+  }
+]

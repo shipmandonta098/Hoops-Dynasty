@@ -1,0 +1,4480 @@
+{
+  "nba": {
+    "games": 134,
+    "FGA": 23735,
+    "fastbreakFGA": 2884,
+    "fastbreakFGAPct": 12.150832104487044,
+    "rows": [
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400001.json",
+        "legacyFGA": 174,
+        "FGAChangeFromLegacy": 1,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          116,
+          117
+        ],
+        "retainedFinalScore": [
+          116,
+          117
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400001.json",
+        "gameId": "0022400001",
+        "FGA": 175,
+        "fastbreakFGA": 16,
+        "sha256": "9a08783e329d6f71681bb4a24cdbeda35121e9f796dcdc3c8697427177de28e3"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400002.json",
+        "legacyFGA": 193,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          123,
+          121
+        ],
+        "retainedFinalScore": [
+          123,
+          121
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400002.json",
+        "gameId": "0022400002",
+        "FGA": 193,
+        "fastbreakFGA": 26,
+        "sha256": "3cb76461d6a059ca41e98b28d04a062a4db37f110fae20460df9bc18f59473ef"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400003.json",
+        "legacyFGA": 177,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          114,
+          89
+        ],
+        "retainedFinalScore": [
+          114,
+          89
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400003.json",
+        "gameId": "0022400003",
+        "FGA": 177,
+        "fastbreakFGA": 25,
+        "sha256": "09f920f45523e203345b306995c4484ef7d7b30806c0d51bc96d37e216ca47d1"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400004.json",
+        "legacyFGA": 172,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          99,
+          111
+        ],
+        "retainedFinalScore": [
+          99,
+          111
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400004.json",
+        "gameId": "0022400004",
+        "FGA": 172,
+        "fastbreakFGA": 25,
+        "sha256": "9ad4d89927c5352e045ae119a7faa56c19c3e0b7ec94ea83965400b1f50033a4"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400005.json",
+        "legacyFGA": 180,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          99,
+          85
+        ],
+        "retainedFinalScore": [
+          99,
+          85
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400005.json",
+        "gameId": "0022400005",
+        "FGA": 180,
+        "fastbreakFGA": 23,
+        "sha256": "f67622dcdfcd4168b0fc11e6eaca467c575d49d752429f3011d7dcbff2bdbac2"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400006.json",
+        "legacyFGA": 178,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          112,
+          120
+        ],
+        "retainedFinalScore": [
+          112,
+          120
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400006.json",
+        "gameId": "0022400006",
+        "FGA": 178,
+        "fastbreakFGA": 17,
+        "sha256": "75895f70e8933bf71326b7352769bb3fd036f2a6ccca29fa9fb1e77d9f5a62a8"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400007.json",
+        "legacyFGA": 178,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          120,
+          117
+        ],
+        "retainedFinalScore": [
+          120,
+          117
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400007.json",
+        "gameId": "0022400007",
+        "FGA": 178,
+        "fastbreakFGA": 26,
+        "sha256": "e1861d8f6d5828972c36db8471dd7e75706096cdcfe5636c086f6d8963108d4e"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400008.json",
+        "legacyFGA": 157,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          122,
+          108
+        ],
+        "retainedFinalScore": [
+          122,
+          108
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400008.json",
+        "gameId": "0022400008",
+        "FGA": 157,
+        "fastbreakFGA": 25,
+        "sha256": "de251e18bee188f2054f0ecd92e15b67cd8af4522021ee0a6a495f9077782182"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400009.json",
+        "legacyFGA": 173,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          111,
+          124
+        ],
+        "retainedFinalScore": [
+          111,
+          124
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400009.json",
+        "gameId": "0022400009",
+        "FGA": 173,
+        "fastbreakFGA": 17,
+        "sha256": "d079d73a084f6f867438f1186446431da1128914e27853d897a6d9fff6d796e8"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400010.json",
+        "legacyFGA": 150,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          98,
+          86
+        ],
+        "retainedFinalScore": [
+          98,
+          86
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400010.json",
+        "gameId": "0022400010",
+        "FGA": 150,
+        "fastbreakFGA": 28,
+        "sha256": "2d5ecbdb3a37212bc0e033e25a32ce655408c4dfdbb7dcf35a8db53e752578a6"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400011.json",
+        "legacyFGA": 192,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          95,
+          99
+        ],
+        "retainedFinalScore": [
+          95,
+          99
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400011.json",
+        "gameId": "0022400011",
+        "FGA": 192,
+        "fastbreakFGA": 31,
+        "sha256": "6921be82d143ca2a6ccdc36bd0b327b12df05e3165e060bf22f53c0074ce530a"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400012.json",
+        "legacyFGA": 204,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          129,
+          117
+        ],
+        "retainedFinalScore": [
+          129,
+          117
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400012.json",
+        "gameId": "0022400012",
+        "FGA": 204,
+        "fastbreakFGA": 32,
+        "sha256": "d0fe4dbf6cbd9a87c8445f4d1b0a451d136081118de8c6db75d1462064fc843c"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400013.json",
+        "legacyFGA": 181,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          144,
+          126
+        ],
+        "retainedFinalScore": [
+          144,
+          126
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400013.json",
+        "gameId": "0022400013",
+        "FGA": 181,
+        "fastbreakFGA": 22,
+        "sha256": "2e09eba1f2679824541ef16615a2e0b3804a6aab4842cd92f623cd7f83e565ef"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400014.json",
+        "legacyFGA": 172,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          124,
+          122
+        ],
+        "retainedFinalScore": [
+          124,
+          122
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400014.json",
+        "gameId": "0022400014",
+        "FGA": 172,
+        "fastbreakFGA": 22,
+        "sha256": "6c4b3d4d48d06f1e8aab82b46ae6157c7dd51c9dd7cd260102ce46fab3bbd17e"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400015.json",
+        "legacyFGA": 176,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          115,
+          120
+        ],
+        "retainedFinalScore": [
+          115,
+          120
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400015.json",
+        "gameId": "0022400015",
+        "FGA": 176,
+        "fastbreakFGA": 24,
+        "sha256": "667ac2698d2f1e5e3f866bfcc6a3725d089f5a598bee1adac296b155eb54132c"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400016.json",
+        "legacyFGA": 185,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          125,
+          104
+        ],
+        "retainedFinalScore": [
+          125,
+          104
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400016.json",
+        "gameId": "0022400016",
+        "FGA": 185,
+        "fastbreakFGA": 24,
+        "sha256": "1ba271ce73fc8a36e42e7fa71fedac57e3c3ff862e4ff6be31d02e7d9b49ab0a"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400017.json",
+        "legacyFGA": 174,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          101,
+          94
+        ],
+        "retainedFinalScore": [
+          101,
+          94
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400017.json",
+        "gameId": "0022400017",
+        "FGA": 174,
+        "fastbreakFGA": 25,
+        "sha256": "95a569a520abdffe3521c7ef6a0fd06a121ed24b40a06fbf42024099c38ba245"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400018.json",
+        "legacyFGA": 166,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          99,
+          83
+        ],
+        "retainedFinalScore": [
+          99,
+          83
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400018.json",
+        "gameId": "0022400018",
+        "FGA": 166,
+        "fastbreakFGA": 20,
+        "sha256": "2363a1e4bd2c3733dd8ae2e03e4a3bb471576bef08925d60d57df586531b3999"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400019.json",
+        "legacyFGA": 201,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          123,
+          118
+        ],
+        "retainedFinalScore": [
+          123,
+          118
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400019.json",
+        "gameId": "0022400019",
+        "FGA": 201,
+        "fastbreakFGA": 21,
+        "sha256": "320f19cb9437c5fabdbe425b505500d71da8ae58d3da5f67322d3df87fc399b4"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400020.json",
+        "legacyFGA": 197,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          126,
+          130
+        ],
+        "retainedFinalScore": [
+          126,
+          130
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400020.json",
+        "gameId": "0022400020",
+        "FGA": 197,
+        "fastbreakFGA": 14,
+        "sha256": "056936897c53eac03349ff1503be34ca1ff73591c217443531717e4fdcb9fad4"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400021.json",
+        "legacyFGA": 179,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          120,
+          117
+        ],
+        "retainedFinalScore": [
+          120,
+          117
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400021.json",
+        "gameId": "0022400021",
+        "FGA": 179,
+        "fastbreakFGA": 19,
+        "sha256": "045824df16c7386c49e7e9edcaded350893eb32c3288b763a14d7fe849234e94"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400022.json",
+        "legacyFGA": 167,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          116,
+          115
+        ],
+        "retainedFinalScore": [
+          116,
+          115
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400022.json",
+        "gameId": "0022400022",
+        "FGA": 167,
+        "fastbreakFGA": 19,
+        "sha256": "919d982eb33f4152f6ed6941a0b9fa85e1428cfc4f5246fa9a964d133b4bbcec"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400023.json",
+        "legacyFGA": 203,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          110,
+          122
+        ],
+        "retainedFinalScore": [
+          110,
+          122
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400023.json",
+        "gameId": "0022400023",
+        "FGA": 203,
+        "fastbreakFGA": 39,
+        "sha256": "5baf404dfd7ccbc69f1c08eb521bcbc2e6dc1bdedf90d3fdea2506a105cecb37"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400024.json",
+        "legacyFGA": 172,
+        "FGAChangeFromLegacy": -1,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          132,
+          91
+        ],
+        "retainedFinalScore": [
+          132,
+          91
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400024.json",
+        "gameId": "0022400024",
+        "FGA": 171,
+        "fastbreakFGA": 26,
+        "sha256": "ec198cbe8c634da7f2002de8688727d0b1997cf5952bf83cf7f5deed72ba97c7"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400025.json",
+        "legacyFGA": 183,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          110,
+          104
+        ],
+        "retainedFinalScore": [
+          110,
+          104
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400025.json",
+        "gameId": "0022400025",
+        "FGA": 183,
+        "fastbreakFGA": 24,
+        "sha256": "7ef4ed19b4396e6fb48beb2ff85c27eb9c38358d710815dd68c81ab1cad8899b"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400026.json",
+        "legacyFGA": 166,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          124,
+          118
+        ],
+        "retainedFinalScore": [
+          124,
+          118
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400026.json",
+        "gameId": "0022400026",
+        "FGA": 166,
+        "fastbreakFGA": 23,
+        "sha256": "9ebeba61b2cf74b643dba370c0707d4fd079459cfa57f5121679d9d0de78f0ce"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400027.json",
+        "legacyFGA": 171,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          113,
+          98
+        ],
+        "retainedFinalScore": [
+          113,
+          98
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400027.json",
+        "gameId": "0022400027",
+        "FGA": 171,
+        "fastbreakFGA": 21,
+        "sha256": "56cc5c2ba237cafa251e37389768fde4b9d70446ade5ad6093c66bcf7abf76d0"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400028.json",
+        "legacyFGA": 175,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          96,
+          108
+        ],
+        "retainedFinalScore": [
+          96,
+          108
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400028.json",
+        "gameId": "0022400028",
+        "FGA": 175,
+        "fastbreakFGA": 25,
+        "sha256": "ddf3a0b9d87853351fabc65de46dc12f2e2cd006f7954c61f65b7d62fada1cd1"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400029.json",
+        "legacyFGA": 181,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          129,
+          117
+        ],
+        "retainedFinalScore": [
+          129,
+          117
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400029.json",
+        "gameId": "0022400029",
+        "FGA": 181,
+        "fastbreakFGA": 24,
+        "sha256": "ba8cba359e86a8dc3d66dcec6363fb481dd9b926727634f3c28a0f4ed3e3d79e"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400030.json",
+        "legacyFGA": 193,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          136,
+          122
+        ],
+        "retainedFinalScore": [
+          136,
+          122
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400030.json",
+        "gameId": "0022400030",
+        "FGA": 193,
+        "fastbreakFGA": 28,
+        "sha256": "5a98b679ff9eae0e5a7547b8ef9c84527b77a8ded06dd87a4b76bdc0b8506533"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400031.json",
+        "legacyFGA": 184,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          116,
+          88
+        ],
+        "retainedFinalScore": [
+          116,
+          88
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400031.json",
+        "gameId": "0022400031",
+        "FGA": 184,
+        "fastbreakFGA": 22,
+        "sha256": "0bfbfa09c9a9a810d0c57d6d208575def763344197ee9176513e790df48d8efc"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400032.json",
+        "legacyFGA": 179,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          108,
+          112
+        ],
+        "retainedFinalScore": [
+          108,
+          112
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400032.json",
+        "gameId": "0022400032",
+        "FGA": 179,
+        "fastbreakFGA": 21,
+        "sha256": "01d2dde034d41d7f76cb22a34be3d2794be1518d716ae7cc79860397564d5707"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400033.json",
+        "legacyFGA": 181,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          120,
+          123
+        ],
+        "retainedFinalScore": [
+          120,
+          123
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400033.json",
+        "gameId": "0022400033",
+        "FGA": 181,
+        "fastbreakFGA": 24,
+        "sha256": "5a579945cf1f9299acc0c7184553014f053bab952933eccaf49ebac934de28b6"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400034.json",
+        "legacyFGA": 177,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          104,
+          88
+        ],
+        "retainedFinalScore": [
+          104,
+          88
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400034.json",
+        "gameId": "0022400034",
+        "FGA": 177,
+        "fastbreakFGA": 15,
+        "sha256": "cf38b92bc5e3d1ca7ef5827d6fe7b8242126d4c67601b9209192abad9dc77512"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400035.json",
+        "legacyFGA": 185,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          108,
+          127
+        ],
+        "retainedFinalScore": [
+          108,
+          127
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400035.json",
+        "gameId": "0022400035",
+        "FGA": 185,
+        "fastbreakFGA": 31,
+        "sha256": "c878229981879fb1b6b1841a08f1b31435210cf2781315bd8c24f5d0ae8cf856"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400036.json",
+        "legacyFGA": 154,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          103,
+          106
+        ],
+        "retainedFinalScore": [
+          103,
+          106
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400036.json",
+        "gameId": "0022400036",
+        "FGA": 154,
+        "fastbreakFGA": 16,
+        "sha256": "b91725c04072247b5a27e600febacc99d1fe41138972dc0f298e47c8c16e45d5"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400037.json",
+        "legacyFGA": 197,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          111,
+          117
+        ],
+        "retainedFinalScore": [
+          111,
+          117
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400037.json",
+        "gameId": "0022400037",
+        "FGA": 197,
+        "fastbreakFGA": 20,
+        "sha256": "178697dc85f9f7570b5ff2856ae00a12fbefde021de4da043b1fed881ff27f41"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400038.json",
+        "legacyFGA": 177,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          115,
+          128
+        ],
+        "retainedFinalScore": [
+          115,
+          128
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400038.json",
+        "gameId": "0022400038",
+        "FGA": 177,
+        "fastbreakFGA": 24,
+        "sha256": "232fbeaa113a77e7885fd5e7432076b7cd63c03c5c0e8013098457ecd0eb8325"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400039.json",
+        "legacyFGA": 184,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          127,
+          100
+        ],
+        "retainedFinalScore": [
+          127,
+          100
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400039.json",
+        "gameId": "0022400039",
+        "FGA": 184,
+        "fastbreakFGA": 25,
+        "sha256": "d1699ee75654b12eb2a5c4e7394f0a537c0ac2a73f9d1abfcf4a8d1e5c429a8c"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400040.json",
+        "legacyFGA": 170,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          98,
+          99
+        ],
+        "retainedFinalScore": [
+          98,
+          99
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400040.json",
+        "gameId": "0022400040",
+        "FGA": 170,
+        "fastbreakFGA": 15,
+        "sha256": "0ab7b53aa5da1de094405bab1ecf7206c76a4bf6b18f555a8f402e882cbdc76e"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400041.json",
+        "legacyFGA": 178,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          117,
+          101
+        ],
+        "retainedFinalScore": [
+          117,
+          101
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400041.json",
+        "gameId": "0022400041",
+        "FGA": 178,
+        "fastbreakFGA": 17,
+        "sha256": "af097e62a42241c347462ba8e850665f7003625d8ae056b9f2b7eecf1798f164"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400042.json",
+        "legacyFGA": 187,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          120,
+          109
+        ],
+        "retainedFinalScore": [
+          120,
+          109
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400042.json",
+        "gameId": "0022400042",
+        "FGA": 187,
+        "fastbreakFGA": 28,
+        "sha256": "a091259be2e3ff51cbc9b0d2e17e5add2184fc58a40a23bd7fd19674150a6d82"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400043.json",
+        "legacyFGA": 160,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          100,
+          123
+        ],
+        "retainedFinalScore": [
+          100,
+          123
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400043.json",
+        "gameId": "0022400043",
+        "FGA": 160,
+        "fastbreakFGA": 20,
+        "sha256": "15974efbf9c31e30156ecd4169f94b505758983e5f1b31f455467b770f1733a9"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400044.json",
+        "legacyFGA": 159,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          93,
+          92
+        ],
+        "retainedFinalScore": [
+          93,
+          92
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400044.json",
+        "gameId": "0022400044",
+        "FGA": 159,
+        "fastbreakFGA": 22,
+        "sha256": "5b3cc7e907f67c1e72480dfa4aac0294510ef5245064040f8a9bc27c316ffed0"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400045.json",
+        "legacyFGA": 168,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          106,
+          130
+        ],
+        "retainedFinalScore": [
+          106,
+          130
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400045.json",
+        "gameId": "0022400045",
+        "FGA": 168,
+        "fastbreakFGA": 23,
+        "sha256": "e142e10665aa5c64b219c128c3539695c87e3b38df2113292ecc407cb729e301"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400046.json",
+        "legacyFGA": 174,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          121,
+          111
+        ],
+        "retainedFinalScore": [
+          121,
+          111
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400046.json",
+        "gameId": "0022400046",
+        "FGA": 174,
+        "fastbreakFGA": 16,
+        "sha256": "56624aac689cbd7141feebb000e8c816944e0919a2a1878f78eb87f9b51f90e7"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400047.json",
+        "legacyFGA": 191,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          129,
+          138
+        ],
+        "retainedFinalScore": [
+          129,
+          138
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400047.json",
+        "gameId": "0022400047",
+        "FGA": 191,
+        "fastbreakFGA": 19,
+        "sha256": "e816bdcb8f2cfb262774959a3f7c1b32fe225e30fb1bc81462fe357c4183d185"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400048.json",
+        "legacyFGA": 166,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          93,
+          101
+        ],
+        "retainedFinalScore": [
+          93,
+          101
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400048.json",
+        "gameId": "0022400048",
+        "FGA": 166,
+        "fastbreakFGA": 20,
+        "sha256": "0504403d0259ab1090ead42b8b6f9b5296d25f699743cb0bf2764a250e23c7d3"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400049.json",
+        "legacyFGA": 168,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          115,
+          106
+        ],
+        "retainedFinalScore": [
+          115,
+          106
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400049.json",
+        "gameId": "0022400049",
+        "FGA": 168,
+        "fastbreakFGA": 20,
+        "sha256": "1f44ae6f2bbc56591dd1f5e907faffc2d44b8b189f5650052089ffda8730fca3"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400050.json",
+        "legacyFGA": 159,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          104,
+          110
+        ],
+        "retainedFinalScore": [
+          104,
+          110
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400050.json",
+        "gameId": "0022400050",
+        "FGA": 159,
+        "fastbreakFGA": 21,
+        "sha256": "23f03e2b8fc24fd811be128970acd0a72d604d7e26f23516505fb3aae7441d1d"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400051.json",
+        "legacyFGA": 172,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          118,
+          87
+        ],
+        "retainedFinalScore": [
+          118,
+          87
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400051.json",
+        "gameId": "0022400051",
+        "FGA": 172,
+        "fastbreakFGA": 19,
+        "sha256": "361865c454315c9cf5d43eae5aaea680f814b4f903632f0351a7ed94956ccf49"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400053.json",
+        "legacyFGA": 172,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          121,
+          106
+        ],
+        "retainedFinalScore": [
+          121,
+          106
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400053.json",
+        "gameId": "0022400053",
+        "FGA": 172,
+        "fastbreakFGA": 19,
+        "sha256": "f65be39f39476cff29ce96c673caccbc3781b2b5ae21c606659cc3b62e2bc134"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400054.json",
+        "legacyFGA": 165,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          122,
+          111
+        ],
+        "retainedFinalScore": [
+          122,
+          111
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400054.json",
+        "gameId": "0022400054",
+        "FGA": 165,
+        "fastbreakFGA": 26,
+        "sha256": "b4c705c61dd29054a24820b10a5905a476d9c220097627b536b28487144c17d3"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400055.json",
+        "legacyFGA": 172,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          133,
+          106
+        ],
+        "retainedFinalScore": [
+          133,
+          106
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400055.json",
+        "gameId": "0022400055",
+        "FGA": 172,
+        "fastbreakFGA": 22,
+        "sha256": "ce5b300c4073c36c8a81fb8dc7e32f9a8c534d5a4ec13fd80fdb6fdc90ce6c93"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400056.json",
+        "legacyFGA": 178,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          121,
+          116
+        ],
+        "retainedFinalScore": [
+          121,
+          116
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400056.json",
+        "gameId": "0022400056",
+        "FGA": 178,
+        "fastbreakFGA": 26,
+        "sha256": "d707c9c467aa3c5d6d60cf2e03e0f0530fe5dcae65333ea07781e3273a83d6af"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400057.json",
+        "legacyFGA": 178,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          104,
+          93
+        ],
+        "retainedFinalScore": [
+          104,
+          93
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400057.json",
+        "gameId": "0022400057",
+        "FGA": 178,
+        "fastbreakFGA": 21,
+        "sha256": "fa44e3394839c8948e0fdfa7576efcfb4a30716534410d9b8b4899f5efcba70b"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400058.json",
+        "legacyFGA": 174,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          119,
+          115
+        ],
+        "retainedFinalScore": [
+          119,
+          115
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400058.json",
+        "gameId": "0022400058",
+        "FGA": 174,
+        "fastbreakFGA": 22,
+        "sha256": "fb35352e905e9a8a919b56fd2d995425b138360e6d1d0aeeeb5f67d125c104de"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400059.json",
+        "legacyFGA": 184,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          120,
+          111
+        ],
+        "retainedFinalScore": [
+          120,
+          111
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400059.json",
+        "gameId": "0022400059",
+        "FGA": 184,
+        "fastbreakFGA": 18,
+        "sha256": "21fed99e24e3bc714c8a4d0cebf247298e6abb4130a3baf7f4f78b00aa08f603"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400060.json",
+        "legacyFGA": 165,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          127,
+          105
+        ],
+        "retainedFinalScore": [
+          127,
+          105
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400060.json",
+        "gameId": "0022400060",
+        "FGA": 165,
+        "fastbreakFGA": 16,
+        "sha256": "afd2cf709b10f02a9edc66b34553036dc1b478f6512d145baeb7760ec705bb76"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400061.json",
+        "legacyFGA": 173,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          132,
+          109
+        ],
+        "retainedFinalScore": [
+          132,
+          109
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400061.json",
+        "gameId": "0022400061",
+        "FGA": 173,
+        "fastbreakFGA": 14,
+        "sha256": "dc70b2a325ed3739628ac65c32ffc2f3a48a788affc1c3c2d14eebcca903736b"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400062.json",
+        "legacyFGA": 180,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          110,
+          103
+        ],
+        "retainedFinalScore": [
+          110,
+          103
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400062.json",
+        "gameId": "0022400062",
+        "FGA": 180,
+        "fastbreakFGA": 22,
+        "sha256": "88e47a0486dc58f9a7cb18c6752ccf7096a3fdfaa103642086c82c758298ce3f"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400063.json",
+        "legacyFGA": 171,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          109,
+          115
+        ],
+        "retainedFinalScore": [
+          109,
+          115
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400063.json",
+        "gameId": "0022400063",
+        "FGA": 171,
+        "fastbreakFGA": 17,
+        "sha256": "50c387b1811cf463321cd66bcd8f64ab672a80061b446cf918fae18cdf56e0ce"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400064.json",
+        "legacyFGA": 171,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          120,
+          116
+        ],
+        "retainedFinalScore": [
+          120,
+          116
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400064.json",
+        "gameId": "0022400064",
+        "FGA": 171,
+        "fastbreakFGA": 24,
+        "sha256": "b5e418c3e53c6d0ce1f81647986884681710f5475e333ec1c24833c763c8b4cc"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400065.json",
+        "legacyFGA": 178,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          97,
+          116
+        ],
+        "retainedFinalScore": [
+          97,
+          116
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400065.json",
+        "gameId": "0022400065",
+        "FGA": 178,
+        "fastbreakFGA": 27,
+        "sha256": "1c91cb013fa85b37d5ff165b1a86bf49e499b3d96e2c9c9973a11feb78b4a445"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400066.json",
+        "legacyFGA": 178,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          109,
+          124
+        ],
+        "retainedFinalScore": [
+          109,
+          124
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400066.json",
+        "gameId": "0022400066",
+        "FGA": 178,
+        "fastbreakFGA": 15,
+        "sha256": "0d022ee0b288b76ca9cfb53e9afe357747433b43906ee98eb2f9bffdd1399556"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400067.json",
+        "legacyFGA": 173,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          106,
+          136
+        ],
+        "retainedFinalScore": [
+          106,
+          136
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400067.json",
+        "gameId": "0022400067",
+        "FGA": 173,
+        "fastbreakFGA": 20,
+        "sha256": "dca2b696c1792022acc8554e1ea39b9d8d778f7cf19699a477f9323fcfb0aa10"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400068.json",
+        "legacyFGA": 188,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          105,
+          110
+        ],
+        "retainedFinalScore": [
+          105,
+          110
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400068.json",
+        "gameId": "0022400068",
+        "FGA": 188,
+        "fastbreakFGA": 18,
+        "sha256": "e693ce80fb90053ca5a77b5e367a39fb74787ea9183d4c9a7cb1fbcacc44c970"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400069.json",
+        "legacyFGA": 183,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          123,
+          111
+        ],
+        "retainedFinalScore": [
+          123,
+          111
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400069.json",
+        "gameId": "0022400069",
+        "FGA": 183,
+        "fastbreakFGA": 28,
+        "sha256": "268e3d32dc439f4dee7de5ed6cb8e844cbe3eca8f3331b4bf94b64c2adc2f58b"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400070.json",
+        "legacyFGA": 176,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          124,
+          126
+        ],
+        "retainedFinalScore": [
+          124,
+          126
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400070.json",
+        "gameId": "0022400070",
+        "FGA": 176,
+        "fastbreakFGA": 18,
+        "sha256": "c46c62f7f34ebb770882699900b52bb648e427666d0ae0430557239cbe249e95"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400071.json",
+        "legacyFGA": 170,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          113,
+          116
+        ],
+        "retainedFinalScore": [
+          113,
+          116
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400071.json",
+        "gameId": "0022400071",
+        "FGA": 170,
+        "fastbreakFGA": 26,
+        "sha256": "3579ee89396a5aa35e14946210239e68012adc2682afb95b4b95f0a1e2f539f6"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400072.json",
+        "legacyFGA": 185,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": false,
+        "taggedFinalScore": [
+          104,
+          139
+        ],
+        "retainedFinalScore": [
+          104,
+          140
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400072.json",
+        "gameId": "0022400072",
+        "FGA": 185,
+        "fastbreakFGA": 29,
+        "sha256": "dda9b80a17c670b5cefc47ddabf6387167ab18d96cf0857d2b4f65c1849bae89"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400073.json",
+        "legacyFGA": 185,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          102,
+          122
+        ],
+        "retainedFinalScore": [
+          102,
+          122
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400073.json",
+        "gameId": "0022400073",
+        "FGA": 185,
+        "fastbreakFGA": 30,
+        "sha256": "7944385d1bec3fe630975b0b862ce4e3f04f1d5d46e868ee25e7069844ef9f0a"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400074.json",
+        "legacyFGA": 188,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          120,
+          109
+        ],
+        "retainedFinalScore": [
+          120,
+          109
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400074.json",
+        "gameId": "0022400074",
+        "FGA": 188,
+        "fastbreakFGA": 27,
+        "sha256": "74fcb4bce37035a895f10eaac34333a3bff1946c9357473d76ca44c7ffef2fd3"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400075.json",
+        "legacyFGA": 199,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          87,
+          102
+        ],
+        "retainedFinalScore": [
+          87,
+          102
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400075.json",
+        "gameId": "0022400075",
+        "FGA": 199,
+        "fastbreakFGA": 26,
+        "sha256": "05a8b06319a0156aeaf679c67c5c14042810343bca815aa51cbbc26e5154b5df"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400076.json",
+        "legacyFGA": 168,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          115,
+          117
+        ],
+        "retainedFinalScore": [
+          115,
+          117
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400076.json",
+        "gameId": "0022400076",
+        "FGA": 168,
+        "fastbreakFGA": 10,
+        "sha256": "56b06b2f625d9455bd12629a5577e3aa3b5feb6d9208be094bb4d6e82224c48a"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400077.json",
+        "legacyFGA": 158,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          116,
+          101
+        ],
+        "retainedFinalScore": [
+          116,
+          101
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400077.json",
+        "gameId": "0022400077",
+        "FGA": 158,
+        "fastbreakFGA": 16,
+        "sha256": "a0489f965833e3b6145096950df3b820fbad6929329bfac03ccdef619023f1f1"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400078.json",
+        "legacyFGA": 152,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          115,
+          107
+        ],
+        "retainedFinalScore": [
+          115,
+          107
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400078.json",
+        "gameId": "0022400078",
+        "FGA": 152,
+        "fastbreakFGA": 20,
+        "sha256": "1e3f160e905f8c974043e2aaf1a0005448014c6574b9379e5867b034ac592ef1"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400079.json",
+        "legacyFGA": 177,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          125,
+          120
+        ],
+        "retainedFinalScore": [
+          125,
+          120
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400079.json",
+        "gameId": "0022400079",
+        "FGA": 177,
+        "fastbreakFGA": 25,
+        "sha256": "1f9138243db1963d398522509b9809cce734ebb90abe9437f097c7037afd8c38"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400080.json",
+        "legacyFGA": 163,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          113,
+          101
+        ],
+        "retainedFinalScore": [
+          113,
+          101
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400080.json",
+        "gameId": "0022400080",
+        "FGA": 163,
+        "fastbreakFGA": 21,
+        "sha256": "20cc3c8b4f5f45492ec1bb8de462792e26f4c69b1048c7402b742c15a63b6569"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400081.json",
+        "legacyFGA": 167,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          123,
+          98
+        ],
+        "retainedFinalScore": [
+          123,
+          98
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400081.json",
+        "gameId": "0022400081",
+        "FGA": 167,
+        "fastbreakFGA": 14,
+        "sha256": "cd3faeb84f56215ffa726a8884e057fb2b7b497b464d6d384a86c57575847a33"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400082.json",
+        "legacyFGA": 189,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          128,
+          108
+        ],
+        "retainedFinalScore": [
+          128,
+          108
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400082.json",
+        "gameId": "0022400082",
+        "FGA": 189,
+        "fastbreakFGA": 21,
+        "sha256": "214130ddc70875c37162fced690b5fa1332117c422efb6e44a0295156aeba7e9"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400083.json",
+        "legacyFGA": 189,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          122,
+          133
+        ],
+        "retainedFinalScore": [
+          122,
+          133
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400083.json",
+        "gameId": "0022400083",
+        "FGA": 189,
+        "fastbreakFGA": 14,
+        "sha256": "c46e048b709267ce364e571b24d81fb82d5f11f11a3b07321b81c6148d665756"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400084.json",
+        "legacyFGA": 198,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          86,
+          127
+        ],
+        "retainedFinalScore": [
+          86,
+          127
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400084.json",
+        "gameId": "0022400084",
+        "FGA": 198,
+        "fastbreakFGA": 24,
+        "sha256": "0711e98b394ca93cd4c8886a4601beeb376b840018f20e4e2117c57b2f80896e"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400085.json",
+        "legacyFGA": 157,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          123,
+          116
+        ],
+        "retainedFinalScore": [
+          123,
+          116
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400085.json",
+        "gameId": "0022400085",
+        "FGA": 157,
+        "fastbreakFGA": 23,
+        "sha256": "e1fb27fd829520c618d8b008a297324edcd38588b8bd0b470f6f627ad6e83655"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400086.json",
+        "legacyFGA": 176,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          103,
+          105
+        ],
+        "retainedFinalScore": [
+          103,
+          105
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400086.json",
+        "gameId": "0022400086",
+        "FGA": 176,
+        "fastbreakFGA": 22,
+        "sha256": "871df8010b204775d3f4ec97be6cf426f6fc3aff29387068fcb8180fd1dae73b"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400087.json",
+        "legacyFGA": 169,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          104,
+          109
+        ],
+        "retainedFinalScore": [
+          104,
+          109
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400087.json",
+        "gameId": "0022400087",
+        "FGA": 169,
+        "fastbreakFGA": 19,
+        "sha256": "127b5f02769937a87d8f293f984853f42f0d9f9fd816fd67bee73752c4b4c1a5"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400088.json",
+        "legacyFGA": 175,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          106,
+          114
+        ],
+        "retainedFinalScore": [
+          106,
+          114
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400088.json",
+        "gameId": "0022400088",
+        "FGA": 175,
+        "fastbreakFGA": 17,
+        "sha256": "7aa664d8c19f6e5401c44d0c0ea7456f20b4a7da2d223b56e8c6bf555e09c129"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400089.json",
+        "legacyFGA": 178,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          118,
+          124
+        ],
+        "retainedFinalScore": [
+          118,
+          124
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400089.json",
+        "gameId": "0022400089",
+        "FGA": 178,
+        "fastbreakFGA": 24,
+        "sha256": "db86c863031dfd6e414b3ba982b74b8aae8255837ac933dd0d37fc618e76e566"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400090.json",
+        "legacyFGA": 184,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          116,
+          135
+        ],
+        "retainedFinalScore": [
+          116,
+          135
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400090.json",
+        "gameId": "0022400090",
+        "FGA": 184,
+        "fastbreakFGA": 24,
+        "sha256": "cfcff6d52399b34094434744e352263fd33cbbef4abf03d4e732cebd71948b15"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400091.json",
+        "legacyFGA": 199,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          95,
+          114
+        ],
+        "retainedFinalScore": [
+          95,
+          114
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400091.json",
+        "gameId": "0022400091",
+        "FGA": 199,
+        "fastbreakFGA": 32,
+        "sha256": "5f3f7575a76cd8402cbce4e7005862abaf12608c07b2ac1c065f9289e933b99a"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400092.json",
+        "legacyFGA": 173,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          124,
+          111
+        ],
+        "retainedFinalScore": [
+          124,
+          111
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400092.json",
+        "gameId": "0022400092",
+        "FGA": 173,
+        "fastbreakFGA": 23,
+        "sha256": "1ccd4aeabf93ffd5955bddcc4cfb95782d57025f287c2c370941ab8d1f88d7a1"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400093.json",
+        "legacyFGA": 173,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          112,
+          101
+        ],
+        "retainedFinalScore": [
+          112,
+          101
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400093.json",
+        "gameId": "0022400093",
+        "FGA": 173,
+        "fastbreakFGA": 30,
+        "sha256": "92cb465137cfd46678f406257886c3778bbac5c9d48358fa160e6530248ab19a"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400094.json",
+        "legacyFGA": 171,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          109,
+          106
+        ],
+        "retainedFinalScore": [
+          109,
+          106
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400094.json",
+        "gameId": "0022400094",
+        "FGA": 171,
+        "fastbreakFGA": 18,
+        "sha256": "8f5df80b81c30165cac278ea37e9df2a8868cf5f783276f4782ebc7b5d6648ec"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400096.json",
+        "legacyFGA": 180,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          131,
+          127
+        ],
+        "retainedFinalScore": [
+          131,
+          127
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400096.json",
+        "gameId": "0022400096",
+        "FGA": 180,
+        "fastbreakFGA": 29,
+        "sha256": "6582892146c33fddd24a0f68b8f346507831d2f1de32c7d292eadbc683a330a3"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400097.json",
+        "legacyFGA": 182,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          114,
+          118
+        ],
+        "retainedFinalScore": [
+          114,
+          118
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400097.json",
+        "gameId": "0022400097",
+        "FGA": 182,
+        "fastbreakFGA": 17,
+        "sha256": "af086327e3b2715db7f2d097ccbb22711f0edbbdc11454a4d884e22928da215b"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400098.json",
+        "legacyFGA": 165,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          115,
+          102
+        ],
+        "retainedFinalScore": [
+          115,
+          102
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400098.json",
+        "gameId": "0022400098",
+        "FGA": 165,
+        "fastbreakFGA": 10,
+        "sha256": "2373511844337f2b7525ebcf6be845853afdf3d77d22945129e5db1c88db3df9"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400099.json",
+        "legacyFGA": 181,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          125,
+          103
+        ],
+        "retainedFinalScore": [
+          125,
+          103
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400099.json",
+        "gameId": "0022400099",
+        "FGA": 181,
+        "fastbreakFGA": 21,
+        "sha256": "5ded8eb3a641380f8753014eefb1744f668654eba9863af04730283156465227"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400100.json",
+        "legacyFGA": 180,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          128,
+          104
+        ],
+        "retainedFinalScore": [
+          128,
+          104
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400100.json",
+        "gameId": "0022400100",
+        "FGA": 180,
+        "fastbreakFGA": 11,
+        "sha256": "df79e27654ba1b5c4de5080028f871d0feea58f23fe096e912fb272852d0fda4"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400127.json",
+        "legacyFGA": 182,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          105,
+          106
+        ],
+        "retainedFinalScore": [
+          105,
+          106
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400127.json",
+        "gameId": "0022400127",
+        "FGA": 182,
+        "fastbreakFGA": 24,
+        "sha256": "e3354da27555548b1508fac00b3e30ffb3dea553a80a01f8e9e92472d19d1f76"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400158.json",
+        "legacyFGA": 175,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          106,
+          104
+        ],
+        "retainedFinalScore": [
+          106,
+          104
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400158.json",
+        "gameId": "0022400158",
+        "FGA": 175,
+        "fastbreakFGA": 21,
+        "sha256": "cc47b48e05eee36338ba97f5f37cb733a10280323993b92430e825270d2e977f"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400190.json",
+        "legacyFGA": 166,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          113,
+          114
+        ],
+        "retainedFinalScore": [
+          113,
+          114
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400190.json",
+        "gameId": "0022400190",
+        "FGA": 166,
+        "fastbreakFGA": 18,
+        "sha256": "f2db8c5ccfadae17017343565839ba2de6bf8861d9185c05b315f9823c55f46b"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400221.json",
+        "legacyFGA": 174,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          106,
+          88
+        ],
+        "retainedFinalScore": [
+          106,
+          88
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400221.json",
+        "gameId": "0022400221",
+        "FGA": 174,
+        "fastbreakFGA": 25,
+        "sha256": "39de146f7ed149c5d172f661f0ecdf3e45a71b6ac2ee34dd484541d97b329462"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400253.json",
+        "legacyFGA": 168,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          122,
+          106
+        ],
+        "retainedFinalScore": [
+          122,
+          106
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400253.json",
+        "gameId": "0022400253",
+        "FGA": 168,
+        "fastbreakFGA": 20,
+        "sha256": "3029dd997487a0028653a9d814ee4ce0886d07a2fc876229a4bc28cfa399f60c"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400284.json",
+        "legacyFGA": 176,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          120,
+          128
+        ],
+        "retainedFinalScore": [
+          120,
+          128
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400284.json",
+        "gameId": "0022400284",
+        "FGA": 176,
+        "fastbreakFGA": 27,
+        "sha256": "82c91fe2da8d719ac2f4332fc582baf6202de055b8437c21d56ad5af2b15b1d8"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400316.json",
+        "legacyFGA": 176,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          108,
+          89
+        ],
+        "retainedFinalScore": [
+          108,
+          89
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400316.json",
+        "gameId": "0022400316",
+        "FGA": 176,
+        "fastbreakFGA": 26,
+        "sha256": "f97e9c9eefb652daa8aca8c340d0008003ce95492565680e780f860b7ebe2b18"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400347.json",
+        "legacyFGA": 178,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          100,
+          108
+        ],
+        "retainedFinalScore": [
+          100,
+          108
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400347.json",
+        "gameId": "0022400347",
+        "FGA": 178,
+        "fastbreakFGA": 20,
+        "sha256": "5aaf0c34426652154dc04a0bf66e5e86162e85c9a1372969077090da7a20c80b"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400379.json",
+        "legacyFGA": 180,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          94,
+          105
+        ],
+        "retainedFinalScore": [
+          94,
+          105
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400379.json",
+        "gameId": "0022400379",
+        "FGA": 180,
+        "fastbreakFGA": 28,
+        "sha256": "4ea07eefbd5de6a58c02c9718539cbdecaa5ec431de574e74258cbd1343e599e"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400410.json",
+        "legacyFGA": 184,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          114,
+          120
+        ],
+        "retainedFinalScore": [
+          114,
+          120
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400410.json",
+        "gameId": "0022400410",
+        "FGA": 184,
+        "fastbreakFGA": 15,
+        "sha256": "c0bf7440e8f7b59a75b4ba48e09d732951d062d1ca9c373a13ba36b59ce3d7ec"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400442.json",
+        "legacyFGA": 205,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          108,
+          115
+        ],
+        "retainedFinalScore": [
+          108,
+          115
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400442.json",
+        "gameId": "0022400442",
+        "FGA": 205,
+        "fastbreakFGA": 23,
+        "sha256": "01f9d707bbab43945770d34289acc8b3ad4e9e20e400a30675124d1dfab4c5ad"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400473.json",
+        "legacyFGA": 174,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          117,
+          107
+        ],
+        "retainedFinalScore": [
+          117,
+          107
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400473.json",
+        "gameId": "0022400473",
+        "FGA": 174,
+        "fastbreakFGA": 17,
+        "sha256": "5e8d3554280ca754171b63b1a8fee2bce4cc7dd57089ef60cecfe52d477d9234"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400505.json",
+        "legacyFGA": 183,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          97,
+          104
+        ],
+        "retainedFinalScore": [
+          97,
+          104
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400505.json",
+        "gameId": "0022400505",
+        "FGA": 183,
+        "fastbreakFGA": 28,
+        "sha256": "83f608ca1054407e63fb55f4773d19e0b3104117847126bed69893aec31d0676"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400536.json",
+        "legacyFGA": 187,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          98,
+          119
+        ],
+        "retainedFinalScore": [
+          98,
+          119
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400536.json",
+        "gameId": "0022400536",
+        "FGA": 187,
+        "fastbreakFGA": 25,
+        "sha256": "a5bfdb963ed6ae234ef58089fcf23e7200ffe39bda0e27f1bee3c2bcf44e3897"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400568.json",
+        "legacyFGA": 169,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          108,
+          128
+        ],
+        "retainedFinalScore": [
+          108,
+          128
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400568.json",
+        "gameId": "0022400568",
+        "FGA": 169,
+        "fastbreakFGA": 22,
+        "sha256": "237b724b3f0e6d4955dd4dbfde7bbe0ed833ef73f8134e507bd5aacaba2be6b6"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400599.json",
+        "legacyFGA": 186,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          110,
+          105
+        ],
+        "retainedFinalScore": [
+          110,
+          105
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400599.json",
+        "gameId": "0022400599",
+        "FGA": 186,
+        "fastbreakFGA": 29,
+        "sha256": "192eccf7487b888602cea7436a08304fcc15d4be738fe7fd96783e80a0e48535"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400631.json",
+        "legacyFGA": 177,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          132,
+          129
+        ],
+        "retainedFinalScore": [
+          132,
+          129
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400631.json",
+        "gameId": "0022400631",
+        "FGA": 177,
+        "fastbreakFGA": 16,
+        "sha256": "7281101cc56f7fb56153cbbc498ab8691d7de68856f205651e5fa010160429cc"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400662.json",
+        "legacyFGA": 175,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          125,
+          112
+        ],
+        "retainedFinalScore": [
+          125,
+          112
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400662.json",
+        "gameId": "0022400662",
+        "FGA": 175,
+        "fastbreakFGA": 17,
+        "sha256": "66cb092941dbb657ab5bc659ca517dd41ec1de153de3ecbd39f50a7f938fc28b"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400694.json",
+        "legacyFGA": 173,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          127,
+          108
+        ],
+        "retainedFinalScore": [
+          127,
+          108
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400694.json",
+        "gameId": "0022400694",
+        "FGA": 173,
+        "fastbreakFGA": 23,
+        "sha256": "4001a78b5d411eb17fe9d0232998814f2a06a73e2e97f4fb4ff74dec52702333"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400725.json",
+        "legacyFGA": 192,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          131,
+          128
+        ],
+        "retainedFinalScore": [
+          131,
+          128
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400725.json",
+        "gameId": "0022400725",
+        "FGA": 192,
+        "fastbreakFGA": 16,
+        "sha256": "383572fbb0ba51e788ba72e9780440a3358f788c7445f091e8e6b98155573d1b"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400757.json",
+        "legacyFGA": 181,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          121,
+          131
+        ],
+        "retainedFinalScore": [
+          121,
+          131
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400757.json",
+        "gameId": "0022400757",
+        "FGA": 181,
+        "fastbreakFGA": 23,
+        "sha256": "8b1cd1223cf263096f3d0a20905bad35a2e868296f232fe99802cc50cd6a9efd"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400788.json",
+        "legacyFGA": 190,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          127,
+          113
+        ],
+        "retainedFinalScore": [
+          127,
+          113
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400788.json",
+        "gameId": "0022400788",
+        "FGA": 190,
+        "fastbreakFGA": 28,
+        "sha256": "7816b4ed2a1f8d2ec19e5f41691f0fba4dc6b62adad5eddd59fca2b21b567a0d"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400820.json",
+        "legacyFGA": 175,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          123,
+          130
+        ],
+        "retainedFinalScore": [
+          123,
+          130
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400820.json",
+        "gameId": "0022400820",
+        "FGA": 175,
+        "fastbreakFGA": 19,
+        "sha256": "d5e2a7db6eea71277b0fbf54d4a2644cf5eb2638db4af83d71656cdeedf7d948"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400851.json",
+        "legacyFGA": 189,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          119,
+          135
+        ],
+        "retainedFinalScore": [
+          119,
+          135
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400851.json",
+        "gameId": "0022400851",
+        "FGA": 189,
+        "fastbreakFGA": 23,
+        "sha256": "716ac14cc129bd0910ad72c9e727eda81d18b37ab815f7ca695392505bf9c9e5"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400883.json",
+        "legacyFGA": 163,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          113,
+          114
+        ],
+        "retainedFinalScore": [
+          113,
+          114
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400883.json",
+        "gameId": "0022400883",
+        "FGA": 163,
+        "fastbreakFGA": 21,
+        "sha256": "2948fe6c22da802a76a1ead7b96928d86395803e94bcdb9d2ecbada338032af0"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400914.json",
+        "legacyFGA": 191,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          120,
+          118
+        ],
+        "retainedFinalScore": [
+          120,
+          118
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400914.json",
+        "gameId": "0022400914",
+        "FGA": 191,
+        "fastbreakFGA": 22,
+        "sha256": "60d2816c68210f8f660b22d24f5379f5f144e0ae9e316df9f448ea22e03d079b"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400946.json",
+        "legacyFGA": 176,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          112,
+          118
+        ],
+        "retainedFinalScore": [
+          112,
+          118
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400946.json",
+        "gameId": "0022400946",
+        "FGA": 176,
+        "fastbreakFGA": 14,
+        "sha256": "1812643cdbeac4133713ef758e25f319fc60757a2e40d92a1ddadf20e1f66eed"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022400977.json",
+        "legacyFGA": 170,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          107,
+          96
+        ],
+        "retainedFinalScore": [
+          107,
+          96
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022400977.json",
+        "gameId": "0022400977",
+        "FGA": 170,
+        "fastbreakFGA": 16,
+        "sha256": "adfc425e64cd033546cf0eb8f18185dc93134e03970ad0d7235d0e3ec7a5f481"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022401009.json",
+        "legacyFGA": 175,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          123,
+          119
+        ],
+        "retainedFinalScore": [
+          123,
+          119
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022401009.json",
+        "gameId": "0022401009",
+        "FGA": 175,
+        "fastbreakFGA": 14,
+        "sha256": "266440f89c6ab9b88dacfac08e43cac77720dfbf3e0a475ccdc6497134bcf00e"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022401040.json",
+        "legacyFGA": 165,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          101,
+          120
+        ],
+        "retainedFinalScore": [
+          101,
+          120
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022401040.json",
+        "gameId": "0022401040",
+        "FGA": 165,
+        "fastbreakFGA": 18,
+        "sha256": "d34247468cdab1769196440f9227450e265a824ca10d5583b8751589c026475d"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022401072.json",
+        "legacyFGA": 173,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          95,
+          111
+        ],
+        "retainedFinalScore": [
+          95,
+          111
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022401072.json",
+        "gameId": "0022401072",
+        "FGA": 173,
+        "fastbreakFGA": 22,
+        "sha256": "e016455b581bfce9a81adacaeaa41247c7e33d453bdc626ac1de01f69846ff14"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022401103.json",
+        "legacyFGA": 184,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          124,
+          105
+        ],
+        "retainedFinalScore": [
+          124,
+          105
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022401103.json",
+        "gameId": "0022401103",
+        "FGA": 184,
+        "fastbreakFGA": 21,
+        "sha256": "fddb0e443b08eb01109055f43001b581c5580f47af532f350308389d7d13f54f"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022401135.json",
+        "legacyFGA": 174,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          99,
+          126
+        ],
+        "retainedFinalScore": [
+          99,
+          126
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022401135.json",
+        "gameId": "0022401135",
+        "FGA": 174,
+        "fastbreakFGA": 17,
+        "sha256": "1a0ba1a7c711bffa4209780ec81a39f65127824aa8fd4f216871694538bb25ee"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022401166.json",
+        "legacyFGA": 178,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          134,
+          117
+        ],
+        "retainedFinalScore": [
+          134,
+          117
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022401166.json",
+        "gameId": "0022401166",
+        "FGA": 178,
+        "fastbreakFGA": 15,
+        "sha256": "e0e6242c83f7f31913eac5f17ecd2c99f00bf6fa2d1ac17ddd3e670d40d3e4d1"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022401198.json",
+        "legacyFGA": 165,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          119,
+          124
+        ],
+        "retainedFinalScore": [
+          119,
+          124
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022401198.json",
+        "gameId": "0022401198",
+        "FGA": 165,
+        "fastbreakFGA": 12,
+        "sha256": "16e891fdd1cf29719ef61cfae146787f6934f34a6598f0e2df4c159f60464a21"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/nba-0022401230.json",
+        "legacyFGA": 176,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          111,
+          96
+        ],
+        "retainedFinalScore": [
+          111,
+          96
+        ],
+        "file": "dev/phase13/nba-tagged-pbp/nba-0022401230.json",
+        "gameId": "0022401230",
+        "FGA": 176,
+        "fastbreakFGA": 14,
+        "sha256": "662b701b4fceebcf6c68b5007524cc0865340dca094e316f3a6fbbc999fb0f99"
+      }
+    ],
+    "scoreMatchingSensitivity": {
+      "games": 133,
+      "fastbreakFGAPct": 12.123142250530785
+    }
+  },
+  "wnba": {
+    "games": 100,
+    "FGA": 13596,
+    "fastbreakFGA": 1462,
+    "fastbreakFGAPct": 10.753162694910268,
+    "rows": [
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400001.json",
+        "legacyFGA": 146,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          80,
+          85
+        ],
+        "retainedFinalScore": [
+          80,
+          85
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400001.json",
+        "gameId": "1022400001",
+        "FGA": 146,
+        "fastbreakFGA": 8,
+        "sha256": "de2015719be74cae84b2189edf7db7496b6ec4c4360f7d2714bc92eb15401aca"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400007.json",
+        "legacyFGA": 138,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          66,
+          102
+        ],
+        "retainedFinalScore": [
+          66,
+          102
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400007.json",
+        "gameId": "1022400007",
+        "FGA": 138,
+        "fastbreakFGA": 16,
+        "sha256": "f362df37d519f91961df34f175ce444535b359503c3bbdf931eb75ef54e07baf"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400013.json",
+        "legacyFGA": 132,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          88,
+          85
+        ],
+        "retainedFinalScore": [
+          88,
+          85
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400013.json",
+        "gameId": "1022400013",
+        "FGA": 132,
+        "fastbreakFGA": 22,
+        "sha256": "75c694068d49643b330cb40e9cda1fc373d501ed44be073b014a6fe4b30a7a4d"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400019.json",
+        "legacyFGA": 119,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          70,
+          68
+        ],
+        "retainedFinalScore": [
+          70,
+          68
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400019.json",
+        "gameId": "1022400019",
+        "FGA": 119,
+        "fastbreakFGA": 13,
+        "sha256": "2a9c88bee7c59ae7d0b9293c7b9f9a0bdb9a75d5bd4be636daeef75ae1a46c39"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400025.json",
+        "legacyFGA": 135,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          84,
+          67
+        ],
+        "retainedFinalScore": [
+          84,
+          67
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400025.json",
+        "gameId": "1022400025",
+        "FGA": 135,
+        "fastbreakFGA": 16,
+        "sha256": "c0a58539a89d3f133dbc6679f8d98bd782374ff8a134b5e0a769375496358a27"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400031.json",
+        "legacyFGA": 152,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          83,
+          84
+        ],
+        "retainedFinalScore": [
+          83,
+          84
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400031.json",
+        "gameId": "1022400031",
+        "FGA": 152,
+        "fastbreakFGA": 4,
+        "sha256": "1ffc3a74210e047269249db193715f1a38745c0b013f5e489a71db75e3b4a6e4"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400037.json",
+        "legacyFGA": 137,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          66,
+          80
+        ],
+        "retainedFinalScore": [
+          66,
+          80
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400037.json",
+        "gameId": "1022400037",
+        "FGA": 137,
+        "fastbreakFGA": 16,
+        "sha256": "8dd3bc4c42780118151bc14c62eaca8d31378e00f354a9e1a7c09c2c83d42a9e"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400043.json",
+        "legacyFGA": 135,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          95,
+          71
+        ],
+        "retainedFinalScore": [
+          95,
+          71
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400043.json",
+        "gameId": "1022400043",
+        "FGA": 135,
+        "fastbreakFGA": 10,
+        "sha256": "5922f1270ef12d03983a46f85deff1d54527c8d1c34be5b325d0a600b7e57e8f"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400050.json",
+        "legacyFGA": 152,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          75,
+          88
+        ],
+        "retainedFinalScore": [
+          75,
+          88
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400050.json",
+        "gameId": "1022400050",
+        "FGA": 152,
+        "fastbreakFGA": 19,
+        "sha256": "898057b36fb5991e50884b19d0c195b9bdb38892c05d463e0e5a97ae28a3276b"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400056.json",
+        "legacyFGA": 134,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          83,
+          85
+        ],
+        "retainedFinalScore": [
+          83,
+          85
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400056.json",
+        "gameId": "1022400056",
+        "FGA": 134,
+        "fastbreakFGA": 16,
+        "sha256": "ed32ff91cc063ddbacc1258fc4a4c42d61dc45d70d2ffd3fc6f925be4cb40931"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400062.json",
+        "legacyFGA": 132,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          93,
+          88
+        ],
+        "retainedFinalScore": [
+          93,
+          88
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400062.json",
+        "gameId": "1022400062",
+        "FGA": 132,
+        "fastbreakFGA": 11,
+        "sha256": "f90794583e44192fb06deecc34032a68b0cf8fa5b901f491ec71526f8e73cf10"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400068.json",
+        "legacyFGA": 129,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          86,
+          100
+        ],
+        "retainedFinalScore": [
+          86,
+          100
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400068.json",
+        "gameId": "1022400068",
+        "FGA": 129,
+        "fastbreakFGA": 10,
+        "sha256": "5d60c1e3085c01b72a54cc9a74e1f783e7952a591b0423c10cd30fcf089d531b"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400074.json",
+        "legacyFGA": 130,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          83,
+          81
+        ],
+        "retainedFinalScore": [
+          83,
+          81
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400074.json",
+        "gameId": "1022400074",
+        "FGA": 130,
+        "fastbreakFGA": 19,
+        "sha256": "2548177c1cc6a93104241ca67e1c6571d131f063e9dcb0236b182544c3ecc6cd"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400080.json",
+        "legacyFGA": 136,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          87,
+          74
+        ],
+        "retainedFinalScore": [
+          87,
+          74
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400080.json",
+        "gameId": "1022400080",
+        "FGA": 136,
+        "fastbreakFGA": 11,
+        "sha256": "5c0489bcdb6ae89e2b57a3fa3ad9299cd5816896a26688bc5d523d810f19c846"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400086.json",
+        "legacyFGA": 133,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          94,
+          83
+        ],
+        "retainedFinalScore": [
+          94,
+          83
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400086.json",
+        "gameId": "1022400086",
+        "FGA": 133,
+        "fastbreakFGA": 18,
+        "sha256": "857b5f983e3e53052a92f939bc987d0ab39c22a55ea22dc675c21313453f479d"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400092.json",
+        "legacyFGA": 136,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          98,
+          88
+        ],
+        "retainedFinalScore": [
+          98,
+          88
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400092.json",
+        "gameId": "1022400092",
+        "FGA": 136,
+        "fastbreakFGA": 20,
+        "sha256": "14333a83d599ef97435f09342012d5832cfd3702ee88517b633643beb354b286"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400099.json",
+        "legacyFGA": 141,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          91,
+          94
+        ],
+        "retainedFinalScore": [
+          91,
+          94
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400099.json",
+        "gameId": "1022400099",
+        "FGA": 141,
+        "fastbreakFGA": 13,
+        "sha256": "0756a771cc9d8586c5b0bff72094b58083ec4a4b628e3135b52a70244fdf3dd0"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400105.json",
+        "legacyFGA": 135,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          97,
+          76
+        ],
+        "retainedFinalScore": [
+          97,
+          76
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400105.json",
+        "gameId": "1022400105",
+        "FGA": 135,
+        "fastbreakFGA": 17,
+        "sha256": "36c28f8ee7bfb443f3d721711ba9bbc0d6bd6ef57c72aa8295d03285c003b609"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400111.json",
+        "legacyFGA": 142,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          76,
+          67
+        ],
+        "retainedFinalScore": [
+          76,
+          67
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400111.json",
+        "gameId": "1022400111",
+        "FGA": 142,
+        "fastbreakFGA": 13,
+        "sha256": "4d598b0fb6bbb3a3aacbb6250c1704ad6308b71c12763534c3150d5148b24dbe"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400117.json",
+        "legacyFGA": 134,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          98,
+          77
+        ],
+        "retainedFinalScore": [
+          98,
+          77
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400117.json",
+        "gameId": "1022400117",
+        "FGA": 134,
+        "fastbreakFGA": 15,
+        "sha256": "34a94edcafdc83265ce38d047b5e5a97d89b1a8bb62cb7146968fc39cc642e8f"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400123.json",
+        "legacyFGA": 123,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          80,
+          67
+        ],
+        "retainedFinalScore": [
+          80,
+          67
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400123.json",
+        "gameId": "1022400123",
+        "FGA": 123,
+        "fastbreakFGA": 7,
+        "sha256": "325277329355e512087a5e40de62faffe5b1c1f839aa31483fa5f826cb0425dc"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400129.json",
+        "legacyFGA": 133,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          84,
+          89
+        ],
+        "retainedFinalScore": [
+          84,
+          89
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400129.json",
+        "gameId": "1022400129",
+        "FGA": 133,
+        "fastbreakFGA": 19,
+        "sha256": "414fed395d985feb27f6f5a8f47e1d2dabbfb859fd65a908426b63ca139e6d08"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400135.json",
+        "legacyFGA": 151,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          95,
+          86
+        ],
+        "retainedFinalScore": [
+          95,
+          86
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400135.json",
+        "gameId": "1022400135",
+        "FGA": 151,
+        "fastbreakFGA": 12,
+        "sha256": "8ef0558914187bf12d900b214fab1bb81c7371022401a557a0a2b0f4b600d4ea"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400141.json",
+        "legacyFGA": 148,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          81,
+          70
+        ],
+        "retainedFinalScore": [
+          81,
+          70
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400141.json",
+        "gameId": "1022400141",
+        "FGA": 148,
+        "fastbreakFGA": 14,
+        "sha256": "727dfac730cdf135bba4de8d4f9093f2e96fb60b181cfc8ce3e0c0aaeb57f08b"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400148.json",
+        "legacyFGA": 147,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          101,
+          93
+        ],
+        "retainedFinalScore": [
+          101,
+          93
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400148.json",
+        "gameId": "1022400148",
+        "FGA": 147,
+        "fastbreakFGA": 18,
+        "sha256": "abba83b124049f6bf8fafb29073a58db6eaba173712ab40868b8d64cf81be4cb"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400154.json",
+        "legacyFGA": 132,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          91,
+          109
+        ],
+        "retainedFinalScore": [
+          91,
+          109
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400154.json",
+        "gameId": "1022400154",
+        "FGA": 132,
+        "fastbreakFGA": 18,
+        "sha256": "885fba430e6c82621edb64e23559df1aecb57dcceb0fb3fc957dcc7c7cc5c0e9"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400160.json",
+        "legacyFGA": 145,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          92,
+          75
+        ],
+        "retainedFinalScore": [
+          92,
+          75
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400160.json",
+        "gameId": "1022400160",
+        "FGA": 145,
+        "fastbreakFGA": 19,
+        "sha256": "21496a63e27274f2cb6dc110fda1b042768cd7246f22101fefdf931723206a35"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400166.json",
+        "legacyFGA": 135,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          87,
+          98
+        ],
+        "retainedFinalScore": [
+          87,
+          98
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400166.json",
+        "gameId": "1022400166",
+        "FGA": 135,
+        "fastbreakFGA": 14,
+        "sha256": "94addba359d4608e49fa6bfcd4e62ac7b942134f9feb9f27822da21f6e352bf1"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400172.json",
+        "legacyFGA": 137,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          64,
+          72
+        ],
+        "retainedFinalScore": [
+          64,
+          72
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400172.json",
+        "gameId": "1022400172",
+        "FGA": 137,
+        "fastbreakFGA": 15,
+        "sha256": "d004beb2b4a76f9363c6a0a0030d5d97bad0d73082da11f518be930727901b15"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400178.json",
+        "legacyFGA": 142,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          72,
+          74
+        ],
+        "retainedFinalScore": [
+          72,
+          74
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400178.json",
+        "gameId": "1022400178",
+        "FGA": 142,
+        "fastbreakFGA": 19,
+        "sha256": "0a04c0f518f41c9ffc956f49562269769fb44c7e36f43247ceffa9390ba588f5"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400184.json",
+        "legacyFGA": 145,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          85,
+          81
+        ],
+        "retainedFinalScore": [
+          85,
+          81
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400184.json",
+        "gameId": "1022400184",
+        "FGA": 145,
+        "fastbreakFGA": 17,
+        "sha256": "51538e143447b1677c6750515f867a754d8f0c5a838a0c30f9abf70275135671"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400190.json",
+        "legacyFGA": 130,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          93,
+          86
+        ],
+        "retainedFinalScore": [
+          93,
+          86
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400190.json",
+        "gameId": "1022400190",
+        "FGA": 130,
+        "fastbreakFGA": 13,
+        "sha256": "cdbcf5eb8a1668afb72176f872bac1f12562dc97bcd3e77dfb9225f5b62f2b16"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400197.json",
+        "legacyFGA": 121,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          90,
+          71
+        ],
+        "retainedFinalScore": [
+          90,
+          71
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400197.json",
+        "gameId": "1022400197",
+        "FGA": 121,
+        "fastbreakFGA": 12,
+        "sha256": "2c6fac1020692bb9e77a5643c6cc58618c0398f2c3f70360375de8b9d3501955"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400203.json",
+        "legacyFGA": 121,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          67,
+          72
+        ],
+        "retainedFinalScore": [
+          67,
+          72
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400203.json",
+        "gameId": "1022400203",
+        "FGA": 121,
+        "fastbreakFGA": 19,
+        "sha256": "bf93976c49c0040fba4f5b2f62cc73d7e7c639abc356b8abbec8a408dcf75086"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400209.json",
+        "legacyFGA": 133,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          75,
+          71
+        ],
+        "retainedFinalScore": [
+          75,
+          71
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400209.json",
+        "gameId": "1022400209",
+        "FGA": 133,
+        "fastbreakFGA": 15,
+        "sha256": "4a9f2d5b09add862f1551044c84516c5cc642cdc713ce4881b01b7bbf937bc37"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400215.json",
+        "legacyFGA": 143,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          75,
+          86
+        ],
+        "retainedFinalScore": [
+          75,
+          86
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400215.json",
+        "gameId": "1022400215",
+        "FGA": 143,
+        "fastbreakFGA": 11,
+        "sha256": "13d9a1d7abff5293b0cdc399304dfd0e46f4ee31f15fee7787074df3cca0f9d1"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400221.json",
+        "legacyFGA": 152,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          81,
+          83
+        ],
+        "retainedFinalScore": [
+          81,
+          83
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400221.json",
+        "gameId": "1022400221",
+        "FGA": 152,
+        "fastbreakFGA": 27,
+        "sha256": "111a71974f04165079deeebfc1a3f7229d00f334e047e805d22ba901657ec341"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400227.json",
+        "legacyFGA": 138,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          88,
+          93
+        ],
+        "retainedFinalScore": [
+          88,
+          93
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400227.json",
+        "gameId": "1022400227",
+        "FGA": 138,
+        "fastbreakFGA": 9,
+        "sha256": "9cb12d4510f63170a87c41fac6fb5981b9f8ba3dc928c8430e26afe710640e73"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400233.json",
+        "legacyFGA": 147,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          81,
+          85
+        ],
+        "retainedFinalScore": [
+          81,
+          85
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400233.json",
+        "gameId": "1022400233",
+        "FGA": 147,
+        "fastbreakFGA": 10,
+        "sha256": "9f375bbc21a4e7658a0f637a2cd57ea0abe6346954379cb6f2b38d7074c9fa8e"
+      },
+      {
+        "legacyFile": "dev/phase6/reference-pbp/wnba-1022400240.json",
+        "legacyFGA": 141,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          70,
+          89
+        ],
+        "retainedFinalScore": [
+          70,
+          89
+        ],
+        "file": "dev/phase6/reference-pbp/wnba-1022400240.json",
+        "gameId": "1022400240",
+        "FGA": 141,
+        "fastbreakFGA": 12,
+        "sha256": "581e44cef17fca04f4af56ff2eb7d90fe96eec7d57e523dd33dc779c4e59d783"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022200001.json",
+        "legacyFGA": 141,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          84,
+          70
+        ],
+        "retainedFinalScore": [
+          84,
+          70
+        ],
+        "file": "dev/phase12/reference-pbp/1022200001.json",
+        "gameId": "1022200001",
+        "FGA": 141,
+        "fastbreakFGA": 11,
+        "sha256": "e11a3cf17e5de84d7399b27d849adc93ebca3ef86564a914b480aa34b28c36e5"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022200012.json",
+        "legacyFGA": 141,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          77,
+          75
+        ],
+        "retainedFinalScore": [
+          77,
+          75
+        ],
+        "file": "dev/phase12/reference-pbp/1022200012.json",
+        "gameId": "1022200012",
+        "FGA": 141,
+        "fastbreakFGA": 12,
+        "sha256": "9b37b59da6e9c721f45ed1c35b3c284295b89b13df6af900301b7549e0fdbb5b"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022200024.json",
+        "legacyFGA": 143,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          79,
+          101
+        ],
+        "retainedFinalScore": [
+          79,
+          101
+        ],
+        "file": "dev/phase12/reference-pbp/1022200024.json",
+        "gameId": "1022200024",
+        "FGA": 143,
+        "fastbreakFGA": 19,
+        "sha256": "69841c0b86be4b856e4951d09151c567705060110a5f6f0d1acd86aedb8fd8e6"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022200035.json",
+        "legacyFGA": 134,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          94,
+          78
+        ],
+        "retainedFinalScore": [
+          94,
+          78
+        ],
+        "file": "dev/phase12/reference-pbp/1022200035.json",
+        "gameId": "1022200035",
+        "FGA": 134,
+        "fastbreakFGA": 15,
+        "sha256": "fc1e1182f96610cbb077d26a30d03fa01ed57588739d7ef78daa7a845b7bb882"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022200046.json",
+        "legacyFGA": 143,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          79,
+          71
+        ],
+        "retainedFinalScore": [
+          79,
+          71
+        ],
+        "file": "dev/phase12/reference-pbp/1022200046.json",
+        "gameId": "1022200046",
+        "FGA": 143,
+        "fastbreakFGA": 12,
+        "sha256": "04e81a0a9029c7a4f2efa25f4e86048e21aa6d6f76af83e9440da03d1e74ea2e"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022200058.json",
+        "legacyFGA": 138,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          90,
+          97
+        ],
+        "retainedFinalScore": [
+          90,
+          97
+        ],
+        "file": "dev/phase12/reference-pbp/1022200058.json",
+        "gameId": "1022200058",
+        "FGA": 138,
+        "fastbreakFGA": 13,
+        "sha256": "75ce38d67c8d80114ddcde83c2555ecec79b2c34c1b30fd97a1848747cd1b0f6"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022200069.json",
+        "legacyFGA": 136,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          88,
+          69
+        ],
+        "retainedFinalScore": [
+          88,
+          69
+        ],
+        "file": "dev/phase12/reference-pbp/1022200069.json",
+        "gameId": "1022200069",
+        "FGA": 136,
+        "fastbreakFGA": 20,
+        "sha256": "7d8d31d950e78b653069ab278527e542d365b2ec5a442a6b690707706409dadf"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022200080.json",
+        "legacyFGA": 131,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          79,
+          84
+        ],
+        "retainedFinalScore": [
+          79,
+          84
+        ],
+        "file": "dev/phase12/reference-pbp/1022200080.json",
+        "gameId": "1022200080",
+        "FGA": 131,
+        "fastbreakFGA": 13,
+        "sha256": "d31f842bb7b8548b5570bdf28e78b5744443253953ea4362a511cbc2e3685263"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022200092.json",
+        "legacyFGA": 150,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          72,
+          81
+        ],
+        "retainedFinalScore": [
+          72,
+          81
+        ],
+        "file": "dev/phase12/reference-pbp/1022200092.json",
+        "gameId": "1022200092",
+        "FGA": 150,
+        "fastbreakFGA": 18,
+        "sha256": "4f4017be39410c461ce7653484b50665bad00c0282565190cef6d3dad2dfc1a8"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022200103.json",
+        "legacyFGA": 125,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          100,
+          88
+        ],
+        "retainedFinalScore": [
+          100,
+          88
+        ],
+        "file": "dev/phase12/reference-pbp/1022200103.json",
+        "gameId": "1022200103",
+        "FGA": 125,
+        "fastbreakFGA": 10,
+        "sha256": "6585d3ac23f549b3062c84bf51cd698f46da867ad7e1dcaeb86946ce198f57eb"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022200114.json",
+        "legacyFGA": 124,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          92,
+          74
+        ],
+        "retainedFinalScore": [
+          92,
+          74
+        ],
+        "file": "dev/phase12/reference-pbp/1022200114.json",
+        "gameId": "1022200114",
+        "FGA": 124,
+        "fastbreakFGA": 10,
+        "sha256": "0ce25494d4fb5d9bf90fcfe97cc8f2e359461985b612a6251ce28cd57233c526"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022200125.json",
+        "legacyFGA": 133,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          90,
+          76
+        ],
+        "retainedFinalScore": [
+          90,
+          76
+        ],
+        "file": "dev/phase12/reference-pbp/1022200125.json",
+        "gameId": "1022200125",
+        "FGA": 133,
+        "fastbreakFGA": 13,
+        "sha256": "3d15d03243f4cec5ab46bad4059e7a1512faee4e751d9c2da396d246293fd4d6"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022200137.json",
+        "legacyFGA": 135,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          83,
+          74
+        ],
+        "retainedFinalScore": [
+          83,
+          74
+        ],
+        "file": "dev/phase12/reference-pbp/1022200137.json",
+        "gameId": "1022200137",
+        "FGA": 135,
+        "fastbreakFGA": 16,
+        "sha256": "009aea29e33c969fc5fc1915731fd08befaabb41fa0c02c89ba6c97f432ea879"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022200148.json",
+        "legacyFGA": 129,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          68,
+          93
+        ],
+        "retainedFinalScore": [
+          68,
+          93
+        ],
+        "file": "dev/phase12/reference-pbp/1022200148.json",
+        "gameId": "1022200148",
+        "FGA": 129,
+        "fastbreakFGA": 11,
+        "sha256": "1a5c4fb58c3d4e02f0745dab512ecb0e4667a86cb9b8442a8f15288b94341b86"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022200159.json",
+        "legacyFGA": 130,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          85,
+          78
+        ],
+        "retainedFinalScore": [
+          85,
+          78
+        ],
+        "file": "dev/phase12/reference-pbp/1022200159.json",
+        "gameId": "1022200159",
+        "FGA": 130,
+        "fastbreakFGA": 12,
+        "sha256": "832ecd1701d993cf3bc5b2cf75b94c00d5372a7ca265e19e5381bf3467fced34"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022200171.json",
+        "legacyFGA": 128,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          77,
+          87
+        ],
+        "retainedFinalScore": [
+          77,
+          87
+        ],
+        "file": "dev/phase12/reference-pbp/1022200171.json",
+        "gameId": "1022200171",
+        "FGA": 128,
+        "fastbreakFGA": 12,
+        "sha256": "4dc1e28372bc5972665296d3331a199cbdb3e0d6e58207b046e5a30ce6f988da"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022200182.json",
+        "legacyFGA": 138,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          87,
+          63
+        ],
+        "retainedFinalScore": [
+          87,
+          63
+        ],
+        "file": "dev/phase12/reference-pbp/1022200182.json",
+        "gameId": "1022200182",
+        "FGA": 138,
+        "fastbreakFGA": 15,
+        "sha256": "2302f7967ffb55411718ae43aa04ae003febe372a111d8f88215fced127c9640"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022200193.json",
+        "legacyFGA": 135,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          95,
+          91
+        ],
+        "retainedFinalScore": [
+          95,
+          91
+        ],
+        "file": "dev/phase12/reference-pbp/1022200193.json",
+        "gameId": "1022200193",
+        "FGA": 135,
+        "fastbreakFGA": 13,
+        "sha256": "5090ca1a3080efa9329f92df6a7a93b42bb343e63a674a97e9c4020a745e0f6b"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022200205.json",
+        "legacyFGA": 132,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          89,
+          78
+        ],
+        "retainedFinalScore": [
+          89,
+          78
+        ],
+        "file": "dev/phase12/reference-pbp/1022200205.json",
+        "gameId": "1022200205",
+        "FGA": 132,
+        "fastbreakFGA": 10,
+        "sha256": "15ac830d8f68f1bba45fc533056443e53243e28c7d265abb3efbdff1624f780f"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022200216.json",
+        "legacyFGA": 134,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          88,
+          116
+        ],
+        "retainedFinalScore": [
+          88,
+          116
+        ],
+        "file": "dev/phase12/reference-pbp/1022200216.json",
+        "gameId": "1022200216",
+        "FGA": 134,
+        "fastbreakFGA": 14,
+        "sha256": "5e69387bb474b84ed0bdee612adea0513d40fd56ac71d99c7887d9e86e157d24"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022300001.json",
+        "legacyFGA": 132,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          61,
+          70
+        ],
+        "retainedFinalScore": [
+          61,
+          70
+        ],
+        "file": "dev/phase12/reference-pbp/1022300001.json",
+        "gameId": "1022300001",
+        "FGA": 132,
+        "fastbreakFGA": 18,
+        "sha256": "d4c5b5e57d59f18b491939c2bfb6a735970a344918071677b72c8d11ca5ca246"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022300014.json",
+        "legacyFGA": 127,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          69,
+          71
+        ],
+        "retainedFinalScore": [
+          69,
+          71
+        ],
+        "file": "dev/phase12/reference-pbp/1022300014.json",
+        "gameId": "1022300014",
+        "FGA": 127,
+        "fastbreakFGA": 15,
+        "sha256": "f1186a3d39132be25293c0cd53c5510de22ce12f4e5ec5dc68a79cd6673a3c25"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022300026.json",
+        "legacyFGA": 135,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          75,
+          74
+        ],
+        "retainedFinalScore": [
+          75,
+          74
+        ],
+        "file": "dev/phase12/reference-pbp/1022300026.json",
+        "gameId": "1022300026",
+        "FGA": 135,
+        "fastbreakFGA": 17,
+        "sha256": "1c8386c0106f7e6208b47446a7ff00b04dd2e4e89b8fd99afc5b3320edf3e8d2"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022300039.json",
+        "legacyFGA": 147,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          84,
+          79
+        ],
+        "retainedFinalScore": [
+          84,
+          79
+        ],
+        "file": "dev/phase12/reference-pbp/1022300039.json",
+        "gameId": "1022300039",
+        "FGA": 147,
+        "fastbreakFGA": 22,
+        "sha256": "d7fb7dfc0b749c14abdf4563c484a78443d6d2d5772c79b189b436d1f6858444"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022300051.json",
+        "legacyFGA": 134,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          91,
+          86
+        ],
+        "retainedFinalScore": [
+          91,
+          86
+        ],
+        "file": "dev/phase12/reference-pbp/1022300051.json",
+        "gameId": "1022300051",
+        "FGA": 134,
+        "fastbreakFGA": 20,
+        "sha256": "1eef6278097cbc80c4569322a069d8690095d8e614db24f02ba670472f5f45d9"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022300064.json",
+        "legacyFGA": 139,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          94,
+          100
+        ],
+        "retainedFinalScore": [
+          94,
+          100
+        ],
+        "file": "dev/phase12/reference-pbp/1022300064.json",
+        "gameId": "1022300064",
+        "FGA": 139,
+        "fastbreakFGA": 16,
+        "sha256": "3b8d3505b7092e7c8ade53703d92afe4f3c5d0fb2ce777b8539122540ab6a9a6"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022300076.json",
+        "legacyFGA": 132,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          101,
+          88
+        ],
+        "retainedFinalScore": [
+          101,
+          88
+        ],
+        "file": "dev/phase12/reference-pbp/1022300076.json",
+        "gameId": "1022300076",
+        "FGA": 132,
+        "fastbreakFGA": 15,
+        "sha256": "9f650cbbe02ae496a0c0a6e7b3044496aecd3b0372a79c130ce3e85c728b81b8"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022300089.json",
+        "legacyFGA": 160,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          97,
+          99
+        ],
+        "retainedFinalScore": [
+          97,
+          99
+        ],
+        "file": "dev/phase12/reference-pbp/1022300089.json",
+        "gameId": "1022300089",
+        "FGA": 160,
+        "fastbreakFGA": 16,
+        "sha256": "1ca5b9fa0965e06d46ec03f603d5203ed16b825f20c3a03ec3e0389217bd756c"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022300102.json",
+        "legacyFGA": 130,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          93,
+          73
+        ],
+        "retainedFinalScore": [
+          93,
+          73
+        ],
+        "file": "dev/phase12/reference-pbp/1022300102.json",
+        "gameId": "1022300102",
+        "FGA": 130,
+        "fastbreakFGA": 20,
+        "sha256": "df849b1bb3fe7103a57b19fa64d115af42b3abf9f6adf64ee7e5eaa3c780829f"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022300114.json",
+        "legacyFGA": 142,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          98,
+          72
+        ],
+        "retainedFinalScore": [
+          98,
+          72
+        ],
+        "file": "dev/phase12/reference-pbp/1022300114.json",
+        "gameId": "1022300114",
+        "FGA": 142,
+        "fastbreakFGA": 6,
+        "sha256": "2ca7dac064d62cb57d30398d3121fa039a7f748389f42aff603ba75c877a28b2"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022300127.json",
+        "legacyFGA": 128,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          63,
+          79
+        ],
+        "retainedFinalScore": [
+          63,
+          79
+        ],
+        "file": "dev/phase12/reference-pbp/1022300127.json",
+        "gameId": "1022300127",
+        "FGA": 128,
+        "fastbreakFGA": 18,
+        "sha256": "f60e36f9fc3c8a766bab70ed1c954f3fe4d90f61b16d0d624728a6662c32cd0f"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022300139.json",
+        "legacyFGA": 135,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          79,
+          78
+        ],
+        "retainedFinalScore": [
+          79,
+          78
+        ],
+        "file": "dev/phase12/reference-pbp/1022300139.json",
+        "gameId": "1022300139",
+        "FGA": 135,
+        "fastbreakFGA": 8,
+        "sha256": "2ddf97313c3e4720b9bff92381efd4f244afc37ed28abcb4402f445e198d4db6"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022300152.json",
+        "legacyFGA": 127,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          72,
+          71
+        ],
+        "retainedFinalScore": [
+          72,
+          71
+        ],
+        "file": "dev/phase12/reference-pbp/1022300152.json",
+        "gameId": "1022300152",
+        "FGA": 127,
+        "fastbreakFGA": 15,
+        "sha256": "2f50213b83d5497e8d99e811161d98c76cc6a7f20f4973f2b4407247bedba48b"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022300165.json",
+        "legacyFGA": 134,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          96,
+          104
+        ],
+        "retainedFinalScore": [
+          96,
+          104
+        ],
+        "file": "dev/phase12/reference-pbp/1022300165.json",
+        "gameId": "1022300165",
+        "FGA": 134,
+        "fastbreakFGA": 11,
+        "sha256": "03b4bb81d8fe3aec651894a9960139ad78d2d575bc17309e535008226af6d918"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022300177.json",
+        "legacyFGA": 137,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          91,
+          81
+        ],
+        "retainedFinalScore": [
+          91,
+          81
+        ],
+        "file": "dev/phase12/reference-pbp/1022300177.json",
+        "gameId": "1022300177",
+        "FGA": 137,
+        "fastbreakFGA": 18,
+        "sha256": "90d49fa1fefad4d9aac5c2048e56fef7e31fadf3656a70ffba955dc06aecfa9d"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022300190.json",
+        "legacyFGA": 120,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          73,
+          79
+        ],
+        "retainedFinalScore": [
+          73,
+          79
+        ],
+        "file": "dev/phase12/reference-pbp/1022300190.json",
+        "gameId": "1022300190",
+        "FGA": 120,
+        "fastbreakFGA": 16,
+        "sha256": "c3eacec51b7693b1f6ec7704d906223926688406b663f3fe51f2113030dde29d"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022300202.json",
+        "legacyFGA": 127,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          78,
+          83
+        ],
+        "retainedFinalScore": [
+          78,
+          83
+        ],
+        "file": "dev/phase12/reference-pbp/1022300202.json",
+        "gameId": "1022300202",
+        "FGA": 127,
+        "fastbreakFGA": 7,
+        "sha256": "c239baaf7c4be21803caebd388dd5ab9b9296f82c602e82f98be2b6920942f4f"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022300215.json",
+        "legacyFGA": 120,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          61,
+          72
+        ],
+        "retainedFinalScore": [
+          61,
+          72
+        ],
+        "file": "dev/phase12/reference-pbp/1022300215.json",
+        "gameId": "1022300215",
+        "FGA": 120,
+        "fastbreakFGA": 13,
+        "sha256": "7e2a8b9474eea1a5e617220a603c63a01bc7b9b40ed6ef4da103262ff08c0bfd"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022300227.json",
+        "legacyFGA": 132,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          77,
+          100
+        ],
+        "retainedFinalScore": [
+          77,
+          100
+        ],
+        "file": "dev/phase12/reference-pbp/1022300227.json",
+        "gameId": "1022300227",
+        "FGA": 132,
+        "fastbreakFGA": 13,
+        "sha256": "0714c0cf703cf13df3aa0a673318442ffd995eaa44f6a432d978ff3af92b0bba"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022300240.json",
+        "legacyFGA": 142,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          89,
+          91
+        ],
+        "retainedFinalScore": [
+          89,
+          91
+        ],
+        "file": "dev/phase12/reference-pbp/1022300240.json",
+        "gameId": "1022300240",
+        "FGA": 142,
+        "fastbreakFGA": 14,
+        "sha256": "38b6541ad58192f5325977fdd1496763a616cc3ab33c1f5930abcc4a9572ccec"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022500001.json",
+        "legacyFGA": 135,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          94,
+          90
+        ],
+        "retainedFinalScore": [
+          94,
+          90
+        ],
+        "file": "dev/phase12/reference-pbp/1022500001.json",
+        "gameId": "1022500001",
+        "FGA": 135,
+        "fastbreakFGA": 7,
+        "sha256": "aed2df9bc311e3a2ee3545e20aff29ed8fb8e06cb276d6c2d99996dbdc57afc0"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022500016.json",
+        "legacyFGA": 127,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          74,
+          99
+        ],
+        "retainedFinalScore": [
+          74,
+          99
+        ],
+        "file": "dev/phase12/reference-pbp/1022500016.json",
+        "gameId": "1022500016",
+        "FGA": 127,
+        "fastbreakFGA": 12,
+        "sha256": "6677b1829fcf97812b0a255611ac4a666710e6cc150328b7d423b0ef9fa8c32a"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022500031.json",
+        "legacyFGA": 149,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          94,
+          89
+        ],
+        "retainedFinalScore": [
+          94,
+          89
+        ],
+        "file": "dev/phase12/reference-pbp/1022500031.json",
+        "gameId": "1022500031",
+        "FGA": 149,
+        "fastbreakFGA": 20,
+        "sha256": "7a08c15482cc41edffe004bfd079f73dc6f7c2d6ebc395d742fcdaa9e514e21c"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022500046.json",
+        "legacyFGA": 131,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          88,
+          65
+        ],
+        "retainedFinalScore": [
+          88,
+          65
+        ],
+        "file": "dev/phase12/reference-pbp/1022500046.json",
+        "gameId": "1022500046",
+        "FGA": 131,
+        "fastbreakFGA": 22,
+        "sha256": "2b824623f8c1589b95d30d66dd5cb9b709c56ad2ca77ae0adeec9edfb7135418"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022500061.json",
+        "legacyFGA": 137,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          93,
+          80
+        ],
+        "retainedFinalScore": [
+          93,
+          80
+        ],
+        "file": "dev/phase12/reference-pbp/1022500061.json",
+        "gameId": "1022500061",
+        "FGA": 137,
+        "fastbreakFGA": 16,
+        "sha256": "eac58ae691fb38257404b4652eb99ae411141023296f00bdab1a18e5c82edfca"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022500076.json",
+        "legacyFGA": 139,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          67,
+          98
+        ],
+        "retainedFinalScore": [
+          67,
+          98
+        ],
+        "file": "dev/phase12/reference-pbp/1022500076.json",
+        "gameId": "1022500076",
+        "FGA": 139,
+        "fastbreakFGA": 23,
+        "sha256": "923d2bd049509238c1fa4d747253d1c08afed6e89ef9afdd0f149f126dad9586"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022500091.json",
+        "legacyFGA": 139,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          97,
+          86
+        ],
+        "retainedFinalScore": [
+          97,
+          86
+        ],
+        "file": "dev/phase12/reference-pbp/1022500091.json",
+        "gameId": "1022500091",
+        "FGA": 139,
+        "fastbreakFGA": 17,
+        "sha256": "624d33702a0b0f7ed3ff6b5ac19796844d070551ea120f10d6d11e3f0b8f9663"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022500106.json",
+        "legacyFGA": 131,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          81,
+          84
+        ],
+        "retainedFinalScore": [
+          81,
+          84
+        ],
+        "file": "dev/phase12/reference-pbp/1022500106.json",
+        "gameId": "1022500106",
+        "FGA": 131,
+        "fastbreakFGA": 12,
+        "sha256": "abdb118b768b87851c14a81a69d3cb12a73d4abad34d4468bbccacaaaf0073d8"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022500121.json",
+        "legacyFGA": 131,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          81,
+          79
+        ],
+        "retainedFinalScore": [
+          81,
+          79
+        ],
+        "file": "dev/phase12/reference-pbp/1022500121.json",
+        "gameId": "1022500121",
+        "FGA": 131,
+        "fastbreakFGA": 17,
+        "sha256": "090a2c23b273116cd3ccbaa57df12d8ab041c23261cab4efeed44fc5fc873242"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022500136.json",
+        "legacyFGA": 132,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          69,
+          74
+        ],
+        "retainedFinalScore": [
+          69,
+          74
+        ],
+        "file": "dev/phase12/reference-pbp/1022500136.json",
+        "gameId": "1022500136",
+        "FGA": 132,
+        "fastbreakFGA": 14,
+        "sha256": "7874e721c4acdba6ca09300e4ff0cb5e96b7da7923c6a5315335e16a84e5f88d"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022500151.json",
+        "legacyFGA": 135,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          79,
+          90
+        ],
+        "retainedFinalScore": [
+          79,
+          90
+        ],
+        "file": "dev/phase12/reference-pbp/1022500151.json",
+        "gameId": "1022500151",
+        "FGA": 135,
+        "fastbreakFGA": 13,
+        "sha256": "d74c111e70a44fe19a5415ba1dd10fb5830dd2762ffbdc769ac9cd8ad151e4c4"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022500166.json",
+        "legacyFGA": 142,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          92,
+          82
+        ],
+        "retainedFinalScore": [
+          92,
+          82
+        ],
+        "file": "dev/phase12/reference-pbp/1022500166.json",
+        "gameId": "1022500166",
+        "FGA": 142,
+        "fastbreakFGA": 20,
+        "sha256": "101de8012a53032c940a0d93a7e42029e7968abb98df9b3bb536ada6087e83fb"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022500181.json",
+        "legacyFGA": 130,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          78,
+          87
+        ],
+        "retainedFinalScore": [
+          78,
+          87
+        ],
+        "file": "dev/phase12/reference-pbp/1022500181.json",
+        "gameId": "1022500181",
+        "FGA": 130,
+        "fastbreakFGA": 18,
+        "sha256": "f6eac262c9d9d61faa50d54933d2d8e7b0195bebd566879099d205c61d05b793"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022500196.json",
+        "legacyFGA": 136,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          90,
+          86
+        ],
+        "retainedFinalScore": [
+          90,
+          86
+        ],
+        "file": "dev/phase12/reference-pbp/1022500196.json",
+        "gameId": "1022500196",
+        "FGA": 136,
+        "fastbreakFGA": 9,
+        "sha256": "0ac9055efdb925dcfc315b9dabb48ac0e19647e25e5296fea0f50d9cfcafb8b9"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022500211.json",
+        "legacyFGA": 128,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          84,
+          88
+        ],
+        "retainedFinalScore": [
+          84,
+          88
+        ],
+        "file": "dev/phase12/reference-pbp/1022500211.json",
+        "gameId": "1022500211",
+        "FGA": 128,
+        "fastbreakFGA": 10,
+        "sha256": "28cd5bb37611ac362b2ecb53f48d0b1bbc20a0538218a7879dc11239a9bdda34"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022500226.json",
+        "legacyFGA": 146,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          91,
+          98
+        ],
+        "retainedFinalScore": [
+          91,
+          98
+        ],
+        "file": "dev/phase12/reference-pbp/1022500226.json",
+        "gameId": "1022500226",
+        "FGA": 146,
+        "fastbreakFGA": 13,
+        "sha256": "8d3d6190016b0fca853553989e8d5c2b14d37476d29d3e9deee5890a10cb28c2"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022500241.json",
+        "legacyFGA": 129,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          81,
+          79
+        ],
+        "retainedFinalScore": [
+          81,
+          79
+        ],
+        "file": "dev/phase12/reference-pbp/1022500241.json",
+        "gameId": "1022500241",
+        "FGA": 129,
+        "fastbreakFGA": 11,
+        "sha256": "daeadf70c5ac5ec0453728c0872cf21c56049ef24d84c99cb968f833132ce030"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022500256.json",
+        "legacyFGA": 142,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          81,
+          78
+        ],
+        "retainedFinalScore": [
+          81,
+          78
+        ],
+        "file": "dev/phase12/reference-pbp/1022500256.json",
+        "gameId": "1022500256",
+        "FGA": 142,
+        "fastbreakFGA": 14,
+        "sha256": "98f1280a6102cee044c136b46b7ab248a10e7acd697f6fccec9cd03a0f6370f6"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022500271.json",
+        "legacyFGA": 134,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          87,
+          84
+        ],
+        "retainedFinalScore": [
+          87,
+          84
+        ],
+        "file": "dev/phase12/reference-pbp/1022500271.json",
+        "gameId": "1022500271",
+        "FGA": 134,
+        "fastbreakFGA": 16,
+        "sha256": "0719b2d6fe117cbd7d425bb37630235dd0b5ac13adb65327944996c4d0bb7cc7"
+      },
+      {
+        "legacyFile": "dev/phase12/reference-pbp/1022500286.json",
+        "legacyFGA": 151,
+        "FGAChangeFromLegacy": 0,
+        "scoreMatchesRetained": true,
+        "taggedFinalScore": [
+          75,
+          103
+        ],
+        "retainedFinalScore": [
+          75,
+          103
+        ],
+        "file": "dev/phase12/reference-pbp/1022500286.json",
+        "gameId": "1022500286",
+        "FGA": 151,
+        "fastbreakFGA": 24,
+        "sha256": "1b0c08bb5d5fe543e985511196ba0516b093cb345f94f1f3c4cc95737ec2eabb"
+      }
+    ],
+    "scoreMatchingSensitivity": {
+      "games": 100,
+      "fastbreakFGAPct": 10.753162694910268
+    }
+  },
+  "synergyNBA": {
+    "season": "2024-25",
+    "teams": 30,
+    "meanTeamTransitionPossPct": 18.58,
+    "estimatedPooledPossPct": 18.61339982747529,
+    "note": "Pooled denominator inferred from team POSS / rounded POSS_PCT, hence approximate. Full-season Synergy play-type share differs from the 134-game CDN fastbreak-FGA sample and denominator; not a conversion factor.",
+    "source": "dev/phase10/real-transition.json"
+  }
+}

@@ -1,0 +1,13 @@
+/* Match-local home court: probabilities, never persistent player ratings. */
+function roadComposure(club){if(!club)return 1;const players=club.roster.filter(p=>!injuryDays(p)),total=players.reduce((n,p)=>n+Math.max(0,playerMinutes(p,club)),0);if(!total)return 1;const average=fn=>players.reduce((n,p)=>n+Math.max(0,playerMinutes(p,club))*fn(p),0)/total,age=average(p=>p.age),focus=average(p=>moraleDetails(p,club).focus),chemistry=teamChemistry(club).score;return Math.max(.55,Math.min(1.5,1+(26-age)*.035+(65-focus)*.006+(65-chemistry)*.004))}
+function createHomeCourt(stage,away=null){const neutral=/all.star|rising|exhibition|neutral/i.test(stage),split=typeof activeRivalry!=='undefined'&&activeRivalry?.split,atmosphere=activeGameAtmosphere,fill=Math.max(0,Math.min(1,atmosphere?.fillRate??.75)),energy=Math.max(1,Math.min(3,atmosphere?.fanEnergy??2)),loyalty=Math.max(-20,Math.min(20,atmosphere?.fanSentimentScore??0)),scale=neutral||split?0:leagueRules().homeAdvantage/.8,crowd=(.4+.6*fill)*(.85+.15*energy/3)*(1+loyalty*.005),pressure=crowd*roadComposure(away);return {strength:scale*.008*(.6+.4*fill),roadShot:Math.min(.03,.009*scale*pressure),roadFoul:Math.min(.10,.065*scale*pressure),roadTurnover:Math.min(.012,.0025*scale*pressure),fill,momentum:0,buckets:0,hot:false,cooldown:0}}
+function homeCourtShot(court,side,freeThrow=false){if(!court?.strength)return 0;return side===0?court.strength*(1+(freeThrow?0:court.momentum*.35)):-court.roadShot}
+function homeCourtFoul(court,side){return side===0?1-(court?.strength||0)*.8:1+(court?.roadFoul||0)}
+function homeCourtRebound(court,homeOffense){return (homeOffense?1:-1)*(court?.strength||0)*.2}
+function homeCourtTick(court){court.momentum=Math.max(0,court.momentum-.18);if(court.cooldown>0)court.cooldown--;if(court.momentum<.3)court.hot=false}
+function homeCourtEvent(court,side,kind,log){if(!court.strength)return;if(kind==='bucket'){if(side===0){court.buckets++;if(court.buckets>=2)court.momentum=Math.min(1,court.momentum+.55)}else {court.buckets=0;court.momentum=Math.max(0,court.momentum-.4)}}else if(kind==='steal'&&side===0)court.momentum=Math.min(1,court.momentum+.5);if(court.momentum>=.5&&!court.hot&&!court.cooldown){court.hot=true;court.cooldown=10;log(0,'The home crowd comes alive! The noise lifts the home offense for the next few possessions.')}}
+function homeCourtTimeout(court){court.momentum*=.25;court.buckets=0;court.hot=false}
+
+function homeCourtProbability(base,court,side,freeThrow=false){return base<=0?0:base>=1?1:Math.max(0,Math.min(1,base+homeCourtShot(court,side,freeThrow)))}
+
+function roadTurnoverPenalty(court,side){return side===1?court?.roadTurnover||0:0}

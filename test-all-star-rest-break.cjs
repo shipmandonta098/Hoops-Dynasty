@@ -1,0 +1,11 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const element={style:{},classList:{add(){},remove(){},toggle(){}},addEventListener(){},querySelectorAll(){return []},setAttribute(){},removeAttribute(){},showModal(){},close(){},innerHTML:'',scrollTop:0};
+let seed=4451;const math=Object.create(Math);math.random=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296};
+const context={console,Math:math,setTimeout,clearTimeout,localStorage:{getItem(){return null},setItem(){}},document:{getElementById(){return element},querySelector(){return element},addEventListener(){},querySelectorAll(){return []},documentElement:element,body:element},window:{addEventListener(){},scrollTo(){}},assert};vm.createContext(context);
+for(const [,script] of fs.readFileSync('dist/index.html','utf8').matchAll(/<script src="([^"]+)"/g))vm.runInContext(fs.readFileSync('dist/'+script,'utf8').replace('careerReady=initializeCareers();',''),context,{filename:script});
+
+vm.runInContext(`
+let draft=makeDraft();draft.gmName='Rest patterns';
+for(const duration of [1,3,7]){draft.leagueSettings.allStarEventDays=duration;state=validateCareerData(buildSetupCareer(draft));const c=state.allStarCalendar;assert.equal(c.breakEnd-c.breakStart+1,7);assert.equal(c.end-c.start+1,duration);assert(validateNBASeason(state.schedule,state.teams));const restored=validateCareerData(copy(state));assert.deepEqual(restored.schedule,state.schedule);assert.deepEqual(restored.allStarCalendar,c)}
+const p=team().roster[0];p.workload={energy:30,stamp:medicalStamp()-1,minutes:35};p.medicalInfo={severity:'Minor',name:'Bruise',until:medicalStamp()+30,rehabUntil:medicalStamp()+40};state.day=state.allStarCalendar.breakEnd;const q=team().roster[1];q.medicalInfo={severity:'Severe',name:'Fracture',until:medicalStamp()+30,rehabUntil:medicalStamp()+40};const injury=JSON.stringify(q.medicalInfo);applyAllStarRecovery();assert.equal(p.workload.energy,100);assert(p.medicalInfo.rehabUntil<=medicalStamp());assert.equal(JSON.stringify(q.medicalInfo),injury);console.log('PASS: new 7-day breaks, event lengths, NBA matchup/rest validation, save round-trips and minor-only injury recovery.');
+`,context);

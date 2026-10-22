@@ -1,0 +1,36 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const element={style:{},classList:{add(){},remove(){},toggle(){}},addEventListener(){},querySelectorAll(){return []},setAttribute(){},removeAttribute(){},showModal(){},close(){},innerHTML:''};
+const context={console,Math:Object.create(Math),setTimeout,clearTimeout,localStorage:{getItem(){return null}},document:{getElementById(){return element},addEventListener(){},querySelectorAll(){return []},documentElement:element,body:element},window:{addEventListener(){},scrollTo(){}},assert};vm.createContext(context);
+for(const [,script] of fs.readFileSync('dist/index.html','utf8').matchAll(/<script src="([^"]+)"/g))vm.runInContext(fs.readFileSync('dist/'+script,'utf8').replace('careerReady=initializeCareers();',''),context,{filename:script});
+
+vm.runInContext(`
+state=fresh(defaultTeams().slice(0,4),4);render=()=>{};
+const initial=JSON.stringify(state),filters=JSON.stringify(teamStatsUI);
+assert.equal(MATCHUP_METRICS.length,17);
+assert(matchupComparison(0,1).includes('Unranked'));
+assert.equal(matchupSeries(0,1).total,4);
+assert.equal(matchupSeries(0,1).text,'Season series tied 0–0');
+const sample=[{teamId:0,gp:2,pts:200,drtg:100},{teamId:1,gp:1,pts:100,drtg:110},{teamId:2,gp:1,pts:90,drtg:100},{teamId:3,gp:0,pts:0,drtg:0}];
+assert.equal(matchupValue(sample[0],MATCHUP_METRICS[5]),100);
+assert.equal(matchupRank(sample,sample[0],MATCHUP_METRICS[5]).rank,1);
+assert.equal(matchupRank(sample,sample[0],MATCHUP_METRICS[5]).tied,true);
+assert.equal(matchupRank(sample,sample[1],MATCHUP_METRICS[1]).rank,3);
+assert.equal(matchupRank(sample,sample[3],MATCHUP_METRICS[1]),null);
+viewGMMatchup();assert(document.getElementById('profile').innerHTML.includes('Season comparison'));
+assert.equal(JSON.stringify(state),initial);assert.equal(JSON.stringify(teamStatsUI),filters);
+const leagueRow=leagueScheduleRows().find(r=>!r.pair.includes(0));
+assert(leagueScheduleGameRow(leagueRow).includes('View matchup'));
+const ownRow=scheduleRows().find(r=>!r.bye);assert(scheduleGameRow(ownRow,ownRow.day).includes('View matchup'));
+viewScheduleMatchup(leagueRow.day,...leagueRow.pair);
+let markup=document.getElementById('profile').innerHTML;
+assert(markup.includes(state.teams[leagueRow.pair[0]].city));assert(markup.includes(state.teams[leagueRow.pair[1]].city));assert(markup.includes('Watch live'));assert(!markup.includes('Set lineup'));
+assert.equal(JSON.stringify(state),initial);
+state.history=[{day:leagueRow.day,a:leagueRow.pair[0],b:leagueRow.pair[1],stage:'Regular season',winner:leagueRow.pair[0],box:[],sa:100,sb:90}];
+state.day=leagueRow.day;viewScheduleMatchup(leagueRow.day,...leagueRow.pair);
+markup=document.getElementById('profile').innerHTML;assert(markup.includes('View results'));assert(!markup.includes('Watch live'));
+state.history=[{a:0,b:1,stage:'Regular season',winner:1},{a:1,b:0,stage:'Regular season',winner:1},{a:0,b:1,stage:'Championship',winner:0}];
+assert.equal(matchupSeries(0,1).text,state.teams[1].city+' leads 2–0');assert.equal(matchupSeries(0,1).complete,false);
+state.history.push({a:0,b:1,stage:'Regular season',winner:1},{a:1,b:0,stage:'Regular season',winner:1});
+assert.equal(matchupSeries(0,1).text,state.teams[1].city+' wins 4–0');assert.equal(matchupSeries(0,1).complete,true);
+state.history[3].winner=0;state.history[4].winner=0;assert.equal(matchupSeries(0,1).text,'Season series tied 2–2');
+`,context);console.log('Matchup metrics, per-game values, inverse ranks, ties, missing data, modal, read-only state and series completion passed.');

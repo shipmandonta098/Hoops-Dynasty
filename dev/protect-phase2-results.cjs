@@ -1,0 +1,5 @@
+// Preserve complete audit snapshots while older runner processes finish their writes.
+const fs=require('fs'),path=require('path');const source='dev/balance-audit',dest='dev/phase2/complete-snapshots';fs.mkdirSync(dest,{recursive:true});const pending=new Map();
+function capture(name,retries=30){if(!/^phase2-(nba|wnba)-\d+\.json$/.test(name)||fs.existsSync(path.join(dest,name)))return;try{const raw=fs.readFileSync(path.join(source,name)),r=JSON.parse(raw);if(r.games.length!==(r.league==='nba'?1230:240)||r.games.length!==r.regularGames)return;const target=path.join(dest,name),temp=target+'.tmp',fd=fs.openSync(temp,'w');try{fs.writeFileSync(fd,raw);fs.fsyncSync(fd)}finally{fs.closeSync(fd)}fs.renameSync(temp,target);console.log('SNAPSHOT',name,r.games.length);}catch(e){if(retries>0)pending.set(name,setTimeout(()=>capture(name,retries-1),10));}}
+for(const name of fs.readdirSync(source))capture(name);
+const watcher=fs.watch(source,(_,name)=>{if(name){clearTimeout(pending.get(name));capture(name)}});process.on('SIGINT',()=>{watcher.close();for(const t of pending.values())clearTimeout(t);process.exit()});

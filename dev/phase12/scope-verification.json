@@ -1,0 +1,38 @@
+[
+  {
+    "gender": "male",
+    "year": 1997,
+    "poolPreserved": true,
+    "positionCountsPreserved": true
+  },
+  {
+    "gender": "male",
+    "year": 2006,
+    "poolPreserved": true,
+    "positionCountsPreserved": true
+  },
+  {
+    "gender": "male",
+    "year": 2024,
+    "poolPreserved": true,
+    "positionCountsPreserved": true
+  },
+  {
+    "gender": "female",
+    "year": 1997,
+    "poolPreserved": true,
+    "positionCountsPreserved": true
+  },
+  {
+    "gender": "female",
+    "year": 2006,
+    "poolPreserved": true,
+    "positionCountsPreserved": true
+  },
+  {
+    "gender": "female",
+    "year": 2024,
+    "poolPreserved": true,
+    "positionCountsPreserved": true
+  }
+]

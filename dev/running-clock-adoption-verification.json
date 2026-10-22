@@ -1,0 +1,2589 @@
+{
+  "fixture": {
+    "creationSeed": 61005,
+    "games": 150,
+    "seeds": "100000–100149",
+    "teams": 30,
+    "playersPerTeam": 15,
+    "preseasonReset": true
+  },
+  "runtimeSeconds": 101.57914474799999,
+  "parity": {
+    "baseline": 150,
+    "candidate": 150,
+    "fullPostGameState": true,
+    "baselineReproduction": "EXACT MATCH"
+  },
+  "baseline": {
+    "totals": {
+      "pts": 36924,
+      "poss": 153570,
+      "fga": 28547,
+      "fgm": 14041,
+      "tpa": 10694,
+      "tpm": 4114,
+      "fta": 6151,
+      "ftm": 4728,
+      "tov": 3907,
+      "orb": 3789,
+      "pf": 4103,
+      "blk": 932
+    },
+    "metrics": {
+      "PPG": 123.08,
+      "pace": 102.38,
+      "ORtg": 120.21879273295566,
+      "twoP": 0.5560410015123509,
+      "threeP": 0.3847017018889097,
+      "FGA": 95.15666666666667,
+      "TOV": 13.023333333333333,
+      "PF": 13.676666666666666,
+      "OREB": 12.63,
+      "BLK": 3.1066666666666665
+    },
+    "primaryRim": {
+      "evaluations": 2643,
+      "FGA": 2475,
+      "made": 1643,
+      "FG": 0.6638383838383838,
+      "perTeamGame": 8.25,
+      "probability": 0.6542564986009576,
+      "blocks": 127,
+      "fouled": 310
+    },
+    "allRim": {
+      "evaluations": 4392,
+      "FGA": 4221,
+      "made": 2760,
+      "FG": 0.6538734896943852,
+      "perTeamGame": 14.07,
+      "probability": 0.649408996780184,
+      "blocks": 130,
+      "fouled": 315
+    },
+    "variants": {
+      "10′ Driving Floating Jumpshot": {
+        "evaluations": 275,
+        "FGA": 261,
+        "made": 148,
+        "FG": 0.5670498084291188,
+        "perTeamGame": 0.87,
+        "probability": 0.5571667838432142,
+        "blocks": 7,
+        "fouled": 23
+      },
+      "4′ Driving Floating Jumpshot": {
+        "evaluations": 275,
+        "FGA": 257,
+        "made": 138,
+        "FG": 0.5369649805447471,
+        "perTeamGame": 0.8566666666666667,
+        "probability": 0.5571052180695483,
+        "blocks": 18,
+        "fouled": 29
+      },
+      "Finger Roll Layup": {
+        "evaluations": 265,
+        "FGA": 251,
+        "made": 176,
+        "FG": 0.701195219123506,
+        "perTeamGame": 0.8366666666666667,
+        "probability": 0.6643145006482801,
+        "blocks": 15,
+        "fouled": 32
+      },
+      "8′ Driving Floating Jumpshot": {
+        "evaluations": 280,
+        "FGA": 260,
+        "made": 133,
+        "FG": 0.5115384615384615,
+        "perTeamGame": 0.8666666666666667,
+        "probability": 0.5511366689273315,
+        "blocks": 11,
+        "fouled": 29
+      },
+      "Running Layup": {
+        "evaluations": 761,
+        "FGA": 714,
+        "made": 483,
+        "FG": 0.6764705882352942,
+        "perTeamGame": 2.38,
+        "probability": 0.6703175257482566,
+        "blocks": 28,
+        "fouled": 73
+      },
+      "7′ Driving Floating Jumpshot": {
+        "evaluations": 269,
+        "FGA": 254,
+        "made": 143,
+        "FG": 0.562992125984252,
+        "perTeamGame": 0.8466666666666667,
+        "probability": 0.5594686477284926,
+        "blocks": 8,
+        "fouled": 27
+      },
+      "9′ Driving Floating Jumpshot": {
+        "evaluations": 271,
+        "FGA": 248,
+        "made": 143,
+        "FG": 0.5766129032258065,
+        "perTeamGame": 0.8266666666666667,
+        "probability": 0.5494841171346126,
+        "blocks": 8,
+        "fouled": 33
+      },
+      "5′ Driving Floating Jumpshot": {
+        "evaluations": 295,
+        "FGA": 275,
+        "made": 167,
+        "FG": 0.6072727272727273,
+        "perTeamGame": 0.9166666666666666,
+        "probability": 0.550008602063759,
+        "blocks": 7,
+        "fouled": 37
+      },
+      "Cutting Layup": {
+        "evaluations": 377,
+        "FGA": 356,
+        "made": 234,
+        "FG": 0.6573033707865169,
+        "perTeamGame": 1.1866666666666668,
+        "probability": 0.626745615575323,
+        "blocks": 18,
+        "fouled": 43
+      },
+      "6′ Driving Floating Jumpshot": {
+        "evaluations": 235,
+        "FGA": 212,
+        "made": 134,
+        "FG": 0.6320754716981132,
+        "perTeamGame": 0.7066666666666667,
+        "probability": 0.5550154197225925,
+        "blocks": 7,
+        "fouled": 35
+      },
+      "Driving Layup": {
+        "evaluations": 737,
+        "FGA": 690,
+        "made": 425,
+        "FG": 0.6159420289855072,
+        "perTeamGame": 2.3,
+        "probability": 0.6395993392277046,
+        "blocks": 50,
+        "fouled": 92
+      },
+      "Reverse Layup": {
+        "evaluations": 169,
+        "FGA": 156,
+        "made": 104,
+        "FG": 0.6666666666666666,
+        "perTeamGame": 0.52,
+        "probability": 0.6613344819769045,
+        "blocks": 6,
+        "fouled": 23
+      },
+      "Scoop Layup": {
+        "evaluations": 199,
+        "FGA": 180,
+        "made": 126,
+        "FG": 0.7,
+        "perTeamGame": 0.6,
+        "probability": 0.6668575214612806,
+        "blocks": 6,
+        "fouled": 28
+      },
+      "Eurostep Layup": {
+        "evaluations": 135,
+        "FGA": 128,
+        "made": 95,
+        "FG": 0.7421875,
+        "perTeamGame": 0.4266666666666667,
+        "probability": 0.6733849016926415,
+        "blocks": 4,
+        "fouled": 19
+      }
+    },
+    "dunks": {
+      "evaluations": 4410,
+      "FGA": 4197,
+      "made": 2545,
+      "FG": 0.6063855134619967,
+      "perTeamGame": 13.99,
+      "probability": 0.6272581931711784,
+      "blocks": 296,
+      "fouled": 364
+    },
+    "primaryDunks": {
+      "evaluations": 3242,
+      "FGA": 3032,
+      "made": 1826,
+      "FG": 0.6022427440633246,
+      "perTeamGame": 10.106666666666667,
+      "probability": 0.6175040482295433,
+      "blocks": 231,
+      "fouled": 356
+    },
+    "floaters": {
+      "evaluations": 1966,
+      "FGA": 1830,
+      "made": 1042,
+      "FG": 0.5693989071038251,
+      "perTeamGame": 6.1,
+      "probability": 0.5539382200278274,
+      "blocks": 68,
+      "fouled": 218
+    },
+    "primaryFloaters": {
+      "evaluations": 1900,
+      "FGA": 1767,
+      "made": 1006,
+      "FG": 0.5693265421618563,
+      "perTeamGame": 5.89,
+      "probability": 0.5541218373956448,
+      "blocks": 66,
+      "fouled": 213
+    },
+    "threes": {
+      "allTransition": {
+        "evaluations": 2579,
+        "FGA": 2363,
+        "made": 878,
+        "FG": 0.37156157426999575,
+        "perTeamGame": 7.876666666666667,
+        "probability": 0.35332101837824686,
+        "blocks": 50,
+        "fouled": 293
+      },
+      "early": {
+        "evaluations": 2158,
+        "FGA": 1972,
+        "made": 728,
+        "FG": 0.3691683569979716,
+        "perTeamGame": 6.573333333333333,
+        "probability": 0.3579153190092721,
+        "blocks": 43,
+        "fouled": 244
+      },
+      "other": {
+        "evaluations": 421,
+        "FGA": 391,
+        "made": 150,
+        "FG": 0.3836317135549872,
+        "perTeamGame": 1.3033333333333332,
+        "probability": 0.32977113533370367,
+        "blocks": 7,
+        "fouled": 49
+      }
+    },
+    "running": {
+      "evaluations": 761,
+      "FGA": 714,
+      "made": 483,
+      "FG": 0.6764705882352942,
+      "perTeamGame": 2.38,
+      "probability": 0.6703175257482566,
+      "blocks": 28,
+      "fouled": 73,
+      "origins": {
+        "primary missed shot + defensive rebound": {
+          "evaluations": 525,
+          "FGA": 493,
+          "made": 342,
+          "FG": 0.6937119675456389,
+          "perTeamGame": 1.6433333333333333,
+          "probability": 0.6701067423061231,
+          "blocks": 13,
+          "fouled": 50
+        },
+        "secondary missed shot + defensive rebound": {
+          "evaluations": 42,
+          "FGA": 42,
+          "made": 25,
+          "FG": 0.5952380952380952,
+          "perTeamGame": 0.14,
+          "probability": 0.6814529217482888,
+          "blocks": 2,
+          "fouled": 1
+        },
+        "steal": {
+          "evaluations": 104,
+          "FGA": 95,
+          "made": 65,
+          "FG": 0.6842105263157895,
+          "perTeamGame": 0.31666666666666665,
+          "probability": 0.6676838022265486,
+          "blocks": 7,
+          "fouled": 15
+        },
+        "blocked shot + defensive rebound": {
+          "evaluations": 55,
+          "FGA": 50,
+          "made": 31,
+          "FG": 0.62,
+          "perTeamGame": 0.16666666666666666,
+          "probability": 0.6630648268995176,
+          "blocks": 3,
+          "fouled": 5
+        },
+        "missed free throw + defensive rebound": {
+          "evaluations": 35,
+          "FGA": 34,
+          "made": 20,
+          "FG": 0.5882352941176471,
+          "perTeamGame": 0.11333333333333333,
+          "probability": 0.6793398216927423,
+          "blocks": 3,
+          "fouled": 2
+        }
+      },
+      "clock": {
+        "1": 1,
+        "3": 1,
+        "4": 4,
+        "5": 1,
+        "6": 2,
+        "7": 7,
+        "8": 16,
+        "9": 5,
+        "10": 22,
+        "11": 25,
+        "13": 42,
+        "14": 188,
+        "16": 7,
+        "17": 321,
+        "18": 2,
+        "20": 63,
+        "21": 54
+      },
+      "buckets": {
+        "17–19": 323,
+        "14–16": 195,
+        "20+": 117,
+        "0–4": 6,
+        "10–13": 89,
+        "5–9": 31
+      },
+      "depth": {
+        "0": 44,
+        "1": 389,
+        "2": 261,
+        "3": 57,
+        "4": 9,
+        "5": 1
+      },
+      "meanClock": 15.678055190538764,
+      "medianClock": 17,
+      "meanDepth": 1.4756898817345598,
+      "depthClock": {
+        "0": {
+          "20+": 44
+        },
+        "1": {
+          "17–19": 310,
+          "20+": 73,
+          "14–16": 6
+        },
+        "2": {
+          "14–16": 188,
+          "10–13": 60,
+          "17–19": 13
+        },
+        "3": {
+          "10–13": 29,
+          "5–9": 27,
+          "14–16": 1
+        },
+        "4": {
+          "0–4": 5,
+          "5–9": 4
+        },
+        "5": {
+          "0–4": 1
+        }
+      },
+      "tempoOnly": 0,
+      "PNR": 0,
+      "below14": 126
+    },
+    "replacements": {
+      "evaluations": 126,
+      "FGA": 121,
+      "made": 87,
+      "FG": 0.71900826446281,
+      "perTeamGame": 0.4033333333333333,
+      "probability": 0.666761819127483,
+      "blocks": 2,
+      "fouled": 9,
+      "byVariant": {
+        "Running Layup": {
+          "evaluations": 126,
+          "FGA": 121,
+          "made": 87,
+          "FG": 0.71900826446281,
+          "perTeamGame": 0.4033333333333333,
+          "probability": 0.666761819127483,
+          "blocks": 2,
+          "fouled": 9
+        }
+      },
+      "allResolved": true,
+      "examples": [
+        {
+          "seed": 100001,
+          "shooter": "Marcus King",
+          "clock": 1,
+          "origin": "primary missed shot + defensive rebound",
+          "variant": "Running Layup",
+          "recorded": true,
+          "foul": false,
+          "made": false,
+          "blocked": false
+        },
+        {
+          "seed": 100002,
+          "shooter": "Miles Thompson",
+          "clock": 10,
+          "origin": "primary missed shot + defensive rebound",
+          "variant": "Running Layup",
+          "recorded": false,
+          "foul": true,
+          "made": false,
+          "blocked": false
+        },
+        {
+          "seed": 100002,
+          "shooter": "Darius Robinson",
+          "clock": 10,
+          "origin": "primary missed shot + defensive rebound",
+          "variant": "Running Layup",
+          "recorded": true,
+          "foul": false,
+          "made": false,
+          "blocked": false
+        },
+        {
+          "seed": 100002,
+          "shooter": "Isaiah Thompson",
+          "clock": 8,
+          "origin": "primary missed shot + defensive rebound",
+          "variant": "Running Layup",
+          "recorded": false,
+          "foul": true,
+          "made": false,
+          "blocked": false
+        },
+        {
+          "seed": 100003,
+          "shooter": "Cheikh Gueye",
+          "clock": 13,
+          "origin": "blocked shot + defensive rebound",
+          "variant": "Running Layup",
+          "recorded": true,
+          "foul": false,
+          "made": false,
+          "blocked": false
+        },
+        {
+          "seed": 100006,
+          "shooter": "Jalen Grant",
+          "clock": 11,
+          "origin": "primary missed shot + defensive rebound",
+          "variant": "Running Layup",
+          "recorded": true,
+          "foul": false,
+          "made": false,
+          "blocked": false
+        },
+        {
+          "seed": 100007,
+          "shooter": "Devin Robinson",
+          "clock": 13,
+          "origin": "primary missed shot + defensive rebound",
+          "variant": "Running Layup",
+          "recorded": true,
+          "foul": true,
+          "made": true,
+          "blocked": false
+        },
+        {
+          "seed": 100008,
+          "shooter": "Tomas Žukauskas",
+          "clock": 8,
+          "origin": "primary missed shot + defensive rebound",
+          "variant": "Running Layup",
+          "recorded": true,
+          "foul": false,
+          "made": true,
+          "blocked": false
+        },
+        {
+          "seed": 100009,
+          "shooter": "Chinedu Obi",
+          "clock": 13,
+          "origin": "primary missed shot + defensive rebound",
+          "variant": "Running Layup",
+          "recorded": true,
+          "foul": false,
+          "made": true,
+          "blocked": false
+        },
+        {
+          "seed": 100010,
+          "shooter": "Xavier Lewis",
+          "clock": 13,
+          "origin": "primary missed shot + defensive rebound",
+          "variant": "Running Layup",
+          "recorded": true,
+          "foul": false,
+          "made": true,
+          "blocked": false
+        },
+        {
+          "seed": 100010,
+          "shooter": "Mathis Moreau",
+          "clock": 8,
+          "origin": "missed free throw + defensive rebound",
+          "variant": "Running Layup",
+          "recorded": true,
+          "foul": false,
+          "made": true,
+          "blocked": false
+        },
+        {
+          "seed": 100011,
+          "shooter": "Dante Reed",
+          "clock": 13,
+          "origin": "steal",
+          "variant": "Running Layup",
+          "recorded": true,
+          "foul": false,
+          "made": true,
+          "blocked": false
+        }
+      ]
+    },
+    "tokens": {
+      "origins": {
+        "primary missed shot + defensive rebound": 9123,
+        "blocked shot + defensive rebound": 713,
+        "steal": 1716,
+        "missed free throw + defensive rebound": 545,
+        "secondary missed shot + defensive rebound": 926
+      },
+      "status": {
+        "consumed": 12757,
+        "unused: period boundary": 202,
+        "unused: game ended": 63,
+        "unused: next entry wrong side": 1
+      },
+      "recursiveEntries": 614
+    },
+    "putback": {
+      "evaluations": 2695,
+      "FGA": 2695,
+      "made": 1703,
+      "FG": 0.6319109461966604,
+      "perTeamGame": 8.983333333333333,
+      "probability": 0.6477280991417991,
+      "blocks": 63,
+      "fouled": 0
+    },
+    "putbackLayupBlocks": 0,
+    "gameMetrics": [
+      {
+        "seed": 100000,
+        "PPG": 121
+      },
+      {
+        "seed": 100001,
+        "PPG": 111
+      },
+      {
+        "seed": 100002,
+        "PPG": 111
+      },
+      {
+        "seed": 100003,
+        "PPG": 127
+      },
+      {
+        "seed": 100004,
+        "PPG": 112
+      },
+      {
+        "seed": 100005,
+        "PPG": 116.5
+      },
+      {
+        "seed": 100006,
+        "PPG": 107
+      },
+      {
+        "seed": 100007,
+        "PPG": 106.5
+      },
+      {
+        "seed": 100008,
+        "PPG": 136.5
+      },
+      {
+        "seed": 100009,
+        "PPG": 109
+      },
+      {
+        "seed": 100010,
+        "PPG": 128.5
+      },
+      {
+        "seed": 100011,
+        "PPG": 122.5
+      },
+      {
+        "seed": 100012,
+        "PPG": 122
+      },
+      {
+        "seed": 100013,
+        "PPG": 116
+      },
+      {
+        "seed": 100014,
+        "PPG": 137
+      },
+      {
+        "seed": 100015,
+        "PPG": 126
+      },
+      {
+        "seed": 100016,
+        "PPG": 127.5
+      },
+      {
+        "seed": 100017,
+        "PPG": 136
+      },
+      {
+        "seed": 100018,
+        "PPG": 118
+      },
+      {
+        "seed": 100019,
+        "PPG": 132.5
+      },
+      {
+        "seed": 100020,
+        "PPG": 106.5
+      },
+      {
+        "seed": 100021,
+        "PPG": 120.5
+      },
+      {
+        "seed": 100022,
+        "PPG": 108.5
+      },
+      {
+        "seed": 100023,
+        "PPG": 124.5
+      },
+      {
+        "seed": 100024,
+        "PPG": 127.5
+      },
+      {
+        "seed": 100025,
+        "PPG": 136.5
+      },
+      {
+        "seed": 100026,
+        "PPG": 114
+      },
+      {
+        "seed": 100027,
+        "PPG": 116.5
+      },
+      {
+        "seed": 100028,
+        "PPG": 127
+      },
+      {
+        "seed": 100029,
+        "PPG": 122
+      },
+      {
+        "seed": 100030,
+        "PPG": 125
+      },
+      {
+        "seed": 100031,
+        "PPG": 129
+      },
+      {
+        "seed": 100032,
+        "PPG": 104.5
+      },
+      {
+        "seed": 100033,
+        "PPG": 117.5
+      },
+      {
+        "seed": 100034,
+        "PPG": 119.5
+      },
+      {
+        "seed": 100035,
+        "PPG": 130
+      },
+      {
+        "seed": 100036,
+        "PPG": 137.5
+      },
+      {
+        "seed": 100037,
+        "PPG": 131.5
+      },
+      {
+        "seed": 100038,
+        "PPG": 118
+      },
+      {
+        "seed": 100039,
+        "PPG": 137.5
+      },
+      {
+        "seed": 100040,
+        "PPG": 122
+      },
+      {
+        "seed": 100041,
+        "PPG": 111.5
+      },
+      {
+        "seed": 100042,
+        "PPG": 118
+      },
+      {
+        "seed": 100043,
+        "PPG": 112.5
+      },
+      {
+        "seed": 100044,
+        "PPG": 110
+      },
+      {
+        "seed": 100045,
+        "PPG": 105
+      },
+      {
+        "seed": 100046,
+        "PPG": 116
+      },
+      {
+        "seed": 100047,
+        "PPG": 121
+      },
+      {
+        "seed": 100048,
+        "PPG": 116
+      },
+      {
+        "seed": 100049,
+        "PPG": 143
+      },
+      {
+        "seed": 100050,
+        "PPG": 141.5
+      },
+      {
+        "seed": 100051,
+        "PPG": 123
+      },
+      {
+        "seed": 100052,
+        "PPG": 133
+      },
+      {
+        "seed": 100053,
+        "PPG": 114
+      },
+      {
+        "seed": 100054,
+        "PPG": 119.5
+      },
+      {
+        "seed": 100055,
+        "PPG": 113.5
+      },
+      {
+        "seed": 100056,
+        "PPG": 136.5
+      },
+      {
+        "seed": 100057,
+        "PPG": 122.5
+      },
+      {
+        "seed": 100058,
+        "PPG": 131
+      },
+      {
+        "seed": 100059,
+        "PPG": 120.5
+      },
+      {
+        "seed": 100060,
+        "PPG": 117
+      },
+      {
+        "seed": 100061,
+        "PPG": 125.5
+      },
+      {
+        "seed": 100062,
+        "PPG": 129.5
+      },
+      {
+        "seed": 100063,
+        "PPG": 120
+      },
+      {
+        "seed": 100064,
+        "PPG": 111.5
+      },
+      {
+        "seed": 100065,
+        "PPG": 126
+      },
+      {
+        "seed": 100066,
+        "PPG": 119
+      },
+      {
+        "seed": 100067,
+        "PPG": 115
+      },
+      {
+        "seed": 100068,
+        "PPG": 129
+      },
+      {
+        "seed": 100069,
+        "PPG": 114
+      },
+      {
+        "seed": 100070,
+        "PPG": 133.5
+      },
+      {
+        "seed": 100071,
+        "PPG": 129
+      },
+      {
+        "seed": 100072,
+        "PPG": 122.5
+      },
+      {
+        "seed": 100073,
+        "PPG": 114
+      },
+      {
+        "seed": 100074,
+        "PPG": 125
+      },
+      {
+        "seed": 100075,
+        "PPG": 111.5
+      },
+      {
+        "seed": 100076,
+        "PPG": 120.5
+      },
+      {
+        "seed": 100077,
+        "PPG": 142.5
+      },
+      {
+        "seed": 100078,
+        "PPG": 132.5
+      },
+      {
+        "seed": 100079,
+        "PPG": 124.5
+      },
+      {
+        "seed": 100080,
+        "PPG": 131
+      },
+      {
+        "seed": 100081,
+        "PPG": 122
+      },
+      {
+        "seed": 100082,
+        "PPG": 125.5
+      },
+      {
+        "seed": 100083,
+        "PPG": 125
+      },
+      {
+        "seed": 100084,
+        "PPG": 131.5
+      },
+      {
+        "seed": 100085,
+        "PPG": 152
+      },
+      {
+        "seed": 100086,
+        "PPG": 129.5
+      },
+      {
+        "seed": 100087,
+        "PPG": 122.5
+      },
+      {
+        "seed": 100088,
+        "PPG": 113.5
+      },
+      {
+        "seed": 100089,
+        "PPG": 128
+      },
+      {
+        "seed": 100090,
+        "PPG": 121.5
+      },
+      {
+        "seed": 100091,
+        "PPG": 125.5
+      },
+      {
+        "seed": 100092,
+        "PPG": 134.5
+      },
+      {
+        "seed": 100093,
+        "PPG": 119
+      },
+      {
+        "seed": 100094,
+        "PPG": 129.5
+      },
+      {
+        "seed": 100095,
+        "PPG": 126
+      },
+      {
+        "seed": 100096,
+        "PPG": 127.5
+      },
+      {
+        "seed": 100097,
+        "PPG": 127.5
+      },
+      {
+        "seed": 100098,
+        "PPG": 135.5
+      },
+      {
+        "seed": 100099,
+        "PPG": 132.5
+      },
+      {
+        "seed": 100100,
+        "PPG": 143
+      },
+      {
+        "seed": 100101,
+        "PPG": 119.5
+      },
+      {
+        "seed": 100102,
+        "PPG": 104.5
+      },
+      {
+        "seed": 100103,
+        "PPG": 127.5
+      },
+      {
+        "seed": 100104,
+        "PPG": 130
+      },
+      {
+        "seed": 100105,
+        "PPG": 131
+      },
+      {
+        "seed": 100106,
+        "PPG": 129.5
+      },
+      {
+        "seed": 100107,
+        "PPG": 124.5
+      },
+      {
+        "seed": 100108,
+        "PPG": 124.5
+      },
+      {
+        "seed": 100109,
+        "PPG": 129
+      },
+      {
+        "seed": 100110,
+        "PPG": 110
+      },
+      {
+        "seed": 100111,
+        "PPG": 116.5
+      },
+      {
+        "seed": 100112,
+        "PPG": 122.5
+      },
+      {
+        "seed": 100113,
+        "PPG": 131.5
+      },
+      {
+        "seed": 100114,
+        "PPG": 138.5
+      },
+      {
+        "seed": 100115,
+        "PPG": 115
+      },
+      {
+        "seed": 100116,
+        "PPG": 143.5
+      },
+      {
+        "seed": 100117,
+        "PPG": 115
+      },
+      {
+        "seed": 100118,
+        "PPG": 119
+      },
+      {
+        "seed": 100119,
+        "PPG": 120
+      },
+      {
+        "seed": 100120,
+        "PPG": 121.5
+      },
+      {
+        "seed": 100121,
+        "PPG": 118.5
+      },
+      {
+        "seed": 100122,
+        "PPG": 116.5
+      },
+      {
+        "seed": 100123,
+        "PPG": 125
+      },
+      {
+        "seed": 100124,
+        "PPG": 107.5
+      },
+      {
+        "seed": 100125,
+        "PPG": 125.5
+      },
+      {
+        "seed": 100126,
+        "PPG": 141.5
+      },
+      {
+        "seed": 100127,
+        "PPG": 116
+      },
+      {
+        "seed": 100128,
+        "PPG": 116.5
+      },
+      {
+        "seed": 100129,
+        "PPG": 126.5
+      },
+      {
+        "seed": 100130,
+        "PPG": 117
+      },
+      {
+        "seed": 100131,
+        "PPG": 121.5
+      },
+      {
+        "seed": 100132,
+        "PPG": 121
+      },
+      {
+        "seed": 100133,
+        "PPG": 120
+      },
+      {
+        "seed": 100134,
+        "PPG": 102.5
+      },
+      {
+        "seed": 100135,
+        "PPG": 117
+      },
+      {
+        "seed": 100136,
+        "PPG": 120
+      },
+      {
+        "seed": 100137,
+        "PPG": 123.5
+      },
+      {
+        "seed": 100138,
+        "PPG": 111
+      },
+      {
+        "seed": 100139,
+        "PPG": 112.5
+      },
+      {
+        "seed": 100140,
+        "PPG": 130.5
+      },
+      {
+        "seed": 100141,
+        "PPG": 141
+      },
+      {
+        "seed": 100142,
+        "PPG": 115.5
+      },
+      {
+        "seed": 100143,
+        "PPG": 127.5
+      },
+      {
+        "seed": 100144,
+        "PPG": 127
+      },
+      {
+        "seed": 100145,
+        "PPG": 133
+      },
+      {
+        "seed": 100146,
+        "PPG": 125.5
+      },
+      {
+        "seed": 100147,
+        "PPG": 124
+      },
+      {
+        "seed": 100148,
+        "PPG": 111
+      },
+      {
+        "seed": 100149,
+        "PPG": 123
+      }
+    ]
+  },
+  "candidate": {
+    "totals": {
+      "pts": 36854,
+      "poss": 153570,
+      "fga": 28559,
+      "fgm": 14045,
+      "tpa": 10703,
+      "tpm": 4099,
+      "fta": 6079,
+      "ftm": 4665,
+      "tov": 3920,
+      "orb": 3783,
+      "pf": 4070,
+      "blk": 935
+    },
+    "metrics": {
+      "PPG": 122.84666666666666,
+      "pace": 102.38,
+      "ORtg": 119.99088363612684,
+      "twoP": 0.5570116487455197,
+      "threeP": 0.3829767354947211,
+      "FGA": 95.19666666666667,
+      "TOV": 13.066666666666666,
+      "PF": 13.566666666666666,
+      "OREB": 12.61,
+      "BLK": 3.1166666666666667
+    },
+    "primaryRim": {
+      "evaluations": 2614,
+      "FGA": 2447,
+      "made": 1624,
+      "FG": 0.6636697997548018,
+      "perTeamGame": 8.156666666666666,
+      "probability": 0.6526776974802432,
+      "blocks": 125,
+      "fouled": 309
+    },
+    "allRim": {
+      "evaluations": 4376,
+      "FGA": 4206,
+      "made": 2762,
+      "FG": 0.656680932001902,
+      "perTeamGame": 14.02,
+      "probability": 0.6483366075690798,
+      "blocks": 128,
+      "fouled": 314
+    },
+    "variants": {
+      "10′ Driving Floating Jumpshot": {
+        "evaluations": 275,
+        "FGA": 263,
+        "made": 149,
+        "FG": 0.5665399239543726,
+        "perTeamGame": 0.8766666666666667,
+        "probability": 0.5567563058581688,
+        "blocks": 8,
+        "fouled": 23
+      },
+      "4′ Driving Floating Jumpshot": {
+        "evaluations": 276,
+        "FGA": 256,
+        "made": 134,
+        "FG": 0.5234375,
+        "perTeamGame": 0.8533333333333334,
+        "probability": 0.5557787438851456,
+        "blocks": 16,
+        "fouled": 33
+      },
+      "Finger Roll Layup": {
+        "evaluations": 286,
+        "FGA": 272,
+        "made": 191,
+        "FG": 0.7022058823529411,
+        "perTeamGame": 0.9066666666666666,
+        "probability": 0.6630754342831476,
+        "blocks": 14,
+        "fouled": 32
+      },
+      "8′ Driving Floating Jumpshot": {
+        "evaluations": 277,
+        "FGA": 257,
+        "made": 137,
+        "FG": 0.5330739299610895,
+        "perTeamGame": 0.8566666666666667,
+        "probability": 0.550054109113569,
+        "blocks": 9,
+        "fouled": 30
+      },
+      "Running Layup": {
+        "evaluations": 628,
+        "FGA": 586,
+        "made": 394,
+        "FG": 0.6723549488054608,
+        "perTeamGame": 1.9533333333333334,
+        "probability": 0.6701280280479054,
+        "blocks": 28,
+        "fouled": 67
+      },
+      "7′ Driving Floating Jumpshot": {
+        "evaluations": 270,
+        "FGA": 253,
+        "made": 141,
+        "FG": 0.5573122529644269,
+        "perTeamGame": 0.8433333333333334,
+        "probability": 0.5596881341959979,
+        "blocks": 8,
+        "fouled": 29
+      },
+      "9′ Driving Floating Jumpshot": {
+        "evaluations": 274,
+        "FGA": 252,
+        "made": 147,
+        "FG": 0.5833333333333334,
+        "perTeamGame": 0.84,
+        "probability": 0.5478456329107664,
+        "blocks": 8,
+        "fouled": 33
+      },
+      "5′ Driving Floating Jumpshot": {
+        "evaluations": 297,
+        "FGA": 276,
+        "made": 170,
+        "FG": 0.6159420289855072,
+        "perTeamGame": 0.92,
+        "probability": 0.5513625418336965,
+        "blocks": 6,
+        "fouled": 37
+      },
+      "Cutting Layup": {
+        "evaluations": 426,
+        "FGA": 401,
+        "made": 263,
+        "FG": 0.655860349127182,
+        "perTeamGame": 1.3366666666666667,
+        "probability": 0.6275452707507143,
+        "blocks": 18,
+        "fouled": 47
+      },
+      "6′ Driving Floating Jumpshot": {
+        "evaluations": 241,
+        "FGA": 216,
+        "made": 132,
+        "FG": 0.6111111111111112,
+        "perTeamGame": 0.72,
+        "probability": 0.5537697193195765,
+        "blocks": 7,
+        "fouled": 37
+      },
+      "Driving Layup": {
+        "evaluations": 761,
+        "FGA": 711,
+        "made": 446,
+        "FG": 0.6272855133614628,
+        "perTeamGame": 2.37,
+        "probability": 0.6387080608379773,
+        "blocks": 50,
+        "fouled": 97
+      },
+      "Reverse Layup": {
+        "evaluations": 166,
+        "FGA": 155,
+        "made": 102,
+        "FG": 0.6580645161290323,
+        "perTeamGame": 0.5166666666666667,
+        "probability": 0.6640212934248092,
+        "blocks": 5,
+        "fouled": 20
+      },
+      "Scoop Layup": {
+        "evaluations": 205,
+        "FGA": 186,
+        "made": 129,
+        "FG": 0.6935483870967742,
+        "perTeamGame": 0.62,
+        "probability": 0.6663372802957241,
+        "blocks": 6,
+        "fouled": 27
+      },
+      "Eurostep Layup": {
+        "evaluations": 142,
+        "FGA": 136,
+        "made": 99,
+        "FG": 0.7279411764705882,
+        "perTeamGame": 0.4533333333333333,
+        "probability": 0.6718431590679091,
+        "blocks": 4,
+        "fouled": 19
+      }
+    },
+    "dunks": {
+      "evaluations": 4376,
+      "FGA": 4169,
+      "made": 2535,
+      "FG": 0.608059486687455,
+      "perTeamGame": 13.896666666666667,
+      "probability": 0.6275173293751035,
+      "blocks": 295,
+      "fouled": 355
+    },
+    "primaryDunks": {
+      "evaluations": 3218,
+      "FGA": 3013,
+      "made": 1815,
+      "FG": 0.6023896448722204,
+      "perTeamGame": 10.043333333333333,
+      "probability": 0.617931454281061,
+      "blocks": 232,
+      "fouled": 348
+    },
+    "floaters": {
+      "evaluations": 1971,
+      "FGA": 1831,
+      "made": 1042,
+      "FG": 0.5690879300928454,
+      "perTeamGame": 6.1033333333333335,
+      "probability": 0.5534094233881962,
+      "blocks": 64,
+      "fouled": 227
+    },
+    "primaryFloaters": {
+      "evaluations": 1910,
+      "FGA": 1773,
+      "made": 1010,
+      "FG": 0.5696559503666103,
+      "perTeamGame": 5.91,
+      "probability": 0.5535636558004453,
+      "blocks": 62,
+      "fouled": 222
+    },
+    "threes": {
+      "allTransition": {
+        "evaluations": 2558,
+        "FGA": 2356,
+        "made": 868,
+        "FG": 0.3684210526315789,
+        "perTeamGame": 7.8533333333333335,
+        "probability": 0.3538459595524733,
+        "blocks": 50,
+        "fouled": 277
+      },
+      "early": {
+        "evaluations": 2135,
+        "FGA": 1962,
+        "made": 719,
+        "FG": 0.36646279306829765,
+        "perTeamGame": 6.54,
+        "probability": 0.35830370964271807,
+        "blocks": 43,
+        "fouled": 230
+      },
+      "other": {
+        "evaluations": 423,
+        "FGA": 394,
+        "made": 149,
+        "FG": 0.37817258883248733,
+        "perTeamGame": 1.3133333333333332,
+        "probability": 0.33134644077546965,
+        "blocks": 7,
+        "fouled": 47
+      }
+    },
+    "running": {
+      "evaluations": 628,
+      "FGA": 586,
+      "made": 394,
+      "FG": 0.6723549488054608,
+      "perTeamGame": 1.9533333333333334,
+      "probability": 0.6701280280479054,
+      "blocks": 28,
+      "fouled": 67,
+      "origins": {
+        "primary missed shot + defensive rebound": {
+          "evaluations": 433,
+          "FGA": 404,
+          "made": 277,
+          "FG": 0.6856435643564357,
+          "perTeamGame": 1.3466666666666667,
+          "probability": 0.6708132611332756,
+          "blocks": 14,
+          "fouled": 46
+        },
+        "secondary missed shot + defensive rebound": {
+          "evaluations": 38,
+          "FGA": 38,
+          "made": 23,
+          "FG": 0.6052631578947368,
+          "perTeamGame": 0.12666666666666668,
+          "probability": 0.6786026624734554,
+          "blocks": 3,
+          "fouled": 2
+        },
+        "steal": {
+          "evaluations": 84,
+          "FGA": 76,
+          "made": 53,
+          "FG": 0.6973684210526315,
+          "perTeamGame": 0.25333333333333335,
+          "probability": 0.659683843409176,
+          "blocks": 6,
+          "fouled": 14
+        },
+        "blocked shot + defensive rebound": {
+          "evaluations": 43,
+          "FGA": 39,
+          "made": 25,
+          "FG": 0.6410256410256411,
+          "perTeamGame": 0.13,
+          "probability": 0.6639888614514503,
+          "blocks": 2,
+          "fouled": 4
+        },
+        "missed free throw + defensive rebound": {
+          "evaluations": 30,
+          "FGA": 29,
+          "made": 16,
+          "FG": 0.5517241379310345,
+          "perTeamGame": 0.09666666666666666,
+          "probability": 0.6875464826867207,
+          "blocks": 3,
+          "fouled": 1
+        }
+      },
+      "clock": {
+        "14": 185,
+        "16": 9,
+        "17": 317,
+        "18": 2,
+        "20": 61,
+        "21": 54
+      },
+      "buckets": {
+        "17–19": 319,
+        "14–16": 194,
+        "20+": 115
+      },
+      "depth": {
+        "0": 42,
+        "1": 384,
+        "2": 201,
+        "3": 1
+      },
+      "meanClock": 16.74044585987261,
+      "medianClock": 17,
+      "meanDepth": 1.2563694267515924,
+      "depthClock": {
+        "0": {
+          "20+": 42
+        },
+        "1": {
+          "17–19": 304,
+          "20+": 73,
+          "14–16": 7
+        },
+        "2": {
+          "14–16": 186,
+          "17–19": 15
+        },
+        "3": {
+          "14–16": 1
+        }
+      },
+      "tempoOnly": 0,
+      "PNR": 0,
+      "below14": 0
+    },
+    "replacements": {
+      "evaluations": 118,
+      "FGA": 112,
+      "made": 70,
+      "FG": 0.625,
+      "perTeamGame": 0.37333333333333335,
+      "probability": 0.6170401021299113,
+      "blocks": 6,
+      "fouled": 10,
+      "byVariant": {
+        "Cutting Layup": {
+          "evaluations": 42,
+          "FGA": 40,
+          "made": 25,
+          "FG": 0.625,
+          "perTeamGame": 0.13333333333333333,
+          "probability": 0.6397070500302648,
+          "blocks": 1,
+          "fouled": 2
+        },
+        "Scoop Layup": {
+          "evaluations": 11,
+          "FGA": 10,
+          "made": 7,
+          "FG": 0.7,
+          "perTeamGame": 0.03333333333333333,
+          "probability": 0.6298643598761698,
+          "blocks": 1,
+          "fouled": 1
+        },
+        "Driving Layup": {
+          "evaluations": 33,
+          "FGA": 31,
+          "made": 23,
+          "FG": 0.7419354838709677,
+          "perTeamGame": 0.10333333333333333,
+          "probability": 0.6168296344960003,
+          "blocks": 3,
+          "fouled": 5
+        },
+        "Finger Roll Layup": {
+          "evaluations": 11,
+          "FGA": 11,
+          "made": 7,
+          "FG": 0.6363636363636364,
+          "perTeamGame": 0.03666666666666667,
+          "probability": 0.6166363363351782,
+          "blocks": 0,
+          "fouled": 1
+        },
+        "Eurostep Layup": {
+          "evaluations": 3,
+          "FGA": 3,
+          "made": 2,
+          "FG": 0.6666666666666666,
+          "perTeamGame": 0.01,
+          "probability": 0.5972876612806378,
+          "blocks": 0,
+          "fouled": 0
+        },
+        "8′ Driving Floating Jumpshot": {
+          "evaluations": 4,
+          "FGA": 4,
+          "made": 4,
+          "FG": 1,
+          "perTeamGame": 0.013333333333333334,
+          "probability": 0.5685262318728542,
+          "blocks": 0,
+          "fouled": 0
+        },
+        "6′ Driving Floating Jumpshot": {
+          "evaluations": 3,
+          "FGA": 3,
+          "made": 0,
+          "FG": 0,
+          "perTeamGame": 0.01,
+          "probability": 0.5331077183801421,
+          "blocks": 1,
+          "fouled": 0
+        },
+        "5′ Driving Floating Jumpshot": {
+          "evaluations": 3,
+          "FGA": 3,
+          "made": 1,
+          "FG": 0.3333333333333333,
+          "perTeamGame": 0.01,
+          "probability": 0.5999282415678883,
+          "blocks": 0,
+          "fouled": 0
+        },
+        "7′ Driving Floating Jumpshot": {
+          "evaluations": 2,
+          "FGA": 2,
+          "made": 0,
+          "FG": 0,
+          "perTeamGame": 0.006666666666666667,
+          "probability": 0.515194412008116,
+          "blocks": 0,
+          "fouled": 0
+        },
+        "10′ Driving Floating Jumpshot": {
+          "evaluations": 2,
+          "FGA": 2,
+          "made": 0,
+          "FG": 0,
+          "perTeamGame": 0.006666666666666667,
+          "probability": 0.48905024637649674,
+          "blocks": 0,
+          "fouled": 0
+        },
+        "4′ Driving Floating Jumpshot": {
+          "evaluations": 1,
+          "FGA": 0,
+          "made": 0,
+          "FG": null,
+          "perTeamGame": 0,
+          "probability": 0.41115504541554243,
+          "blocks": 0,
+          "fouled": 1
+        },
+        "Reverse Layup": {
+          "evaluations": 1,
+          "FGA": 1,
+          "made": 0,
+          "FG": 0,
+          "perTeamGame": 0.0033333333333333335,
+          "probability": 0.6730012915842534,
+          "blocks": 0,
+          "fouled": 0
+        },
+        "9′ Driving Floating Jumpshot": {
+          "evaluations": 2,
+          "FGA": 2,
+          "made": 1,
+          "FG": 0.5,
+          "perTeamGame": 0.006666666666666667,
+          "probability": 0.6592144542095599,
+          "blocks": 0,
+          "fouled": 0
+        }
+      },
+      "allResolved": true,
+      "examples": [
+        {
+          "seed": 100001,
+          "shooter": "Marcus King",
+          "clock": 1,
+          "origin": "primary missed shot + defensive rebound",
+          "variant": "Cutting Layup",
+          "recorded": true,
+          "foul": false,
+          "made": false,
+          "blocked": false
+        },
+        {
+          "seed": 100002,
+          "shooter": "Miles Thompson",
+          "clock": 10,
+          "origin": "primary missed shot + defensive rebound",
+          "variant": "Scoop Layup",
+          "recorded": false,
+          "foul": true,
+          "made": false,
+          "blocked": false
+        },
+        {
+          "seed": 100002,
+          "shooter": "Darius Robinson",
+          "clock": 10,
+          "origin": "primary missed shot + defensive rebound",
+          "variant": "Cutting Layup",
+          "recorded": true,
+          "foul": false,
+          "made": false,
+          "blocked": false
+        },
+        {
+          "seed": 100002,
+          "shooter": "Isaiah Thompson",
+          "clock": 8,
+          "origin": "primary missed shot + defensive rebound",
+          "variant": "Driving Layup",
+          "recorded": false,
+          "foul": true,
+          "made": false,
+          "blocked": false
+        },
+        {
+          "seed": 100003,
+          "shooter": "Cheikh Gueye",
+          "clock": 13,
+          "origin": "blocked shot + defensive rebound",
+          "variant": "Cutting Layup",
+          "recorded": true,
+          "foul": false,
+          "made": false,
+          "blocked": false
+        },
+        {
+          "seed": 100006,
+          "shooter": "Jalen Grant",
+          "clock": 11,
+          "origin": "primary missed shot + defensive rebound",
+          "variant": "Finger Roll Layup",
+          "recorded": true,
+          "foul": false,
+          "made": false,
+          "blocked": false
+        },
+        {
+          "seed": 100007,
+          "shooter": "Devin Robinson",
+          "clock": 13,
+          "origin": "primary missed shot + defensive rebound",
+          "variant": "Driving Layup",
+          "recorded": true,
+          "foul": true,
+          "made": true,
+          "blocked": false
+        },
+        {
+          "seed": 100008,
+          "shooter": "Tomas Žukauskas",
+          "clock": 8,
+          "origin": "primary missed shot + defensive rebound",
+          "variant": "Cutting Layup",
+          "recorded": true,
+          "foul": false,
+          "made": true,
+          "blocked": false
+        },
+        {
+          "seed": 100009,
+          "shooter": "Chinedu Obi",
+          "clock": 13,
+          "origin": "primary missed shot + defensive rebound",
+          "variant": "Cutting Layup",
+          "recorded": true,
+          "foul": false,
+          "made": true,
+          "blocked": false
+        },
+        {
+          "seed": 100010,
+          "shooter": "Xavier Lewis",
+          "clock": 13,
+          "origin": "primary missed shot + defensive rebound",
+          "variant": "Finger Roll Layup",
+          "recorded": true,
+          "foul": false,
+          "made": true,
+          "blocked": false
+        },
+        {
+          "seed": 100010,
+          "shooter": "Mathis Moreau",
+          "clock": 8,
+          "origin": "missed free throw + defensive rebound",
+          "variant": "Cutting Layup",
+          "recorded": true,
+          "foul": false,
+          "made": true,
+          "blocked": false
+        },
+        {
+          "seed": 100011,
+          "shooter": "Dante Reed",
+          "clock": 13,
+          "origin": "steal",
+          "variant": "Driving Layup",
+          "recorded": true,
+          "foul": false,
+          "made": true,
+          "blocked": false
+        }
+      ]
+    },
+    "tokens": {
+      "origins": {
+        "primary missed shot + defensive rebound": 9152,
+        "blocked shot + defensive rebound": 713,
+        "steal": 1720,
+        "missed free throw + defensive rebound": 539,
+        "secondary missed shot + defensive rebound": 914
+      },
+      "status": {
+        "consumed": 12769,
+        "unused: period boundary": 201,
+        "unused: game ended": 66,
+        "unused: next entry wrong side": 2
+      },
+      "recursiveEntries": 607
+    },
+    "putback": {
+      "evaluations": 2700,
+      "FGA": 2700,
+      "made": 1725,
+      "FG": 0.6388888888888888,
+      "perTeamGame": 9,
+      "probability": 0.6475429753483049,
+      "blocks": 61,
+      "fouled": 0
+    },
+    "putbackLayupBlocks": 0,
+    "gameMetrics": [
+      {
+        "seed": 100000,
+        "PPG": 121
+      },
+      {
+        "seed": 100001,
+        "PPG": 111
+      },
+      {
+        "seed": 100002,
+        "PPG": 111
+      },
+      {
+        "seed": 100003,
+        "PPG": 127
+      },
+      {
+        "seed": 100004,
+        "PPG": 112
+      },
+      {
+        "seed": 100005,
+        "PPG": 116.5
+      },
+      {
+        "seed": 100006,
+        "PPG": 107
+      },
+      {
+        "seed": 100007,
+        "PPG": 106.5
+      },
+      {
+        "seed": 100008,
+        "PPG": 136.5
+      },
+      {
+        "seed": 100009,
+        "PPG": 109
+      },
+      {
+        "seed": 100010,
+        "PPG": 128.5
+      },
+      {
+        "seed": 100011,
+        "PPG": 122.5
+      },
+      {
+        "seed": 100012,
+        "PPG": 122
+      },
+      {
+        "seed": 100013,
+        "PPG": 116
+      },
+      {
+        "seed": 100014,
+        "PPG": 137
+      },
+      {
+        "seed": 100015,
+        "PPG": 126
+      },
+      {
+        "seed": 100016,
+        "PPG": 126.5
+      },
+      {
+        "seed": 100017,
+        "PPG": 136
+      },
+      {
+        "seed": 100018,
+        "PPG": 118
+      },
+      {
+        "seed": 100019,
+        "PPG": 132.5
+      },
+      {
+        "seed": 100020,
+        "PPG": 106.5
+      },
+      {
+        "seed": 100021,
+        "PPG": 120.5
+      },
+      {
+        "seed": 100022,
+        "PPG": 108.5
+      },
+      {
+        "seed": 100023,
+        "PPG": 124.5
+      },
+      {
+        "seed": 100024,
+        "PPG": 127.5
+      },
+      {
+        "seed": 100025,
+        "PPG": 136.5
+      },
+      {
+        "seed": 100026,
+        "PPG": 114
+      },
+      {
+        "seed": 100027,
+        "PPG": 116.5
+      },
+      {
+        "seed": 100028,
+        "PPG": 126
+      },
+      {
+        "seed": 100029,
+        "PPG": 122
+      },
+      {
+        "seed": 100030,
+        "PPG": 125
+      },
+      {
+        "seed": 100031,
+        "PPG": 129
+      },
+      {
+        "seed": 100032,
+        "PPG": 104.5
+      },
+      {
+        "seed": 100033,
+        "PPG": 117.5
+      },
+      {
+        "seed": 100034,
+        "PPG": 119.5
+      },
+      {
+        "seed": 100035,
+        "PPG": 130
+      },
+      {
+        "seed": 100036,
+        "PPG": 137.5
+      },
+      {
+        "seed": 100037,
+        "PPG": 129.5
+      },
+      {
+        "seed": 100038,
+        "PPG": 118
+      },
+      {
+        "seed": 100039,
+        "PPG": 137.5
+      },
+      {
+        "seed": 100040,
+        "PPG": 122
+      },
+      {
+        "seed": 100041,
+        "PPG": 111.5
+      },
+      {
+        "seed": 100042,
+        "PPG": 127
+      },
+      {
+        "seed": 100043,
+        "PPG": 112.5
+      },
+      {
+        "seed": 100044,
+        "PPG": 110
+      },
+      {
+        "seed": 100045,
+        "PPG": 105
+      },
+      {
+        "seed": 100046,
+        "PPG": 116
+      },
+      {
+        "seed": 100047,
+        "PPG": 123.5
+      },
+      {
+        "seed": 100048,
+        "PPG": 116
+      },
+      {
+        "seed": 100049,
+        "PPG": 143
+      },
+      {
+        "seed": 100050,
+        "PPG": 141.5
+      },
+      {
+        "seed": 100051,
+        "PPG": 123
+      },
+      {
+        "seed": 100052,
+        "PPG": 133
+      },
+      {
+        "seed": 100053,
+        "PPG": 114
+      },
+      {
+        "seed": 100054,
+        "PPG": 119.5
+      },
+      {
+        "seed": 100055,
+        "PPG": 113.5
+      },
+      {
+        "seed": 100056,
+        "PPG": 136.5
+      },
+      {
+        "seed": 100057,
+        "PPG": 122.5
+      },
+      {
+        "seed": 100058,
+        "PPG": 131
+      },
+      {
+        "seed": 100059,
+        "PPG": 114.5
+      },
+      {
+        "seed": 100060,
+        "PPG": 117
+      },
+      {
+        "seed": 100061,
+        "PPG": 125.5
+      },
+      {
+        "seed": 100062,
+        "PPG": 129.5
+      },
+      {
+        "seed": 100063,
+        "PPG": 120
+      },
+      {
+        "seed": 100064,
+        "PPG": 111.5
+      },
+      {
+        "seed": 100065,
+        "PPG": 126
+      },
+      {
+        "seed": 100066,
+        "PPG": 119
+      },
+      {
+        "seed": 100067,
+        "PPG": 115
+      },
+      {
+        "seed": 100068,
+        "PPG": 129
+      },
+      {
+        "seed": 100069,
+        "PPG": 114
+      },
+      {
+        "seed": 100070,
+        "PPG": 133.5
+      },
+      {
+        "seed": 100071,
+        "PPG": 129
+      },
+      {
+        "seed": 100072,
+        "PPG": 122.5
+      },
+      {
+        "seed": 100073,
+        "PPG": 114
+      },
+      {
+        "seed": 100074,
+        "PPG": 125
+      },
+      {
+        "seed": 100075,
+        "PPG": 111.5
+      },
+      {
+        "seed": 100076,
+        "PPG": 120.5
+      },
+      {
+        "seed": 100077,
+        "PPG": 142.5
+      },
+      {
+        "seed": 100078,
+        "PPG": 128.5
+      },
+      {
+        "seed": 100079,
+        "PPG": 124.5
+      },
+      {
+        "seed": 100080,
+        "PPG": 131
+      },
+      {
+        "seed": 100081,
+        "PPG": 122
+      },
+      {
+        "seed": 100082,
+        "PPG": 125.5
+      },
+      {
+        "seed": 100083,
+        "PPG": 125
+      },
+      {
+        "seed": 100084,
+        "PPG": 131.5
+      },
+      {
+        "seed": 100085,
+        "PPG": 152
+      },
+      {
+        "seed": 100086,
+        "PPG": 129.5
+      },
+      {
+        "seed": 100087,
+        "PPG": 122.5
+      },
+      {
+        "seed": 100088,
+        "PPG": 113.5
+      },
+      {
+        "seed": 100089,
+        "PPG": 128
+      },
+      {
+        "seed": 100090,
+        "PPG": 121.5
+      },
+      {
+        "seed": 100091,
+        "PPG": 125.5
+      },
+      {
+        "seed": 100092,
+        "PPG": 134.5
+      },
+      {
+        "seed": 100093,
+        "PPG": 119
+      },
+      {
+        "seed": 100094,
+        "PPG": 135.5
+      },
+      {
+        "seed": 100095,
+        "PPG": 126
+      },
+      {
+        "seed": 100096,
+        "PPG": 127.5
+      },
+      {
+        "seed": 100097,
+        "PPG": 127
+      },
+      {
+        "seed": 100098,
+        "PPG": 132.5
+      },
+      {
+        "seed": 100099,
+        "PPG": 132.5
+      },
+      {
+        "seed": 100100,
+        "PPG": 126
+      },
+      {
+        "seed": 100101,
+        "PPG": 119.5
+      },
+      {
+        "seed": 100102,
+        "PPG": 104.5
+      },
+      {
+        "seed": 100103,
+        "PPG": 124
+      },
+      {
+        "seed": 100104,
+        "PPG": 130
+      },
+      {
+        "seed": 100105,
+        "PPG": 131
+      },
+      {
+        "seed": 100106,
+        "PPG": 129.5
+      },
+      {
+        "seed": 100107,
+        "PPG": 124.5
+      },
+      {
+        "seed": 100108,
+        "PPG": 124.5
+      },
+      {
+        "seed": 100109,
+        "PPG": 129
+      },
+      {
+        "seed": 100110,
+        "PPG": 110
+      },
+      {
+        "seed": 100111,
+        "PPG": 116.5
+      },
+      {
+        "seed": 100112,
+        "PPG": 122.5
+      },
+      {
+        "seed": 100113,
+        "PPG": 131.5
+      },
+      {
+        "seed": 100114,
+        "PPG": 138.5
+      },
+      {
+        "seed": 100115,
+        "PPG": 115
+      },
+      {
+        "seed": 100116,
+        "PPG": 143.5
+      },
+      {
+        "seed": 100117,
+        "PPG": 115
+      },
+      {
+        "seed": 100118,
+        "PPG": 119
+      },
+      {
+        "seed": 100119,
+        "PPG": 120
+      },
+      {
+        "seed": 100120,
+        "PPG": 121.5
+      },
+      {
+        "seed": 100121,
+        "PPG": 118.5
+      },
+      {
+        "seed": 100122,
+        "PPG": 116.5
+      },
+      {
+        "seed": 100123,
+        "PPG": 125
+      },
+      {
+        "seed": 100124,
+        "PPG": 107.5
+      },
+      {
+        "seed": 100125,
+        "PPG": 125.5
+      },
+      {
+        "seed": 100126,
+        "PPG": 137
+      },
+      {
+        "seed": 100127,
+        "PPG": 115
+      },
+      {
+        "seed": 100128,
+        "PPG": 116.5
+      },
+      {
+        "seed": 100129,
+        "PPG": 126.5
+      },
+      {
+        "seed": 100130,
+        "PPG": 117
+      },
+      {
+        "seed": 100131,
+        "PPG": 121.5
+      },
+      {
+        "seed": 100132,
+        "PPG": 121
+      },
+      {
+        "seed": 100133,
+        "PPG": 120
+      },
+      {
+        "seed": 100134,
+        "PPG": 103.5
+      },
+      {
+        "seed": 100135,
+        "PPG": 116
+      },
+      {
+        "seed": 100136,
+        "PPG": 120
+      },
+      {
+        "seed": 100137,
+        "PPG": 123.5
+      },
+      {
+        "seed": 100138,
+        "PPG": 111
+      },
+      {
+        "seed": 100139,
+        "PPG": 112.5
+      },
+      {
+        "seed": 100140,
+        "PPG": 121.5
+      },
+      {
+        "seed": 100141,
+        "PPG": 141
+      },
+      {
+        "seed": 100142,
+        "PPG": 115.5
+      },
+      {
+        "seed": 100143,
+        "PPG": 127.5
+      },
+      {
+        "seed": 100144,
+        "PPG": 127
+      },
+      {
+        "seed": 100145,
+        "PPG": 133
+      },
+      {
+        "seed": 100146,
+        "PPG": 125.5
+      },
+      {
+        "seed": 100147,
+        "PPG": 124
+      },
+      {
+        "seed": 100148,
+        "PPG": 111
+      },
+      {
+        "seed": 100149,
+        "PPG": 123
+      }
+    ]
+  },
+  "boundary": [
+    {
+      "clock": 13,
+      "event": false,
+      "baseline": {
+        "key": "drivingLayup",
+        "kind": "inside",
+        "skill": "lay",
+        "adjustment": 0.01,
+        "layup": "Finger Roll Layup",
+        "skills": {
+          "lay": 0.85,
+          "oiq": 0.15
+        },
+        "blockMultiplier": 0.9
+      },
+      "candidate": {
+        "key": "drivingLayup",
+        "kind": "inside",
+        "skill": "lay",
+        "adjustment": 0.01,
+        "layup": "Finger Roll Layup",
+        "skills": {
+          "lay": 0.85,
+          "oiq": 0.15
+        },
+        "blockMultiplier": 0.9
+      }
+    },
+    {
+      "clock": 13,
+      "event": true,
+      "baseline": {
+        "key": "drivingLayup",
+        "kind": "inside",
+        "skill": "lay",
+        "adjustment": 0.055,
+        "layup": "Running Layup",
+        "skills": {
+          "lay": 0.8,
+          "spd": 0.2
+        },
+        "blockMultiplier": 0.5
+      },
+      "candidate": {
+        "key": "drivingLayup",
+        "kind": "inside",
+        "skill": "lay",
+        "adjustment": 0.01,
+        "layup": "Finger Roll Layup",
+        "skills": {
+          "lay": 0.85,
+          "oiq": 0.15
+        },
+        "blockMultiplier": 0.9
+      }
+    },
+    {
+      "clock": 14,
+      "event": false,
+      "baseline": {
+        "key": "drivingLayup",
+        "kind": "inside",
+        "skill": "lay",
+        "adjustment": 0.01,
+        "layup": "Finger Roll Layup",
+        "skills": {
+          "lay": 0.85,
+          "oiq": 0.15
+        },
+        "blockMultiplier": 0.9
+      },
+      "candidate": {
+        "key": "drivingLayup",
+        "kind": "inside",
+        "skill": "lay",
+        "adjustment": 0.01,
+        "layup": "Finger Roll Layup",
+        "skills": {
+          "lay": 0.85,
+          "oiq": 0.15
+        },
+        "blockMultiplier": 0.9
+      }
+    },
+    {
+      "clock": 14,
+      "event": true,
+      "baseline": {
+        "key": "drivingLayup",
+        "kind": "inside",
+        "skill": "lay",
+        "adjustment": 0.055,
+        "layup": "Running Layup",
+        "skills": {
+          "lay": 0.8,
+          "spd": 0.2
+        },
+        "blockMultiplier": 0.5
+      },
+      "candidate": {
+        "key": "drivingLayup",
+        "kind": "inside",
+        "skill": "lay",
+        "adjustment": 0.055,
+        "layup": "Running Layup",
+        "skills": {
+          "lay": 0.8,
+          "spd": 0.2
+        },
+        "blockMultiplier": 0.5
+      }
+    }
+  ],
+  "controls": {
+    "unchangedOtherShotCases": 32,
+    "runningAccuracy": 0.055,
+    "runningBlock": 0.5,
+    "productionUnmodified": false,
+    "productionChange": "Only approved Running eligibility clock gate"
+  },
+  "acceptedCandidateReproduction": "EXACT MATCH"
+}

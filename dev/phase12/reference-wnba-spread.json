@@ -1,0 +1,283 @@
+[
+  {
+    "season": 2022,
+    "games": 216,
+    "teams": [
+      {
+        "team": "Phoenix Mercury",
+        "games": 36,
+        "meanMargin": -3
+      },
+      {
+        "team": "Las Vegas Aces",
+        "games": 36,
+        "meanMargin": 6.361111111111111
+      },
+      {
+        "team": "Los Angeles Sparks",
+        "games": 36,
+        "meanMargin": -7.111111111111111
+      },
+      {
+        "team": "Washington Mystics",
+        "games": 36,
+        "meanMargin": 4.361111111111111
+      },
+      {
+        "team": "Minnesota Lynx",
+        "games": 36,
+        "meanMargin": -1.4722222222222223
+      },
+      {
+        "team": "Indiana Fever",
+        "games": 36,
+        "meanMargin": -11.083333333333334
+      },
+      {
+        "team": "Seattle Storm",
+        "games": 36,
+        "meanMargin": 4.111111111111111
+      },
+      {
+        "team": "Chicago Sky",
+        "games": 36,
+        "meanMargin": 5
+      },
+      {
+        "team": "New York Liberty",
+        "games": 36,
+        "meanMargin": -2.388888888888889
+      },
+      {
+        "team": "Dallas Wings",
+        "games": 36,
+        "meanMargin": 0.19444444444444445
+      },
+      {
+        "team": "Connecticut Sun",
+        "games": 36,
+        "meanMargin": 8.027777777777779
+      },
+      {
+        "team": "Atlanta Dream",
+        "games": 36,
+        "meanMargin": -3
+      }
+    ],
+    "teamMarginSD": 5.51626150091727,
+    "sourceFile": "dev/phase12/reference-gamelog-2022.json",
+    "sourceURL": "https://stats.wnba.com/stats/leaguegamelog?LeagueID=10&Season=2022&SeasonType=Regular+Season&PlayerOrTeam=T&Counter=0&Sorter=DATE&Direction=ASC&DateFrom=&DateTo="
+  },
+  {
+    "season": 2023,
+    "games": 240,
+    "teams": [
+      {
+        "team": "New York Liberty",
+        "games": 40,
+        "meanMargin": 8.675
+      },
+      {
+        "team": "Phoenix Mercury",
+        "games": 40,
+        "meanMargin": -8.3
+      },
+      {
+        "team": "Los Angeles Sparks",
+        "games": 40,
+        "meanMargin": -1.625
+      },
+      {
+        "team": "Washington Mystics",
+        "games": 40,
+        "meanMargin": -0.35
+      },
+      {
+        "team": "Connecticut Sun",
+        "games": 40,
+        "meanMargin": 3.7
+      },
+      {
+        "team": "Minnesota Lynx",
+        "games": 40,
+        "meanMargin": -4.825
+      },
+      {
+        "team": "Indiana Fever",
+        "games": 40,
+        "meanMargin": -4.05
+      },
+      {
+        "team": "Chicago Sky",
+        "games": 40,
+        "meanMargin": -1.625
+      },
+      {
+        "team": "Las Vegas Aces",
+        "games": 40,
+        "meanMargin": 12.55
+      },
+      {
+        "team": "Dallas Wings",
+        "games": 40,
+        "meanMargin": 2.95
+      },
+      {
+        "team": "Seattle Storm",
+        "games": 40,
+        "meanMargin": -5.625
+      },
+      {
+        "team": "Atlanta Dream",
+        "games": 40,
+        "meanMargin": -1.475
+      }
+    ],
+    "teamMarginSD": 5.794708433850087,
+    "sourceFile": "dev/phase4/real-wnba-2023.json",
+    "sourceURL": "https://stats.wnba.com/stats/leaguegamelog?LeagueID=10&Season=2023&SeasonType=Regular+Season&PlayerOrTeam=T&Counter=0&Sorter=DATE&Direction=ASC&DateFrom=&DateTo="
+  },
+  {
+    "season": 2024,
+    "games": 240,
+    "teams": [
+      {
+        "team": "New York Liberty",
+        "games": 40,
+        "meanMargin": 9.15
+      },
+      {
+        "team": "Phoenix Mercury",
+        "games": 40,
+        "meanMargin": -3.3
+      },
+      {
+        "team": "Las Vegas Aces",
+        "games": 40,
+        "meanMargin": 5.475
+      },
+      {
+        "team": "Washington Mystics",
+        "games": 40,
+        "meanMargin": -2.975
+      },
+      {
+        "team": "Connecticut Sun",
+        "games": 40,
+        "meanMargin": 6.5
+      },
+      {
+        "team": "Minnesota Lynx",
+        "games": 40,
+        "meanMargin": 6.375
+      },
+      {
+        "team": "Indiana Fever",
+        "games": 40,
+        "meanMargin": -2.675
+      },
+      {
+        "team": "Seattle Storm",
+        "games": 40,
+        "meanMargin": 4.475
+      },
+      {
+        "team": "Los Angeles Sparks",
+        "games": 40,
+        "meanMargin": -7.225
+      },
+      {
+        "team": "Dallas Wings",
+        "games": 40,
+        "meanMargin": -7.925
+      },
+      {
+        "team": "Chicago Sky",
+        "games": 40,
+        "meanMargin": -5.125
+      },
+      {
+        "team": "Atlanta Dream",
+        "games": 40,
+        "meanMargin": -2.75
+      }
+    ],
+    "teamMarginSD": 5.717990614426248,
+    "sourceFile": "dev/phase3/real-wnba-2024.json",
+    "sourceURL": "https://stats.wnba.com/stats/leaguegamelog?LeagueID=10&Season=2024&SeasonType=Regular+Season&PlayerOrTeam=T&Counter=0&Sorter=DATE&Direction=ASC&DateFrom=&DateTo="
+  },
+  {
+    "season": 2025,
+    "games": 286,
+    "teams": [
+      {
+        "team": "Los Angeles Sparks",
+        "games": 44,
+        "meanMargin": -2.5681818181818183
+      },
+      {
+        "team": "Dallas Wings",
+        "games": 44,
+        "meanMargin": -6.295454545454546
+      },
+      {
+        "team": "Washington Mystics",
+        "games": 44,
+        "meanMargin": -4.431818181818182
+      },
+      {
+        "team": "Minnesota Lynx",
+        "games": 44,
+        "meanMargin": 9.409090909090908
+      },
+      {
+        "team": "Atlanta Dream",
+        "games": 44,
+        "meanMargin": 7.590909090909091
+      },
+      {
+        "team": "Golden State Valkyries",
+        "games": 44,
+        "meanMargin": 1.3863636363636365
+      },
+      {
+        "team": "New York Liberty",
+        "games": 44,
+        "meanMargin": 4.068181818181818
+      },
+      {
+        "team": "Phoenix Mercury",
+        "games": 44,
+        "meanMargin": 2.6818181818181817
+      },
+      {
+        "team": "Las Vegas Aces",
+        "games": 44,
+        "meanMargin": 2.909090909090909
+      },
+      {
+        "team": "Indiana Fever",
+        "games": 44,
+        "meanMargin": 3.3636363636363638
+      },
+      {
+        "team": "Seattle Storm",
+        "games": 44,
+        "meanMargin": 2.0454545454545454
+      },
+      {
+        "team": "Chicago Sky",
+        "games": 44,
+        "meanMargin": -10.045454545454545
+      },
+      {
+        "team": "Connecticut Sun",
+        "games": 44,
+        "meanMargin": -10.113636363636363
+      }
+    ],
+    "teamMarginSD": 5.979735061435304,
+    "sourceFile": "dev/phase12/reference-gamelog-2025.json",
+    "sourceURL": "https://stats.wnba.com/stats/leaguegamelog?LeagueID=10&Season=2025&SeasonType=Regular+Season&PlayerOrTeam=T&Counter=0&Sorter=DATE&Direction=ASC&DateFrom=&DateTo="
+  }
+]

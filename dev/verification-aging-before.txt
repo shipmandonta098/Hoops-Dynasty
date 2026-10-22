@@ -1,0 +1,186 @@
+AGING VALIDATION FAILED
+{
+  "mode": "before",
+  "games": 43,
+  "runtimeSeconds": 4.715629147,
+  "playersAtSeasonStart": 114,
+  "playersBefore": 128,
+  "playersAfter": 128,
+  "totalPlayersChecked": 128,
+  "totalFailures": 43,
+  "validatorFindings": 86,
+  "otherIntegrityFailures": 0,
+  "playersCorrect": 85,
+  "retirements": 0,
+  "generatedProspectsBySeason": {
+    "2026": 40
+  },
+  "draftedRookies": 12,
+  "draftedRookiesRetained": 12,
+  "champion": {
+    "id": 2,
+    "name": "Los Angeles Stars"
+  },
+  "integrity": "failed"
+}
+
+Failure #1
+Player ID: 10000
+Player name: Terrence Brooks
+DOB: 2004-07-07
+Stored age before: 22
+Stored age after: 22
+Expected age: 23
+League date before: 2026-11-13
+League date after: 2027-10-27
+Season before: 2026
+Season after: 2027
+Player status: free agent → free agent
+Aging touched: false
+Aging applications: 0
+Reason validation failed: Terrence Brooks (10000) aged 22 → 22; expected 23; applications 0; Terrence Brooks: season age 22 disagrees with October 1 birthdate age 23; Independent DOB oracle expected 23 on 2027-10-01; actual 22
+
+Failure #2
+Player ID: 10001
+Player name: Adrian Hayes
+DOB: 2000-04-08
+Stored age before: 26
+Stored age after: 26
+Expected age: 27
+League date before: 2026-11-13
+League date after: 2027-10-27
+Season before: 2026
+Season after: 2027
+Player status: free agent → free agent
+Aging touched: false
+Aging applications: 0
+Reason validation failed: Adrian Hayes (10001) aged 26 → 26; expected 27; applications 0; Adrian Hayes: season age 26 disagrees with October 1 birthdate age 27; Independent DOB oracle expected 27 on 2027-10-01; actual 26
+
+Failure #3
+Player ID: 10004
+Player name: Jamal Williams
+DOB: 1998-01-01
+Stored age before: 28
+Stored age after: 28
+Expected age: 29
+League date before: 2026-11-13
+League date after: 2027-10-27
+Season before: 2026
+Season after: 2027
+Player status: free agent → free agent
+Aging touched: false
+Aging applications: 0
+Reason validation failed: Jamal Williams (10004) aged 28 → 28; expected 29; applications 0; Jamal Williams: season age 28 disagrees with October 1 birthdate age 29; Independent DOB oracle expected 29 on 2027-10-01; actual 28
+
+Failure #4
+Player ID: 10005
+Player name: Aaron Mitchell
+DOB: 2006-04-28
+Stored age before: 20
+Stored age after: 20
+Expected age: 21
+League date before: 2026-11-13
+League date after: 2027-10-27
+Season before: 2026
+Season after: 2027
+Player status: free agent → free agent
+Aging touched: false
+Aging applications: 0
+Reason validation failed: Aaron Mitchell (10005) aged 20 → 20; expected 21; applications 0; Aaron Mitchell: season age 20 disagrees with October 1 birthdate age 21; Independent DOB oracle expected 21 on 2027-10-01; actual 20
+
+Failure #5
+Player ID: 10006
+Player name: Nico Young
+DOB: 2006-06-21
+Stored age before: 20
+Stored age after: 20
+Expected age: 21
+League date before: 2026-11-13
+League date after: 2027-10-27
+Season before: 2026
+Season after: 2027
+Player status: free agent → free agent
+Aging touched: false
+Aging applications: 0
+Reason validation failed: Nico Young (10006) aged 20 → 20; expected 21; applications 0; Nico Young: season age 20 disagrees with October 1 birthdate age 21; Independent DOB oracle expected 21 on 2027-10-01; actual 20
+
+Failure #6
+Player ID: 10007
+Player name: Nikola Pavlović
+DOB: 1998-06-15
+Stored age before: 28
+Stored age after: 28
+Expected age: 29
+League date before: 2026-11-13
+League date after: 2027-10-27
+Season before: 2026
+Season after: 2027
+Player status: free agent → free agent
+Aging touched: false
+Aging applications: 0
+Reason validation failed: Nikola Pavlović (10007) aged 28 → 28; expected 29; applications 0; Nikola Pavlović: season age 28 disagrees with October 1 birthdate age 29; Independent DOB oracle expected 29 on 2027-10-01; actual 28
+
+Failure #7
+Player ID: 10008
+Player name: Malik Pierce
+DOB: 1994-07-19
+Stored age before: 32
+Stored age after: 32
+Expected age: 33
+League date before: 2026-11-13
+League date after: 2027-10-27
+Season before: 2026
+Season after: 2027
+Player status: free agent → free agent
+Aging touched: false
+Aging applications: 0
+Reason validation failed: Malik Pierce (10008) aged 32 → 32; expected 33; applications 0; Malik Pierce: season age 32 disagrees with October 1 birthdate age 33; Independent DOB oracle expected 33 on 2027-10-01; actual 32
+
+Failure #8
+Player ID: 10009
+Player name: Darius Green
+DOB: 1997-07-22
+Stored age before: 29
+Stored age after: 29
+Expected age: 30
+League date before: 2026-11-13
+League date after: 2027-10-27
+Season before: 2026
+Season after: 2027
+Player status: free agent → free agent
+Aging touched: false
+Aging applications: 0
+Reason validation failed: Darius Green (10009) aged 29 → 29; expected 30; applications 0; Darius Green: season age 29 disagrees with October 1 birthdate age 30; Independent DOB oracle expected 30 on 2027-10-01; actual 29
+
+Failure #9
+Player ID: 10011
+Player name: Cameron Bennett
+DOB: 2006-08-02
+Stored age before: 20
+Stored age after: 20
+Expected age: 21
+League date before: 2026-11-13
+League date after: 2027-10-27
+Season before: 2026
+Season after: 2027
+Player status: free agent → free agent
+Aging touched: false
+Aging applications: 0
+Reason validation failed: Cameron Bennett (10011) aged 20 → 20; expected 21; applications 0; Cameron Bennett: season age 20 disagrees with October 1 birthdate age 21; Independent DOB oracle expected 21 on 2027-10-01; actual 20
+
+Failure #10
+Player ID: 10013
+Player name: Andre Porter
+DOB: 1998-04-21
+Stored age before: 28
+Stored age after: 28
+Expected age: 29
+League date before: 2026-11-13
+League date after: 2027-10-27
+Season before: 2026
+Season after: 2027
+Player status: free agent → free agent
+Aging touched: false
+Aging applications: 0
+Reason validation failed: Andre Porter (10013) aged 28 → 28; expected 29; applications 0; Andre Porter: season age 28 disagrees with October 1 birthdate age 29; Independent DOB oracle expected 29 on 2027-10-01; actual 28
+Report: /workspace/scratch/aging-verification/dev/verification-aging-before.json

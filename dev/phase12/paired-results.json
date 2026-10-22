@@ -1,0 +1,83 @@
+{
+  "nba-baseline-pace": {
+    "n": 800,
+    "sameScoreAt60": 800,
+    "pairedCloseN": 255,
+    "startsDifference": 0.7098039215686275,
+    "startsDifferenceCI95": [
+      0.554143320637074,
+      0.8654645225001809
+    ],
+    "OTGained": 18,
+    "OTLost": 15,
+    "OTdifferencePP": 0.375,
+    "OTdifferenceCI95pp": [
+      -1.0321779271826288,
+      1.7821779271826286
+    ]
+  },
+  "wnba-port-hq": {
+    "n": 400,
+    "sameScoreAt60": 400,
+    "pairedCloseN": 156,
+    "startsDifference": -0.038461538461538464,
+    "startsDifferenceCI95": [
+      -0.09991346272751733,
+      0.0229903858044404
+    ],
+    "OTGained": 2,
+    "OTLost": 5,
+    "OTdifferencePP": -0.75,
+    "OTdifferenceCI95pp": [
+      -2.0443329363034843,
+      0.5443329363034843
+    ]
+  },
+  "wnba-hq-pace": {
+    "n": 400,
+    "sameScoreAt60": 400,
+    "pairedCloseN": 156,
+    "startsDifference": 0.7051282051282052,
+    "startsDifferenceCI95": [
+      0.5179871460410361,
+      0.8922692642153742
+    ],
+    "OTGained": 11,
+    "OTLost": 15,
+    "OTdifferencePP": -1.0,
+    "OTdifferenceCI95pp": [
+      -3.4965968837599712,
+      1.4965968837599712
+    ]
+  },
+  "tie-tie_20": {
+    "n": 1000,
+    "OTGained": 365,
+    "OTLost": 169,
+    "OTdifferencePP": 19.6,
+    "OTdifferenceCI95pp": [
+      15.236703660762888,
+      23.963296339237115
+    ]
+  },
+  "tie-tie_30": {
+    "n": 1000,
+    "OTGained": 164,
+    "OTLost": 97,
+    "OTdifferencePP": 6.7,
+    "OTdifferenceCI95pp": [
+      3.5608716853240936,
+      9.839128314675907
+    ]
+  },
+  "tie-tie_60": {
+    "n": 2000,
+    "OTGained": 239,
+    "OTLost": 119,
+    "OTdifferencePP": 6.0,
+    "OTdifferenceCI95pp": [
+      4.164493748308113,
+      7.835506251691887
+    ]
+  }
+}

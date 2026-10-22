@@ -1,0 +1,9 @@
+# Persistence audit before normalized storage
+
+Hoops Dynasty uses global in-memory `state`, not React. `dist/careers.js` opens IndexedDB `hoops-dynasty-careers`, version 1, with `careers` (entire `{id, metadata, data: state}` per slot) and `metadata` (legacy migration marker). Saves clone the whole state, queue writes, read the previous entire record, then atomically replace it. Normal game/day/actions/season wrappers call `save()`; headless benchmarks defer persistence. Current games include box scores/PBP inside `history`; player/team season stats, draft history, champions, Hall careers, news, and decisions are nested in the same career object. Opening a slot validates and rewrites that whole object. Listing slots scans full career values.
+
+`localStorage` contains the old `hoops-dynasty-v1` save plus theme, title preferences, sidebar state, and setup presets. Initialization migrates the legacy save into IndexedDB. No sessionStorage use was found. No separate relational stores or paginated history queries existed.
+
+Export/import uses portable JSON `hoops-dynasty-career`, formatVersion 1. Import validates before creating an independent slot; the original file picker imposed a 25 MiB limit. Existing retention caps in simulation/archive code are outside this storage task; normalized persistence must not delete older database rows when arrays shrink at rollover or hit these caps.
+
+Dependencies requiring care: awards use previous-season statistics and any prior appearance to determine rookie eligibility; Hall capture needs complete player careers at rollover; opening-night scheduling uses the previous team-season archive. Storage must hydrate these dependencies without changing basketball calculations. Detailed team-season history and past game box scores are not needed to display the Dashboard.

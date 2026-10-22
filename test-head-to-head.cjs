@@ -1,0 +1,20 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const element={style:{},classList:{add(){},remove(){},toggle(){}},addEventListener(){},querySelectorAll(){return []},setAttribute(){},removeAttribute(){},showModal(){},close(){},innerHTML:''};
+const context={console,Math:Object.create(Math),setTimeout,clearTimeout,localStorage:{getItem(){return null}},document:{getElementById(){return element},addEventListener(){},querySelectorAll(){return []},documentElement:element,body:element},window:{addEventListener(){},scrollTo(){}},assert};vm.createContext(context);
+for(const [,script] of fs.readFileSync('dist/index.html','utf8').matchAll(/<script src="([^"]+)"/g))vm.runInContext(fs.readFileSync('dist/'+script,'utf8').replace('careerReady=initializeCareers();',''),context,{filename:script});
+vm.runInContext(`
+state=fresh(defaultTeams().slice(0,4),2);
+state.history=[{a:0,b:1,sa:100,sb:90,winner:0,stage:'Regular season'},{a:1,b:0,sa:110,sb:105,winner:1,stage:'Regular season'},{a:0,b:1,sa:90,sb:95,winner:1,stage:'Championship'}];
+const x=headToHeadRows(state.teams[0]).find(r=>r.team.id===1),y=headToHeadRows(state.teams[1]).find(r=>r.team.id===0);
+assert.equal(x.w,1);assert.equal(x.l,1);assert.equal(x.hw,1);assert.equal(x.rl,1);assert.equal(x.pf,205);assert.equal(x.pa,200);assert.equal(x.pl,1);assert.equal(y.hw,1);assert.equal(y.rl,1);assert.equal(y.pf,200);assert.equal(y.pw,1);
+const before=JSON.stringify(state);assert(headToHeadPanel(state.teams[0]).includes('102.5'));assert.equal(JSON.stringify(state),before);
+archiveHeadToHead();archiveHeadToHead();assert.equal(state.headToHeadArchive.length,1);assert.equal(headToHeadRows(state.teams[0]).find(r=>r.team.id===1).w,1);
+state.year++;state.history=[];state.teams[1].city='Renamed';assert.equal(headToHeadRows(state.teams[0]).find(r=>r.team.id===1).w,1);
+state=validateCareerData(JSON.parse(JSON.stringify(state)));assert.equal(state.headToHeadArchive[0].pairs.length,1);assert.equal(headToHeadRows(state.teams[0]).find(r=>r.team.id===1).pl,1);
+render=()=>{};
+assert(teamHistoryPage(state.teams[0]).includes('SEASON-BY-SEASON RECORD'));assert(!teamHistoryPage(state.teams[0]).includes('class="h2h-table"'));
+setFranchiseHistoryPage('headToHead');assert(teamHistoryPage(state.teams[0]).includes('class="h2h-table"'));assert(!teamHistoryPage(state.teams[0]).includes('SEASON-BY-SEASON RECORD'));
+setFranchiseHistoryPage('seasons');assert(teamHistoryPage(state.teams[0]).includes('SEASON-BY-SEASON RECORD'));
+const bad=JSON.parse(JSON.stringify(state));bad.headToHeadArchive[0].pairs[0].w=100;assert.throws(()=>validateCareerData(bad));
+assert.equal(headToHeadRows(state.teams[0]).find(r=>r.team.id===2).w,0);
+`,context);console.log('PASS: reciprocal records, home/road splits, playoff separation, points, rollover, reload, renaming, archive deduplication and validation');

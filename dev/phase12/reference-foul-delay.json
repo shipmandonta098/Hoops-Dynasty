@@ -1,0 +1,413 @@
+{
+  "method": "Q4 final 60 game-clock seconds, fouling team down 3\u20136 at foul, personal/take non-shooting foul immediately after that same team made a FG or completed a made ordinary FT trip; substitutions/timeouts/reviews allowed but no intervening live-ball event. Elapsed game clock from score to foul is an inbound-to-foul proxy because clock is stopped before legal inbound touch. PBP does not directly identify intentionality, attempted inbound timing, or referee recognition delay. No fast-delay cutoff used to select intentional events. Max 24 s excludes anomalous intervals; report all selected rows for review. NBA excludes 2 score-invalid reference files per Phase 10 checks. WNBA uses 100 official CDN games in 2022\u20132025, all passing scoring-accounting checks in reference-transition-summary.json. Sample is retained convenience sample, not full league census.",
+  "games": {
+    "wnba": 100,
+    "nba": 134
+  },
+  "summary": {
+    "wnba": {
+      "n": 11,
+      "mean": 4.018181818181818,
+      "median": 2.4,
+      "p10": 0.9,
+      "p90": 8.7,
+      "sd": 3.5354871547620705
+    },
+    "nba": {
+      "n": 18,
+      "mean": 3.327777777777778,
+      "median": 1.9,
+      "p10": 0.7,
+      "p90": 6.0,
+      "sd": 2.732277347959544
+    }
+  },
+  "byStart": {
+    "wnba": {
+      "madeFG": {
+        "n": 7,
+        "mean": 5.6,
+        "median": 4.8,
+        "p10": 1.9,
+        "p90": 8.7,
+        "sd": 3.5391685867890335
+      },
+      "finalFT": {
+        "n": 4,
+        "mean": 1.25,
+        "median": 1.05,
+        "p10": 0.6,
+        "p90": 1.2,
+        "sd": 0.6422616289332563
+      }
+    },
+    "nba": {
+      "madeFG": {
+        "n": 14,
+        "mean": 3.257142857142857,
+        "median": 1.85,
+        "p10": 0.7,
+        "p90": 6.0,
+        "sd": 2.992064334133181
+      },
+      "finalFT": {
+        "n": 4,
+        "mean": 3.575,
+        "median": 4.1,
+        "p10": 1.1,
+        "p90": 4.2,
+        "sd": 1.4771171246722448
+      }
+    }
+  },
+  "events": [
+    {
+      "league": "wnba",
+      "game": "1022300051",
+      "startClock": 14.1,
+      "foulClock": 9.3,
+      "delay": 4.8,
+      "deficit": 3,
+      "startKind": "madeFG",
+      "startDescription": "N. Ogwumike 25' 3PT  (27 PTS) (K. Samuelson 3 AST)",
+      "foulDescription": "J. Canada personal FOUL (3 PF) (Mitchell 2 FT)",
+      "timeoutBetween": false
+    },
+    {
+      "league": "wnba",
+      "game": "1022300064",
+      "startClock": 10.8,
+      "foulClock": 2.1,
+      "delay": 8.7,
+      "deficit": 4,
+      "startKind": "madeFG",
+      "startDescription": "K. Wallace 27' 3PT running (13 PTS) (K. Mitchell 4 AST)",
+      "foulDescription": "A. Boston personal FOUL (6 PF) (Gray 2 FT)",
+      "timeoutBetween": true
+    },
+    {
+      "league": "wnba",
+      "game": "1022300165",
+      "startClock": 29.7,
+      "foulClock": 27.8,
+      "delay": 1.9,
+      "deficit": 6,
+      "startKind": "madeFG",
+      "startDescription": "S. Sabally 3PT pullup (25 PTS) (M. Siegrist 1 AST)",
+      "foulDescription": "V. Burton take personal FOUL (3 PF) (Mabrey 2 FT)",
+      "timeoutBetween": true
+    },
+    {
+      "league": "wnba",
+      "game": "1022300190",
+      "startClock": 26.0,
+      "foulClock": 23.7,
+      "delay": 2.3,
+      "deficit": 6,
+      "startKind": "finalFT",
+      "startDescription": "R. Parks Free Throw 2 of 2 (4 PTS)",
+      "foulDescription": "C. Williams personal FOUL (5 PF)",
+      "timeoutBetween": true
+    },
+    {
+      "league": "wnba",
+      "game": "1022500031",
+      "startClock": 43.0,
+      "foulClock": 39.5,
+      "delay": 3.5,
+      "deficit": 4,
+      "startKind": "madeFG",
+      "startDescription": "K. Cardoso cutting Layup (14 PTS) (C. Vandersloot 11 AST)",
+      "foulDescription": "K. Nurse personal FOUL (5 PF)",
+      "timeoutBetween": false
+    },
+    {
+      "league": "wnba",
+      "game": "1022500256",
+      "startClock": 10.2,
+      "foulClock": 7.8,
+      "delay": 2.4,
+      "deficit": 4,
+      "startKind": "madeFG",
+      "startDescription": "S. Austin 26' 3PT  (11 PTS) (S. Citron 3 AST)",
+      "foulDescription": "S. Citron personal FOUL (3 PF) (Plum 2 FT)",
+      "timeoutBetween": false
+    },
+    {
+      "league": "nba",
+      "game": "nba-0022400006",
+      "startClock": 17.1,
+      "foulClock": 15.3,
+      "delay": 1.8,
+      "deficit": 6,
+      "startKind": "madeFG",
+      "startDescription": "Clarkson 26' 3PT Pullup Jump Shot (16 PTS)",
+      "foulDescription": "Sexton Personal Take Foul (P4.PN) (K.Cutler)",
+      "timeoutBetween": true
+    },
+    {
+      "league": "nba",
+      "game": "nba-0022400021",
+      "startClock": 34.4,
+      "foulClock": 30.4,
+      "delay": 4.0,
+      "deficit": 6,
+      "startKind": "finalFT",
+      "startDescription": "Mitchell Free Throw 2 of 2 (30 PTS)",
+      "foulDescription": "Mitchell Personal Take Foul (P3.PN) (G.Petraitis)",
+      "timeoutBetween": false
+    },
+    {
+      "league": "nba",
+      "game": "nba-0022400021",
+      "startClock": 24.4,
+      "foulClock": 20.7,
+      "delay": 3.7,
+      "deficit": 4,
+      "startKind": "madeFG",
+      "startDescription": "Mitchell 30' 3PT Pullup Jump Shot (33 PTS)",
+      "foulDescription": "Mitchell Personal Take Foul (P4.PN) (G.Petraitis)",
+      "timeoutBetween": false
+    },
+    {
+      "league": "nba",
+      "game": "nba-0022400028",
+      "startClock": 40.8,
+      "foulClock": 34.8,
+      "delay": 6.0,
+      "deficit": 5,
+      "startKind": "madeFG",
+      "startDescription": "Kuzma 9' Turnaround Fadeaway Bank Jump Shot (21 PTS)",
+      "foulDescription": "Brogdon Personal Take Foul (P3.T2) (T.Ricks)",
+      "timeoutBetween": false
+    },
+    {
+      "league": "nba",
+      "game": "nba-0022400028",
+      "startClock": 21.2,
+      "foulClock": 19.5,
+      "delay": 1.7,
+      "deficit": 6,
+      "startKind": "madeFG",
+      "startDescription": "Poole 1' Driving Layup (23 PTS)",
+      "foulDescription": "Poole Personal Take Foul (P4.PN) (T.Ricks)",
+      "timeoutBetween": false
+    },
+    {
+      "league": "nba",
+      "game": "nba-0022400032",
+      "startClock": 20.0,
+      "foulClock": 18.5,
+      "delay": 1.5,
+      "deficit": 3,
+      "startKind": "madeFG",
+      "startDescription": "Robinson-Earl 21' Jump Shot (19 PTS) (Murphy III 4 AST)",
+      "foulDescription": "Boston Jr. P.FOUL (P4.PN) (K.Scott)",
+      "timeoutBetween": true
+    },
+    {
+      "league": "nba",
+      "game": "nba-0022400056",
+      "startClock": 4.0,
+      "foulClock": 1.1,
+      "delay": 2.9,
+      "deficit": 5,
+      "startKind": "madeFG",
+      "startDescription": "Morant 3PT Pullup Jump Shot (31 PTS) (Aldama 3 AST)",
+      "foulDescription": "Jackson Jr. Personal Take Foul (P6.PN) (S.Corbin)",
+      "timeoutBetween": false
+    },
+    {
+      "league": "nba",
+      "game": "nba-0022400064",
+      "startClock": 21.6,
+      "foulClock": 20.9,
+      "delay": 0.7,
+      "deficit": 6,
+      "startKind": "madeFG",
+      "startDescription": "Thomas 2' Driving Layup (30 PTS)",
+      "foulDescription": "Wilson Personal Take Foul (P5.PN) (S.Corbin)",
+      "timeoutBetween": false
+    },
+    {
+      "league": "nba",
+      "game": "nba-0022400068",
+      "startClock": 4.8,
+      "foulClock": 3.7,
+      "delay": 1.1,
+      "deficit": 3,
+      "startKind": "finalFT",
+      "startDescription": "Smith Jr. Free Throw 3 of 3 (8 PTS)",
+      "foulDescription": "Eason Personal Take Foul (P1.PN) (E.Dalen)",
+      "timeoutBetween": true
+    },
+    {
+      "league": "nba",
+      "game": "nba-0022400078",
+      "startClock": 37.1,
+      "foulClock": 32.9,
+      "delay": 4.2,
+      "deficit": 6,
+      "startKind": "finalFT",
+      "startDescription": "Oubre Jr. Free Throw 2 of 2 (28 PTS)",
+      "foulDescription": "Maxey Personal Take Foul (P4.PN) (T.Mirkovich)",
+      "timeoutBetween": true
+    },
+    {
+      "league": "nba",
+      "game": "nba-0022400078",
+      "startClock": 23.4,
+      "foulClock": 21.7,
+      "delay": 1.7,
+      "deficit": 6,
+      "startKind": "madeFG",
+      "startDescription": "C. Martin 6' Driving Floating Bank Jump Shot (11 PTS)",
+      "foulDescription": "Maxey Personal Take Foul (P5.PN) (T.Mirkovich)",
+      "timeoutBetween": false
+    },
+    {
+      "league": "nba",
+      "game": "nba-0022400079",
+      "startClock": 21.6,
+      "foulClock": 16.6,
+      "delay": 5.0,
+      "deficit": 4,
+      "startKind": "finalFT",
+      "startDescription": "Bridges Free Throw 2 of 2 (27 PTS)",
+      "foulDescription": "Mann P.FOUL (P3.PN) (B.Forte)",
+      "timeoutBetween": true
+    },
+    {
+      "league": "nba",
+      "game": "nba-0022400079",
+      "startClock": 7.3,
+      "foulClock": 6.7,
+      "delay": 0.6,
+      "deficit": 3,
+      "startKind": "madeFG",
+      "startDescription": "Mann 25' 3PT Step Back Jump Shot (17 PTS)",
+      "foulDescription": "Bridges Personal Take Foul (P3.PN) (M.Dagher)",
+      "timeoutBetween": true
+    },
+    {
+      "league": "nba",
+      "game": "nba-0022400284",
+      "startClock": 40.3,
+      "foulClock": 30.7,
+      "delay": 9.6,
+      "deficit": 6,
+      "startKind": "madeFG",
+      "startDescription": "Curry 3PT Jump Shot (28 PTS) (Green 7 AST)",
+      "foulDescription": "Waters III Personal Take Foul (P4.PN) (P.Ransom)",
+      "timeoutBetween": false
+    },
+    {
+      "league": "nba",
+      "game": "nba-0022400347",
+      "startClock": 22.3,
+      "foulClock": 20.4,
+      "delay": 1.9,
+      "deficit": 6,
+      "startKind": "madeFG",
+      "startDescription": "LaVine 31' 3PT Pullup Jump Shot (30 PTS) (White 5 AST)",
+      "foulDescription": "White Personal Take Foul (P4.PN) (J.Williams)",
+      "timeoutBetween": false
+    },
+    {
+      "league": "nba",
+      "game": "nba-0022400410",
+      "startClock": 9.4,
+      "foulClock": 7.5,
+      "delay": 1.9,
+      "deficit": 6,
+      "startKind": "madeFG",
+      "startDescription": "Siakam 26' 3PT Jump Shot (22 PTS) (Nembhard 7 AST)",
+      "foulDescription": "Haliburton Personal Take Foul (P1.PN) (A.Nagy)",
+      "timeoutBetween": false
+    },
+    {
+      "league": "nba",
+      "game": "nba-0022400505",
+      "startClock": 29.8,
+      "foulClock": 19.7,
+      "delay": 10.1,
+      "deficit": 3,
+      "startKind": "madeFG",
+      "startDescription": "Murray 3' Running Layup (29 PTS)",
+      "foulDescription": "Williamson P.FOUL (P3.PN) (P.Fraher)",
+      "timeoutBetween": false
+    },
+    {
+      "league": "nba",
+      "game": "nba-0022400946",
+      "startClock": 8.4,
+      "foulClock": 6.9,
+      "delay": 1.5,
+      "deficit": 4,
+      "startKind": "madeFG",
+      "startDescription": "Pritchard 28' 3PT Running Pull-Up Jump Shot (8 PTS)",
+      "foulDescription": "Hauser Personal Take Foul (P1.PN) (N.Buchert)",
+      "timeoutBetween": false
+    },
+    {
+      "league": "wnba",
+      "game": "wnba-1022400190",
+      "startClock": 28.8,
+      "foulClock": 28.2,
+      "delay": 0.6,
+      "deficit": 4,
+      "startKind": "finalFT",
+      "startDescription": "J. Loyd Free Throw 3 of 3 (27 PTS)",
+      "foulDescription": "J. Horston take personal FOUL (2 PF) (Mabrey 2 FT)",
+      "timeoutBetween": true
+    },
+    {
+      "league": "wnba",
+      "game": "wnba-1022400190",
+      "startClock": 23.4,
+      "foulClock": 22.2,
+      "delay": 1.2,
+      "deficit": 3,
+      "startKind": "finalFT",
+      "startDescription": "G. Williams Free Throw 3 of 3 (4 PTS)",
+      "foulDescription": "N. Ogwumike take personal FOUL (5 PF) (Harris 2 FT)",
+      "timeoutBetween": false
+    },
+    {
+      "league": "wnba",
+      "game": "wnba-1022400227",
+      "startClock": 7.6,
+      "foulClock": 6.7,
+      "delay": 0.9,
+      "deficit": 3,
+      "startKind": "finalFT",
+      "startDescription": "R. Banham Free Throw 3 of 3 (17 PTS)",
+      "foulDescription": "C. Carter personal FOUL (3 PF)",
+      "timeoutBetween": true
+    },
+    {
+      "league": "wnba",
+      "game": "wnba-1022400233",
+      "startClock": 34.1,
+      "foulClock": 21.5,
+      "delay": 12.6,
+      "deficit": 6,
+      "startKind": "madeFG",
+      "startDescription": "L. Yueru Layup (19 PTS) (S. Talbot 3 AST)",
+      "foulDescription": "R. Burrell personal FOUL (1 PF)",
+      "timeoutBetween": false
+    },
+    {
+      "league": "wnba",
+      "game": "wnba-1022400233",
+      "startClock": 14.3,
+      "foulClock": 9.0,
+      "delay": 5.3,
+      "deficit": 5,
+      "startKind": "madeFG",
+      "startDescription": "K. Nurse 24' 3PT pullup (10 PTS) (D. Hamby 2 AST)",
+      "foulDescription": "K. Nurse personal FOUL (4 PF) (Cunningham 2 FT)",
+      "timeoutBetween": true
+    }
+  ]
+}

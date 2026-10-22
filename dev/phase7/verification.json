@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "productionFilesChanged": [
+    "dist/late-game.js",
+    "dist/rotations.js"
+  ],
+  "preservedFilesChecked": 265,
+  "fullSeasonGames": 3420,
+  "pairedMatchupGames": 2880,
+  "syntheticEndings": 1680,
+  "historicalGames": 150
+}

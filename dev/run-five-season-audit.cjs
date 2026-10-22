@@ -1,0 +1,13 @@
+const fs=require('node:fs'),path=require('node:path');
+const {loadLeague}=require('./load-league.cjs');
+const output=path.join(__dirname,'five-season-validation.json');
+(async()=>{const realm=loadLeague({seed:2026});realm.setRandomSeed(2026);realm.run("const setup=makeDraft();setup.gmName='Benchmark GM';state=validateCareerData(buildSetupCareer(setup));");
+realm.context.auditMemory=()=>({heapUsed:process.memoryUsage().heapUsed,rss:process.memoryUsage().rss});
+realm.context.auditCheckpoint=a=>{fs.writeFileSync(output+'.checkpoint',JSON.stringify(a,null,2));const r=a.seasons.at(-1);console.log(JSON.stringify({season:r.year,status:r.status,games:r.games,seconds:r.runtimeMs/1000,aging:r.aging,population:r.afterPopulation,champion:r.champion}));};
+realm.run(fs.readFileSync(path.join(__dirname,'five-season-audit.js'),'utf8'));
+let last=0;realm.context.auditOptions={seed:2026,log:false,memory:()=>process.memoryUsage().heapUsed,yieldControl:()=>new Promise(r=>setImmediate(r)),onProgress:p=>{if(performance.now()-last>30000){fs.writeFileSync(output+'.progress',JSON.stringify(p));console.log(JSON.stringify(p));last=performance.now();}}};
+const report=await realm.run('simulateMultipleSeasonsHeadless(5,auditOptions)');
+report.audit=JSON.parse(realm.run('JSON.stringify(continuousAudit,(_,v)=>v instanceof Map?Object.fromEntries(v):v)'));
+report.sourceCommit=require('node:child_process').execFileSync('git',['rev-parse','HEAD'],{cwd:path.join(__dirname,'..'),encoding:'utf8'}).trim();
+fs.writeFileSync(output,JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({status:report.status,seasons:report.seasonsSimulated,games:report.gamesSimulated,seconds:report.runtimeMs/1000,errors:report.errors},null,2));process.exitCode=report.status==='completed'?0:1;
+})().catch(e=>{console.error(e);process.exitCode=1;});

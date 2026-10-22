@@ -1,0 +1,105 @@
+{
+  "note": "Paired seeds, identical rosters/coaches, no crowd advantage, equal rest, reset state each game. 100 seeds per case: exploratory balance, not scientific estimates.",
+  "results": [
+    {
+      "home": "Denver",
+      "away": "Miami",
+      "adapted": false,
+      "seeds": 100,
+      "games": 200,
+      "exposure": 0.05626854375706826,
+      "homeWinPct": [
+        56.99999999999999,
+        57.99999999999999
+      ],
+      "meanHomeMargin": [
+        2.28,
+        2.63
+      ],
+      "visitorFinalStamina": [
+        97.42221213238678,
+        96.7803571300384
+      ]
+    },
+    {
+      "home": "Salt Lake City",
+      "away": "Miami",
+      "adapted": false,
+      "seeds": 100,
+      "games": 200,
+      "exposure": 0.040820577903176655,
+      "homeWinPct": [
+        56.99999999999999,
+        54
+      ],
+      "meanHomeMargin": [
+        2.28,
+        2.06
+      ],
+      "visitorFinalStamina": [
+        97.42221213238678,
+        96.96322871811597
+      ]
+    },
+    {
+      "home": "Denver",
+      "away": "Salt Lake City",
+      "adapted": false,
+      "seeds": 100,
+      "games": 200,
+      "exposure": 0,
+      "homeWinPct": [
+        56.99999999999999,
+        56.99999999999999
+      ],
+      "meanHomeMargin": [
+        2.28,
+        2.28
+      ],
+      "visitorFinalStamina": [
+        97.42221213238678,
+        97.42221213238678
+      ]
+    },
+    {
+      "home": "Miami",
+      "away": "New York",
+      "adapted": false,
+      "seeds": 100,
+      "games": 200,
+      "exposure": 0,
+      "homeWinPct": [
+        56.99999999999999,
+        56.99999999999999
+      ],
+      "meanHomeMargin": [
+        2.28,
+        2.28
+      ],
+      "visitorFinalStamina": [
+        97.42221213238678,
+        97.42221213238678
+      ]
+    },
+    {
+      "home": "Denver",
+      "away": "Miami",
+      "adapted": true,
+      "seeds": 100,
+      "games": 200,
+      "exposure": 0.012066981617561352,
+      "homeWinPct": [
+        56.99999999999999,
+        55.00000000000001
+      ],
+      "meanHomeMargin": [
+        2.28,
+        1.22
+      ],
+      "visitorFinalStamina": [
+        97.42221213238678,
+        97.06362148170172
+      ]
+    }
+  ]
+}

@@ -1,0 +1,353 @@
+[
+  {
+    "name": "opponent final ordinary FT made",
+    "status": "PASS",
+    "override": 0,
+    "next": 0,
+    "coreCalls": 0,
+    "extraBoards": 0,
+    "transitionTeam": null,
+    "phases": [
+      "freeThrow",
+      "freeThrow"
+    ],
+    "score": [
+      0,
+      2
+    ]
+  },
+  {
+    "name": "opponent final FT miss + DREB",
+    "status": "PASS",
+    "override": 0,
+    "next": 0,
+    "coreCalls": 0,
+    "extraBoards": 0,
+    "transitionTeam": 0,
+    "phases": [
+      "freeThrow",
+      "freeThrow",
+      "rebound"
+    ],
+    "score": [
+      0,
+      1
+    ]
+  },
+  {
+    "name": "opponent final FT miss + OREB → made",
+    "status": "PASS",
+    "override": 0,
+    "next": 0,
+    "coreCalls": 1,
+    "extraBoards": 1,
+    "transitionTeam": null,
+    "phases": [
+      "freeThrow",
+      "freeThrow",
+      "rebound",
+      "decision",
+      "made"
+    ],
+    "score": [
+      0,
+      3
+    ]
+  },
+  {
+    "name": "opponent final FT miss + OREB → DREB",
+    "status": "PASS",
+    "override": 0,
+    "next": 0,
+    "coreCalls": 1,
+    "extraBoards": 1,
+    "transitionTeam": 0,
+    "phases": [
+      "freeThrow",
+      "freeThrow",
+      "rebound",
+      "decision",
+      "rebound"
+    ],
+    "score": [
+      0,
+      1
+    ]
+  },
+  {
+    "name": "opponent final FT miss + OREB → steal",
+    "status": "PASS",
+    "override": 0,
+    "next": 0,
+    "coreCalls": 1,
+    "extraBoards": 1,
+    "transitionTeam": 0,
+    "phases": [
+      "freeThrow",
+      "freeThrow",
+      "rebound",
+      "decision",
+      "turnover"
+    ],
+    "score": [
+      0,
+      1
+    ]
+  },
+  {
+    "name": "opponent final FT miss + OREB → uncredited",
+    "status": "PASS",
+    "override": 0,
+    "next": 0,
+    "coreCalls": 1,
+    "extraBoards": 1,
+    "transitionTeam": null,
+    "phases": [
+      "freeThrow",
+      "freeThrow",
+      "rebound",
+      "decision",
+      "turnover"
+    ],
+    "score": [
+      0,
+      1
+    ]
+  },
+  {
+    "name": "opponent final FT miss + OREB → shotClock",
+    "status": "PASS",
+    "override": 0,
+    "next": 0,
+    "coreCalls": 1,
+    "extraBoards": 1,
+    "transitionTeam": null,
+    "phases": [
+      "freeThrow",
+      "freeThrow",
+      "rebound",
+      "decision",
+      "turnover"
+    ],
+    "score": [
+      0,
+      1
+    ]
+  },
+  {
+    "name": "opponent final FT miss + OREB → foulFT",
+    "status": "PASS",
+    "override": 0,
+    "next": 0,
+    "coreCalls": 1,
+    "extraBoards": 1,
+    "transitionTeam": null,
+    "phases": [
+      "freeThrow",
+      "freeThrow",
+      "rebound",
+      "decision",
+      "freeThrow",
+      "freeThrow"
+    ],
+    "score": [
+      0,
+      3
+    ]
+  },
+  {
+    "name": "same-side ordinary FT made",
+    "status": "PASS",
+    "override": null,
+    "next": 1,
+    "coreCalls": 0,
+    "extraBoards": 0,
+    "transitionTeam": null,
+    "phases": [
+      "freeThrow",
+      "freeThrow"
+    ],
+    "score": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "same-side ordinary FT miss + DREB",
+    "status": "PASS",
+    "override": null,
+    "next": 1,
+    "coreCalls": 0,
+    "extraBoards": 0,
+    "transitionTeam": 1,
+    "phases": [
+      "freeThrow",
+      "freeThrow",
+      "rebound"
+    ],
+    "score": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "technical FT retains existing owner",
+    "status": "PASS",
+    "override": null,
+    "next": 1,
+    "coreCalls": 0,
+    "extraBoards": 0,
+    "transitionTeam": null,
+    "phases": [
+      "freeThrow",
+      "freeThrow"
+    ],
+    "score": [
+      0,
+      1
+    ]
+  },
+  {
+    "name": "nontechnical retained FT preserves existing owner",
+    "status": "PASS",
+    "override": null,
+    "next": 1,
+    "coreCalls": 0,
+    "extraBoards": 0,
+    "transitionTeam": null,
+    "phases": [
+      "freeThrow",
+      "freeThrow"
+    ],
+    "score": [
+      0,
+      1
+    ]
+  },
+  {
+    "name": "made technical FT preserves existing owner",
+    "status": "PASS",
+    "override": null,
+    "next": 1,
+    "coreCalls": 0,
+    "extraBoards": 0,
+    "transitionTeam": null,
+    "phases": [
+      "freeThrow",
+      "freeThrow"
+    ],
+    "score": [
+      0,
+      2
+    ]
+  },
+  {
+    "name": "made nontechnical retained FT preserves existing owner",
+    "status": "PASS",
+    "override": null,
+    "next": 1,
+    "coreCalls": 0,
+    "extraBoards": 0,
+    "transitionTeam": null,
+    "phases": [
+      "freeThrow",
+      "freeThrow"
+    ],
+    "score": [
+      0,
+      2
+    ]
+  },
+  {
+    "name": "dispatcher reanchor / period reset, opening side 0",
+    "status": "PASS",
+    "slots": [
+      {
+        "side": 0,
+        "start": 0,
+        "end": 15
+      },
+      {
+        "side": 0,
+        "start": 15,
+        "end": 30
+      },
+      {
+        "side": 1,
+        "start": 30,
+        "end": 45
+      },
+      {
+        "side": 0,
+        "start": 45,
+        "end": 60
+      },
+      {
+        "side": 1,
+        "start": 60,
+        "end": 90
+      },
+      {
+        "side": 0,
+        "start": 90,
+        "end": 120
+      },
+      {
+        "side": 0,
+        "start": 720,
+        "end": 750
+      },
+      {
+        "side": 1,
+        "start": 750,
+        "end": 780
+      }
+    ]
+  },
+  {
+    "name": "dispatcher reanchor / period reset, opening side 1",
+    "status": "PASS",
+    "slots": [
+      {
+        "side": 1,
+        "start": 0,
+        "end": 15
+      },
+      {
+        "side": 1,
+        "start": 15,
+        "end": 30
+      },
+      {
+        "side": 0,
+        "start": 30,
+        "end": 45
+      },
+      {
+        "side": 1,
+        "start": 45,
+        "end": 60
+      },
+      {
+        "side": 0,
+        "start": 60,
+        "end": 90
+      },
+      {
+        "side": 1,
+        "start": 90,
+        "end": 120
+      },
+      {
+        "side": 1,
+        "start": 720,
+        "end": 750
+      },
+      {
+        "side": 0,
+        "start": 750,
+        "end": 780
+      }
+    ]
+  }
+]

@@ -1,0 +1,292 @@
+{
+  "nba": {
+    "bench": {
+      "pairedMeanAbsMarginChange": 3.325,
+      "pairedBootstrap95": [
+        1.26828125,
+        5.49390625
+      ],
+      "earlyResidualVarianceRatio": 0.8834287147760426,
+      "ratioBootstrap95": [
+        0.6836895160410421,
+        1.1161897979222384
+      ],
+      "n": 160
+    },
+    "coaching": {
+      "pairedMeanAbsMarginChange": -0.8,
+      "pairedBootstrap95": [
+        -2.28140625,
+        0.675
+      ],
+      "earlyResidualVarianceRatio": 1.1465363855888127,
+      "ratioBootstrap95": [
+        0.8905522832328533,
+        1.455533943202284
+      ],
+      "n": 160
+    },
+    "defense": {
+      "pairedMeanAbsMarginChange": 1.86875,
+      "pairedBootstrap95": [
+        -0.33906249999999993,
+        3.89375
+      ],
+      "earlyResidualVarianceRatio": 1.1030072736393626,
+      "ratioBootstrap95": [
+        0.8943082440013961,
+        1.3162640574736655
+      ],
+      "n": 160
+    },
+    "fatigue": {
+      "pairedMeanAbsMarginChange": 0.4,
+      "pairedBootstrap95": [
+        -1.3565625,
+        2.175
+      ],
+      "earlyResidualVarianceRatio": 1.1086812025043524,
+      "ratioBootstrap95": [
+        0.9062882608066642,
+        1.321161262072238
+      ],
+      "n": 160
+    },
+    "handling": {
+      "pairedMeanAbsMarginChange": 0.5625,
+      "pairedBootstrap95": [
+        -1.24390625,
+        2.5756249999999996
+      ],
+      "earlyResidualVarianceRatio": 0.9290614342665684,
+      "ratioBootstrap95": [
+        0.7520780418536026,
+        1.129775941377326
+      ],
+      "n": 160
+    },
+    "identical": {
+      "pairedMeanAbsMarginChange": 0.0,
+      "pairedBootstrap95": [
+        0.0,
+        0.0
+      ],
+      "earlyResidualVarianceRatio": 1.0438359981530791,
+      "ratioBootstrap95": [
+        0.8550225933882118,
+        1.2594397757335611
+      ],
+      "n": 160
+    },
+    "pace": {
+      "pairedMeanAbsMarginChange": 0.8125,
+      "pairedBootstrap95": [
+        -0.53140625,
+        2.2690624999999995
+      ],
+      "earlyResidualVarianceRatio": 1.0894812290207163,
+      "ratioBootstrap95": [
+        0.8776101713454344,
+        1.3144526098374671
+      ],
+      "n": 160
+    },
+    "poor-defense": {
+      "pairedMeanAbsMarginChange": 2.875,
+      "pairedBootstrap95": [
+        0.8803125,
+        5.0753125
+      ],
+      "earlyResidualVarianceRatio": 1.1437967433182339,
+      "ratioBootstrap95": [
+        0.9210660499055291,
+        1.3815832282373939
+      ],
+      "n": 160
+    },
+    "rebounds": {
+      "pairedMeanAbsMarginChange": 2.3,
+      "pairedBootstrap95": [
+        0.730625,
+        4.03140625
+      ],
+      "earlyResidualVarianceRatio": 1.2545503091480517,
+      "ratioBootstrap95": [
+        0.9904187389411039,
+        1.5147769218793823
+      ],
+      "n": 160
+    },
+    "selection": {
+      "pairedMeanAbsMarginChange": -0.03125,
+      "pairedBootstrap95": [
+        -2.02546875,
+        1.8568749999999994
+      ],
+      "earlyResidualVarianceRatio": 0.9862307903712906,
+      "ratioBootstrap95": [
+        0.7089442579181439,
+        1.305830351042439
+      ],
+      "n": 160
+    },
+    "three": {
+      "pairedMeanAbsMarginChange": 0.0625,
+      "pairedBootstrap95": [
+        -1.53828125,
+        1.73765625
+      ],
+      "earlyResidualVarianceRatio": 1.050565632339561,
+      "ratioBootstrap95": [
+        0.8451539798530877,
+        1.2906749851244752
+      ],
+      "n": 160
+    }
+  },
+  "wnba": {
+    "bench": {
+      "pairedMeanAbsMarginChange": 1.65625,
+      "pairedBootstrap95": [
+        -0.4003125,
+        3.76265625
+      ],
+      "earlyResidualVarianceRatio": 1.0443322273430105,
+      "ratioBootstrap95": [
+        0.8162027309701515,
+        1.304761928403379
+      ],
+      "n": 160
+    },
+    "coaching": {
+      "pairedMeanAbsMarginChange": 0.38125,
+      "pairedBootstrap95": [
+        -0.71890625,
+        1.5126562499999998
+      ],
+      "earlyResidualVarianceRatio": 1.1283756512377987,
+      "ratioBootstrap95": [
+        0.8589345588933537,
+        1.4273325524644627
+      ],
+      "n": 160
+    },
+    "defense": {
+      "pairedMeanAbsMarginChange": 0.95,
+      "pairedBootstrap95": [
+        -0.9628125,
+        2.8064062499999998
+      ],
+      "earlyResidualVarianceRatio": 1.07618598717653,
+      "ratioBootstrap95": [
+        0.8509953786112638,
+        1.3162687099728974
+      ],
+      "n": 160
+    },
+    "fatigue": {
+      "pairedMeanAbsMarginChange": 1.675,
+      "pairedBootstrap95": [
+        -0.16265625,
+        3.4564062499999997
+      ],
+      "earlyResidualVarianceRatio": 1.0061649326152298,
+      "ratioBootstrap95": [
+        0.8274642916392143,
+        1.1952434445500189
+      ],
+      "n": 160
+    },
+    "handling": {
+      "pairedMeanAbsMarginChange": 1.8,
+      "pairedBootstrap95": [
+        0.01234375000000001,
+        3.6006249999999995
+      ],
+      "earlyResidualVarianceRatio": 1.273692008614739,
+      "ratioBootstrap95": [
+        0.9977487363479584,
+        1.5931236652335174
+      ],
+      "n": 160
+    },
+    "identical": {
+      "pairedMeanAbsMarginChange": 0.0,
+      "pairedBootstrap95": [
+        0.0,
+        0.0
+      ],
+      "earlyResidualVarianceRatio": 1.1856649351445656,
+      "ratioBootstrap95": [
+        0.9298660097020329,
+        1.4797059336257667
+      ],
+      "n": 160
+    },
+    "pace": {
+      "pairedMeanAbsMarginChange": -0.06875,
+      "pairedBootstrap95": [
+        -1.61296875,
+        1.4256249999999995
+      ],
+      "earlyResidualVarianceRatio": 1.007255532942023,
+      "ratioBootstrap95": [
+        0.7772900652541191,
+        1.2593807095392526
+      ],
+      "n": 160
+    },
+    "poor-defense": {
+      "pairedMeanAbsMarginChange": 1.0375,
+      "pairedBootstrap95": [
+        -0.68796875,
+        2.9881249999999993
+      ],
+      "earlyResidualVarianceRatio": 1.052809460708785,
+      "ratioBootstrap95": [
+        0.8682755059973712,
+        1.2680171051219664
+      ],
+      "n": 160
+    },
+    "rebounds": {
+      "pairedMeanAbsMarginChange": 0.375,
+      "pairedBootstrap95": [
+        -0.6129687500000001,
+        1.457343749999999
+      ],
+      "earlyResidualVarianceRatio": 1.09602299996254,
+      "ratioBootstrap95": [
+        0.8688988014011259,
+        1.338459311869347
+      ],
+      "n": 160
+    },
+    "selection": {
+      "pairedMeanAbsMarginChange": 1.3375,
+      "pairedBootstrap95": [
+        -0.46265625,
+        3.1315625
+      ],
+      "earlyResidualVarianceRatio": 1.0918090387027215,
+      "ratioBootstrap95": [
+        0.8451097418452691,
+        1.3950898532289098
+      ],
+      "n": 160
+    },
+    "three": {
+      "pairedMeanAbsMarginChange": -0.35,
+      "pairedBootstrap95": [
+        -1.9378125,
+        1.39375
+      ],
+      "earlyResidualVarianceRatio": 1.1777817194139093,
+      "ratioBootstrap95": [
+        0.9735244852311455,
+        1.432478257107085
+      ],
+      "n": 160
+    }
+  }
+}

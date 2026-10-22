@@ -1,0 +1,1118 @@
+{
+  "calbaseline-wnba": {
+    "pooled": {
+      "seasons": 5,
+      "games": 1200,
+      "meanMargin": 11.330833333333333,
+      "blow20Pct": 15.166666666666666,
+      "within5Pct": 24.5,
+      "otPct": 3.75,
+      "teamMarginSD": 4.652967763935244,
+      "transitionOpportunityPct": 20.85904548193397,
+      "fastbreakFGAPct": 18.203046286967343,
+      "final60Possessions": 5.6912114014251785,
+      "counts": {
+        "possessions": 192516,
+        "transitionPossessions": 40157,
+        "primaryFGA": 148958,
+        "fastbreakFGA": 30714,
+        "final60Starts": 5420,
+        "FGA": 168730,
+        "closeGames": 421,
+        "closeFinal60Starts": 2396
+      }
+    },
+    "seedRange": {
+      "meanMargin": [
+        10.708333333333334,
+        11.8375
+      ],
+      "blow20Pct": [
+        13.333333333333334,
+        16.666666666666664
+      ],
+      "within5Pct": [
+        21.666666666666668,
+        26.666666666666668
+      ],
+      "otPct": [
+        2.5,
+        5.0
+      ],
+      "teamMarginSD": [
+        3.489761811356185,
+        5.836942335960956
+      ],
+      "transitionOpportunityPct": [
+        20.625778331257784,
+        21.223525747508305
+      ],
+      "fastbreakFGAPct": [
+        17.975817286162115,
+        18.508546007960664
+      ],
+      "final60Possessions": [
+        5.569767441860465,
+        5.85
+      ]
+    },
+    "perSeed": [
+      {
+        "seed": 111,
+        "league": "wnba",
+        "games": 240,
+        "meanMargin": 11.8375,
+        "blow20Pct": 14.166666666666666,
+        "within5Pct": 24.583333333333332,
+        "otPct": 2.5,
+        "teamMarginSD": 4.519102971460892,
+        "transitionOpportunityPct": 20.826067719855295,
+        "fastbreakFGAPct": 18.21716844399929,
+        "final60Possessions": 5.85,
+        "counts": {
+          "possessions": 38423,
+          "transitionPossessions": 8002,
+          "primaryFGA": 30004,
+          "fastbreakFGA": 6184,
+          "final60Starts": 1070,
+          "FGA": 33946,
+          "closeGames": 80,
+          "closeFinal60Starts": 468
+        },
+        "teamMeanMargins": {
+          "1": 4.4,
+          "11": 8.225,
+          "9": 2.175,
+          "4": 3.725,
+          "5": -7.275,
+          "2": 2.625,
+          "10": -1.325,
+          "3": -2.35,
+          "6": 0.675,
+          "7": -1.15,
+          "8": -8.275,
+          "0": -1.45
+        }
+      },
+      {
+        "seed": 112,
+        "league": "wnba",
+        "games": 240,
+        "meanMargin": 11.3125,
+        "blow20Pct": 16.25,
+        "within5Pct": 26.666666666666668,
+        "otPct": 4.583333333333333,
+        "teamMarginSD": 5.836942335960956,
+        "transitionOpportunityPct": 20.625778331257784,
+        "fastbreakFGAPct": 18.10293237582286,
+        "final60Possessions": 5.725274725274725,
+        "counts": {
+          "possessions": 38544,
+          "transitionPossessions": 7950,
+          "primaryFGA": 29553,
+          "fastbreakFGA": 6050,
+          "final60Starts": 1086,
+          "FGA": 33420,
+          "closeGames": 91,
+          "closeFinal60Starts": 521
+        },
+        "teamMeanMargins": {
+          "0": 11.7,
+          "5": 12.3,
+          "2": 1.975,
+          "7": 0.175,
+          "10": -3.2,
+          "3": -1.475,
+          "8": -0.95,
+          "6": -2.2,
+          "11": -1.975,
+          "4": -6.375,
+          "1": -6.45,
+          "9": -3.525
+        }
+      },
+      {
+        "seed": 113,
+        "league": "wnba",
+        "games": 240,
+        "meanMargin": 11.65,
+        "blow20Pct": 15.416666666666668,
+        "within5Pct": 23.75,
+        "otPct": 2.9166666666666665,
+        "teamMarginSD": 4.339138739427446,
+        "transitionOpportunityPct": 20.78321095662136,
+        "fastbreakFGAPct": 17.975817286162115,
+        "final60Possessions": 5.7407407407407405,
+        "counts": {
+          "possessions": 38406,
+          "transitionPossessions": 7982,
+          "primaryFGA": 29542,
+          "fastbreakFGA": 6021,
+          "final60Starts": 1079,
+          "FGA": 33495,
+          "closeGames": 81,
+          "closeFinal60Starts": 465
+        },
+        "teamMeanMargins": {
+          "10": 5.825,
+          "1": 5.9,
+          "3": -0.925,
+          "11": 3.325,
+          "5": -1.525,
+          "2": -1.25,
+          "6": 0.2,
+          "7": -9.675,
+          "4": -2.7,
+          "8": 0.625,
+          "9": 4.575,
+          "0": -4.375
+        }
+      },
+      {
+        "seed": 114,
+        "league": "wnba",
+        "games": 240,
+        "meanMargin": 10.708333333333334,
+        "blow20Pct": 13.333333333333334,
+        "within5Pct": 25.833333333333336,
+        "otPct": 5.0,
+        "teamMarginSD": 3.489761811356185,
+        "transitionOpportunityPct": 20.83646251456688,
+        "fastbreakFGAPct": 18.20420759027922,
+        "final60Possessions": 5.569767441860465,
+        "counts": {
+          "possessions": 38615,
+          "transitionPossessions": 8046,
+          "primaryFGA": 29758,
+          "fastbreakFGA": 6135,
+          "final60Starts": 1081,
+          "FGA": 33701,
+          "closeGames": 86,
+          "closeFinal60Starts": 479
+        },
+        "teamMeanMargins": {
+          "9": 3.475,
+          "5": -0.425,
+          "4": 8,
+          "3": 2.5,
+          "2": -1.575,
+          "6": 1.925,
+          "10": -2.675,
+          "7": -0.3,
+          "8": 0.7,
+          "0": -5.45,
+          "11": -2.4,
+          "1": -3.775
+        }
+      },
+      {
+        "seed": 115,
+        "league": "wnba",
+        "games": 240,
+        "meanMargin": 11.145833333333334,
+        "blow20Pct": 16.666666666666664,
+        "within5Pct": 21.666666666666668,
+        "otPct": 3.75,
+        "teamMarginSD": 5.079892961470743,
+        "transitionOpportunityPct": 21.223525747508305,
+        "fastbreakFGAPct": 18.508546007960664,
+        "final60Possessions": 5.578313253012048,
+        "counts": {
+          "possessions": 38528,
+          "transitionPossessions": 8177,
+          "primaryFGA": 30101,
+          "fastbreakFGA": 6324,
+          "final60Starts": 1104,
+          "FGA": 34168,
+          "closeGames": 83,
+          "closeFinal60Starts": 463
+        },
+        "teamMeanMargins": {
+          "1": 5.375,
+          "4": 2.225,
+          "3": 2.8,
+          "10": 6.7,
+          "5": -3.375,
+          "2": -2.225,
+          "6": 6.8,
+          "7": -9.3,
+          "8": -1.65,
+          "0": -5.975,
+          "11": -4.85,
+          "9": 3.475
+        }
+      }
+    ],
+    "seedBootstrapCI95": {
+      "meanMargin": [
+        11.004166666666666,
+        11.661666666666667
+      ],
+      "blow20Pct": [
+        14.083333333333334,
+        16.25
+      ],
+      "within5Pct": [
+        22.916666666666668,
+        25.916666666666668
+      ],
+      "otPct": [
+        2.9166666666666665,
+        4.583333333333333
+      ],
+      "teamMarginSD": [
+        3.977663426993349,
+        5.367506231040002
+      ],
+      "transitionOpportunityPct": [
+        20.71014507782767,
+        21.05626958677428
+      ],
+      "fastbreakFGAPct": [
+        18.070325696476576,
+        18.368165070007368
+      ],
+      "final60Possessions": [
+        5.606060606060606,
+        5.779661016949152
+      ]
+    }
+  },
+  "cal135-wnba": {
+    "pooled": {
+      "seasons": 5,
+      "games": 1200,
+      "meanMargin": 11.855,
+      "blow20Pct": 17.833333333333332,
+      "within5Pct": 26.666666666666668,
+      "otPct": 3.5,
+      "teamMarginSD": 5.219043826568712,
+      "transitionOpportunityPct": 20.863402798343646,
+      "fastbreakFGAPct": 18.14174476947837,
+      "final60Possessions": 5.750593824228028,
+      "counts": {
+        "possessions": 192471,
+        "transitionPossessions": 40156,
+        "primaryFGA": 149133,
+        "fastbreakFGA": 30661,
+        "final60Starts": 5370,
+        "FGA": 169008,
+        "closeGames": 421,
+        "closeFinal60Starts": 2421
+      }
+    },
+    "seedRange": {
+      "meanMargin": [
+        11.1875,
+        12.495833333333334
+      ],
+      "blow20Pct": [
+        14.583333333333334,
+        21.666666666666668
+      ],
+      "within5Pct": [
+        23.333333333333332,
+        30.0
+      ],
+      "otPct": [
+        1.6666666666666667,
+        4.583333333333333
+      ],
+      "teamMarginSD": [
+        3.5289871068055776,
+        7.074226989572783
+      ],
+      "transitionOpportunityPct": [
+        20.486894298825543,
+        21.339523238224402
+      ],
+      "fastbreakFGAPct": [
+        17.79341468483715,
+        18.514112363560656
+      ],
+      "final60Possessions": [
+        5.628205128205129,
+        5.837837837837838
+      ]
+    },
+    "perSeed": [
+      {
+        "seed": 111,
+        "league": "wnba",
+        "games": 240,
+        "meanMargin": 11.1875,
+        "blow20Pct": 15.833333333333332,
+        "within5Pct": 29.583333333333332,
+        "otPct": 4.166666666666666,
+        "teamMarginSD": 4.786765609469509,
+        "transitionOpportunityPct": 20.486894298825543,
+        "fastbreakFGAPct": 17.932445657008987,
+        "final60Possessions": 5.6947368421052635,
+        "counts": {
+          "possessions": 38571,
+          "transitionPossessions": 7902,
+          "primaryFGA": 29749,
+          "fastbreakFGA": 6047,
+          "final60Starts": 1096,
+          "FGA": 33721,
+          "closeGames": 95,
+          "closeFinal60Starts": 541
+        },
+        "teamMeanMargins": {
+          "1": 1.675,
+          "11": 9.2,
+          "7": 6.125,
+          "4": 1.8,
+          "5": -3,
+          "2": 4.55,
+          "10": 1.325,
+          "3": -6.05,
+          "0": -5.825,
+          "6": -1.45,
+          "9": -2.2,
+          "8": -6.15
+        }
+      },
+      {
+        "seed": 112,
+        "league": "wnba",
+        "games": 240,
+        "meanMargin": 12.495833333333334,
+        "blow20Pct": 19.166666666666668,
+        "within5Pct": 25.416666666666664,
+        "otPct": 1.6666666666666667,
+        "teamMarginSD": 7.074226989572783,
+        "transitionOpportunityPct": 21.339523238224402,
+        "fastbreakFGAPct": 18.514112363560656,
+        "final60Possessions": 5.628205128205129,
+        "counts": {
+          "possessions": 38342,
+          "transitionPossessions": 8182,
+          "primaryFGA": 29676,
+          "fastbreakFGA": 6225,
+          "final60Starts": 1049,
+          "FGA": 33623,
+          "closeGames": 78,
+          "closeFinal60Starts": 439
+        },
+        "teamMeanMargins": {
+          "0": 11.6,
+          "5": 9.875,
+          "3": 8.8,
+          "7": -1.725,
+          "2": -10.8,
+          "6": -0.125,
+          "8": -0.25,
+          "10": 5.775,
+          "11": -6.275,
+          "4": -4.35,
+          "1": -5.475,
+          "9": -7.05
+        }
+      },
+      {
+        "seed": 113,
+        "league": "wnba",
+        "games": 240,
+        "meanMargin": 11.775,
+        "blow20Pct": 17.916666666666668,
+        "within5Pct": 30.0,
+        "otPct": 2.5,
+        "teamMarginSD": 4.968787997758273,
+        "transitionOpportunityPct": 20.813702267225448,
+        "fastbreakFGAPct": 18.135112790835006,
+        "final60Possessions": 5.808510638297872,
+        "counts": {
+          "possessions": 38417,
+          "transitionPossessions": 7996,
+          "primaryFGA": 29837,
+          "fastbreakFGA": 6142,
+          "final60Starts": 1098,
+          "FGA": 33868,
+          "closeGames": 94,
+          "closeFinal60Starts": 546
+        },
+        "teamMeanMargins": {
+          "1": 8.6,
+          "11": -0.725,
+          "3": 3.475,
+          "10": 5.5,
+          "5": 3.925,
+          "2": -0.2,
+          "6": -1.075,
+          "7": -9.9,
+          "4": -7.075,
+          "8": -1,
+          "0": 1.75,
+          "9": -3.275
+        }
+      },
+      {
+        "seed": 114,
+        "league": "wnba",
+        "games": 240,
+        "meanMargin": 11.3875,
+        "blow20Pct": 14.583333333333334,
+        "within5Pct": 23.333333333333332,
+        "otPct": 4.583333333333333,
+        "teamMarginSD": 3.5289871068055776,
+        "transitionOpportunityPct": 20.62668603444698,
+        "fastbreakFGAPct": 17.79341468483715,
+        "final60Possessions": 5.7875,
+        "counts": {
+          "possessions": 38552,
+          "transitionPossessions": 7952,
+          "primaryFGA": 29764,
+          "fastbreakFGA": 5993,
+          "final60Starts": 1070,
+          "FGA": 33681,
+          "closeGames": 80,
+          "closeFinal60Starts": 463
+        },
+        "teamMeanMargins": {
+          "3": 3.975,
+          "5": 5.475,
+          "4": 2.525,
+          "11": 2.525,
+          "2": -3.15,
+          "6": 1.275,
+          "10": -2.2,
+          "7": -1.35,
+          "8": -3.725,
+          "0": -6.825,
+          "1": -1.625,
+          "9": 3.1
+        }
+      },
+      {
+        "seed": 115,
+        "league": "wnba",
+        "games": 240,
+        "meanMargin": 12.429166666666667,
+        "blow20Pct": 21.666666666666668,
+        "within5Pct": 25.0,
+        "otPct": 4.583333333333333,
+        "teamMarginSD": 5.736451429237417,
+        "transitionOpportunityPct": 21.05263157894737,
+        "fastbreakFGAPct": 18.332111974204896,
+        "final60Possessions": 5.837837837837838,
+        "counts": {
+          "possessions": 38589,
+          "transitionPossessions": 8124,
+          "primaryFGA": 30107,
+          "fastbreakFGA": 6254,
+          "final60Starts": 1057,
+          "FGA": 34115,
+          "closeGames": 74,
+          "closeFinal60Starts": 432
+        },
+        "teamMeanMargins": {
+          "4": 5.75,
+          "6": 8.475,
+          "3": 5.9,
+          "10": 5.125,
+          "5": -2.35,
+          "2": -11.5,
+          "7": -3.525,
+          "0": -2.4,
+          "11": 2.525,
+          "8": -8.15,
+          "1": -0.2,
+          "9": 0.35
+        }
+      }
+    ],
+    "seedBootstrapCI95": {
+      "meanMargin": [
+        11.385,
+        12.311666666666667
+      ],
+      "blow20Pct": [
+        15.75,
+        20.166666666666668
+      ],
+      "within5Pct": [
+        24.5,
+        28.916666666666668
+      ],
+      "otPct": [
+        2.4166666666666665,
+        4.5
+      ],
+      "teamMarginSD": [
+        4.222035671824732,
+        6.271561653371563
+      ],
+      "transitionOpportunityPct": [
+        20.608004650607537,
+        21.13890522306119
+      ],
+      "fastbreakFGAPct": [
+        17.917615253272622,
+        18.364984882842027
+      ],
+      "final60Possessions": [
+        5.68321513002364,
+        5.814903846153846
+      ]
+    }
+  },
+  "cal140-wnba": {
+    "pooled": {
+      "seasons": 5,
+      "games": 1200,
+      "meanMargin": 12.1325,
+      "blow20Pct": 17.5,
+      "within5Pct": 23.75,
+      "otPct": 3.5,
+      "teamMarginSD": 5.299032487428134,
+      "transitionOpportunityPct": 20.821445090610496,
+      "fastbreakFGAPct": 18.076929925040506,
+      "final60Possessions": 5.761517615176151,
+      "counts": {
+        "possessions": 192417,
+        "transitionPossessions": 40064,
+        "primaryFGA": 148572,
+        "fastbreakFGA": 30458,
+        "final60Starts": 5294,
+        "FGA": 168491,
+        "closeGames": 369,
+        "closeFinal60Starts": 2126
+      }
+    },
+    "seedRange": {
+      "meanMargin": [
+        11.320833333333333,
+        12.525
+      ],
+      "blow20Pct": [
+        13.333333333333334,
+        21.25
+      ],
+      "within5Pct": [
+        19.583333333333332,
+        26.666666666666668
+      ],
+      "otPct": [
+        2.083333333333333,
+        5.833333333333333
+      ],
+      "teamMarginSD": [
+        3.9649243372352014,
+        6.379157141294869
+      ],
+      "transitionOpportunityPct": [
+        20.336700336700336,
+        21.296681577031105
+      ],
+      "fastbreakFGAPct": [
+        17.603173663331162,
+        18.56723394055609
+      ],
+      "final60Possessions": [
+        5.6,
+        5.884057971014493
+      ]
+    },
+    "perSeed": [
+      {
+        "seed": 111,
+        "league": "wnba",
+        "games": 240,
+        "meanMargin": 11.320833333333333,
+        "blow20Pct": 13.333333333333334,
+        "within5Pct": 26.666666666666668,
+        "otPct": 2.9166666666666665,
+        "teamMarginSD": 5.10799006459488,
+        "transitionOpportunityPct": 20.941985568030844,
+        "fastbreakFGAPct": 18.073111388048186,
+        "final60Possessions": 5.884057971014493,
+        "counts": {
+          "possessions": 38387,
+          "transitionPossessions": 8039,
+          "primaryFGA": 29687,
+          "fastbreakFGA": 6091,
+          "final60Starts": 1081,
+          "FGA": 33702,
+          "closeGames": 69,
+          "closeFinal60Starts": 406
+        },
+        "teamMeanMargins": {
+          "1": 1.275,
+          "11": 7.15,
+          "10": 8.25,
+          "4": -2.275,
+          "5": -6.45,
+          "2": 4.425,
+          "6": -0.05,
+          "3": -1.075,
+          "7": 4.95,
+          "0": -3.175,
+          "8": -8.15,
+          "9": -4.875
+        }
+      },
+      {
+        "seed": 112,
+        "league": "wnba",
+        "games": 240,
+        "meanMargin": 12.525,
+        "blow20Pct": 20.416666666666668,
+        "within5Pct": 23.75,
+        "otPct": 2.083333333333333,
+        "teamMarginSD": 6.379157141294869,
+        "transitionOpportunityPct": 21.296681577031105,
+        "fastbreakFGAPct": 18.56723394055609,
+        "final60Possessions": 5.8108108108108105,
+        "counts": {
+          "possessions": 38452,
+          "transitionPossessions": 8189,
+          "primaryFGA": 29426,
+          "fastbreakFGA": 6197,
+          "final60Starts": 1062,
+          "FGA": 33376,
+          "closeGames": 74,
+          "closeFinal60Starts": 430
+        },
+        "teamMeanMargins": {
+          "0": 13.3,
+          "5": 6.625,
+          "1": -12.575,
+          "7": 6.4,
+          "3": -4.575,
+          "2": -2.825,
+          "10": 0.625,
+          "6": -2.275,
+          "4": -3.05,
+          "8": 2.65,
+          "11": -0.1,
+          "9": -4.2
+        }
+      },
+      {
+        "seed": 113,
+        "league": "wnba",
+        "games": 240,
+        "meanMargin": 12.304166666666667,
+        "blow20Pct": 15.0,
+        "within5Pct": 19.583333333333332,
+        "otPct": 5.833333333333333,
+        "teamMarginSD": 5.4887194924378,
+        "transitionOpportunityPct": 20.336700336700336,
+        "fastbreakFGAPct": 17.603173663331162,
+        "final60Possessions": 5.6,
+        "counts": {
+          "possessions": 38610,
+          "transitionPossessions": 7852,
+          "primaryFGA": 29849,
+          "fastbreakFGA": 5946,
+          "final60Starts": 1007,
+          "FGA": 33778,
+          "closeGames": 75,
+          "closeFinal60Starts": 420
+        },
+        "teamMeanMargins": {
+          "1": 5.45,
+          "11": 0.25,
+          "3": 3.725,
+          "10": 5.525,
+          "5": 1.875,
+          "2": 0.4,
+          "6": 5.575,
+          "7": -12.875,
+          "4": -9.125,
+          "8": 0.625,
+          "0": -1.75,
+          "9": 0.325
+        }
+      },
+      {
+        "seed": 114,
+        "league": "wnba",
+        "games": 240,
+        "meanMargin": 12.016666666666667,
+        "blow20Pct": 17.5,
+        "within5Pct": 24.583333333333332,
+        "otPct": 2.5,
+        "teamMarginSD": 3.9649243372352014,
+        "transitionOpportunityPct": 20.665972944849116,
+        "fastbreakFGAPct": 17.97116988324994,
+        "final60Possessions": 5.846153846153846,
+        "counts": {
+          "possessions": 38440,
+          "transitionPossessions": 7944,
+          "primaryFGA": 29604,
+          "fastbreakFGA": 6034,
+          "final60Starts": 1078,
+          "FGA": 33576,
+          "closeGames": 78,
+          "closeFinal60Starts": 456
+        },
+        "teamMeanMargins": {
+          "3": -0.85,
+          "5": 10.525,
+          "4": 4.5,
+          "11": -1.65,
+          "2": -1.8,
+          "6": 0.6,
+          "10": -4.075,
+          "7": -2.3,
+          "8": -0.575,
+          "0": -4.2,
+          "1": -2.4,
+          "9": 2.225
+        }
+      },
+      {
+        "seed": 115,
+        "league": "wnba",
+        "games": 240,
+        "meanMargin": 12.495833333333334,
+        "blow20Pct": 21.25,
+        "within5Pct": 24.166666666666668,
+        "otPct": 4.166666666666666,
+        "teamMarginSD": 5.55437140157792,
+        "transitionOpportunityPct": 20.86794019933555,
+        "fastbreakFGAPct": 18.17434451980387,
+        "final60Possessions": 5.671232876712328,
+        "counts": {
+          "possessions": 38528,
+          "transitionPossessions": 8040,
+          "primaryFGA": 30006,
+          "fastbreakFGA": 6190,
+          "final60Starts": 1066,
+          "FGA": 34059,
+          "closeGames": 73,
+          "closeFinal60Starts": 414
+        },
+        "teamMeanMargins": {
+          "6": 11.775,
+          "3": 5.75,
+          "9": 2.225,
+          "10": 2.25,
+          "5": -1,
+          "2": -5.775,
+          "7": -8.625,
+          "4": 1.275,
+          "8": -6.625,
+          "0": -5.15,
+          "11": 2.175,
+          "1": 1.725
+        }
+      }
+    ],
+    "seedBootstrapCI95": {
+      "meanMargin": [
+        11.700833333333334,
+        12.463333333333333
+      ],
+      "blow20Pct": [
+        14.833333333333334,
+        20.166666666666668
+      ],
+      "within5Pct": [
+        21.5,
+        25.583333333333332
+      ],
+      "otPct": [
+        2.4166666666666665,
+        4.833333333333333
+      ],
+      "teamMarginSD": [
+        4.51142689557568,
+        5.946836196183457
+      ],
+      "transitionOpportunityPct": [
+        20.533915030642984,
+        21.08473201472515
+      ],
+      "fastbreakFGAPct": [
+        17.79142919707165,
+        18.368174150438417
+      ],
+      "final60Possessions": [
+        5.664893617021277,
+        5.853260869565218
+      ]
+    }
+  },
+  "cal145-wnba": {
+    "pooled": {
+      "seasons": 5,
+      "games": 1200,
+      "meanMargin": 12.3175,
+      "blow20Pct": 19.083333333333332,
+      "within5Pct": 22.666666666666668,
+      "otPct": 3.6666666666666665,
+      "teamMarginSD": 5.7165149347832,
+      "transitionOpportunityPct": 20.72731811845965,
+      "fastbreakFGAPct": 18.066414360118166,
+      "final60Possessions": 5.8346055979643765,
+      "counts": {
+        "possessions": 192268,
+        "transitionPossessions": 39852,
+        "primaryFGA": 148661,
+        "fastbreakFGA": 30456,
+        "final60Starts": 5381,
+        "FGA": 168578,
+        "closeGames": 393,
+        "closeFinal60Starts": 2293
+      }
+    },
+    "seedRange": {
+      "meanMargin": [
+        11.095833333333333,
+        13.8
+      ],
+      "blow20Pct": [
+        14.583333333333334,
+        24.583333333333332
+      ],
+      "within5Pct": [
+        18.75,
+        27.500000000000004
+      ],
+      "otPct": [
+        2.5,
+        5.0
+      ],
+      "teamMarginSD": [
+        3.759557265601009,
+        7.37864316795439
+      ],
+      "transitionOpportunityPct": [
+        20.519358867610325,
+        20.904527840628333
+      ],
+      "fastbreakFGAPct": [
+        17.832436587240583,
+        18.25625337412273
+      ],
+      "final60Possessions": [
+        5.344827586206897,
+        6.033707865168539
+      ]
+    },
+    "perSeed": [
+      {
+        "seed": 111,
+        "league": "wnba",
+        "games": 240,
+        "meanMargin": 11.095833333333333,
+        "blow20Pct": 14.583333333333334,
+        "within5Pct": 27.500000000000004,
+        "otPct": 2.9166666666666665,
+        "teamMarginSD": 3.759557265601009,
+        "transitionOpportunityPct": 20.519358867610325,
+        "fastbreakFGAPct": 17.832436587240583,
+        "final60Possessions": 6.033707865168539,
+        "counts": {
+          "possessions": 38432,
+          "transitionPossessions": 7886,
+          "primaryFGA": 29842,
+          "fastbreakFGA": 6032,
+          "final60Starts": 1127,
+          "FGA": 33826,
+          "closeGames": 89,
+          "closeFinal60Starts": 537
+        },
+        "teamMeanMargins": {
+          "1": 1.95,
+          "11": 8.625,
+          "4": 2.825,
+          "2": 1.25,
+          "10": -1.225,
+          "5": -0.85,
+          "6": -0.9,
+          "3": -0.875,
+          "7": 0.35,
+          "0": 0.375,
+          "8": -8.15,
+          "9": -3.375
+        }
+      },
+      {
+        "seed": 112,
+        "league": "wnba",
+        "games": 240,
+        "meanMargin": 12.741666666666667,
+        "blow20Pct": 19.583333333333332,
+        "within5Pct": 22.5,
+        "otPct": 3.75,
+        "teamMarginSD": 7.37864316795439,
+        "transitionOpportunityPct": 20.744929190226696,
+        "fastbreakFGAPct": 18.25625337412273,
+        "final60Possessions": 6.0256410256410255,
+        "counts": {
+          "possessions": 38554,
+          "transitionPossessions": 7998,
+          "primaryFGA": 29515,
+          "fastbreakFGA": 6087,
+          "final60Starts": 1098,
+          "FGA": 33342,
+          "closeGames": 78,
+          "closeFinal60Starts": 470
+        },
+        "teamMeanMargins": {
+          "0": 18.85,
+          "5": 10.025,
+          "1": -6.425,
+          "7": -0.225,
+          "3": -1.85,
+          "2": -7.3,
+          "10": 2.825,
+          "6": -2.7,
+          "4": -7.65,
+          "8": 1.35,
+          "11": -3.6,
+          "9": -3.3
+        }
+      },
+      {
+        "seed": 113,
+        "league": "wnba",
+        "games": 240,
+        "meanMargin": 11.804166666666667,
+        "blow20Pct": 16.25,
+        "within5Pct": 25.0,
+        "otPct": 5.0,
+        "teamMarginSD": 6.239457775587021,
+        "transitionOpportunityPct": 20.904527840628333,
+        "fastbreakFGAPct": 18.112259970457902,
+        "final60Possessions": 5.344827586206897,
+        "counts": {
+          "possessions": 38451,
+          "transitionPossessions": 8038,
+          "primaryFGA": 29804,
+          "fastbreakFGA": 6131,
+          "final60Starts": 1044,
+          "FGA": 33850,
+          "closeGames": 87,
+          "closeFinal60Starts": 465
+        },
+        "teamMeanMargins": {
+          "1": 10.85,
+          "11": 4.05,
+          "5": 1.625,
+          "10": 9.975,
+          "3": -3.6,
+          "2": 0.375,
+          "6": -5.075,
+          "7": -11.4,
+          "4": -5.975,
+          "8": 0.125,
+          "0": -4.075,
+          "9": 3.125
+        }
+      },
+      {
+        "seed": 114,
+        "league": "wnba",
+        "games": 240,
+        "meanMargin": 12.145833333333334,
+        "blow20Pct": 20.416666666666668,
+        "within5Pct": 18.75,
+        "otPct": 4.166666666666666,
+        "teamMarginSD": 4.562619861439258,
+        "transitionOpportunityPct": 20.60198410637303,
+        "fastbreakFGAPct": 17.919040835707502,
+        "final60Possessions": 5.896103896103896,
+        "counts": {
+          "possessions": 38506,
+          "transitionPossessions": 7933,
+          "primaryFGA": 29704,
+          "fastbreakFGA": 6038,
+          "final60Starts": 1062,
+          "FGA": 33696,
+          "closeGames": 77,
+          "closeFinal60Starts": 454
+        },
+        "teamMeanMargins": {
+          "3": 3.8,
+          "5": 4.25,
+          "4": 8.9,
+          "11": 7.35,
+          "2": -3.2,
+          "6": -2.525,
+          "10": -5.475,
+          "7": -3.25,
+          "8": -3.3,
+          "0": -1.975,
+          "1": -3.2,
+          "9": -1.375
+        }
+      },
+      {
+        "seed": 115,
+        "league": "wnba",
+        "games": 240,
+        "meanMargin": 13.8,
+        "blow20Pct": 24.583333333333332,
+        "within5Pct": 19.583333333333332,
+        "otPct": 2.5,
+        "teamMarginSD": 6.642296603334322,
+        "transitionOpportunityPct": 20.86627527723418,
+        "fastbreakFGAPct": 18.214032600992205,
+        "final60Possessions": 5.919354838709677,
+        "counts": {
+          "possessions": 38325,
+          "transitionPossessions": 7997,
+          "primaryFGA": 29796,
+          "fastbreakFGA": 6168,
+          "final60Starts": 1050,
+          "FGA": 33864,
+          "closeGames": 62,
+          "closeFinal60Starts": 367
+        },
+        "teamMeanMargins": {
+          "4": 1.15,
+          "6": 10.45,
+          "3": 8.775,
+          "10": 6.1,
+          "5": -5.3,
+          "2": -10.6,
+          "7": -7.15,
+          "0": -8.675,
+          "11": 2.375,
+          "8": -3.475,
+          "1": 3.175,
+          "9": 3.175
+        }
+      }
+    ],
+    "seedBootstrapCI95": {
+      "meanMargin": [
+        11.566666666666666,
+        13.189166666666667
+      ],
+      "blow20Pct": [
+        16.083333333333332,
+        22.083333333333332
+      ],
+      "within5Pct": [
+        20.0,
+        25.5
+      ],
+      "otPct": [
+        2.9166666666666665,
+        4.416666666666667
+      ],
+      "teamMarginSD": [
+        4.496717652315321,
+        6.856267463632889
+      ],
+      "transitionOpportunityPct": [
+        20.597619913734864,
+        20.84956766329826
+      ],
+      "fastbreakFGAPct": [
+        17.923076012173315,
+        18.201962271305337
+      ],
+      "final60Possessions": [
+        5.566084788029925,
+        6.012626262626263
+      ]
+    }
+  }
+}

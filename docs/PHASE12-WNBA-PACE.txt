@@ -1,0 +1,90 @@
+Hoops Dynasty — Phase 12: WNBA port and final-minute pace
+21 October 2026
+
+Production update: WNBA transition/roster port, WNBA hold+quick, and shorter final-minute lead-protection setup. Statistical gaps remain; this is not a claim of complete league calibration. Scope: modern (2020 onward) leagues. Accepted Phase 11 baseline retained. No accuracy boosts, forced ties, outcome caps or save-schema changes. Roster allocation applies only when creating new fictional teams; existing rosters and completed results are preserved.
+
+
+1. WNBA transition and initial roster allocation
+
+Ported the Phase 10 probabilistic rebound/steal transition opportunity and removed the second independent settled-possession transition draw. Retained NBA starting parameters (.43 rebound/.85 steal, modified by pace/speed). Ported deterministic same-position initial roster swaps targeting +15% preseason quality spread; no individual player ratings or league talent pool changed.
+Metric, 160 reset games per arm | Phase 11 WNBA | Port
+Opportunity possessions (%) | 44.389 | 21.607
+Possessions reaching transition-flagged shot (%) | 47.115 | 17.647
+Primary fast-break opportunity FGA / all FGA (%) | 38.218 | 18.582
+Primary transition-flagged FGA / all FGA (%) | 49.916 | 18.582
+World 715 uses matching game seeds but changed initial allocation and transition RNG can change trajectories. Primary FGA counters include makes/misses/blocks and and-ones; secondary shots are in the denominator, not the numerator. This is the closest available shot-based comparison, not identical to official fast-break annotation.
+Real WNBA season | PBP games | Fast-break-tagged FGA (%) | Tagged possession proxy (%)
+2022 | 20 | 9.963 | 9.074
+2023 | 20 | 11.119 | 9.923
+2024 | 40 | 10.688 | 9.855
+2025 | 20 | 11.307 | 10.469
+All 100 reference games pass score-accounting checks. 2022/2023/2025:20 evenly spaced regular-season IDs each;2024:retained 40-game convenience sample. Official WNBA Synergy responses returned empty rows in all four seasons. Fast-break tags and transition opportunities are different definitions: the substantial reduction is measured, but exact transition calibration is unresolved. The port still exceeds the real fast-break-tagged shot reference.
+
+2. Team-margin spread: five fictional seasons vs four real seasons
+
+Real season | Games | Population SD of team mean scoring margins
+2022 | 216 | 5.516
+2023 | 240 | 5.795
+2024 | 240 | 5.718
+2025 | 286 | 5.980
+Sim seed | Games | Team-margin SD | OT %
+111 | 240 | 5.481 | 3.333
+112 | 240 | 5.277 | 2.500
+113 | 240 | 4.151 | 5.417
+114 | 240 | 3.674 | 3.333
+115 | 240 | 4.806 | 5.417
+Simulation mean team-margin SD: 4.678. Real four-season mean: 5.752. Metric is population SD across teams’ average game margins, NOT SD of individual game margins. Each simulation is an independent new fictional 2024 WNBA universe, 12 teams × 40 games; these are not historical roster replays. Five seeds do not establish exact distributional calibration. The season runs test transition+allocation only; hold+quick and shorter setup are evaluated separately below.
+Five-seed mean 95% t interval (df4): 3.735 to 5.620. This measures sampling uncertainty across these universes, not a universal calibration interval.
+
+3. Hold+quick: OT and tied-start outcomes only
+
+Correction to Phase 11: full-season margin/blowout differences across diverging careers were not valid grounds to reject a tied-game policy. No margin or blowout gate is used here. Hold+quick includes a hold rule when tied under 24 seconds AND down-two shot preference within 30 seconds; the latter can act after a tied start becomes a deficit. Synthetic cases use production possession/shot/foul/rebound resolvers with injected starting scores. Tied 60 and tied 30 runs continue through actual OT; tied 20 captures the regulation endpoint, with a tie defining OT entry under the unchanged engine rule. Two hundred matched samples verify exact endpoint/full-resolver regulation equality. Actual overtime is also played in all full-game samples.
+Tied start | Arm | N | OT % | Regulation win % | Regulation loss %
+tie_60 | Port only | 2000 | 22.85 | 42.80 | 34.35
+tie_30 | Port only | 1000 | 39.50 | 39.70 | 20.80
+tie_20 | Port only | 1000 | 45.60 | 36.40 | 18.00
+tie_60 | Port + hold/quick | 2000 | 28.85 | 39.90 | 31.25
+tie_30 | Port + hold/quick | 1000 | 46.20 | 34.00 | 19.80
+tie_20 | Port + hold/quick | 1000 | 65.20 | 28.80 | 6.00
+tie-tie_20: paired OT difference +19.60 percentage points; descriptive 95% CI +15.24 to +23.96.
+tie-tie_30: paired OT difference +6.70 percentage points; descriptive 95% CI +3.56 to +9.84.
+tie-tie_60: paired OT difference +6.00 percentage points; descriptive 95% CI +4.16 to +7.84.
+Intervals are descriptive, not multiplicity-adjusted; three prespecified tied scenarios. No claims of whole-season causal margin effects.
+
+4. Final-minute timing and overtime recheck
+
+Shorter setup candidate: final 60 seconds, leading by 1–6, no transition, modern league: setup allowance 4 seconds instead of the Phase 7 protection allowance up to 15. Other resolver time still elapses normally. Intentional-foul probability and its two-second delay are unchanged. The 200-game 8-second pilot is retained separately (world 712), not pooled with fresh world 714 evaluation.
+Sample | Games | Close at 60 | Starts in final 60 | 95% bootstrap CI | Fully contained duration(s) | OT games | OT %
+NBA accepted Phase 11 | 800 | 255 | 4.976 | 4.808–5.145 | 11.447 | 34 | 4.250
+NBA shorter setup | 800 | 255 | 5.686 | 5.518–5.859 | 9.615 | 37 | 4.625
+WNBA port | 400 | 156 | 5.045 | 4.827–5.276 | 11.218 | 31 | 7.750
+WNBA hold+quick | 400 | 156 | 5.006 | 4.782–5.237 | 11.356 | 28 | 7.000
+WNBA hold+quick + shorter setup | 400 | 156 | 5.712 | 5.494–5.942 | 9.563 | 24 | 6.000
+Real retained NBA comparison: 52 close games among 134 score-validated games; 6.269 starts in final 60 (game-bootstrap 95% CI 5.750–6.788), fully contained duration 9.171s. Definition: within 6 at 60; count possessions STARTING in window; durations require positive-time start and finish wholly inside final 60, excluding buzzer/period endings. This censors long boundary-crossing possessions in both samples; it is not unrestricted average possession duration. A possession already underway at 60 is not counted as a start. Reference and simulated universes differ; no claim of perfect matching.
+nba-baseline-pace: 800/800 identical scores at 60; paired-close N=255; start difference=+0.710,95% CI [0.554, 0.865]; OT gained/lost=18/15,difference=+0.375pp,95% CI [-1.032, 1.782].
+wnba-port-hq: 400/400 identical scores at 60; paired-close N=156; start difference=-0.038,95% CI [-0.100, 0.023]; OT gained/lost=2/5,difference=-0.750pp,95% CI [-2.044, 0.544].
+wnba-hq-pace: 400/400 identical scores at 60; paired-close N=156; start difference=+0.705,95% CI [0.518, 0.892]; OT gained/lost=11/15,difference=-1.000pp,95% CI [-3.497, 1.497].
+The NBA pacing change approaches about six starts, with a clear paired increase. OT differences remain uncertain: the reset full-game samples are NOT full-season OT estimates. Do not claim the original league-wide 4.5–5.5% OT target is validated by a single-world reset sample.
+
+5. Inbound-to-foul game-clock proxy, deficit 3–6
+
+Sample | Eligible fouls | Mean seconds | Median seconds
+wnba | 11 | 4.018 | 2.400
+nba | 18 | 3.328 | 1.900
+NBA Phase 11 | 87 | 2.0 | 2.0
+NBA shorter setup | 95 | 2.0 | 2
+WNBA port | 9 | 2.0 | 2.0
+WNBA shorter setup | 47 | 2.0 | 2
+Real method:Q4 final 60, fouling team down 3–6; preceding made FG or final made ordinary FT, followed by non-shooting personal/take foul without intervening live-ball action. Elapsed game clock from score to foul proxies legal inbound touch-to-foul. PBP does not explicitly annotate intentionality or inbound catch; no direct tracking measurement is claimed. Sim subset also requires preceding opponent completed possession ending with a score at the next possession start. Larger all-possession-start-to-intentional-foul samples are preserved separately. Tiny real samples and selection limitations prevent precise delay calibration. The sim two-second delay is near the real median, so it was not shortened.
+
+6. Validation, scope and remaining gaps
+
+Roster identity/attribute/position-count preservation checks passed for NBA/WNBA 1997,2006,2024. Pre-2020 initial rosters and modern NBA initial rosters are unchanged by the port. Timing scope constraints passed. Saved completed scores, box scores and summary events remain unchanged on load. Every full-game harness checks score/box identity, legal winner, and minute totals. Five full-season runs check complete 240-game schedules.
+Remaining gaps: transition fast-break definition mismatch and residual excess; simulated team-margin spread may remain low; single-universe reset samples do not establish a league-wide OT rate; no historical/pre2020 statistical recalibration. No global clock multiplier or shooting-accuracy change was used.
+
+Reproducibility and sources
+
+Baseline:26d2ac0fff15429cb679a8c768e77f7ad8ca3009;dev/phase12/baseline-dist snapshots. Exact arms/sample schemas:dev/phase12/experiment-manifest.json. Driver:dev/phase12-matches.cjs;variant:dev/phase12/variant.cjs;seasons:dev/run-phase12-seasons.cjs;tie endings:dev/test-phase12-regulation.cjs; freeze and verify with python dev/phase12/finalize-endings.py. Set P12_MODE to baseline/port/hq/pace. Results are retained; choose fresh world IDs to rerun rather than silently reusing paths. Analysis:python dev/phase12/analyze.py;python dev/phase12/paired.py.
+Official WNBA LeagueGameLog: https://stats.wnba.com/stats/leaguegamelog (LeagueID 10;2022–2025 regular seasons). Exact URLs and rows retained in reference-wnba-spread.json and reference-gamelog files.
+Official play-by-play: https://cdn.wnba.com/static/json/liveData/playbyplay/playbyplay_<gameID>.json ; exact fetched URLs in reference-pbp-fetch.json. NBA retained official PBP and valid-game checks:dev/phase6/reference-pbp,dev/phase10/real-possession-summary.json.
+Reference methods and event-level foul rows:dev/phase12/reference-notes.md,reference-foul-delay.json,reference-transition-summary.json.

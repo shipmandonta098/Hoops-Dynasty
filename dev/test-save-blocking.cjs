@@ -1,0 +1,8 @@
+const assert=require('node:assert/strict');
+const {indexedDB,IDBKeyRange}=require(process.env.HD_TEST_NODE_MODULES+'/fake-indexeddb');
+const {loadLeague}=require('./load-league.cjs');
+(async()=>{const x=loadLeague({strictDOM:false});Object.assign(x.context,{indexedDB,IDBKeyRange});const data=JSON.parse(x.run("JSON.stringify((()=>{const d=makeDraft();d.gmName='Recovery Test';d.teams=d.teams.slice(0,6);d.meetings=2;return buildSetupCareer(d)})())"));
+const db=await new Promise((resolve,reject)=>{const q=indexedDB.open('recovery-test',1);q.onupgradeneeded=()=>{q.result.createObjectStore('careers',{keyPath:'id'});q.result.createObjectStore('metadata',{keyPath:'key'})};q.onsuccess=()=>resolve(q.result);q.onerror=()=>reject(q.error)});
+const bad=structuredClone(data);bad.free.push(structuredClone(bad.teams[0].roster[0]));await new Promise((resolve,reject)=>{const t=db.transaction('careers','readwrite');t.objectStore('careers').put({id:'broken',name:'Broken',data:bad});t.objectStore('careers').put({id:'healthy',name:'Healthy',data});t.oncomplete=resolve;t.onabort=reject});db.close();
+try{const repo=await x.run("openNormalizedCareerDatabase({name:'recovery-test'})");console.log('DATABASE AVAILABLE');assert.equal((await repo.list()).length,2);await assert.rejects(repo.get('broken'),/duplicate/i);assert.equal((await repo.get('healthy')).data.year,data.year);await repo.put({id:'new',name:'New',data});assert.equal((await repo.get('new')).data.year,data.year);await repo.remove('broken');assert.equal((await repo.list()).length,2);repo.close();console.log('PASS healthy load, create, and delete while one legacy slot fails validation');}catch(e){console.error('DATABASE INITIALIZATION FAILED:',e.message);process.exitCode=1;}
+})();

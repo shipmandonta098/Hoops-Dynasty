@@ -1,0 +1,624 @@
+{
+  "phase8": {
+    "seeds": [
+      {
+        "seed": 101,
+        "games": 1230,
+        "points": 110.2760162601626,
+        "meanMargin": 13.200813008130082,
+        "blow20": 23.089430894308943,
+        "teamMarginSD": 5.655973452292705,
+        "OT": 3.089430894308943
+      },
+      {
+        "seed": 102,
+        "games": 1230,
+        "points": 111.17642276422764,
+        "meanMargin": 13.112195121951219,
+        "blow20": 21.38211382113821,
+        "teamMarginSD": 5.047306449916179,
+        "OT": 3.414634146341464
+      },
+      {
+        "seed": 103,
+        "games": 1230,
+        "points": 111.10650406504065,
+        "meanMargin": 13.082926829268292,
+        "blow20": 23.170731707317074,
+        "teamMarginSD": 5.2060717080527485,
+        "OT": 2.6016260162601625
+      },
+      {
+        "seed": 104,
+        "games": 1230,
+        "points": 110.52642276422765,
+        "meanMargin": 12.326016260162602,
+        "blow20": 19.10569105691057,
+        "teamMarginSD": 3.452351217821233,
+        "OT": 3.008130081300813
+      },
+      {
+        "seed": 105,
+        "games": 1230,
+        "points": 110.40040650406505,
+        "meanMargin": 13.269105691056911,
+        "blow20": 22.601626016260163,
+        "teamMarginSD": 5.41578029325513,
+        "OT": 2.7642276422764227
+      }
+    ],
+    "means": {
+      "points": 110.69715447154472,
+      "meanMargin": 12.99821138211382,
+      "blow20": 21.86991869918699,
+      "teamMarginSD": 4.955496624267599,
+      "OT": 2.975609756097561
+    },
+    "seasonMeanT95": {
+      "points": [
+        110.18076880213438,
+        111.21354014095506
+      ],
+      "meanMargin": [
+        12.522779539430076,
+        13.473643224797563
+      ],
+      "blow20": [
+        19.756021922984115,
+        23.983815475389864
+      ],
+      "teamMarginSD": [
+        3.874251816042573,
+        6.036741432492624
+      ],
+      "OT": [
+        2.5872539206341494,
+        3.3639655915609725
+      ]
+    },
+    "games": 6150
+  },
+  "phase10pair": {
+    "seeds": [
+      {
+        "seed": 101,
+        "games": 1230,
+        "points": 110.98821138211382,
+        "meanMargin": 14.057723577235773,
+        "blow20": 25.121951219512194,
+        "teamMarginSD": 7.062356465228809,
+        "OT": 2.2764227642276422
+      },
+      {
+        "seed": 102,
+        "games": 1230,
+        "points": 111.63821138211382,
+        "meanMargin": 13.0,
+        "blow20": 22.439024390243905,
+        "teamMarginSD": 5.3333754707833725,
+        "OT": 2.7642276422764227
+      },
+      {
+        "seed": 103,
+        "games": 1230,
+        "points": 111.3780487804878,
+        "meanMargin": 13.447154471544716,
+        "blow20": 22.76422764227642,
+        "teamMarginSD": 6.003225552443603,
+        "OT": 3.8211382113821135
+      },
+      {
+        "seed": 104,
+        "games": 1230,
+        "points": 110.56463414634146,
+        "meanMargin": 12.083739837398374,
+        "blow20": 18.943089430894307,
+        "teamMarginSD": 4.362912894301234,
+        "OT": 4.308943089430894
+      },
+      {
+        "seed": 105,
+        "games": 1230,
+        "points": 111.03617886178861,
+        "meanMargin": 13.173170731707318,
+        "blow20": 21.6260162601626,
+        "teamMarginSD": 5.977752229163226,
+        "OT": 3.008130081300813
+      }
+    ],
+    "means": {
+      "points": 111.12105691056911,
+      "meanMargin": 13.152357723577236,
+      "blow20": 22.178861788617887,
+      "teamMarginSD": 5.747924522384048,
+      "OT": 3.2357723577235773
+    },
+    "seasonMeanT95": {
+      "points": [
+        110.61366125280807,
+        111.62845256833015
+      ],
+      "meanMargin": [
+        12.258665220704083,
+        14.046050226450388
+      ],
+      "blow20": [
+        19.412989102643053,
+        24.94473447459272
+      ],
+      "teamMarginSD": [
+        4.516259105169844,
+        6.979589939598252
+      ],
+      "OT": [
+        2.217744988340134,
+        4.253799727107021
+      ]
+    },
+    "games": 6150
+  },
+  "gates": {
+    "meanMargin": true,
+    "blow20": true,
+    "teamMarginSD": true
+  },
+  "jointGate": true,
+  "possessions": {
+    "production": {
+      "games": 120,
+      "n": 23581,
+      "mean": 1.1369322759849032,
+      "variance": 1.4154974632477313,
+      "transitionUsedPct": 41.89389762944744,
+      "shotTransitionPct": 47.546753742419746,
+      "distribution": {
+        "0": 49.40842203468894,
+        "1": 2.7522157669310037,
+        "2": 32.76790636529409,
+        "3": 14.88486493363301,
+        "4+": 0.1865908994529494
+      }
+    },
+    "pair": {
+      "games": 120,
+      "n": 23467,
+      "mean": 1.1407082285762986,
+      "variance": 1.384471020123623,
+      "transitionUsedPct": 20.37755145523501,
+      "shotTransitionPct": 16.95146375761708,
+      "distribution": {
+        "0": 48.595900626411556,
+        "1": 3.0084799931819153,
+        "2": 34.380193463161035,
+        "3": 13.802360761920996,
+        "4+": 0.21306515532449824
+      }
+    }
+  },
+  "lateTests": {
+    "production": [
+      {
+        "case": "down2_30",
+        "n": 80,
+        "wins": 20,
+        "OT": 20,
+        "regulationWins": 14,
+        "FT": 76,
+        "timeouts": 0
+      },
+      {
+        "case": "down2_10",
+        "n": 80,
+        "wins": 14,
+        "OT": 17,
+        "regulationWins": 4,
+        "FT": 29,
+        "timeouts": 0
+      },
+      {
+        "case": "down4_60_defend",
+        "n": 80,
+        "wins": 3,
+        "OT": 3,
+        "regulationWins": 2,
+        "FT": 145,
+        "timeouts": 0
+      },
+      {
+        "case": "down4_30_defend",
+        "n": 80,
+        "wins": 0,
+        "OT": 0,
+        "regulationWins": 0,
+        "FT": 60,
+        "timeouts": 0
+      },
+      {
+        "case": "down6_60_defend",
+        "n": 80,
+        "wins": 0,
+        "OT": 0,
+        "regulationWins": 0,
+        "FT": 128,
+        "timeouts": 0
+      },
+      {
+        "case": "down6_30_defend",
+        "n": 80,
+        "wins": 0,
+        "OT": 0,
+        "regulationWins": 0,
+        "FT": 48,
+        "timeouts": 0
+      },
+      {
+        "case": "down2_15_advance",
+        "n": 80,
+        "wins": 16,
+        "OT": 26,
+        "regulationWins": 5,
+        "FT": 29,
+        "timeouts": 0
+      },
+      {
+        "case": "down3_15_advance",
+        "n": 80,
+        "wins": 12,
+        "OT": 17,
+        "regulationWins": 2,
+        "FT": 22,
+        "timeouts": 0
+      }
+    ],
+    "foul": [
+      {
+        "case": "down2_30",
+        "n": 80,
+        "wins": 19,
+        "OT": 16,
+        "regulationWins": 14,
+        "FT": 156,
+        "timeouts": 0
+      },
+      {
+        "case": "down2_10",
+        "n": 80,
+        "wins": 15,
+        "OT": 18,
+        "regulationWins": 4,
+        "FT": 38,
+        "timeouts": 0
+      },
+      {
+        "case": "down4_60_defend",
+        "n": 80,
+        "wins": 3,
+        "OT": 4,
+        "regulationWins": 2,
+        "FT": 249,
+        "timeouts": 0
+      },
+      {
+        "case": "down4_30_defend",
+        "n": 80,
+        "wins": 1,
+        "OT": 1,
+        "regulationWins": 0,
+        "FT": 174,
+        "timeouts": 0
+      },
+      {
+        "case": "down6_60_defend",
+        "n": 80,
+        "wins": 0,
+        "OT": 0,
+        "regulationWins": 0,
+        "FT": 227,
+        "timeouts": 0
+      },
+      {
+        "case": "down6_30_defend",
+        "n": 80,
+        "wins": 0,
+        "OT": 0,
+        "regulationWins": 0,
+        "FT": 148,
+        "timeouts": 0
+      },
+      {
+        "case": "down2_15_advance",
+        "n": 80,
+        "wins": 16,
+        "OT": 26,
+        "regulationWins": 5,
+        "FT": 58,
+        "timeouts": 0
+      },
+      {
+        "case": "down3_15_advance",
+        "n": 80,
+        "wins": 11,
+        "OT": 15,
+        "regulationWins": 2,
+        "FT": 117,
+        "timeouts": 0
+      }
+    ],
+    "quick": [
+      {
+        "case": "down2_30",
+        "n": 80,
+        "wins": 21,
+        "OT": 22,
+        "regulationWins": 14,
+        "FT": 66,
+        "timeouts": 0
+      },
+      {
+        "case": "down2_10",
+        "n": 80,
+        "wins": 14,
+        "OT": 21,
+        "regulationWins": 4,
+        "FT": 30,
+        "timeouts": 0
+      },
+      {
+        "case": "down4_60_defend",
+        "n": 80,
+        "wins": 3,
+        "OT": 4,
+        "regulationWins": 2,
+        "FT": 145,
+        "timeouts": 0
+      },
+      {
+        "case": "down4_30_defend",
+        "n": 80,
+        "wins": 0,
+        "OT": 1,
+        "regulationWins": 0,
+        "FT": 62,
+        "timeouts": 0
+      },
+      {
+        "case": "down6_60_defend",
+        "n": 80,
+        "wins": 0,
+        "OT": 0,
+        "regulationWins": 0,
+        "FT": 128,
+        "timeouts": 0
+      },
+      {
+        "case": "down6_30_defend",
+        "n": 80,
+        "wins": 0,
+        "OT": 0,
+        "regulationWins": 0,
+        "FT": 48,
+        "timeouts": 0
+      },
+      {
+        "case": "down2_15_advance",
+        "n": 80,
+        "wins": 17,
+        "OT": 26,
+        "regulationWins": 6,
+        "FT": 34,
+        "timeouts": 0
+      },
+      {
+        "case": "down3_15_advance",
+        "n": 80,
+        "wins": 11,
+        "OT": 18,
+        "regulationWins": 1,
+        "FT": 22,
+        "timeouts": 0
+      }
+    ],
+    "timeout": [
+      {
+        "case": "down2_30",
+        "n": 80,
+        "wins": 23,
+        "OT": 21,
+        "regulationWins": 13,
+        "FT": 88,
+        "timeouts": 89
+      },
+      {
+        "case": "down2_10",
+        "n": 80,
+        "wins": 14,
+        "OT": 17,
+        "regulationWins": 2,
+        "FT": 29,
+        "timeouts": 44
+      },
+      {
+        "case": "down4_60_defend",
+        "n": 80,
+        "wins": 4,
+        "OT": 3,
+        "regulationWins": 3,
+        "FT": 145,
+        "timeouts": 89
+      },
+      {
+        "case": "down4_30_defend",
+        "n": 80,
+        "wins": 0,
+        "OT": 0,
+        "regulationWins": 0,
+        "FT": 66,
+        "timeouts": 53
+      },
+      {
+        "case": "down6_60_defend",
+        "n": 80,
+        "wins": 0,
+        "OT": 0,
+        "regulationWins": 0,
+        "FT": 134,
+        "timeouts": 44
+      },
+      {
+        "case": "down6_30_defend",
+        "n": 80,
+        "wins": 0,
+        "OT": 0,
+        "regulationWins": 0,
+        "FT": 48,
+        "timeouts": 24
+      },
+      {
+        "case": "down2_15_advance",
+        "n": 80,
+        "wins": 16,
+        "OT": 26,
+        "regulationWins": 5,
+        "FT": 33,
+        "timeouts": 117
+      },
+      {
+        "case": "down3_15_advance",
+        "n": 80,
+        "wins": 13,
+        "OT": 16,
+        "regulationWins": 3,
+        "FT": 25,
+        "timeouts": 119
+      }
+    ],
+    "combined": [
+      {
+        "case": "down2_30",
+        "n": 80,
+        "wins": 22,
+        "OT": 17,
+        "regulationWins": 14,
+        "FT": 164,
+        "timeouts": 104
+      },
+      {
+        "case": "down2_10",
+        "n": 80,
+        "wins": 17,
+        "OT": 22,
+        "regulationWins": 2,
+        "FT": 39,
+        "timeouts": 54
+      },
+      {
+        "case": "down4_60_defend",
+        "n": 80,
+        "wins": 3,
+        "OT": 5,
+        "regulationWins": 3,
+        "FT": 260,
+        "timeouts": 114
+      },
+      {
+        "case": "down4_30_defend",
+        "n": 80,
+        "wins": 1,
+        "OT": 1,
+        "regulationWins": 0,
+        "FT": 191,
+        "timeouts": 76
+      },
+      {
+        "case": "down6_60_defend",
+        "n": 80,
+        "wins": 0,
+        "OT": 0,
+        "regulationWins": 0,
+        "FT": 243,
+        "timeouts": 51
+      },
+      {
+        "case": "down6_30_defend",
+        "n": 80,
+        "wins": 0,
+        "OT": 0,
+        "regulationWins": 0,
+        "FT": 147,
+        "timeouts": 22
+      },
+      {
+        "case": "down2_15_advance",
+        "n": 80,
+        "wins": 18,
+        "OT": 26,
+        "regulationWins": 7,
+        "FT": 76,
+        "timeouts": 120
+      },
+      {
+        "case": "down3_15_advance",
+        "n": 80,
+        "wins": 12,
+        "OT": 15,
+        "regulationWins": 2,
+        "FT": 121,
+        "timeouts": 150
+      }
+    ]
+  },
+  "bonusTests": {
+    "production": [
+      {
+        "case": "down4_60_bonus",
+        "n": 80,
+        "wins": 4,
+        "OT": 4
+      },
+      {
+        "case": "down4_30_bonus",
+        "n": 80,
+        "wins": 0,
+        "OT": 0
+      },
+      {
+        "case": "down6_60_bonus",
+        "n": 80,
+        "wins": 0,
+        "OT": 1
+      },
+      {
+        "case": "down6_30_bonus",
+        "n": 80,
+        "wins": 0,
+        "OT": 0
+      }
+    ],
+    "combined": [
+      {
+        "case": "down4_60_bonus",
+        "n": 80,
+        "wins": 4,
+        "OT": 5
+      },
+      {
+        "case": "down4_30_bonus",
+        "n": 80,
+        "wins": 0,
+        "OT": 0
+      },
+      {
+        "case": "down6_60_bonus",
+        "n": 80,
+        "wins": 0,
+        "OT": 0
+      },
+      {
+        "case": "down6_30_bonus",
+        "n": 80,
+        "wins": 0,
+        "OT": 0
+      }
+    ]
+  }
+}

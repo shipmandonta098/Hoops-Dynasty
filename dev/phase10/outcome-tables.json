@@ -1,0 +1,266 @@
+{
+  "nba": {
+    "60": {
+      "Down 5": {
+        "n": 289,
+        "regulationWin": 7,
+        "OTWin": 8,
+        "OTLoss": 7,
+        "regulationLoss": 267
+      },
+      "Down 4": {
+        "n": 281,
+        "regulationWin": 13,
+        "OTWin": 11,
+        "OTLoss": 6,
+        "regulationLoss": 251
+      },
+      "Down 6": {
+        "n": 274,
+        "regulationWin": 1,
+        "OTWin": 1,
+        "OTLoss": 3,
+        "regulationLoss": 269
+      },
+      "Down 11+": {
+        "n": 3127,
+        "regulationWin": 0,
+        "OTWin": 0,
+        "OTLoss": 0,
+        "regulationLoss": 3127
+      },
+      "Down 7\u201310": {
+        "n": 1060,
+        "regulationWin": 1,
+        "OTWin": 1,
+        "OTLoss": 4,
+        "regulationLoss": 1054
+      },
+      "Down 3": {
+        "n": 298,
+        "regulationWin": 35,
+        "OTWin": 14,
+        "OTLoss": 13,
+        "regulationLoss": 236
+      },
+      "Down 2": {
+        "n": 325,
+        "regulationWin": 57,
+        "OTWin": 26,
+        "OTLoss": 18,
+        "regulationLoss": 224
+      },
+      "Down 1": {
+        "n": 354,
+        "regulationWin": 112,
+        "OTWin": 27,
+        "OTLoss": 19,
+        "regulationLoss": 196
+      },
+      "Tied (home perspective)": {
+        "n": 142,
+        "regulationWin": 63,
+        "OTWin": 16,
+        "OTLoss": 9,
+        "regulationLoss": 54
+      }
+    },
+    "30": {
+      "Down 3": {
+        "n": 292,
+        "regulationWin": 19,
+        "OTWin": 15,
+        "OTLoss": 12,
+        "regulationLoss": 246
+      },
+      "Down 4": {
+        "n": 267,
+        "regulationWin": 3,
+        "OTWin": 2,
+        "OTLoss": 3,
+        "regulationLoss": 259
+      },
+      "Down 6": {
+        "n": 303,
+        "regulationWin": 0,
+        "OTWin": 0,
+        "OTLoss": 0,
+        "regulationLoss": 303
+      },
+      "Down 11+": {
+        "n": 3076,
+        "regulationWin": 0,
+        "OTWin": 0,
+        "OTLoss": 0,
+        "regulationLoss": 3076
+      },
+      "Down 7\u201310": {
+        "n": 1075,
+        "regulationWin": 0,
+        "OTWin": 0,
+        "OTLoss": 0,
+        "regulationLoss": 1075
+      },
+      "Down 5": {
+        "n": 269,
+        "regulationWin": 1,
+        "OTWin": 3,
+        "OTLoss": 5,
+        "regulationLoss": 260
+      },
+      "Down 2": {
+        "n": 358,
+        "regulationWin": 33,
+        "OTWin": 31,
+        "OTLoss": 21,
+        "regulationLoss": 273
+      },
+      "Down 1": {
+        "n": 356,
+        "regulationWin": 95,
+        "OTWin": 21,
+        "OTLoss": 26,
+        "regulationLoss": 214
+      },
+      "Tied (home perspective)": {
+        "n": 154,
+        "regulationWin": 47,
+        "OTWin": 21,
+        "OTLoss": 23,
+        "regulationLoss": 63
+      }
+    }
+  },
+  "wnba": {
+    "60": {
+      "Down 6": {
+        "n": 57,
+        "regulationWin": 0,
+        "OTWin": 0,
+        "OTLoss": 0,
+        "regulationLoss": 57
+      },
+      "Down 11+": {
+        "n": 523,
+        "regulationWin": 0,
+        "OTWin": 0,
+        "OTLoss": 0,
+        "regulationLoss": 523
+      },
+      "Down 7\u201310": {
+        "n": 217,
+        "regulationWin": 1,
+        "OTWin": 1,
+        "OTLoss": 0,
+        "regulationLoss": 215
+      },
+      "Down 1": {
+        "n": 80,
+        "regulationWin": 18,
+        "OTWin": 8,
+        "OTLoss": 3,
+        "regulationLoss": 51
+      },
+      "Down 2": {
+        "n": 89,
+        "regulationWin": 8,
+        "OTWin": 12,
+        "OTLoss": 9,
+        "regulationLoss": 60
+      },
+      "Down 4": {
+        "n": 64,
+        "regulationWin": 6,
+        "OTWin": 0,
+        "OTLoss": 3,
+        "regulationLoss": 55
+      },
+      "Down 3": {
+        "n": 70,
+        "regulationWin": 9,
+        "OTWin": 2,
+        "OTLoss": 2,
+        "regulationLoss": 57
+      },
+      "Down 5": {
+        "n": 78,
+        "regulationWin": 2,
+        "OTWin": 2,
+        "OTLoss": 2,
+        "regulationLoss": 72
+      },
+      "Tied (home perspective)": {
+        "n": 22,
+        "regulationWin": 13,
+        "OTWin": 2,
+        "OTLoss": 2,
+        "regulationLoss": 5
+      }
+    },
+    "30": {
+      "Down 4": {
+        "n": 67,
+        "regulationWin": 1,
+        "OTWin": 1,
+        "OTLoss": 0,
+        "regulationLoss": 65
+      },
+      "Down 11+": {
+        "n": 515,
+        "regulationWin": 0,
+        "OTWin": 0,
+        "OTLoss": 0,
+        "regulationLoss": 515
+      },
+      "Down 7\u201310": {
+        "n": 223,
+        "regulationWin": 0,
+        "OTWin": 0,
+        "OTLoss": 0,
+        "regulationLoss": 223
+      },
+      "Down 5": {
+        "n": 57,
+        "regulationWin": 0,
+        "OTWin": 1,
+        "OTLoss": 1,
+        "regulationLoss": 55
+      },
+      "Down 1": {
+        "n": 92,
+        "regulationWin": 19,
+        "OTWin": 7,
+        "OTLoss": 7,
+        "regulationLoss": 59
+      },
+      "Down 2": {
+        "n": 79,
+        "regulationWin": 9,
+        "OTWin": 6,
+        "OTLoss": 8,
+        "regulationLoss": 56
+      },
+      "Down 3": {
+        "n": 77,
+        "regulationWin": 5,
+        "OTWin": 1,
+        "OTLoss": 2,
+        "regulationLoss": 69
+      },
+      "Down 6": {
+        "n": 59,
+        "regulationWin": 0,
+        "OTWin": 1,
+        "OTLoss": 0,
+        "regulationLoss": 58
+      },
+      "Tied (home perspective)": {
+        "n": 31,
+        "regulationWin": 11,
+        "OTWin": 6,
+        "OTLoss": 7,
+        "regulationLoss": 7
+      }
+    }
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "parentCommit": "73183bb3b14d9b6852e563420a296de6da485057",
+  "recommendation": "ADOPT",
+  "rationale": "Corrects a block-resolution bypass with the existing inside-shot formula; no ownership errors, no other pathway changes, all regressions pass. Not a claim of league scoring reduction.",
+  "fixture": {
+    "creationSeed": 61005,
+    "seeds": "100000–100149",
+    "games": 150
+  },
+  "productionReproduction": "EXACT MATCH",
+  "parity": 150,
+  "metrics": {
+    "PPG": 123.92,
+    "pace": 102.64666666666666,
+    "ORtg": 120.72481652269921,
+    "two": 55.652606556470786,
+    "three": 38.88256497818251,
+    "TOV": 12.92,
+    "OREB": 12.433333333333334,
+    "blocks": 3.5033333333333334,
+    "fouls": 13.593333333333334,
+    "secondChancePoints": 14.826666666666666,
+    "RunningFG": 66.88524590163935
+  },
+  "totals": {
+    "pts": 37176,
+    "poss": 153970,
+    "defPoss": 153970,
+    "fga": 28631,
+    "fgm": 14166,
+    "tpa": 10542,
+    "tpm": 4099,
+    "fta": 6119,
+    "ftm": 4745,
+    "tov": 3876,
+    "orb": 3730,
+    "drb": 11274,
+    "pf": 4078,
+    "blk": 1051
+  },
+  "running": {
+    "evaluations": 645,
+    "FGA": 610,
+    "makes": 408,
+    "below14": 0,
+    "tempoOnly": 0,
+    "PNR": 0
+  },
+  "putback": {
+    "all": {
+      "evaluations": 2665,
+      "FGA": 2665,
+      "makes": 1641,
+      "FG": 61.57598499061913,
+      "blocks": 163,
+      "blockRate": 6.1163227016885555
+    },
+    "layups": {
+      "evaluations": 1610,
+      "FGA": 1610,
+      "makes": 980,
+      "FG": 60.86956521739131,
+      "blocks": 106,
+      "blockRate": 6.583850931677018
+    },
+    "dunks": {
+      "evaluations": 1055,
+      "FGA": 1055,
+      "makes": 661,
+      "FG": 62.65402843601896,
+      "blocks": 57,
+      "blockRate": 5.402843601895735
+    }
+  },
+  "tokens": {
+    "consumed": 12708,
+    "unused: period boundary": 188,
+    "unused: game ended": 66
+  },
+  "aftermath": {
+    "DREB: immediate intended token consumption": 86,
+    "OREB: same-side recursive entry at 14": 20
+  },
+  "repeatPutbacks": 2,
+  "slotTotals": {
+    "baseline": 30714,
+    "candidate": 30794,
+    "baselineRegulation": 30694,
+    "candidateRegulation": 30694,
+    "baselineOT": 1,
+    "candidateOT": 5
+  },
+  "overtimeChanges": [
+    {
+      "seed": 100000,
+      "baseline": 0,
+      "candidate": 1
+    },
+    {
+      "seed": 100105,
+      "baseline": 0,
+      "candidate": 2
+    },
+    {
+      "seed": 100116,
+      "baseline": 1,
+      "candidate": 0
+    },
+    {
+      "seed": 100128,
+      "baseline": 0,
+      "candidate": 1
+    },
+    {
+      "seed": 100134,
+      "baseline": 0,
+      "candidate": 1
+    }
+  ],
+  "ownershipErrors": 0,
+  "tokenErrors": 0,
+  "firstDivergenceVerifiedGames": 150,
+  "blockerRatings": {
+    "rim": {
+      "mean": 77.84194420297223,
+      "min": 36,
+      "max": 98.28099762624001
+    },
+    "sbl": {
+      "mean": 75.14211901236774,
+      "min": 34.5932774208,
+      "max": 97.74859843584011
+    },
+    "rawRim": {
+      "mean": 79.26415094339623,
+      "min": 36,
+      "max": 99
+    },
+    "rawBlock": {
+      "mean": 76.49056603773585,
+      "min": 35,
+      "max": 99
+    }
+  },
+  "frozenArithmetic": {
+    "makeOnly": 0.6397552557647107,
+    "withBlock": 0.5967477208881711,
+    "averageBlockRisk": 0.06866686642868143
+  },
+  "pairedPPG": {
+    "mean": 1.0666666666666667,
+    "standardError": 0.9296828578910794,
+    "approximate95Interval": [
+      -0.755511734799849,
+      2.8888450681331825
+    ]
+  },
+  "regressions": {
+    "putbackControls": "PASS",
+    "ownershipControls": 16,
+    "contextControls": 32,
+    "possession": "PASS",
+    "headless": "PASS",
+    "simulationRules": "PASS"
+  }
+}
