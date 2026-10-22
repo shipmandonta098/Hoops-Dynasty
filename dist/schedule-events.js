@@ -92,8 +92,13 @@ function gameBoxStatCells(p){
 function gameBoxTables(game,rows,showRecord=false){
  if(!rows)return '<p class="muted">Live stats were not recorded for this older game. The final box score appears at the final buzzer.</p>';
 
- return [game.a,game.b].map(id=>{const team=state.teams[id],players=rows.filter(p=>p.team===team.abbr),total=gameBoxTeamTotals(game,rows,team,rows===game.box?Infinity:(typeof liveWatch!=='undefined'&&liveWatch?.result===game?liveWatch.index:Infinity));return '<section class="watch-team-box"><h3>'+teamLogo(team)+'<span>'+escapeHTML(team.city+' '+team.name)+(showRecord?'<small class="result-record">'+resultTeamRecord(game,id)+'</small>':'')+'</span></h3><div class="watch-table-scroll" tabindex="0" role="region" aria-label="'+escapeHTML(team.abbr)+' box score"><table><thead><tr><th scope="col">Player</th>'+gameBoxStatHeaders()+'</tr></thead><tbody>'+boxCourtGroups(game,players).map(([label,list])=>'<tr class="watch-lineup-heading"><th colspan="17" scope="colgroup">'+label+' <span>'+list.length+'</span></th></tr>'+list.map(p=>'<tr><th scope="row">'+escapeHTML(p.name)+'</th>'+gameBoxStatCells(p)+'</tr>').join('')).join('')+'</tbody><tfoot><tr><th scope="row">Total</th>'+gameBoxStatCells(total)+'</tr></tfoot></table></div></section>'}).join('');
+ const pos=boxPositionMap();
+ return [game.a,game.b].map(id=>{const team=state.teams[id],players=rows.filter(p=>p.team===team.abbr),total=gameBoxTeamTotals(game,rows,team,rows===game.box?Infinity:(typeof liveWatch!=='undefined'&&liveWatch?.result===game?liveWatch.index:Infinity));return '<section class="watch-team-box"><h3>'+teamLogo(team)+'<span>'+escapeHTML(team.city+' '+team.name)+(showRecord?'<small class="result-record">'+resultTeamRecord(game,id)+'</small>':'')+'</span></h3><div class="watch-table-scroll" tabindex="0" role="region" aria-label="'+escapeHTML(team.abbr)+' box score"><table><thead><tr><th scope="col">Player</th>'+gameBoxStatHeaders()+'</tr></thead><tbody>'+boxCourtGroups(game,players).map(([label,list])=>'<tr class="watch-lineup-heading"><th colspan="17" scope="colgroup">'+label+' <span>'+list.length+'</span></th></tr>'+list.map(p=>'<tr><th scope="row">'+escapeHTML(p.name)+(pos.get(p.playerId)?' <span class="box-pos">'+pos.get(p.playerId)+'</span>':'')+'</th>'+gameBoxStatCells(p)+'</tr>').join('')).join('')+'</tbody><tfoot><tr><th scope="row">Total</th>'+gameBoxStatCells(total)+'</tr></tfoot></table></div></section>'}).join('');
 }
+
+// Box rows store playerId, not position: look positions up from the current player pool.
+// Retired players are no longer in the pool, so their old rows show the name only.
+function boxPositionMap(){return new Map([...state.teams.flatMap(t=>t.roster),...state.free,...(state.draftRights||[]).map(r=>r.player)].map(p=>[p.id,p.pos]))}
 
 function resultTeamRecord(game,teamId){
  const index=state.history.indexOf(game),regular=game.stage==='Regular season';

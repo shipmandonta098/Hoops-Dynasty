@@ -43,3 +43,4 @@
 /* Franchise presets: relocation loader, expansion preview */
 .tm-relocate{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 12px;align-items:end;margin:0 0 18px}.tm-relocate label{display:grid;gap:6px}.tm-relocate p{grid-column:1/-1;margin:0}.exp-preset-preview{display:flex;gap:16px;align-items:center;margin:0 0 16px}.exp-preset-preview:empty{display:none}.exp-preset-preview p{margin:4px 0 8px}.exp-presets{margin:0 0 16px}.preset-card>.franchise-logo{margin-bottom:8px}@media(max-width:600px){.tm-relocate{grid-template-columns:1fr}}
 .crest-logo{display:grid;place-items:center;margin:0 auto 12px}.crest-logo .franchise-logo{width:96px;height:96px}@media(max-width:480px){.crest-logo .franchise-logo{width:72px;height:72px}}
+.box-pos{margin-left:6px;font-size:.85em;font-weight:700;letter-spacing:.04em;opacity:.75}
