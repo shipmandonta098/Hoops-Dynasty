@@ -15,7 +15,7 @@ state=validateCareerData(fresh(defaultTeams().slice(0,6),1));applyManagedTeam(2,
 const image='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jRZkAAAAASUVORK5CYII=';
 team().primaryLogo=image;team().secondaryLogo=image;team().secondaryLogoIndex=3;team().arenaName='Dynasty & Friends Arena';
 state=validateCareerData(copy(state));assert.equal(team().primaryLogo,image);assert.equal(team().secondaryLogo,image);assert.equal(team().secondaryLogoIndex,3);assert.equal(teamArena(team()),'Dynasty & Friends Arena');assert(teamLogo(team()).includes(image));assert(secondaryTeamLogo(team()).includes(image));assert.equal(teamSummary(state).primaryLogo,image);assert(teamManagementView().includes('primaryUpload'));assert(teamManagementView().includes('secondaryUpload'));
-assert.throws(()=>readTeamBrand({primaryLogo:'javascript:alert(1)'},m=>{throw Error(m)}),/logo/);assert.throws(()=>readTeamBrand({arenaName:' '},m=>{throw Error(m)}),/arena/);assert.throws(()=>readTeamBrand({secondaryLogoIndex:30},m=>{throw Error(m)}),/secondary/);
+assert.throws(()=>readTeamBrand({primaryLogo:'javascript:alert(1)'},m=>{throw Error(m)}),/logo/);assert.throws(()=>readTeamBrand({arenaName:' '},m=>{throw Error(m)}),/arena/);assert.throws(()=>readTeamBrand({secondaryLogoIndex:SECONDARY_TEAM_KEYS.length},m=>{throw Error(m)}),/secondary/);assert.equal(readTeamBrand({secondaryLogoIndex:30},m=>{throw Error(m)}).secondaryLogoIndex,30);
 delete team().primaryLogo;delete team().secondaryLogo;assert(!teamLogo(team()).includes(image));assert(secondaryTeamLogo(team()).includes('CHI.png'));
 `,context);
 console.log('Team edits, duplicate validation, colors, logo pairing, alignment exchange, existing schedule and save reload passed.');

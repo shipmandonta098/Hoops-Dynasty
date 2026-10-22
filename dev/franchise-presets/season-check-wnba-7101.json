@@ -1,0 +1,191 @@
+{
+  "league": "wnba",
+  "seed": 7101,
+  "checks": [
+    {
+      "name": "setup presets present with preset logos",
+      "ok": true,
+      "detail": [
+        10,
+        11
+      ]
+    },
+    {
+      "name": "team ids unique and contiguous",
+      "ok": true
+    },
+    {
+      "name": "all teams including presets debut by League Day 3",
+      "ok": true,
+      "detail": {
+        "teams": 12,
+        "debutByDay3": 12,
+        "openingNight": 2,
+        "rule": null
+      }
+    },
+    {
+      "name": "save/load round trip keeps preset identity",
+      "ok": true
+    },
+    {
+      "name": "season A completed without validation errors",
+      "ok": true,
+      "detail": {
+        "status": "completed",
+        "errors": []
+      }
+    },
+    {
+      "name": "franchise archive records preset teams after season A",
+      "ok": true
+    },
+    {
+      "name": "expansion window open after playoffs",
+      "ok": true
+    },
+    {
+      "name": "expansion refusal comes from the existing roster-capacity rule",
+      "ok": true,
+      "detail": "These rules cannot supply 11 players while preserving each team’s minimum roster. Lower protections, allow two selections per team, or wait for larger rosters."
+    },
+    {
+      "name": "relocation keeps key, roster and contracts",
+      "ok": true,
+      "detail": {
+        "key": [
+          "team-NYE",
+          "team-NYE"
+        ]
+      }
+    },
+    {
+      "name": "relocation applies preset identity, arena and altitude",
+      "ok": true,
+      "detail": {
+        "key": "team-NYE",
+        "abbr": "SJO",
+        "city": "San Jose",
+        "roster": "2062027:0.075643:2027,10016:0.138355:2025,2062017:0.069267:2027,61:0.130473:2025,2062004:0.072455:2027,35:0.122158:2025,248:0.11597:2025,70:0.107882:2025,2062019:0.069267:2027,37:0.094039:2025,2062036:0.066079:2027",
+        "wins": 14,
+        "logoAtlas": "preset",
+        "stadiumCapacity": 18500,
+        "altitudeFt": 82,
+        "oldAbbrInBoxes": false
+      }
+    },
+    {
+      "name": "relocation re-keys archived box scores to the new abbreviation",
+      "ok": true
+    },
+    {
+      "name": "relocation save/load round trip",
+      "ok": true
+    },
+    {
+      "name": "rollover advances to a fresh schedule",
+      "ok": true
+    },
+    {
+      "name": "every team (incl. new/relocated) debuts by Day 3",
+      "ok": true,
+      "detail": {
+        "teams": 12,
+        "debutByDay3": 12
+      }
+    },
+    {
+      "name": "SJO played its full schedule",
+      "ok": true,
+      "detail": {
+        "played": 40,
+        "scheduled": 40,
+        "abbr": "SJO"
+      }
+    },
+    {
+      "name": "all regular-season games completed with legal scores",
+      "ok": true
+    },
+    {
+      "name": "champion recorded after season B",
+      "ok": true
+    },
+    {
+      "name": "final save/load round trip after season B",
+      "ok": true
+    }
+  ],
+  "seasons": [
+    {
+      "phase": "A",
+      "status": "completed",
+      "games": 264,
+      "seconds": 266.835,
+      "champion": null
+    },
+    {
+      "phase": "B",
+      "seconds": 360.638,
+      "year": 2026,
+      "teams": 12,
+      "champion": 3,
+      "presetGames": [
+        {
+          "abbr": "SJO",
+          "city": "San Jose",
+          "games": 40
+        },
+        {
+          "abbr": "TPA",
+          "city": "Tampa",
+          "games": 40
+        },
+        {
+          "abbr": "WPG",
+          "city": "Winnipeg",
+          "games": 40
+        }
+      ]
+    }
+  ],
+  "expansionRosterState": {
+    "min": 11,
+    "max": 12,
+    "sizes": [
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  "expansionBlocked": "These rules cannot supply 11 players while preserving each team’s minimum roster. Lower protections, allow two selections per team, or wait for larger rosters.",
+  "relocation": {
+    "before": {
+      "key": "team-NYE",
+      "abbr": "NYE",
+      "city": "New York",
+      "wins": 14,
+      "histAbbr": 40
+    },
+    "after": {
+      "key": "team-NYE",
+      "abbr": "SJO",
+      "city": "San Jose",
+      "wins": 14,
+      "logoAtlas": "preset",
+      "stadiumCapacity": 18500,
+      "altitudeFt": 82,
+      "oldAbbrInBoxes": false
+    }
+  },
+  "wnbaFinanceFrozen": true
+}

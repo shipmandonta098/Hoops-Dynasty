@@ -5,7 +5,8 @@ Open Franchise history → Rivalries. The existing team selector switches franch
 `dist/rivalries.js` owns the registry, trigger rules, matchup context, migration, and validation. Stable franchise keys survive branding changes. Old saves start tracking at load; no unrecorded history is invented. New saves retain the registry across seasons, exports, and reloads. History is bounded to 80 events per pair. Geography uses same-city matches and an explicit state map; unknown custom cities are not guessed.
 
 Triggers:
-- Cross-town: same city or mapped state. A split 50/50 crowd cancels the configured home shooting advantage.
+- Geography: same city (Cross-Town Feud; Brooklyn counts as New York), same metro area (Metro Rivalry: Los Angeles/Anaheim/Inglewood, New York/Brooklyn/Newark/East Rutherford, San Francisco/Oakland/San Jose) or mapped state/province (In-State / In-Province Rivalry). All three keep the split 50/50 crowd that cancels the configured home shooting advantage; only the label differs.
+- Regional: explicit cross-border or long-distance ties (Buffalo–Toronto; Calgary, Winnipeg, Vancouver, Edmonton). Recognized for heat and narrative, but no crowd split. Unlisted distant pairs are never forced into a rivalry.
 - Founders: two recorded Finals eliminations between original tracked franchises of the earliest recorded vintage. Expansion franchises added later are excluded.
 - Market divide: Small market, Grit & Grind system versus a Large market spending at least 25% more.
 - Heartbreak: three consecutive recorded playoff eliminations by the same opponent, or a recorded winning field goal at 0:00 in the final period/OT. Revenge lasts three meetings.

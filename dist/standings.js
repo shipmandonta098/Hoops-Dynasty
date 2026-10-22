@@ -1,8 +1,8 @@
 /* Standings use regular-season game results; the first scheduled team is home. */
-const SECONDARY_TEAM_KEYS=['ATL','NYE','LAS','CHI','MIA','MEM','SEA','NOB','BOS','BKN','PHI','TOR','CLE','DET','IND','MIL','CHA','ORL','WAS','DEN','MIN','POR','SLP','DAL','HOU','SAV','PHX','SAC','SFG','SDS'];
+const SECONDARY_TEAM_KEYS=['ATL','NYE','LAS','CHI','MIA','MEM','SEA','NOB','BOS','BKN','PHI','TOR','CLE','DET','IND','MIL','CHA','ORL','WAS','DEN','MIN','POR','SLP','DAL','HOU','SAV','PHX','SAC','SFG','SDS',...FRANCHISE_PRESETS.map(p=>p.abbr)];
 function secondaryTeamLogo(t){
  if(t.secondaryLogo&&validTeamLogo(t.secondaryLogo))return `<img class="secondary-team-logo" src="${t.secondaryLogo}" alt="" width="36" height="36" loading="lazy">`;
- const key=SECONDARY_TEAM_KEYS[t.secondaryLogoIndex??((t.logoAtlas==='expansion'?8:0)+(t.logoIndex||0))];
+ const key=SECONDARY_TEAM_KEYS[t.secondaryLogoIndex??defaultSecondaryLogoIndex(t)];
  return '<img class="secondary-team-logo" src="secondary-logos/'+key+'.png" alt="" width="36" height="36" loading="lazy">';
 }
 function standingsGames(t){return state.history.filter(g=>g.stage==='Regular season'&&(g.a===t.id||g.b===t.id)).sort((a,b)=>b.day-a.day)}

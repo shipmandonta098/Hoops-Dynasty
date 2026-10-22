@@ -14,7 +14,8 @@ const CITY_PHOTOS = Object.freeze(Object.fromEntries([
   'kansas-city', 'louisville', 'pittsburgh', 'baltimore', 'mexico-city',
   'newark', 'east-rutherford', 'oakland', 'san-diego', 'san-jose', 'tulsa',
   'charleston', 'savannah', 'st-louis', 'cincinnati', 'rochester', 'syracuse',
-  'fort-wayne', 'buffalo'
+  'fort-wayne', 'buffalo', 'anaheim', 'calgary', 'green-bay', 'nashville',
+  'ottawa', 'tampa', 'winnipeg'
 ].map(city => [city, 'city-photos/' + city + '.jpg'])));
 
 // Regional labels are explicit presentation defaults, not historical relocations.
