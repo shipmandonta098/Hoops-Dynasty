@@ -16,7 +16,8 @@ const league=process.argv[2]||'nba',seed=+(process.argv[3]||7101),out=path.join(
   // Leagues other than 30 NBA-aligned teams need the Custom season format: the default round-robin fallback
   // cannot satisfy the existing opening-night Day-3 rule (pre-existing; see report).
   if(auditLeague==='nba'&&!nbaAlignment(d.teams))d.meetings='custom';
-  var plan=historicalPlan(auditLeague,d.year,setupLeagueRules(d),d.cap,d.teams);d.cap=plan.cap;d.leagueSettings={...plan.rules,...(auditLeague==='wnba'?{seasonGames:40,divisionGames:0,conferenceGames:40,playoffFormat:'eight',splitPlayoffs:false,firstRoundByes:0}:d.meetings==='custom'?{seasonGames:82}:{})};
+  // The NBA lottery weights cover 14 lottery teams (30-team league); larger leagues need another draft type (pre-existing).
+  var plan=historicalPlan(auditLeague,d.year,setupLeagueRules(d),d.cap,d.teams);d.cap=plan.cap;d.leagueSettings={...plan.rules,...(auditLeague==='wnba'?{seasonGames:40,divisionGames:0,conferenceGames:40,playoffFormat:'eight',splitPlayoffs:false,firstRoundByes:0}:d.meetings==='custom'?{seasonGames:82,lotteryMode:'record'}:{})};
   state=validateCareerData(buildSetupCareer(d));render=()=>{};save=async()=>true;ownerCanManage=()=>true;`);
  const report={league,seed,checks:[],seasons:[]};const check=(name,ok,detail)=>{report.checks.push({name,ok:!!ok,...(detail!==undefined?{detail}:{})});assert(ok,name+(detail!==undefined?' '+JSON.stringify(detail):''))};
  const presetIds=l.run(`state.teams.filter(t=>t.logoAtlas==='preset').map(t=>t.id)`);
