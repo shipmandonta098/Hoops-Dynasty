@@ -92,8 +92,8 @@ function gameBoxStatCells(p){
 function gameBoxTables(game,rows,showRecord=false){
  if(!rows)return '<p class="muted">Live stats were not recorded for this older game. The final box score appears at the final buzzer.</p>';
 
- const pos=boxPositionMap();
- return [game.a,game.b].map(id=>{const team=state.teams[id],players=rows.filter(p=>p.team===team.abbr),total=gameBoxTeamTotals(game,rows,team,rows===game.box?Infinity:(typeof liveWatch!=='undefined'&&liveWatch?.result===game?liveWatch.index:Infinity));return '<section class="watch-team-box"><h3>'+teamLogo(team)+'<span>'+escapeHTML(team.city+' '+team.name)+(showRecord?'<small class="result-record">'+resultTeamRecord(game,id)+'</small>':'')+'</span></h3><div class="watch-table-scroll" tabindex="0" role="region" aria-label="'+escapeHTML(team.abbr)+' box score"><table><thead><tr><th scope="col">Player</th>'+gameBoxStatHeaders()+'</tr></thead><tbody>'+boxCourtGroups(game,players).map(([label,list])=>'<tr class="watch-lineup-heading"><th colspan="17" scope="colgroup">'+label+' <span>'+list.length+'</span></th></tr>'+list.map(p=>'<tr><th scope="row">'+escapeHTML(p.name)+(pos.get(p.playerId)?' <span class="box-pos">'+pos.get(p.playerId)+'</span>':'')+'</th>'+gameBoxStatCells(p)+'</tr>').join('')).join('')+'</tbody><tfoot><tr><th scope="row">Total</th>'+gameBoxStatCells(total)+'</tr></tfoot></table></div></section>'}).join('');
+ const pos=boxPositionMap(),live=typeof liveWatch!=='undefined'&&liveWatch?.result===game&&liveWatch.index<(game.playByPlay||[]).length,dnp=live?new Map():boxDNPReasons(game);
+ return [game.a,game.b].map(id=>{const team=state.teams[id],players=rows.filter(p=>p.team===team.abbr),total=gameBoxTeamTotals(game,rows,team,rows===game.box?Infinity:(typeof liveWatch!=='undefined'&&liveWatch?.result===game?liveWatch.index:Infinity));return '<section class="watch-team-box"><h3>'+teamLogo(team)+'<span>'+escapeHTML(team.city+' '+team.name)+(showRecord?'<small class="result-record">'+resultTeamRecord(game,id)+'</small>':'')+'</span></h3><div class="watch-table-scroll" tabindex="0" role="region" aria-label="'+escapeHTML(team.abbr)+' box score"><table><thead><tr><th scope="col">Player</th>'+gameBoxStatHeaders()+'</tr></thead><tbody>'+boxCourtGroups(game,players).map(([label,list])=>'<tr class="watch-lineup-heading"><th colspan="17" scope="colgroup">'+label+' <span>'+list.length+'</span></th></tr>'+list.map(p=>{const name='<th scope="row">'+escapeHTML(p.name)+(pos.get(p.playerId)?' <span class="box-pos">'+pos.get(p.playerId)+'</span>':'')+'</th>',reason=dnp.get(p);return reason?'<tr class="box-dnp">'+name+'<td colspan="16">'+escapeHTML(reason)+'</td></tr>':'<tr>'+name+gameBoxStatCells(p)+'</tr>'}).join('')).join('')+'</tbody><tfoot><tr><th scope="row">Total</th>'+gameBoxStatCells(total)+'</tr></tfoot></table></div></section>'}).join('');
 }
 
 // Box rows store playerId, not position: look positions up from the current player pool.
@@ -110,8 +110,20 @@ function resultTeamRecord(game,teamId){
 
 function boxCourtGroups(game,players){
  const tracked=game.box.some(p=>Number.isFinite(p.onCourt));
- const active=p=>tracked?p.onCourt===1:p.gs===1;
- return [[tracked?'On Court':'Starters',players.filter(active)],['Bench',players.filter(p=>!active(p))]];
+ const active=p=>tracked?p.onCourt===1:p.gs===1,sat=p=>!p.mp&&p.played!==true;
+ // Players who never checked in are listed last on the bench.
+ const bench=players.filter(p=>!active(p));return [[tracked?'On Court':'Starters',players.filter(active)],['Bench',[...bench.filter(p=>!sat(p)),...bench.filter(sat)]]];
+}
+// Final box scores label players who never entered. Injuries come from the game's own
+// tip-off report, so old games keep the injury that applied that day. Games saved before
+// injury reports existed show a plain DNP rather than a guessed reason.
+function boxDNPReasons(game){
+ const reasons=new Map(),rows=(game.box||[]).filter(p=>!p.mp&&p.played!==true);if(!rows.length)return reasons;
+ const injured=new Map();
+ for(const line of game.injuryReport||[]){const m=/^Unavailable at tip-off: (.+?) · (.+?) · (.+?) · /.exec(line);if(!m)continue;const injury=m[3].replace(/^(Minor|Moderate|Severe|Major)\s+/,'');injured.set(m[1]+'|'+m[2],injury==='Injury'?'':injury.replace(/\b\w/g,c=>c.toUpperCase()))}
+ for(const p of rows){const team=state.teams.find(t=>t.abbr===p.team),named=[...injured.keys()].filter(k=>k.startsWith(p.name+'|')),key=named.find(k=>team&&k===p.name+'|'+team.city+' '+team.name)??(named.length===1?named[0]:undefined);
+  reasons.set(p,key!==undefined?'DNP – Injured'+(injured.get(key)?' ('+injured.get(key)+')':''):game.injuryReport?'DNP – Coach’s Decision':'DNP')}
+ return reasons;
 }
 
 // Keep the feed connected: shell refreshes must not discard rows or their animations.
