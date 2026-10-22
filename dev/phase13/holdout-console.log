@@ -1,0 +1,101 @@
+nba 3101300002 holdout day 0 games 2 seconds 2
+nba 3101300001 holdout day 0 games 2 seconds 2
+nba 3101300003 holdout day 0 games 2 seconds 3
+nba 3101300004 holdout day 0 games 2 seconds 2
+nba 3101300005 holdout day 0 games 2 seconds 3
+nba 3101300006 holdout day 0 games 2 seconds 2
+nba 3101300008 holdout day 0 games 2 seconds 3
+nba 3101300007 holdout day 0 games 2 seconds 3
+nba 3101300009 holdout day 0 games 2 seconds 3
+nba 3101300010 holdout day 0 games 2 seconds 3
+nba 3101300007 holdout day 60 games 431 seconds 275
+nba 3101300005 holdout day 60 games 431 seconds 283
+nba 3101300008 holdout day 60 games 437 seconds 284
+nba 3101300001 holdout day 60 games 437 seconds 285
+nba 3101300002 holdout day 60 games 433 seconds 288
+nba 3101300010 holdout day 60 games 435 seconds 287
+nba 3101300004 holdout day 60 games 435 seconds 290
+nba 3101300003 holdout day 60 games 433 seconds 293
+nba 3101300006 holdout day 60 games 433 seconds 293
+nba 3101300009 holdout day 60 games 436 seconds 321
+nba 3101300007 holdout day 120 games 824 seconds 571
+nba 3101300005 holdout day 120 games 825 seconds 587
+nba 3101300010 holdout day 120 games 827 seconds 588
+nba 3101300001 holdout day 120 games 829 seconds 592
+nba 3101300004 holdout day 120 games 827 seconds 601
+nba 3101300008 holdout day 120 games 829 seconds 605
+nba 3101300002 holdout day 120 games 826 seconds 609
+nba 3101300003 holdout day 120 games 826 seconds 612
+nba 3101300006 holdout day 120 games 826 seconds 612
+nba 3101300009 holdout day 120 games 827 seconds 669
+REGULAR COMPLETE nba 3101300007 1230
+DONE nba 3101300007 holdout 1230 904.445
+wnba 3101300101 holdout day 0 games 2 seconds 4
+REGULAR COMPLETE nba 3101300010 1230
+DONE nba 3101300010 holdout 1230 921.594
+REGULAR COMPLETE nba 3101300008 1230
+DONE nba 3101300008 holdout 1230 922.584
+wnba 3101300103 holdout day 0 games 2 seconds 4
+wnba 3101300102 holdout day 0 games 2 seconds 4
+REGULAR COMPLETE nba 3101300005 1230
+DONE nba 3101300005 holdout 1230 931.129
+REGULAR COMPLETE nba 3101300001 1230
+DONE nba 3101300001 holdout 1230 934.168
+REGULAR COMPLETE nba 3101300002 1230
+DONE nba 3101300002 holdout 1230 935.84
+wnba 3101300104 holdout day 0 games 2 seconds 5
+REGULAR COMPLETE nba 3101300004 1230
+DONE nba 3101300004 holdout 1230 938.348
+wnba 3101300105 holdout day 0 games 2 seconds 4
+wnba 3101300106 holdout day 0 games 2 seconds 4
+REGULAR COMPLETE nba 3101300006 1230
+DONE nba 3101300006 holdout 1230 944.349
+wnba 3101300107 holdout day 0 games 2 seconds 5
+wnba 3101300108 holdout day 0 games 2 seconds 4
+REGULAR COMPLETE nba 3101300003 1230
+DONE nba 3101300003 holdout 1230 955.325
+wnba 3101300109 holdout day 0 games 2 seconds 4
+REGULAR COMPLETE nba 3101300009 1230
+DONE nba 3101300009 holdout 1230 1023.421
+wnba 3101300110 holdout day 0 games 2 seconds 4
+wnba 3101300101 holdout day 60 games 117 seconds 241
+wnba 3101300102 holdout day 60 games 115 seconds 230
+wnba 3101300103 holdout day 60 games 115 seconds 235
+wnba 3101300107 holdout day 60 games 116 seconds 228
+wnba 3101300106 holdout day 60 games 115 seconds 235
+wnba 3101300104 holdout day 60 games 117 seconds 244
+wnba 3101300105 holdout day 60 games 116 seconds 243
+wnba 3101300108 holdout day 60 games 115 seconds 232
+wnba 3101300109 holdout day 60 games 114 seconds 225
+wnba 3101300110 holdout day 60 games 114 seconds 234
+wnba 3101300101 holdout day 120 games 204 seconds 438
+wnba 3101300102 holdout day 120 games 204 seconds 421
+wnba 3101300103 holdout day 120 games 204 seconds 431
+wnba 3101300107 holdout day 120 games 204 seconds 424
+wnba 3101300106 holdout day 120 games 204 seconds 433
+wnba 3101300104 holdout day 120 games 204 seconds 438
+wnba 3101300108 holdout day 120 games 205 seconds 424
+wnba 3101300105 holdout day 120 games 204 seconds 442
+wnba 3101300109 holdout day 120 games 204 seconds 426
+REGULAR COMPLETE wnba 3101300102 240
+DONE wnba 3101300102 holdout 240 503.503
+REGULAR COMPLETE wnba 3101300101 240
+DONE wnba 3101300101 holdout 240 522.418
+REGULAR COMPLETE wnba 3101300103 240
+DONE wnba 3101300103 holdout 240 513.909
+REGULAR COMPLETE wnba 3101300107 240
+DONE wnba 3101300107 holdout 240 501.7
+REGULAR COMPLETE wnba 3101300106 240
+DONE wnba 3101300106 holdout 240 506.202
+REGULAR COMPLETE wnba 3101300104 240
+DONE wnba 3101300104 holdout 240 511.272
+REGULAR COMPLETE wnba 3101300108 240
+DONE wnba 3101300108 holdout 240 497.997
+REGULAR COMPLETE wnba 3101300105 240
+DONE wnba 3101300105 holdout 240 513.354
+REGULAR COMPLETE wnba 3101300109 240
+DONE wnba 3101300109 holdout 240 492.08
+wnba 3101300110 holdout day 120 games 204 seconds 425
+REGULAR COMPLETE wnba 3101300110 240
+DONE wnba 3101300110 holdout 240 452.578
+HOLDOUT FINISHED 20 failures 0
