@@ -5,14 +5,14 @@ Snapshot written 2026-10-23 during a Claude Code session. It records what is on 
 ## Git state at time of writing
 
 - **Current branch:** `late-period-strategies`
-- **Latest commit on this branch:** `967b070` ("Record late-period scorecard season (in progress)")
+- **Latest commit on this branch:** see `git log -1`. This file is updated in the commit that records the final scorecard.
 - **Latest commit on `main`:** `e27a0c7` (merge of PR #8, `fa-pool-quality`)
 
 Unmerged work on remote branches (commits not on `main`):
 
 | Branch | Commits not on `main` | What it is |
 |---|---|---|
-| `late-period-strategies` | `7265962`, `d8134d8`, `2f0938f`, `967b070` | End-of-quarter strategies and hack-a fouling. The scorecard is still running. |
+| `late-period-strategies` | `7265962` plus scorecard/doc commits | End-of-quarter strategies and hack-a fouling. The scorecard gate passed; awaiting a PR. |
 | `fa-swap-entry-fix` | `c1710fa`, `e926cd1` | **Crash fix for a bug that is already on `main`.** It needs a PR. |
 | `cpu-transactions` | `183f602`, `501c72c`, `32c54e6` | Trade-pick owner index (performance) and refreshed counts. The PR #6/#7 merges did not include these. |
 | `franchise-presets-12` | `3495aa4` | DNP labels in box scores. Not merged. |
@@ -70,7 +70,7 @@ Hoops Dynasty is a static browser GM game. `dist/index.html` loads about 119 scr
 | Comeback and blown-lead callouts (`comebacks.js`, `test-comebacks.cjs`) | **Implemented on `comeback-callouts`, not merged** |
 | FA pool quality | Merged (#8) |
 | Offseason crash fix after a CPU swap release | **Implemented on `fa-swap-entry-fix`, not merged** |
-| Late-period strategies: 2-for-1, last-shot hold, heaves, hack-a | **Implemented on `late-period-strategies`. Scorecard incomplete, not promoted.** |
+| Late-period strategies: 2-for-1, last-shot hold, heaves, hack-a | **Implemented on `late-period-strategies`. Scorecard gate passed. Not merged.** |
 
 ### Late-period strategies (branch `late-period-strategies`, commit `7265962`)
 
@@ -139,34 +139,41 @@ Hoops Dynasty is a static browser GM game. `dist/index.html` loads about 119 scr
 
   About 48% of 2-for-1 pushes ended with the pushing team getting the quarter's last possession.
 
-### Phase 13-style scorecard on fresh seeds (IN PROGRESS, no verdict yet)
+### Phase 13-style scorecard on fresh seeds (COMPLETE: gate passed)
 
 **Setup:**
 
 - Seeds are reserved in `dev/late-period/reserved-seeds.json`: 3101400001–010 for the NBA and 3101400101–110 for the WNBA. They were checked unused across 1,607 dev files.
-- Run with `dev/late-period/run-scorecard.cjs`, summarized with `dev/late-period/scorecard.py`.
-- **Gate:** the pooled candidate value must fall inside the Phase 13 holdout per-seed [min, max] for mean margin, 20+ point share, OT share, pace and FTA/FGA.
+- Run with `dev/late-period/run-scorecard.cjs`, summarized with `dev/late-period/scorecard.py`. Results are in `dev/late-period/scorecard.json`.
+- The season files are `dev/phase13/lpcand-*` (this branch) and `dev/phase13/lpctrl-*` (same seeds on `main` at `e27a0c7`).
+- 40 seasons ran with 0 failures.
+- **Gate:** the pooled candidate value must fall inside the Phase 13 holdout per-seed [min, max].
 
-**Interim results at time of writing:**
+| Metric | NBA candidate | NBA control | Phase 13 range | WNBA candidate | WNBA control | Phase 13 range |
+|---|---|---|---|---|---|---|
+| Mean margin | 13.60 | 13.41 | 12.35–13.74 | 12.45 | 12.35 | 11.25–12.99 |
+| 20+ pt % | 23.69 | 22.78 | 18.46–24.31 | 19.96 | 18.96 | 14.58–23.75 |
+| OT % | 3.61 | 3.46 | 3.41–5.37 | 3.29 | 3.46 | 2.92–5.83 |
+| Pace | 97.16 | 97.05 | 97.01–97.29 | 80.26 | 80.21 | 80.10–80.50 |
+| FTA/FGA | .2341 | .2346 | .2253–.2388 | .2428 | .2445 | .2290–.2685 |
 
-| League | Seasons done | Mean margin | 20+ % | OT % | Pace | FTA/FGA | Gate |
-|---|---|---|---|---|---|---|---|
-| NBA candidate | 10/10 | 13.60 (12.35–13.74) | 23.69 (18.46–24.31) | 3.61 (3.41–5.37) | 97.16 (97.01–97.29) | .2341 (.2253–.2388) | all inside |
-| WNBA candidate | 6/10 | 12.08 (11.25–12.99) | 18.54 (14.58–23.75) | 3.26 (2.92–5.83) | 80.26 (80.10–80.50) | .2453 (.2290–.2685) | inside so far |
-| Same-seed control (`main`) | 0/20 | — | — | — | — | — | not started |
+**Result:** all five metrics are inside the Phase 13 ranges for both leagues.
 
-Notes on these numbers:
+Compared with the same-seed control:
 
-- NBA mean margin and 20+ % sit near the top of their ranges.
-- A smaller pre-check on matched part-seasons showed FTA/FGA about +0.01 against `main` in both leagues. It also showed a WNBA pace drop and wider WNBA margins on one seed. Whether those are real effects or part-season noise is what the control runs will show.
-- **The change must not be promoted until the WNBA candidate and both control sets finish and the gate passes.**
-- In-progress season files (`dev/phase13/lpcand-*`) and `dev/late-period/scorecard.json` are listed in `.git/info/exclude` (local only) until the batch finishes. Four NBA season files were already committed (`2f0938f`, `967b070`).
+- **Pace and FTA rate:** essentially unchanged. The +0.01 FTA rate seen in the earlier part-season pre-check was noise.
+- **Margin:** +0.1–0.2.
+- **20+ point share:** about +1 point in both leagues.
+
+The 20+ point share is the one consistent shift, small and inside the ranges. NBA mean margin and 20+ % still sit near the top of their ranges.
+
+**Promotion state:** the change passed the gate the user set. It has **not** been merged to `main`; merging needs the user's go-ahead and a PR.
 
 ## Confirmed bugs and unresolved simulation issues
 
 1. **Offseason crash after a CPU swap release (on `main`).** A swapped-out player had no free-agency entry. The fix is on `fa-swap-entry-fix` and is not merged.
 2. **`test-cpu-transactions.cjs` intermittent failure.** The news-category assertion failed once. Not reproduced, cause unconfirmed.
-3. **Late-period change, possible shifts under investigation:** FTA rate +~0.01, and WNBA margin/pace on one seed. Unresolved until the scorecard controls finish.
+3. **Late-period change:** the full scorecard resolved the pre-check concerns. Pace and FTA rate are unchanged against the control. The 20+ point share rose about 1 point in both leagues, which is small and inside the ranges.
 4. **60 pre-existing test failures.** They are in the baseline and were not investigated this session.
 
 ## Known limitations
@@ -194,7 +201,7 @@ Notes on these numbers:
 
 ## Recommended next steps
 
-1. Let the scorecard finish: the remaining WNBA candidate seasons and all 20 control seasons on `main`. Run `python3 dev/late-period/scorecard.py <main-worktree>`. Promote `late-period-strategies` only if both leagues pass the gate. Then commit the season files and scorecard, and remove the local `.git/info/exclude` lines.
+1. Open a PR for `late-period-strategies` (the scorecard gate passed in both leagues) if you want it on `main`.
 2. Open a PR for `fa-swap-entry-fix`. It fixes a crash already on `main`.
 3. Decide whether to merge `501c72c` (performance), `3495aa4` (DNP labels) and `comeback-callouts`.
 4. Investigate the intermittent `test-cpu-transactions.cjs` failure. Run it several times on `main` and on this branch.
