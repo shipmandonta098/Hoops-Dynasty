@@ -2,7 +2,11 @@
 function tradeTimeline(t){const top=t.roster.slice().sort((a,b)=>b.ovr-a.ovr).slice(0,5),ovr=top.reduce((s,p)=>s+p.ovr,0)/Math.max(1,top.length),gp=t.w+t.l,pct=gp?t.w/gp:.5;return gp>=15&&pct<.4||ovr<74?'Rebuilding':ovr>=82||gp>=15&&pct>=.6?'Contender':'Standing Pat'}
 function tradeYears(p){return Math.max(1,(p.contractThrough??state.year)-state.year+1)}
 function tradePickKey(p){return p.year+':'+p.origin+':'+p.round}
-function tradePickOwner(p){return (state.tradePickOwners||[]).find(x=>tradePickKey(x)===tradePickKey(p))?.owner??p.origin}
+// Indexed lookup: tradePicks checks every league pick, so a linear scan grows quadratically as picks change hands.
+// The index rebuilds whenever the owner list is replaced or resized (transferTradePicks and career load do both);
+// entries are never edited in place. First match wins, as with the original find().
+let tradePickOwnerIndex={list:null,length:-1,map:null};
+function tradePickOwner(p){const list=state.tradePickOwners||[];if(tradePickOwnerIndex.list!==list||tradePickOwnerIndex.length!==list.length){const map=new Map();for(const x of list){const k=tradePickKey(x);if(!map.has(k))map.set(k,x.owner)}tradePickOwnerIndex={list,length:list.length,map}}return tradePickOwnerIndex.map.get(tradePickKey(p))??p.origin}
 function tradePicks(t){const out=[];for(let year=state.year;year<state.year+leagueRules().tradePickSeasons;year++)for(const c of state.teams)for(let round=1;round<=(year===state.year?draftRoundCount():leagueRules().draftRounds);round++){const p={year,origin:c.id,round};if(year===state.year&&(state.draft?.picks.length||0)>0)continue;if(tradePickOwner(p)===t.id)out.push(p)}return out}
 const TRADE_LOCK_DAYS=30;
 function tradeLockDays(p){return p.tradeLockedUntil===undefined?0:Math.max(0,p.tradeLockedUntil-medicalStamp())}
