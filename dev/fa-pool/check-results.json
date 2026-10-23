@@ -1,0 +1,128 @@
+{
+ "generated": {
+  "nba": {
+   "leagues": 10,
+   "freeAgents": {
+    "n": 300,
+    "median": 65,
+    "p10": 60,
+    "p90": 72,
+    "max": 78,
+    "58-70": 84.3,
+    "71-74": 13.3,
+    "75+": 2.3,
+    "below58": 0
+   },
+   "rostered": {
+    "n": 4200,
+    "median": 75,
+    "p10": 65,
+    "p90": 86,
+    "max": 99,
+    "58-70": 21,
+    "71-74": 21.8,
+    "75+": 57.2,
+    "below58": 0
+   },
+   "leaguesWithA75Plus": 7,
+   "max75PlusInOnePool": 1,
+   "ages": {
+    "≤24": 43.3,
+    "25–29": 24.7,
+    "30+": 32
+   },
+   "youngPotentialHeadroom": {
+    "median": 7,
+    "max": 18,
+    "10+": 22
+   }
+  },
+  "wnba": {
+   "leagues": 10,
+   "freeAgents": {
+    "n": 300,
+    "median": 65,
+    "p10": 60,
+    "p90": 73,
+    "max": 78,
+    "58-70": 83.7,
+    "71-74": 13.3,
+    "75+": 3,
+    "below58": 0
+   },
+   "rostered": {
+    "n": 1320,
+    "median": 75,
+    "p10": 65,
+    "p90": 86,
+    "max": 99,
+    "58-70": 21.1,
+    "71-74": 21.4,
+    "75+": 57.5,
+    "below58": 0
+   },
+   "leaguesWithA75Plus": 9,
+   "max75PlusInOnePool": 1,
+   "ages": {
+    "≤24": 42,
+    "25–29": 24.7,
+    "30+": 33.3
+   },
+   "youngPotentialHeadroom": {
+    "median": 7,
+    "max": 17,
+    "10+": 31
+   }
+  }
+ },
+ "season": {
+  "nba": {
+   "status": "completed",
+   "errors": [],
+   "checkpoints": {
+    "openingNight": {
+     "day": 0,
+     "unsigned75": [],
+     "pool": 30
+    },
+    "allStarBreak": {
+     "day": 115,
+     "unsigned75": [],
+     "pool": 26
+    },
+    "freeAgencyCloses": {
+     "day": 178,
+     "unsigned75": [],
+     "pool": 45
+    }
+   },
+   "upgradeSwapReleases": 7,
+   "inSeasonUpgradeSignings": 4
+  },
+  "wnba": {
+   "status": "completed",
+   "errors": [],
+   "checkpoints": {
+    "openingNight": {
+     "day": 0,
+     "unsigned75": [
+      77
+     ],
+     "pool": 30
+    },
+    "allStarBreak": {
+     "day": 95,
+     "unsigned75": [],
+     "pool": 24
+    },
+    "freeAgencyCloses": {
+     "day": 153,
+     "unsigned75": [],
+     "pool": 67
+    }
+   },
+   "upgradeSwapReleases": 0,
+   "inSeasonUpgradeSignings": 6
+  }
+ }
+}
