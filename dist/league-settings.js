@@ -100,6 +100,7 @@ const LEAGUE_SETTING_GROUPS=[
  ['Game Simulation',[
  ['foulLimit','Foul limit',6,[2,12,1],'Personal fouls before disqualification.','season'],
  ['bonusFouls','# of fouls until bonus',5,[1,12,1],'The Nth defensive team foul awards bonus free throws. Resets each period, including overtime.','season'],
+ ['awayFromPlayRule','Away-from-play foul rule (last 2 min)','era',[['era','Follow era'],['allPeriods','Every period'],['finalPeriod','4th quarter & OT only'],['none','Not used']],'An away-from-play foul in the last two minutes gives 1 free throw and possession, which stops intentional fouling there. Follow era: NBA every period from 2016–17 (Q4/OT before), WNBA Q4/OT from 2016.','season'],
  ['threePointers','Three pointers',true,[[true,'Enabled'],[false,'Disabled']],'Disabled removes three-point attempts; all field goals are worth two.','season'],
  ['gamePeriods','Number of periods per game',4,[1,8,1],'Regulation periods. Total regulation time cannot exceed 60 minutes.','season'],
  ['periodMinutes','Period length (minutes)',12,[1,20,1],'Clock length per regulation period.','season'],

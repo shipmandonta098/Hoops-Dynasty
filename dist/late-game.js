@@ -19,12 +19,45 @@ function lateGameFoulChance(offensiveLead,remaining,shotClock,tactics){
  const base=remaining<=shotClock?(offensiveLead<=6?.88:.55):offensiveLead>=4?.50:.12;
  return Math.min(.96,base*(.75+Math.max(0,Math.min(100,tactics))/200));
 }
+/* End of Q1–Q3 (the final ~60 seconds run on the live clock). Adherence scales with coach tactics. */
+function quarterEndPlan(remaining,shotClock,tactics,tempo,transition=false){
+ const neutral=transition?1:Math.max(3,Math.min(8,7-(tempo-64)*.03)),iq=Math.max(0,Math.min(100,tactics))/100;
+ if(remaining<=2.5)return {mode:'heave',setup:0};
+ // Possession starts between shot clock + 4 and + 16: shoot early so the ball comes back for the last shot.
+ if(remaining>=shotClock+4&&remaining<=shotClock+16&&Math.random()<.25+iq*.7)return {mode:'twoForOne',setup:Math.min(1,remaining-1)};
+ // Game clock under the shot clock: hold, then the final-shot path releases with about 2–4 seconds left.
+ if(remaining<shotClock&&remaining>7&&Math.random()<.55+iq*.4)return {mode:'lastShot',setup:remaining-(5+Math.random()*2)};
+ return {mode:null,setup:Math.max(0,Math.min(neutral,remaining-1))};
+}
+/* Away-from-play foul in the last two minutes: 1 FT + possession. NBA from 2016–17 in every period, earlier
+   only Q4/OT. WNBA (2016 rule change) defaults to Q4/OT; the league setting overrides either league. */
+function awayFromPlayRuleApplies(period){
+ const mode=leagueRules().awayFromPlayRule||'era',female=state.leagueGender==='female',year=Number(state.year);
+ const scope=mode==='era'?(female?(year>=2016?'finalPeriod':'none'):(year>=2016?'allPeriods':'finalPeriod')):mode;
+ return scope==='allPeriods'||scope==='finalPeriod'&&period>=leagueRules().gamePeriods-1;
+}
+// Per-possession chance once a hack-a target qualifies; rare in the modern era.
+function intentionalFoulRate(tactics,coachType,year){
+ return (year>=2016?.04:.12)*Math.max(0,Math.min(100,tactics))/100*({'Win-Now':1.35,Balanced:1,Developmental:.7}[coachType]||1);
+}
+const shotNameBeforeHeave=tendencyShotName;
+tendencyShotName=function(shot){return shot.key==='heave'?'heave from beyond half court':shotNameBeforeHeave(shot)};
 const possessionBeforeLateGame=tendencyPossession;
 tendencyPossession=function(offense,defense,active,context,rows,log){
  const timing=context.machine?.context;
  if(!timing?.liveClock)return possessionBeforeLateGame(offense,defense,active,context,rows,log);
  const remaining=timing.remaining(),margin=context.machine.context.margin;
  if(remaining<.3){timing.advance(remaining,'decision');return null;}
+ if(timing.finalPeriod===false){
+  const players=offense.roster.filter(p=>active(offense,p)),pick=()=>players.find(p=>p.id===context.initialPlayerId)||simWeighted(players,p=>Math.max(.01,usageWeight(p)));
+  if(timing.heave&&!context.machine.trace.includes('rebound')){const p=pick();context.machine.transition('shot',Math.max(.1,remaining-.2));
+   log(p.name+' launches a heave at the buzzer.');return {p,lastPasser:null,action:'shoot',forced:false,iso:false,lateShot:true,shotOverride:{key:'heave',kind:leagueRules().threePointers?'three':'mid',skill:'tp',adjustment:0,heave:.025,selfCreated:true}};}
+  if(timing.rush&&remaining>8){timing.rush=false;const p=pick();if(!context.machine.transition('shot',Math.min(remaining-1,4+Math.random()*3))){context.recordTurnover('shotClock',p);return null;}
+   return {p,lastPasser:null,action:'shoot',forced:false,rushed:true,iso:false,lateShot:true,shotOverride:null};}
+  if(remaining>8)return possessionBeforeLateGame(offense,defense,active,context,rows,log);
+  const p=pick();if(!context.machine.transition('shot',Math.min(3,remaining,Math.max(.1,context.machine.shotClock-.1)))){context.recordTurnover('shotClock',p);return null;}
+  log(p.name+' gets a final shot away.');return {p,lastPasser:null,action:'shoot',forced:remaining<=3,iso:false,lateShot:true,shotOverride:null};
+ }
  const plan=lateGameTimingPlan(margin,remaining,context.machine.shotClock,coachFor(offense).tempo,context.transition);
  if(remaining>8&&!plan.needThree)return possessionBeforeLateGame(offense,defense,active,context,rows,log);
  const players=offense.roster.filter(p=>active(offense,p));
