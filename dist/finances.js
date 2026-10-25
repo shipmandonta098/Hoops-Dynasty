@@ -1,9 +1,13 @@
+/* Local TV rights ($M / season) scale with metro population: piecewise linear in log(population) through
+   the tier defaults (1.8M → 65, 4M → 80, 9M → 95), so saves using tier defaults keep the old flat values.
+   Clamped to 50–110. A 30-team default league averages about 80.9 versus 82 under flat tier values. */
+function mediaRightsValue(club){const people=validMetroPopulation(club?.population)?club.population:TIER_DEFAULT_POPULATION[club?.marketSize]||TIER_DEFAULT_POPULATION.Medium,x=Math.log(people/4e6),slope=x<0?15/Math.log(4/1.8):15/Math.log(9/4);return Math.round(Math.max(50,Math.min(110,80+slope*x))*10)/10}
 /* All financial amounts are millions except retail prices. */
 const FINANCE_BUDGETS=['scouting','coaching','health','facilities'];
 function financeFor(club=team()){
  state.finances??={};
  let f=state.finances[club.id];
- if(!f){const p=ownerFor(club).plan;f=state.finances[club.id]={cash:50,level:0,budgets:{scouting:5,coaching:5,health:5,facilities:5},prices:{playoff:110,jersey:100,hat:30,food:12},media:({Small:65,Medium:80,Large:95}[club.marketSize]||80),mediaThrough:state.year+2,sponsors:[null,null],dead:[],ledger:[],season:{year:state.year,lastDay:state.day,opening:50-p.revenue+p.costs,revenue:p.revenue,costs:p.costs,tax:0,settled:false,playoffGames:[],lines:{tickets:0,merch:0,food:0,media:0,sponsors:0,payroll:0,operations:0,arena:0,legacyRevenue:p.revenue,legacyCosts:p.costs}}}}
+ if(!f){const p=ownerFor(club).plan;f=state.finances[club.id]={cash:50,level:0,budgets:{scouting:5,coaching:5,health:5,facilities:5},prices:{playoff:110,jersey:100,hat:30,food:12},media:mediaRightsValue(club),mediaThrough:state.year+2,sponsors:[null,null],dead:[],ledger:[],season:{year:state.year,lastDay:state.day,opening:50-p.revenue+p.costs,revenue:p.revenue,costs:p.costs,tax:0,settled:false,playoffGames:[],lines:{tickets:0,merch:0,food:0,media:0,sponsors:0,payroll:0,operations:0,arena:0,legacyRevenue:p.revenue,legacyCosts:p.costs}}}}
  if(f.season.year!==state.year){f.dead=f.dead.filter(d=>d.through>=state.year);f.sponsors=f.sponsors.map(s=>s&&s.through>=state.year?s:null);f.season={year:state.year,lastDay:0,opening:f.cash,revenue:0,costs:0,tax:0,settled:false,playoffGames:[],lines:{tickets:0,merch:0,food:0,media:0,sponsors:0,payroll:0,operations:0,arena:0,legacyRevenue:0,legacyCosts:0}}}
  return f;
 }
@@ -88,7 +92,7 @@ async function financeSponsor(slot){
 }
 async function financeMedia(){
  if(!ownerCanManage())return;const f=financeFor();if(state.year<=f.mediaThrough)return toast('The current media contract is still active.');
- const old=JSON.stringify(f),past=f.ledger.at(-1);f.media=({Small:65,Medium:80,Large:95}[team().marketSize]||80)*(past?.title?1.25:past?.playoffs?1.12:1);f.mediaThrough=state.year+2;
+ const old=JSON.stringify(f),past=f.ledger.at(-1);f.media=mediaRightsValue(team())*(past?.title?1.25:past?.playoffs?1.12:1);f.mediaThrough=state.year+2;
  if(!await save()){state.finances[controlledTeamId()]=JSON.parse(old);return toast('Contract could not be saved.')}render();
 }
 const financeProjectionBefore=ownerBusinessProjection;

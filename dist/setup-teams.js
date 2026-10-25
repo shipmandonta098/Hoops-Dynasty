@@ -1,3 +1,4 @@
+// The tier column is a fallback; the city's metro population (metro-population.js) decides the market.
 const NEW_TEAM_PRESETS=[
  ['Las Vegas','Aces','LVA','Large','#C72C41','#171717','#E8C66A'],
  ['Vancouver','Orcas','VAN','Large','#087E8B','#102C45','#C5EAF1'],
@@ -10,13 +11,13 @@ const NEW_TEAM_PRESETS=[
 ];
 function openAddSetupTeam(){captureSetup();const full=setupDraft.teams.length>=36,added=abbr=>setupDraft.teams.some(t=>t.key==='preset-'+abbr||t.abbr===abbr),button=(abbr,action)=>`<button type="button" class="primary" onclick="${action}" ${added(abbr)||full?'disabled':''}>${added(abbr)?'Already added':'Add team'}</button>`;
  // One list: the original quick presets and the franchise presets share a card layout, sorted by city.
- const cards=[...NEW_TEAM_PRESETS.map(([city,name,abbr,marketSize,...colors],i)=>({city,html:presetCard({city,name,abbr,marketSize,colors:colors.map((hex,j)=>[['Primary','Secondary','Tertiary'][j],hex]),logo:teamLogo({...defaultTeams()[i],city,name})},button(abbr,`addSetupTeam(${i})`))})),...FRANCHISE_PRESETS.map(p=>({city:p.city,html:presetCard(p,button(p.abbr,`addSetupPreset('${p.abbr}')`))}))].sort((a,b)=>a.city.localeCompare(b.city));
+ const cards=[...NEW_TEAM_PRESETS.map(([city,name,abbr,marketSize,...colors],i)=>({city,html:presetCard({city,name,abbr,...withMetroPopulation({city,marketSize}),colors:colors.map((hex,j)=>[['Primary','Secondary','Tertiary'][j],hex]),logo:teamLogo({...defaultTeams()[i],city,name})},button(abbr,`addSetupTeam(${i})`))})),...FRANCHISE_PRESETS.map(p=>({city:p.city,html:presetCard(p,button(p.abbr,`addSetupPreset('${p.abbr}')`))}))].sort((a,b)=>a.city.localeCompare(b.city));
  editorModal('Add team',`<p>Choose a franchise preset, then edit its branding and division. ${setupDraft.teams.length} / 36 teams. Optional: none are added unless you choose them.</p><label>Division / conference<select id="new-team-division">${divisionOptions(setupDraft.divisions[0].id)}</select></label><p class="setup-help">Adding to the default league switches the schedule to home-and-away round robin. You can change the season format in League settings.</p><h3 class="editor-subtitle">Franchise presets · ${cards.length}</h3><div class="team-picker">${cards.map(c=>c.html).join('')}</div>`)}
 function addSetupTeam(index){
  const preset=NEW_TEAM_PRESETS[index];if(!onSetup||!preset||setupDraft.teams.length>=36)return;
  const [city,name,abbr,marketSize,...palette]=preset;if(setupDraft.teams.some(t=>t.key==='preset-'+abbr||t.abbr===abbr))return;
  const divisionId=document.getElementById('new-team-division')?.value;if(!setupDraft.divisions.some(d=>d.id===divisionId))return toast('Choose a division.');
- const t={...copy(defaultTeams()[index]),key:'preset-'+abbr,city,name,abbr,marketSize,divisionId,arenaName:city+' Arena',colors:palette.map((hex,i)=>({hex,name:['Primary','Secondary','Tertiary'][i],role:['Primary','Secondary','Tertiary'][i]})),color:palette[0]};
+ const t={...copy(defaultTeams()[index]),key:'preset-'+abbr,city,name,abbr,...withMetroPopulation({city,marketSize}),divisionId,arenaName:city+' Arena',colors:palette.map((hex,i)=>({hex,name:['Primary','Secondary','Tertiary'][i],role:['Primary','Secondary','Tertiary'][i]})),color:palette[0]};
  setupDraft.teams.push(t);syncAlignment(setupDraft);if(setupDraft.meetings===82&&!nbaAlignment(setupDraft.teams))setupDraft.meetings=2;
  setupQuery='';setupFilter='';closeTitleModal();renderSetup();toast(city+' '+name+' added. Use Edit team to customize.');
 }
