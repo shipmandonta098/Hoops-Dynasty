@@ -12,7 +12,7 @@ assert.equal(run(`readMetroPopulationInput('3.1',3050000)`),3050000,'an unchange
 assert.equal(run(`readMetroPopulationInput('3.2',3050000)`),3200000);
 // 2. New leagues: every default NBA/WNBA city and every preset has a metro population, and its tier follows it.
 const defs=run(`[...defaultTeams(),...FRANCHISE_PRESETS.map(presetTeamDefinition),...NEW_TEAM_PRESETS.map(([city,,,marketSize])=>withMetroPopulation({city,marketSize}))].map(t=>({city:t.city,population:t.population,marketSize:t.marketSize}))`);
-assert.equal(defs.length,30+12+8);
+assert.equal(defs.length,30+run('FRANCHISE_PRESETS.length')+8);
 for(const t of defs){assert(Number.isFinite(t.population)&&t.population>=1e5&&t.population<=3e7,t.city);assert.equal(t.marketSize,run(`marketSizeForPopulation(${t.population})`),t.city)}
 assert.equal(defs.filter(t=>run(`cityMetroPopulation(${JSON.stringify(t.city)})`)===null&&!run(`FRANCHISE_PRESETS.some(p=>p.city===${JSON.stringify(t.city)})`)).length,0,'no city falls back to a tier default');
 l.run(`var d=makeDraft();d.gmName='Metro';state=validateCareerData(buildSetupCareer(d));`);
