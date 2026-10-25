@@ -1,0 +1,88 @@
+{
+ "question": "Does #12 (help-side blocking) raise NBA 20+ point share? Original scorecard showed +1.46 points on 10 seeds.",
+ "method": "Season runs on 10 fresh NBA replication seeds (blkrep = main with #12, blkrepctrl = main before #12, d09c864), paired by seed; pooled with the original 10 scorecard seeds. Separately, dev/blocks/ab-margins.cjs played 8,000 fixed-matchup games per build in frozen leagues (rosters reset every game).",
+ "abFixedMatchups": {
+  "meanAbsMargin": {
+   "before": 12.95,
+   "after": 12.85
+  },
+  "blow20Pct": {
+   "before": 20.7,
+   "after": 21.0
+  },
+  "slopePerStrength": {
+   "before": 1.5,
+   "after": 1.5
+  }
+ },
+ "replication": {
+  "seeds": 10,
+  "meanMargin": {
+   "pairedDiff": -0.126,
+   "se": 0.14,
+   "higherIn": 4
+  },
+  "blow20Pct": {
+   "pairedDiff": -0.634,
+   "se": 0.595,
+   "higherIn": 3
+  },
+  "otPct": {
+   "pairedDiff": -0.228,
+   "se": 0.261,
+   "higherIn": 5
+  },
+  "teamMarginSD": {
+   "pairedDiff": -0.202,
+   "se": 0.146,
+   "higherIn": 4
+  }
+ },
+ "original": {
+  "seeds": 10,
+  "meanMargin": {
+   "pairedDiff": 0.384,
+   "se": 0.105,
+   "higherIn": 9
+  },
+  "blow20Pct": {
+   "pairedDiff": 1.455,
+   "se": 0.457,
+   "higherIn": 8
+  },
+  "otPct": {
+   "pairedDiff": -0.35,
+   "se": 0.297,
+   "higherIn": 5
+  },
+  "teamMarginSD": {
+   "pairedDiff": 0.348,
+   "se": 0.177,
+   "higherIn": 7
+  }
+ },
+ "pooled": {
+  "seeds": 20,
+  "meanMargin": {
+   "pairedDiff": 0.129,
+   "se": 0.103,
+   "higherIn": 13
+  },
+  "blow20Pct": {
+   "pairedDiff": 0.411,
+   "se": 0.437,
+   "higherIn": 11
+  },
+  "otPct": {
+   "pairedDiff": -0.289,
+   "se": 0.193,
+   "higherIn": 10
+  },
+  "teamMarginSD": {
+   "pairedDiff": 0.073,
+   "se": 0.128,
+   "higherIn": 11
+  }
+ },
+ "conclusion": "No detectable effect: the original +1.46 did not replicate (replication -0.63); pooled +0.41 +/- 0.44. Fixed-matchup A/B shows no per-game margin change."
+}
