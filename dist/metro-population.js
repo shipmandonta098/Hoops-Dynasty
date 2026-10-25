@@ -23,7 +23,12 @@ const METRO_POPULATION={
 };
 function marketSizeForPopulation(people){return people>=MARKET_TIER_CUTOFFS.large?'Large':people>=MARKET_TIER_CUTOFFS.medium?'Medium':'Small'}
 function validMetroPopulation(people){return Number.isFinite(people)&&people>=METRO_POPULATION_RANGE.min&&people<=METRO_POPULATION_RANGE.max}
-function cityMetroPopulation(city){return Object.hasOwn(METRO_POPULATION,city)?METRO_POPULATION[city]:null}
+function cityMetroPopulation(city){if(Object.hasOwn(METRO_POPULATION,city))return METRO_POPULATION[city];const preset=typeof FRANCHISE_PRESETS!=='undefined'?FRANCHISE_PRESETS.find(p=>p.city===city):null;return preset?preset.population:null}
+/* Move: every city with a known metro population (default cities, quick-add cities and franchise presets)
+   that no other team in the league uses. */
+function moveCityOptions(currentCity,takenCities){const taken=new Set([...takenCities,currentCity].map(c=>String(c).trim().toLowerCase())),cities=new Set([...Object.keys(METRO_POPULATION),...(typeof FRANCHISE_PRESETS!=='undefined'?FRANCHISE_PRESETS.map(p=>p.city):[])]);return [...cities].filter(c=>!taken.has(c.toLowerCase())).sort((a,b)=>a.localeCompare(b)).map(city=>({city,population:cityMetroPopulation(city)}))}
+function moveCityField(currentCity,takenCities){const options=moveCityOptions(currentCity,takenCities);return `<div class="move-city"><label>Move to another city<span class="move-city-row"><select name="moveCity" aria-label="City to move to"><option value="">Choose an available city</option>${options.map(o=>`<option value="${escapeHTML(o.city)}">${escapeHTML(o.city)} · ${metroPopulationLabel(o.population)} · ${marketSizeForPopulation(o.population)}</option>`).join('')}</select><button type="button" onclick="applyMoveCity(this.form)">Move</button></span><small>${options.length} available cities. Fills the city and metro population; review, then save.</small></label></div>`}
+function applyMoveCity(form){const f=form?.elements,city=f?.moveCity?.value;if(!city)return toast('Choose a city to move to.');const people=cityMetroPopulation(city),old=f.city.value.trim();f.city.value=city;if(f.population){f.population.value=metroPopulationMillions(people);const tier=f.population.nextElementSibling;if(tier)tier.textContent=metroTierPreview(f.population.value)}if(f.arenaName&&(!f.arenaName.value.trim()||f.arenaName.value.trim()===old+' Arena'))f.arenaName.value=city+' Arena';if(f.arenaCity)f.arenaCity.value='';if(f.elevationFt)f.elevationFt.value='';toast('Moved to '+city+' in the form. Save to keep it.')}
 // Millions with one decimal, as shown in the editors.
 function metroPopulationMillions(people){return (Math.round(people/1e5)/10).toFixed(1)}
 function metroPopulationLabel(people){return metroPopulationMillions(people)+'M'}
@@ -36,8 +41,9 @@ function readMetroPopulationInput(value,current){
  if(validMetroPopulation(current)&&metroPopulationMillions(current)===millions.toFixed(1))return current;
  return Math.round(millions*1e6);
 }
-// Population and recalculated tier from an editor value; throws a readable error for invalid input.
-function metroPopulationEdit(value,current){const population=readMetroPopulationInput(value,current);return {population,marketSize:marketSizeForPopulation(population)}}
+/* Population and recalculated tier from an editor value; throws a readable error for invalid input.
+   After a Move, a value matching the new city's estimate keeps that exact estimate. */
+function metroPopulationEdit(value,current,city){const text=String(value??'').trim(),known=city!==undefined?cityMetroPopulation(String(city).trim()):null,keep=validMetroPopulation(current)&&metroPopulationMillions(current)===text,population=readMetroPopulationInput(value,!keep&&known&&metroPopulationMillions(known)===text?known:current);return {population,marketSize:marketSizeForPopulation(population)}}
 // Live tier label for an editor input; blank when the value is not valid.
 function metroTierPreview(value){try{return marketSizeForPopulation(readMetroPopulationInput(value))+' market'}catch{return 'Enter 0.1–30'}}
 function metroPopulationField(name,people){
