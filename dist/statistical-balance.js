@@ -34,3 +34,11 @@ function possessionEnvironment(){
   reboundReset:year>=(league==='wnba'?2016:2018)?14:league==='wnba'&&year<2006?30:league==='nba'&&year<1954?Infinity:24};
 }
 function possessionTurnoverRisk(base){return Math.max(0,Math.min(.65,base*possessionEnvironment().turnoverScale))}
+/* Shot blocking. The block tendency is willingness to contest; the block chance is the skill roll
+   (shot-blocking, height and leap against the shooter's strength and leap). Calibration constants per
+   league environment: primary scales the matchup defender, rotation/help the weak-side rim protector. */
+// Calibrated on 2025 NBA / 2024 WNBA leagues: NBA ~4.9 blocks per team per game (2024-25 real 4.88), WNBA
+// ~4.0 (2024 real, approximate). power concentrates help-side blocks on elite rim protectors.
+const BLOCK_ENVIRONMENT={male:{primary:.55,rotation:.7,help:2.1,power:4},female:{primary:.65,rotation:.8,help:2.15,power:4}};
+function blockEnvironment(){return BLOCK_ENVIRONMENT[state.leagueGender==='female'?'female':'male']}
+function contestWillingness(p){const mult=leagueRules().blockTendency??1,raw=Math.min(1,tendency(p,'block')/Math.max(.001,mult));return Math.min(1,(.6+.4*raw)*mult)}
