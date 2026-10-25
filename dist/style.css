@@ -45,3 +45,6 @@
 .crest-logo{display:grid;place-items:center;margin:0 auto 12px}.crest-logo .franchise-logo{width:96px;height:96px}@media(max-width:480px){.crest-logo .franchise-logo{width:72px;height:72px}}
 .box-pos{margin-left:6px;font-size:.85em;font-weight:700;letter-spacing:.04em;opacity:.75}
 .watch-team-box tr.box-dnp td{text-align:left;white-space:nowrap;font-style:italic;font-weight:600;opacity:.75;letter-spacing:.02em}
+
+/* Metro population input with its calculated market tier. */
+.metro-population{display:flex;gap:8px;align-items:center}.metro-population input{flex:1;min-width:0}.metro-population output{white-space:nowrap;font-weight:600;font-size:13px;opacity:.85}
