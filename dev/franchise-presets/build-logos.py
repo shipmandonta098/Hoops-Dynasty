@@ -1,4 +1,4 @@
-"""Generate the 12 franchise-preset logos as SVG (primary badge + secondary mark).
+"""Generate the franchise-preset logos as SVG (primary badge + secondary mark).
 
 Original vector artwork drawn for Hoops Dynasty in the flat outlined style of the
 existing atlases. Run from the repo root:
@@ -239,8 +239,29 @@ def winnipeg():
     return primary, secondary, defs
 
 
+def oklahoma_city():
+    navy, teal, sunset, sky = '#13294B', '#1FA6A0', '#F26A2E', '#CFEDEA'
+    # Tornado funnel: stacked bands narrowing toward the ball, each nudged sideways for the swirl.
+    def funnel(scale=1.0, dy=0):
+        bands = []
+        for k in range(6):
+            y = 92 + k * 40 + dy
+            w = (176 - k * 26) * scale
+            x = 256 + (14 if k % 2 else -14) * scale
+            bands.append(f'<ellipse cx="{x:.0f}" cy="{y}" rx="{w:.0f}" ry="{19 * scale:.0f}" fill="{teal if k % 2 == 0 else sky}" stroke="{OUT}" stroke-width="9"/>')
+        return ''.join(reversed(bands))
+    ground = f'<path d="M20 430Q256 392 492 430V500H20Z" fill="{sunset}" stroke="{OUT}" stroke-width="10" stroke-linejoin="round"/>'
+    primary = (f'<circle cx="256" cy="256" r="236" fill="{navy}" stroke="{OUT}" stroke-width="12"/>'
+               f'<circle cx="256" cy="256" r="214" fill="none" stroke="{sunset}" stroke-width="8"/>'
+               f'<clipPath id="okc-clip"><circle cx="256" cy="256" r="208"/></clipPath>'
+               f'<g clip-path="url(#okc-clip)">{ground}</g>{funnel()}{ball(256, 368, 74, ORANGE)}')
+    secondary = funnel(1.08, -8) + ball(256, 372, 96, sunset, seam=navy)
+    return primary, secondary
+
+
 LOGOS = [('ANA', anaheim), ('BUF', buffalo), ('CGY', calgary), ('CIN', cincinnati), ('GBY', green_bay), ('NSH', nashville),
-         ('NWK', newark), ('OTT', ottawa), ('SJO', san_jose), ('STL', st_louis), ('TPA', tampa), ('WPG', winnipeg)]
+         ('NWK', newark), ('OTT', ottawa), ('SJO', san_jose), ('STL', st_louis), ('TPA', tampa), ('WPG', winnipeg),
+         ('OKC', oklahoma_city)]  # appended: preset logo indices stay stable for saves
 
 if __name__ == '__main__':
     DEST.mkdir(parents=True, exist_ok=True)
