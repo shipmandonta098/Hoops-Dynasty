@@ -9,7 +9,7 @@ vm.runInContext("state=validateCareerData(fresh(defaultTeams().slice(0,6),2));ow
 
 (async()=>{await vm.runInContext(`(async()=>{
 const t=team(),f=financeFor(t);f.level=2;assert.equal(teamStadiumCapacity(t),20000);assert(teamManagementView().includes('name="stadiumCapacity"'));
-const values={city:t.city,name:t.name,abbr:t.abbr,marketSize:t.marketSize,logo:defaultTeams().findIndex(l=>l.logoIndex===t.logoIndex&&l.logoAtlas===t.logoAtlas),divisionId:t.divisionId,stadiumCapacity:'3500',...Object.fromEntries(t.colors.flatMap((c,i)=>[['color'+i,c.hex],['colorName'+i,c.name]]))};
+const values={city:t.city,name:t.name,abbr:t.abbr,population:metroPopulationMillions(t.population),logo:defaultTeams().findIndex(l=>l.logoIndex===t.logoIndex&&l.logoAtlas===t.logoAtlas),divisionId:t.divisionId,stadiumCapacity:'3500',...Object.fromEntries(t.colors.flatMap((c,i)=>[['color'+i,c.hex],['colorName'+i,c.name]]))};
 applyManagedTeam(0,values);assert.equal(teamStadiumCapacity(t),3500);const a=createGameAtmosphere(t,state.teams[1]);assert.equal(a.capacity,3500);assert(a.attendance<=3500);assert.equal(financeProjection(t).capacity,3500);
 assert.equal(validateCareerData(JSON.parse(JSON.stringify(state))).teams[0].stadiumCapacity,3500);
 for(const v of ['0','3.5','100001','oops'])assert.throws(()=>applyManagedTeam(0,{...values,stadiumCapacity:v}),/Stadium capacity/);
