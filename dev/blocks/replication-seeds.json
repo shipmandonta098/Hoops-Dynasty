@@ -1,0 +1,20 @@
+{
+ "reservedAtUTC": "2026-10-25T08:25:41.374554+00:00",
+ "seeds": {
+  "nba": [
+   3101600001,
+   3101600002,
+   3101600003,
+   3101600004,
+   3101600005,
+   3101600006,
+   3101600007,
+   3101600008,
+   3101600009,
+   3101600010
+  ]
+ },
+ "priorFilesChecked": 1612,
+ "priorMatches": [],
+ "scope": "Replication of the NBA 20+ share shift after #12 (help-side blocking); never used for tuning."
+}
