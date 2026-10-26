@@ -50,7 +50,7 @@ const re=run(`(()=>{const played=JSON.stringify(state.schedule.slice(0,state.day
  return {msg,same:before===after,played:JSON.stringify(state.schedule.slice(0,state.day))===played,oncePerDay:state.schedule.every(r=>new Set(r.flat()).size===r.flat().length),breakEmpty:state.schedule.every((r,k)=>!commissionerBreakDay(k)||!r.length)}})()`);
 assert(re.same&&re.played&&re.oncePerDay&&re.breakEmpty,JSON.stringify(re));assert.doesNotThrow(()=>run(`${roundTrip}.day`));
 // Preseason regeneration builds a fresh, fully valid schedule (no edit flag).
-const pre=run(`(()=>{const s=JSON.parse(JSON.stringify(state));state=fresh(defaultTeams(),82,2026,'male',14);state.scheduleFormat='nba82';state.commissioner={...s.commissioner,scheduleEdited:true};const msg=commissionerRegenerateSchedule();const ok=!state.commissioner.scheduleEdited&&state.schedule.length>150;validateCareerData(JSON.parse(JSON.stringify(state)));state=s;return msg+' '+ok})()`);
+const pre=run(`(()=>{const s=JSON.parse(JSON.stringify(state));const x=makeDraft();x.gmName='Pre';state=validateCareerData(buildSetupCareer(x));const old=JSON.stringify(state.schedule);state.commissioner={...s.commissioner,scheduleEdited:true};const msg=commissionerRegenerateSchedule();const ok=!state.commissioner.scheduleEdited&&JSON.stringify(state.schedule)!==old&&!!state.allStarCalendar;validateCareerData(JSON.parse(JSON.stringify(state)));state=s;return msg+' '+ok})()`);
 assert.equal(pre,'Schedule regenerated. true');l.run(`state=validateCareerData(JSON.parse(JSON.stringify(state)))`);
 // 6. Player editing: name, attributes, tendencies, personality and bio; invalid input is rejected; saves load.
 const pid=run('state.teams[2].roster[0].id');
