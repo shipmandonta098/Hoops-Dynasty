@@ -20,7 +20,7 @@ function cpuRelease(t,p,reason){
  else{const through=Math.max(state.year,p.contractThrough||state.year);owed=p.salary*(through-state.year+1);financeFor(t).dead.push({id:p.id,name:p.name,salary:p.salary,through})}
  t.roster=t.roster.filter(q=>q.id!==p.id);resetPlayerSituation(p);p.moraleAdjustment=-12;p.previousTeamKey=t.key;delete p.contractThrough;if(wnbaEnabled())p.salary=freeAgentQuote(p,t);state.free.push(p);
  if(t.rotationPlan)t.rotationPlan=rotationFromClub(t);updateCapSpace(t);cpuTrack();
- say(t.city+' releases '+p.name+' ('+p.pos+', '+p.ovr+' OVR) '+reason.text+'; '+money(owed)+' in remaining salary stays on the books.');return true}
+ say(gmLead(t)+' releases '+p.name+' ('+p.pos+', '+p.ovr+' OVR) '+reason.text+'; '+money(owed)+' in remaining salary stays on the books.');return true}
 function cpuSignTerms(t,p,mode){
  if(wnbaEnabled()){const year=state.year;if(mode==='hardship'){const r=wnbaRules(),fraction=(state.schedule.length-state.day)/state.schedule.length;return {salary:wnbaMillions(Math.ceil(wnbaMinimum(p)*(r.year>=2026?1:.75)*fraction)),years:1,hardship:true}}const salary=wnbaMillions(wnbaDemandDollars(p,t,year));return wnbaOfferError(p,t,{salary,years:1},year)?null:{salary,years:1}}
  const r=leagueRules(),years=Math.max(1,r.minContractYears),quote=Math.max(r.minContract,freeAgentQuote(p,t));
@@ -33,7 +33,7 @@ function cpuSign(t,p,terms,why){cpuTrack();internationalPrepareSigning(p);
  else{p.salary=terms.salary;p.contractThrough=state.year+terms.years-1}
  p.tradeWait=15;resetPlayerSituation(p);p.moraleAdjustment=8;t.roster.push(p);state.free=state.free.filter(q=>q.id!==p.id);if(typeof dissatisfactionSigned==='function')dissatisfactionSigned(p,t);
  if(t.rotationPlan)t.rotationPlan=rotationFromClub(t);updateCapSpace(t);cpuTrack();
- say(t.city+' signs '+p.name+' ('+p.pos+', '+p.ovr+' OVR) for '+money(terms.salary)+' per season '+why+'.');return true}
+ say(gmLead(t)+' signs '+p.name+' ('+p.pos+', '+p.ovr+' OVR) for '+money(terms.salary)+' per season '+why+'.');return true}
 function cpuFreeAgentPool(t){const need=new Map(['PG','SG','SF','PF','C'].map(pos=>[pos,cpuHealthy(t).filter(q=>q.pos===pos).length]));return state.free.filter(p=>!injuryDays(p)).sort((a,b)=>b.ovr-a.ovr+(need.get(a.pos)-need.get(b.pos))*2||a.id-b.id)}
 // Fill: too few healthy players for a rotation, or below the roster minimum.
 function cpuFillRoster(t){
