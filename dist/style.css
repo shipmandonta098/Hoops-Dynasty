@@ -49,3 +49,6 @@
 /* Metro population input with its calculated market tier. */
 .metro-population{display:flex;gap:8px;align-items:center}.metro-population input{flex:1;min-width:0}.metro-population output{white-space:nowrap;font-weight:600;font-size:13px;opacity:.85}
 .move-city{margin:0 0 14px}.move-city-row{display:flex;gap:8px;align-items:center}.move-city-row select{flex:1;min-width:0}
+/* Commissioner mode */
+.commissioner .commissioner-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px 12px;align-items:end;margin:6px 0 14px}.commissioner .commissioner-grid>strong{grid-column:1/-1}.commissioner-teams{display:flex;flex-wrap:wrap;gap:6px 14px;border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin:12px 0}.commissioner-teams legend small{display:block;font-weight:400;opacity:.8}.commissioner-teams .check{display:inline-flex;gap:4px;align-items:center;font-weight:600}.commissioner-order li,.commissioner-trades li{margin:6px 0}
+.commissioner .commissioner-grid label{display:flex;flex-direction:column;gap:3px;font-size:13px}.commissioner .commissioner-grid input{width:100%;box-sizing:border-box}
