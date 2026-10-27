@@ -4,7 +4,7 @@ function coachCandidates(){return state.teams.filter(t=>!expansionPendingSeason(
 const candidatesBeforeExtraAwards=awardCandidates;awardCandidates=function(type,rows=awardRaceRows()){return type==='coach'?coachCandidates():type==='mip'?improvedCandidates(rows):candidatesBeforeExtraAwards(type,rows)};
 function finalizeRegularAwards(){
  if(state.day<seasonLength()||(state.regularAwards||[]).some(r=>r.year===state.year))return;
- const rows=awardRaceRows(),out={year:state.year};for(const [key,label] of AWARD_RACES){const winner=awardCandidates(key,rows)[0],t=winner&&state.teams[winner.club];out[key]=winner?{id:winner.id,name:winner.name,team:t.city+' '+t.name}:null;say(label.replace(' Watch','')+': '+(winner?winner.name+' ('+t.city+')':'No eligible winner')+'.')}
+ const rows=awardRaceRows(),out={year:state.year};for(const [key,label] of AWARD_RACES){const winner=awardCandidates(key,rows)[0],t=winner&&state.teams[winner.club];out[key]=winner?{id:winner.id,name:winner.name,team:t.city+' '+t.name}:null;say(label.replace(' Watch','')+': '+(winner?winner.name+(key==='executive'?', '+t.city+' '+t.name:' ('+t.city+')'):'No eligible winner')+'.')}
  (state.regularAwards??=[]).push(out);
 }
 const awardsDayBeforeFinal=awardRaceDay;awardRaceDay=function(){awardsDayBeforeFinal();finalizeRegularAwards()};
