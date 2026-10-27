@@ -65,7 +65,30 @@ function scheduleOpeningNight(c,rules=c.leagueSettings){
   c.schedule=trial.schedule;c.openingNight=night;return;
  }
  c.schedule=original;
+ if(openingNightInsertDay(c,rules,candidates,count))return;
  throw openingNightError('Cannot fit the featured opener and every team’s debut by Day 3 while preserving fixtures, rest limits and protected dates. Extend the calendar, move an overlapping break, or choose two featured games. No replacement calendar was accepted.');
+}
+/* Dense calendars (round robin: nearly every team plays every day) have no free dates to absorb the games
+   moved off Opening Night. Instead, add a new first day holding only the featured games (taken from their
+   scheduled dates); every other fixture keeps its order one day later, so all teams debut by Day 3.
+   All-Star calendar day numbers shift with the inserted day. */
+function openingNightInsertDay(c,rules,candidates,count){
+ if(c.scheduleFormat==='nba82')return false;
+ for(let attempt=0;attempt<16;attempt++){
+  const selected=[],used=new Set(),ordered=attempt===0?candidates:[...candidates.slice(attempt,attempt+1),...candidates];
+  for(const g of ordered)if(!used.has(g.home)&&!used.has(g.away)){selected.push(g);used.add(g.home);used.add(g.away);if(selected.length===count)break}
+  if(selected.length!==count)continue;
+  const cal=copy(c.schedule);if(!selected.every(g=>cal.some(games=>{const i=games.findIndex(p=>p[0]===g.home&&p[1]===g.away);if(i<0)return false;games.splice(i,1);return true})))continue;
+  const champion=selected.findIndex(g=>['Championship Rematch','Defending Champion Showcase'].includes(g.kind));
+  if(champion>=0){const prime=count===3?1:0;[selected[prime],selected[champion]]=[selected[champion],selected[prime]]}
+  cal.unshift(selected.map(g=>[g.home,g.away]));
+  const allStar=c.allStarCalendar?{...c.allStarCalendar,...Object.fromEntries(['breakStart','breakEnd','start','end','deadline'].filter(k=>Number.isInteger(c.allStarCalendar[k])).map(k=>[k,c.allStarCalendar[k]+1]))}:undefined;
+  const night={year:c.year,format:count===3?'triple':'double',constrained:false,games:selected.map(({home,away,kind,text},i)=>({home,away,kind,text,slot:count===2?['Prime','Late'][i]:['Early','Prime','Late'][i]}))};
+  const trial={...c,schedule:cal,openingNight:night,...(allStar?{allStarCalendar:allStar}:{})};repairOpeningWeek(trial,{...rules,openingWindowDays:3});
+  if(openingWeekAudit(trial,{...rules,openingWindowDays:3}).delayed.length)continue;
+  c.schedule=trial.schedule;c.openingNight=night;if(allStar)c.allStarCalendar=trial.allStarCalendar;return true;
+ }
+ return false;
 }
 const openingCalendarBefore=applyAllStarCalendar;applyAllStarCalendar=function(c,rules=c.leagueSettings){openingCalendarBefore(c,rules);scheduleOpeningNight(c,rules)};
 function openingNightMarkup(){const night=state.openingNight;if(!night||night.year!==state.year)return '';return `<section class="panel note"><h3>Opening Night · ${scheduleDateLabel(1)}</h3>${night.constrained?'<p>The requested spotlight format could not fit this calendar without breaking schedule rules. The original opening slate is retained. Extend the season dates for more flexibility.</p>':night.games.map(g=>`<p><strong>${escapeHTML(g.slot)} · ${escapeHTML(g.kind)}</strong><br>${escapeHTML(state.teams[g.away].city+' '+state.teams[g.away].name)} at ${escapeHTML(state.teams[g.home].city+' '+state.teams[g.home].name)}<br>${escapeHTML(g.text)}</p>`).join('')}</section>`}
