@@ -1,0 +1,59 @@
+{
+ "label": "after",
+ "root": "/home/user/Hoops-Dynasty",
+ "seed": 2026,
+ "seasons": 3,
+ "perSeason": {
+  "injuries": 98.3,
+  "practiceShare": 0.119,
+  "severe": 3.7,
+  "gamesMissedPerTeam": 7.9
+ },
+ "rows": [
+  {
+   "year": 2026,
+   "total": 104,
+   "game": 93,
+   "camp": 0,
+   "practice": 11,
+   "practiceShare": 0.106,
+   "severe": 5,
+   "gamesMissedPerTeam": 6.3,
+   "practiceSeverity": {
+    "Minor": 11,
+    "Moderate": 0,
+    "Severe": 0
+   }
+  },
+  {
+   "year": 2027,
+   "total": 88,
+   "game": 76,
+   "camp": 0,
+   "practice": 12,
+   "practiceShare": 0.136,
+   "severe": 2,
+   "gamesMissedPerTeam": 7.7,
+   "practiceSeverity": {
+    "Minor": 12,
+    "Moderate": 0,
+    "Severe": 0
+   }
+  },
+  {
+   "year": 2028,
+   "total": 103,
+   "game": 91,
+   "camp": 0,
+   "practice": 12,
+   "practiceShare": 0.117,
+   "severe": 4,
+   "gamesMissedPerTeam": 9.6,
+   "practiceSeverity": {
+    "Minor": 12,
+    "Moderate": 0,
+    "Severe": 0
+   }
+  }
+ ]
+}
