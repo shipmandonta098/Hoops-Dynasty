@@ -32,7 +32,8 @@ const gm=run(`(()=>{const t=team();coachFor(t).attributes.charisma=80;coachFor(t
  return {ok,blocked,no,captain:teamCaptain(t).id,strong:strong.id,inbox:(state.gmInbox?.items||[]).filter(m=>m.type==='Morale'&&/captain|leadership/i.test(m.subject)).length}})()`);
 assert(gm.ok.accepted&&gm.captain===gm.strong,'coach accepts a sound recommendation');assert.equal(gm.blocked,null,'recommendations have a cooldown');
 assert(!gm.no.accepted&&/declines/.test(gm.no.message),'coach rejects a poor recommendation');assert(gm.inbox>=2);
-const panel=run(`(()=>{managedTeamId=controlledTeamId();return teamManagementView()})()`);
+const panel=run(`(()=>{rosterTeamId=controlledTeamId();return roster()})()`),tm=run(`(()=>{managedTeamId=controlledTeamId();return teamManagementView()})()`),other=run(`(()=>{rosterTeamId=5;return roster()})()`);
+assert(!/Team leadership/.test(tm),'leadership moved off Team management');assert(/Team leadership/.test(other)&&!/Recommend captain/.test(other),'other teams show a read-only panel');
 assert(/Team leadership/.test(panel)&&/Recommend captain/.test(panel)&&/Head coach responsible/.test(panel)&&!/Designate captain/.test(panel)&&!/minimum of 40 morale/.test(panel),'GM sees an advisory leadership panel, not a dropdown');
 // 5. Captain traded; 9. leaves in free agency; 6. retires (season start).
 const vacancy=(kind)=>run(`(()=>{const t=state.teams[6];selectLeadership(t,{silent:true});const c=teamCaptain(t);said.length=0;t.roster=t.roster.filter(p=>p.id!==c.id);${kind==='trade'?'state.teams[7].roster.push(c)':kind==='fa'?'state.free.push(c)':''};
