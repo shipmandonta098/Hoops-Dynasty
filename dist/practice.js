@@ -27,4 +27,5 @@ function practiceIntensityControl(club){
  if(!practiceEditable(club))return '<div class="coach-summary practice-intensity"><span>Practice intensity: '+PRACTICE_LEVELS[level].label+'</span></div>';
  return '<div class="coach-summary practice-intensity"><label>Practice intensity <select onchange="setPracticeIntensity('+club.id+',this.value)">'+Object.entries(PRACTICE_LEVELS).map(([k,v])=>'<option value="'+k+'" '+(k===level?'selected':'')+'>'+v.label+'</option>').join('')+'</select></label><small>'+help+'</small></div>';
 }
-const coachCardBeforePractice=coachRosterCard;coachRosterCard=function(club){const html=coachCardBeforePractice(club),i=html.lastIndexOf('</section>');return i<0?html:html.slice(0,i)+practiceIntensityControl(club)+html.slice(i)};
+// The coach panel comes first; other modules append their own panels after it.
+const coachCardBeforePractice=coachRosterCard;coachRosterCard=function(club){const html=coachCardBeforePractice(club),i=html.indexOf('</section>');return i<0?html:html.slice(0,i)+practiceIntensityControl(club)+html.slice(i)};

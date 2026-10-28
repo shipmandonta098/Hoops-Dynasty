@@ -49,6 +49,7 @@ assert(run(`PRACTICE_LEVELS.intense.minutes>PRACTICE_LEVELS.standard.minutes&&PR
 l.run(`setPracticeIntensity(controlledTeamId(),'light');setPracticeIntensity(5,'intense');`);
 assert.equal(run(`team().practiceIntensity`),'light');assert.equal(run(`state.teams[5].practiceIntensity`),undefined,'CPU teams are not editable outside commissioner mode');
 assert(/<select onchange="setPracticeIntensity\(/.test(run(`coachRosterCard(team())`))&&/Practice intensity: /.test(run(`coachRosterCard(state.teams[5])`)));
+const card=run(`roster()`),coach=card.slice(card.indexOf('HEAD COACH'));assert(coach.indexOf('practice-intensity')>0&&coach.indexOf('practice-intensity')<coach.indexOf('</section>'),'intensity control sits inside the head coach panel');
 assert.equal(run(`validateCareerData(JSON.parse(JSON.stringify(state))).teams[controlledTeamId()].practiceIntensity`),'light');
 assert.throws(()=>l.run(`(()=>{const r=JSON.parse(JSON.stringify(state));r.teams[2].practiceIntensity='brutal';validateCareerData(r)})()`),/practice intensity/);
 assert.throws(()=>l.run(`(()=>{const r=JSON.parse(JSON.stringify(state));const p=r.teams[1].roster[0];p.medicalInfo={name:'x',severity:'Minor',until:1,rehabUntil:2,context:'gym'};validateCareerData(r)})()`),/medical record/);
