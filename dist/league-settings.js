@@ -96,7 +96,9 @@ const LEAGUE_SETTING_GROUPS=[
  ['Injuries',[
  ['injuriesEnabled','Injuries',true,[[true,'Enabled'],[false,'Disabled']],'Disables new game and training injuries. Existing injuries continue recovering.'],
  ['injuryFrequency','Injury frequency multiplier',1,[0,3,.1],'0 prevents new game and training injuries. Existing injuries still recover normally.'],
- ['injuryDuration','New injury duration multiplier',1,[.25,2,.25],'Scales recovery days assigned to new injuries only.']]],
+ ['injuryDuration','New injury duration multiplier',1,[.25,2,.25],'Scales recovery days assigned to new injuries only.'],
+ ['practiceInjuries','Practice injuries',true,[[true,'Enabled'],[false,'Disabled']],'Teams practice on some off days during the regular season (never the day before a back-to-back). Practice injuries are mostly minor.'],
+ ['practiceInjuryFrequency','Practice injury frequency multiplier',1,[0,3,.1],'Scales practice injury chances on top of the injury frequency multiplier. 0 prevents practice injuries.']]],
  ['Game Simulation',[
  ['foulLimit','Foul limit',6,[2,12,1],'Personal fouls before disqualification.','season'],
  ['bonusFouls','# of fouls until bonus',5,[1,12,1],'The Nth defensive team foul awards bonus free throws. Resets each period, including overtime.','season'],
