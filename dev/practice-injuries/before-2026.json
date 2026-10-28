@@ -1,0 +1,59 @@
+{
+ "label": "before",
+ "root": "/tmp/claude-0/-home-user-Hoops-Dynasty/0953fde6-8e9d-51e5-863b-6464a0dad43c/scratchpad/wt-verify",
+ "seed": 2026,
+ "seasons": 3,
+ "perSeason": {
+  "injuries": 68.3,
+  "practiceShare": 0,
+  "severe": 3.3,
+  "gamesMissedPerTeam": 8
+ },
+ "rows": [
+  {
+   "year": 2026,
+   "total": 68,
+   "game": 68,
+   "camp": 0,
+   "practice": 0,
+   "practiceShare": 0,
+   "severe": 3,
+   "gamesMissedPerTeam": 5.7,
+   "practiceSeverity": {
+    "Minor": 0,
+    "Moderate": 0,
+    "Severe": 0
+   }
+  },
+  {
+   "year": 2027,
+   "total": 68,
+   "game": 68,
+   "camp": 0,
+   "practice": 0,
+   "practiceShare": 0,
+   "severe": 2,
+   "gamesMissedPerTeam": 6.7,
+   "practiceSeverity": {
+    "Minor": 0,
+    "Moderate": 0,
+    "Severe": 0
+   }
+  },
+  {
+   "year": 2028,
+   "total": 69,
+   "game": 69,
+   "camp": 0,
+   "practice": 0,
+   "practiceShare": 0,
+   "severe": 5,
+   "gamesMissedPerTeam": 11.6,
+   "practiceSeverity": {
+    "Minor": 0,
+    "Moderate": 0,
+    "Severe": 0
+   }
+  }
+ ]
+}
