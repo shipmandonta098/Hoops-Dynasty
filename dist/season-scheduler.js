@@ -16,7 +16,8 @@ function nbaAlignment(teams){
 function scheduleRandom(seed){return ()=>{seed|=0;seed=seed+0x6D2B79F5|0;let n=Math.imul(seed^seed>>>15,1|seed);n^=n+Math.imul(n^n>>>7,61|n);return ((n^n>>>14)>>>0)/4294967296}}
 function scheduleShuffle(items,random){const a=[...items];for(let i=a.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 function scheduleRestValid(days){let b2b=0;for(let d=1;d<days.length;d++)if(days[d]&&days[d-1]){b2b++;if(d>1&&days[d-2])return false}return b2b<=16}
-function allStarBreakIndex(year){const day=new Date(Date.UTC(year,9,28+110)).getUTCDay();return 110+(5-day+7)%7}
+// The 82-game calendar opens October 28 of the year before the season year (2026 = 2025–26).
+function allStarBreakIndex(year){const day=new Date(Date.UTC(year-1,9,28+110)).getUTCDay();return 110+(5-day+7)%7}
 function nbaSeasonSchedule(teams,year){
  const groups=nbaAlignment(teams);if(!groups)throw Error('82 games requires two conferences, each with three five-team divisions.');
  const random=scheduleRandom(year*7919+82),conferenceRounds=Array.from({length:60},()=>[]);
@@ -40,7 +41,7 @@ function nbaSeasonSchedule(teams,year){
 /* Date preferences are soft targets. Matchups and rest limits remain hard rules. */
 function balanceScheduleDates(calendar,year,breakDay,random){
  const last=calendar.length-1,occupied=Array.from({length:30},(_,id)=>calendar.map(games=>games.some(pair=>pair.includes(id)))),blocked=day=>day>=breakDay&&day<breakDay+3;
- const preference=day=>[8,3,8,8,3,11,11][new Date(Date.UTC(year,9,28+day)).getUTCDay()];
+ const preference=day=>[8,3,8,8,3,11,11][new Date(Date.UTC(year-1,9,28+day)).getUTCDay()];
  const goals=calendar.map((_,d)=>blocked(d)?0:d===last?15:preference(d));
  const weight=goals.slice(0,last).reduce((a,b)=>a+b,0),scale=1215/weight;
  for(let d=0;d<last;d++)goals[d]*=scale;
