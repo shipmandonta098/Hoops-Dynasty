@@ -1,6 +1,6 @@
 const NEWS_CATEGORIES=['Results','All-Star','Injuries','Transactions','Draft','League','Franchise','Player Feat'];
 let newsFeedUI={type:'all',scope:'all',query:'',season:'all',day:'all',group:'day',limit:30};
-function newsIsInjury(text){return /\bmedical report:|\binjur(?:y|ies|ed)\b/i.test(text)}
+function newsIsInjury(text){return /\bmedical report:|\binjur(?:y|ies|ed)\b|\b(?:left|in) practice\b/i.test(text)}
 function newsCategory(text){return /all.star/i.test(text)?'All-Star':newsIsInjury(text)?'Injuries':/draft|lottery|selects /i.test(text)?'Draft':/signs |signed |trade|release|contract/i.test(text)?'Transactions':/champion|playoff|all.star|season|deadline/i.test(text)?'League':'Franchise'}
 function newsStore(){if(!state.newsFeed)state.newsFeed={nextId:1,items:[...state.news].map((text,i)=>({id:i+1,year:null,day:null,phase:'Earlier update',category:newsCategory(text),headline:text,detail:'',teams:[],game:null}))};state.newsFeed.items.forEach(n=>{if(n.category!=='Results'&&newsIsInjury(n.headline)){n.category='Injuries';for(const t of state.teams)if(n.headline.includes('('+t.abbr+')')&&!n.teams.includes(t.id))n.teams.push(t.id)}});state.newsFeed.nextId=Math.max(state.newsFeed.nextId,...state.newsFeed.items.map(n=>n.id+1),1);return state.newsFeed}
 function addNewsItem(item){const feed=newsStore();feed.items.unshift({id:feed.nextId++,year:state.year,day:state.day,phase:seasonPhaseLabel(),detail:'',teams:[],game:null,...item});feed.items=feed.items.slice(0,500)}

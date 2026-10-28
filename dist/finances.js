@@ -102,7 +102,7 @@ ownerPayroll=function(club){return financeOwnerPayrollBefore(club)+financeDead(c
 const financeSkillBefore=coachingSkill;
 coachingSkill=function(club,key){const f=state.finances?.[club.id],budget={scouting:'scouting',teaching:'coaching',veterans:'coaching',conditioning:'health'}[key];return Math.max(1,Math.min(99,financeSkillBefore(club,key)+(f&&budget?(financeBudget(f,budget)-5)*1.5:0)))};
 const financeInjuryBefore=durabilityInjuryDetails;
-durabilityInjuryDetails=function(p,conditioning,roll=Math.random()){const club=state.teams.find(t=>t.roster.includes(p)),budget=financeBudget(state.finances?.[club?.id],'health'),result=financeInjuryBefore(p,conditioning,Math.min(.999,roll+Math.max(0,budget-5)*.002));result.days=Math.max(1,Math.round(result.days*(1-(budget-5)*.015)));return result};
+durabilityInjuryDetails=function(p,conditioning,roll=Math.random(),context=null){const club=state.teams.find(t=>t.roster.includes(p)),budget=financeBudget(state.finances?.[club?.id],'health'),result=financeInjuryBefore(p,conditioning,Math.min(.999,roll+Math.max(0,budget-5)*.002),context);result.days=Math.max(1,Math.round(result.days*(1-(budget-5)*.015)));return result};
 const financeQuoteBefore=freeAgentQuote;
 freeAgentQuote=function(p,club=team()){return Math.round(financeQuoteBefore(p,club)*(1-(state.finances?.[club.id]?.level||0)*.008)*10)/10};
 const financeDevelopBefore=developAttributes;
