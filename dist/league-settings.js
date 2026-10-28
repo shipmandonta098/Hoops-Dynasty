@@ -35,6 +35,7 @@ const LEAGUE_SETTING_GROUPS=[
  ['Players',[
  ['developmentRate','Player development / decline multiplier',1,[0,2,.1],'Scales offseason rating changes, including decline. 0 freezes overall development; aging continues.']]],
  ['Teams',[
+ ['captainDesignations','Official captains','captainCo',[['captainCo','Captain and co-captain'],['captainOnly','Captain only'],['none','No official captains']],'Head coaches choose captains by appointment, player vote or consultation. Teams may also go without a formal captain.'],
  ['rosterMin','Minimum roster size',14,[5,30,1],'Minimum retained after roster moves and required to finish free agency. Existing rosters are not automatically changed.'],
  ['rosterMax','Maximum roster size',15,[5,30,1],'Maximum for signings, trades and drafted players. Excess draft picks are held as unsigned rights.'],
  ['altitudeStrength','Altitude fatigue strength',1,[0,2,.1],'0 disables altitude. 1 uses modest estimated fatigue and recovery effects. Independent of crowd advantage; no direct shooting penalty.'],
