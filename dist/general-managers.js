@@ -48,16 +48,17 @@ function gmCareerTotals(g,current=null){const rows=[...g.seasons.filter(r=>r.yea
 // Hot seat: results against the executive-award expectation, recent pressure and owner patience (owners.js).
 function gmReview(club,g,row){
  const owner=ownerFor(club),games=row.w+row.l,rate=games?row.w/games:.5,expected=(state.executiveSeason?.year===state.year?state.executiveSeason.teams.find(t=>t.key===club.key)?.expectedRate:null)??.5;
- const miss=(expected-rate)*100,floor=Math.max(0,.45-rate)*100,pressure=Math.max(0,Math.min(100,g.pressure*.7+miss*1.5+floor-(row.playoffs?12:0)-(row.title?60:0)+(owner.patience<35?8:0)+(owner.fired?20:0)));
- const tenure=state.year-g.hiredYear+1,threshold=14+owner.patience*.2;
+ // Owner patience collapses quickly in owners.js, so it nudges pressure; sustained misses decide.
+ const miss=(expected-rate)*100,floor=Math.max(0,.4-rate)*80,ownerHeat=(100-owner.patience)*.1+(owner.fired?5:0),pressure=Math.max(0,Math.min(100,g.pressure*.6+miss+floor-(row.playoffs?10:0)-(row.title?60:0)+ownerHeat));
+ const tenure=state.year-g.hiredYear+1,threshold=38;
  return {pressure:Math.round(pressure*10)/10,fire:tenure>=2&&!row.title&&pressure>=threshold,expected,rate,threshold};
 }
 function gmRetire(club,reason,year=state.year){const g=club.gm;if(!g)return null;(state.formerGMs??=[]).push({...g,leftYear:year,lastTeam:club.city+' '+club.name,reason});if(state.formerGMs.length>2000)state.formerGMs=state.formerGMs.slice(-2000);delete club.gm;return g}
 function archiveGMSeasons(){
  for(const club of state.teams){if(expansionPendingSeason(club)||gmUserTeam(club))continue;const g=gmFor(club);if(g.seasons.some(r=>r.year===state.year))continue;
   const row=gmCurrentSeason(club);g.seasons.push(row);const review=gmReview(club,g,row);g.pressure=review.pressure;g.age=Math.min(100,g.age+1);
-  if(!review.fire)continue;const old=gmRetire(club,'Fired'),next=club.gm=generateGM(club,state,{hiredYear:state.year+1}),n=old.seasons.filter(r=>r.key===club.key).length;
-  say(club.city+' fires GM '+old.name+' after '+row.w+'–'+row.l+' ('+n+' tracked '+(n===1?'year':'years')+' in charge); '+next.name+' named general manager.');
+  if(!review.fire)continue;const old=gmRetire(club,'Fired'),next=club.gm=generateGM(club,state,{hiredYear:state.year+1}),n=state.year-old.hiredYear+1;
+  say(club.city+' fires GM '+old.name+' after a '+row.w+'–'+row.l+' season ('+n+' '+(n===1?'season':'seasons')+' in charge); '+next.name+' named general manager.');
  }
 }
 const archiveCoachBeforeGM=archiveCoachRecords;archiveCoachRecords=function(){archiveCoachBeforeGM();archiveGMSeasons()};
