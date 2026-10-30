@@ -1,7 +1,7 @@
 const LEAGUE_HONORS=[['champion','Champion'],['runnerUp','Runner-up'],['finalsMvp','Finals MVP'],['mvp','MVP'],['dpoy','Defensive Player of the Year'],['roy','Rookie of the Year'],['mip','Most Improved Player'],['sixth','Sixth Player of the Year'],['coach','Coach of the Year']];
 function seasonHonors(){
  if(state.champion===null)return null;
- const rows=awardRaceRows(),select=(list,key)=>[...list].filter(r=>Number.isFinite(r[key])).sort((a,b)=>b[key]-a[key]||a.id-b.id)[0],person=r=>r?{name:r.name,team:state.teams[r.club]?.city+' '+state.teams[r.club]?.name}:null;
+ const rows=awardRaceRows(),select=(list,key)=>[...list].filter(r=>Number.isFinite(r[key])).sort((a,b)=>b[key]-a[key]||a.id-b.id)[0],person=r=>r?{name:r.name,team:state.teams[r.club]?.city+' '+state.teams[r.club]?.name,...(Number.isInteger(r.id)?{id:r.id}:{})}:null;
  const clubName=id=>{const t=state.teams[id];return t?{name:t.city+' '+t.name,team:''}:null},final=state.history.find(g=>g.stage==='Championship'&&g.winner===state.champion),runner=final?(final.a===state.champion?final.b:final.a):null;
  const finalPlayers=final?.box.filter(p=>p.team===state.teams[state.champion].abbr&&p.played!==false&&p.mp>0).map(p=>({...p,club:state.champion,id:p.playerId??0,finalScore:p.pts+.7*p.reb+.7*p.ast+(p.stl||0)+(p.blk||0)-(p.tov||0)}))||[];
  const contribution=r=>[r.pts,r.reb,r.ast,r.stl,r.blk,r.tov].every(Number.isFinite)&&r.gp>0?(r.pts+.7*r.reb+.7*r.ast+r.stl+r.blk-r.tov)/r.gp:null;
