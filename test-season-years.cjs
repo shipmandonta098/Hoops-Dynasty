@@ -16,7 +16,7 @@ const nba=run(`({year:state.year,first:scheduleDate(1).toISOString(),last:schedu
 assert.equal(nba.year,2026);assert.equal(iso(nba.first),'2025-10-28');assert.match(nba.last,/^2026-0[4-6]/);assert.equal(nba.label,'2025–26');assert.equal(nba.crosses,true);
 assert.deepEqual(nba.range.map(iso),['2025-10-28','2026-04-19']);
 assert(nba.breakDates.every(d=>d.startsWith('2026-02')),'All-Star break falls in February 2026: '+nba.breakDates);assert.equal(nba.protectedBreak,true);
-assert.equal(new Date(nba.breakDates[0]).getUTCDay(),5,'the generated break starts on a Friday of the displayed calendar');
+assert.equal(new Date(nba.breakDates[0]).getUTCDay(),4,'the break starts on the Thursday before All-Star Weekend in the displayed calendar');
 assert.equal(nba.draft,2026,'the June 2026 draft after the 2025–26 season is the 2026 Draft');
 const schedulePage=run(`scheduleView()`);assert(/2025–26 SEASON/.test(schedulePage)&&!/2026–27/.test(schedulePage),'schedule header reads 2025–26');
 // Labels everywhere use the season label; the next season is 2026–27 and the start button names it.

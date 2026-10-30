@@ -1,23 +1,49 @@
 /* Dated exhibitions and protected calendar breaks. Regular-season games never receive exhibition stats. */
-function allStarWindow(days,rules,gender='male'){
+// All-Star Weekend is anchored to real weekdays: Rising Stars Friday, the contests Saturday, the game Sunday (two event
+// days use Saturday + Sunday; one uses Sunday). The game falls on the Sunday nearest the target point of the season. The
+// break keeps its length setting: one rest day before Friday (two for an eight-day break), then rest until games resume
+// on Thursday.
+function allStarBreakShape(rules){const length=Math.max(5,rules.allStarRestLength||7),events=Math.max(1,Math.min(3,rules.allStarEventDays||3)),before=Math.max(1,Math.min(2,length-6));return {length,events,before,after:length-3-before}}
+function allStarTargetDay(days,rules){return Math.round(days*(rules.allStarSchedule==='custom'?rules.allStarPercent:65)/100)}
+// Sunday nearest the target among days 1..days whose full break fits; dateOf(day) gives the calendar date.
+function allStarWeekendSunday(days,rules,dateOf){const shape=allStarBreakShape(rules),target=allStarTargetDay(days,rules);let best=null;for(let d=1;d<=days;d++){if(dateOf(d).getUTCDay()!==0||d-2-shape.before<1||d+shape.after>days)continue;if(best===null||Math.abs(d-target)<Math.abs(best-target))best=d}return best}
+function allStarWindowAround(sunday,shape){const breakStart=sunday-2-shape.before;return {breakStart,breakEnd:sunday+shape.after,start:sunday-shape.events+1,end:sunday,deadline:Math.max(1,breakStart-1)}}
+function allStarWindow(days,rules,gender='male',year=null){
+ if(Number.isInteger(year)){const start=seasonDateRange(year,rules).start.getTime(),sunday=allStarWeekendSunday(days,rules,d=>new Date(start+(d-1)*86400000));if(sunday)return allStarWindowAround(sunday,allStarBreakShape(rules))}
  const length=Math.min(days,Math.max(rules.allStarRestLength||7,rules.allStarEventDays||3)),duration=Math.min(length,rules.allStarEventDays||3),center=Math.round(days*(rules.allStarSchedule==='custom'?rules.allStarPercent:65)/100);
  const breakStart=Math.max(1,Math.min(days-length+1,center-Math.floor(length/2))),breakEnd=breakStart+length-1,start=breakStart+Math.floor((length-duration)/2);
  return {breakStart,breakEnd,start,end:start+duration-1,deadline:Math.max(1,breakStart-1)};
 }
+// Insert the break into a calendar that has none: rest starts on the Thursday (Wednesday for an eight-day break) whose
+// weekend Sunday is nearest the target. startMs is the date of the calendar's first day. 82-game calendars must keep
+// every team within the rest limits; insertion alone never breaks them.
+function allStarPlaceBreak(career,rules,startMs,base=career.schedule){
+ const shape=allStarBreakShape(rules),weekday=row=>new Date(startMs+row*86400000).getUTCDay(),firstWeekday=(5-shape.before+7)%7,target=allStarTargetDay(base.length,rules)-2-shape.before;
+ const restValid=schedule=>career.scheduleFormat!=='nba82'||career.teams.every((_,id)=>scheduleRestValid(schedule.map(r=>r.some(p=>p.includes(id)))));
+ const rows=[];for(let p=1;p<base.length;p++)if(weekday(p)===firstWeekday)rows.push(p);rows.sort((a,b)=>Math.abs(a-target)-Math.abs(b-target)||a-b);
+ for(const p of rows){const schedule=[...base.slice(0,p),...Array.from({length:shape.length},()=>[]),...base.slice(p)];if(!restValid(schedule))continue;career.schedule=schedule;return allStarWindowAround(p+shape.before+3,shape)}
+ return null;
+}
+function allStarCalendarStart(career,rules){return career.scheduleFormat==='custom'?seasonDateRange(career.year,rules).start.getTime():Date.UTC(career.year-1,9,28)}
+// Standard (82-game and round-robin) calendars open October 28 of the year before the season year. The 82-game generator
+// leaves Friday–Sunday empty near 65%; fold it into the break when every team's rest limits still hold.
+function standardAllStarWindow(career,rules){
+ const gap=allStarBreakIndex(career.year),hasGap=career.scheduleFormat==='nba82'&&career.schedule.slice(gap,gap+3).length===3&&career.schedule.slice(gap,gap+3).every(r=>!r.length),start=allStarCalendarStart(career,rules);
+ for(const base of hasGap?[career.schedule.filter((_,i)=>i<gap||i>=gap+3),career.schedule]:[career.schedule]){const window=allStarPlaceBreak(career,rules,start,base);if(window)return window}
+ return null;
+}
+// Re-anchor an existing break after the calendar changed under it (an Opening Night day added at the front).
+function allStarReanchor(career,rules,calendar){
+ const base=[...career.schedule.slice(0,calendar.breakStart-1),...career.schedule.slice(calendar.breakEnd)];if(career.schedule.slice(calendar.breakStart-1,calendar.breakEnd).some(r=>r.length))return null;
+ const trial={...career,schedule:base},window=allStarPlaceBreak(trial,rules,allStarCalendarStart(career,rules));if(!window)return null;career.schedule=trial.schedule;return {year:career.year,...window};
+}
 function applyAllStarCalendar(career,rules=career.leagueSettings){
  delete career.allStarCalendar;if(!rules.allStarEnabled)return;
  let window;
- if(career.scheduleFormat==='custom')window=allStarWindow(career.schedule.length,rules,career.leagueGender);
+ if(career.scheduleFormat==='custom')window=allStarWindow(career.schedule.length,rules,career.leagueGender,career.year);
  else{
-  const length=Math.max(rules.allStarRestLength||7,rules.allStarEventDays||3),original=career.schedule.length;
-  // Extend the existing NBA gap in automatic mode; otherwise insert a protected break.
-  const oldIndex=allStarBreakIndex(career.year),existing=career.scheduleFormat==='nba82'&&rules.allStarSchedule==='auto'&&career.schedule.slice(oldIndex,oldIndex+3).length===3&&career.schedule.slice(oldIndex,oldIndex+3).every(r=>!r.length);
-  const index=existing?oldIndex:Math.max(1,Math.min(original-1,Math.round(original*(rules.allStarSchedule==='custom'?rules.allStarPercent:65)/100)));
-  if(existing&&length<3)career.schedule.splice(index+length,3-length);
-  const added=existing?Math.max(0,length-3):length;
-  career.schedule.splice(index+(existing?3:0),0,...Array.from({length:added},()=>[]));
-  const duration=rules.allStarEventDays,breakLength=length,start=index+1+Math.floor((breakLength-duration)/2);
-  window={breakStart:index+1,breakEnd:index+breakLength,start,end:start+duration-1,deadline:Math.max(1,index)};
+  window=standardAllStarWindow(career,rules);
+  if(!window){const length=Math.max(rules.allStarRestLength||7,rules.allStarEventDays||3),index=Math.max(1,Math.min(career.schedule.length-1,allStarTargetDay(career.schedule.length,rules)));career.schedule.splice(index,0,...Array.from({length},()=>[]));const duration=Math.min(3,rules.allStarEventDays||3),start=index+1+Math.floor((length-duration)/2);window={breakStart:index+1,breakEnd:index+length,start,end:start+duration-1,deadline:Math.max(1,index)}}
   Object.assign(rules,calendarSettingDefaults(career));
  }
  if(career.schedule.slice(window.breakStart-1,window.breakEnd).some(r=>r.length))throw Error('The All-Star break conflicts with scheduled games. Rebuild the preseason calendar.');
