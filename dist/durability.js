@@ -3,7 +3,7 @@ function generatedDurability(p){let seed=(p.id+17)>>>0;for(const c of p.name)see
 function withDurabilityAttributes(a,p){return a.dur===undefined?{...a,dur:generatedDurability(p)}:a}
 function durabilityRating(p){return withBasketballAttributes(p).attributes.dur}
 function durabilityTier(value){return value>=90?'Iron Man':value>=75?'Reliable':value>=50?'Fragile':'Injury Prone'}
-function medicalStamp(){return Math.floor(scheduleDate(state.day+1).getTime()/86400000)}
+function medicalStamp(){return Math.floor(calendarStampDate(state.day+1).getTime()/86400000)}
 function readMedicalInfo(raw,bad){if(raw===undefined)return undefined;if(!raw||typeof raw.name!=='string'||!raw.name.length||raw.name.length>80||!['Minor','Moderate','Severe'].includes(raw.severity)||!Number.isInteger(raw.until)||!Number.isInteger(raw.rehabUntil)||raw.until< -100000||raw.until>4000000||raw.rehabUntil<raw.until||raw.rehabUntil>raw.until+30||raw.context!==undefined&&raw.context!=='practice')bad('invalid medical record.');return {name:raw.name,severity:raw.severity,until:raw.until,rehabUntil:raw.rehabUntil,...(raw.context?{context:raw.context}:{})}}
 function durabilityFatigueMultiplier(p){return 1.2-durabilityRating(p)*.003}
 function durabilityRecoveryMultiplier(p){return .8+durabilityRating(p)*.004}

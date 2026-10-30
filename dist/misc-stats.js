@@ -13,15 +13,15 @@ function miscProfileRows(ctx){
  const current=referenceProfileRows(ctx,selectedProfileGames(ctx.p)).map(r=>({...r,...miscAggregate(r.games)}));
  const archive=profileStatsStage==='regular'?state.statsArchive||[]:profileStatsStage==='playoffs'?state.playerPostseasonArchive||[]:[...(state.statsArchive||[]),...(state.playerPostseasonArchive||[])];
  const years=new Map();for(const r of archive.filter(r=>r.id===ctx.p.id&&r.year<state.year)){const entries=years.get(r.year)||[];entries.push(r);years.set(r.year,entries)}
- const past=[...years].sort((a,b)=>b[0]-a[0]).map(([year,rows])=>{const r={season:year+'–'+String(year+1).slice(-2),team:[...new Set(rows.map(r=>r.team))].join(' / ')};for(const k of ['gp','gs','mp','pf',...MISC_TOTAL_KEYS])r[k]=rows.every(x=>Number.isFinite(x[k]))?rows.reduce((n,x)=>n+x[k],0):null;return miscRates(r)});
+ const past=[...years].sort((a,b)=>b[0]-a[0]).map(([year,rows])=>{const r={season:seasonLabel(year),team:[...new Set(rows.map(r=>r.team))].join(' / ')};for(const k of ['gp','gs','mp','pf',...MISC_TOTAL_KEYS])r[k]=rows.every(x=>Number.isFinite(x[k]))?rows.reduce((n,x)=>n+x[k],0):null;return miscRates(r)});
  return [...current,...past];
 }
 function miscProfileTable(ctx){return '<section class="reference-stats"><div class="reference-scroll" role="region" aria-label="Miscellaneous season statistics, scroll horizontally" tabindex="0"><table><caption>'+escapeHTML(ctx.p.name)+' · Miscellaneous</caption><thead><tr>'+MISC_COLUMNS.map(([,label],i)=>'<th scope="col"><abbr title="'+MISC_HELP[i]+'">'+label+'</abbr></th>').join('')+'</tr></thead><tbody>'+miscProfileRows(ctx).map(r=>'<tr>'+MISC_COLUMNS.map(([key],i)=>'<'+(i?'td':'th scope="row"')+'>'+miscCell(r,key)+'</'+(i?'td':'th')+'>').join('')+'</tr>').join('')+'</tbody></table></div><p class="reference-note">'+MISC_NOTE+'</p></section>'}
 const MISC_NOTE='Counting stats are totals. DQ = foul-outs under that game’s foul limit; EJECT = ejections. Double-doubles include triple-doubles. PF/48 always uses 48 minutes, including WNBA games. +/− is total on-court point differential. — means required historical tracking is unavailable. Competition filters apply; archived traded-player seasons show combined totals.';
 const miscStatsRowsBefore=statsRows;
-statsRows=function(...args){return miscStatsRowsBefore(...args).map(r=>({...r,...miscAggregate(r.games),season:state.year+'–'+String(state.year+1).slice(-2)}))};
+statsRows=function(...args){return miscStatsRowsBefore(...args).map(r=>({...r,...miscAggregate(r.games),season:seasonLabel(state.year)}))};
 const miscSelectedStatsBefore=selectedPlayerStats;
-selectedPlayerStats=function(){return miscSelectedStatsBefore().map(r=>({...miscRates(r),season:statsUI.season==='career'?'Career':r.season||(statsUI.season+'–'+String(Number(statsUI.season)+1).slice(-2))}))};
+selectedPlayerStats=function(){return miscSelectedStatsBefore().map(r=>({...miscRates(r),season:statsUI.season==='career'?'Career':r.season||seasonLabel(Number(statsUI.season))}))};
 const miscLeagueStatsBefore=leagueStatsView;
 leagueStatsView=function(){return miscLeagueStatsBefore()+(statsUI.tab==='misc'?'<p class="note">'+MISC_NOTE+'</p>':'')};
 const miscSelectProfileBefore=selectProfileStats;

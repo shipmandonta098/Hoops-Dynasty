@@ -23,7 +23,7 @@ const HIGH_TABLE_COLUMNS=[
 function referenceProfileRows({p,club},games){
  const teams=[...new Set(games.map(g=>g.team))];
  const leagueName=state.leagueName||'Dynasty Basketball League';
- const metadata={season:state.year+'–'+String(state.year+1).slice(-2),age:p.age,league:leagueName.split(/\s+/).map(w=>w[0]).join('').slice(0,6),pos:p.pos};
+ const metadata={season:seasonLabel(state.year),age:p.age,league:leagueName.split(/\s+/).map(w=>w[0]).join('').slice(0,6),pos:p.pos};
  const row=(team,entries)=>({...metadata,team,gp:entries.length,games:entries,...advancedProfileValues(entries)});
  return [row(teams.length>1?'TOT':teams[0]||club?.abbr||'FA',games),...(teams.length>1?teams.map(t=>row(t,games.filter(g=>g.team===t))):[])];
 }

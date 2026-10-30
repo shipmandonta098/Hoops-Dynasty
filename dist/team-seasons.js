@@ -2,7 +2,7 @@
 let franchiseSeasonYear=null,franchiseSeasonMode='pergame',franchiseSeasonCompetition='regular';
 const SEASON_COUNTS=['gp','gs','mp','fgm','fga','tpm','tpa','ftm','fta','orb','drb','reb','ast','stl','blk','tov','pf','pts'];
 const SEASON_SUMMARY=['gp','pts','opp','poss','defPoss','minutes'];
-function franchiseSeasonLabel(year){return year+'–'+String(year+1).slice(-2)}
+function franchiseSeasonLabel(year){return seasonLabel(year)}
 function openFranchiseSeason(id,year){const t=state.teams.find(t=>t.id===Number(id));if(!t||!franchiseHistoryRows().some(r=>r.key===t.key&&r.year===Number(year)))return;historyTeamId=t.id;franchiseSeasonYear=Number(year);franchiseHistoryPage='seasonDetail';go('Franchise history')}
 function seasonStatTotals(rows){const out={gp:rows.length};for(const k of SEASON_COUNTS.filter(k=>k!=='gp'))out[k]=rows.every(r=>Number.isFinite(r[k]))?rows.reduce((sum,r)=>sum+r[k],0):null;return out}
 function seasonPlayerMetadata(p,row){return {id:p?.id??row?.playerId??null,name:p?.name||row.name,pos:p?.pos||null,age:p?.age??null,height:p?.bio?.heightInches??null,weight:p?.bio?.weightLbs??null,birth:p?.bio?.birthdate||null,college:p?.bio?.college||null}}

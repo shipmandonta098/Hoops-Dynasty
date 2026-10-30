@@ -3,7 +3,7 @@
 const CONTRACT_BOOK_VERSION=1;
 function contractUSD(v){return Number.isFinite(v)?Math.round(v*1e6):0;}
 function contractCash(v){return v===null||v===undefined?'Unavailable':new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(v);}
-function contractSeason(y){return wnbaEnabled()?String(y):y+'–'+String(y+1).slice(-2);}
+function contractSeason(y){return seasonLabel(y);}
 function contractRows(p,club,year=state.year){
  if(!club)return [];
  if(wnbaEnabled()&&p.wnbaContract)return p.wnbaContract.annual.map(a=>({...a,cap:wnbaCapCharge(p,a,a.year),optionType:a.option?'team':null}));
