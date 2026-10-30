@@ -33,6 +33,7 @@ const LEAGUE_SETTING_GROUPS=[
  ['firstRoundByes','First-round byes',0,[0,8,1],'Top seeds advance automatically. Byes reduce qualifiers; use an even number when splitting by conference.','season'],
  ['splitPlayoffs','Split by conference',true,[[true,'Enabled'],[false,'Disabled']],'With exactly two conferences and enough teams for each side, seed the top N from each separately. Otherwise use league-wide seeds.','season']]],
  ['Players',[
+ ['awardTeamPositions','All-League and All-Defensive teams','balanced',[['balanced','Position-balanced · 2 guards, 2 forwards, 1 center'],['positionless','Position-less · best five']],'Applies to award teams chosen at the end of each regular season. All-Rookie teams are always position-less.'],
  ['developmentRate','Player development / decline multiplier',1,[0,2,.1],'Scales offseason rating changes, including decline. 0 freezes overall development; aging continues.']]],
  ['Teams',[
  ['captainDesignations','Official captains','captainCo',[['captainCo','Captain and co-captain'],['captainOnly','Captain only'],['none','No official captains']],'Head coaches choose captains by appointment, player vote or consultation. Teams may also go without a formal captain.'],
