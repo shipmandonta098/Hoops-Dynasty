@@ -82,7 +82,10 @@ function openingNightInsertDay(c,rules,candidates,count){
   const champion=selected.findIndex(g=>['Championship Rematch','Defending Champion Showcase'].includes(g.kind));
   if(champion>=0){const prime=count===3?1:0;[selected[prime],selected[champion]]=[selected[champion],selected[prime]]}
   cal.unshift(selected.map(g=>[g.home,g.away]));
-  const allStar=c.allStarCalendar?{...c.allStarCalendar,...Object.fromEntries(['breakStart','breakEnd','start','end','deadline'].filter(k=>Number.isInteger(c.allStarCalendar[k])).map(k=>[k,c.allStarCalendar[k]+1]))}:undefined;
+  // The new first day pushes every date back one day; place All-Star Weekend again so it stays on Friday–Sunday.
+  const cs=c.allStarCalendar,shifted=cs?{...cs,...Object.fromEntries(['breakStart','breakEnd','start','end','deadline'].filter(k=>Number.isInteger(cs[k])).map(k=>[k,cs[k]+1]))}:undefined,probe={...c,schedule:cal},anchored=shifted?allStarReanchor(probe,{...(c.leagueSettings||{}),...rules},shifted):null;
+  if(anchored)cal.splice(0,cal.length,...probe.schedule);
+  const allStar=anchored||shifted;
   const night={year:c.year,format:count===3?'triple':'double',constrained:false,games:selected.map(({home,away,kind,text},i)=>({home,away,kind,text,slot:count===2?['Prime','Late'][i]:['Early','Prime','Late'][i]}))};
   const trial={...c,schedule:cal,openingNight:night,...(allStar?{allStarCalendar:allStar}:{})};repairOpeningWeek(trial,{...rules,openingWindowDays:3});
   if(openingWeekAudit(trial,{...rules,openingWindowDays:3}).delayed.length)continue;
