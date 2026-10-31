@@ -9,7 +9,7 @@ const LIFECYCLE=Object.freeze({retireBase:[.03,.06,.1,.16,.25,.37,.5,.64,.78,.88
 // Yearly OVR change before trait adjustments, by the player's new age.
 let lifecycleLastReport=null;
 // Growth slows near potential and for elite players, so the share of 85+ players stays stable.
-function developmentBase(p){const a=p.age;let d=a<=21?rand(1,4):a<=23?rand(0,3):a<=25?rand(0,2):a<=27?rand(-1,1):a<=29?rand(-2,1):a<=31?rand(-3,0):a<=33?rand(-4,0):rand(-5,-1);
+function developmentBase(p){const a=p.age;let d=a<=21?rand(0,3):a<=23?rand(0,2):a<=25?rand(-1,1):a<=27?rand(-1,1):a<=29?rand(-2,0):a<=31?rand(-3,0):a<=33?rand(-4,-1):rand(-5,-1);
  if(d>0&&p.ovr>=85)d=Math.floor(d/2);if(d>1&&p.pot-p.ovr<=3)d=1;return d}
 function lifecycleSeasonRows(year){const rows=new Map();for(const r of state.statsArchive||[])if(r.year===year&&Number.isInteger(r.id)){const o=rows.get(r.id)||{gp:0,mp:0};o.gp+=r.gp||0;o.mp+=r.mp||0;rows.set(r.id,o)}return rows}
 function lifecycleRetireChance(p,season){
