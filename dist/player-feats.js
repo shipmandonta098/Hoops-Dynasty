@@ -73,6 +73,8 @@ function featFinalize(g,context){
   addNewsItem({category:'Player Feat',featId:f.id,headline:f.text,detail:t.city+' '+t.name+' '+(won?'defeated':'lost to')+' '+opp.city+' '+opp.name+', '+score.join('–')+featContext(g,context)+'. '+(f.e.type==='stat'?'Final box score.':featClock(g,f.e)+' · Score at the play: '+f.e.score.join('–')+'.'),teams:[[g.a,g.b][f.side],[g.a,g.b][1-f.side]],day:g.day,phase:g.stage,game:{year:state.year,day:g.day,a:g.a,b:g.b,stage:g.stage}});entry.published.push(f.id);
  }
 }
+// Roll the feat store over with the season, so last season's feats are archived without waiting for the next game.
+const featNewSeasonBefore=newSeason;newSeason=function(...args){const year=state.year,result=featNewSeasonBefore(...args);if(state.year!==year&&state.playerFeats)featEnsure();return result};
 const featPlayBefore=play;play=function(a,b,stage='Regular season'){featEnsure();const context=featSeriesBefore(a,b,stage),g=featPlayBefore(a,b,stage);if(g.summaryData?.complete)featFinalize(g,context);return g;};
 function featFind(id){for(const entry of state.playerFeats?.games||[]){const feat=entry.feats.find(f=>f.id===id);if(feat)return {entry,feat};}return null;}
 function featHighlightMarkup(f){return summaryPlayer({playerId:f.playerId,name:f.name})+(f.teamAbbr?' · '+escapeHTML(f.teamAbbr):'')+' · '+escapeHTML(f.label)+' · '+f.e.score.join('–')+'<p>'+escapeHTML(f.text)+'</p>';}
