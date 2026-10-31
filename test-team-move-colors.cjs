@@ -47,4 +47,11 @@ assert.deepEqual(run(`FRANCHISE_PRESETS.slice(0,12).map(p=>p.abbr)`),['ANA','BUF
 l.run(`setupDraft=makeDraft();onSetup=true;document.getElementById=id=>id==='new-team-division'?{value:'northwest'}:null;closeTitleModal=()=>{};renderSetup=()=>{};addSetupPreset('OKC');`);
 assert.equal(run(`setupDraft.teams.find(t=>t.abbr==='OKC')?.city`),'Oklahoma City');
 assert.equal(run(`(()=>{const s=fresh([...defaultTeams().slice(0,29),presetTeamDefinition(franchisePreset('OKC'))],2,2026,'male',10);s.gmName='OKC';const t=validateCareerData(JSON.parse(JSON.stringify(s))).teams.find(t=>t.abbr==='OKC');return t.logoIndex+' '+t.population})()`),'12 1497821');
-console.log('Team editors: generated color names, Move to an available city with metro population, Oklahoma City preset passed.');
+// Setup editor: Arena name field; typed names stick, an automatic "<City> Arena" follows a move, blank is rejected.
+const arena=run(`(()=>{renderSetup=()=>{};onSetup=true;setupDraft=makeDraft();setupDraft.gmName='Arena';let html='';editorModal=(a,b)=>{html=b};openTeamEditor(2);
+ const base=i=>{const t=setupDraft.teams[i];return {city:t.city,name:t.name,abbr:t.abbr,population:(t.population/1e6).toFixed(1),stadiumCapacity:18000,divisionId:t.divisionId,logo:logoChoices().findIndex(c=>c.logoAtlas===t.logoAtlas&&c.logoIndex===t.logoIndex),colors:copy(t.colors),elevationFt:''}};
+ const auto=setupDraft.teams[4].city+' Arena';applyTeamEdit(2,{...base(2),arenaName:' The Pit '});applyTeamEdit(4,{...base(4),city:'Omaha',arenaName:auto});applyTeamEdit(5,{...base(5),city:'Tulsa',arenaName:'Oil Dome'});
+ let blank='';try{applyTeamEdit(6,{...base(6),arenaName:'  '})}catch(e){blank=e.message}const s=validateCareerData(buildSetupCareer(copy(setupDraft)));
+ return {field:/name="arenaName"[^>]*value="[^"]+ Arena"/.test(html),names:[2,4,5].map(i=>s.teams[i].arenaName),blank}})()`);
+assert(arena.field,'the setup editor has an Arena name field');assert.deepEqual(arena.names,['The Pit','Omaha Arena','Oil Dome']);assert.match(arena.blank,/arena name/);
+console.log('Team editors: arena name, generated color names, Move to an available city with metro population, Oklahoma City preset passed.');
