@@ -48,7 +48,7 @@ function headlessHealth(){
 function headlessGrowth(){return Object.fromEntries(['history','statsArchive','playerPostseasonArchive','teamStatsArchive','teamSeasonArchive','draftHistory','draftRights','free','championsArchive','leagueHistory'].map(k=>[k,state[k]?.length||0]).concat([['hallPeople',state.hallOfFame?.people?.length||0],['news',state.newsFeed?.items?.length||0],['decisions',state.decisions?.entries?.length||0],['pbpStrings',state.history.reduce((n,g)=>n+(g.playByPlay?.length||0),0)],['replayFrames',state.history.reduce((n,g)=>n+(g.boxTimeline?.length||0),0)]]))}
 function headlessContext(phase,extra={}){simulationExecution.context={season:state.year,day:state.day,phase,...extra}}
 function assertHeadless(){if(!simulationHeadless()||!simulationExecution.isolated)throw Error('Run this developer utility in an isolated simulation realm.');}
-function headlessCheckpoint(){return {...copy({...state,history:[]}),history:state.history.slice()}}
+function headlessCheckpoint(){return snapshotState()}
 function simulateGameHeadless(a,b,stage='Regular season'){
  assertHeadless();headlessContext(stage==='Regular season'?'regular-season-game':'playoff-game',{homeId:a,awayId:b,stage});const before=headlessCheckpoint();
  try{return play(a,b,stage)}catch(e){state=before;throw e}

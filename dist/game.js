@@ -37,6 +37,16 @@ const EXTRA_TEAMS=[
 ['San Diego','Surf','SDS','Medium','pacific','#58BDCF','#224954','#EF9A83']
 ];
 function copy(value){return JSON.parse(JSON.stringify(value))}
+/* Snapshot for rollback checkpoints and queued saves. Finished history is shared instead of deep-copied: played games,
+   archive rows from earlier seasons and earlier seasons' feat entries never change once written, so the cost of a
+   snapshot stays flat as a career ages. */
+function snapshotState(s=state){
+ const year=s.year,old=r=>r&&typeof r==='object'&&Number.isInteger(r.year)&&r.year<year,kinds=(typeof HD_ARCHIVES!=='undefined'?HD_ARCHIVES:[]).filter(k=>Array.isArray(s[k]));
+ const holes=rows=>rows.map(r=>old(r)?0:r),fill=(copied,rows)=>copied.map((r,i)=>r===0&&old(rows[i])?rows[i]:r);
+ const out=copy({...s,history:[],...Object.fromEntries(kinds.map(k=>[k,holes(s[k])])),...(Array.isArray(s.playerFeats?.games)?{playerFeats:{...s.playerFeats,games:holes(s.playerFeats.games)}}:{})});
+ out.history=(s.history||[]).slice();for(const k of kinds)out[k]=fill(out[k],s[k]);if(Array.isArray(s.playerFeats?.games))out.playerFeats.games=fill(out.playerFeats.games,s.playerFeats.games);
+ return out;
+}
 function defaultTeams(){const originalDivision={ATL:'southeast',NYE:'atlantic',LAS:'pacific',CHI:'central',MIA:'southeast',MEM:'southwest',SEA:'northwest',NOB:'southwest'};const base=TEAMS.map(t=>({key:'team-'+t[2],city:t[0],name:t[1],abbr:t[2],color:t[3],...copy(TEAM_META[t[2]]),divisionId:originalDivision[t[2]],logoAtlas:'original'}));const extra=EXTRA_TEAMS.map((t,i)=>({key:'team-'+t[2],city:t[0],name:t[1],abbr:t[2],color:t[5],marketSize:t[3],divisionId:t[4],logoAtlas:'expansion',logoIndex:i,colors:[5,6,7].map((k,j)=>({role:['Primary','Secondary','Tertiary'][j],name:['Primary','Secondary','Tertiary'][j],hex:t[k]}))}));return [...base,...extra].map(t=>{const div=DEFAULT_DIVISIONS.find(d=>d.id===t.divisionId);return withMetroPopulation({...t,division:div.name,conference:DEFAULT_CONFERENCES.find(c=>c.id===div.conferenceId).name})})}
 
 let setupDraft=null; let onSetup=false; let onTitle=true; let state,view='Overview',notice='',timer;const rand=(a,b)=>Math.floor(Math.random()*(b-a+1))+a;const money=n=>state?.leagueSettings?.historicalSource&&state.leagueSettings.historicalSource!=='custom'?'$'+Math.round(n*1e6).toLocaleString('en-US'):'$'+n.toFixed(1)+'M';const player=(id,i,base=0,mode=state?.leagueGender||'male',context='initial',financial=null,spec=null)=>{const gender=generatedGender(mode,id);let o=spec?.ovr??generatedOverall(base);return withBasketballAttributes(internationalIdentity({id,gender,name:'',pos:['PG','SG','SF','PF','C'][i%5],age:spec?.age??rand(20,33),ovr:o,pot:spec?.pot??Math.min(99,o+rand(2,12)),salary:financial?wnbaMillions(wnbaDemandDollars({ovr:o,age:22}, {key:''},financial.year,financial)):Math.max(1,Math.round((o-56)*.53*10)/10),pts:0,reb:0,ast:0,gp:0},context))};
@@ -77,7 +87,7 @@ async function sim(n=1){
   for(let i=0;i<total&&state.day<seasonLength();i++){
    if(simulationStopRequested)break;
    // Historical boxes are immutable; share them in this rollback snapshot rather than deep-copying every recorded play.
-   checkpoint=copy({...state,history:[]});checkpoint.history=state.history.slice();capturePowerRankings();const games=state.schedule[state.day];
+   checkpoint=snapshotState();capturePowerRankings();const games=state.schedule[state.day];
    for(let j=0;j<games.length;j++){simulationProgress(completed,total,state.day+1,j,games.length);await simulationYield();const [a,b]=games[j],r=play(a,b);if(a===controlledTeamId()||b===controlledTeamId())latest=r;}
    state.day++;if(simulationHeadless())simulationExecution.context={season:state.year,day:state.day,phase:'daily-systems'};seasonMilestoneDay();ownerDay();awardRaceDay();checkpoint=null;completed++;simulationProgress(completed,total,state.day);await simulationYield();
    if(toPlayoffs&&allStarSimulationPaused()&&gmCanAdvance()&&!simulationStopRequested){await confirmAllStarSelections(true,{quiet:true});if(!allStarSimulationPaused())seasonMilestoneDay();}

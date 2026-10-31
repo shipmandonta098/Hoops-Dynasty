@@ -169,6 +169,6 @@ function openingNightError(message){const error=new Error(message);error.code='O
 // A rejected next-season calendar must not strand a career halfway through rollover.
 const eliteOpeningNewSeasonBefore=newSeason;
 newSeason=function(...args){
- const before=copy(state),failed=error=>{if(error.code!=='OPENING_NIGHT_CONSTRAINT')throw error;state=before;toast(error.message);return false};
+ const before=snapshotState(),failed=error=>{if(error.code!=='OPENING_NIGHT_CONSTRAINT')throw error;state=before;toast(error.message);return false};
  try{const result=eliteOpeningNewSeasonBefore(...args);return result&&typeof result.then==='function'?result.catch(failed):result}catch(error){return failed(error)}
 };

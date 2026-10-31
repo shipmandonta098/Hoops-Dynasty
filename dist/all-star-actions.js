@@ -18,7 +18,7 @@ async function runAllStarEvent(key,watch=false){
     const day=state.day;if(!await sim(1)||state.day===day||simulationStopRequested||!gmCanAdvance())return;
    }
    if(allStarSimulationPaused()){showAllStarWeekend();return;}
-   const before=copy(state);
+   const before=snapshotState();
    try{processAllStarEvents();if(await save()===false){state=before;toast('The event could not be saved. Please try again.');return;}}
    catch(error){state=before;throw error;}
    result=state.allStarEvents?.results.find(e=>e.key===key);

@@ -7,7 +7,7 @@ let playoffActionBusy=false;
 async function simulatePlayoffGame(a,b,watch=false){
  if(playoffActionBusy||!gmCanAdvance()||state.day!==seasonLength()||state.champion!==null)return;
  const slot=playoffScheduleSlots().find(s=>!s.result&&s.pair[0]===a&&s.pair[1]===b);if(!slot)return;
- playoffActionBusy=true;const before=copy(state);let game;
+ playoffActionBusy=true;const before=snapshotState();let game;
  try{ownerTrack();finalizeRegularAwards();watchCapture={day:state.day+1,a,b};try{game=play(a,b,slot.stage)}finally{watchCapture=null}
  if(slot.stage==='Championship'){state.champion=game.winner;if(game.winner===controlledTeamId())state.titles++;ownerFinalize();say(state.teams[game.winner].city+' win the '+state.year+' championship!')}
  if(!await save()){state=before;render();return}render();if(watch){clearTimeout(liveWatchTimer);liveWatch={result:game,index:0,paused:false,speed:leagueRules().playbackSpeed};const dialog=watchDialog();renderWatchGame();if(!dialog.open)dialog.showModal();scheduleWatchTick()}return game;
