@@ -30,5 +30,7 @@ function offseasonLifecycle(){
  const shortfall=state.teams.reduce((n,t)=>n+Math.max(0,rosterMinimum()-t.roster.length),0),need=Math.max(state.teams.length,shortfall*2)-state.free.length;
  if(need>0){let id=Math.max(0,...[...state.teams.flatMap(t=>t.roster),...state.free,...(state.draftRights||[]).map(r=>r.player),...(state.draft?.prospects||[])].map(p=>p.id))+1;
   for(const spec of replacementFreeAgentSpecs(need)){const p=player(id,id%30,0,undefined,'initial',null,spec);id++;if(!p.bio)p.bio=generatePlayerBio(p,state.year,state.teams);state.free.push(p);out.generated=(out.generated||0)+1}}
+ // Ownership records for drafts more than a season old are no longer needed.
+ if(Array.isArray(state.tradePickOwners))state.tradePickOwners=state.tradePickOwners.filter(x=>x.year>=state.year-1);
  lifecycleLastReport=out;return out;
 }
