@@ -105,7 +105,17 @@ function historicalSchedulePatch(p,teams,before){
  if(!eligible.length)throw Error('The league alignment cannot support a uniform historical schedule.');
  const old=[before.divisionGames,before.conferenceGames,Math.max(0,before.seasonGames-before.divisionGames-before.conferenceGames)],weights=eligible.map(c=>old[c]||1),sum=weights.reduce((a,b)=>a+b,0),counts=[0,0,0];
  let remaining=p.games;eligible.forEach((c,i)=>{counts[c]=i===eligible.length-1?remaining:Math.min(remaining,2*Math.floor(p.games*weights[i]/sum/2));remaining-=counts[c]});
+ const split=historicalFeasibleCounts(p.games,eligible,counts,teams);if(!split)throw Error(`No division/conference split of ${p.games} games can be scheduled for this league's alignment. Check conference and division sizes.`);counts.splice(0,3,...split);
  return {seasonGames:p.games,divisionGames:counts[0],conferenceGames:counts[1],seasonStart:p.league==='wnba'?'05-01':'10-01',seasonEnd:p.league==='wnba'?'09-30':'04-30'};
+}
+// The proportional split can be impossible for the alignment (e.g. 16 vs 15 conferences leave no exact interconference
+// count). Fall back to the nearest split whose matchups can actually be paired.
+function historicalFeasibleCounts(games,eligible,target,teams){
+ // Categories are paired independently, so each (category, count) is checked once.
+ const memo=new Map(),fits=(k,n)=>{if(!n)return true;if(!eligible.includes(k))return false;const key=k+':'+n;if(!memo.has(key)){let seed=1;const c=[0,0,0];c[k]=n;try{customPairings(teams,c,()=>(seed=seed*16807%2147483647)/2147483647);memo.set(key,true)}catch{memo.set(key,false)}}return memo.get(key)};
+ if(target.every((n,k)=>fits(k,n)))return target;let best=null,bestCost=Infinity;
+ for(let a=0;a<=games;a++)for(let b=0;a+b<=games;b++){const c=[a,b,games-a-b],cost=c.reduce((n,v,k)=>n+Math.abs(v-target[k]),0);if(cost<bestCost&&c.every((n,k)=>fits(k,n))){best=c;bestCost=cost}}
+ return best;
 }
 function historicalPlan(league,year,before,cap,teams){
  const p=historicalPreset(league,year),rules={...before,...p.rules,...historicalSchedulePatch(p,teams,before)};
