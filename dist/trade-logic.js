@@ -22,9 +22,11 @@ function tradePlayerValue(p,t,roster=t.roster.filter(q=>q.id!==p.id)){
  const fit=Math.max(.9,Math.min(1.12,1+(coachTradeValue(p,t)-p.ovr)*.012));
  return base*age*(1+upside*(mindset==='Rebuilding'?1.5:mindset==='Win-Now'?.3:.8))*contract*need*fit*(mindset==='Win-Now'&&p.ovr>=85?1.25:mindset==='Rebuilding'&&p.age>=30?.8:1);
 }
+// Projected draft order, reused while records and rosters are unchanged (pick values are checked many times a day).
+let tradeProjectionOrder={sig:null,ids:[]};
 function tradePickProjection(p){const count=state.teams.length,d=state.draft;if(p.year===state.year&&d?.order?.length){const order=p.round===1?d.order:d.type==='snake'?(p.round%2===0?[...d.order].reverse():d.order):d.laterOrder||d.order;return {slot:Math.max(1,order.indexOf(p.origin)+1),count,locked:true};}
  const strength=t=>{const top=t.roster.slice().sort((a,b)=>b.ovr-a.ovr).slice(0,5),ovr=top.reduce((n,p)=>n+p.ovr,0)/Math.max(1,top.length),prior=Math.max(.15,Math.min(.85,.5+(ovr-77)*.025)),gp=t.w+t.l;return (t.w+prior*20)/(gp+20)};
- const teams=[...state.teams].sort((a,b)=>strength(a)-strength(b)||a.id-b.id);return {slot:teams.findIndex(t=>t.id===p.origin)+1,count,locked:false};
+ const sig=state.year+'|'+state.day+'|'+state.teams.map(t=>t.w+'-'+t.l+'-'+t.roster.length+'-'+t.roster.reduce((n,q)=>n+q.ovr,0)).join(',');if(tradeProjectionOrder.sig!==sig)tradeProjectionOrder={sig,ids:[...state.teams].sort((a,b)=>strength(a)-strength(b)||a.id-b.id).map(t=>t.id)};return {slot:tradeProjectionOrder.ids.indexOf(p.origin)+1,count,locked:false};
 }
 function tradePickValue(p,t){const projected=tradePickProjection(p),fraction=(projected.slot-1)/Math.max(1,projected.count-1),baseline=p.round===1?4+36*(1-fraction)**2:(1+5*(1-fraction)**2)/(p.round-1),mindset=tradeMindset(t);return baseline*.85**Math.max(0,p.year-state.year)*(mindset==='Rebuilding'?1.3:mindset==='Win-Now'?.7:1)}
 function tradeSideAssessment(t,give,get,givePicks=[],getPicks=[],cashReceived=0,options={}){

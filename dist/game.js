@@ -43,7 +43,14 @@ function copy(value){return JSON.parse(JSON.stringify(value))}
 function snapshotState(s=state){
  const year=s.year,old=r=>r&&typeof r==='object'&&Number.isInteger(r.year)&&r.year<year,kinds=(typeof HD_ARCHIVES!=='undefined'?HD_ARCHIVES:[]).filter(k=>Array.isArray(s[k]));
  const holes=rows=>rows.map(r=>old(r)?0:r),fill=(copied,rows)=>copied.map((r,i)=>r===0&&old(rows[i])?rows[i]:r);
- const out=copy({...s,history:[],...Object.fromEntries(kinds.map(k=>[k,holes(s[k])])),...(Array.isArray(s.playerFeats?.games)?{playerFeats:{...s.playerFeats,games:holes(s.playerFeats.games)}}:{})});
+ // People no longer in the league (retired or departed contract, family and Hall records) are shared too.
+ const active=new Set([...(s.teams||[]).flatMap(t=>t.roster),...(s.free||[]),...(s.draftRights||[]).map(r=>r.player),...(s.draft?.prospects||[])].map(p=>p.id)),gone=n=>n&&!(n.playerId!==null&&n.playerId!==undefined&&active.has(n.playerId));
+ const book=s.contractBook?.people,fam=s.family?.people,hall=s.hallOfFame?.people;
+ const out=copy({...s,history:[],...Object.fromEntries(kinds.map(k=>[k,holes(s[k])])),...(Array.isArray(s.playerFeats?.games)?{playerFeats:{...s.playerFeats,games:holes(s.playerFeats.games)}}:{}),
+  ...(book?{contractBook:{...s.contractBook,people:Object.fromEntries(Object.entries(book).map(([k,v])=>[k,active.has(v?.id)?v:0]))}}:{}),
+  ...(Array.isArray(fam)?{family:{...s.family,people:fam.map(n=>gone(n)?0:n)}}:{}),...(Array.isArray(hall)?{hallOfFame:{...s.hallOfFame,people:hall.map(h=>h&&h.retired!==null?0:h)}}:{})});
+ if(book)for(const k of Object.keys(out.contractBook.people))if(out.contractBook.people[k]===0)out.contractBook.people[k]=book[k];
+ if(Array.isArray(fam))out.family.people=out.family.people.map((n,i)=>n===0?fam[i]:n);if(Array.isArray(hall))out.hallOfFame.people=out.hallOfFame.people.map((h,i)=>h===0?hall[i]:h);
  out.history=(s.history||[]).slice();for(const k of kinds)out[k]=fill(out[k],s[k]);if(Array.isArray(s.playerFeats?.games))out.playerFeats.games=fill(out.playerFeats.games,s.playerFeats.games);
  return out;
 }
