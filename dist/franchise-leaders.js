@@ -11,7 +11,7 @@ function currentFranchiseLeaders(){
  }
  return {year:state.year,players:[...map.values()]};
 }
-function archiveFranchiseLeaders(){state.franchiseLeadersArchive=[...(state.franchiseLeadersArchive||[]).filter(r=>r.year!==state.year),currentFranchiseLeaders()]}
+function archiveFranchiseLeaders(){const now=currentFranchiseLeaders();now.players=now.players.map(p=>Object.fromEntries(Object.entries(p).map(([k,v])=>[k,typeof v==='number'&&!Number.isInteger(v)?Math.round(v*10)/10:v])));state.franchiseLeadersArchive=[...(state.franchiseLeadersArchive||[]).filter(r=>r.year!==state.year),now]}
 const leadersArchiveBefore=archiveFranchiseSeason;archiveFranchiseSeason=function(){archiveFranchiseLeaders();return leadersArchiveBefore()};
 function franchiseLeaderRows(t){
  const map=new Map();for(const season of [...(state.franchiseLeadersArchive||[]).filter(r=>r.year!==state.year),currentFranchiseLeaders()])for(const p of season.players){

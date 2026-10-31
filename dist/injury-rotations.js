@@ -24,7 +24,11 @@ function injuryMinuteAllocation(club){
  return minutes;
 }
 const minutesBeforeInjuryAvailability=playerMinutes;
-playerMinutes=function(p,club){return club?.roster.some(q=>injuryDays(q))?(injuryMinuteAllocation(club).get(p.id)||0):minutesBeforeInjuryAvailability(p,club)};
+// The allocation walks minute by minute; it is computed once per club and state (not once per player lookup), since
+// older leagues carry more injuries and the per-call cost grew with them.
+const injuryMinuteCache=new WeakMap();
+function injuryMinuteAllocationCached(club){const sig=state.year+'|'+state.day+'|'+gameMinutes()+'|'+(club.rotationPlan?JSON.stringify(club.rotationPlan):'')+'|'+club.roster.map(p=>p.id+':'+injuryDays(p)+':'+p.rotationMinutes+':'+p.ovr).join(','),hit=injuryMinuteCache.get(club);if(hit?.sig===sig)return hit.minutes;const minutes=injuryMinuteAllocation(club);injuryMinuteCache.set(club,{sig,minutes});return minutes}
+playerMinutes=function(p,club){return club?.roster.some(q=>injuryDays(q))?(injuryMinuteAllocationCached(club).get(p.id)||0):minutesBeforeInjuryAvailability(p,club)};
 const planBeforeInjuryAvailability=rotationFromClub;
 rotationFromClub=function(club){
  const plan=planBeforeInjuryAvailability(club);if(!club.roster.some(p=>injuryDays(p)))return plan;

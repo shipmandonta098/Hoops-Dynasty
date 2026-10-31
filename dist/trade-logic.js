@@ -2,7 +2,10 @@
 function tradeTimeline(t){const top=t.roster.slice().sort((a,b)=>b.ovr-a.ovr).slice(0,5),ovr=top.reduce((s,p)=>s+p.ovr,0)/Math.max(1,top.length),gp=t.w+t.l,pct=gp?t.w/gp:.5;return gp>=15&&pct<.4||ovr<74?'Rebuilding':ovr>=82||gp>=15&&pct>=.6?'Contender':'Standing Pat'}
 function tradeYears(p){return Math.max(1,(p.contractThrough??state.year)-state.year+1)}
 function tradePickKey(p){return p.year+':'+p.origin+':'+p.round}
-function tradePickOwner(p){return (state.tradePickOwners||[]).find(x=>tradePickKey(x)===tradePickKey(p))?.owner??p.origin}
+// Indexed lookup: trade proposals check many picks a day, and the list was scanned in full for each one. Ownership
+// changes always replace the array, so the index is rebuilt whenever the array or its length changes.
+let tradePickIndex={list:null,length:-1,owners:null};
+function tradePickOwner(p){const list=state.tradePickOwners||[];if(tradePickIndex.list!==list||tradePickIndex.length!==list.length)tradePickIndex={list,length:list.length,owners:new Map(list.map(x=>[tradePickKey(x),x.owner]))};return tradePickIndex.owners.get(tradePickKey(p))??p.origin}
 function tradePicks(t){const out=[];for(let year=state.year;year<state.year+leagueRules().tradePickSeasons;year++)for(const c of state.teams)for(let round=1;round<=(year===state.year?draftRoundCount():leagueRules().draftRounds);round++){const p={year,origin:c.id,round};if(year===state.year&&(state.draft?.picks.length||0)>0)continue;if(tradePickOwner(p)===t.id)out.push(p)}return out}
 const TRADE_LOCK_DAYS=30;
 function tradeLockDays(p){return p.tradeLockedUntil===undefined?0:Math.max(0,p.tradeLockedUntil-medicalStamp())}
@@ -19,9 +22,11 @@ function tradePlayerValue(p,t,roster=t.roster.filter(q=>q.id!==p.id)){
  const fit=Math.max(.9,Math.min(1.12,1+(coachTradeValue(p,t)-p.ovr)*.012));
  return base*age*(1+upside*(mindset==='Rebuilding'?1.5:mindset==='Win-Now'?.3:.8))*contract*need*fit*(mindset==='Win-Now'&&p.ovr>=85?1.25:mindset==='Rebuilding'&&p.age>=30?.8:1);
 }
+// Projected draft order, reused while records and rosters are unchanged (pick values are checked many times a day).
+let tradeProjectionOrder={sig:null,ids:[]};
 function tradePickProjection(p){const count=state.teams.length,d=state.draft;if(p.year===state.year&&d?.order?.length){const order=p.round===1?d.order:d.type==='snake'?(p.round%2===0?[...d.order].reverse():d.order):d.laterOrder||d.order;return {slot:Math.max(1,order.indexOf(p.origin)+1),count,locked:true};}
  const strength=t=>{const top=t.roster.slice().sort((a,b)=>b.ovr-a.ovr).slice(0,5),ovr=top.reduce((n,p)=>n+p.ovr,0)/Math.max(1,top.length),prior=Math.max(.15,Math.min(.85,.5+(ovr-77)*.025)),gp=t.w+t.l;return (t.w+prior*20)/(gp+20)};
- const teams=[...state.teams].sort((a,b)=>strength(a)-strength(b)||a.id-b.id);return {slot:teams.findIndex(t=>t.id===p.origin)+1,count,locked:false};
+ const sig=state.year+'|'+state.day+'|'+state.teams.map(t=>t.w+'-'+t.l+'-'+t.roster.length+'-'+t.roster.reduce((n,q)=>n+q.ovr,0)).join(',');if(tradeProjectionOrder.sig!==sig)tradeProjectionOrder={sig,ids:[...state.teams].sort((a,b)=>strength(a)-strength(b)||a.id-b.id).map(t=>t.id)};return {slot:tradeProjectionOrder.ids.indexOf(p.origin)+1,count,locked:false};
 }
 function tradePickValue(p,t){const projected=tradePickProjection(p),fraction=(projected.slot-1)/Math.max(1,projected.count-1),baseline=p.round===1?4+36*(1-fraction)**2:(1+5*(1-fraction)**2)/(p.round-1),mindset=tradeMindset(t);return baseline*.85**Math.max(0,p.year-state.year)*(mindset==='Rebuilding'?1.3:mindset==='Win-Now'?.7:1)}
 function tradeSideAssessment(t,give,get,givePicks=[],getPicks=[],cashReceived=0,options={}){

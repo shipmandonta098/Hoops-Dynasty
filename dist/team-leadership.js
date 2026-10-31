@@ -124,7 +124,7 @@ function leadershipConcern(){
  if(act){leadershipRemoval(club,captain);selectLeadership(club,{reason:'concern'})}
  addGMMessage('Morale',coach.name+', Head coach','Leadership concerns',message);return {changed:act,message};
 }
-async function leadershipCommit(action){const before=copy(state);try{const result=action();if(await save()===false)throw Error('Could not save leadership changes.');render();if(result?.message)toast(result.message);return result}catch(e){state=before;render();toast(e.message);return null}}
+async function leadershipCommit(action){const before=snapshotState();try{const result=action();if(await save()===false)throw Error('Could not save leadership changes.');render();if(result?.message)toast(result.message);return result}catch(e){state=before;render();toast(e.message);return null}}
 function recommendCaptain(value){if(!ownerCanManage()||value==='')return;return leadershipCommit(()=>leadershipRecommend(Number(value))||{message:'Wait before raising leadership with the coach again.'})}
 function raiseLeadershipConcern(){if(!ownerCanManage())return;return leadershipCommit(()=>leadershipConcern()||{message:'No captain to discuss, or wait before raising leadership again.'})}
 // Commissioner / sandbox: direct appointment and removal.
