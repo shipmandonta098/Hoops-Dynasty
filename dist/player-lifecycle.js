@@ -5,12 +5,16 @@
    - Free agents who went unsigned all season retire if 30+, or leave the league if they were also unsigned the season
      before or are below a playable level.
    - Unsigned draft rights expire after a full season unless the player is an international stash. */
-const LIFECYCLE=Object.freeze({retireBase:[.03,.06,.1,.16,.25,.37,.5,.64,.78,.88,.94,.98],hardAge:42,rightsSeasons:1,unsignedFloorOVR:60});
+const LIFECYCLE=Object.freeze({retireBase:[.03,.06,.1,.16,.25,.37,.5,.64,.78,.88,.94,.98],hardAge:42,rightsSeasons:1,unsignedFloorOVR:60,targetOVR:75.5});
 // Yearly OVR change before trait adjustments, by the player's new age.
 let lifecycleLastReport=null;
 // Growth slows near potential and for elite players, so the share of 85+ players stays stable.
 function developmentBase(p){const a=p.age;let d=a<=21?rand(0,3):a<=23?rand(0,2):a<=25?rand(-1,1):a<=27?rand(-1,1):a<=29?rand(-2,0):a<=31?rand(-3,0):a<=33?rand(-4,-1):rand(-5,-1);
- if(d>0&&p.ovr>=85)d=Math.floor(d/2);if(d>1&&p.pot-p.ovr<=3)d=1;return d}
+ if(d>0&&p.ovr>=85)d=Math.floor(d/2);if(d>1&&p.pot-p.ovr<=3)d=1;return d+lifecycleRatingOffset()}
+// Retirements and roster cuts remove weaker players first, so the league average drifts up even with a balanced age
+// curve. Each rollover nudges every player's change by half the gap to the target average (capped at 2 points).
+let lifecycleOffset={year:null,value:0};
+function lifecycleRatingOffset(){if(lifecycleOffset.year!==state.year){const active=state.teams.flatMap(t=>t.roster),mean=active.length?active.reduce((n,p)=>n+p.ovr,0)/active.length:LIFECYCLE.targetOVR;lifecycleOffset={year:state.year,value:Math.max(-2,Math.min(2,Math.round((LIFECYCLE.targetOVR-mean)/2)))}}return lifecycleOffset.value}
 function lifecycleSeasonRows(year){const rows=new Map();for(const r of state.statsArchive||[])if(r.year===year&&Number.isInteger(r.id)){const o=rows.get(r.id)||{gp:0,mp:0};o.gp+=r.gp||0;o.mp+=r.mp||0;rows.set(r.id,o)}return rows}
 function lifecycleRetireChance(p,season){
  if(p.age>=LIFECYCLE.hardAge)return 1;if(p.age<30)return 0;
