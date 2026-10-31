@@ -16,6 +16,7 @@ l.run(`setupDraft=makeDraft();onSetup=true;`);
 const setup=run(`(()=>{let html='';const before=editorModal;editorModal=(t,b)=>{html=b};try{openTeamEditor(0)}finally{editorModal=before}return html})()`);
 assert(!/<input name="colorName\d"/.test(setup)&&/<input type="hidden" name="colorName0"/.test(setup),'setup editor has no color name text boxes');
 assert(/<select name="moveCity"/.test(setup),'setup editor has the Move picker');
+assert(!/name="arenaCity"/.test(tm)&&!/name="arenaCity"/.test(setup)&&!/Arena city/.test(tm+setup),'arena city is not shown in either editor');
 // 3. Team Management save: a changed color gets a generated name; unchanged colors keep theirs.
 const formFor=id=>`(()=>{const t=state.teams[${id}],c=t.colors;return {city:t.city,name:t.name,abbr:t.abbr,arenaName:t.arenaName||t.city+' Arena',population:metroPopulationMillions(t.population),logo:String(logoChoices().findIndex(x=>x.logoAtlas===t.logoAtlas&&x.logoIndex===t.logoIndex)),divisionId:t.divisionId,color0:c[0].hex,colorName0:c[0].name,color1:c[1].hex,colorName1:c[1].name,color2:c[2].hex,colorName2:c[2].name}})()`;
 const before=run('state.teams[2].colors');
