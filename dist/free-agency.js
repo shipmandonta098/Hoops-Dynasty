@@ -11,7 +11,7 @@ async function beginFreeAgency(){if(faBusy||!gmCanAdvance()||!draftComplete()||!
  ownerFinalize();if(!gmCanAdvance())return;archiveStatsSeason();internationalOffseason();offseasonLifecycle();
  const f=state.freeAgency={year:state.year,phase:'resign',round:1,players:[],offers:[],pending:[],mle:{},log:[]};
  for(const t of state.teams){const expired=t.roster.filter(p=>(p.contractThrough??state.year)<=state.year),moods=new Map(expired.map(p=>[p.id,moraleDetails(p,t).score]));t.roster=t.roster.filter(p=>!expired.includes(p));for(const p of expired){if(wnbaEnabled()&&p.wnbaContract){(state.wnbaFinance.contractArchive??=[]).push({id:p.id,team:t.id,closedYear:state.year,contract:copy(p.wnbaContract)});p.wnbaService={seasons:wnbaService(p,state.year+1),asOf:state.year+1,evidence:'recorded_expiration'};delete p.wnbaContract;delete p.contractThrough;}p.previousTeamKey=t.key;state.free.push(p);f.players.push({id:p.id,former:t.id,rfa:wnbaEnabled()?p.wnbaRights?.qualifyingOfferYear===state.year+1&&wnbaRules(state.year+1).rfaService.includes(wnbaService(p,state.year+1)):p.age<=25&&p.bio?.draftTeam===t.abbr,departureMood:moods.get(p.id),demand:faDemand(p)})}}
- if(wnbaEnabled())wnbaCPURights();
+ if(wnbaEnabled())wnbaCPURights();else cpuSignDraftRights();
  for(const p of state.free)if(!f.players.some(x=>x.id===p.id))f.players.push({id:p.id,former:null,rfa:false,demand:faDemand(p)});
  faLog('Exclusive re-signing window opened for three negotiation rounds.');view='Free agency';await faSave(before);
  }catch(e){state=before;simulationFailure(e);toast(e.message)}finally{faBusy=false;render()}}

@@ -19,6 +19,15 @@ function lifecycleRetireChance(p,season){
  return Math.min(.98,base*rating*role);
 }
 function lifecycleMarkRetired(p,create){const h=hallState(),key='p:'+p.id,person=create?hallPerson(key,p.name,'Player'):h.people.find(x=>x.key===key);if(person&&person.retired===null)person.retired=state.year}
+// When free agency opens (expired contracts have left the rosters), CPU teams sign this year's draft picks in pick
+// order while roster and payroll allow. Picks used to stay unsigned because the draft runs while expiring veterans
+// still fill the roster, so their rights expired and the league kept aging.
+function cpuSignDraftRights(){const you=controlledTeamId();
+ for(const r of [...(state.draftRights||[])].sort((a,b)=>(a.player.bio?.draftPick||999)-(b.player.bio?.draftPick||999))){
+  const club=state.teams[r.team],p=r.player,stash=p.international?.stashUntil;if(!club||club.id===you&&!simulationAutopilot()||p.bio?.draftYear!==state.year||Number.isInteger(stash)&&stash>=state.year)continue;
+  if(club.roster.length>=rosterMaximum()||ownerPayroll(club)+p.salary>financeRosterLimit(club)+.001)continue;
+  internationalPrepareSigning(p);club.roster.push(p);state.draftRights=state.draftRights.filter(x=>x!==r);
+ }}
 // Returns counts for diagnostics. Called from beginFreeAgency after the season's stats are archived.
 function offseasonLifecycle(){
  const now=lifecycleSeasonRows(state.year),before=lifecycleSeasonRows(state.year-1),you=controlledTeamId(),out={retired:0,freeAgentsLeft:0,rightsExpired:0};
