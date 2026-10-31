@@ -50,7 +50,7 @@ r=await go(`const f=t=>({size:t.length,text:async()=>t});await importPresetFile(
 assert.deepEqual(r.names,['Round trip A','Round trip B','Round trip A (imported)']);assert(r.same);assert.match(r.bad,/damaged.*Nothing was imported/);assert.match(r.json,/not valid JSON/);
 // The dialog offers Export / Import.
 l.run(`openPresets(false)`);const dialog=run('modal');assert(/>Export presets</.test(dialog)&&/>Import presets</.test(dialog)&&/type="file"/.test(dialog));
-// 4. First launch: persistence request and one-time warning; iOS Safari gets the Home Screen tip.
+// 4. First launch: persistence request; a one-time warning only when persistence wasn't granted, with platform-accurate text.
 const persist=async({persisted,granted,ua='Mozilla/5.0 (Windows NT 10.0)'})=>go(`modal='';let asked=0;navigator={userAgent:${JSON.stringify(ua)},maxTouchPoints:5,storage:{persisted:async()=>${persisted},persist:async()=>{asked++;return ${granted}}}};const result=await checkStoragePersistence();return {result,asked,modal,title:modalTitle}`);
 l.run(`careerStore=memoryStore();mem={};`);
 r=await persist({persisted:true,granted:true});assert.deepEqual([r.result,r.asked,r.modal],[true,0,''],'already persistent: no prompt, no warning');
@@ -58,6 +58,32 @@ r=await persist({persisted:false,granted:true});assert.deepEqual([r.result,r.ask
 r=await persist({persisted:false,granted:false,ua:'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 Version/18.0 Mobile/15E148 Safari/604.1'});
 assert.equal(r.result,false);assert.equal(r.title,'Keep your saves safe');assert.match(r.modal,/Home Screen/);assert.match(r.modal,/7 days/);
 r=await persist({persisted:false,granted:false});assert.equal(r.modal,'','shown only once');
-l.run(`careerStore=memoryStore();mem={};`);r=await persist({persisted:false,granted:false});assert(r.modal&&!/Home Screen/.test(r.modal),'no iOS tip on other browsers');
+// Unsupported persist(): not persisted and can't ask, so the warning shows.
+l.run(`careerStore=memoryStore();mem={};`);r=await go(`modal='';navigator={userAgent:'Mozilla/5.0 (X11; Linux x86_64) Chrome/130.0 Safari/537.36',storage:{persisted:async()=>false}};return {result:await checkStoragePersistence(),modal}`);assert.equal(r.result,false);assert(r.modal);
+// No storage API at all: nothing to report, no popup.
+r=await go(`modal='';navigator={userAgent:'x'};return {result:await checkStoragePersistence(),modal}`);assert.deepEqual(r,{result:null,modal:''});
+// Platform text: detection and wording per browser.
+const UA={
+ iosSafari:'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1',
+ iosChrome:'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/130.0.6723.90 Mobile/15E148 Safari/604.1',
+ iosFirefox:'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/132.0 Mobile/15E148 Safari/605.1.15',
+ iPadDesktopMode:'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15',
+ macSafari:'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15',
+ winChrome:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+ winEdge:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0',
+ winFirefox:'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0',
+ androidChrome:'Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Mobile Safari/537.36',
+ androidFirefox:'Mozilla/5.0 (Android 14; Mobile; rv:132.0) Gecko/132.0 Firefox/132.0',
+};
+const text=(ua,touch=0,standalone=false)=>run(`(()=>{const p=storagePlatform({userAgent:${JSON.stringify(ua)},maxTouchPoints:${touch},standalone:${standalone}});return {p,html:storagePersistenceWarningHTML(p)}})()`);
+let t=text(UA.iosSafari,5);assert.deepEqual(t.p,{os:'ios',browser:'safari',standalone:false});assert.match(t.html,/iOS may clear website data/);assert.match(t.html,/7 days/);assert.match(t.html,/Home Screen/);
+t=text(UA.iosSafari,5,true);assert.equal(t.p.standalone,true);assert(!/7 days|Home Screen/.test(t.html),'Home Screen app: no Safari advice');
+for(const ua of [UA.iosChrome,UA.iosFirefox]){t=text(ua,5);assert.equal(t.p.os,'ios');assert.notEqual(t.p.browser,'safari');assert.match(t.html,/iOS may clear website data/);assert(!/7 days|best-effort|low on disk/.test(t.html),'non-Safari iOS: generic text only, no 7-day claim')}
+t=text(UA.iPadDesktopMode,5);assert.deepEqual([t.p.os,t.p.browser],['ios','safari'],'iPad in desktop mode is iOS');
+t=text(UA.macSafari,0);assert.deepEqual([t.p.os,t.p.browser],['mac','safari']);assert.match(t.html,/7 days/);assert(!/iOS|Home Screen/.test(t.html));
+for(const [ua,os,browser] of [[UA.winChrome,'desktop','chrome'],[UA.winEdge,'desktop','edge'],[UA.winFirefox,'desktop','firefox'],[UA.androidChrome,'android','chrome'],[UA.androidFirefox,'android','firefox']]){
+ t=text(ua);assert.deepEqual([t.p.os,t.p.browser],[os,browser],ua);assert.match(t.html,/only cleared automatically when the device runs low on disk space/);assert(!/7 days|iOS|Home Screen/.test(t.html),browser+' on '+os);
+ assert(browser==='firefox'?/Store Data in Persistent Storage/.test(t.html):/decides automatically/.test(t.html));
+}
 console.log('Preset storage: real error causes, logged errors, verified move to the careers database, export/import round trip, one-time persistence warning passed.');
 })().catch(e=>{console.error(e);process.exit(1)});

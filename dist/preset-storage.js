@@ -61,15 +61,36 @@ async function importPresetFile(file){
 }
 // Rendered in the presets dialog (setup.js openPresets) under the create form.
 function presetBackupMarkup(){return `<div class="actions preset-backup"><button type="button" onclick="exportPresets()">Export presets</button><button type="button" onclick="this.nextElementSibling.click()">Import presets</button><input type="file" accept="application/json,.json" hidden aria-label="Preset file to import" onchange="importPresetFile(this.files[0]);this.value=''"><small>${presetStoreActive()?'Saved in this browser’s game database.':'Saved in this browser.'} Export a JSON backup to move presets to another device.</small></div>`}
-// First launch: ask for persistent storage; warn once if the browser may still clear it.
-function presetIsIOSSafari(){const n=globalThis.navigator||{},ua=n.userAgent||'';return (/iP(hone|ad|od)/.test(ua)||/Macintosh/.test(ua)&&n.maxTouchPoints>1)&&!n.standalone&&!globalThis.matchMedia?.('(display-mode: standalone)')?.matches}
-function storagePersistenceWarningHTML(ios){return `<p>Your browser hasn’t granted this site persistent storage, so it may clear your careers and presets to free up space.</p>${ios?'<p><strong>On iPhone and iPad:</strong> Safari can erase site data after 7 days without a visit. Add Hoops Dynasty to your Home Screen (Share → Add to Home Screen) and open it from there to keep your saves.</p>':''}<p>Export careers and presets now and then to keep a backup.</p><div class="actions"><button class="primary" onclick="closeTitleModal()">Got it</button></div>`}
+// First launch: ask for persistent storage; warn once only if the browser has not granted it.
+function storagePlatform(nav=globalThis.navigator||{}){
+ const ua=nav.userAgent||'',ios=/iP(hone|ad|od)/.test(ua)||/Macintosh/.test(ua)&&nav.maxTouchPoints>1,android=/Android/.test(ua);
+ const browser=ios?(/CriOS\//.test(ua)?'chrome':/FxiOS\//.test(ua)?'firefox':/EdgiOS\//.test(ua)?'edge':/Safari\//.test(ua)&&/Version\//.test(ua)&&!/OPiOS|GSA\/|DuckDuckGo|YaBrowser/.test(ua)?'safari':'other')
+  :/Firefox\//.test(ua)?'firefox':/Edg(e|A)?\//.test(ua)?'edge':/SamsungBrowser\//.test(ua)?'samsung':/OPR\//.test(ua)?'opera':/Chrome\//.test(ua)?'chrome':/Safari\//.test(ua)&&/Version\//.test(ua)?'safari':'other';
+ const standalone=nav.standalone===true||!!globalThis.matchMedia?.('(display-mode: standalone)')?.matches;
+ return {os:ios?'ios':android?'android':/Macintosh|Mac OS X/.test(ua)?'mac':'desktop',browser,standalone};
+}
+// Platform-accurate text. Every iOS browser runs on WebKit, but Safari's 7-day rule is only stated for Safari itself.
+function storagePersistenceWarningHTML(platform=storagePlatform()){
+ const {os,browser,standalone}=platform,parts=[];
+ if(os==='ios'){
+  parts.push('iOS may clear website data, including your careers and presets, and this browser didn’t grant the site persistent storage.');
+  if(browser==='safari'&&!standalone)parts.push('In Safari, a site’s saved data can be removed after 7 days of using Safari without opening that site. Adding Hoops Dynasty to your Home Screen (Share → Add to Home Screen) gives it its own counter that only runs while you use the app.');
+ }else if(browser==='safari'){
+  parts.push('Safari didn’t grant this site persistent storage. Safari can remove a site’s saved data after 7 days of using Safari without opening that site, so open the game at least once a week.');
+ }else{
+  parts.push('Your browser didn’t grant this site persistent storage, so it keeps your careers and presets as “best-effort” data. Best-effort data is only cleared automatically when the device runs low on disk space (or when you clear browsing data yourself).');
+  if(browser==='firefox')parts.push('Firefox asks before granting persistent storage. You can allow it later in this site’s permissions (Store Data in Persistent Storage).');
+  else if(['chrome','edge','samsung','opera'].includes(browser))parts.push('This browser decides automatically, usually for sites you install or use often, so it may grant it later.');
+ }
+ parts.push('Export careers and presets now and then to keep a backup.');
+ return parts.map(t=>`<p>${t}</p>`).join('')+'<div class="actions"><button class="primary" onclick="closeTitleModal()">Got it</button></div>';
+}
 async function checkStoragePersistence(){
  const storage=globalThis.navigator?.storage;if(!storage?.persisted)return null;
  let persisted=await storage.persisted().catch(()=>false);if(!persisted&&storage.persist)persisted=await storage.persist().catch(()=>false);if(persisted)return true;
  const seen=await careerStore?.getSetting?.('persistenceWarningShown').catch(()=>null);if(seen)return false;
  let local=null;try{local=localStorage.getItem('hoops-dynasty-persistence-warning')}catch{}if(local)return false;
- titleModal('Keep your saves safe',storagePersistenceWarningHTML(presetIsIOSSafari()));
+ titleModal('Keep your saves safe',storagePersistenceWarningHTML(storagePlatform()));
  await careerStore?.putSetting?.('persistenceWarningShown',true).catch(()=>{});try{localStorage.setItem('hoops-dynasty-persistence-warning','1')}catch{}
  return false;
 }
