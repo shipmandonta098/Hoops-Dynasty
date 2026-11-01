@@ -31,7 +31,7 @@ function draftPickInternal(id){if(wnbaEnabled())return wnbaDraftPick(id);const d
  // Biography records the overall pick across all configured rounds.
  Object.assign(p.bio,{draftYear:state.year,draftRound:round,draftPick:index+1,draftTeam:club.abbr,debutYear:state.year});
  d.picks.push({number:index+1,round,team:club.id,id:p.id,name:p.name,pos:p.pos,ovr:p.ovr,pot:p.pot});
- const stashed=internationalOnDraft(p);
+ const stashed=internationalOnDraft(p);if(!stashed)draftMakeRoom(club,p,round);
  if(!stashed&&club.roster.length<rosterMaximum()&&ownerPayroll(club)+p.salary<=financeRosterLimit(club)+.001){internationalPrepareSigning(p);club.roster.push(p)}else(state.draftRights??=[]).push({team:club.id,player:p});
  say(club.city+' selects '+p.name+' with pick '+(index+1)+'.');return true;
 }

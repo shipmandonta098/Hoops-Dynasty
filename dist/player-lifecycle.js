@@ -4,7 +4,8 @@
      retirees in free agency. Possible from 30, likely by 35, rare past 38; better players and bigger roles last longer.
    - Free agents who went unsigned all season retire if 30+, or leave the league if they were also unsigned the season
      before or are below a playable level.
-   - Unsigned draft rights expire after a full season unless the player is an international stash. */
+   - First-round picks sign on draft day (a full CPU roster waives its lowest-value player). Unsigned draft rights expire
+     after a full season unless the player is an international stash; the player becomes a free agent. */
 const LIFECYCLE=Object.freeze({retireBase:[.03,.06,.1,.16,.25,.37,.5,.64,.78,.88,.94,.98],hardAge:42,rightsSeasons:1,unsignedFloorOVR:60,targetOVR:75.5});
 // Yearly OVR change before trait adjustments, by the player's new age.
 let lifecycleLastReport=null;
@@ -23,6 +24,11 @@ function lifecycleRetireChance(p,season){
  return Math.min(.98,base*rating*role);
 }
 function lifecycleMarkRetired(p,create){const h=hallState(),key='p:'+p.id,person=create?hallPerson(key,p.name,'Player'):h.people.find(x=>x.key===key);if(person&&person.retired===null)person.retired=state.year}
+// First-round picks sign: a CPU team with a full roster waives its lowest-value player (not one of this year's picks)
+// on draft day, as real teams do. The waived salary stays on the books as dead money.
+function draftMakeRoom(club,p,round){if(round!==1||club.id===controlledTeamId()&&!simulationAutopilot()||club.roster.length<rosterMaximum())return false;
+ const cut=club.roster.filter(q=>q.bio?.draftYear!==state.year).sort((a,b)=>tradePlayerValue(a,club)-tradePlayerValue(b,club)||(a.contractThrough??0)-(b.contractThrough??0)||a.id-b.id)[0];
+ return cut?cpuRelease(club,cut,{text:'to make room for first-round pick '+p.name}):false}
 // When free agency opens (expired contracts have left the rosters), CPU teams sign this year's draft picks in pick
 // order while roster and payroll allow. Picks used to stay unsigned because the draft runs while expiring veterans
 // still fill the roster, so their rights expired and the league kept aging.
@@ -38,7 +44,7 @@ function offseasonLifecycle(){
  for(const t of state.teams){const leaving=t.roster.filter(p=>Math.random()<lifecycleRetireChance(p,now.get(p.id)));if(!leaving.length)continue;t.roster=t.roster.filter(p=>!leaving.includes(p));delete t.rotationPlan;
   for(const p of leaving){lifecycleMarkRetired(p,true);out.retired++;if(t.id===you||p.ovr>=80)say(p.name+' ('+t.city+') retires at '+p.age+'.')}}
  state.free=state.free.filter(p=>{if(now.get(p.id)?.gp>0)return true;const gone=p.age>=30||p.ovr<LIFECYCLE.unsignedFloorOVR||!(before.get(p.id)?.gp>0);if(!gone)return true;lifecycleMarkRetired(p,false);out.freeAgentsLeft++;return false});
- state.draftRights=(state.draftRights||[]).filter(r=>{const y=r.player.bio?.draftYear,stash=r.player.international?.stashUntil;if(Number.isInteger(stash)&&stash>=state.year)return true;const keep=!(Number.isInteger(y)&&state.year-y>=LIFECYCLE.rightsSeasons);if(!keep){out.rightsExpired++;if(r.team===you)say('Draft rights to '+r.player.name+' expired unsigned.')}return keep});
+ state.draftRights=(state.draftRights||[]).filter(r=>{const y=r.player.bio?.draftYear,stash=r.player.international?.stashUntil;if(Number.isInteger(stash)&&stash>=state.year)return true;const keep=!(Number.isInteger(y)&&state.year-y>=LIFECYCLE.rightsSeasons);if(!keep){out.rightsExpired++;const p=r.player;delete p.contractThrough;p.previousTeamKey=state.teams[r.team]?.key;state.free.push(p);if(r.team===you)say('Draft rights to '+p.name+' expired unsigned; he is now a free agent.')}return keep});
  // Keep enough free agents for teams to refill after retirements (same generator as a fresh league's pool).
  const shortfall=state.teams.reduce((n,t)=>n+Math.max(0,rosterMinimum()-t.roster.length),0),need=Math.max(state.teams.length,shortfall*2)-state.free.length;
  if(need>0){let id=Math.max(0,...[...state.teams.flatMap(t=>t.roster),...state.free,...(state.draftRights||[]).map(r=>r.player),...(state.draft?.prospects||[])].map(p=>p.id))+1;

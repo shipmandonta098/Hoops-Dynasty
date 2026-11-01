@@ -17,7 +17,11 @@ const assert=require('node:assert/strict'),{runLongCareer}=require('./dev/long-c
  assert(late<early*1.5,`season time ${early.toFixed(1)}s → ${late.toFixed(1)}s`);
  // Population: retirements happen, pools stay bounded.
  assert(done.slice(1).every(r=>r.retiredLastSeason>0),'players retire every offseason: '+done.map(r=>r.retiredLastSeason).join(','));
- for(const r of done){assert(r.freeAgents<=teams*4,`season ${r.season}: ${r.freeAgents} free agents`);assert(r.draftRights<=teams*3,`season ${r.season}: ${r.draftRights} unsigned draft rights`)}
+ for(const r of done){assert(r.freeAgents<=teams*4,`season ${r.season}: ${r.freeAgents} free agents`);assert(r.draftRights<=teams*1.5,`season ${r.season}: ${r.draftRights} unsigned draft rights`)}
+ // Draft: about one signed rookie per team each season (30+ in a 30-team league), and rights don't pile up.
+ for(const r of done)assert(r.rookiesSigned>=teams,`season ${r.season}: ${r.rookiesSigned} rookies signed`);
+ const rightsEarly=done.slice(0,2).reduce((n,r)=>n+r.draftRights,0)/2,rightsLate=done.slice(-2).reduce((n,r)=>n+r.draftRights,0)/2;
+ assert(rightsLate<=rightsEarly+teams/2,`draft rights ${rightsEarly} → ${rightsLate}`);
  // Ratings, age, payroll stay in range.
  for(const r of done){
   assert(Math.abs(r.avgOVR-first.avgOVR)<=2.5,`season ${r.season}: average OVR ${r.avgOVR} vs ${first.avgOVR}`);
@@ -25,5 +29,5 @@ const assert=require('node:assert/strict'),{runLongCareer}=require('./dev/long-c
   assert(r.avgAge>=25&&r.avgAge<=29.5,`season ${r.season}: average age ${r.avgAge}`);
   assert(r.avgPayroll>=r.cap*.7,`season ${r.season}: average payroll ${r.avgPayroll} under a ${r.cap} cap`);
  }
- console.log('Long career ('+seasons+' seasons, 8 teams): '+done.map(r=>`S${r.season} ${r.saveMB}MB ${r.simSeconds}s ret ${r.retiredLastSeason} FA ${r.freeAgents} rights ${r.draftRights} OVR ${r.avgOVR} 85+ ${r.ovr85} age ${r.avgAge} pay ${r.avgPayroll}`).join(' | '));
+ console.log('Long career ('+seasons+' seasons, 8 teams): '+done.map(r=>`S${r.season} ${r.saveMB}MB ${r.simSeconds}s ret ${r.retiredLastSeason} FA ${r.freeAgents} rookies ${r.rookiesSigned} rights ${r.draftRights} OVR ${r.avgOVR} 85+ ${r.ovr85} age ${r.avgAge} pay ${r.avgPayroll}`).join(' | '));
 })().catch(e=>{console.error(e);process.exit(1)});
