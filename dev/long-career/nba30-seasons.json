@@ -33,7 +33,7 @@
  },
  {
   "season": 1,
-  "simSeconds": 543.6,
+  "simSeconds": 545.8,
   "status": "completed",
   "errors": [],
   "retirements": 0,
@@ -81,7 +81,7 @@
  },
  {
   "season": 2,
-  "simSeconds": 697.7,
+  "simSeconds": 704.1,
   "status": "completed",
   "errors": [],
   "retirements": 0,
@@ -130,7 +130,7 @@
  },
  {
   "season": 3,
-  "simSeconds": 720.3,
+  "simSeconds": 725.7,
   "status": "completed",
   "errors": [],
   "retirements": 0,
@@ -179,7 +179,7 @@
  },
  {
   "season": 4,
-  "simSeconds": 749.2,
+  "simSeconds": 743.3,
   "status": "completed",
   "errors": [],
   "retirements": 0,
@@ -228,7 +228,7 @@
  },
  {
   "season": 5,
-  "simSeconds": 733.4,
+  "simSeconds": 745.1,
   "status": "completed",
   "errors": [],
   "retirements": 0,
@@ -277,7 +277,7 @@
  },
  {
   "season": 6,
-  "simSeconds": 729.3,
+  "simSeconds": 774.5,
   "status": "completed",
   "errors": [],
   "retirements": 0,
@@ -327,7 +327,7 @@
  },
  {
   "season": 7,
-  "simSeconds": 745,
+  "simSeconds": 751.1,
   "status": "completed",
   "errors": [],
   "retirements": 0,
@@ -377,7 +377,7 @@
  },
  {
   "season": 8,
-  "simSeconds": 756.6,
+  "simSeconds": 752.2,
   "status": "completed",
   "errors": [],
   "retirements": 0,
@@ -427,12 +427,12 @@
  },
  {
   "season": 9,
-  "simSeconds": 724.3,
+  "simSeconds": 750.4,
   "status": "completed",
   "errors": [],
   "retirements": 0,
   "year": 2035,
-  "saveMB": 16.957,
+  "saveMB": 16.954,
   "sections": {
    "statsArchive": 2.78,
    "teamSeasonArchive": 2.59,
@@ -456,7 +456,7 @@
    "teamLeadership": 0.05
   },
   "players": 447,
-  "freeAgents": 86,
+  "freeAgents": 85,
   "draftRights": 2,
   "rookiesSigned": 49,
   "avgOVR": 76.22,
@@ -475,58 +475,6 @@
    "90s": 39.5
   },
   "cap": 150,
-  "retiredLastSeason": 56
- },
- {
-  "season": 10,
-  "simSeconds": 738.2,
-  "status": "completed",
-  "errors": [],
-  "retirements": 0,
-  "year": 2036,
-  "saveMB": 18.561,
-  "sections": {
-   "statsArchive": 3.1,
-   "teamSeasonArchive": 2.88,
-   "contractBook": 1.88,
-   "playerFeats": 1.73,
-   "family": 1.72,
-   "playerPostseasonArchive": 1.54,
-   "teams": 1.37,
-   "hallOfFame": 0.88,
-   "franchiseLeadersArchive": 0.86,
-   "teamStatsArchive": 0.75,
-   "headToHeadArchive": 0.45,
-   "free": 0.27,
-   "finances": 0.18,
-   "rivalries": 0.15,
-   "draft": 0.14,
-   "newsFeed": 0.12,
-   "moralePerformance": 0.12,
-   "gmCareer": 0.08,
-   "draftHistory": 0.06,
-   "teamLeadership": 0.05
-  },
-  "players": 438,
-  "freeAgents": 98,
-  "draftRights": 1,
-  "rookiesSigned": 52,
-  "avgOVR": 76.24,
-  "ovr85": 48,
-  "avgAge": 26.63,
-  "age35": 11,
-  "avgPayroll": 135.75,
-  "payrollRange": [
-   62.7,
-   194.2
-  ],
-  "salaryByBand": {
-   "60s": 2.3,
-   "70s": 5.9,
-   "80s": 15.4,
-   "90s": 40.8
-  },
-  "cap": 150,
-  "retiredLastSeason": 58
+  "retiredLastSeason": 57
  }
 ]
