@@ -50,7 +50,8 @@ function cpuSignDraftRights(){const you=controlledTeamId();
 // again when free agency completes: past two free agents per team, the lowest-rated (older first on ties) leave the
 // league. Teams still have a pool to sign from during the season.
 function capFreeAgentPool(){const limit=state.teams.length*LIFECYCLE.poolPerTeam,surplus=state.free.length-limit;if(surplus<=0)return 0;
- const gone=new Set([...state.free].sort((a,b)=>a.ovr-b.ovr||b.age-a.age||a.id-b.id).slice(0,surplus).map(p=>p.id));
+ // This year's draftees stay (the draft just happened; they keep their first chance to sign).
+ const gone=new Set(state.free.filter(p=>p.bio?.draftYear!==state.year).sort((a,b)=>a.ovr-b.ovr||b.age-a.age||a.id-b.id).slice(0,surplus).map(p=>p.id));
  for(const p of state.free)if(gone.has(p.id))lifecycleMarkRetired(p,false);state.free=state.free.filter(p=>!gone.has(p.id));return gone.size}
 const lifecycleFinishFABefore=finishFreeAgency;
 finishFreeAgency=async function(...args){const open=state.freeAgency?.phase!=='complete',result=await lifecycleFinishFABefore(...args);if(open&&state.freeAgency?.phase==='complete'&&capFreeAgentPool()>0)await save();return result};
