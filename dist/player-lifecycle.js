@@ -7,7 +7,7 @@
      before or are below a playable level.
    - First-round picks sign on draft day (a full CPU roster waives its lowest-value player). Unsigned draft rights expire
      after a full season unless the player is an international stash; the player becomes a free agent. */
-const LIFECYCLE=Object.freeze({retireBase:[.03,.06,.1,.16,.25,.37,.5,.64,.78,.88,.94,.98],hardAge:42,rightsSeasons:1,unsignedFloorOVR:60,targetOVR:75.5,breakout:.07,falloff:.06});
+const LIFECYCLE=Object.freeze({retireBase:[.03,.06,.1,.16,.25,.37,.5,.64,.78,.88,.94,.98],hardAge:42,rightsSeasons:1,unsignedFloorOVR:60,targetOVR:75.5,breakout:.07,falloff:.06,poolPerTeam:2});
 // Yearly OVR change before trait adjustments, by the player's new age.
 let lifecycleLastReport=null;
 // Age curve: growth into the mid-20s, a peak at 26-28, small declines at 29-31 that speed up after 32. Elite (85+) and
@@ -53,6 +53,10 @@ function offseasonLifecycle(){
   for(const p of leaving){lifecycleMarkRetired(p,true);out.retired++;if(t.id===you||p.ovr>=80)say(p.name+' ('+t.city+') retires at '+p.age+'.')}}
  state.free=state.free.filter(p=>{if(now.get(p.id)?.gp>0)return true;const gone=p.age>=30||p.ovr<LIFECYCLE.unsignedFloorOVR||!(before.get(p.id)?.gp>0);if(!gone)return true;lifecycleMarkRetired(p,false);out.freeAgentsLeft++;return false});
  state.draftRights=(state.draftRights||[]).filter(r=>{const y=r.player.bio?.draftYear,stash=r.player.international?.stashUntil;if(Number.isInteger(stash)&&stash>=state.year)return true;const keep=!(Number.isInteger(y)&&state.year-y>=LIFECYCLE.rightsSeasons);if(!keep){out.rightsExpired++;const p=r.player;delete p.contractThrough;p.previousTeamKey=state.teams[r.team]?.key;state.free.push(p);if(r.team===you)say('Draft rights to '+p.name+' expired unsigned; he is now a free agent.')}return keep});
+ // Cap the leftover pool at two unsigned free agents per team: the lowest-rated surplus who went unsigned all season
+ // leave the league (overseas), so the pool can't grow every year from waivers and expired rights.
+ const leftovers=state.free.filter(p=>!(now.get(p.id)?.gp>0)).sort((a,b)=>a.ovr-b.ovr||b.age-a.age||a.id-b.id),surplus=state.free.length-state.teams.length*LIFECYCLE.poolPerTeam;
+ if(surplus>0){const gone=new Set(leftovers.slice(0,surplus).map(p=>p.id));for(const p of state.free)if(gone.has(p.id))lifecycleMarkRetired(p,false);state.free=state.free.filter(p=>!gone.has(p.id));out.freeAgentsLeft+=gone.size}
  // Keep enough free agents for teams to refill after retirements (same generator as a fresh league's pool).
  const shortfall=state.teams.reduce((n,t)=>n+Math.max(0,rosterMinimum()-t.roster.length),0),need=Math.max(state.teams.length,shortfall*2)-state.free.length;
  if(need>0){let id=Math.max(0,...[...state.teams.flatMap(t=>t.roster),...state.free,...(state.draftRights||[]).map(r=>r.player),...(state.draft?.prospects||[])].map(p=>p.id))+1;
