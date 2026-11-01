@@ -73,7 +73,9 @@ function contractMarket(p,t=team(),year=state.year){
  if(mpg>0&&mpg<10)quality*=.95;
  // NBA technical ceilings in pre-maximum eras are not market salaries.
  const marketTop=wnbaEnabled()?env.max:Math.max(env.min,Math.min(env.max,env.cap*.35));
- let value=env.min+(marketTop-env.min)*Math.pow(Math.max(0,Math.min(1,quality)),wnbaEnabled()?1.7:3.5);
+ // Exponent 3.0 (was 3.5): the steeper curve priced rotation players near the minimum, so league payroll settled ~20%
+ // below the cap once starting contracts turned over.
+ let value=env.min+(marketTop-env.min)*Math.pow(Math.max(0,Math.min(1,quality)),wnbaEnabled()?1.7:3);
  const comps=same.map(q=>contractUSD(q.salary)).filter(v=>v>=env.min&&v<=env.max).sort((a,b)=>a-b);
  if(comps.length>=3)value=.85*value+.15*comps[Math.floor(comps.length/2)];
  value=Math.round(Math.max(env.min,Math.min(env.max,value)));
@@ -120,7 +122,8 @@ playerContract=function(ctx){
  return '<div class="contract-dossier">'+[['Contract Overview',overview],['Contract Breakdown',breakdown],['Extension Eligibility',eligibility],['Contract Value Assessment',assessment],['Team Salary Cap Impact',finances],['Contract Terms & Options',terms],['Contract History',contractHistoryMarkup(p)]].map(([title,body])=>playerCard(title,body)).join('')+'</div>';
 };
 // Persist before the existing atomic save snapshot. No parallel financial authority.
-const dossierSaveBefore=save;save=function(){const target=state,previous=state.contractBook?copy(state.contractBook):null;contractTrack();const restore=()=>{if(state===target){if(previous)state.contractBook=previous;else delete state.contractBook;}};try{return Promise.resolve(dossierSaveBefore()).then(ok=>{if(ok===false)restore();return ok;},error=>{restore();throw error;});}catch(error){restore();throw error;}};
+// The restore copy shares records of players who left the league (contractTrack never changes them again).
+const dossierSaveBefore=save;save=function(){const target=state,book=state.contractBook,previous=book?{...book,people:Object.fromEntries(Object.entries(book.people).map(([k,v])=>[k,v.status==='inactive'?v:copy(v)]))}:null;contractTrack();const restore=()=>{if(state===target){if(previous)state.contractBook=previous;else delete state.contractBook;}};try{return Promise.resolve(dossierSaveBefore()).then(ok=>{if(ok===false)restore();return ok;},error=>{restore();throw error;});}catch(error){restore();throw error;}};
 const dossierOwnerDayBefore=ownerDay;ownerDay=function(...args){contractAccrue();return dossierOwnerDayBefore(...args);};
 const dossierBuildBefore=buildSetupCareer;buildSetupCareer=function(...args){const result=dossierBuildBefore(...args),previous=state;try{state=result;contractTrack();for(const t of state.teams)for(const p of t.roster){const r=state.contractBook.people[p.id].records[0];r.signedYear=state.year;r.startYear=p.wnbaContract?.startYear??state.year;r.signingTeam=t.city+' '+t.name;r.signingTeamKey=t.key;r.originalYears=r.annual.length;r.evidence=p.wnbaContract?.evidence??'generated simulation agreement';if(!wnbaEnabled())r.annual=r.annual.map(a=>({...a,guaranteed:a.base}));}}finally{state=previous;}return result;};
 const dossierValidateBefore=validateCareerData;validateCareerData=function(raw){const out=dossierValidateBefore(raw);if(raw.contractBook!==undefined){const b=raw.contractBook;if(!b||b.version!==1||!Number.isInteger(b.startedYear)||!Number.isInteger(b.startedDay)||!b.people||Array.isArray(b.people))throw Error('Invalid contract history.');for(const [id,p] of Object.entries(b.people)){if(String(p.id)!==id||!Array.isArray(p.records)||!Array.isArray(p.earnings))throw Error('Invalid player contract history.');for(const r of p.records){if(!Array.isArray(r.annual)||!Array.isArray(r.events)||r.annual.some(a=>!Number.isInteger(a.year)||!Number.isSafeInteger(a.base)||a.base<0||a.guaranteed!==null&&(!Number.isSafeInteger(a.guaranteed)||a.guaranteed<0||a.guaranteed>a.base)))throw Error('Invalid recorded contract schedule.');}if(p.earnings.some(e=>!Number.isInteger(e.year)||!Number.isFinite(e.amount)||e.amount<0))throw Error('Invalid recorded earnings.');}out.contractBook=copy(b);}return out;};

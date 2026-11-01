@@ -10,13 +10,21 @@ function ensureDraft(){
 function draftReady(){return state.champion!==null&&state.day>=seasonLength()}
 function draftComplete(){return state.draft?.year===state.year&&state.draft.picks.length===state.teams.length*draftRoundCount()}
 async function draftCommit(before){if(await save()===false){state=before;toast('Could not save draft changes. Please try again.');render();return false}render();return true}
+// Weighted draws without replacement: each draw picks a remaining team with probability weight / remaining total.
+// Winners are removed from `eligible`.
+function lotteryDraw(eligible,draws,random=Math.random){const won=[];for(let n=0;n<draws&&eligible.length;n++){let roll=random()*eligible.reduce((s,t)=>s+t.weight,0),at=eligible.findIndex(t=>(roll-=t.weight)<0);won.push(eligible.splice(at<0?eligible.length-1:at,1)[0].id)}return won}
+// Exact odds of each team (by position in `weights`) landing each pick: odds[team][slot], slots 0..draws-1 drawn, then
+// the rest in order. Used to check the drawing against the configured system.
+function lotteryOdds(weights,draws){const n=weights.length,odds=weights.map(()=>Array(n).fill(0));
+ const walk=(left,slot,p)=>{if(slot===draws||!left.length){left.forEach((t,i)=>odds[t][slot+i]+=p);return}const total=left.reduce((s,t)=>s+weights[t],0);if(total<=0){left.forEach((t,i)=>odds[t][slot+i]+=p);return}for(const t of left)if(weights[t]>0){const q=p*weights[t]/total;odds[t][slot]+=q;walk(left.filter(x=>x!==t),slot+1,q)}};
+ walk(weights.map((_,i)=>i),0,1);return odds}
 async function runDraftLottery(){if(state.expansion?.active)return toast('Finish or cancel the expansion draft before running the lottery.');if(!gmCanAdvance()||!draftReady())return toast('Finish the playoffs before the lottery.');const before=snapshotState(),d=ensureDraft();if(d.order.length)return;
  const expansion=state.expansion?.history.find(h=>h.year===state.year),ranked=rank().filter(t=>t.id!==expansion?.team),eligible=ranked.filter(t=>!ownerPlayoffClub(t)).reverse().map((t,i,a)=>({id:t.id,weight:a.length-i})),winners=[];
  const mode=leagueRules().lotteryMode;
  if(mode==='equal')eligible.forEach(t=>t.weight=1);
  if(expansion?.config.seed==='equal'){eligible.forEach(t=>t.weight=1);eligible.push({id:expansion.team,weight:1})}
  if(mode==='custom'){let weights;try{weights=parseLotteryChances(leagueRules().lotteryChances);if(weights.length<eligible.length||weights.slice(0,eligible.length).filter(w=>w>0).length<Math.min(leagueRules().lotterySelections,eligible.length))throw Error('Provide a weight for every lottery team and enough positive weights for the selected lottery slots.');}catch(e){state=before;return toast(e.message)}eligible.forEach((t,i)=>t.weight=weights[i]);}
- for(let n=0,draws=['record','random','snake'].includes(mode)?0:Math.min(leagueRules().lotterySelections,eligible.length);n<draws;n++){let roll=Math.random()*eligible.reduce((s,t)=>s+t.weight,0),at=eligible.findIndex(t=>(roll-=t.weight)<0);winners.push(eligible.splice(Math.max(0,at),1)[0].id)}
+ winners.push(...lotteryDraw(eligible,['record','random','snake'].includes(mode)?0:Math.min(leagueRules().lotterySelections,eligible.length)));
  d.order=[...winners,...eligible.map(t=>t.id),...ranked.filter(t=>ownerPlayoffClub(t)).reverse().map(t=>t.id)];
  if(mode==='random'){for(let i=d.order.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[d.order[i],d.order[j]]=[d.order[j],d.order[i]];}}
  if(expansion&&expansion.config.seed!=='equal')d.order.splice(expansion.config.seed==='first'?0:3,0,expansion.team);
@@ -31,7 +39,7 @@ function draftPickInternal(id){if(wnbaEnabled())return wnbaDraftPick(id);const d
  // Biography records the overall pick across all configured rounds.
  Object.assign(p.bio,{draftYear:state.year,draftRound:round,draftPick:index+1,draftTeam:club.abbr,debutYear:state.year});
  d.picks.push({number:index+1,round,team:club.id,id:p.id,name:p.name,pos:p.pos,ovr:p.ovr,pot:p.pot});
- const stashed=internationalOnDraft(p);
+ const stashed=internationalOnDraft(p);if(!stashed)draftMakeRoom(club,p,round);
  if(!stashed&&club.roster.length<rosterMaximum()&&ownerPayroll(club)+p.salary<=financeRosterLimit(club)+.001){internationalPrepareSigning(p);club.roster.push(p)}else(state.draftRights??=[]).push({team:club.id,player:p});
  say(club.city+' selects '+p.name+' with pick '+(index+1)+'.');return true;
 }
