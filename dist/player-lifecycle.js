@@ -17,13 +17,13 @@ function developmentBase(p){const a=p.age,elite=p.ovr>=85,durable=(p.attributes?
  let d=a<=23?rand(0,3):a<=25?rand(0,2):a<=28?rand(-1,1):a<=31?rand(-2,0):a<=33?rand(-3,-1):rand(-5,-2);
  if(d<0&&(elite||durable))d=Math.ceil(d*(elite&&durable?.5:.7));
  const roll=Math.random();
- if(a<=25&&p.pot-p.ovr>=4&&roll<LIFECYCLE.breakout){d+=rand(2,4);p.pot=Math.min(99,p.pot+rand(1,3))}
+ if(a<=25&&p.ovr<80&&p.pot-p.ovr>=4&&roll<LIFECYCLE.breakout){d+=rand(2,4);p.pot=Math.min(99,p.pot+rand(1,3))}
  else if(a>=26&&roll>1-LIFECYCLE.falloff)d-=rand(2,4);
  if(d>0&&p.ovr>=85)d=Math.floor(d/2);if(d>1&&p.pot-p.ovr<=3&&roll>=LIFECYCLE.breakout)d=1;return d+lifecycleRatingOffset()}
 // Retirements and roster cuts remove weaker players first, so the league average drifts up even with a balanced age
-// curve. Each rollover nudges every player's change by half the gap to the target average (capped at 2 points).
+// curve. Each rollover shifts every player's change by the gap to the target average (capped at 3 points).
 let lifecycleOffset={year:null,value:0};
-function lifecycleRatingOffset(){if(lifecycleOffset.year!==state.year){const active=state.teams.flatMap(t=>t.roster),mean=active.length?active.reduce((n,p)=>n+p.ovr,0)/active.length:LIFECYCLE.targetOVR;lifecycleOffset={year:state.year,value:Math.max(-2,Math.min(2,Math.round((LIFECYCLE.targetOVR-mean)/2)))}}return lifecycleOffset.value}
+function lifecycleRatingOffset(){if(lifecycleOffset.year!==state.year){const active=state.teams.flatMap(t=>t.roster),mean=active.length?active.reduce((n,p)=>n+p.ovr,0)/active.length:LIFECYCLE.targetOVR;lifecycleOffset={year:state.year,value:Math.max(-3,Math.min(3,Math.round(LIFECYCLE.targetOVR-mean)))}}return lifecycleOffset.value}
 function lifecycleSeasonRows(year){const rows=new Map();for(const r of state.statsArchive||[])if(r.year===year&&Number.isInteger(r.id)){const o=rows.get(r.id)||{gp:0,mp:0};o.gp+=r.gp||0;o.mp+=r.mp||0;rows.set(r.id,o)}return rows}
 function lifecycleRetireChance(p,season){
  if(p.age>=LIFECYCLE.hardAge)return 1;if(p.age<30)return 0;
