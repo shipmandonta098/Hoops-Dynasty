@@ -1,17 +1,25 @@
 /* Career lifecycle for long leagues.
-   - Development follows an age curve: growth into the early 20s, a plateau in the mid-20s, decline from the late 20s.
+   - Development follows an age curve: growth into the mid-20s, a peak at 26-28, declines from 29 that speed up after
+     32 (slower for elite and durable players), with occasional breakouts and early falloffs.
    - Retirement is decided once per offseason when free agency opens (inside its rollback), so teams can replace
      retirees in free agency. Possible from 30, likely by 35, rare past 38; better players and bigger roles last longer.
    - Free agents who went unsigned all season retire if 30+, or leave the league if they were also unsigned the season
      before or are below a playable level.
    - First-round picks sign on draft day (a full CPU roster waives its lowest-value player). Unsigned draft rights expire
      after a full season unless the player is an international stash; the player becomes a free agent. */
-const LIFECYCLE=Object.freeze({retireBase:[.03,.06,.1,.16,.25,.37,.5,.64,.78,.88,.94,.98],hardAge:42,rightsSeasons:1,unsignedFloorOVR:60,targetOVR:75.5});
+const LIFECYCLE=Object.freeze({retireBase:[.03,.06,.1,.16,.25,.37,.5,.64,.78,.88,.94,.98],hardAge:42,rightsSeasons:1,unsignedFloorOVR:60,targetOVR:75.5,breakout:.07,falloff:.06});
 // Yearly OVR change before trait adjustments, by the player's new age.
 let lifecycleLastReport=null;
-// Growth slows near potential and for elite players, so the share of 85+ players stays stable.
-function developmentBase(p){const a=p.age;let d=a<=21?rand(0,3):a<=23?rand(0,2):a<=25?rand(-1,1):a<=27?rand(-1,1):a<=29?rand(-2,0):a<=31?rand(-3,0):a<=33?rand(-4,-1):rand(-5,-1);
- if(d>0&&p.ovr>=85)d=Math.floor(d/2);if(d>1&&p.pot-p.ovr<=3)d=1;return d+lifecycleRatingOffset()}
+// Age curve: growth into the mid-20s, a peak at 26-28, small declines at 29-31 that speed up after 32. Elite (85+) and
+// high-durability players decline more slowly. Breakouts and early falloffs keep careers varied. Growth slows near
+// potential and for elite players, so the share of 85+ players stays stable.
+function developmentBase(p){const a=p.age,elite=p.ovr>=85,durable=(p.attributes?.dur??50)>=80;
+ let d=a<=23?rand(0,3):a<=25?rand(0,2):a<=28?rand(-1,1):a<=31?rand(-2,0):a<=33?rand(-3,-1):rand(-5,-2);
+ if(d<0&&(elite||durable))d=Math.ceil(d*(elite&&durable?.5:.7));
+ const roll=Math.random();
+ if(a<=25&&p.pot-p.ovr>=4&&roll<LIFECYCLE.breakout){d+=rand(2,4);p.pot=Math.min(99,p.pot+rand(1,3))}
+ else if(a>=26&&roll>1-LIFECYCLE.falloff)d-=rand(2,4);
+ if(d>0&&p.ovr>=85)d=Math.floor(d/2);if(d>1&&p.pot-p.ovr<=3&&roll>=LIFECYCLE.breakout)d=1;return d+lifecycleRatingOffset()}
 // Retirements and roster cuts remove weaker players first, so the league average drifts up even with a balanced age
 // curve. Each rollover nudges every player's change by half the gap to the target average (capped at 2 points).
 let lifecycleOffset={year:null,value:0};

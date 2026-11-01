@@ -73,7 +73,9 @@ function contractMarket(p,t=team(),year=state.year){
  if(mpg>0&&mpg<10)quality*=.95;
  // NBA technical ceilings in pre-maximum eras are not market salaries.
  const marketTop=wnbaEnabled()?env.max:Math.max(env.min,Math.min(env.max,env.cap*.35));
- let value=env.min+(marketTop-env.min)*Math.pow(Math.max(0,Math.min(1,quality)),wnbaEnabled()?1.7:3.5);
+ // Exponent 3.0 (was 3.5): the steeper curve priced rotation players near the minimum, so league payroll settled ~20%
+ // below the cap once starting contracts turned over.
+ let value=env.min+(marketTop-env.min)*Math.pow(Math.max(0,Math.min(1,quality)),wnbaEnabled()?1.7:3);
  const comps=same.map(q=>contractUSD(q.salary)).filter(v=>v>=env.min&&v<=env.max).sort((a,b)=>a-b);
  if(comps.length>=3)value=.85*value+.15*comps[Math.floor(comps.length/2)];
  value=Math.round(Math.max(env.min,Math.min(env.max,value)));
