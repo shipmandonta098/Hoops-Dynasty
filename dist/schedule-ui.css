@@ -66,3 +66,6 @@ body:has(#profile.game-results[open]){overflow:hidden}
 .game-watch .watch-feed{overflow-anchor:none;scroll-behavior:auto}
 
 .schedule-all-star-event{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}.schedule-all-star-event>div{min-width:0}.schedule-all-star-event .schedule-watch-actions{flex-shrink:0;max-width:100%}
+/* Schedule rows use each team's secondary mark at the same size the primary logo had. */
+.schedule-opponent .secondary-team-logo{width:36px;height:36px;flex:0 0 36px;object-fit:contain}
+.league-matchup .secondary-team-logo{width:32px;height:32px;flex:0 0 32px;object-fit:contain}
