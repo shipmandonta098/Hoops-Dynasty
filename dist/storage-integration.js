@@ -43,3 +43,14 @@ statsChange=function(key,value){storageStatsPage=0;if(key!=='season'||!careerSto
 statsSort=function(key){storageStatsPage=0;return storageStatsSortBefore(key)};
 function storageStatsSlice(rows){storageStatsPage=Math.max(0,Math.min(storageStatsPage,Math.ceil(rows.length/100)-1));return rows.slice(storageStatsPage*100,(storageStatsPage+1)*100)}
 function storageStatsPagination(count){return count>100?'<div class="actions"><button onclick="storageStatsPage--;render()" '+(!storageStatsPage?'disabled':'')+'>Previous</button><span>Page '+(storageStatsPage+1)+' of '+Math.ceil(count/100)+'</span><button onclick="storageStatsPage++;render()" '+((storageStatsPage+1)*100>=count?'disabled':'')+'>Next</button></div>':'';}
+// News: the main save keeps the current season (plus undated legacy items). A finished season's items leave memory
+// after the first successful save once the season has rolled over, so they are already in the archive store; the
+// news feed reads them back from there. Without archive storage (headless runs) they are dropped at rollover.
+function newsFinishedIds(){const year=state.year;return new Set((state.newsFeed?.items||[]).filter(n=>n.year!==null&&n.year<year).map(n=>n.id))}
+function newsDropIds(feed,ids){if(feed&&ids.size)feed.items=feed.items.filter(n=>!ids.has(n.id))}
+// Guarded so this file can load without the rest of the game (storage tests load it alone).
+if(typeof save==='function'){const newsArchiveSaveBefore=save;
+save=function(...args){const feed=state.newsFeed,ids=newsFinishedIds(),pending=newsArchiveSaveBefore(...args);if(!ids.size||!newsArchiveReady())return pending;
+ return Promise.resolve(pending).then(ok=>{if(ok!==false&&state.newsFeed===feed)newsDropIds(feed,ids);return ok})}}
+if(typeof newsArchiveReady==='function'){const newsArchiveSeasonBefore=newSeason;
+newSeason=function(...args){const result=newsArchiveSeasonBefore(...args),drop=()=>{if(!newsArchiveReady())newsDropIds(state.newsFeed,newsFinishedIds())};if(result&&typeof result.then==='function')return result.then(r=>{drop();return r});drop();return result};}

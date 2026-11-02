@@ -92,15 +92,22 @@ assert.equal(s(`return story(mk({events:steady()}))`).verb,'cruise past');
 assert.equal(s(`const e=[[0,700,0,3],[0,600,0,3],[2,700,1,3],[2,650,1,3],[2,600,1,2],[3,700,0,3],[3,600,0,3],[3,500,0,2]];return story(mk({events:e}))`).verb,'rally past');
 // Every headline keeps the score at the end, winner first.
 for(const t of Object.keys(run('HEADLINE_TEMPLATES')))for(const line of run(`HEADLINE_TEMPLATES['${t}'].map(f=>f({W:'Alpha Hawks',L:'Beta Owls',venue:' at home',score:'100–99',margin:1,deficit:12,when:'third quarter',ot:'overtime',player:'Sam Doe',shot:'basket',seconds:3,w:3,l:1,game:4,next:5,n:5,label:'Metro Rivalry',pts:41,reb:20,line:'12-11-10',forWinner:true,verb:null}))`))assert(/, 100–99$/.test(line),t+': '+line);
-// Template rotation: the same story template is not used back-to-back on a day.
-const rot=s(`prior=[];state.newsFeed=undefined;const out=[];for(const [a,b] of [[1,2],[3,4],[5,6],[7,8]]){const g=mk({events:steady().concat([[3,40,0,2],[3,35,0,2],[3,30,0,2],[3,25,0,2],[3,20,0,2],[3,15,0,2]]),a,b,day:12});state.history=[g];const h=gameHeadline(g);addNewsItem({category:'Results',headline:h.headline,story:h.story,day:12});out.push(h.story)}return out`);
+// Template rotation: the same story template is not used back-to-back on a day (earlier games' stored facts decide).
+const rot=s(`prior=[];state.newsFeed=undefined;const out=[],games=[];for(const [a,b] of [[1,2],[3,4],[5,6],[7,8]]){const g=mk({events:steady().concat([[3,40,0,2],[3,35,0,2],[3,30,0,2],[3,25,0,2],[3,20,0,2],[3,15,0,2]]),a,b,day:12});state.history=[g,...games];const h=gameHeadline(g);g.story=h.facts;games.unshift(g);out.push(h.story)}return out`);
 for(let i=1;i<rot.length;i++)assert.notEqual(rot[i],rot[i-1],'consecutive same-day templates differ: '+rot.join());
-// Links: headline names resolve to clickable team buttons.
-assert(/news-entity-link/.test(run(`(()=>{const item=newsStore().items[0];return newsLinkedText(item.headline,item,newsLinkEntities())})()`)));
-// Saves: story references and game highs round-trip; old items without a story still load; bad values are rejected.
-l.run(`state.history=[];state.gameHighs={start:state.year,players:{5:{pts:30,games:12}}};newsStore().items.push({id:9999,year:null,day:null,phase:'Earlier update',category:'Results',headline:'Old Town defeat Other Town, 100–90',detail:'',teams:[],game:null});`);
-const saved=run(`(()=>{const v=validateCareerData(JSON.parse(JSON.stringify(state)));return {story:v.newsFeed.items[0].story,old:v.newsFeed.items.find(n=>n.id===9999).headline,highs:v.gameHighs}})()`);
-assert.match(saved.story,/^[a-zA-Z]+:\d$/);assert.equal(saved.old,'Old Town defeat Other Town, 100–90','old headlines are unchanged');assert.deepEqual(saved.highs,{start:run('state.year'),players:{5:{pts:30,games:12}}});
-assert.throws(()=>l.run(`(()=>{const r=JSON.parse(JSON.stringify(state));r.newsFeed.items[0].story='<b>';validateCareerData(r)})()`),/news story/);
+// Stored facts rebuild the same headline; names resolve to clickable team buttons in the feed.
+assert(run(`(()=>{const g=state.history[0];return headlineFromFacts(g,g.story)===HEADLINE_TEMPLATES[g.story.type][g.story.i]({...gameHeadlineStory(g,new Map())})})()`),'facts rebuild the headline');
+assert(/news-entity-link/.test(run(`(()=>{const item=newsResultItem(state.history[0],state.year,0);return newsLinkedText(item.headline,item,newsLinkEntities())})()`)));
+// Saves: game story facts and game highs round-trip; old stored result items (with or without a story reference) still
+// load unchanged; bad values are rejected.
+l.run(`state.history=[];state.gameHighs={start:state.year,players:{5:{pts:30,games:12}}};newsStore().items.push({id:9998,year:state.year,day:3,phase:'Regular season',category:'Results',headline:'Old Town edge Other Town, 99–98',story:'close:1',detail:'',teams:[],game:null},{id:9999,year:null,day:null,phase:'Earlier update',category:'Results',headline:'Old Town defeat Other Town, 100–90',detail:'',teams:[],game:null});`);
+(async()=>{await l.run('sim(1)');
+const saved=run(`(()=>{const v=validateCareerData(JSON.parse(JSON.stringify(state)));return {story:v.newsFeed.items.find(n=>n.id===9998).story,old:v.newsFeed.items.find(n=>n.id===9999).headline,highs:v.gameHighs.start,facts:v.history.map(g=>g.story),live:state.history.map(g=>g.story)}})()`);
+assert.equal(saved.story,'close:1');assert.equal(saved.old,'Old Town defeat Other Town, 100–90','old headlines are unchanged');assert.equal(saved.highs,run('state.year'));
+assert(saved.live.length>0&&saved.live.every(Boolean),'every new game stores its story facts');assert.deepEqual(saved.facts,saved.live);
+assert.throws(()=>l.run(`(()=>{const r=JSON.parse(JSON.stringify(state));r.newsFeed.items.find(n=>n.id===9998).story='<b>';validateCareerData(r)})()`),/news story/);
+for(const bad of [`{...g.story,type:'nope'}`,`{...g.story,i:99}`,`{...g.story,W:5}`,`{...g.story,extra:'x'}`,`{...g.story,n:-1}`])
+ assert.throws(()=>l.run(`(()=>{const r=JSON.parse(JSON.stringify(state)),g=r.history[0];g.story=${bad};validateCareerData(r)})()`),/game story/,bad);
 assert.throws(()=>l.run(`(()=>{const r=JSON.parse(JSON.stringify(state));r.gameHighs.players['5'].pts=-1;validateCareerData(r)})()`),/game high/);
 console.log('Game headlines: comeback (deficit/quarter math), overtime, close/late winner, blowout, milestones, series, clinch/elimination, individual games, fallback verbs, score suffix, rotation and saves passed.');
+})().catch(e=>{console.error(e);process.exit(1)});

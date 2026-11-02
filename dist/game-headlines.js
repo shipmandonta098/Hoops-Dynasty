@@ -1,5 +1,5 @@
 /* Game result headlines: pick the most notable story from the game's own data (scoring timeline, periods, venue,
-   records, streaks, rivalries, playoff series, box score). Applies to new games; saved headlines are never rewritten.
+   records, streaks, rivalries, playoff series, box score). Applies to new games; the story's facts are stored on the game record and old headlines are never rewritten.
    Priority: comeback, overtime, close finish, blowout, milestone, individual performance, then a plain result. */
 const HEADLINE_PERIOD_WORDS=['first','second','third','fourth'];
 function headlineHash(text){let h=2166136261;for(const ch of String(text))h=Math.imul(h^ch.charCodeAt(0),16777619)>>>0;return h}
@@ -57,9 +57,11 @@ function headlineArticle(name){return /^[AEIOU]/i.test(name)?'an':'a'}
 function headlineOrdinal(n){const v=n%100;return n+(v>=11&&v<=13?'th':['th','st','nd','rd'][n%10]||'th')}
 function headlineShotName(e){return e.points===3?'three-pointer':e.points===1?'free throw':'basket'}
 // Facts → story. Each story carries the claim-specific values its templates use.
+// Venue, score and margin come from the game itself; team names are passed in (current names for a new game).
+function headlineBase(g,names){const neutral=/all.star|rising|exhibition|neutral/i.test(g.stage);return {...names,venue:neutral?'':g.winner===g.a?' at home':' on the road',score:Math.max(g.sa,g.sb)+'–'+Math.min(g.sa,g.sb),margin:Math.abs(g.sa-g.sb)}}
 function gameHeadlineStory(g,prior=gameHighsPrior(g)){
- const W=state.teams[g.winner],L=state.teams[g.winner===g.a?g.b:g.a],t=headlineTimeline(g),margin=Math.abs(g.sa-g.sb),hi=Math.max(g.sa,g.sb),lo=Math.min(g.sa,g.sb);
- const neutral=/all.star|rising|exhibition|neutral/i.test(g.stage),venue=neutral?'':g.winner===g.a?' at home':' on the road',base={W:W.city+' '+W.name,L:L.city+' '+L.name,venue,score:hi+'–'+lo,margin};
+ const W=state.teams[g.winner],L=state.teams[g.winner===g.a?g.b:g.a],t=headlineTimeline(g),margin=Math.abs(g.sa-g.sb);
+ const neutral=/all.star|rising|exhibition|neutral/i.test(g.stage),base=headlineBase(g,{W:W.city+' '+W.name,L:L.city+' '+L.name});
  if(t&&(t.deficit>=12||t.lateDeficit>=8)){const late=t.deficit<12;return {...base,type:'comeback',deficit:late?t.lateDeficit:t.deficit,when:late?headlinePeriodName(t.rules.gamePeriods-1,t.rules.gamePeriods):headlinePeriodName(t.deficitPeriod,t.rules.gamePeriods)}}
  if(t?.overtimes)return {...base,type:'overtime',ot:headlineOvertimeName(t.overtimes)};
  const late=t?.winningShot&&t.winningShot.secondsLeft<=10?t.winningShot:null;
@@ -113,14 +115,27 @@ const HEADLINE_TEMPLATES={
  result:[s=>`${s.W} ${s.verb||'top'} ${s.L}${s.venue}, ${s.score}`,s=>`${s.W} ${s.verb||'beat'} ${s.L}${s.venue}, ${s.score}`,s=>`${s.W} ${s.verb||'get past'} ${s.L}${s.venue}, ${s.score}`,s=>`${s.W} ${s.verb||'down'} ${s.L}${s.venue}, ${s.score}`]
 };
 // Template choice is seeded by the game; the same template never runs twice in a row for one story type on a day.
+// The story's facts (as of the game) are stored on the game record, so the news feed can rebuild the headline later.
 function gameHeadline(g){
  const prior=gameHighsPrior(g),story=gameHeadlineStory(g,prior),list=HEADLINE_TEMPLATES[story.type];let i=headlineHash(state.year+':'+g.day+':'+g.a+':'+g.b+':'+g.stage)%list.length;
- const previous=newsStore().items.find(n=>n.category==='Results'&&n.year===state.year&&n.day===g.day&&n.story?.startsWith(story.type+':'));
- if(previous&&Number(previous.story.split(':')[1])===i)i=(i+1)%list.length;
- gameHighsRecord(g);return {headline:list[i](story),story:story.type+':'+i};
+ const previous=state.history.find(x=>x!==g&&x.day===g.day&&x.story?.type===story.type);
+ if(previous&&previous.story.i===i)i=(i+1)%list.length;
+ const {venue,score,margin,...facts}=story;
+ gameHighsRecord(g);return {headline:list[i](story),story:story.type+':'+i,facts:{...facts,i}};
 }
+function headlineFromFacts(g,f){const list=HEADLINE_TEMPLATES[f.type];return list[f.i]({...f,...headlineBase(g,{W:f.W,L:f.L})})}
+// Stored story facts: only known fields with checked types.
+const HEADLINE_FACT_FIELDS={W:'text',L:'text',deficit:'int',when:'text',ot:'text',player:'text',shot:'text',seconds:'int',w:'int',l:'int',game:'int',next:'int',n:'int',label:'text',pts:'int',reb:'int',line:'text',forWinner:'bool',verb:'text'};
+function readHeadlineFacts(raw,bad){
+ if(!raw||typeof raw!=='object'||Array.isArray(raw)||!Object.hasOwn(HEADLINE_TEMPLATES,raw.type)||!Number.isInteger(raw.i)||raw.i<0||raw.i>=HEADLINE_TEMPLATES[raw.type].length)bad('invalid game story');
+ const out={type:raw.type,i:raw.i};for(const [k,v] of Object.entries(raw)){if(k==='type'||k==='i'||v===undefined)continue;const kind=HEADLINE_FACT_FIELDS[k];
+  if(!kind||v===null&&(k==='W'||k==='L'))bad('invalid game story');if(v===null){out[k]=v;continue}
+  if((kind==='text'?!(typeof v==='string'&&v.length<=160):kind==='int'?!(Number.isInteger(v)&&v>=0&&v<=10000):typeof v!=='boolean'))bad('invalid game story');out[k]=v}
+ if(typeof out.W!=='string'||typeof out.L!=='string')bad('invalid game story');return out}
 const validateBeforeGameHighs=validateCareerData;validateCareerData=function(raw){
- const data=validateBeforeGameHighs(raw),h=raw.gameHighs;if(h===undefined)return data;
+ const data=validateBeforeGameHighs(raw),h=raw.gameHighs;
+ for(let i=0;i<data.history.length;i++)if(raw.history[i].story!==undefined)data.history[i].story=readHeadlineFacts(raw.history[i].story,m=>{throw Error('Invalid save: '+m)});
+ if(h===undefined)return data;
  if(!h||!Number.isInteger(h.start)||h.start<1900||h.start>10001||!h.players||typeof h.players!=='object'||Array.isArray(h.players)||Object.keys(h.players).length>20000)throw Error('Invalid save: game highs');
  const players={};for(const [id,p] of Object.entries(h.players)){if(!/^\d+$/.test(id)||!p||!Number.isInteger(p.pts)||p.pts<0||p.pts>300||!Number.isInteger(p.games)||p.games<0||p.games>100000)throw Error('Invalid save: game high');players[id]={pts:p.pts,games:p.games}}
  data.gameHighs={start:h.start,players};return data;
