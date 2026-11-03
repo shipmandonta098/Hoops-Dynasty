@@ -41,3 +41,25 @@ function playoffMatchupNews(){const c=playoffConfig(),seed=id=>{const side=c.sid
   else racePost('#'+seed(a.id)+' '+raceTeamName(a)+' will face off against the #'+seed(b.id)+' '+raceTeamName(b)+conf+'.',[a.id,b.id])}}
 const seasonMilestoneDayBeforeRace=seasonMilestoneDay;
 seasonMilestoneDay=function(...args){const result=seasonMilestoneDayBeforeRace(...args);playoffRaceDay();return result};
+/* Playoff series news: when a series ends, the feed posts who advanced (the most notable story wins: a historic upset,
+   a sweep, an upset, or a plain advance) with the series score, plus a star line when someone scored 30+ in the
+   clinching game. Seeds are conference seeds in a conference-split bracket, league seeds otherwise. */
+function seriesRoundName(stage,c,conf){const label=playoffStageLabel(stage,c),where=conf?'the '+conf+' Conference':'the Conference';
+ return label==='Championship'?'the Finals':label==='Conference semifinal'?where+' Semifinals':label==='Conference final'?where+' Finals':'the '+label+'s'}
+// Headlines for a completed series s: [series headline, optional star headline], each {headline, detail}.
+function playoffSeriesNews(s,c=playoffConfig()){
+ if(!s?.complete||s.bye||!s.result)return [];const g=s.result,W=state.teams[s.winner],L=state.teams[s.pair.find(id=>id!==s.winner)],side=id=>c.sides.find(x=>x.teams.includes(id)),seed=id=>side(id).teams.indexOf(id)+1;
+ const conf=c.split?side(W.id)?.name:null,stages=playoffStages(c),title=s.stage==='Championship',next=title?null:stages[stages.indexOf(s.stage)+1],dest=next?seriesRoundName(next,c,conf):null;
+ const w=s.wins[s.pair.indexOf(W.id)],l=s.wins[s.pair.indexOf(L.id)],sw=seed(W.id),sl=seed(L.id),gap=sw-sl,sweep=s.bestOf>1&&l===0,score=w+'–'+l;
+ const nW='#'+sw+' '+raceTeamName(W),nL='#'+sl+' '+raceTeamName(L),out=[];
+ if(!title){const headline=gap>=6?`${nW} knock out the ${nL} in a historic upset${sweep?' sweep':''}.`:sweep?`${nW} sweep the ${raceTeamName(L)} to move on to ${dest}.`:gap>=3?`${nW} upset the ${nL} to reach ${dest}.`:`${nW} advance to ${dest}.`;
+  out.push({headline,detail:s.bestOf>1?`Won the series ${score} over the ${nL}${gap>=6?' and move on to '+dest:''}.`:`Beat the ${nL}, ${Math.max(g.sa,g.sb)}–${Math.min(g.sa,g.sb)}${gap>=6?', and move on to '+dest:''}.`})}
+ const star=[...(g.box||[])].filter(r=>r.played!==false&&r.team===W.abbr).sort((a,b)=>b.pts-a.pts)[0];
+ if(star&&star.pts>=30)out.push({headline:`${star.name} drops ${star.pts} points${s.bestOf>1?' in Game '+(w+l):''} to help ${title?'the '+raceTeamName(W)+' clinch the championship':'propel the '+raceTeamName(W)+' into '+dest}.`,detail:`${star.pts} PTS · ${star.reb} REB · ${star.ast} AST.`});
+ return out}
+// Posted when the clinching game is played; the star line goes first so the series headline sits above it.
+const playBeforeSeriesNews=play;
+play=function(a,b,stage='Regular season'){const r=playBeforeSeriesNews(a,b,stage);if(stage==='Regular season'||!r)return r;
+ const s=playoffSeriesSlots().find(x=>x.stage===r.stage&&x.pair.includes(r.a)&&x.pair.includes(r.b));
+ if(s?.complete&&s.result===r)for(const item of playoffSeriesNews(s).reverse())if(!newsStore().items.some(n=>n.year===state.year&&n.headline===item.headline))addNewsItem({category:'League',...item,teams:[s.winner,s.pair.find(id=>id!==s.winner)]});
+ return r};
