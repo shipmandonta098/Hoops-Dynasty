@@ -10,11 +10,12 @@ const realm=(league,seed)=>{const l=loadLeague({seed,strictDOM:false});l.setRand
 (async()=>{
  // 1. AI trades over the run-up to the deadline: legal, multi-shape, user team untouched, rules hold after every day.
  for(const league of ['nba','wnba']){
-  const {run,l}=realm(league,31);const user=run('controlledTeamId()'),userRoster=run(`state.teams[controlledTeamId()].roster.map(p=>p.id).join()`),deadline=run('seasonMilestones().deadline');
+  const {run,l}=realm(league,31);const user=run('controlledTeamId()'),userRoster=run(`state.teams[controlledTeamId()].roster.map(p=>p.id).sort((a,b)=>a-b).join()`),deadline=run('seasonMilestones().deadline');
   for(let day=0;day<deadline+2;day++){await l.run('simulateDayHeadless()');
    const bad=run(`state.teams.filter(t=>t.roster.length<rosterMinimum()||t.roster.length>rosterMaximum()).map(t=>t.abbr+':'+t.roster.length)`);assert.deepEqual(bad,[],league+' roster limits on day '+day);}
   const a=run('audit');assert.deepEqual(a.illegal,[],league+': every executed AI trade passes tradeLegality');assert(a.trades.length>0,league+': AI trades occur');assert.equal(a.userTouched,false);
-  assert.equal(run(`state.teams[controlledTeamId()].roster.map(p=>p.id).join()`),userRoster,league+': CPU moves never touch the user roster');
+  // Same players (the auto lineup may reorder the user's roster before games; CPU moves never add or remove anyone).
+  assert.equal(run(`state.teams[controlledTeamId()].roster.map(p=>p.id).sort((a,b)=>a-b).join()`),userRoster,league+': CPU moves never touch the user roster');
   assert(a.trades.every(t=>t.day<=deadline),league+': no AI trades after the deadline');
   // Two-consecutive-years first-round rule still holds for every club after all trades.
   assert.deepEqual(run(`state.teams.filter(t=>{const own=tradePicks(t);for(let y=state.year+((state.draft?.picks.length||0)>0?1:0);y<state.year+leagueRules().tradePickSeasons-1;y++)if(!own.some(p=>p.round===1&&p.year===y)&&!own.some(p=>p.round===1&&p.year===y+1))return true;return false}).map(t=>t.abbr)`),[],league+': first-round pick rule');
