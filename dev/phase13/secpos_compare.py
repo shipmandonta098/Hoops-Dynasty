@@ -1,5 +1,5 @@
 """Phase 13 scorecard before/after secondary positions, paired by seed.
-Usage: python3 dev/phase13/secpos_compare.py <before dir> <after dir> [out.json]
+Usage: python3 dev/phase13/secpos_compare.py <before dir> <after dir> [out.json] [before label=secpos-before] [after label=secpos-after]
 Reads secpos-before-<league>-<seed>.json and secpos-after-<league>-<seed>.json audit seasons (dev/audit-phase13-season.cjs)
 and reports, per league, each scorecard metric and box-score rate for both versions with the paired mean difference
 and its 95% t interval across seeds. A metric is flagged when the interval excludes zero."""
@@ -18,12 +18,12 @@ def metrics(path):
     r = season(path); keys = ['meanMargin', 'blow20Pct', 'within5Pct', 'otPct', 'teamMarginSD', 'transitionOpportunityPct', 'fastbreakFGAPct', 'final60Possessions']
     return {**{k: r[k] for k in keys}, **box(path)}
 
-def compare(before_dir, after_dir):
+def compare(before_dir, after_dir, before='secpos-before', after='secpos-after'):
     out = {}
     for league in ['nba', 'wnba']:
         pairs = []
-        for b in sorted(pathlib.Path(before_dir).glob(f'secpos-before-{league}-*.json')):
-            a = pathlib.Path(after_dir) / b.name.replace('secpos-before', 'secpos-after')
+        for b in sorted(pathlib.Path(before_dir).glob(f'{before}-{league}-*.json')):
+            a = pathlib.Path(after_dir) / b.name.replace(before, after)
             if a.exists(): pairs.append((metrics(b), metrics(a)))
         if len(pairs) < 2: continue
         rows = {}
@@ -35,9 +35,9 @@ def compare(before_dir, after_dir):
     return out
 
 if __name__ == '__main__':
-    res = compare(sys.argv[1], sys.argv[2])
+    res = compare(sys.argv[1], sys.argv[2], *sys.argv[4:6])
     for league, r in res.items():
         print(f"{league.upper()} ({r['seasons']} paired seasons)")
         for k, m in r['metrics'].items():
             print(f"  {k:26s} before {m['before']:8.3f}  after {m['after']:8.3f}  diff {m['diff']:+7.3f}  95% CI [{m['ci95'][0]:+.3f}, {m['ci95'][1]:+.3f}]{'  <-- excludes 0' if m['flag'] else ''}")
-    if len(sys.argv) > 3: pathlib.Path(sys.argv[3]).write_text(json.dumps(res, indent=1))
+    if len(sys.argv) > 3 and sys.argv[3] != '-': pathlib.Path(sys.argv[3]).write_text(json.dumps(res, indent=1))
