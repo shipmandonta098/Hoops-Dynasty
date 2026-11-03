@@ -18,7 +18,7 @@ function tradePlayerValue(p,t,roster=t.roster.filter(q=>q.id!==p.id)){
  const market=wnbaEnabled()?wnbaMillions(wnbaDemandDollars(p,t,state.year)):Math.max(1,salaryCap()*.22*2**((p.ovr-85)/12)),overpay=Math.max(0,p.salary/market-1),starException=mindset==='Win-Now'&&p.ovr>=85;
  let contract=Math.max(.25,1-overpay*.12*years*(starException?.35:mindset==='Rebuilding'?1.4:1));
  if(years===1)contract*=mindset==='Rebuilding'?1.12:mindset==='Win-Now'?.92:1.03;
- const peers=roster.filter(q=>q.pos===p.pos),quality=peers.filter(q=>q.ovr>=80).length,need=!peers.length?1.2:quality>=3?.8:peers.some(q=>q.ovr>=p.ovr)? .92:1.06;
+ const peers=positionCount(roster,p.pos),quality=roster.reduce((n,q)=>n+(q.ovr>=80?positionNeedWeight(q,p.pos):0),0),ahead=roster.reduce((n,q)=>n+(q.ovr>=p.ovr?positionNeedWeight(q,p.pos):0),0),covered=quality>=3?.8:1.06-Math.min(1,ahead)*.14,need=peers>=1?covered:1.2+(covered-1.2)*peers;
  const fit=Math.max(.9,Math.min(1.12,1+(coachTradeValue(p,t)-p.ovr)*.012));
  return base*age*(1+upside*(mindset==='Rebuilding'?1.5:mindset==='Win-Now'?.3:.8))*contract*need*fit*(mindset==='Win-Now'&&p.ovr>=85?1.25:mindset==='Rebuilding'&&p.age>=30?.8:1);
 }

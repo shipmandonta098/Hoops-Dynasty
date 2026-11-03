@@ -18,7 +18,7 @@ function pnrActionWeights(handler,screener,onBall,big,coverage,screen){
  const a=handler.attributes,s=screener.attributes,roll=pnrRatings(screener).roll,passing=tendency(handler,'passing');
  return {pullup:(a.fg*.7+a.drb*.3)*tendency(handler,'pullup')*(coverage==='drop'?1.9:coverage==='blitz'?.3:.7),drive:(a.lay*.55+a.drb*.25+a.spd*.2)*tendency(handler,'drive')*(coverage==='drop'?.75:coverage==='blitz'?.3:1.05)*(1+Math.max(0,a.spd-big.attributes.spd)/100),roll:(a.pss*.5+roll*.5)*passing*archetypeProfile(screener).roll*(coverage==='hedge'||coverage==='blitz'?2:coverage==='switch'?1.5:1),pop:leagueRules().threePointers&&s.tp>=70?(a.pss*.45+s.tp*.55)*passing*archetypeProfile(screener).pop*tendency(screener,'three')*(coverage==='drop'||coverage==='blitz'?1.7:1.25):0};
 }
-function pnrMatch(defenders,player,excluded=null){const options=defenders.filter(p=>p.id!==excluded);return simWeighted(options,p=>p.pos===player.pos?6:Math.abs(ROTATION_POSITIONS.indexOf(p.pos)-ROTATION_POSITIONS.indexOf(player.pos))===1?3:1)}
+function pnrMatch(defenders,player,excluded=null){const options=defenders.filter(p=>p.id!==excluded);return simWeighted(options,p=>playsPosition(p,player.pos)?6:Math.abs(ROTATION_POSITIONS.indexOf(p.pos)-ROTATION_POSITIONS.indexOf(player.pos))===1?3:1)}
 function pnrPhrase(choices){return choices[Math.floor(Math.random()*choices.length)]}
 function playPickAndRoll(handler,screener,onBall,big,offense,defense,defenders,context,log){
  const machine=context.machine,advance=(phase,seconds)=>{if(machine.transition(phase,seconds))return true;context.recordTurnover('shotClock',handler);return false};

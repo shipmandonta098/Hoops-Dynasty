@@ -34,7 +34,7 @@ function cpuSign(t,p,terms,why){cpuTrack();internationalPrepareSigning(p);
  p.tradeWait=15;resetPlayerSituation(p);p.moraleAdjustment=8;t.roster.push(p);state.free=state.free.filter(q=>q.id!==p.id);if(typeof dissatisfactionSigned==='function')dissatisfactionSigned(p,t);
  if(t.rotationPlan)t.rotationPlan=rotationFromClub(t);updateCapSpace(t);cpuTrack();
  say(gmLead(t)+' signs '+p.name+' ('+p.pos+', '+p.ovr+' OVR) for '+money(terms.salary)+' per season '+why+'.');return true}
-function cpuFreeAgentPool(t){const need=new Map(['PG','SG','SF','PF','C'].map(pos=>[pos,cpuHealthy(t).filter(q=>q.pos===pos).length]));return state.free.filter(p=>!injuryDays(p)).sort((a,b)=>b.ovr-a.ovr+(need.get(a.pos)-need.get(b.pos))*2||a.id-b.id)}
+function cpuFreeAgentPool(t){const need=new Map(['PG','SG','SF','PF','C'].map(pos=>[pos,positionCount(cpuHealthy(t),pos)]));return state.free.filter(p=>!injuryDays(p)).sort((a,b)=>b.ovr-a.ovr+(need.get(a.pos)-need.get(b.pos))*2||a.id-b.id)}
 // Fill: too few healthy players for a rotation, or below the roster minimum.
 function cpuFillRoster(t){
  const wnbaHardship=wnbaEnabled()&&!wnbaEmergencyEligibility(t),short=()=>t.roster.length<rosterMinimum()||cpuHealthy(t).length<(wnbaEnabled()?10:CPU_ROTATION_NEED);
