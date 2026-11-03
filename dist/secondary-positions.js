@@ -1,4 +1,4 @@
-/* Secondary positions. p.pos stays the main position; p.secondaryPos lists 0–2 neighboring positions the player can
+/* Secondary positions. p.pos stays the main position; p.secondaryPos lists at most one neighboring position the player can
    also cover, worked out from height and ratings (guards who pass and handle → PG, wings with size → SF/PF, bigs with
    range → PF, strong rebounders and rim protectors → C). The calculation draws no random numbers.
    Players get the field in sweeps (load, each sim day, the draft class, offseason rollover); before that, helpers
@@ -18,12 +18,12 @@ function positionFit(pos,a,h){const r=k=>a[k]??50,over=(x,limit,per)=>Math.max(0
   case 'PF':return r('reb')*.3+r('stre')*.2+r('post')*.15+r('sbl')*.15+r('tp')*.2-under(h,80,4)-over(h,86,4);
   case 'C':return r('reb')*.3+r('sbl')*.3+r('rim')*.2+r('stre')*.2-under(h,84,6);
  }return 0}
-// 0–2 neighboring positions whose fit is within reach of the main position's fit, best first. Bigs with range get a
+// At most one neighboring position: the best one whose fit is within reach of the main position's fit. Bigs with range get a
 // boost toward PF; guards who pass and handle well get a boost toward PG.
 const SECONDARY_FIT_MARGIN=4;
 function computeSecondaryPositions(p){const a=p.attributes;if(!a||!POSITIONS.includes(p.pos))return null;const h=p.bio?.heightInches??70+Math.round((a.hgt??50)*.18),i=POSITIONS.indexOf(p.pos),own=positionFit(p.pos,a,h);
  return [POSITIONS[i-1],POSITIONS[i+1]].filter(Boolean).map(pos=>{let fit=positionFit(pos,a,h);if(pos==='PF'&&p.pos==='C')fit+=Math.max(0,(a.tp??0)-55)*.4;if(pos==='PG'&&p.pos==='SG')fit+=Math.max(0,((a.pss??0)+(a.drb??0))/2-70)*.4;return {pos,fit}})
-  .filter(x=>x.fit>=own-SECONDARY_FIT_MARGIN).sort((x,y)=>y.fit-x.fit||POSITIONS.indexOf(x.pos)-POSITIONS.indexOf(y.pos)).slice(0,2).map(x=>x.pos)}
+  .filter(x=>x.fit>=own-SECONDARY_FIT_MARGIN).sort((x,y)=>y.fit-x.fit||POSITIONS.indexOf(x.pos)-POSITIONS.indexOf(y.pos)).slice(0,1).map(x=>x.pos)}
 // The player's secondary positions. Read-only: when the field is missing it is worked out on the fly; the sweeps
 // below store it, so views never change the save.
 function secondaryPositions(p){if(!p)return [];if(!Array.isArray(p.secondaryPos))return computeSecondaryPositions(p)||[];return p.secondaryPos.filter(x=>x!==p.pos)}
@@ -39,8 +39,9 @@ function positionFullLabel(p){const s=secondaryPositions(p);return s.length?p.po
 function allLeaguePlayers(data=state){return [...data.teams.flatMap(t=>t.roster),...(data.free||[]),...(data.draftRights||[]).map(r=>r.player),...(data.draft?.prospects||[])]}
 // Fill in missing secondary positions; recalc=true redoes every player not set by hand (offseason).
 function sweepSecondaryPositions(data=state,recalc=false){for(const p of allLeaguePlayers(data)){if(!p||(!recalc||p.secondaryPosManual)&&Array.isArray(p.secondaryPos))continue;const s=computeSecondaryPositions(p);if(s)p.secondaryPos=s}}
-// Save checker: 0–2 distinct positions, none equal to the main position.
-function readSecondaryPositions(raw,pos,bad){if(!Array.isArray(raw)||raw.length>2||new Set(raw).size!==raw.length||raw.some(x=>!POSITIONS.includes(x)||x===pos))bad('invalid secondary positions.');return [...raw]}
+// Save checker: at most one secondary position, never the main position. Saves from when players could have two
+// keep the first and drop the second.
+function readSecondaryPositions(raw,pos,bad){if(!Array.isArray(raw)||raw.length>2||new Set(raw).size!==raw.length||raw.some(x=>!POSITIONS.includes(x)||x===pos))bad('invalid secondary positions.');return raw.slice(0,1)}
 // Wiring: old saves get secondary positions on load; new players and draft classes as they appear; every player is
 // re-evaluated at the offseason rollover (ratings have changed). League stats show "PG/SG" for current players.
 const validateBeforeSecondary=validateCareerData;validateCareerData=function(raw){const out=validateBeforeSecondary(raw);sweepSecondaryPositions(out);return out};

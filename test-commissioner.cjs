@@ -52,11 +52,12 @@ assert(re.same&&re.played&&re.oncePerDay&&re.breakEmpty,JSON.stringify(re));asse
 // Preseason regeneration builds a fresh, fully valid schedule (no edit flag).
 const pre=run(`(()=>{const s=JSON.parse(JSON.stringify(state));const x=makeDraft();x.gmName='Pre';state=validateCareerData(buildSetupCareer(x));const old=JSON.stringify(state.schedule);state.commissioner={...s.commissioner,scheduleEdited:true};const msg=commissionerRegenerateSchedule();const ok=!state.commissioner.scheduleEdited&&JSON.stringify(state.schedule)!==old&&!!state.allStarCalendar;validateCareerData(JSON.parse(JSON.stringify(state)));state=s;return msg+' '+ok})()`);
 assert.equal(pre,'Schedule regenerated. true');l.run(`state=validateCareerData(JSON.parse(JSON.stringify(state)))`);
-// 6. Player editing: name, attributes, tendencies, personality and bio; invalid input is rejected; saves load.
+// 6. Player editing: name, attributes, tendencies, personality and bio (an international hometown is stored as the
+// country only); invalid input is rejected; saves load.
 const pid=run('state.teams[2].roster[0].id');
 const form=run(`(()=>{const p=state.teams[2].roster[0],v={name:'Edited Player',pos:'C',age:'31',ovr:'88',pot:'90',trait0:TRAIT_GROUPS[0][2],trait1:TRAIT_GROUPS[1][0],trait2:TRAIT_GROUPS[2][1],heightInches:'86',weightLbs:'260',birthdate:'1995-04-12',hometown:'Lagos, Nigeria',college:'Kentucky'};for(const k of ATTRIBUTE_KEYS)v['a_'+k]='77';for(const k of TENDENCY_KEYS)v['t_'+k]='40';return v})()`);
 const edited=run(`(()=>{const p=commissionerEditPlayer(${pid},${JSON.stringify(form)});return {name:p.name,pos:p.pos,age:p.age,ovr:p.ovr,attr:p.attributes.sbl,tend:p.tendencies.block,traits:p.personalityTraits,bio:[p.bio.heightInches,p.bio.hometown,p.bio.birthdate]}})()`);
-assert.deepEqual(edited,{name:'Edited Player',pos:'C',age:31,ovr:88,attr:77,tend:40,traits:[run('TRAIT_GROUPS[0][2]'),run('TRAIT_GROUPS[1][0]'),run('TRAIT_GROUPS[2][1]')],bio:[86,'Lagos, Nigeria','1995-04-12']});
+assert.deepEqual(edited,{name:'Edited Player',pos:'C',age:31,ovr:88,attr:77,tend:40,traits:[run('TRAIT_GROUPS[0][2]'),run('TRAIT_GROUPS[1][0]'),run('TRAIT_GROUPS[2][1]')],bio:[86,'Nigeria','1995-04-12']});
 assert.equal(run(`${roundTrip}.teams[2].roster.find(p=>p.id===${pid}).name`),'Edited Player');
 for(const [k,v] of [['a_sbl','0'],['t_block','101'],['name',''],['birthdate','2001-02-30'],['age','12'],['trait0','grumpy']])
  assert.throws(()=>run(`commissionerEditPlayer(${pid},${JSON.stringify({...form,[k]:v})})`),/./,k);
