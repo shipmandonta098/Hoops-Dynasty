@@ -39,7 +39,7 @@ function startPresetMove(){presetMove=movePresetsToDatabase().catch(error=>{cons
 // Export / import.
 function presetExportPayload(list=readPresets()){return {format:PRESET_FILE_FORMAT,version:1,exportedAt:new Date().toISOString(),presets:list}}
 function exportPresets(){const list=readPresets();if(presetError)return toast(presetError);if(!list.length)return toast('No presets to export yet.');
- const blob=new Blob([JSON.stringify(presetExportPayload(list),null,1)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='hoops-dynasty-presets-'+new Date().toISOString().slice(0,10)+'.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('Exported '+list.length+' preset'+(list.length===1?'':'s')+'.')}
+ return deliverExportFile(JSON.stringify(presetExportPayload(list),null,1),presetExportFilename(list.length)).then(result=>{if(result==='downloaded'||result==='shared')toast('Exported '+list.length+' preset'+(list.length===1?'':'s')+'.')})}
 // Merges presets from a file. Same id replaces; a name clash gets " (imported)". Returns {added,replaced}.
 function mergeImportedPresets(list,text){
  let file;try{file=JSON.parse(text)}catch{throw Error('That file is not valid JSON.')}
