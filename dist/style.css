@@ -52,3 +52,25 @@
 /* Commissioner mode */
 .commissioner .commissioner-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px 12px;align-items:end;margin:6px 0 14px}.commissioner .commissioner-grid>strong{grid-column:1/-1}.commissioner-teams{display:flex;flex-wrap:wrap;gap:6px 14px;border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin:12px 0}.commissioner-teams legend small{display:block;font-weight:400;opacity:.8}.commissioner-teams .check{display:inline-flex;gap:4px;align-items:center;font-weight:600}.commissioner-order li,.commissioner-trades li{margin:6px 0}
 .commissioner .commissioner-grid label{display:flex;flex-direction:column;gap:3px;font-size:13px}.commissioner .commissioner-grid input{width:100%;box-sizing:border-box}
+/* Commissioner tools on game screens (commissioner-inline.js). */
+.commissioner-badge{display:inline-block;background:var(--po-gold,#c4a15f);color:#161b1d;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:999px;vertical-align:middle;line-height:1.5}
+.commissioner-inline{border:1px solid var(--po-gold,#c4a15f)}
+.commissioner-inline .panelhead h2{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.commissioner-inline-body{padding:4px 16px 12px}
+.commissioner-tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:6px 0}
+.commissioner-tools label{display:flex;flex-direction:column;gap:3px;font-size:13px}
+.commissioner-tools small{opacity:.75}
+.commissioner-game{grid-column:1/-1;padding:6px 10px;background:rgba(196,161,95,.1);border-top:1px dashed var(--po-gold,#c4a15f);font-size:13px}
+.commissioner-game label{flex-direction:row;align-items:center;gap:6px}
+.commissioner-edit summary{cursor:pointer;font-weight:600}
+.commissioner-edit>div{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.commissioner-chip{margin-left:6px;font-size:12px;padding:2px 8px;display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
+.commissioner-chip .commissioner-badge{font-size:9px;padding:1px 5px}
+.commissioner-profile{margin-top:8px}
+.commissioner-editor{max-width:900px}
+.commissioner-player .commissioner-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px 12px;align-items:end;margin:6px 0 14px}
+.commissioner-player .commissioner-grid>strong{grid-column:1/-1}
+.commissioner-player .commissioner-grid label{display:flex;flex-direction:column;gap:3px;font-size:13px}
+.commissioner-player details{margin:8px 0}
+.commissioner-log td small{display:block;opacity:.7;font-size:11px}
+.commissioner-screens li{margin:4px 0}
