@@ -44,9 +44,20 @@ function injuryDays(p){return Math.max(0,p.medicalInfo?p.medicalInfo.until-medic
 const minutesBeforeCoaches=playerMinutes;
 function coachBaseMinutes(p,club){
  if(rotationValid(club))return minutesBeforeCoaches(p,club);
- const i=club.roster.indexOf(p),starterMinutes=Math.round(37-coachingSkill(club,'rotation')/18),bench=club.roster.length-5,total=240-5*starterMinutes;
- return i<0?0:i<5?starterMinutes:Math.floor(total/bench)+(i-5<total%bench?1:0);
+ const i=club.roster.indexOf(p),starterMinutes=Math.round(37-coachingSkill(club,'rotation')/18);
+ return i<0?0:i<5?starterMinutes:coachBenchMinutes(club,starterMinutes)[i-5];
 }
+// Bench minutes follow OVR (the best non-starter plays sixth-man minutes) instead of an even split, mostly within a
+// nine-man rotation (the top four bench players); nobody off the bench plays more than a starter. Whole minutes, summing to the bench's share of the game.
+function coachBenchMinutes(club,starterMinutes){const bench=club.roster.slice(5),total=240-5*starterMinutes;if(!bench.length)return [];
+ const ranked=[...bench].sort((a,b)=>b.ovr-a.ovr||a.id-b.id),weight=bench.map(p=>Math.max(.15,(p.ovr-40)/30)**4*(ranked.indexOf(p)<4?1:.35)),cap=bench.map(()=>starterMinutes),minutes=bench.map(()=>0);let left=total,open=bench.map((_,k)=>k);
+ while(left>0&&open.length){const sum=open.reduce((n,k)=>n+weight[k],0),share=open.map(k=>Math.min(cap[k]-minutes[k],left*weight[k]/sum)),floors=share.map(Math.floor);
+  open.forEach((k,j)=>minutes[k]+=floors[j]);left-=floors.reduce((a,b)=>a+b,0);
+  const order=open.map((k,j)=>[k,share[j]-floors[j]]).sort((a,b)=>b[1]-a[1]||a[0]-b[0]);for(const [k] of order){if(left<=0)break;if(minutes[k]<cap[k]){minutes[k]++;left--}}
+  open=open.filter(k=>minutes[k]<cap[k]);if(floors.every(x=>x===0)&&order.every(([k])=>minutes[k]>=cap[k]))break}
+ // A bench too short to absorb its minutes under the cap: keep the original even split.
+ if(left>0)return bench.map((_,k)=>Math.floor(total/bench.length)+(k<total%bench.length?1:0));
+ return minutes}
 function coachRotation(club){
  const healthy=club.roster.filter(p=>!injuryDays(p)),custom=rotationValid(club);
  const weights=healthy.map(p=>Math.max(custom?0:1,coachBaseMinutes(p,club)));
