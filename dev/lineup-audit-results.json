@@ -1,0 +1,74 @@
+{
+ "before": {
+  "leagues": 10,
+  "seeds": [
+   5100,
+   5101,
+   5102,
+   5103,
+   5104,
+   5105,
+   5106,
+   5107,
+   5108,
+   5109
+  ],
+  "opening": {
+   "spots": 1500,
+   "outOfPosition": 371,
+   "forcedByRoster": 0,
+   "avoidable": 371,
+   "notBestAvailable": 0,
+   "teamsAffected": 243
+  },
+  "midseason": {
+   "spots": 1500,
+   "outOfPosition": 332,
+   "forcedByRoster": 1,
+   "avoidable": 331,
+   "notBestAvailable": 151,
+   "teamsAffected": 250
+  },
+  "examples": [
+   "ATL: 91 C at SF",
+   "ATL: 88 SG at C",
+   "NYE: 82 SF at PF",
+   "ATL: 90 PG at C",
+   "CHI: 83 PG at PF",
+   "CHI: 79 SG at C"
+  ]
+ },
+ "after": {
+  "leagues": 10,
+  "seeds": [
+   5100,
+   5101,
+   5102,
+   5103,
+   5104,
+   5105,
+   5106,
+   5107,
+   5108,
+   5109
+  ],
+  "opening": {
+   "spots": 1500,
+   "outOfPosition": 0,
+   "forcedByRoster": 0,
+   "avoidable": 0,
+   "notBestAvailable": 0,
+   "teamsAffected": 0
+  },
+  "midseason": {
+   "spots": 1500,
+   "outOfPosition": 0,
+   "forcedByRoster": 0,
+   "avoidable": 0,
+   "notBestAvailable": 0,
+   "teamsAffected": 0
+  },
+  "examples": []
+ },
+ "note": "before = main (secondary positions, starters from the top five by roster order); after = position lineups. Out of position = starting at a spot that is neither the main nor a secondary position."
+}
