@@ -5,10 +5,10 @@ const assert=require('node:assert/strict'),{loadLeague}=require('./dev/load-leag
 const l=loadLeague({seed:71,strictDOM:false});l.setRandomSeed(71);const run=c=>{const v=l.run(c);return v&&typeof v==='object'?JSON.parse(JSON.stringify(v)):v};
 l.run(`render=()=>{};save=async()=>true;toast=()=>{};var d=makeDraft();d.gmName='Commish';state=validateCareerData(buildSetupCareer(d));simulationExecution.mode='headless';`);
 const roundTrip=`validateCareerData(JSON.parse(JSON.stringify(state)))`;
-// 1. Off by default; panel offers to enable; enabling marks the save; the field survives save/load.
+// 1. Off by default; the home offers to enable (tools live on each screen, see test-commissioner-inline.cjs); enabling marks the save; the field survives save/load.
 assert.equal(run('state.commissioner'),undefined);assert.match(run('settingsView()'),/Enable commissioner mode/);
 l.run(`Object.assign(commissioner(),{enabled:true,everUsed:true})`);
-for(const tab of ['teams','players','schedule','draft','awards','trades'])assert.match(run(`(commissionerUI.tab='${tab}',settingsView())`),/Commissioner mode<\/h2><span>On/,tab);
+assert.match(run('settingsView()'),/Commissioner mode<\/h2><span>On/);assert.match(run('settingsView()'),/Commissioner log/);
 assert.deepEqual(run(`${roundTrip}.commissioner`),run('state.commissioner'));
 for(const bad of [`{...state.commissioner,enabled:'yes'}`,`{...state.commissioner,managedTeams:[99]}`,`{...state.commissioner,forcedGames:{'1:0-1':5}}`])
  assert.throws(()=>run(`validateCareerData({...JSON.parse(JSON.stringify(state)),commissioner:${bad}})`),/commissioner|forced/i,bad);
