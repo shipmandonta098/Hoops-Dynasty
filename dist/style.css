@@ -83,3 +83,4 @@
 .commissioner-field button{touch-action:manipulation}
 /* iOS Safari zooms into any focused field under 16px; keep editor fields at 16px on touch screens. */
 @media (pointer:coarse){.commissioner-player input,.commissioner-player select,.commissioner-player textarea,.commissioner-tools input,.commissioner-tools select{font-size:16px}}
+.commissioner-derived{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;margin:4px 0 10px}.commissioner-derived b{font-size:18px}.commissioner-derived small{flex-basis:100%;opacity:.75}
