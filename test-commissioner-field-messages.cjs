@@ -14,4 +14,9 @@ assert.equal(l.run(`commissionerFieldMessage(fake('Age','16','60',{rangeUnderflo
 assert.equal(l.run(`commissionerFieldMessage(fake('Speed','1','99',{stepMismatch:true}))`),'Speed: enter a whole number from 1 to 99.');
 assert.equal(l.run(`commissionerFieldMessage(fake('Speed','1','99',{valueMissing:true}))`),'Speed is required.');
 assert.equal(l.run(`commissionerFieldMessage(fake('Speed','1','99',{}))`),'');
+// Randomize buttons sit outside their labels (a tap on a button inside a label can go to the label's input on iOS),
+// each label still names its input, and touch screens get 16px editor fields (iOS zooms into anything smaller).
+const labels=[...html.matchAll(/<label\b[^>]*>([^]*?)<\/label>/g)].map(m=>m[1]);assert(labels.length>50&&labels.every(x=>!/Randomize/.test(x)),'no randomize button inside a label');
+for(const k of ['first','last','hometown','college'])assert.match(html,new RegExp(`<label for="commissioner-${k}">[^<]+</label><span class="commissioner-field"><input id="commissioner-${k}" name="${k}"`),k);
+const css=require('fs').readFileSync('dist/style.css','utf8');assert.match(css,/@media \(pointer:coarse\)\{\.commissioner-player input[^}]*font-size:16px\}/);
 console.log('Commissioner field messages: named field and range for',fields.length,'number fields passed.');
