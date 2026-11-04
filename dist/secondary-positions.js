@@ -1,5 +1,5 @@
 /* Secondary positions. p.pos stays the main position; p.secondaryPos lists at most one neighboring position the player can
-   also cover, worked out from height and ratings (guards who pass and handle → PG, wings with size → SF/PF, bigs with
+   also cover, worked out from height (relative to the player's league) and ratings (guards who pass and handle → PG, wings with size → SF/PF, bigs with
    range → PF, strong rebounders and rim protectors → C). The calculation draws no random numbers.
    Players get the field in sweeps (load, each sim day, the draft class, offseason rollover); before that, helpers
    work it out on the fly without storing it. Each offseason it is recalculated from the new ratings, so a player can grow into a
@@ -9,7 +9,10 @@
    secondary position. There is no out-of-position performance penalty. */
 const POSITIONS=['PG','SG','SF','PF','C'];
 const SECONDARY_POSITION_WEIGHT=.5;
-// Fit for each position from ratings and height (inches). Height ranges follow the league's usual spread by position.
+// Fit for each position from ratings and height (inches). The height limits below are on the men's scale (a 7'0" center,
+// a 6'1"-6'6" shooting guard). A player is measured against his or her own league: heightOnFitScale maps a height to the
+// men's scale by where it sits in the gender's spread of position heights (POSITION_HEIGHT_RANGES, biographies.js), so a
+// 6'5" WNBA center fits like a 7'0" NBA center and a 5'8" WNBA point guard like a 6'2" NBA point guard.
 function positionFit(pos,a,h){const r=k=>a[k]??50,over=(x,limit,per)=>Math.max(0,x-limit)*per,under=(x,limit,per)=>Math.max(0,limit-x)*per;
  switch(pos){
   case 'PG':return r('pss')*.45+r('drb')*.35+r('oiq')*.2-over(h,78,5);
@@ -18,11 +21,18 @@ function positionFit(pos,a,h){const r=k=>a[k]??50,over=(x,limit,per)=>Math.max(0
   case 'PF':return r('reb')*.3+r('stre')*.2+r('post')*.15+r('sbl')*.15+r('tp')*.2-under(h,80,4)-over(h,86,4);
   case 'C':return r('reb')*.3+r('sbl')*.3+r('rim')*.2+r('stre')*.2-under(h,84,6);
  }return 0}
+function positionHeightScale(gender){const mids=Object.values(POSITION_HEIGHT_RANGES[gender==='female'?'female':'male']).map(([lo,hi])=>(lo+hi)/2),mean=mids.reduce((a,b)=>a+b,0)/mids.length;
+ return {mean,sd:Math.sqrt(mids.reduce((n,x)=>n+(x-mean)**2,0)/mids.length)}}
+function heightOnFitScale(h,gender){if(gender!=='female')return h;const from=positionHeightScale('female'),to=positionHeightScale('male');return to.mean+(h-from.mean)*to.sd/from.sd}
 // At most one neighboring position: the best one whose fit is within reach of the main position's fit. Bigs with range get a
 // boost toward PF; guards who pass and handle well get a boost toward PG.
 const SECONDARY_FIT_MARGIN=4;
-function computeSecondaryPositions(p){const a=p.attributes;if(!a||!POSITIONS.includes(p.pos))return null;const h=p.bio?.heightInches??70+Math.round((a.hgt??50)*.18),i=POSITIONS.indexOf(p.pos),own=positionFit(p.pos,a,h);
- return [POSITIONS[i-1],POSITIONS[i+1]].filter(Boolean).map(pos=>{let fit=positionFit(pos,a,h);if(pos==='PF'&&p.pos==='C')fit+=Math.max(0,(a.tp??0)-55)*.4;if(pos==='PG'&&p.pos==='SG')fit+=Math.max(0,((a.pss??0)+(a.drb??0))/2-70)*.4;return {pos,fit}})
+// A player's fit at a position: ratings plus height on his or her league's scale, with the range-big (C→PF) and
+// playmaking-guard (SG→PG) boosts. Also used by the starting-lineup choice (position-lineups.js).
+function playerFitHeight(p){const a=p.attributes||{};return Number.isFinite(p.bio?.heightInches)?heightOnFitScale(p.bio.heightInches,p.gender):70+Math.round((a.hgt??50)*.18)}
+function playerPositionFit(p,pos){const a=p.attributes;if(!a)return 0;let fit=positionFit(pos,a,playerFitHeight(p));if(pos==='PF'&&p.pos==='C')fit+=Math.max(0,(a.tp??0)-55)*.4;if(pos==='PG'&&p.pos==='SG')fit+=Math.max(0,((a.pss??0)+(a.drb??0))/2-70)*.4;return fit}
+function computeSecondaryPositions(p){const a=p.attributes;if(!a||!POSITIONS.includes(p.pos))return null;const i=POSITIONS.indexOf(p.pos),own=playerPositionFit(p,p.pos);
+ return [POSITIONS[i-1],POSITIONS[i+1]].filter(Boolean).map(pos=>({pos,fit:playerPositionFit(p,pos)}))
   .filter(x=>x.fit>=own-SECONDARY_FIT_MARGIN).sort((x,y)=>y.fit-x.fit||POSITIONS.indexOf(x.pos)-POSITIONS.indexOf(y.pos)).slice(0,1).map(x=>x.pos)}
 // The player's secondary positions. Read-only: when the field is missing it is worked out on the fly; the sweeps
 // below store it, so views never change the save.

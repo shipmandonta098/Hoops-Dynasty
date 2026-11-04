@@ -4,7 +4,7 @@ function injuryStarters(club,depth){
  for(const pos of courtPositions()){const id=depth?.[pos]?.[0],p=healthy.find(p=>p.id===id);if(p&&!used.has(id)){result[pos]=id;used.add(id)}}
  for(const pos of courtPositions())if(result[pos]===undefined){
   const ranked=healthy.filter(p=>!used.has(p.id)).sort((a,b)=>{
-   const score=p=>(depth?.[pos]?.[1]===p.id?2000:depth?.[pos]?.[2]===p.id?1000:0)+(p.pos===pos?500:0)+p.ovr;
+   const score=p=>(depth?.[pos]?.[1]===p.id?2000:depth?.[pos]?.[2]===p.id?1000:0)+rotationSlotValue(p,pos);
    return score(b)-score(a)||a.id-b.id;
   });result[pos]=ranked[0]?.id??null;if(ranked[0])used.add(ranked[0].id);
  }
