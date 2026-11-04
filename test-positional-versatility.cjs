@@ -1,6 +1,8 @@
 // Positional versatility, both leagues.
 // Stage 1: positional fit judges height against the player's own league (women's position heights for women), so WNBA
 // players get secondary positions in both directions, like NBA players; NBA (men's) fit is unchanged.
+// Stage 2: starting lineups use a bounded positional preference (OVR + 4 main / 3 secondary / +2…−8 by fit), so natural fits win
+// close calls, clearly better players start out of position, and a guard isn't put at center over a real big.
 const assert=require('node:assert/strict'),{loadLeague}=require('./dev/load-league.cjs');
 const leagues={};
 for(const g of ['male','female']){const l=loadLeague({seed:g==='male'?71:72,strictDOM:false});l.setRandomSeed(g==='male'?71:72);l.context.gender=g;
@@ -27,3 +29,22 @@ assert(Math.abs(scale[4]-86)<1.5&&Math.abs(scale[1]-75.3)<1.5,'a 6\'5" center �
 for(const g of ['male','female']){const d=run(g,`(()=>{const P=['PG','SG','SF','PF','C'],c={};for(const p of allLeaguePlayers()){const s=secondaryPositions(p)[0];if(!s)continue;const k=P.indexOf(s)>P.indexOf(p.pos)?'up':'down';c[p.pos+k]=(c[p.pos+k]||0)+1}return c})()`);
  for(const k of ['PGup','SGup','SGdown','SFup','SFdown','PFup','PFdown','Cdown'])assert(d[k]>0,g+' has '+k+': '+JSON.stringify(d))}
 console.log('Stage 1 (league-relative positional fit): NBA and WNBA archetypes agree, height scale, two-way secondaries in both leagues passed.');
+
+// Stage 2. A club built by hand: realistic generated ratings for each position and mid-range heights for the league.
+for(const g of ['male','female'])leagues[g].run(`var club=state.teams[3];var H=gender==='female'?{PG:68,SG:69,SF:72,PF:72,C:77}:{PG:74,SG:77,SF:80,PF:82,C:85};
+ var build=specs=>{club.roster.forEach((p,i)=>{const [pos,ovr,sec]=specs[i]||['C',45,[]];Object.assign(p,{gender,pos,ovr,injuredUntil:0,medicalInfo:undefined,attributes:null,tendencies:null,archetype:undefined,bio:{...p.bio,heightInches:H[pos]}});withBasketballAttributes(p);p.secondaryPos=sec||[]});delete club.rotationPlan;club.lineupMode='auto'};
+ var starters=()=>{const a=lineupAssignment(club);return Object.fromEntries(Object.entries(a).map(([pos,id])=>{const p=club.roster.find(p=>p.id===id);return [pos,p.ovr+' '+p.pos]}))};`);
+for(const g of ['male','female']){const L=g==='male'?'NBA':'WNBA';
+ // A natural fit wins a close call: a 76 SG starts at SG over a 77 SF (a near fit at SG is worth at most +2, the main position +4).
+ leagues[g].run(`build([['PG',80],['SG',76],['SF',82],['PF',78],['C',78],['SF',77]])`);assert.equal(run(g,'starters().SG'),'76 SG',L+' close call → natural SG');
+ // A clearly better player starts out of position: a 93 PG doesn't sit behind an 80 PG for a 74 SG.
+ leagues[g].run(`build([['PG',93],['PG',80],['SG',74],['SF',76],['PF',76],['C',76]])`);assert(Object.values(run(g,'starters()')).includes('80 PG')&&Object.values(run(g,'starters()')).includes('93 PG'),L+' both point guards start');
+ // A 45 end-of-bench center doesn't start over a 70 guard; with no healthy big at all the lineup goes small.
+ leagues[g].run(`build([['PG',80],['PG',78],['SG',77],['SF',72],['SG',70],['SF',66]])`);assert(!Object.values(run(g,'starters()')).includes('45 C'),L+' no 45 C over 70+ players');
+ // But a guard isn't put at center over a real big: an 80 C starts over an 85 PG.
+ leagues[g].run(`build([['PG',88],['PG',85],['SG',80],['SF',80],['PF',80],['C',80]])`);assert.equal(run(g,'starters().C'),'80 C',L+' real center over a guard');
+ // The rotation view explains an auto out-of-position starter.
+ leagues[g].run(`build([['PG',93],['PG',80],['SG',74],['SF',76],['PF',76],['C',76]]);club.id=controlledTeamId();rotationDraft=null`);
+}
+const reason=run('male',`(()=>{const st=lineupAssignment(club),out=lineupOutOfPosition(club,st);return out.map(x=>lineupOutReason(club,st,x)).join()})()`);assert.match(reason,/ahead of .*74 OVR SG/,'reason names the weaker natural fit: '+reason);
+console.log('Stage 2 (bounded lineup preference): close calls go to natural fits, clearly better players start out of position, no scrub center over real players, no guard at center over a real big, reasons shown — both leagues passed.');

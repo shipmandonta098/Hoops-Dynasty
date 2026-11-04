@@ -27,8 +27,12 @@ function heightOnFitScale(h,gender){if(gender!=='female')return h;const from=pos
 // At most one neighboring position: the best one whose fit is within reach of the main position's fit. Bigs with range get a
 // boost toward PF; guards who pass and handle well get a boost toward PG.
 const SECONDARY_FIT_MARGIN=4;
-function computeSecondaryPositions(p){const a=p.attributes;if(!a||!POSITIONS.includes(p.pos))return null;const h=Number.isFinite(p.bio?.heightInches)?heightOnFitScale(p.bio.heightInches,p.gender):70+Math.round((a.hgt??50)*.18),i=POSITIONS.indexOf(p.pos),own=positionFit(p.pos,a,h);
- return [POSITIONS[i-1],POSITIONS[i+1]].filter(Boolean).map(pos=>{let fit=positionFit(pos,a,h);if(pos==='PF'&&p.pos==='C')fit+=Math.max(0,(a.tp??0)-55)*.4;if(pos==='PG'&&p.pos==='SG')fit+=Math.max(0,((a.pss??0)+(a.drb??0))/2-70)*.4;return {pos,fit}})
+// A player's fit at a position: ratings plus height on his or her league's scale, with the range-big (C→PF) and
+// playmaking-guard (SG→PG) boosts. Also used by the starting-lineup choice (position-lineups.js).
+function playerFitHeight(p){const a=p.attributes||{};return Number.isFinite(p.bio?.heightInches)?heightOnFitScale(p.bio.heightInches,p.gender):70+Math.round((a.hgt??50)*.18)}
+function playerPositionFit(p,pos){const a=p.attributes;if(!a)return 0;let fit=positionFit(pos,a,playerFitHeight(p));if(pos==='PF'&&p.pos==='C')fit+=Math.max(0,(a.tp??0)-55)*.4;if(pos==='PG'&&p.pos==='SG')fit+=Math.max(0,((a.pss??0)+(a.drb??0))/2-70)*.4;return fit}
+function computeSecondaryPositions(p){const a=p.attributes;if(!a||!POSITIONS.includes(p.pos))return null;const i=POSITIONS.indexOf(p.pos),own=playerPositionFit(p,p.pos);
+ return [POSITIONS[i-1],POSITIONS[i+1]].filter(Boolean).map(pos=>({pos,fit:playerPositionFit(p,pos)}))
   .filter(x=>x.fit>=own-SECONDARY_FIT_MARGIN).sort((x,y)=>y.fit-x.fit||POSITIONS.indexOf(x.pos)-POSITIONS.indexOf(y.pos)).slice(0,1).map(x=>x.pos)}
 // The player's secondary positions. Read-only: when the field is missing it is worked out on the fly; the sweeps
 // below store it, so views never change the save.
