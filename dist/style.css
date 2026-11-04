@@ -72,6 +72,7 @@
 .commissioner-player .commissioner-grid>strong{grid-column:1/-1}
 .commissioner-player .commissioner-grid label{display:flex;flex-direction:column;gap:3px;font-size:13px}
 .commissioner-player details{margin:8px 0}
+.commissioner-player input.commissioner-invalid{outline:2px solid #e5484d;outline-offset:1px}
 .commissioner-log td small{display:block;opacity:.7;font-size:11px}
 .commissioner-screens li{margin:4px 0}
 /* Commissioner editor: a text field with a 🎲 randomize button. */

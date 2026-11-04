@@ -255,3 +255,11 @@ async function commissionerAction(event,kind,args={}){if(event){event.preventDef
  if(kind==='player'){const d=document.getElementById('profile'),id=args.id??commissionerUI.playerId;if(d?.open&&typeof playerContext==='function'&&playerContext(id))openPlayerProfile(id);else d?.close?.()}
  render();return true}
 const settingsBeforeCommissioner=settingsView;settingsView=function(){return settingsBeforeCommissioner()+commissionerPanel()};
+// Editor validation: the browser's own message ("Value must be less than or equal to 99") never names the field and,
+// on a phone, the field can be scrolled off or inside a closed section. Name the field and its range, open its
+// section and mark it; typing clears the mark.
+function commissionerFieldMessage(input){const label=input.closest('label'),name=(label?[...label.childNodes].filter(n=>n.nodeType===3).map(n=>n.textContent).join('').trim():'')||input.name,v=input.validity;
+ if(v.valueMissing)return name+' is required.';if(v.rangeOverflow||v.rangeUnderflow||v.stepMismatch||v.badInput)return input.min!==''&&input.max!==''?name+': enter a whole number from '+input.min+' to '+input.max+'.':name+': enter a whole number.';return ''}
+if(typeof document!=='undefined'&&document.addEventListener){
+ document.addEventListener('invalid',e=>{const input=e.target;if(!input?.closest?.('.commissioner-player'))return;input.setCustomValidity('');const message=commissionerFieldMessage(input);if(message)input.setCustomValidity(message);input.classList.add('commissioner-invalid');const d=input.closest('details');if(d&&!d.open)d.open=true},true);
+ document.addEventListener('input',e=>{const input=e.target;if(!input?.closest?.('.commissioner-player')||!input.classList?.contains('commissioner-invalid'))return;input.setCustomValidity('');if(input.checkValidity())input.classList.remove('commissioner-invalid')},true)}
