@@ -73,7 +73,7 @@ const badges=()=>views.map(v=>(run(v).match(/commissioner-badge/g)||[]).length);
   for(const k of ATTRIBUTE_KEYS)v['a_'+k]=String(p.attributes[k]);for(const k of TENDENCY_KEYS)v['t_'+k]=String(p.tendencies[k]);(p.personalityTraits||generateTraits(p)).forEach((t,i)=>v['trait'+i]=t);return v})()`);
  l.run(`commissionerOpenEditor(${pid})`);assert(run('dialog.innerHTML').includes('Save player')&&run('dialog.open'));
  e=await same('edit player',`submit('player',${JSON.stringify(form)},{id:${pid}})`,`commissionerEditPlayer(${pid},${JSON.stringify(form)})`,`(()=>{const p=state.teams[2].roster.find(p=>p.id===${pid});return [p.name,p.ovr,p.bio.birthdate,p.bio.hometown]})()`);
- assert.equal(e.what,'Player · Renamed Star');assert.match(e.from,new RegExp('Name '+pname.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'.*OVR'));assert.match(e.to,/Name Renamed Star, OVR 91, Born 1999-03-04, Hometown Dayton, Ohio/);
+ assert.equal(e.what,'Player · Renamed Star');assert.match(e.from,new RegExp('Name '+pname.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'.*OVR'));assert.match(e.to,/Name Renamed Star, Age 27, OVR 91, Born 1999-03-04, Hometown Dayton, Ohio/);
  // 8. Declining the confirmation changes nothing and logs nothing.
  const before=run('stateJSON()'),logs=run('state.commissioner.log.length');l.run(`answer=false`);
  assert.equal(await l.run(`fire(roster(),'Always win')`),false);assert.equal(run('stateJSON()'),before);assert.equal(run('state.commissioner.log.length'),logs);l.run('answer=true');
