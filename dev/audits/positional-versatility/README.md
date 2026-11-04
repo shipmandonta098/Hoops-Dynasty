@@ -26,3 +26,27 @@ The run was stopped by request after 517 main and 534 branch seasons. **440 seed
 | Strength/rank correlation | .777 | .773 | −.004 (−.018, +.009) |
 
 No meaningful change in competitive balance. The only interval that excludes zero is the top-3 contenders' win %, down 0.6 points, which is about 0.2 wins per 40-game season.
+
+## Functional check (branch, 36 seasons)
+
+`functional/func.cjs` (with `inject.js`) simulated 30 WNBA and 6 NBA regular seasons on the branch. It checked every game:
+
+- exactly 5 unique, healthy starters from the team's roster
+- team minutes equal to 5 × the game length, including overtime
+- no player over the game length
+
+It also recorded rotation sizes, starter and top-3 minutes, and win spread. Raw rows are in `functional/wnba.jsonl` and `functional/nba.jsonl`.
+
+| | WNBA (30 seasons) | NBA (6 seasons) |
+|---|---|---|
+| Games | 7,200 | 7,380 |
+| Crashes / lineup or minutes violations | 0 / 0 | 0 / 0 |
+| Players used per team-game (avg, range) | 10.7 (8–12) | 13.1 (9–15) |
+| Most minutes in a regulation game | 38 | 43.5 |
+| Starter MPG | 27.3 | 29.9 |
+| Healthy top-3 OVR players' MPG | 27.4 | 29.7 |
+| Healthy top-3 player under 15 MPG (≥10 games) | 4 of ~1,300 | 0 |
+| Win % SD (mean, range) | .163 (.128–.215) | .148 (.120–.163) |
+| Best / worst record (mean) | 31.4 / 9.2 wins of 40 | 66.8 / 17.8 wins of 82 |
+
+The WNBA win % SD of .163 matches main's .164 from the paired audit.
