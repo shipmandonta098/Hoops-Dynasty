@@ -3,6 +3,7 @@
 // players get secondary positions in both directions, like NBA players; NBA (men's) fit is unchanged.
 // Stage 2: starting lineups use a bounded positional preference (OVR + 4 main / 3 secondary / +2…−8 by fit), so natural fits win
 // close calls, clearly better players start out of position, and a guard isn't put at center over a real big.
+// Stage 3: 40-minute games split bench minutes by quality (as 48-minute games do); team total and starter minutes unchanged.
 const assert=require('node:assert/strict'),{loadLeague}=require('./dev/load-league.cjs');
 const leagues={};
 for(const g of ['male','female']){const l=loadLeague({seed:g==='male'?71:72,strictDOM:false});l.setRandomSeed(g==='male'?71:72);l.context.gender=g;
@@ -48,3 +49,10 @@ for(const g of ['male','female']){const L=g==='male'?'NBA':'WNBA';
 }
 const reason=run('male',`(()=>{const st=lineupAssignment(club),out=lineupOutOfPosition(club,st);return out.map(x=>lineupOutReason(club,st,x)).join()})()`);assert.match(reason,/ahead of .*74 OVR SG/,'reason names the weaker natural fit: '+reason);
 console.log('Stage 2 (bounded lineup preference): close calls go to natural fits, clearly better players start out of position, no scrub center over real players, no guard at center over a real big, reasons shown — both leagues passed.');
+
+// Stage 3. Every WNBA team, healthy: 200 minutes, nobody over 40, no reserve above a starter, bench minutes follow OVR.
+const m3=run('female',`state.teams.map(t=>{for(const p of t.roster){p.injuredUntil=0;p.medicalInfo=undefined}applyAutoLineup(t);const m=allocateGameMinutes(t),st=t.roster.slice(0,5).map(p=>m.get(p.id)),bench=[...t.roster.slice(5)].sort((a,b)=>b.ovr-a.ovr||a.id-b.id).map(p=>[p.ovr,m.get(p.id)]);
+  return {total:[...m.values()].reduce((a,b)=>a+b,0),pm:t.roster.reduce((n,p)=>n+playerMinutes(p,t),0),max:Math.max(...m.values()),minStarter:Math.min(...st),bench}})`);
+for(const t of m3){assert.equal(t.total,200);assert.equal(t.pm,200,'playerMinutes uses the same split');assert(t.max<=40);assert(t.bench.every(([,x])=>x<=t.minStarter),'no reserve above a starter');
+ assert(t.bench.every(([o,x],i)=>!i||x<=t.bench[i-1][1]||o===t.bench[i-1][0]),'bench minutes follow OVR: '+JSON.stringify(t.bench));assert(t.bench[0][1]>=2*t.bench.at(-1)[1]&&t.bench[0][1]>=12,'the best reserve plays real minutes: '+JSON.stringify(t.bench))}
+console.log('Stage 3 (40-minute bench minutes by quality): totals, caps, no reserve above a starter, minutes by OVR passed for every WNBA team.');

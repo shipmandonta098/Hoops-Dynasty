@@ -50,14 +50,18 @@ function coachBaseMinutes(p,club){
 // Bench minutes follow OVR (the best non-starter plays sixth-man minutes) instead of an even split, mostly within a
 // nine-man rotation (the top four bench players); nobody off the bench plays more than a starter. Whole minutes, summing to the bench's share of the game.
 function coachBenchMinutes(club,starterMinutes){const bench=club.roster.slice(5),total=240-5*starterMinutes;if(!bench.length)return [];
- const ranked=[...bench].sort((a,b)=>b.ovr-a.ovr||a.id-b.id),weight=bench.map(p=>Math.max(.15,(p.ovr-40)/30)**4*(ranked.indexOf(p)<4?1:.35)),cap=bench.map(()=>starterMinutes),minutes=bench.map(()=>0);let left=total,open=bench.map((_,k)=>k);
- while(left>0&&open.length){const sum=open.reduce((n,k)=>n+weight[k],0),share=open.map(k=>Math.min(cap[k]-minutes[k],left*weight[k]/sum)),floors=share.map(Math.floor);
-  open.forEach((k,j)=>minutes[k]+=floors[j]);left-=floors.reduce((a,b)=>a+b,0);
-  const order=open.map((k,j)=>[k,share[j]-floors[j]]).sort((a,b)=>b[1]-a[1]||a[0]-b[0]);for(const [k] of order){if(left<=0)break;if(minutes[k]<cap[k]){minutes[k]++;left--}}
-  open=open.filter(k=>minutes[k]<cap[k]);if(floors.every(x=>x===0)&&order.every(([k])=>minutes[k]>=cap[k]))break}
  // A bench too short to absorb its minutes under the cap: keep the original even split.
- if(left>0)return bench.map((_,k)=>Math.floor(total/bench.length)+(k<total%bench.length?1:0));
- return minutes}
+ return qualityBenchSplit(bench,total,starterMinutes)||bench.map((_,k)=>Math.floor(total/bench.length)+(k<total%bench.length?1:0))}
+// Splits `total` bench minutes by OVR: weight ((OVR−40)/30)^4, the top `core` bench players at full weight and the rest at
+// 0.35, nobody above `cap`. Whole minutes. Returns null when the bench can't absorb the total under the cap.
+// Shared by 48-minute games (coachBenchMinutes) and other game lengths (allocateGameMinutes, simulation-rules.js).
+function qualityBenchSplit(bench,total,cap,core=4){
+ const ranked=[...bench].sort((a,b)=>b.ovr-a.ovr||a.id-b.id),weight=bench.map(p=>Math.max(.15,(p.ovr-40)/30)**4*(ranked.indexOf(p)<core?1:.35)),caps=bench.map(()=>cap),minutes=bench.map(()=>0);let left=total,open=bench.map((_,k)=>k);
+ while(left>0&&open.length){const sum=open.reduce((n,k)=>n+weight[k],0),share=open.map(k=>Math.min(caps[k]-minutes[k],left*weight[k]/sum)),floors=share.map(Math.floor);
+  open.forEach((k,j)=>minutes[k]+=floors[j]);left-=floors.reduce((a,b)=>a+b,0);
+  const order=open.map((k,j)=>[k,share[j]-floors[j]]).sort((a,b)=>b[1]-a[1]||a[0]-b[0]);for(const [k] of order){if(left<=0)break;if(minutes[k]<caps[k]){minutes[k]++;left--}}
+  open=open.filter(k=>minutes[k]<caps[k]);if(floors.every(x=>x===0)&&order.every(([k])=>minutes[k]>=caps[k]))break}
+ return left>0?null:minutes}
 function coachRotation(club){
  const healthy=club.roster.filter(p=>!injuryDays(p)),custom=rotationValid(club);
  const weights=healthy.map(p=>Math.max(custom?0:1,coachBaseMinutes(p,club)));
