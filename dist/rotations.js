@@ -2,12 +2,16 @@
 const ROTATION_POSITIONS=['PG','SG','SF','PF','C'];
 let rotationDraft=null,rotationDraftSignature='';
 function rotationSignature(club){return activeSaveId+':'+state.year+':'+gameMinutes()+':'+leagueRules().courtPlayers+':'+club.key+':'+club.roster.map(p=>p.id+':'+(injuryDays(p)>0?'out':'healthy')).sort((a,b)=>a-b).join(',')}
+// A player's value at a rotation spot: the starting-lineup rule (OVR plus a bounded positional preference,
+// position-lineups.js), so opening-day starters, backups, injury replacements and substitutions agree.
+function rotationSlotValue(p,pos){return typeof lineupSlotValue==='function'?lineupSlotValue(p,pos):p.ovr+positionRank(p,pos)*3}
 function rotationFromClub(club){
  const ids=new Set(club.roster.map(p=>p.id)),saved=club.rotationPlan;
  const depth=Object.fromEntries(ROTATION_POSITIONS.map(pos=>[pos,(saved?.depth?.[pos]||[]).map(id=>ids.has(id)?id:null)]));
  const used=new Set();
- for(const pos of ROTATION_POSITIONS){if(depth[pos][0]===undefined||depth[pos][0]===null||used.has(depth[pos][0])){const p=club.roster.slice(0,5).find(p=>p.pos===pos&&!used.has(p.id))||club.roster.slice(0,5).find(p=>playsPosition(p,pos)&&!used.has(p.id))||club.roster.slice(0,5).find(p=>!used.has(p.id));depth[pos][0]=p?.id??null}used.add(depth[pos][0])}
- for(const pos of ROTATION_POSITIONS){const candidates=club.roster.filter(p=>p.id!==depth[pos][0]).sort((a,b)=>positionRank(b,pos)-positionRank(a,pos)||b.ovr-a.ovr);for(let i=1;i<3;i++)if(!ids.has(depth[pos][i])||depth[pos].slice(0,i).includes(depth[pos][i]))depth[pos][i]=candidates.find(p=>!depth[pos].includes(p.id))?.id??null;depth[pos]=depth[pos].slice(0,3)}
+ const placed=typeof lineupAssignment==='function'?lineupAssignment(club,club.roster.slice(0,5)):{};
+ for(const pos of ROTATION_POSITIONS){if(depth[pos][0]===undefined||depth[pos][0]===null||used.has(depth[pos][0])){const p=club.roster.slice(0,5).find(p=>p.id===placed[pos]&&!used.has(p.id))||club.roster.slice(0,5).find(p=>p.pos===pos&&!used.has(p.id))||club.roster.slice(0,5).find(p=>playsPosition(p,pos)&&!used.has(p.id))||club.roster.slice(0,5).find(p=>!used.has(p.id));depth[pos][0]=p?.id??null}used.add(depth[pos][0])}
+ for(const pos of ROTATION_POSITIONS){const candidates=club.roster.filter(p=>p.id!==depth[pos][0]).sort((a,b)=>rotationSlotValue(b,pos)-rotationSlotValue(a,pos)||a.id-b.id);for(let i=1;i<3;i++)if(!ids.has(depth[pos][i])||depth[pos].slice(0,i).includes(depth[pos][i]))depth[pos][i]=candidates.find(p=>!depth[pos].includes(p.id))?.id??null;depth[pos]=depth[pos].slice(0,3)}
  return {depth,targets:Object.fromEntries(club.roster.map(p=>[p.id,playerMinutes(p,club)])),roles:Object.fromEntries(club.roster.map((p,i)=>[p.id,used.has(p.id)?'Starter':saved?.roles?.[p.id]&&saved.roles[p.id]!=='Starter'?saved.roles[p.id]:i===5?'Sixth Man':i<9?'Role Player':'Reserve'])),staggerStars:!!saved?.staggerStars,foulThreshold:saved?.foulThreshold||2};
 }
 function readRotationPlan(raw,club,bad){
@@ -63,12 +67,12 @@ function rotationChangeDepth(pos,index,value){
 function autoAllocateRotation(){
  const club=team(),plan=draftRotation(),healthy=club.roster.filter(p=>!injuryDays(p)).sort((a,b)=>b.ovr-a.ovr);
  if(healthy.length<leagueRules().courtPlayers)return toast('Not enough healthy players for the configured lineup.');
- const used=new Set();for(const pos of courtPositions()){const p=healthy.find(p=>p.pos===pos&&!used.has(p.id))||healthy.find(p=>playsPosition(p,pos)&&!used.has(p.id))||healthy.find(p=>!used.has(p.id));plan.depth[pos][0]=p.id;used.add(p.id)}
+ const used=new Set(),placed=lineupAssignment(club,healthy);for(const pos of courtPositions()){const p=healthy.find(p=>p.id===placed[pos]&&!used.has(p.id))||healthy.find(p=>!used.has(p.id));plan.depth[pos][0]=p.id;used.add(p.id)}
  const bench=healthy.filter(p=>!used.has(p.id)).slice(0,4);
  for(const p of club.roster){plan.targets[p.id]=0;plan.roles[p.id]='Reserve'}
  if(gameMinutes()===48&&leagueRules().courtPlayers===5){if(bench.length>=4){for(const id of used)plan.targets[id]=34;bench.forEach((p,i)=>plan.targets[p.id]=i<2?18:17)}else if(bench.length===3){for(const id of used)plan.targets[id]=36;bench.forEach(p=>plan.targets[p.id]=20)}else{for(const id of used)plan.targets[id]=48}}else{const allocated=allocateGameMinutes(club,used);for(const p of club.roster)plan.targets[p.id]=allocated.get(p.id)||0;}
  for(const id of used)plan.roles[id]='Starter';bench.forEach((p,i)=>plan.roles[p.id]=i===0?'Sixth Man':'Role Player');
- for(const pos of courtPositions()){const ranked=healthy.filter(p=>p.id!==plan.depth[pos][0]).sort((a,b)=>positionRank(b,pos)-positionRank(a,pos)||plan.targets[b.id]-plan.targets[a.id]||b.ovr-a.ovr);plan.depth[pos][1]=ranked[0]?.id??null;plan.depth[pos][2]=ranked[1]?.id??null}
+ for(const pos of courtPositions()){const ranked=healthy.filter(p=>p.id!==plan.depth[pos][0]).sort((a,b)=>rotationSlotValue(b,pos)-rotationSlotValue(a,pos)||plan.targets[b.id]-plan.targets[a.id]||a.id-b.id);plan.depth[pos][1]=ranked[0]?.id??null;plan.depth[pos][2]=ranked[1]?.id??null}
  render();
 }
 function clearRotationMinutes(){for(const p of team().roster)draftRotation().targets[p.id]=0;render()}
@@ -150,7 +154,7 @@ function refreshGameRotation(club,runtime,minute,rows,events,margin=0){
   const score=p=>{
    const energy=runtime.stamina.get(p.id),stint=runtime.consecutive.get(p.id)||0;
    const fallback=ROTATION_POSITIONS.some(k=>k===pos&&runtime.plan.depth[k].includes(p.id));
-   return (p.pos===pos?100:fallback?60:Math.abs(ROTATION_POSITIONS.indexOf(p.pos)-ROTATION_POSITIONS.indexOf(pos))===1?20:-40)
+   return (p.pos===pos?100:secondaryPositions(p).includes(pos)?95:fallback?60:playerPositions(p).some(q=>Math.abs(ROTATION_POSITIONS.indexOf(q)-ROTATION_POSITIONS.indexOf(pos))===1)?20:-40)
     +(depth[0]===p.id?12:depth[1]===p.id?25:depth[2]===p.id?10:0)
     +(clutch?(starters.has(p.id)?1000:0)+p.ovr*2:energy+(energy>=90?25:0)-(energy<70?160:0)-(stint>=maxStint?140:0))
     +(blowout&&!starters.has(p.id)?500:0)+(planned.includes(p.id)?70:0)

@@ -24,14 +24,15 @@ assert(dist.ok,'at most one neighbor, never the main position');assert(dist.any/
 l.run(`var g=state.teams[0].roster[0];g.pos='PG';g.secondaryPos=['SG'];var h=state.teams[0].roster[1];h.pos='C';h.secondaryPos=[]`);
 assert.equal(run('positionLabel(g)'),'PG/SG');assert.equal(run('positionLabel(h)'),'C');assert.equal(run(`positionFullLabel(g)`),'PG · also SG');
 l.run(`g.pos='SG';g.secondaryPos=['PG'];rosterTeamId=state.teams[0].id`);assert(run('roster()').includes('SG/PG'),'roster shows SG/PG');
-// 3. Rotations: main > secondary > other for depth spots, regardless of rating; labels.
+// 3. Rotations: depth spots go by the lineup rule (OVR plus a bounded preference for main > secondary > fit, see
+// test-positional-versatility.cjs), so a strong SG who also plays SF backs up SF ahead of a weak natural SF; labels.
 const depth=run(`(()=>{const club=state.teams[1],r=club.roster;delete club.rotationPlan;
   r.forEach((p,i)=>{p.secondaryPos=[];p.pos=['PG','SG','SF','PF','C'][i%5]});
   // Bench (index 5+): a weak natural SF, a strong SG who also plays SF, a stronger PG who doesn't.
   const [weak,flex,star]=[r[5],r[6],r[7]];weak.pos='SF';weak.ovr=55;flex.pos='SG';flex.secondaryPos=['SF'];flex.ovr=75;star.pos='PG';star.ovr=88;
   for(const p of r.slice(8))p.pos='C';
-  const plan=rotationFromClub(club);return {backups:plan.depth.SF.slice(1),weak:weak.id,flex:flex.id,star:star.id}})()`);
-assert.deepEqual(depth.backups,[depth.weak,depth.flex],'SF backups: natural SF, then the SG who also plays SF (not the higher-rated PG)');
+  const plan=rotationFromClub(club),value=p=>rotationSlotValue(p,'SF'),order=r.filter(p=>p.id!==plan.depth.SF[0]).sort((a,b)=>value(b)-value(a)||a.id-b.id).map(p=>p.id);return {backups:plan.depth.SF.slice(1),order,weak:weak.id,flex:flex.id}})()`);
+assert.deepEqual(depth.backups,depth.order.slice(0,2),'SF backups follow the slot value');assert(depth.order.indexOf(depth.flex)<depth.order.indexOf(depth.weak),'the 75 SG/SF ranks ahead of the 55 natural SF at SF');
 const labels=run(`(()=>{const club=team();delete club.rotationPlan;rotationDraft=null;const r=club.roster;r.forEach((p,i)=>{p.secondaryPos=[];p.pos=['PG','SG','SF','PF','C'][i%5]});
   r[5].pos='PF';r[5].secondaryPos=['C'];r[6].pos='SG';r[6].secondaryPos=[];for(const p of r.slice(7))p.pos='PG';
   const plan=rotationFromClub(club);plan.depth.C[1]=r[5].id;plan.depth.C[2]=r[6].id;rotationDraft=plan;rotationDraftSignature=rotationSignature(club);return rotationsView().match(/rotation-fallback[^>]*>[^<]*/g)||[]})()`);
@@ -69,4 +70,4 @@ assert.match(run(`commissionerPlayerForm(state.teams[4].roster[0])`),/Secondary 
 const edited=run(`(()=>{const p=commissionerEditPlayer(${pid},${JSON.stringify(form)});return {pos:p.pos,sec:p.secondaryPos,manual:p.secondaryPosManual}})()`);
 assert.deepEqual(edited,{pos:'SF',sec:['SG'],manual:true});
 assert.throws(()=>run(`commissionerEditPlayer(${pid},${JSON.stringify({...form,sec0:'SF'})})`),/cannot be the main position/);
-console.log(`Secondary positions: assignment rules and distribution (${dist.any}/${dist.n} with a secondary position), labels, rotation ranking, matchups, half-weight needs, old saves, save checker, offseason recalculation and commissioner edits passed.`);
+console.log(`Secondary positions: assignment rules and distribution (${dist.any}/${dist.n} with a secondary position), labels, rotation ranking by the lineup rule, matchups, half-weight needs, old saves, save checker, offseason recalculation and commissioner edits passed.`);

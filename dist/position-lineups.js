@@ -38,7 +38,7 @@ function applyAutoLineups(data=state){for(const t of data.teams||[])applyAutoLin
 const rotationBeforeLineups=rotationFromClub;
 rotationFromClub=function(club,...args){const plan=rotationBeforeLineups(club,...args);if(!lineupAuto(club))return plan;
  const starters=lineupAssignment(club),healthy=lineupHealthy(club),ids=new Set(Object.values(starters));
- for(const pos of courtPositions()){const first=starters[pos]??null,backups=healthy.filter(p=>p.id!==first).sort((a,b)=>positionRank(b,pos)-positionRank(a,pos)||b.ovr-a.ovr||a.id-b.id);plan.depth[pos]=[first,backups[0]?.id??null,backups[1]?.id??null]}
+ for(const pos of courtPositions()){const first=starters[pos]??null,backups=healthy.filter(p=>p.id!==first).sort((a,b)=>lineupSlotValue(b,pos)-lineupSlotValue(a,pos)||a.id-b.id);plan.depth[pos]=[first,backups[0]?.id??null,backups[1]?.id??null]}
  const bench=club.roster.filter(p=>!ids.has(p.id)).sort((a,b)=>(injuryDays(a)>0)-(injuryDays(b)>0)||b.ovr-a.ovr||a.id-b.id);
  for(const p of club.roster)plan.roles[p.id]=ids.has(p.id)?'Starter':injuryDays(p)?'Reserve':bench.indexOf(p)===0?'Sixth Man':bench.indexOf(p)<4?'Role Player':'Reserve';
  return plan};

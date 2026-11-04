@@ -4,6 +4,8 @@
 // Stage 2: starting lineups use a bounded positional preference (OVR + 4 main / 3 secondary / +2…−8 by fit), so natural fits win
 // close calls, clearly better players start out of position, and a guard isn't put at center over a real big.
 // Stage 3: 40-minute games split bench minutes by quality (as 48-minute games do); team total and starter minutes unchanged.
+// Stage 4: injury replacements, the Start button, the rotation Auto button and depth charts use the same rule as the opening-day
+// lineup (secondary positions count), so in-game rotation and opening-day eligibility agree.
 const assert=require('node:assert/strict'),{loadLeague}=require('./dev/load-league.cjs');
 const leagues={};
 for(const g of ['male','female']){const l=loadLeague({seed:g==='male'?71:72,strictDOM:false});l.setRandomSeed(g==='male'?71:72);l.context.gender=g;
@@ -56,3 +58,23 @@ const m3=run('female',`state.teams.map(t=>{for(const p of t.roster){p.injuredUnt
 for(const t of m3){assert.equal(t.total,200);assert.equal(t.pm,200,'playerMinutes uses the same split');assert(t.max<=40);assert(t.bench.every(([,x])=>x<=t.minStarter),'no reserve above a starter');
  assert(t.bench.every(([o,x],i)=>!i||x<=t.bench[i-1][1]||o===t.bench[i-1][0]),'bench minutes follow OVR: '+JSON.stringify(t.bench));assert(t.bench[0][1]>=2*t.bench.at(-1)[1]&&t.bench[0][1]>=12,'the best reserve plays real minutes: '+JSON.stringify(t.bench))}
 console.log('Stage 3 (40-minute bench minutes by quality): totals, caps, no reserve above a starter, minutes by OVR passed for every WNBA team.');
+
+// Stage 4 (both leagues).
+for(const g of ['male','female']){const L=g==='male'?'NBA':'WNBA',l=leagues[g];
+ // Auto team: rotation starters are the lineup's; backups at each spot follow the slot value.
+ l.run(`build([['PG',80],['SG',76],['SF',78],['PF',77],['C',77],['SF',55],['SG',75,['SF']],['C',60]]);applyAutoLineup(club)`);
+ const rot=run(g,`(()=>{const plan=rotationFromClub(club),a=lineupAssignment(club);return {same:courtPositions().every(pos=>plan.depth[pos][0]===a[pos]),sf:plan.depth.SF.slice(1).map(id=>club.roster.find(p=>p.id===id).ovr),order:club.roster.filter(p=>p.id!==a.SF).sort((x,y)=>lineupSlotValue(y,'SF')-lineupSlotValue(x,'SF')||x.id-y.id).slice(0,2).map(p=>p.ovr)}})()`);
+ assert(rot.same,L+' rotation starters = lineup');assert.deepEqual(rot.sf,rot.order,L+' SF backups by slot value');assert(!rot.sf.includes(55),L+' the 55 natural SF is not a top SF backup ahead of the 75 SG/SF');
+ // Injury replacement: the starting SF is hurt and has no depth backup; the 75 SG/SF replaces him, not the 55 natural SF.
+ const inj=run(g,`(()=>{const sf=club.roster.find(p=>p.ovr===78);sf.injuredUntil=moraleStamp()+20;const depth=Object.fromEntries(courtPositions().map(pos=>[pos,[lineupAssignment(club,club.roster.filter(p=>p!==sf||true))[pos]]]));depth.SF=[sf.id];const st=injuryStarters(club,depth);sf.injuredUntil=0;return club.roster.find(p=>p.id===st.SF).ovr})()`);
+ assert.equal(inj,75,L+' injury replacement uses secondary positions');
+ // Start button (the user's team, manual): a bench SG/SF replaces the SF when no starter is a shooting guard (was: the 5th starter).
+ const start=run(g,`(()=>{const me=team(),r=me.roster;r.forEach((p,i)=>{const [pos,ovr,sec]=[['PG',80],['PG',78],['SF',72],['PF',76],['C',77],['SG',79,['SF']]][i]||['C',50];Object.assign(p,{gender,pos,ovr,injuredUntil:0,medicalInfo:undefined});p.secondaryPos=sec||[]});me.lineupMode='manual';delete me.rotationPlan;rotationDraft=null;const flex=r[5].id,sf=r[2].id;promote(flex);return {flexStarts:r.slice(0,5).some(p=>p.id===flex),sfBenched:!r.slice(0,5).some(p=>p.id===sf),cStarts:r.slice(0,5).some(p=>p.pos==='C')}})()`);
+ assert.deepEqual(start,{flexStarts:true,sfBenched:true,cStarts:true},L+' Start replaces the SF (secondary), not the center');
+ // Rotation Auto button: same starters as the auto lineup.
+ const autoBtn=run(g,`(()=>{const me=team();rotationDraft=null;autoAllocateRotation();const plan=draftRotation(),a=lineupAssignment(me,me.roster.filter(p=>!injuryDays(p)));return courtPositions().every(pos=>plan.depth[pos][0]===a[pos])})()`);
+ assert(autoBtn,L+' Auto button starters = lineup');
+ // A manual team without a saved depth chart: its five starters are placed at spots by the lineup rule.
+ const manual=run(g,`(()=>{const me=team();delete me.rotationPlan;rotationDraft=null;const plan=rotationFromClub(me),a=lineupAssignment(me,me.roster.slice(0,5));return courtPositions().every(pos=>plan.depth[pos][0]===a[pos])})()`);
+ assert(manual,L+' manual starters placed by the lineup rule')}
+console.log('Stage 4 (in-game positional consistency): rotation starters and backups, injury replacements, the Start button, the Auto button and manual depth charts follow the lineup rule — both leagues passed.');
