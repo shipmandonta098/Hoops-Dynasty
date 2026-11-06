@@ -28,6 +28,16 @@ assert.equal(run(`ip.international.country`),'AU','form preview does not touch t
 l.run(`withBasketballAttributes(ip);ip.tendencies??=generatedTendencies(ip);var f=(p,h)=>{const b=p.bio,t=p.personalityTraits||generateTraits(p),n=commissionerNameParts(p);return {first:n.first,last:n.last,pos:p.pos,age:String(p.age),heightInches:String(b.heightInches),weightLbs:String(b.weightLbs),birthdate:b.birthdate,hometown:h,college:b.college,...Object.fromEntries(ATTRIBUTE_KEYS.map(k=>['a_'+k,String(p.attributes[k])])),...Object.fromEntries(TENDENCY_KEYS.map(k=>['t_'+k,String(p.tendencies[k]??generatedTendencies(p)[k])])),...Object.fromEntries(t.map((x,i)=>['trait'+i,x]))}};
  commissionerEditPlayer(ip.id,f(ip,'Spain'))`);
 assert.deepEqual(run('[ip.bio.hometown,ip.international.country,playerHometownFlag(ip)?.length>0]'),['Spain','ES',true]);
-l.run(`commissionerEditPlayer(ip.id,f(ip,'Texas, USA'))`);assert.deepEqual(run('[ip.bio.hometown,ip.international.country]'),['Texas, USA','ES'],'US birthplace keeps nationality');
+// Nationality follows the hometown both ways: a US hometown makes the player American, an overseas one international
+// (fully adapted: no adjustment penalty), and the name dice follow the form's hometown.
+l.run(`commissionerEditPlayer(ip.id,f(ip,'Texas, USA'))`);
+assert.deepEqual(run('[ip.bio.hometown,ip.international===undefined,commissionerPlayerCountry(ip),ip.nameIdentity?.country??"US"]'),['Texas, USA',true,'US','US'],'US hometown makes the player American');
+l.run(`up.tendencies??=generatedTendencies(up);withBasketballAttributes(up);commissionerEditPlayer(up.id,f(up,'France'))`);
+assert.deepEqual(run('[up.bio.hometown,up.international?.country,commissionerPlayerCountry(up),up.nameIdentity?.country??"FR"]'),['France','FR','FR','FR'],'overseas hometown makes the player international');
+assert.equal(run(`['oiq','diq','pss','fg','tp','per'].reduce((n,k)=>n+internationalAdaptationPenalty(up,k),0)`),0,'no adjustment penalty for an established player');
+assert.equal(run(`commissionerPlayerCountry(commissionerFormPlayer(up,{elements:{hometown:{value:'Ohio, USA'}}}))`),'US');assert.equal(run('up.international.country'),'FR','preview leaves the player alone');
+assert.equal(run(`commissionerPlayerCountry(commissionerFormPlayer(ip,{elements:{hometown:{value:'Japan'}}}))`),'JP');
+assert.equal(run(`typeof commissionerRandomName(commissionerFormPlayer(ip,{elements:{hometown:{value:'Japan'}}}),'first','')`),'string');
+const back=run(`(()=>{const s=validateCareerData(JSON.parse(JSON.stringify(state))),find=id=>[...s.teams.flatMap(t=>t.roster),...s.free].find(p=>p.id===id);return [find(ip.id).international===undefined,find(up.id).international?.country]})()`);assert.deepEqual(back,[true,'FR'],'survives save/load');
 l.run('validateCareerData(JSON.parse(JSON.stringify(state)))');
-console.log('Hometowns: 50 states (generated',Object.keys(gen).length,'states in 6000 bios), US-born dice',JSON.stringify(us),'overseas-born dice',JSON.stringify(intl),'(both kinds for both), form follows hometown, nationality synced between countries, US birthplace keeps nationality passed.');
+console.log('Hometowns: 50 states (generated',Object.keys(gen).length,'states in 6000 bios), US-born dice',JSON.stringify(us),'overseas-born dice',JSON.stringify(intl),'(both kinds for both), form follows hometown, nationality follows the hometown both ways (no adjustment penalty), save/load passed.');
