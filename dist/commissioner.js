@@ -167,11 +167,14 @@ function commissionerRandomName(p,part,other){const country=p.nameIdentity?.coun
  const taken=new Set(allLeaguePlayers().filter(q=>q.id!==p.id).map(q=>q.name.toLowerCase()));
  for(let i=0;i<60;i++){const info=generatePlayerName({country,gender,s:state}),value=part==='first'?info.given:info.surname,full=part==='first'?commissionerJoinName(p,value,other):commissionerJoinName(p,other,value);if(value&&!taken.has(full.toLowerCase()))return value}
  throw Error('Could not find an unused name; try again.')}
-// Hometown dice: US players get any of the 50 states (population-weighted), international players another
-// international country (weighted like international player generation). Never returns the current value.
-function commissionerRandomHometown(p,current=p.bio?.hometown){const c=commissionerPlayerCountry(p),pick=(items,weight)=>{const total=items.reduce((n,x)=>n+weight(x),0);let r=Math.random()*total;for(const x of items){r-=weight(x);if(r<0)return x}return items.at(-1)};
- if(c==='US'){const state=String(current||'').replace(/, USA$/,'');return pick(PLAYER_HOMETOWN_STATE_WEIGHTS.filter(x=>x[0]!==state),x=>x[1])[0]+', USA'}
- return pick(Object.values(INTERNATIONAL_COUNTRIES).filter(x=>x.name!==current),x=>x.weight||1).name}
+// Hometown dice: any player can be born in the US or overseas. Each roll is a US state (population-weighted) or an
+// international country (generation weights), half and half, and never the current value. The hometown is the
+// birthplace: rolling across US/overseas does not change nationality (international status has gameplay effects);
+// moving between two overseas countries does (see commissionerEditPlayer).
+function commissionerRandomHometown(p,current=p.bio?.hometown){const pick=(items,weight)=>{const total=items.reduce((n,x)=>n+weight(x),0);let r=Math.random()*total;for(const x of items){r-=weight(x);if(r<0)return x}return items.at(-1)};
+ const now=String(current||'').trim(),state=now.endsWith(', USA')?now.slice(0,-5):null;
+ if(Math.random()<.5)return pick(PLAYER_HOMETOWN_STATE_WEIGHTS.filter(x=>x[0]!==state),x=>x[1])[0]+', USA';
+ return pick(Object.values(INTERNATIONAL_COUNTRIES).filter(x=>x.name!==now),x=>x.weight||1).name}
 // The country a hometown names (international countries only), or null.
 function commissionerHometownCountry(hometown){const last=String(hometown||'').split(',').at(-1).trim().toLowerCase();return Object.entries(INTERNATIONAL_COUNTRIES).find(([,c])=>c.name.toLowerCase()===last)?.[0]||null}
 // Before saving: what the form says the player's country is, so name/college dice follow an unsaved hometown change.
