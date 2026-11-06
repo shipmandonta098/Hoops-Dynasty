@@ -122,7 +122,8 @@ function commissionerEditPlayer(id,v){const p=commissionerFindPlayer(id);if(!p)t
  // Secondary position (when the form has it): at most one, never the main position; a change marks it as set by hand
  // so the offseason recalculation leaves it alone.
  let secondary=null;if(v.sec0!==undefined){secondary=[v.sec0].filter(Boolean);if(secondary.some(x=>!['PG','SG','SF','PF','C'].includes(x)))throw Error('Choose valid secondary positions.');if(secondary.includes(v.pos))throw Error('A secondary position cannot be the main position.')}
- const before=secondaryPositions(p).join();if(p.draftRisk&&Number.isFinite(p.draftRisk.actualPotential))p.draftRisk.actualPotential=Math.max(next.ovr,Math.min(99,p.draftRisk.actualPotential+(next.pot-p.pot)));Object.assign(p,next,{attributes,tendencies,personalityTraits:traits,bio});commissionerSetNameIdentity(p,parts.first,parts.last);
+ const before=secondaryPositions(p).join();if(p.draftRisk&&Number.isFinite(p.draftRisk.actualPotential))p.draftRisk.actualPotential=Math.max(next.ovr,Math.min(99,p.draftRisk.actualPotential+(next.pot-p.pot)));const homeCountry=p.international&&commissionerHometownCountry(bio.hometown);if(homeCountry&&homeCountry!==p.international.country){p.international.country=homeCountry;if(p.nameIdentity)p.nameIdentity.country=homeCountry}
+ Object.assign(p,next,{attributes,tendencies,personalityTraits:traits,bio});commissionerSetNameIdentity(p,parts.first,parts.last);
  if(secondary){if(secondary.join()!==before)p.secondaryPosManual=true;p.secondaryPos=secondary}else if(Array.isArray(p.secondaryPos))p.secondaryPos=p.secondaryPos.filter(x=>x!==p.pos);if(typeof ensurePlayerArchetype==='function')ensurePlayerArchetype(p,state.year,true);return p}
 
 /* Awards: player honors in regular-season awards and league history (both stores stay in step). */
@@ -166,11 +167,19 @@ function commissionerRandomName(p,part,other){const country=p.nameIdentity?.coun
  const taken=new Set(allLeaguePlayers().filter(q=>q.id!==p.id).map(q=>q.name.toLowerCase()));
  for(let i=0;i<60;i++){const info=generatePlayerName({country,gender,s:state}),value=part==='first'?info.given:info.surname,full=part==='first'?commissionerJoinName(p,value,other):commissionerJoinName(p,other,value);if(value&&!taken.has(full.toLowerCase()))return value}
  throw Error('Could not find an unused name; try again.')}
-function commissionerRandomHometown(p){const c=commissionerPlayerCountry(p);return c==='US'?PLAYER_HOMETOWN_STATES[Math.floor(Math.random()*PLAYER_HOMETOWN_STATES.length)]+', USA':INTERNATIONAL_COUNTRIES[c].name}
+// Hometown dice: US players get any of the 50 states (population-weighted), international players another
+// international country (weighted like international player generation). Never returns the current value.
+function commissionerRandomHometown(p,current=p.bio?.hometown){const c=commissionerPlayerCountry(p),pick=(items,weight)=>{const total=items.reduce((n,x)=>n+weight(x),0);let r=Math.random()*total;for(const x of items){r-=weight(x);if(r<0)return x}return items.at(-1)};
+ if(c==='US'){const state=String(current||'').replace(/, USA$/,'');return pick(PLAYER_HOMETOWN_STATE_WEIGHTS.filter(x=>x[0]!==state),x=>x[1])[0]+', USA'}
+ return pick(Object.values(INTERNATIONAL_COUNTRIES).filter(x=>x.name!==current),x=>x.weight||1).name}
+// The country a hometown names (international countries only), or null.
+function commissionerHometownCountry(hometown){const last=String(hometown||'').split(',').at(-1).trim().toLowerCase();return Object.entries(INTERNATIONAL_COUNTRIES).find(([,c])=>c.name.toLowerCase()===last)?.[0]||null}
+// Before saving: what the form says the player's country is, so name/college dice follow an unsaved hometown change.
+function commissionerFormPlayer(p,form){const c=commissionerPlayerCountry(p),h=c!=='US'&&commissionerHometownCountry(form?.elements?.hometown?.value);return h&&h!==c?{...p,international:{...p.international,country:h},nameIdentity:p.nameIdentity?{...p.nameIdentity,country:h}:p.nameIdentity}:p}
 function commissionerRandomCollege(p){const c=commissionerPlayerCountry(p),pool=c==='US'?PLAYER_COLLEGES:[...PLAYER_COLLEGES,INTERNATIONAL_COUNTRIES[c].name+' · Pro academy',INTERNATIONAL_COUNTRIES[c].name+' · Pro league'];return pool[Math.floor(Math.random()*pool.length)]}
 // 🎲 buttons in the editor fill the field; nothing is saved until Save player.
 function commissionerRandomizeField(id,field,form){const p=commissionerFindPlayer(id);if(!p||!form)return;try{const e=form.elements;
- e[field].value=field==='first'?commissionerRandomName(p,'first',e.last.value.trim()):field==='last'?commissionerRandomName(p,'last',e.first.value.trim()):field==='hometown'?commissionerRandomHometown(p):commissionerRandomCollege(p)}catch(error){toast(error.message)}}
+ const q=commissionerFormPlayer(p,form);e[field].value=field==='first'?commissionerRandomName(q,'first',e.last.value.trim()):field==='last'?commissionerRandomName(q,'last',e.first.value.trim()):field==='hometown'?commissionerRandomHometown(q,e.hometown.value.trim()):commissionerRandomCollege(q)}catch(error){toast(error.message)}}
 function commissionerOpenEditor(id){const p=commissionerFindPlayer(id);if(!p||!commissionerOn())return;commissionerUI.playerId=id;const d=document.getElementById('profile');d.className='commissioner-editor';d.removeAttribute('aria-labelledby');
  d.innerHTML=`<div class="panelhead"><h2>${commissionerBadge()} Edit ${escapeHTML(p.name)}</h2><button onclick="document.getElementById('profile').close()" aria-label="Close editor">✕</button></div>${commissionerPlayerForm(p)}`;if(!d.open)d.showModal()}
 // Schedule: one future game (force winner, edit matchup) and the schedule header (regenerate, add a game).
