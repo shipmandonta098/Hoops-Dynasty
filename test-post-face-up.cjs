@@ -21,7 +21,7 @@ const engine=run(`(()=>{const p=ps.find(x=>x.pos==='PF'),slow={attributes:{spd:3
  const vsSlow=count(slow),vsFast=count(fast);p.tendencies.postFaceUp=0;const none=count(slow,1000);p.tendencies.postFaceUp=100;const notPost=[...Array(500)].some(()=>tendencyShot(p,{action:'shoot',defender:slow}).faceUp);
  const j=(()=>{for(let i=0;i<2000;i++){const s=tendencyShot(p,{action:'post',defender:fast});if(s.faceUp==='jumper')return contextualLayup(p,s,{action:'post'})}})(),dv=(()=>{for(let i=0;i<2000;i++){const s=tendencyShot(p,{action:'post',defender:slow});if(s.faceUp==='drive')return s}})();
  return {vsSlow,vsFast,none:none[0],notPost,jumper:{kind:j.kind,name:j.layup,skills:j.skills},drive:{kind:dv.kind,key:dv.key}}})()`);
-assert(Math.abs(engine.vsSlow[0]-.6*run(`archetypeTendencyMultiplier(ps.find(x=>x.pos==='PF'),'postFaceUp')`)*1)<.06||engine.vsSlow[0]>.45,'face-up chance ≈ 0.6 × effective tendency: '+engine.vsSlow[0]);
+assert(Math.abs(engine.vsSlow[0]-.6*Math.min(1,run(`archetypeTendencyMultiplier(ps.find(x=>x.pos==='PF'),'postFaceUp')`)))<.03,'face-up chance = 0.6 × effective tendency: '+engine.vsSlow[0]);
 assert.equal(engine.none,0,'tendency 0 never faces up');assert(!engine.notPost,'only from the post');
 assert(engine.vsSlow[1]>engine.vsFast[1]+.2,'drives more against a slow defender: '+engine.vsSlow[1]+' vs '+engine.vsFast[1]);
 assert.equal(engine.jumper.kind,'mid');assert.match(engine.jumper.name,/Face-Up Jumper/);assert.deepEqual(engine.jumper.skills,{fg:.8,drb:.2});assert.equal(engine.drive.kind,'inside');
