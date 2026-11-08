@@ -43,7 +43,8 @@ dialog.player-fullscreen[open]{display:grid;grid-template-rows:auto auto minmax(
   --player-avatar-ink: #696d67;
   --player-rating-bg: #e9e6dc;
 }
-html dialog.player-dialog.player-fullscreen {
+html dialog.player-dialog.player-fullscreen,
+html dialog.player-dialog.player-themed {
   --pp-bg: var(--player-surface);
   --pp-card: var(--player-panel);
   --pp-ink: var(--player-text);
@@ -53,19 +54,22 @@ html dialog.player-dialog.player-fullscreen {
   --rating-color: var(--pp-green);
   color-scheme: inherit;
 }
-.player-fullscreen::backdrop { background: var(--player-overlay); }
+.player-fullscreen::backdrop,
+.player-themed::backdrop { background: var(--player-overlay); }
 html .player-fullscreen .pp-portrait {
   background: var(--player-avatar-bg);
   color: var(--player-avatar-ink);
 }
-.player-fullscreen .pp-card { background: var(--pp-card); }
+.player-fullscreen .pp-card,
+.player-themed .pp-card { background: var(--pp-card); }
 .player-fullscreen .pp-archetype,
 .player-fullscreen .archetype-name { color: var(--pp-ink); }
 .player-fullscreen .pp-archetype { border-color: var(--player-accent); }
 .player-fullscreen .pp-close {
   box-shadow: inset 0 0 0 1px var(--player-accent);
 }
-.player-fullscreen .primary {
+.player-fullscreen .primary,
+.player-themed .primary {
   background: var(--player-action);
   color: var(--player-action-text);
   border-color: var(--player-accent);
@@ -85,3 +89,14 @@ html .player-fullscreen .pp-portrait {
 .league-light .player-fullscreen .rating-poor { --rating-color: #a32e36; }
 
 .pp-game-log{max-width:100%;overflow-x:auto}.pp-game-log table{min-width:1350px;white-space:nowrap}
+
+/* Commissioner editors: full screen in the profile colors, sticky header and Save button. */
+dialog.player-dialog.commissioner-fullscreen{position:fixed;inset:0;margin:0;width:100%;max-width:none;height:100vh;height:100dvh;max-height:none;box-sizing:border-box;border:0;border-radius:0;box-shadow:none;padding:0;overflow:auto;overscroll-behavior:contain}
+.commissioner-fullscreen>.panelhead{position:sticky;top:0;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0;padding:calc(env(safe-area-inset-top) + 12px) calc(env(safe-area-inset-right) + 16px) 12px calc(env(safe-area-inset-left) + 20px);background:var(--pp-bg);border-bottom:1px solid var(--pp-line)}
+.commissioner-fullscreen>.panelhead h2{margin:0;font-size:clamp(18px,4.5vw,24px)}
+.commissioner-fullscreen>.panelhead button{min-width:44px;min-height:44px}
+.commissioner-fullscreen form{max-width:1100px;margin:0 auto;padding:12px calc(env(safe-area-inset-right) + 20px) 0 calc(env(safe-area-inset-left) + 20px);box-sizing:border-box}
+.commissioner-fullscreen .tm-grid{grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr))}
+.commissioner-fullscreen form>button.primary{position:sticky;bottom:0;z-index:2;display:block;width:100%;min-height:48px;margin:20px 0 0;border-radius:0 0 4px 4px;box-shadow:0 -10px 16px var(--pp-bg);margin-bottom:env(safe-area-inset-bottom)}
+.commissioner-fullscreen input,.commissioner-fullscreen select{background:var(--pp-card);color:var(--pp-ink);border:1px solid var(--pp-line)}
+.commissioner-coach-edit{display:flex;align-items:center;gap:10px;margin:-6px 0 16px}
