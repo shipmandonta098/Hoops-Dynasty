@@ -108,11 +108,50 @@ function customSeasonSchedule(teams,year,rules,gender=teams[0]?.roster?.[0]?.gen
  const random=scheduleRandom(year*971+rules.seasonGames*31),pairs=orientSeasonPairs(customPairings(teams,targets,random),teams.length,year);let best=null;
  for(let attempt=0;attempt<20;attempt++){let pending=scheduleShuffle(pairs,random),rounds=[];while(pending.length){const degree=teams.map((_,i)=>pending.filter(p=>p.includes(i)).length),round=[],seen=new Set();pending.sort((a,b)=>Math.max(...b.map(i=>degree[i]))-Math.max(...a.map(i=>degree[i])));pending=pending.filter(p=>{if(p.some(i=>seen.has(i)))return true;p.forEach(i=>seen.add(i));round.push(p);return false});rounds.push(round)}if(!best||rounds.length<best.length)best=rounds;if(best.length<=available.length)break}
  if(best.length>available.length){best=exactScheduleRounds(pairs,teams.length,available.length);if(!best)throw Error('The required matchups cannot fit into '+available.length+' available dates without a team playing twice on one day. Extend the season or shorten the All-Star break.');}
+ const assigned=customAssignDates(pairs,teams.length,days,available,rules.allStarEnabled?reserved:null,rules.seasonGames,scheduleRandom(year*7741+rules.seasonGames*13+teams.length));if(assigned)return assigned;
+ // Fallback (calendars too tight for the rest rules): evenly spaced rounds.
  const calendar=Array.from({length:days},()=>[]);best.forEach((round,i)=>calendar[available[best.length===1?0:Math.round(i*(available.length-1)/(best.length-1))]].push(...round));return calendar;
+}
+// Rest rules for custom calendars, scaled to how dense the season is. Sparse (WNBA-like) seasons: at most 4
+// back-to-backs per team, no 3 games in 4 nights unless the end of the season forces it, never 3 straight days, and
+// no break longer than about a week outside the All-Star break. Dense (NBA-like) seasons follow the 82-game limit.
+function customRestLimits(games,availableDays){const density=games/Math.max(1,availableDays),sparse=density<=.45;return {sparse,b2b:sparse?4:16,b2bTarget:sparse?2:12,maxGap:Math.max(7,Math.ceil(2.5/density)),threeInFour:sparse?0:Infinity}}
+// Gaps between a team's games; a gap that spans the All-Star break is reported separately and not counted as rest.
+function customTeamRest(calendar,id,breakWin){const ds=calendar.flatMap((games,d)=>games.some(g=>g.includes(id))?[d]:[]),gaps=[],r={days:ds,gaps,b2b:0,threeInFour:0,threeStraight:0,maxGap:0,breakGap:null};
+ for(let i=1;i<ds.length;i++){const g=ds[i]-ds[i-1]-1;if(breakWin&&ds[i-1]+1<breakWin.breakStart&&ds[i]+1>breakWin.breakEnd){r.breakGap=g;continue}gaps.push(g);if(!g)r.b2b++;r.maxGap=Math.max(r.maxGap,g)}
+ for(let i=2;i<ds.length;i++){if(ds[i]-ds[i-2]<=3)r.threeInFour++;if(ds[i]-ds[i-2]===2)r.threeStraight++}return r}
+// The same rest checks on a team's occupancy (true = plays that day), for code that moves games after scheduling.
+function customOccupancyRest(occupied,breakWin){return customTeamRest(occupied.map(v=>v?[[0,0]]:[]),0,breakWin)}
+function customCalendarLimits(c){const b=c.allStarCalendar,len=b?b.breakEnd-b.breakStart+1:0;return customRestLimits(c.leagueSettings?.seasonGames||(c.schedule.flat().filter(p=>p.includes(0)).length),Math.max(1,c.schedule.length-len))}
+function customOccupancyValid(c,occupied){const r=customOccupancyRest(occupied,c.allStarCalendar),l=customCalendarLimits(c);return r.threeStraight===0&&r.b2b<=l.b2b&&r.threeInFour<=(l.sparse?0:Infinity)&&r.maxGap<=l.maxGap}
+// A move is acceptable when it keeps the team within the limits, or at least does not make any measure worse.
+function customOccupancyNoWorse(c,before,after){if(customOccupancyValid(c,after))return true;const a=customOccupancyRest(before,c.allStarCalendar),b=customOccupancyRest(after,c.allStarCalendar);return b.threeStraight<=a.threeStraight&&b.b2b<=a.b2b&&b.threeInFour<=a.threeInFour&&b.maxGap<=a.maxGap}
+function customRestReport(calendar,n,breakWin,limits){const teams=Array.from({length:n},(_,id)=>customTeamRest(calendar,id,breakWin));return {teams,valid:teams.every(t=>t.b2b<=limits.b2b&&t.threeStraight===0&&t.threeInFour<=(limits.sparse?1:Infinity)&&t.maxGap<=limits.maxGap)}}
+// Day-by-day assignment: each day plays a share of the remaining games, chosen by team urgency (rest so far, pace
+// against the games left, approaching a long break). Teams that played yesterday sit unless forced, and only within the
+// back-to-back limit. Several seeded attempts; the best-scoring complete calendar wins, or null when none completes.
+function customAssignDates(pairs,n,days,available,breakWin,games,random){
+ const limits=customRestLimits(games,available.length),pace=games/available.length,spans=(a,b)=>breakWin&&a+1<breakWin.breakStart&&b+1>breakWin.breakEnd,breakLen=breakWin?breakWin.breakEnd-breakWin.breakStart+1:0;
+ const attempt=()=>{const calendar=Array.from({length:days},()=>[]),last=Array(n).fill(-1e3),prev=Array(n).fill(-1e3),b2b=Array(n).fill(0),left=Array(n).fill(0),met=new Map();let pending=pairs.slice();for(const [a,b] of pairs){left[a]++;left[b]++}
+  for(let k=0;k<available.length&&pending.length;k++){const day=available[k],remaining=available.length-k;
+   const gap=t=>last[t]<0?99:day-last[t]-1-(spans(last[t],day)?breakLen:0),must=t=>left[t]>=remaining;
+   const ok=t=>{if(!left[t])return false;if(day-last[t]>1)return prev[t]<day-3||must(t)||!limits.sparse;if(prev[t]===day-2)return false;return must(t)||b2b[t]<(limits.sparse?limits.b2bTarget+(random()<.35?1:0):limits.b2b)&&(prev[t]<day-3||!limits.sparse)};
+   const urgency=t=>{const g=gap(t);let u=6*(left[t]/remaining)/pace;u+=g>=99?6:g<=0?-3.5:g===1?0:g===2?1.5+random()*2:g===3?3.5+random()*2:7+(g-4)*2;if(g>=limits.maxGap-1)u+=40;if(must(t))u+=200;return u};
+   const target=pending.length/remaining,count=Math.min(Math.floor(n/2),Math.floor(target)+(random()<target%1?1:0));
+   const scored=pending.map((p,i)=>({p,i,score:ok(p[0])&&ok(p[1])?urgency(p[0])+urgency(p[1])+random()*2-(day-(met.get(Math.min(...p)*n+Math.max(...p))??-99)<=2?4:0):-Infinity})).filter(x=>x.score>-Infinity).sort((a,b)=>b.score-a.score);
+   const busy=new Set(),taken=[];for(const x of scored){if(busy.has(x.p[0])||busy.has(x.p[1]))continue;const urgent=x.p.every(t=>gap(t)>=limits.maxGap-1||must(t));if(taken.length>=count&&!urgent)continue;busy.add(x.p[0]);busy.add(x.p[1]);taken.push(x)}
+   for(const {p} of taken){calendar[day].push(p);for(const t of p){if(day-last[t]===1)b2b[t]++;prev[t]=last[t];last[t]=day;left[t]--}met.set(Math.min(...p)*n+Math.max(...p),day)}
+   const used=new Set(taken.map(x=>x.i));pending=pending.filter((_,i)=>!used.has(i))}
+  return pending.length?null:calendar};
+ const score=calendar=>{const r=customRestReport(calendar,n,breakWin,limits);let cost=r.valid?0:1e4;for(const t of r.teams){cost+=t.b2b*t.b2b*3+t.threeInFour*25+t.threeStraight*500+Math.max(0,t.maxGap-limits.maxGap)*60;for(const g of t.gaps)cost+=g>=6?3:g>=4?1:0}
+  const played=calendar.flatMap((games,d)=>games.length?[d]:[]);return cost+Math.max(0,played[0]-available[0])*5+Math.max(0,available.at(-1)-played.at(-1))*5};
+ let best=null;for(let i=0;i<24;i++){const c=attempt();if(!c)continue;const cost=score(c);if(!best||cost<best.cost)best={calendar:c,cost}}
+ return best?.calendar||null;
 }
 function validateCustomSeason(calendar,teams,rules,year){const {days}=seasonDateRange(year,rules);if(calendar.length!==days&&calendar.length!==legacySeasonDays(year,rules))return false;const counts=teams.map(()=>[0,0,0]);for(const round of calendar){const seen=new Set();for(const [a,b] of round){if(!teams[a]||!teams[b]||a===b||seen.has(a)||seen.has(b))return false;seen.add(a);seen.add(b);const c=customCategory(teams[a],teams[b]);counts[a][c]++;counts[b][c]++}}return counts.every(c=>c[0]===rules.divisionGames&&c[1]===rules.conferenceGames&&c.reduce((a,b)=>a+b,0)===rules.seasonGames)}
 function regenerateSeasonCalendar(){delete state.playoffConfig;if(state.scheduleFormat==='custom'){state.schedule=customSeasonSchedule(state.teams,state.year,leagueRules());state.customScheduleAlignment=managementAlignment(state.teams);state.meetings=leagueRules().seasonGames}else if(state.scheduleFormat!=='roundRobin'&&nbaAlignment(state.teams)){state.schedule=nbaSeasonSchedule(state.teams,state.year);state.scheduleFormat='nba82';state.meetings=82}else{state.schedule=schedule(state.teams.length>30?2:[1,2,4].includes(state.meetings)?state.meetings:2,state.teams.length);state.scheduleFormat='roundRobin'}if(state.scheduleFormat!=='custom'){delete state.customScheduleAlignment;Object.assign(leagueRules(),calendarSettingDefaults(state))}}
 function readCustomAlignment(raw,teams,bad){if(!Array.isArray(raw)||raw.length!==teams.length||raw.some((t,i)=>!t||t.id!==i||typeof t.conference!=='string'||!t.conference||t.conference.length>35||typeof t.divisionId!=='string'||t.divisionId.length>80))bad('invalid custom schedule alignment.');return raw.map(t=>({id:t.id,conference:t.conference,divisionId:t.divisionId}))}
 
 const beforeCustomCalendarNewSeason=newSeason;
-newSeason=function(){if(state.scheduleFormat==='custom'&&state.champion!==null&&draftComplete()&&state.freeAgency?.phase==='complete'){try{customSeasonSchedule(state.teams,state.year+1,leagueRules())}catch(e){toast('Next season: '+e.message);return}}return beforeCustomCalendarNewSeason()};
+function modernizeWnbaCalendarRules(rules){if(rules.historicalSource!=='wnba'||rules.seasonStart!=='05-01'||rules.seasonEnd!=='09-30')return false;Object.assign(rules,wnbaSeasonWindow(rules.seasonGames));if(rules.allStarRestLength===7)rules.allStarRestLength=5;return true}
+newSeason=function(){if(state.scheduleFormat==='custom'&&state.champion!==null&&draftComplete()&&state.freeAgency?.phase==='complete'){modernizeWnbaCalendarRules(leagueRules());try{customSeasonSchedule(state.teams,state.year+1,leagueRules())}catch(e){toast('Next season: '+e.message);return}}return beforeCustomCalendarNewSeason()};
