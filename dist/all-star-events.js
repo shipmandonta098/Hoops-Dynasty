@@ -6,7 +6,10 @@
 function allStarBreakShape(rules){const length=Math.max(5,rules.allStarRestLength||7),events=Math.max(1,Math.min(3,rules.allStarEventDays||3)),before=Math.max(1,Math.min(2,length-6));return {length,events,before,after:length-3-before}}
 function allStarTargetDay(days,rules){return Math.round(days*(rules.allStarSchedule==='custom'?rules.allStarPercent:65)/100)}
 // Sunday nearest the target among days 1..days whose full break fits; dateOf(day) gives the calendar date.
-function allStarWeekendSunday(days,rules,dateOf){const shape=allStarBreakShape(rules),target=allStarTargetDay(days,rules);let best=null;for(let d=1;d<=days;d++){if(dateOf(d).getUTCDay()!==0||d-2-shape.before<1||d+shape.after>days)continue;if(best===null||Math.abs(d-target)<Math.abs(best-target))best=d}return best}
+// Summer (WNBA-style) seasons hold the weekend on the third weekend of July: the Sunday after the third Saturday (16–22),
+// unless a custom All-Star point is set.
+function allStarJulySunday(days,rules,dateOf){if(rules.allStarSchedule==='custom')return null;const shape=allStarBreakShape(rules);for(let d=1;d<=days;d++){const date=dateOf(d);if(date.getUTCMonth()===6&&date.getUTCDay()===0&&date.getUTCDate()>=16&&date.getUTCDate()<=22&&d-2-shape.before>=1&&d+shape.after<=days)return d}return null}
+function allStarWeekendSunday(days,rules,dateOf){const july=allStarJulySunday(days,rules,dateOf);if(july)return july;const shape=allStarBreakShape(rules),target=allStarTargetDay(days,rules);let best=null;for(let d=1;d<=days;d++){if(dateOf(d).getUTCDay()!==0||d-2-shape.before<1||d+shape.after>days)continue;if(best===null||Math.abs(d-target)<Math.abs(best-target))best=d}return best}
 function allStarWindowAround(sunday,shape){const breakStart=sunday-2-shape.before;return {breakStart,breakEnd:sunday+shape.after,start:sunday-shape.events+1,end:sunday,deadline:Math.max(1,breakStart-1)}}
 function allStarWindow(days,rules,gender='male',year=null){
  if(Number.isInteger(year)){const start=seasonDateRange(year,rules).start.getTime(),sunday=allStarWeekendSunday(days,rules,d=>new Date(start+(d-1)*86400000));if(sunday)return allStarWindowAround(sunday,allStarBreakShape(rules))}

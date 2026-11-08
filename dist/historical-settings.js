@@ -98,6 +98,9 @@ function historicalPresetFromStart(league,year){
  notes.push('Rookie pick-by-pick scales, domestic/international eligibility distinctions, and special draft allocations remain simplified. Fields not covered by historical evidence are identified as model defaults or retained settings.');
  return {league,year,title:nba?`NBA ${year}–${String(year+1).slice(-2)}${year<1949?' · BAA era':''}`:`WNBA ${year}`,rules:r,cap,games,notes,sources};
 }
+// WNBA regular seasons: the modern 34+ game era runs mid-May to mid-September (2025: May 16 – Sep 11); the 28–32 game
+// seasons of 1997–2002 ran mid-June to late August (1997: Jun 21 – Aug 24). Playoffs follow the regular season.
+function wnbaSeasonWindow(games){return games>=34?{seasonStart:'05-16',seasonEnd:'09-11'}:{seasonStart:'06-10',seasonEnd:'08-24'}}
 function historicalSchedulePatch(p,teams,before){
  if(p.games===null)return {};
  // Keep the current matchup proportions; exact historical opponents require historical teams.
@@ -106,7 +109,7 @@ function historicalSchedulePatch(p,teams,before){
  const old=[before.divisionGames,before.conferenceGames,Math.max(0,before.seasonGames-before.divisionGames-before.conferenceGames)],weights=eligible.map(c=>old[c]||1),sum=weights.reduce((a,b)=>a+b,0),counts=[0,0,0];
  let remaining=p.games;eligible.forEach((c,i)=>{counts[c]=i===eligible.length-1?remaining:Math.min(remaining,2*Math.floor(p.games*weights[i]/sum/2));remaining-=counts[c]});
  const split=historicalFeasibleCounts(p.games,eligible,counts,teams);if(!split)throw Error(`No division/conference split of ${p.games} games can be scheduled for this league's alignment. Check conference and division sizes.`);counts.splice(0,3,...split);
- return {seasonGames:p.games,divisionGames:counts[0],conferenceGames:counts[1],seasonStart:p.league==='wnba'?'05-01':'10-01',seasonEnd:p.league==='wnba'?'09-30':'04-30'};
+ return {seasonGames:p.games,divisionGames:counts[0],conferenceGames:counts[1],...(p.league==='wnba'?{...wnbaSeasonWindow(p.games),allStarRestLength:5}:{seasonStart:'10-01',seasonEnd:'04-30'})};
 }
 // The proportional split can be impossible for the alignment (e.g. 16 vs 15 conferences leave no exact interconference
 // count). Fall back to the nearest split whose matchups can actually be paired.

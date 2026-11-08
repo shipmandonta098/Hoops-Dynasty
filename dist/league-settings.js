@@ -61,7 +61,7 @@ const LEAGUE_SETTING_GROUPS=[
  ['taxMultiplier','Luxury-tax multiplier',1,[0,3,.1],'0 disables future luxury-tax charges; payroll and spending limits still apply.','season'],
  ['operatingCosts','Operating-cost multiplier',1,[.5,2,.1],'Scales future operations ledger charges, not player payroll or past expenses.','season']]],
  ['All Star',[
- ['allStarRestLength','All-Star break length (days)',7,[7,8,1],'Protected league break, with the event schedule centered inside it. Applies to new calendars.','season'],
+ ['allStarRestLength','All-Star break length (days)',7,[5,8,1],'Protected league break, with the event schedule centered inside it. Applies to new calendars.','season'],
  ['allStarEventDays','Event schedule length (days)',3,[1,7,1],'Rising Stars opens the schedule, contests fall in the middle, and the All-Star Game closes it. Events run consecutively inside the protected league break.','season'],
  ['risingStarsEnabled','Rising Stars',true,[[true,'Enabled'],[false,'Disabled']],'An exhibition for first- and second-year players. Does not affect regular-season statistics.','season'],
  ['allStarSchedule','Game scheduling','auto',[['auto','Automatic · Existing season break'],['custom','Custom · Season progress below']],'Controls where the break falls in newly generated calendars. In-progress calendars are preserved.','season'],

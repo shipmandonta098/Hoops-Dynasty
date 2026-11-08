@@ -37,7 +37,7 @@ function openingNightCandidates(c){
 function openingNightPlace(c,selected){const blocked=d=>c.allStarCalendar&&d+1>=c.allStarCalendar.breakStart&&d+1<=c.allStarCalendar.breakEnd;if(blocked(0))return null;const random=scheduleRandom(c.year*997+selected.length);
  for(let attempt=0;attempt<30;attempt++){const cal=copy(c.schedule),queue=[];for(const g of selected){let found=false;for(const games of cal){const index=games.findIndex(p=>p[0]===g.home&&p[1]===g.away);if(index>=0){games.splice(index,1);found=true;break}}if(!found)return null}queue.push(...cal[0]);cal[0]=selected.map(g=>[g.home,g.away]);
  const occupied=Array.from({length:c.teams.length},(_,id)=>cal.map(games=>games.some(p=>p.includes(id))));
- const valid=id=>c.scheduleFormat==='nba82'?scheduleRestValid(occupied[id]):!occupied[id].some((v,d)=>v&&d>1&&occupied[id][d-1]&&occupied[id][d-2]);
+ const valid=id=>c.scheduleFormat==='nba82'?scheduleRestValid(occupied[id]):c.scheduleFormat==='custom'?customOccupancyValid(c,occupied[id]):!occupied[id].some((v,d)=>v&&d>1&&occupied[id][d-1]&&occupied[id][d-2]);
  for(const id of selected.flatMap(g=>[g.home,g.away]))if(!valid(id)){for(const d of [1,2]){const index=cal[d]?.findIndex(p=>p.includes(id));if(index>=0){const [pair]=cal[d].splice(index,1);pair.forEach(i=>occupied[i][d]=false);queue.push(pair)}if(valid(id))break}}
  const put=(pair,d)=>{cal[d].push(pair);pair.forEach(id=>occupied[id][d]=true)},take=(pair,d)=>{cal[d].splice(cal[d].indexOf(pair),1);pair.forEach(id=>occupied[id][d]=false)},slots=pair=>scheduleShuffle(Array.from({length:cal.length-1},(_,i)=>i+1),random).filter(d=>!blocked(d)&&!pair.some(id=>occupied[id][d]));
  const direct=pair=>{for(const d of slots(pair)){put(pair,d);if(pair.every(valid))return d;take(pair,d)}return -1};
@@ -120,7 +120,7 @@ function repairOpeningWeek(c,rules=c.leagueSettings){
  const occupied=Array.from({length:n},(_,id)=>cal.map(ps=>ps.some(p=>p.includes(id))));
  const first=id=>occupied[id].indexOf(true),b2b=ds=>ds.reduce((s,v,d)=>s+(v&&d>0&&ds[d-1]?1:0),0);
  const triples=ds=>ds.reduce((s,v,d)=>s+(v&&d>1&&ds[d-1]&&ds[d-2]?1:0),0);
- const legal=(id,ds)=>c.scheduleFormat==='nba82'?scheduleRestValid(ds):triples(ds)<=triples(occupied[id]);
+ const legal=(id,ds)=>c.scheduleFormat==='nba82'?scheduleRestValid(ds):c.scheduleFormat==='custom'?customOccupancyNoWorse(c,occupied[id],ds):triples(ds)<=triples(occupied[id]);
  // Move existing games only. Preserve the featured slate and the season finale.
  // Prefer debuts together, fewer back-to-backs and shorter date shifts.
  for(let pass=0;pass<n;pass++){
