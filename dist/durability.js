@@ -15,9 +15,9 @@ function durabilityInjuryChance(p,minutes,energy,conditioning=50){
  return Math.min(.15,1-Math.pow(1-interval,minutes/10))*INJURY_FREQUENCY_SCALE;
 }
 // Longer recoveries (moderate injuries, and ACL/Achilles tears that now carry over into the next season) and day-to-day
-// minors raised player-games missed per team; injuries happen 20% less often so the total stays near the earlier baseline
-// (5-season audit: 9.1 before; 10.6 at a 0.92 scale).
-const INJURY_FREQUENCY_SCALE=.80;
+// minors raise player-games missed per team; injuries happen 14% less often so the total stays near the earlier baseline.
+// 5-season audits (2 seeds, 30 teams): 9.1 before; 10.6 at a 0.92 scale, 7.4 at 0.80; 0.86 interpolates to the baseline.
+const INJURY_FREQUENCY_SCALE=.86;
 // [name, fewest days, most days, news phrase, typical days, weight within the severity]. Durations are rolled from a
 // PERT distribution (most near the typical value, tails toward both ends). Practice injuries use the same
 // table with severity skewed minor. Ranges follow NBA return-to-play data (torn ACL mean about 13 months).
@@ -56,7 +56,7 @@ function durabilityMedicalCheck(p,club,minutes,energy,result,training=false){
   const note=p.name+' ('+club.abbr+') is day-to-day with '+(injuryType(injury.name)?.phrase||injury.name)+' and plays through it; slightly limited and at higher reinjury risk for a few days.';if(practice)return say(note);if(result&&result.rotationEvents.length<120)result.rotationEvents.push('MEDICAL: '+note);return}
  const until=medicalStamp()+(training?0:1)+injury.days,severe=injury.severity==='Severe';
  p.medicalInfo={name:injury.name,severity:injury.severity,until,rehabUntil:until+reinjuryWindow(injury.severity,injury.name),...(severe?{restrictUntil:until+INJURY_RESTRICTION_DAYS}:{}),...(practice?{context:'practice'}:{})};delete p.injuredUntil;
- if(severe&&typeof majorInjuryEffects==='function')majorInjuryEffects(p,injury);
+ if(severe&&typeof queueMajorInjury==='function')queueMajorInjury(p,injury);
  if(practice)return say(practiceInjuryHeadline(p,club,injury));
  const report=p.name+' ('+club.abbr+'): '+injury.severity.toLowerCase()+' '+injury.name+' after '+(training?'offseason training':'the game')+'; expected recovery '+injury.days+' days.';
  say('MEDICAL REPORT: '+report);if(result&&result.rotationEvents.length<120)result.rotationEvents.push('MEDICAL: '+report);

@@ -21,6 +21,14 @@ function majorInjuryEffects(p,injury,random=Math.random){
  return p.majorInjury;
 }
 
+// In-game injuries are checked while the game runs on temporary copies of each player's ratings (rest, morale,
+// back-to-back and physical-build wrappers restore the originals afterwards), so permanent effects wait until the
+// outermost game wrapper has finished. Practice and offseason injuries apply at once.
+let injuryGameDepth=0;const injuryQueue=[];
+function queueMajorInjury(p,injury){if(injuryGameDepth>0)injuryQueue.push([p,injury]);else majorInjuryEffects(p,injury)}
+const injurySimBefore=simulateAttributeGame;
+simulateAttributeGame=function(...args){injuryGameDepth++;try{return injurySimBefore(...args)}finally{injuryGameDepth--;if(!injuryGameDepth)for(const [p,injury] of injuryQueue.splice(0))majorInjuryEffects(p,injury)}};
+
 // Playing through a minor injury: about 4% off effective ratings while hampered (day-to-day window).
 const injuryEffectiveBefore=effectiveAttribute;
 effectiveAttribute=function(p,...rest){const v=injuryEffectiveBefore(p,...rest);return injuryHampered(p)?v*.96:v};

@@ -21,15 +21,29 @@ def analyze(runs):
     sev = collections.Counter(i['severity'] for i in inj)
     # Ratings: immediate change at injury (ACL/Achilles) and change over that season vs same-age peers without one.
     major = [i for i in inj if i['name'] in ('torn ACL', 'torn Achilles')]
-    rating = []
+    # Season-long rating change for ACL/Achilles players: start to end of the season of the injury (incl. offseason
+    # development), vs uninjured players of the same age band. Uses the season index recorded with each injury.
+    rating, hit_keys = [], set()
     for r in runs:
-        injured_ids = {(i['id']) for i in r['injuries'] if i['name'] in ('torn ACL', 'torn Achilles')}
+        for i in r['injuries']:
+            if i['name'] not in ('torn ACL', 'torn Achilles') or 'season' not in i: continue
+            s = next((x for x in r['seasons'] if x['season'] == i['season']), None)
+            b, a = (s['ratingsBefore'].get(str(i['id'])), s['ratingsAfter'].get(str(i['id']))) if s else (None, None)
+            if b and a and b.get('spd') is not None and a.get('spd') is not None and (r['seed'], i['season'], i['id']) not in hit_keys:
+                hit_keys.add((r['seed'], i['season'], i['id'])); rating.append({'hit': True, 'age': b['age'], 'ovr': a['ovr'] - b['ovr'], 'spd': a['spd'] - b['spd'], 'jmp': a['jmp'] - b['jmp']})
         for s in r['seasons']:
             for pid, b in s['ratingsBefore'].items():
                 a = s['ratingsAfter'].get(pid)
-                if not a or b.get('spd') is None or a.get('spd') is None: continue
-                hit = any(i['id'] == int(pid) and i['name'] in ('torn ACL', 'torn Achilles') and i['year'] == r_year(r, s) for i in r['injuries'])
-                rating.append({'hit': hit, 'age': b['age'], 'ovr': a['ovr'] - b['ovr'], 'spd': a['spd'] - b['spd'], 'jmp': a['jmp'] - b['jmp']})
+                if not a or b.get('spd') is None or a.get('spd') is None or (r['seed'], s['season'], int(pid)) in hit_keys: continue
+                rating.append({'hit': False, 'age': b['age'], 'ovr': a['ovr'] - b['ovr'], 'spd': a['spd'] - b['spd'], 'jmp': a['jmp'] - b['jmp']})
+    # Immediate effects of ACL/Achilles (the saved major-injury records).
+    records = {}
+    for r in runs:
+        for s in r['seasons']:
+            for pid, x in s['ratingsAfter'].items():
+                m = x.get('majorInjury')
+                if m: records[(r['seed'], pid, m['year'], m['name'])] = m
+    recs = list(records.values())
     def group(f):
         xs = [x for x in rating if f(x)]
         return {'n': len(xs), 'ovr': st.mean(x['ovr'] for x in xs) if xs else None, 'spd': st.mean(x['spd'] for x in xs) if xs else None, 'jmp': st.mean(x['jmp'] for x in xs) if xs else None}
@@ -38,8 +52,9 @@ def analyze(runs):
             'severity%': {k: 100 * v / len(inj) for k, v in sev.items()}, 'dayToDay%': 100 * sum(i['dayToDay'] for i in inj) / len(inj),
             'gamesMissedPerTeam': {'mean': st.mean(per_team), 'min': min(per_team), 'max': max(per_team), 'median': pct(per_team, .5)},
             'types': types,
-            'majorImmediate': {'n': len(major), 'ovr': st.mean(i['after']['ovr'] - i['before']['ovr'] for i in major) if major else None,
-                               'spd': st.mean(i['after']['spd'] - i['before']['spd'] for i in major) if major else None, 'jmp': st.mean(i['after']['jmp'] - i['before']['jmp'] for i in major) if major else None,
+            'majorImmediate': {'n': len(major), 'ovr': st.mean(m['ovr'] for m in recs) if recs else 0.0,
+                               'spd': st.mean(m['spd'] for m in recs) if recs else 0.0, 'jmp': st.mean(m['jmp'] for m in recs) if recs else 0.0,
+                               'neverSame%': 100 * st.mean(m['neverSame'] for m in recs) if recs else None, 'recorded': len(recs),
                                'restrictDays': st.mean(i['restrict'] for i in major) if major else None, 'rehabWindow': st.mean(i['rehab'] for i in major) if major else None},
             'seasonRatingChange': {'acl/achilles': group(lambda x: x['hit']), 'peers 30+': group(lambda x: not x['hit'] and x['age'] >= 30), 'peers <30': group(lambda x: not x['hit'] and x['age'] < 30),
                                    'acl/achilles 30+': group(lambda x: x['hit'] and x['age'] >= 30)},
@@ -56,14 +71,14 @@ print('| Metric | Before | After |\n|---|---|---|')
 for k, g in [('Injuries per season (all contexts)', lambda d: d['injuriesPerSeason']), ('In-game injuries per season', lambda d: d['gameInjuriesPerSeason']), ('Day-to-day share of all injuries %', lambda d: d['dayToDay%']),
              ('Severe share %', lambda d: d['severity%'].get('Severe', 0)), ('Moderate share %', lambda d: d['severity%'].get('Moderate', 0)), ('Minor share %', lambda d: d['severity%'].get('Minor', 0)),
              ('Player-games missed per team per season (mean)', lambda d: d['gamesMissedPerTeam']['mean']), ('… median / min / max', lambda d: f"{d['gamesMissedPerTeam']['median']} / {d['gamesMissedPerTeam']['min']} / {d['gamesMissedPerTeam']['max']}"),
-             ('ACL/Achilles tears (total)', lambda d: d['majorImmediate']['n']), ('… immediate OVR / speed / jumping change', lambda d: ' / '.join(f(d['majorImmediate'][k]) for k in ('ovr', 'spd', 'jmp'))),
+             ('ACL/Achilles tears (total)', lambda d: d['majorImmediate']['n']), ('… permanent OVR / speed / jumping change (records)', lambda d: ' / '.join(f(d['majorImmediate'][k]) for k in ('ovr', 'spd', 'jmp'))), ('… never the same %', lambda d: d['majorImmediate']['neverSame%']),
              ('… reinjury window / minutes-restriction days', lambda d: f(d['majorImmediate']['rehabWindow']) + ' / ' + f(d['majorImmediate']['restrictDays'])), ('… retired the same offseason', lambda d: d['majorThenRetired'])]:
     print(f'| {k} | {f(g(B))} | {f(g(A))} |')
 for label, d in [('Before', B), ('After', A)]:
     print(f'\n## {label}: injuries by type (days missed excludes day-to-day)\n\n| Type | Severity | Per season | Day-to-day % | Days min / p25 / median / p75 / max | Mean | % at min |\n|---|---|---|---|---|---|---|')
     for name, t in d['types'].items():
         dd = t['days']; print(f"| {name} | {t['severity']} | {t['perSeason']:.1f} | {t['dayToDay%']:.0f} | " + (f"{dd['min']} / {dd['p25']} / {dd['median']} / {dd['p75']} / {dd['max']} | {dd['mean']:.1f} | {dd['atMin%']:.0f}" if dd else '— | — | —') + ' |')
-print('\n## Season rating change (start → end of the season, incl. offseason development)\n\n| Group | Before n / OVR / SPD / JMP | After n / OVR / SPD / JMP |\n|---|---|---|')
+print('\n## Season rating change for the season of the injury (start → end, incl. offseason development) vs uninjured peers\n\n| Group | Before n / OVR / SPD / JMP | After n / OVR / SPD / JMP |\n|---|---|---|')
 for k in A['seasonRatingChange']:
     g = lambda d: ' / '.join(f(d['seasonRatingChange'][k][x]) for x in ('n', 'ovr', 'spd', 'jmp'))
     print(f'| {k} | {g(B)} | {g(A)} |')
