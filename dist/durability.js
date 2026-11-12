@@ -14,9 +14,10 @@ function durabilityInjuryChance(p,minutes,energy,conditioning=50){
  const interval=(.0003+fragility*fragility*.012+(100-Math.max(0,Math.min(100,energy)))/100*.002)*(1-conditioning/200)*(recent?1.7:1);
  return Math.min(.15,1-Math.pow(1-interval,minutes/10))*INJURY_FREQUENCY_SCALE;
 }
-// Longer moderate recoveries and day-to-day minors change expected regular-season games missed per injury (about 2.10 →
-// 2.28); injuries happen about 8% less often so total games missed per team stays near the earlier baseline.
-const INJURY_FREQUENCY_SCALE=.92;
+// Longer recoveries (moderate injuries, and ACL/Achilles tears that now carry over into the next season) and day-to-day
+// minors raised player-games missed per team; injuries happen 20% less often so the total stays near the earlier baseline
+// (5-season audit: 9.1 before; 10.6 at a 0.92 scale).
+const INJURY_FREQUENCY_SCALE=.80;
 // [name, fewest days, most days, news phrase, typical days, weight within the severity]. Durations are rolled from a
 // PERT distribution (most near the typical value, tails toward both ends). Practice injuries use the same
 // table with severity skewed minor. Ranges follow NBA return-to-play data (torn ACL mean about 13 months).
