@@ -23,7 +23,7 @@ assert.equal(head('twisted ankle','Minor',2),'Sam Doe (TST) left practice with a
 assert.equal(head('back spasms','Minor',4),'Sam Doe (TST) left practice with back spasms (out 4 days).');
 assert.equal(head('hamstring strain','Moderate',15),'Sam Doe (TST) will miss 2–3 weeks after straining a hamstring in practice.');
 assert.equal(head('torn Achilles','Severe',320),'Sam Doe (TST) suffers a torn Achilles in practice and is expected to miss the season.');
-assert.match(head('torn meniscus','Severe',60),/torn meniscus in practice and is expected to miss about 2 months\.$/);
+assert.match(head('meniscus repair','Severe',60),/a meniscus repair in practice and is expected to miss about 2 months\.$/);
 for(const t of [head('twisted ankle','Minor',2),head('hamstring strain','Moderate',15),head('torn Achilles','Severe',320)])assert.equal(run(`newsCategory(${JSON.stringify(t)})`),'Injuries');
 // 4. Severity: practice skews minor (rare moderate, very rare severe); every injury type has a valid day range.
 const sev=run(`(()=>{const p=state.teams[1].roster[0],dur=p.attributes.dur;p.attributes.dur=40;const count=ctx=>{const c={Minor:0,Moderate:0,Severe:0};for(let i=0;i<20000;i++)c[durabilityInjuryDetails(p,50,Math.random(),ctx).severity]++;return c};const out={game:count(null),practice:count('practice')};p.attributes.dur=dur;return out})()`);
@@ -32,7 +32,7 @@ const typical=run(`(()=>{const p=state.teams[1].roster[0],dur=p.attributes.dur;p
 assert(typical.Minor/20000>.9&&typical.Severe/20000<.005,JSON.stringify(typical));
 const types=run(`Object.entries(INJURY_TYPES).flatMap(([s,list])=>list.map(t=>[s,...t]))`);assert.equal(new Set(types.map(t=>t[1])).size,types.length);
 for(const [s,name,min,max,phrase] of types)assert(Number.isInteger(min)&&min>=1&&max>=min&&phrase,name);
-for(const n of ['twisted ankle','back spasms','jammed finger','sore knee','hip contusion','hamstring strain','sprained wrist','bone bruise','groin strain','torn Achilles','torn ACL','fractured foot','torn meniscus'])assert(types.some(t=>t[1]===n),n);
+for(const n of ['twisted ankle','back spasms','jammed finger','sore knee','hip contusion','hamstring strain','sprained wrist','bone bruise','groin strain','torn Achilles','torn ACL','fractured foot','meniscus trim','meniscus repair','MCL sprain','MCL tear'])assert(types.some(t=>t[1]===n),n);
 // 5. League setting: disabling or zero frequency stops practice injuries (practices still happen).
 for(const rule of ['state.leagueSettings.practiceInjuries=false','state.leagueSettings.practiceInjuryFrequency=0']){
  const r=run(`(()=>{const saved={...state.leagueSettings};${rule};const before=state.teams.flatMap(t=>t.roster).filter(p=>p.medicalInfo?.context==='practice').length;Math.random=()=>0;let held;try{held=runPracticeDay(${day}+1)}finally{Math.random=realRandom;}const after=state.teams.flatMap(t=>t.roster).filter(p=>p.medicalInfo?.context==='practice').length;state.leagueSettings=saved;return {held:held.length,added:after-before}})()`);
