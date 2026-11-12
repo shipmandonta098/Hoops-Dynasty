@@ -85,3 +85,4 @@
 @media (pointer:coarse){.commissioner-player input,.commissioner-player select,.commissioner-player textarea,.commissioner-tools input,.commissioner-tools select{font-size:16px}}
 .commissioner-derived{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;margin:4px 0 10px}.commissioner-derived b{font-size:18px}.commissioner-derived small{flex-basis:100%;opacity:.75}
 .tendency-help{display:block;opacity:.75;font-size:12px;line-height:1.35;margin-top:2px}
+.leave-status{background:color-mix(in srgb,#6d8fb8 22%,transparent);color:inherit}

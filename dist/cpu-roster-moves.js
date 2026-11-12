@@ -40,13 +40,13 @@ function cpuFillRoster(t){
  const wnbaHardship=wnbaEnabled()&&!wnbaEmergencyEligibility(t),short=()=>t.roster.length<rosterMinimum()||cpuHealthy(t).length<(wnbaEnabled()?10:CPU_ROTATION_NEED);
  for(let guard=0;guard<3&&short();guard++){const mode=wnbaHardship&&cpuHealthy(t).length<10?'hardship':'fill';let signed=false;
   for(const p of cpuFreeAgentPool(t).slice(0,25)){const terms=cpuSignTerms(t,p,mode);if(!terms)continue;
-   if(t.roster.length>=rosterMaximum()&&mode!=='hardship'){const cut=cpuWaiveCandidate(t);if(!cut||injuryDays(cut)===0&&cut.ovr>=p.ovr||!cpuRelease(t,cut,{text:'to open a roster spot',allowBelowMinimum:true}))break}
+   if((typeof familyLeaveRosterCount==='function'?familyLeaveRosterCount(t):t.roster.length)>=rosterMaximum()&&mode!=='hardship'){const cut=cpuWaiveCandidate(t);if(!cut||injuryDays(cut)===0&&cut.ovr>=p.ovr||!cpuRelease(t,cut,{text:'to open a roster spot',allowBelowMinimum:true}))break}
    if(cpuSign(t,p,terms,mode==='hardship'?'as an emergency hardship replacement':'to fill an injury-depleted rotation')){signed=true;break}}
   if(!signed||mode==='hardship')break}}
 // Upgrade: a clearly better free agent the club can afford under the user's in-season rules.
 function cpuUpgradeRoster(t){if(state.day%CPU_UPGRADE_EVERY!==(t.id%CPU_UPGRADE_EVERY))return;const floor=t.roster.slice().sort((a,b)=>b.ovr-a.ovr)[Math.min(t.roster.length-1,CPU_ROTATION_NEED-1)]?.ovr??0;
  const p=cpuFreeAgentPool(t).find(p=>p.ovr>=floor+CPU_UPGRADE_MARGIN);if(!p)return;
- const cut=t.roster.length>=rosterMaximum()?cpuWaiveCandidate(t):null;if(t.roster.length>=rosterMaximum()&&(!cut||cut.ovr+CPU_UPGRADE_MARGIN>p.ovr))return;
+ const cut=(typeof familyLeaveRosterCount==='function'?familyLeaveRosterCount(t):t.roster.length)>=rosterMaximum()?cpuWaiveCandidate(t):null;if((typeof familyLeaveRosterCount==='function'?familyLeaveRosterCount(t):t.roster.length)>=rosterMaximum()&&(!cut||cut.ovr+CPU_UPGRADE_MARGIN>p.ovr))return;
  // Waiving keeps the salary on the books, so affordability is checked against payroll including that dead cap.
  const terms=cpuSignTerms(t,p,'upgrade');if(!terms)return;if(cut&&!cpuRelease(t,cut,{text:'to make room for '+p.name}))return;cpuSign(t,p,terms,'as a rotation upgrade')}
 function runCPURosterMoves(){if(state.champion!==null||state.day<1||state.day>=seasonLength()||(typeof faActive==='function'&&faActive())||!state.free.length)return;
