@@ -150,7 +150,7 @@ const settingsBeforeLeagueRules=settingsView;settingsView=function(){return sett
 const validateBeforeLeagueRules=validateCareerData;validateCareerData=function(raw){const settings=readLeagueSettings(raw?.leagueSettings,raw),out=validateBeforeLeagueRules(raw);out.leagueSettings=settings;if(raw.playoffConfig)out.playoffConfig=readPlayoffConfig(raw.playoffConfig,out);return out};
 const developmentBeforeRules=traitDevelopment;traitDevelopment=function(...args){return Math.round(developmentBeforeRules(...args)*leagueRules().developmentRate)};
 const injuryChanceBeforeRules=durabilityInjuryChance;durabilityInjuryChance=function(...args){return Math.min(1,injuryChanceBeforeRules(...args)*(leagueRules().injuriesEnabled?leagueRules().injuryFrequency:0))};
-const injuryDetailsBeforeRules=durabilityInjuryDetails;durabilityInjuryDetails=function(...args){const details=injuryDetailsBeforeRules(...args);return {...details,days:Math.max(1,Math.round(details.days*leagueRules().injuryDuration))}};
+const injuryDetailsBeforeRules=durabilityInjuryDetails;durabilityInjuryDetails=function(...args){const details=injuryDetailsBeforeRules(...args);return {...details,days:details.dayToDay?0:Math.max(1,Math.round(details.days*leagueRules().injuryDuration))}};
 const taxBeforeRules=financeTax;financeTax=function(...args){return taxBeforeRules(...args)*leagueRules().taxMultiplier};
 const postBeforeRules=financePost;financePost=function(f,key,amount,cost=false){return postBeforeRules(f,key,amount*(cost&&key==='operations'?leagueRules().operatingCosts:1),cost)};
 const groupsBeforeRules=conferencePlayoffGroups;conferencePlayoffGroups=function(){return leagueRules().playoffFormat==='top4'?null:groupsBeforeRules()};

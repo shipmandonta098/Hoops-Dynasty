@@ -132,7 +132,7 @@ function refreshGameRotation(club,runtime,minute,rows,events,margin=0){
  const quarter=gamePeriod(minute)+1,remaining=gamePeriodRemaining(minute);
  const trouble=p=>!clutch&&remaining>2&&(rows.get(p.id).pf||0)>=quarter+1;
  const starters=new Set(courtPositions().map(pos=>runtime.plan.depth[pos][0]));
- const forced=[...runtime.court].some(id=>(restManagedPlayer(club.roster.find(p=>p.id===id),club)&&runtime.workloadCaps&&(rows.get(id).mp||0)>=runtime.workloadCaps.get(id))||!rotationEligible(club.roster.find(p=>p.id===id),runtime,rows,minute));
+ const forced=[...runtime.court].some(id=>((restManagedPlayer(club.roster.find(p=>p.id===id),club)||injuryMinutesCap(club.roster.find(p=>p.id===id))<gameMinutes())&&runtime.workloadCaps&&(rows.get(id).mp||0)>=runtime.workloadCaps.get(id))||!rotationEligible(club.roster.find(p=>p.id===id),runtime,rows,minute));
  const boundary=minute!==runtime.lastCheck&&(gameBoundary(minute));
  const contextChanged=clutch!==runtime.clutch||blowout!==runtime.blowout||intent.restLead!==runtime.restLead||intent.pursue!==runtime.pursue;
  if(runtime.court.size===leagueRules().courtPlayers&&!forced&&!boundary&&!contextChanged&&minute-runtime.lastCheck<2&&!(runtime.deadBall&&minute-runtime.lastCheck>=1))return;
@@ -140,7 +140,7 @@ function refreshGameRotation(club,runtime,minute,rows,events,margin=0){
  if(blowout&&!runtime.blowoutLogged&&events.length<120){events.push(club.abbr+': late blowout; prioritizing bench minutes to preserve legs.');runtime.blowoutLogged=true}
  const planned=runtime.timeline[Math.min(gameMinutes()-1,Math.floor(minute))]||[];
  let eligible=club.roster.filter(p=>rotationEligible(p,runtime,rows,minute));
- const underCap=eligible.filter(p=>(!restManagedPlayer(p,club)&&(clutch||minute>=gameMinutes()))||!runtime.workloadCaps||(rows.get(p.id).mp||0)<runtime.workloadCaps.get(p.id));
+ const underCap=eligible.filter(p=>(!restManagedPlayer(p,club)&&injuryMinutesCap(p)>=gameMinutes()&&(clutch||minute>=gameMinutes()))||!runtime.workloadCaps||(rows.get(p.id).mp||0)<runtime.workloadCaps.get(p.id));
  if(underCap.length>=leagueRules().courtPlayers)eligible=underCap;
  // Foul holds may be relaxed only when needed to field five; injuries and six fouls are never ignored.
  if(eligible.length<leagueRules().courtPlayers)eligible=club.roster.filter(p=>!injuryDays(p)&&!rows.get(p.id).ejected&&(rows.get(p.id).pf||0)<leagueRules().foulLimit);

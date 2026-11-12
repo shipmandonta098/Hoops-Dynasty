@@ -6,8 +6,8 @@ function workloadLoad(club){const players=club.roster.filter(p=>!injuryDays(p)),
 function workloadShootingPenalty(club){return teamBackToBack(club)?Math.min(.05,.02+workloadLoad(club)*.10):0}
 function workloadTargets(club,plan){
  const available=club.roster.filter(p=>!injuryDays(p)),back=teamBackToBack(club),caps=new Map();
- for(const p of club.roster){const heavy=back&&p.workload?.stamp===medicalStamp()-1&&p.workload.minutes>=28,energy=playerEnergy(p,club);caps.set(p.id,injuryDays(p)?0:restManagedPlayer(p,club)?Math.min(18,gameMinutes()):b2bManagedStar(p,club)?Math.min(26,gameMinutes()):energy<70?Math.min(28,gameMinutes()):heavy?Math.min(32,gameMinutes()):gameMinutes())}
- if(!back&&!available.some(p=>b2bPlayer(p).minutes>0)&&!available.some(p=>playerEnergy(p,club)<70))return null;
+ for(const p of club.roster){const heavy=back&&p.workload?.stamp===medicalStamp()-1&&p.workload.minutes>=28,energy=playerEnergy(p,club);caps.set(p.id,injuryDays(p)?0:Math.min(injuryMinutesCap(p),restManagedPlayer(p,club)?Math.min(18,gameMinutes()):b2bManagedStar(p,club)?Math.min(26,gameMinutes()):energy<70?Math.min(28,gameMinutes()):heavy?Math.min(32,gameMinutes()):gameMinutes()))}
+ if(!back&&!available.some(p=>b2bPlayer(p).minutes>0)&&!available.some(p=>playerEnergy(p,club)<70)&&!available.some(p=>injuryMinutesCap(p)<gameMinutes()))return null;
  const targets=Object.fromEntries(club.roster.map(p=>[p.id,Math.min(caps.get(p.id),plan.targets[p.id]||0)]));let remaining=gamePlayerMinutes()-Object.values(targets).reduce((a,b)=>a+b,0);
  while(remaining>0){const candidates=available.filter(p=>targets[p.id]<caps.get(p.id)).sort((a,b)=>{const score=p=>playerEnergy(p,club)-targets[p.id]*2+(plan.roles[p.id]==='Starter'?0:15);return score(b)-score(a)||b.ovr-a.ovr});if(!candidates.length)break;targets[candidates[0].id]++;remaining--}
  // A short healthy roster may have to exceed the preferred cap to field five players.

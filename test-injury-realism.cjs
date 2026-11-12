@@ -1,0 +1,49 @@
+// Injury realism: skewed durations inside each type's range (no pile-up on the minimum), updated ranges, day-to-day
+// minors, severity-scaled reinjury windows, a minutes restriction after severe injuries, permanent athletic loss and a
+// "never the same" chance after torn ACL/Achilles (bigger for older players), higher retirement odds, save round trip.
+const assert=require('node:assert/strict'),{loadLeague}=require('./dev/load-league.cjs');
+const l=loadLeague({seed:83,strictDOM:false});l.setRandomSeed(83);const run=c=>{const v=l.run(c);return v&&typeof v==='object'?JSON.parse(JSON.stringify(v)):v};
+l.run(`render=()=>{};toast=()=>{};say=()=>{};var d=makeDraft();d.gmName='I';state=validateCareerData(buildSetupCareer(d));var club=state.teams[2],ps=club.roster;`);
+// 1. Ranges.
+const t=n=>run(`injuryType(${JSON.stringify(n)})`);
+assert.deepEqual([t('torn ACL').min,t('torn ACL').max],[270,420]);assert.deepEqual([t('torn Achilles').min,t('torn Achilles').max],[300,420]);
+assert.deepEqual([t('meniscus trim').min,t('meniscus trim').max,t('meniscus trim').severity],[28,49,'Moderate']);assert.deepEqual([t('meniscus repair').min,t('meniscus repair').max,t('meniscus repair').severity],[120,180,'Severe']);
+assert.deepEqual([t('MCL sprain').severity,t('MCL sprain').min,t('MCL sprain').max],['Moderate',14,42]);assert.deepEqual([t('MCL tear').severity,t('MCL tear').min,t('MCL tear').max],['Severe',60,120]);
+assert.deepEqual([t('high ankle sprain').min,t('high ankle sprain').max],[21,42]);assert.deepEqual([t('calf strain').min,t('calf strain').max],[14,28]);
+assert.equal(t('torn meniscus'),null);assert.equal(t('knee ligament injury'),null);
+// 2. Durations: ACL mostly near ~12–13 months, a long tail, no pile-up at 270.
+const dist=run(`(()=>{const p={...ps[0],attributes:{...ps[0].attributes,dur:70}},out={ACL:[],Achilles:[]};for(let i=0;i<20000;i++){const x=durabilityInjuryDetails(p,60,0,null);if(x.name==='torn ACL')out.ACL.push(x.days);if(x.name==='torn Achilles')out.Achilles.push(x.days)}const s=a=>{a.sort((x,y)=>x-y);const at=q=>a[Math.floor(q*(a.length-1))];return {n:a.length,mean:a.reduce((x,y)=>x+y,0)/a.length,p10:at(.1),p50:at(.5),p90:at(.9),atMin:a.filter(v=>v===a[0]).length/a.length,max:a.at(-1)}};return {ACL:s(out.ACL),Achilles:s(out.Achilles)}})()`);
+assert(dist.ACL.mean>360&&dist.ACL.mean<395,'ACL mean ~12–13 months: '+dist.ACL.mean);assert(dist.ACL.atMin<.01,'no pile-up at the minimum');assert(dist.ACL.p50-dist.ACL.p10>20&&dist.ACL.p50>=365,'peaked near 12–13 months with a tail');
+assert(dist.Achilles.mean>320&&dist.Achilles.mean<380,'Achilles mean: '+dist.Achilles.mean);
+// Modifier is small: best vs worst conditioning/durability differ by at most ~30%.
+assert(run(`(()=>{const p={...ps[0],attributes:{...ps[0].attributes,dur:99}},q={...ps[0],attributes:{...ps[0].attributes,dur:20}};return injuryDurationModifier(q,1)/injuryDurationModifier(p,99)})()`)<1.31);
+// 3. Day-to-day: about half of minors, more for ankle sprains / jammed fingers; 0 days.
+const dtd=run(`(()=>{let minor=0,dtd=0,ankle=[0,0];for(let i=0;i<20000;i++){const x=durabilityInjuryDetails(ps[1],60,.99,null);if(x.severity!=='Minor')continue;minor++;if(x.dayToDay){dtd++;if(x.days!==0)return 'bad'}if(['ankle sprain','jammed finger'].includes(x.name)){ankle[0]++;if(x.dayToDay)ankle[1]++}}return {share:dtd/minor,ankle:ankle[1]/ankle[0]}})()`);
+assert(dtd.share>.4&&dtd.share<.6,'about half of minors day-to-day: '+dtd.share);assert(dtd.ankle>.6);
+// 4. Medical check: day-to-day keeps the player available, hampered, with a 3–5 day window; severe gets a 30–60 day window and a restriction.
+l.run(`var forced=(p,roll)=>{const r=Math.random;let i=0;Math.random=()=>i++===0?0:roll;try{durabilityMedicalCheck(p,club,30,80,{rotationEvents:[]})}finally{Math.random=r}};var p0=ps[3];`);
+l.run(`(()=>{const r=durabilityInjuryDetails;durabilityInjuryDetails=()=>({name:'ankle sprain',severity:'Minor',days:0,dayToDay:true});try{durabilityMedicalCheck(p0,club,30,80,{rotationEvents:[]},false)}finally{durabilityInjuryDetails=r}})()`);
+// (the check rolls its own chance; force it by raising the injury chance)
+l.run(`(()=>{const c=durabilityInjuryChance;durabilityInjuryChance=()=>1;const r=durabilityInjuryDetails;durabilityInjuryDetails=()=>({name:'ankle sprain',severity:'Minor',days:0,dayToDay:true});try{delete p0.medicalInfo;durabilityMedicalCheck(p0,club,30,80,{rotationEvents:[]},false)}finally{durabilityInjuryChance=c;durabilityInjuryDetails=r}})()`);
+const m0=run('p0.medicalInfo');assert(m0.dayToDay&&run('injuryDays(p0)')===0&&run('injuryHampered(p0)'),'day-to-day: plays, hampered');const w0=m0.rehabUntil-m0.until;assert(w0>=3&&w0<=5);assert.match(run('durabilityHealthText(p0)'),/Day-to-day/);
+assert(Math.abs(run(`(()=>{const a=effectiveAttribute(p0,'fg',0,true),h=p0.medicalInfo.hamperedUntil;delete p0.medicalInfo.hamperedUntil;const b=effectiveAttribute(p0,'fg',0,true);p0.medicalInfo.hamperedUntil=h;return a/b})()`)-.96)<.001,'4% hit while hampered');
+for(const [name,sev,lo,hi] of [['hamstring strain','Moderate',14,14],['torn ACL','Severe',60,60],['fractured foot','Severe',30,30]]){const m=run(`(()=>{const p=ps[5];delete p.medicalInfo;const c=durabilityInjuryChance;durabilityInjuryChance=()=>1;const r=durabilityInjuryDetails;durabilityInjuryDetails=()=>({name:${JSON.stringify(name)},severity:'${sev}',days:40});try{durabilityMedicalCheck(p,club,30,80,{rotationEvents:[]},false)}finally{durabilityInjuryChance=c;durabilityInjuryDetails=r}return p.medicalInfo})()`);const w=m.rehabUntil-m.until;assert(w>=lo&&w<=hi,name+' window '+w);assert.equal(!!m.restrictUntil,sev==='Severe')}
+// 5. Minutes restriction after a severe return: ~18 then ~24 minutes, applied through the workload caps.
+l.run(`var pr=ps[0];pr.medicalInfo={name:'fractured foot',severity:'Severe',until:medicalStamp()-2,rehabUntil:medicalStamp()+28,restrictUntil:medicalStamp()+19}`);
+assert.equal(run('injuryMinutesCap(pr)'),18);l.run('pr.medicalInfo.until=medicalStamp()-12');assert.equal(run('injuryMinutesCap(pr)'),24);l.run('pr.medicalInfo.restrictUntil=medicalStamp()');assert.equal(run('injuryMinutesCap(pr)'),Infinity);
+l.run(`pr.medicalInfo={name:'fractured foot',severity:'Severe',until:medicalStamp()-2,rehabUntil:medicalStamp()+28,restrictUntil:medicalStamp()+19}`);
+const capped=run(`(()=>{const plan={targets:Object.fromEntries(club.roster.map((p,i)=>[p.id,i<5?34:i<9?10:0])),roles:Object.fromEntries(club.roster.map((p,i)=>[p.id,i<5?'Starter':'Bench']))};const caps=workloadTargets(club,plan);return {cap:caps?.get(pr.id),target:plan.targets[pr.id],total:Object.values(plan.targets).reduce((a,b)=>a+b,0)}})()`);
+assert.equal(capped.cap,18);assert(capped.target<=18);assert.equal(capped.total,run('gamePlayerMinutes()'),'team minutes still full');
+// 6. ACL/Achilles long-term effects: athletic loss bigger for older players, overall follows, record kept.
+const eff=run(`(()=>{const out={young:[],old:[]};for(let i=0;i<400;i++){for(const [k,age] of [['young',23],['old',33]]){const p=JSON.parse(JSON.stringify(ps[6]));p.id=900000+i;p.age=age;p.ovr=80;p.pot=85;p.attributes={...p.attributes,spd:80,jmp:80};const before=p.ovr;const r=majorInjuryEffects(p,{name:'torn Achilles',days:340});out[k].push({spd:r.spd,jmp:r.jmp,ovr:p.ovr-before,never:r.neverSame,pot:p.pot>=p.ovr})}}const avg=(a,f)=>a.reduce((n,x)=>n+f(x),0)/a.length;return Object.fromEntries(Object.entries(out).map(([k,a])=>[k,{spd:avg(a,x=>x.spd),jmp:avg(a,x=>x.jmp),ovr:avg(a,x=>x.ovr),never:avg(a,x=>x.never?1:0),potOk:a.every(x=>x.pot)}]))})()`);
+assert(eff.old.spd<eff.young.spd-1&&eff.old.jmp<eff.young.jmp-1,'older players lose more athleticism');assert(eff.young.spd<0&&eff.young.jmp<0);assert(eff.old.never>eff.young.never+.1,'never-the-same more likely when older');assert(eff.old.ovr<eff.young.ovr);assert(eff.young.potOk&&eff.old.potOk);
+assert.equal(run(`majorInjuryEffects({...ps[7]},{name:'fractured foot',days:80})`),null,'only ACL/Achilles');
+// 7. Retirement: older players are more likely to retire within a season of a major injury.
+const ret=run(`(()=>{const p=JSON.parse(JSON.stringify(ps[8]));p.age=33;const base=lifecycleRetireChance(p,{gp:60,mp:1500});p.majorInjury={name:'torn ACL',year:state.year,age:33,days:380,spd:-5,jmp:-6,ovr:-2,neverSame:false};const hurt=lifecycleRetireChance(p,{gp:60,mp:1500});p.age=26;delete p.majorInjury;const young=lifecycleRetireChance(p,{gp:60,mp:1500});return {base,hurt,young}})()`);
+assert(ret.hurt>ret.base*1.4,'retirement odds up: '+JSON.stringify(ret));assert.equal(ret.young,0);
+// 8. Saves keep the new fields; old records (14-day window, retired type names) still load.
+l.run(`ps[9].majorInjury={name:'torn ACL',year:state.year,age:27,days:380,spd:-3,jmp:-4,ovr:-1,neverSame:false};ps[10].medicalInfo={name:'torn meniscus',severity:'Severe',until:medicalStamp()+30,rehabUntil:medicalStamp()+44}`);
+const back=run(`(()=>{const s=validateCareerData(JSON.parse(JSON.stringify(state))),r=s.teams[2].roster;return {major:r.find(p=>p.id===ps[9].id).majorInjury,dtd:r.find(p=>p.id===p0.id).medicalInfo,old:r.find(p=>p.id===ps[10].id).medicalInfo.name,restrict:r.find(p=>p.id===pr.id).medicalInfo.restrictUntil}})()`);
+assert.equal(back.major.name,'torn ACL');assert(back.dtd.dayToDay);assert.equal(back.old,'torn meniscus');assert(Number.isInteger(back.restrict));
+assert.throws(()=>run(`validateCareerData({...JSON.parse(JSON.stringify(state)),teams:JSON.parse(JSON.stringify(state.teams)).map((t,i)=>i===2?{...t,roster:t.roster.map((p,j)=>j===0?{...p,majorInjury:{name:'sore knee',year:1,age:20,days:1,spd:0,jmp:0,ovr:0,neverSame:false}}:p)}:t)})`),/major injury/);
+console.log('Injury realism: ranges, skewed durations',JSON.stringify(dist),'day-to-day',JSON.stringify(dtd),'windows, restriction, long-term effects',JSON.stringify(eff),'retirement',JSON.stringify(ret),'saves passed.');
