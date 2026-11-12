@@ -69,7 +69,7 @@ function inSeasonOfferError(p,salary,years){if(wnbaEnabled())return wnbaInSeason
  if(faActive())return 'The offseason market has opened. Reopen negotiations to submit a bidding-round offer.';
  if(!p)return 'Player is no longer available.';
  if(!Number.isFinite(salary)||salary<leagueRules().minContract||salary>leagueRules().maxContract||!Number.isInteger(years)||years<leagueRules().minContractYears||years>leagueRules().maxContractYears)return 'Enter a salary and contract length within the league limits.';
- if(team().roster.length>=rosterMaximum())return 'Your roster is full. Release a player first.';
+ if((typeof familyLeaveRosterCount==='function'?familyLeaveRosterCount(team()):team().roster.length)>=rosterMaximum())return 'Your roster is full. Release a player first.';
  if(payroll()+salary>financeCapRoomLimit()+.001)return 'Not enough salary-cap room for this offer.';
  if(salary+.001<freeAgentQuote(p))return p.name+' declined. Asking salary is '+money(freeAgentQuote(p))+' per year.';
  return '';
