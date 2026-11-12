@@ -20,15 +20,17 @@ function allStarWindow(days,rules,gender='male',year=null){
 // Insert the break into a calendar that has none: rest starts on the Thursday (Wednesday for an eight-day break) whose
 // weekend Sunday is nearest the target. startMs is the date of the calendar's first day. 82-game calendars must keep
 // every team within the rest limits; insertion alone never breaks them.
+// At least three game days come before the break, so every team debuts first: short round-robin calendars whose
+// first Thursday is Day 2 or 3 otherwise failed Opening Night. With no such Thursday the caller's fallback places it.
 function allStarPlaceBreak(career,rules,startMs,base=career.schedule){
  const shape=allStarBreakShape(rules),weekday=row=>new Date(startMs+row*86400000).getUTCDay(),firstWeekday=(5-shape.before+7)%7,target=allStarTargetDay(base.length,rules)-2-shape.before;
  const restValid=schedule=>career.scheduleFormat!=='nba82'||career.teams.every((_,id)=>scheduleRestValid(schedule.map(r=>r.some(p=>p.includes(id)))));
- const rows=[];for(let p=1;p<base.length;p++)if(weekday(p)===firstWeekday)rows.push(p);rows.sort((a,b)=>Math.abs(a-target)-Math.abs(b-target)||a-b);
+ const rows=[];for(let p=Math.min(3,base.length-1);p<base.length;p++)if(weekday(p)===firstWeekday)rows.push(p);rows.sort((a,b)=>Math.abs(a-target)-Math.abs(b-target)||a-b);
  for(const p of rows){const schedule=[...base.slice(0,p),...Array.from({length:shape.length},()=>[]),...base.slice(p)];if(!restValid(schedule))continue;career.schedule=schedule;return allStarWindowAround(p+shape.before+3,shape)}
  return null;
 }
-function allStarCalendarStart(career,rules){return career.scheduleFormat==='custom'?seasonDateRange(career.year,rules).start.getTime():Date.UTC(career.year-1,9,28)}
-// Standard (82-game and round-robin) calendars open October 28 of the year before the season year. The 82-game generator
+function allStarCalendarStart(career,rules){return seasonDateRange(career.year,rules).start.getTime()}
+// Standard (82-game and round-robin) calendars open on the season start date (seasonDateRange). The 82-game generator
 // leaves Friday–Sunday empty near 65%; fold it into the break when every team's rest limits still hold.
 function standardAllStarWindow(career,rules){
  const gap=allStarBreakIndex(career.year),hasGap=career.scheduleFormat==='nba82'&&career.schedule.slice(gap,gap+3).length===3&&career.schedule.slice(gap,gap+3).every(r=>!r.length),start=allStarCalendarStart(career,rules);

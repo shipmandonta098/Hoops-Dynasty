@@ -7,11 +7,16 @@ function seasonDateRange(year,rules){const cross=rules.seasonEnd<rules.seasonSta
 // Day count under the earlier start-year convention: seasons saved before the switch keep their stored calendar length,
 // which can differ by one day when only one of the two spans contains February 29.
 function legacySeasonDays(year,rules){return seasonDateRange(rules.seasonEnd<rules.seasonStart?year+1:year,rules).days}
-function seasonCrossesYear(rules=leagueRules(),format=state.scheduleFormat){return format!=='custom'||rules.seasonEnd<rules.seasonStart}
+// A season crosses New Year only when its dates do (end month/day before start month/day), whatever the schedule
+// format: an October–April league is '2025–26', a May–September league is '2026'. Matches seasonDateRange.
+function seasonCrossesYear(rules=leagueRules()){return (rules?.seasonEnd||'04-19')<(rules?.seasonStart||'10-28')}
+// End month/day for a calendar of the given length opening on start ('MM-DD'); the start falls in the season's first
+// calendar year (only matters for February 29).
+function calendarEndFor(start,days,year=2026){const [m,d]=start.split('-').map(Number),first=m>=7?year-1:year;return new Date(Date.UTC(first,m-1,d+Math.max(0,days-1))).toISOString().slice(5,10)}
 function seasonStartYear(year=state.year){return seasonCrossesYear()?year-1:year}
 // Display label: '2025–26' for cross-year seasons, '2024' for single-year seasons.
 function seasonLabel(year=state.year){return seasonCrossesYear()?(year-1)+'–'+String(year).slice(-2):String(year)}
-function calendarSettingDefaults(career){const t=career?.teams?.[0],games=career?.schedule?.flat().filter(p=>p.includes(0))||[],counts=[0,0];for(const pair of games){const o=career.teams[pair.find(id=>id!==0)];if(t.conference===o.conference)counts[customCategory(t,o)]++}const end=new Date(Date.UTC(career?.year||2026,9,28+Math.max(0,(career?.schedule?.length||174)-1)));return {seasonGames:games.length||82,divisionGames:t?counts[0]:16,conferenceGames:t?counts[1]:36,seasonStart:'10-28',seasonEnd:end.toISOString().slice(5,10)}}
+function calendarSettingDefaults(career){const t=career?.teams?.[0],games=career?.schedule?.flat().filter(p=>p.includes(0))||[],counts=[0,0];for(const pair of games){const o=career.teams[pair.find(id=>id!==0)];if(t.conference===o.conference)counts[customCategory(t,o)]++}const chosen=career?.leagueSettings?.seasonStart,start=typeof chosen==='string'&&seasonMonthDay(chosen)?chosen:'10-28';return {seasonGames:games.length||82,divisionGames:t?counts[0]:16,conferenceGames:t?counts[1]:36,seasonStart:start,seasonEnd:calendarEndFor(start,career?.schedule?.length||174,career?.year||2026)}}
 function customCategory(a,b){return a.conference!==b.conference?2:a.divisionId&&a.divisionId===b.divisionId?0:1}
 // Edmonds' augmenting-path matching, including odd-cycle (blossom) contraction.
 // Used by the degree-factor reduction below; this is not a randomized retry test.

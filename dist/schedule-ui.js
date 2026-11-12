@@ -1,6 +1,8 @@
 /* Calendar is a presentation of existing league days; simulation order is unchanged. */
 let scheduleUI=null;
-function scheduleDate(day){return new Date((state.scheduleFormat==='custom'?seasonDateRange(state.year,leagueRules()).start.getTime():Date.UTC(state.year-1,9,28))+(day-1)*86400000)}
+// Displayed dates follow the season's own dates for every schedule format (an October–April league opens in the
+// previous calendar year, a May–September league in the season year).
+function scheduleDate(day){return new Date(seasonDateRange(state.year,leagueRules()).start.getTime()+(day-1)*86400000)}
 // Internal day stamps (injuries, dissatisfaction, cooldowns) keep the original epoch so saved stamps stay valid;
 // they are only ever compared with each other, never shown as dates.
 function calendarStampDate(day){return new Date((state.scheduleFormat==='custom'?new Date(`${state.year}-${leagueRules().seasonStart}T00:00:00Z`).getTime():Date.UTC(state.year,9,28))+(day-1)*86400000)}
