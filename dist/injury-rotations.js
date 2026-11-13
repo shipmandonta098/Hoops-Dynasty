@@ -33,8 +33,9 @@ const planBeforeInjuryAvailability=rotationFromClub;
 rotationFromClub=function(club){
  const plan=planBeforeInjuryAvailability(club);if(!club.roster.some(p=>injuryDays(p)))return plan;
  const starters=injuryStarters(club,plan.depth),healthy=club.roster.filter(p=>!injuryDays(p));
- for(const pos of ROTATION_POSITIONS){const first=starters[pos]??null;const backups=healthy.filter(p=>p.id!==first).sort((a,b)=>positionRank(b,pos)-positionRank(a,pos)||b.ovr-a.ovr);plan.depth[pos]=[first,backups[0]?.id??null,backups[1]?.id??null]}
- const minutes=injuryMinuteAllocation(club);for(const p of club.roster){plan.targets[p.id]=minutes.get(p.id)||0;plan.roles[p.id]=injuryDays(p)?'Reserve':Object.values(starters).includes(p.id)?'Starter':plan.roles[p.id]==='Starter'?'Role Player':plan.roles[p.id]}
+ const minutes=injuryMinuteAllocation(club),backups=rotationBackups(starters,healthy,minutes);
+ for(const pos of ROTATION_POSITIONS){const first=starters[pos]??null,line=backups[pos]||[null,null];plan.depth[pos]=[first,line[0],line[1]]}
+for(const p of club.roster){plan.targets[p.id]=minutes.get(p.id)||0;plan.roles[p.id]=injuryDays(p)?'Reserve':Object.values(starters).includes(p.id)?'Starter':plan.roles[p.id]==='Starter'?'Role Player':plan.roles[p.id]}
  return plan;
 };
 const promoteBeforeInjuryAvailability=promote;
