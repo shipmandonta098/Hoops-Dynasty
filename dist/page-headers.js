@@ -22,6 +22,7 @@ const PAGE_HEADERS={
  Draft:{subtitle:'NEW TALENT. A BRIGHTER TOMORROW.',image:'dashboard-skyline.png',variant:'draft',treatment:'draft',showYear:true},
  Expansion:{subtitle:'A NEW CITY. A NEW CHAPTER.',image:'dashboard-skyline.png',position:'65% center',mobilePosition:'70% center',treatment:'gold'},
  'Franchise history':{image:'header-franchise-history.webp',position:'center 35%',mobilePosition:'65% center',subtitle:'EVERY SEASON LEAVES A MARK.',treatment:'archive'},
+ 'Offseason grades':{subtitle:'HOW EVERY FRONT OFFICE SPENT ITS SUMMER.',image:'playoff-trophy.webp',position:'center 65%',mobilePosition:'65% center',treatment:'archive'},
  'League history':{subtitle:'CHAMPIONS, MILESTONES AND THE YEARS BETWEEN.',image:'playoff-trophy.webp',position:'center 65%',mobilePosition:'65% center',treatment:'archive'},
  'Hall of Fame':{subtitle:'WHERE LEGACIES LIVE.',image:'playoff-trophy.webp',position:'center 30%',mobilePosition:'65% center',treatment:'gold'},
  Settings:{image:'header-settings.webp',position:'center',mobilePosition:'65% center',subtitle:'MAKE THE LEAGUE YOUR OWN.',variant:'minimal',treatment:'minimal'},
