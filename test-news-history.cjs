@@ -12,7 +12,7 @@ const settle=async(cond,ms=20000)=>{const end=Date.now()+ms;while(!l.run(cond)){
 const run=c=>{const v=l.run(c);return v&&typeof v==='object'?JSON.parse(JSON.stringify(v)):v};
 // An 8-team, 28-game league keeps the full season fast.
 l.run(`render=()=>{};toast=()=>{};var d=makeDraft();d.gmName='News';d.teams=d.teams.slice(0,8);d.meetings='custom';d.conferences=[{id:'league',name:'League'}];d.divisions=[];d.teams.forEach(t=>{t.conferenceId='league';t.divisionId=''});
- d.leagueSettings={...setupLeagueRules(d),seasonGames:28,divisionGames:0,conferenceGames:28,playoffFormat:'top4',splitPlayoffs:false,firstRoundByes:0};state=validateCareerData(buildSetupCareer(d));
+ d.leagueSettings={...setupLeagueRules(d),seasonGames:28,divisionGames:0,conferenceGames:28,playoffFormat:'top4',splitPlayoffs:false,firstRoundByes:0,familyLeave:'off'};state=validateCareerData(buildSetupCareer(d));// Family leave off: its random rolls shift this seeded league's later outcomes (the GM was fired at rollover).
  var ids=()=>newsFeedRows().map(n=>n.id),uiMode=on=>{simulationHeadless=on?()=>false:()=>true};var realHeadless=simulationHeadless;`);
 (async()=>{
  // 1. Late in the season: day 1 is still there.
