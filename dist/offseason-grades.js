@@ -66,12 +66,12 @@ function offseasonGradeTeam(club,snap,ctx){
  if(mine.length){active.draft=true;let sum=0,w=0;for(const pick of mine){const rank=board.get(pick.id),surplus=(pick.number-rank)/state.teams.length,wt=pick.round===1?1:.4;sum+=surplus*wt;w+=wt;moves.push({impact:surplus*14*wt,text:'Drafted '+pick.name+' at #'+pick.number+' (No. '+rank+' on the board)'})}draft=offseasonClamp(OFFSEASON_NEUTRAL+offseasonClamp(sum/w*45,-30,25))}
  // Free agency: value per dollar on signings, key players re-signed or lost.
  const nowIds=new Set(now.map(p=>p.id)),drafted=new Set(mine.map(p=>p.id));let fa=0;
- for(const p of now){if(drafted.has(p.id))continue;const was=snapAt.get(p.id);if(was?.team===club.id){const row=base.roster.find(r=>r.id===p.id);if(row&&row.through<=year&&(p.contractThrough??year)>year){const ratio=offseasonMarketSalary(p,salaries)/Math.max(.5,p.salary),impact=(2.5+offseasonClamp(ratio-1,-.6,.5)*5)*weightOf(p);fa+=impact;active.freeAgency=true;moves.push({impact,text:'Re-signed '+label(p)+' at $'+p.salary.toFixed(1)+'M'})}continue}
+ for(const p of now){if(drafted.has(p.id))continue;const was=snapAt.get(p.id);if(was?.team===club.id){const row=base.roster.find(r=>r.id===p.id);if(row&&row.through<=year&&(p.contractThrough??year)>year){const ratio=offseasonMarketSalary(p,salaries)/Math.max(.5,p.salary),impact=(1.5+offseasonClamp(ratio-1,-.6,.5)*5)*weightOf(p);fa+=impact;active.freeAgency=true;moves.push({impact,text:'Re-signed '+label(p)+' at $'+p.salary.toFixed(1)+'M'})}continue}
   if(was&&was.team>=0&&was.row.through>year)continue; // traded in
   const ratio=offseasonMarketSalary(p,salaries)/Math.max(.5,p.salary),impact=offseasonClamp(ratio-1,-.6,.6)*6*weightOf(p)+(p.ovr>=75?1:0);fa+=impact;active.freeAgency=true;moves.push({impact,text:'Signed '+label(p)+' at $'+p.salary.toFixed(1)+'M'+(ratio>=1.25?' (a bargain)':ratio<=.75?' (an overpay)':'')})}
  const topIds=new Set(baseRoster.slice().sort((a,b)=>offseasonPlayerValue(b,'balanced')-offseasonPlayerValue(a,'balanced')).slice(0,5).map(r=>r.id));
  for(const r of baseRoster){if(nowIds.has(r.id)||r.through>year)continue;const loc=where.get(r.id),p=loc.p,impact=-(topIds.has(r.id)?4:.5)*weightOf(p);fa+=impact;active.freeAgency=true;moves.push({impact,text:(loc.team>=0?'Lost '+label(p)+' to '+state.teams[loc.team].abbr:'Let '+label(p)+' walk')+' in free agency'})}
- const freeAgency=active.freeAgency?offseasonClamp(OFFSEASON_NEUTRAL+offseasonClamp(fa,-40,25)):OFFSEASON_NEUTRAL;
+ const freeAgency=active.freeAgency?offseasonClamp(OFFSEASON_NEUTRAL+offseasonClamp(fa,-40,20)):OFFSEASON_NEUTRAL;
  // Trades: value in vs out per trading partner, players and picks, weighted by the owner's plan.
  const partners=new Map(),side=id=>{if(!partners.has(id))partners.set(id,{inP:[],outP:[],inK:[],outK:[]});return partners.get(id)};
  for(const p of now){const was=snapAt.get(p.id);if(was&&was.team>=0&&was.team!==club.id&&was.row.through>year&&!drafted.has(p.id))side(was.team).inP.push(p)}

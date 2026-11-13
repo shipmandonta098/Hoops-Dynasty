@@ -72,6 +72,7 @@ const order=()=>[...run('careerBodyContent()').matchAll(/<tr class="(?:you)?"><t
 l.run("offseasonSort('team')");const az=order();assert.deepEqual(az,[...az].sort((a,b)=>a.localeCompare(b)),'sorted by team A–Z');l.run("offseasonSort('team')");assert.deepEqual(order(),[...az].reverse(),'toggle to Z–A');
 l.run("offseasonSort('score')");const scores=[...run('careerBodyContent()').matchAll(/<\/span> (\d+)<\/td>/g)].map(m=>+m[1]);assert.deepEqual(scores,[...scores].sort((a,b)=>b-a),'sorted by score');
 assert(run("renderCareerShell.toString().includes(\"'Offseason grades'\")"),'in the sidebar');
+const gmHtml=run('gmHistoryPanel()');assert(gmHtml.includes('<th>Offseason</th>')&&gmHtml.includes(mine.grade+' ('+mine.score+')'),'GM Career history column');
 console.log('PASS your review: grade',mine.grade,mine.score,', patience',mine.patience,', GM history, news, review card, sortable table');
 
 // 6. Commissioner: hide grades (no patience change, no news, screen says hidden); only while commissioner mode is on.
