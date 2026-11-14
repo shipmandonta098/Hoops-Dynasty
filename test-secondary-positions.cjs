@@ -32,7 +32,10 @@ const depth=run(`(()=>{const club=state.teams[1],r=club.roster;delete club.rotat
   const [weak,flex,star]=[r[5],r[6],r[7]];weak.pos='SF';weak.ovr=55;flex.pos='SG';flex.secondaryPos=['SF'];flex.ovr=75;star.pos='PG';star.ovr=88;
   for(const p of r.slice(8))p.pos='C';
   const plan=rotationFromClub(club),value=p=>rotationSlotValue(p,'SF'),order=r.filter(p=>p.id!==plan.depth.SF[0]).sort((a,b)=>value(b)-value(a)||a.id-b.id).map(p=>p.id);return {backups:plan.depth.SF.slice(1),order,weak:weak.id,flex:flex.id}})()`);
-assert.deepEqual(depth.backups,depth.order.slice(0,2),'SF backups follow the slot value');assert(depth.order.indexOf(depth.flex)<depth.order.indexOf(depth.weak),'the 75 SG/SF ranks ahead of the 55 natural SF at SF');
+// Depth chart (test-depth-chart.cjs): backups are bench players ranked by position fit (main > secondary), then value;
+// the slot value still ranks the SG/SF ahead of the 55 SF.
+const sf=run(`(()=>{const club=state.teams[1],plan=rotationFromClub(club),starters=new Set(courtPositions().map(pos=>plan.depth[pos][0])),bench=club.roster.filter(p=>!starters.has(p.id)),best=bench.filter(p=>p.pos==='SF').sort((a,b)=>rotationSlotValue(b,'SF')-rotationSlotValue(a,'SF'))[0];return {primary:plan.depth.SF[1],best:best?.id,fromBench:plan.depth.SF.slice(1).every(id=>!starters.has(id)),sg:plan.depth.SG.slice(1)}})()`);
+assert.equal(sf.primary,sf.best,'SF primary backup: the best natural SF on the bench');assert(sf.fromBench,'SF backups come from the bench');assert(sf.sg.includes(depth.flex),'the SG/SF backs up SG');assert(depth.order.indexOf(depth.flex)<depth.order.indexOf(depth.weak),'the 75 SG/SF has the higher SF slot value');
 const labels=run(`(()=>{const club=team();delete club.rotationPlan;rotationDraft=null;const r=club.roster;r.forEach((p,i)=>{p.secondaryPos=[];p.pos=['PG','SG','SF','PF','C'][i%5]});
   r[5].pos='PF';r[5].secondaryPos=['C'];r[6].pos='SG';r[6].secondaryPos=[];for(const p of r.slice(7))p.pos='PG';
   const plan=rotationFromClub(club);plan.depth.C[1]=r[5].id;plan.depth.C[2]=r[6].id;rotationDraft=plan;rotationDraftSignature=rotationSignature(club);return rotationsView().match(/rotation-fallback[^>]*>[^<]*/g)||[]})()`);

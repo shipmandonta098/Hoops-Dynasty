@@ -9,7 +9,7 @@
    "cNonBigAvoidable": 0,
    "missing": 0,
    "benchWithMinutes": 1706,
-   "distinctPrimaries": 1048,
+   "distinctPrimaries": 1049,
    "primarySlots": 1050
   },
   "day12": {
@@ -18,16 +18,16 @@
    "avoidable": 0,
    "cGuard": 0,
    "cNonBigAvoidable": 0,
-   "missing": 0,
-   "benchWithMinutes": 1718,
+   "missing": 1,
+   "benchWithMinutes": 1719,
    "distinctPrimaries": 1048,
    "primarySlots": 1050
   },
   "court": {
-   "snaps": 106861,
-   "noBig": 14,
-   "noBigAvoidable": 14,
-   "guardAtC": 777
+   "snaps": 106695,
+   "noBig": 6,
+   "noBigAvoidable": 6,
+   "guardAtC": 507
   }
  },
  "rows": [
@@ -59,10 +59,10 @@
     "examples": []
    },
    "court": {
-    "snaps": 16966,
+    "snaps": 16893,
     "noBig": 0,
     "noBigAvoidable": 0,
-    "guardAtC": 55
+    "guardAtC": 126
    }
   },
   {
@@ -82,21 +82,21 @@
    },
    "day12": {
     "teams": 30,
-    "starterBackups": 0,
+    "starterBackups": 1,
     "avoidable": 0,
     "cGuard": 0,
     "cNonBigAvoidable": 0,
-    "missing": 0,
-    "benchWithMinutes": 270,
+    "missing": 1,
+    "benchWithMinutes": 271,
     "distinctPrimaries": 150,
     "primarySlots": 150,
     "examples": []
    },
    "court": {
-    "snaps": 17036,
+    "snaps": 17009,
     "noBig": 0,
     "noBigAvoidable": 0,
-    "guardAtC": 140
+    "guardAtC": 105
    }
   },
   {
@@ -121,16 +121,16 @@
     "cGuard": 0,
     "cNonBigAvoidable": 0,
     "missing": 0,
-    "benchWithMinutes": 270,
+    "benchWithMinutes": 267,
     "distinctPrimaries": 150,
     "primarySlots": 150,
     "examples": []
    },
    "court": {
-    "snaps": 17011,
+    "snaps": 17176,
     "noBig": 0,
     "noBigAvoidable": 0,
-    "guardAtC": 65
+    "guardAtC": 19
    }
   },
   {
@@ -155,16 +155,16 @@
     "cGuard": 0,
     "cNonBigAvoidable": 0,
     "missing": 0,
-    "benchWithMinutes": 268,
+    "benchWithMinutes": 271,
     "distinctPrimaries": 150,
     "primarySlots": 150,
     "examples": []
    },
    "court": {
-    "snaps": 16813,
+    "snaps": 16986,
     "noBig": 0,
     "noBigAvoidable": 0,
-    "guardAtC": 57
+    "guardAtC": 70
    }
   },
   {
@@ -184,21 +184,21 @@
    },
    "day12": {
     "teams": 30,
-    "starterBackups": 2,
+    "starterBackups": 1,
     "avoidable": 0,
     "cGuard": 0,
     "cNonBigAvoidable": 0,
     "missing": 0,
-    "benchWithMinutes": 269,
+    "benchWithMinutes": 271,
     "distinctPrimaries": 150,
     "primarySlots": 150,
     "examples": []
    },
    "court": {
-    "snaps": 16985,
+    "snaps": 16930,
     "noBig": 0,
     "noBigAvoidable": 0,
-    "guardAtC": 65
+    "guardAtC": 26
    }
   },
   {
@@ -218,21 +218,21 @@
    },
    "day12": {
     "teams": 12,
-    "starterBackups": 6,
+    "starterBackups": 8,
     "avoidable": 0,
     "cGuard": 0,
     "cNonBigAvoidable": 0,
     "missing": 0,
-    "benchWithMinutes": 74,
-    "distinctPrimaries": 60,
+    "benchWithMinutes": 72,
+    "distinctPrimaries": 58,
     "primarySlots": 60,
     "examples": []
    },
    "court": {
-    "snaps": 4494,
-    "noBig": 14,
-    "noBigAvoidable": 14,
-    "guardAtC": 60
+    "snaps": 4362,
+    "noBig": 6,
+    "noBigAvoidable": 6,
+    "guardAtC": 19
    }
   },
   {
@@ -257,16 +257,16 @@
     "cGuard": 0,
     "cNonBigAvoidable": 0,
     "missing": 0,
-    "benchWithMinutes": 71,
-    "distinctPrimaries": 59,
+    "benchWithMinutes": 70,
+    "distinctPrimaries": 60,
     "primarySlots": 60,
     "examples": []
    },
    "court": {
-    "snaps": 4449,
+    "snaps": 4399,
     "noBig": 0,
     "noBigAvoidable": 0,
-    "guardAtC": 31
+    "guardAtC": 29
    }
   },
   {
@@ -286,21 +286,21 @@
    },
    "day12": {
     "teams": 12,
-    "starterBackups": 7,
+    "starterBackups": 5,
     "avoidable": 0,
     "cGuard": 0,
     "cNonBigAvoidable": 0,
     "missing": 0,
-    "benchWithMinutes": 74,
-    "distinctPrimaries": 59,
+    "benchWithMinutes": 75,
+    "distinctPrimaries": 60,
     "primarySlots": 60,
     "examples": []
    },
    "court": {
-    "snaps": 4378,
+    "snaps": 4364,
     "noBig": 0,
     "noBigAvoidable": 0,
-    "guardAtC": 118
+    "guardAtC": 40
    }
   },
   {
@@ -314,7 +314,7 @@
     "cNonBigAvoidable": 0,
     "missing": 0,
     "benchWithMinutes": 72,
-    "distinctPrimaries": 59,
+    "distinctPrimaries": 60,
     "primarySlots": 60,
     "examples": []
    },
@@ -325,16 +325,16 @@
     "cGuard": 0,
     "cNonBigAvoidable": 0,
     "missing": 0,
-    "benchWithMinutes": 76,
+    "benchWithMinutes": 77,
     "distinctPrimaries": 60,
     "primarySlots": 60,
     "examples": []
    },
    "court": {
-    "snaps": 4686,
+    "snaps": 4539,
     "noBig": 0,
     "noBigAvoidable": 0,
-    "guardAtC": 131
+    "guardAtC": 53
    }
   },
   {
@@ -359,16 +359,16 @@
     "cGuard": 0,
     "cNonBigAvoidable": 0,
     "missing": 0,
-    "benchWithMinutes": 76,
+    "benchWithMinutes": 75,
     "distinctPrimaries": 60,
     "primarySlots": 60,
     "examples": []
    },
    "court": {
-    "snaps": 4043,
+    "snaps": 4037,
     "noBig": 0,
     "noBigAvoidable": 0,
-    "guardAtC": 55
+    "guardAtC": 20
    }
   }
  ]

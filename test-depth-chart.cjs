@@ -50,4 +50,9 @@ l.run(`delete club.rotationPlan;club.lineupMode='auto';globalThis.cs={snaps:0,no
  for(const n of [3,4]){l.run(`state.leagueSettings.courtPlayers=${n};var small=rotationFromClub(state.teams[2]),smallSpots=courtPositions(),ss=new Set(smallSpots.map(pos=>small.depth[pos][0]));`);
   assert.equal(run("smallSpots.length"),n);assert(run("smallSpots.every(pos=>small.depth[pos][0]!==null&&small.depth[pos][1]!==null&&!ss.has(small.depth[pos][1]))"),n+'-player court chart')}
  l.run('state.leagueSettings.courtPlayers=5');console.log('PASS 3- and 4-player courts');
+ // Feats in an exhibition game (a stage the news feed can't link to) are recorded without a news item, so the save
+ // still loads (found here: a bench scorer's exhibition feat failed the save checker).
+  const feat=run(`(()=>{const real=recognizePlayerFeats;recognizePlayerFeats=()=>[{id:'x:1',playerId:state.teams[0].roster[0].id,side:0,priority:99,text:'Exhibition feat',e:{type:'stat'}}];let posted=0;const add=addNewsItem;addNewsItem=i=>{posted++;return add(i)};try{const g=play(0,1,'Exhibition')}finally{recognizePlayerFeats=real;addNewsItem=add}return {posted,loads:(()=>{try{readNewsFeed(JSON.parse(JSON.stringify(state.newsFeed)),m=>{throw Error(m)},state.teams.length);return true}catch(e){return e.message}})()}})()`);
+ assert.equal(feat.loads,true,'news feed passes the save checker after an exhibition game');assert.equal(feat.posted,0,'no feat news for an exhibition');
+ console.log('PASS exhibition feats post no news; the news feed passes the save checker');
 })().catch(e=>{console.error(e);process.exit(1)});

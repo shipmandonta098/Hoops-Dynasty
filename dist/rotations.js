@@ -17,14 +17,24 @@ function rotationBackups(starters,pool,minutes=new Map()){
  const spots=courtPositions(),starterIds=new Set(Object.values(starters).filter(id=>id!==null&&id!==undefined)),bench=pool.filter(p=>!starterIds.has(p.id)),mins=p=>(minutes instanceof Map?minutes.get(p.id):minutes[p.id])||0;
  const rank=(list,pos)=>list.slice().sort((a,b)=>rotationFitTier(b,pos)-rotationFitTier(a,pos)||rotationSlotValue(b,pos)-rotationSlotValue(a,pos)||a.id-b.id);
  const candidates=Object.fromEntries(spots.map(pos=>{const qualified=bench.some(p=>rotationFitTier(p,pos)>=2),others=qualified?[]:pool.filter(p=>starterIds.has(p.id)&&p.id!==starters[pos]&&rotationFitTier(p,pos)>=2);return [pos,rank([...bench,...others],pos)]}));
- const scarcity=pos=>bench.filter(p=>rotationFitTier(p,pos)>=2).length,order=spots.slice().sort((a,b)=>scarcity(a)-scarcity(b)||ROTATION_POSITIONS.indexOf(b)-ROTATION_POSITIONS.indexOf(a));
- const primary={},covers=new Map();
- for(const pos of order){const list=candidates[pos];let pick=null;
+ // Pass 1: spots with bench players who play them (main or secondary), scarcest first, each take an unused one.
+ // Pass 2: the rest take the best fit left, an unused player before a reuse (reuse only for an adjacent spot).
+ const qualified=pos=>candidates[pos].filter(p=>rotationFitTier(p,pos)>=2),primary={},covers=new Map(),take=(pos,pick)=>{primary[pos]=pick?.id??null;if(pick)covers.set(pick.id,[...(covers.get(pick.id)||[]),pos])};
+ for(const pos of spots.filter(pos=>qualified(pos).length).sort((a,b)=>qualified(a).length-qualified(b).length||ROTATION_POSITIONS.indexOf(b)-ROTATION_POSITIONS.indexOf(a))){const pick=qualified(pos).find(p=>!covers.has(p.id));if(pick)take(pos,pick)}
+ for(const pos of spots.filter(pos=>!(pos in primary))){const list=candidates[pos];let pick=null;
   for(let tier=3;tier>=0&&!pick;tier--){const group=list.filter(p=>rotationFitTier(p,pos)===tier);pick=group.find(p=>!covers.has(p.id))||group.find(p=>covers.get(p.id)?.length===1&&rotationAdjacent(covers.get(p.id)[0],pos))||null}
-  pick??=list[0]||null;primary[pos]=pick?.id??null;if(pick)covers.set(pick.id,[...(covers.get(pick.id)||[]),pos])}
+  take(pos,pick??list[0]??null)}
  const reserve=Object.fromEntries(spots.map(pos=>[pos,null])),listed=()=>new Set([...Object.values(primary),...Object.values(reserve)].filter(id=>id!==null));
- for(const p of bench.filter(p=>mins(p)>0).sort((a,b)=>mins(b)-mins(a)||a.id-b.id)){if(listed().has(p.id))continue;const pos=spots.filter(pos=>reserve[pos]===null&&primary[pos]!==p.id).sort((a,b)=>rotationFitTier(p,b)-rotationFitTier(p,a)||spots.indexOf(a)-spots.indexOf(b))[0];if(pos)reserve[pos]=p.id}
- for(const pos of spots){if(reserve[pos]!==null)continue;const seen=listed(),list=candidates[pos].filter(p=>p.id!==primary[pos]).sort((a,b)=>(rotationFitTier(b,pos)>=2)-(rotationFitTier(a,pos)>=2)||seen.has(a.id)-seen.has(b.id)||rotationFitTier(b,pos)-rotationFitTier(a,pos)||rotationSlotValue(b,pos)-rotationSlotValue(a,pos)||a.id-b.id);reserve[pos]=list[0]?.id??null}
+ // Reserves: (1) bench players with minutes not yet listed, where they play the spot; (2) players who play the spot;
+ // (3) anyone with minutes still unlisted, nearest fit first; (4) the best fit left, unlisted players first.
+ const withMinutes=bench.filter(p=>mins(p)>0).sort((a,b)=>mins(b)-mins(a)||a.id-b.id),place=(p,minTier)=>{if(listed().has(p.id))return;const pos=spots.filter(pos=>reserve[pos]===null&&primary[pos]!==p.id&&rotationFitTier(p,pos)>=minTier).sort((a,b)=>rotationFitTier(p,b)-rotationFitTier(p,a)||spots.indexOf(a)-spots.indexOf(b))[0];if(pos)reserve[pos]=p.id};
+ const fill=(pos,ok)=>{if(reserve[pos]!==null)return;const seen=listed(),list=candidates[pos].filter(p=>p.id!==primary[pos]&&ok(p)).sort((a,b)=>seen.has(a.id)-seen.has(b.id)||rotationFitTier(b,pos)-rotationFitTier(a,pos)||rotationSlotValue(b,pos)-rotationSlotValue(a,pos)||a.id-b.id);if(list[0])reserve[pos]=list[0].id};
+ for(const p of withMinutes)place(p,2);for(const p of withMinutes)place(p,1);
+ for(const pos of spots)fill(pos,p=>rotationFitTier(p,pos)>=2);
+ for(const p of withMinutes)place(p,0);
+ // Still unlisted with minutes: take a reserve spot held by a player listed elsewhere too, best fit first.
+ for(const p of withMinutes){if(listed().has(p.id))continue;const twice=id=>id!==null&&[...Object.values(primary),...Object.values(reserve)].filter(x=>x===id).length>1;const pos=spots.filter(pos=>twice(reserve[pos])&&primary[pos]!==p.id).sort((a,b)=>rotationFitTier(p,b)-rotationFitTier(p,a)||spots.indexOf(a)-spots.indexOf(b))[0];if(pos)reserve[pos]=p.id}
+ for(const pos of spots)fill(pos,()=>true);
  return Object.fromEntries(spots.map(pos=>[pos,[primary[pos],reserve[pos]]]))}
 // Starters also listed as backups where a healthy bench player could take the spot (kept on a hand-made chart;
 // shown as a warning). A starter covering a spot no bench player can play is expected, not warned about.
