@@ -51,6 +51,10 @@ function historicalPresetFromStart(league,year){
  const profile=historicalEraProfile(league,year),nba=league==='nba',r={...profile.rules,historicalSource:league,historicalYear:year,gamePeriods:nba?4:year<2006?2:4,periodMinutes:nba?12:year<2006?20:10,overtimeMinutes:5,courtPlayers:5,foulLimit:nba&&year===1946?5:6,threePointers:!nba||year>=1979};
  const notes=['This is a one-time rules snapshot. Later seasons keep these settings until you edit them; historical rules do not advance automatically.','Existing teams, players, signed contracts and history are not replaced. These are fictional leagues using historical rule references.','Court dimensions, shot-clock eras, defensive-rule changes, cap exceptions, service-based salary tiers, contract options and historical revenue/operating costs are not fully modeled.'],sources=nba?['nbaFinance','nbaHistory','nbaLottery']:['wnbaHistory','wnbaEarly','wnba2014','wnba2020','wnbaPlayoffs','wnbaFinals'];
  let cap=null,games=null;
+ // Timeouts: NBA since 2017–18 (7; 4 into the fourth; 2 after its 3:00 mark; 2 per overtime); before that 9 per team (18 per
+ // game) with 3 in the last two minutes; WNBA 5 per team, 2 after 3:00 of the fourth, 2 per overtime, mandatory 1/2/1/2.
+ if(nba)Object.assign(r,year>=2017?{timeoutsPerGame:7,timeoutsFourthMax:4,timeoutsLateMax:2,timeoutsLateWindow:3,timeoutsOvertime:2,mandatoryTimeouts:'two'}:{timeoutsPerGame:9,timeoutsFourthMax:9,timeoutsLateMax:3,timeoutsLateWindow:2,timeoutsOvertime:2,mandatoryTimeouts:'two'});
+ else Object.assign(r,{timeoutsPerGame:5,timeoutsFourthMax:5,timeoutsLateMax:2,timeoutsLateWindow:3,timeoutsOvertime:2,mandatoryTimeouts:'wnba'});
  if(nba){
   if(year>=1984){cap=HISTORICAL_NBA_CAPS[year-1984];r.salaryCapType='soft';r.minContract=HISTORICAL_NBA_MIN[year-1984];}
   else if(year>1946){r.salaryCapType='none';notes.push('No modern team salary cap in this era. Historical contract salary scales are not verified here; the cap value is retained and unavailable salary amounts use model defaults.');}
