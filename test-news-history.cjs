@@ -12,7 +12,8 @@ const settle=async(cond,ms=20000)=>{const end=Date.now()+ms;while(!l.run(cond)){
 const run=c=>{const v=l.run(c);return v&&typeof v==='object'?JSON.parse(JSON.stringify(v)):v};
 // An 8-team, 28-game league keeps the full season fast.
 l.run(`render=()=>{};toast=()=>{};var d=makeDraft();d.gmName='News';d.teams=d.teams.slice(0,8);d.meetings='custom';d.conferences=[{id:'league',name:'League'}];d.divisions=[];d.teams.forEach(t=>{t.conferenceId='league';t.divisionId=''});
- d.leagueSettings={...setupLeagueRules(d),seasonGames:28,divisionGames:0,conferenceGames:28,playoffFormat:'top4',splitPlayoffs:false,firstRoundByes:0,familyLeave:'off'};state=validateCareerData(buildSetupCareer(d));// Family leave off: its random rolls shift this seeded league's later outcomes (the GM was fired at rollover).
+ d.leagueSettings={...setupLeagueRules(d),seasonGames:28,divisionGames:0,conferenceGames:28,playoffFormat:'top4',splitPlayoffs:false,firstRoundByes:0,familyLeave:'off'};state=validateCareerData(buildSetupCareer(d));{const before=ownerSettle;ownerSettle=function(club,g){const r=before(club,g);const o=ownerFor(club);if(club.id===controlledTeamId()){o.patience=Math.max(o.patience,50);o.fired=false}return r}}// Family leave off, and the owner never fires the GM: this test is about news history, and any engine change that
+// shifts the seeded results (family leave, timeouts) could otherwise end the career before the rollover.
  var ids=()=>newsFeedRows().map(n=>n.id),uiMode=on=>{simulationHeadless=on?()=>false:()=>true};var realHeadless=simulationHeadless;`);
 (async()=>{
  // 1. Late in the season: day 1 is still there.
