@@ -1,0 +1,375 @@
+{
+ "repo": "/home/user/Hoops-Dynasty",
+ "total": {
+  "day0": {
+   "teams": 210,
+   "starterBackups": 16,
+   "avoidable": 0,
+   "cGuard": 0,
+   "cNonBigAvoidable": 0,
+   "missing": 0,
+   "benchWithMinutes": 1706,
+   "distinctPrimaries": 1048,
+   "primarySlots": 1050
+  },
+  "day12": {
+   "teams": 210,
+   "starterBackups": 17,
+   "avoidable": 0,
+   "cGuard": 0,
+   "cNonBigAvoidable": 0,
+   "missing": 0,
+   "benchWithMinutes": 1718,
+   "distinctPrimaries": 1048,
+   "primarySlots": 1050
+  },
+  "court": {
+   "snaps": 106861,
+   "noBig": 14,
+   "noBigAvoidable": 14,
+   "guardAtC": 777
+  }
+ },
+ "rows": [
+  {
+   "league": "nba",
+   "seed": 9101,
+   "day0": {
+    "teams": 30,
+    "starterBackups": 0,
+    "avoidable": 0,
+    "cGuard": 0,
+    "cNonBigAvoidable": 0,
+    "missing": 0,
+    "benchWithMinutes": 269,
+    "distinctPrimaries": 150,
+    "primarySlots": 150,
+    "examples": []
+   },
+   "day12": {
+    "teams": 30,
+    "starterBackups": 0,
+    "avoidable": 0,
+    "cGuard": 0,
+    "cNonBigAvoidable": 0,
+    "missing": 0,
+    "benchWithMinutes": 270,
+    "distinctPrimaries": 150,
+    "primarySlots": 150,
+    "examples": []
+   },
+   "court": {
+    "snaps": 16966,
+    "noBig": 0,
+    "noBigAvoidable": 0,
+    "guardAtC": 55
+   }
+  },
+  {
+   "league": "nba",
+   "seed": 9102,
+   "day0": {
+    "teams": 30,
+    "starterBackups": 0,
+    "avoidable": 0,
+    "cGuard": 0,
+    "cNonBigAvoidable": 0,
+    "missing": 0,
+    "benchWithMinutes": 269,
+    "distinctPrimaries": 150,
+    "primarySlots": 150,
+    "examples": []
+   },
+   "day12": {
+    "teams": 30,
+    "starterBackups": 0,
+    "avoidable": 0,
+    "cGuard": 0,
+    "cNonBigAvoidable": 0,
+    "missing": 0,
+    "benchWithMinutes": 270,
+    "distinctPrimaries": 150,
+    "primarySlots": 150,
+    "examples": []
+   },
+   "court": {
+    "snaps": 17036,
+    "noBig": 0,
+    "noBigAvoidable": 0,
+    "guardAtC": 140
+   }
+  },
+  {
+   "league": "nba",
+   "seed": 9103,
+   "day0": {
+    "teams": 30,
+    "starterBackups": 0,
+    "avoidable": 0,
+    "cGuard": 0,
+    "cNonBigAvoidable": 0,
+    "missing": 0,
+    "benchWithMinutes": 269,
+    "distinctPrimaries": 150,
+    "primarySlots": 150,
+    "examples": []
+   },
+   "day12": {
+    "teams": 30,
+    "starterBackups": 0,
+    "avoidable": 0,
+    "cGuard": 0,
+    "cNonBigAvoidable": 0,
+    "missing": 0,
+    "benchWithMinutes": 270,
+    "distinctPrimaries": 150,
+    "primarySlots": 150,
+    "examples": []
+   },
+   "court": {
+    "snaps": 17011,
+    "noBig": 0,
+    "noBigAvoidable": 0,
+    "guardAtC": 65
+   }
+  },
+  {
+   "league": "nba",
+   "seed": 9104,
+   "day0": {
+    "teams": 30,
+    "starterBackups": 0,
+    "avoidable": 0,
+    "cGuard": 0,
+    "cNonBigAvoidable": 0,
+    "missing": 0,
+    "benchWithMinutes": 269,
+    "distinctPrimaries": 150,
+    "primarySlots": 150,
+    "examples": []
+   },
+   "day12": {
+    "teams": 30,
+    "starterBackups": 0,
+    "avoidable": 0,
+    "cGuard": 0,
+    "cNonBigAvoidable": 0,
+    "missing": 0,
+    "benchWithMinutes": 268,
+    "distinctPrimaries": 150,
+    "primarySlots": 150,
+    "examples": []
+   },
+   "court": {
+    "snaps": 16813,
+    "noBig": 0,
+    "noBigAvoidable": 0,
+    "guardAtC": 57
+   }
+  },
+  {
+   "league": "nba",
+   "seed": 9105,
+   "day0": {
+    "teams": 30,
+    "starterBackups": 1,
+    "avoidable": 0,
+    "cGuard": 0,
+    "cNonBigAvoidable": 0,
+    "missing": 0,
+    "benchWithMinutes": 270,
+    "distinctPrimaries": 150,
+    "primarySlots": 150,
+    "examples": []
+   },
+   "day12": {
+    "teams": 30,
+    "starterBackups": 2,
+    "avoidable": 0,
+    "cGuard": 0,
+    "cNonBigAvoidable": 0,
+    "missing": 0,
+    "benchWithMinutes": 269,
+    "distinctPrimaries": 150,
+    "primarySlots": 150,
+    "examples": []
+   },
+   "court": {
+    "snaps": 16985,
+    "noBig": 0,
+    "noBigAvoidable": 0,
+    "guardAtC": 65
+   }
+  },
+  {
+   "league": "wnba",
+   "seed": 9201,
+   "day0": {
+    "teams": 12,
+    "starterBackups": 6,
+    "avoidable": 0,
+    "cGuard": 0,
+    "cNonBigAvoidable": 0,
+    "missing": 0,
+    "benchWithMinutes": 72,
+    "distinctPrimaries": 60,
+    "primarySlots": 60,
+    "examples": []
+   },
+   "day12": {
+    "teams": 12,
+    "starterBackups": 6,
+    "avoidable": 0,
+    "cGuard": 0,
+    "cNonBigAvoidable": 0,
+    "missing": 0,
+    "benchWithMinutes": 74,
+    "distinctPrimaries": 60,
+    "primarySlots": 60,
+    "examples": []
+   },
+   "court": {
+    "snaps": 4494,
+    "noBig": 14,
+    "noBigAvoidable": 14,
+    "guardAtC": 60
+   }
+  },
+  {
+   "league": "wnba",
+   "seed": 9202,
+   "day0": {
+    "teams": 12,
+    "starterBackups": 1,
+    "avoidable": 0,
+    "cGuard": 0,
+    "cNonBigAvoidable": 0,
+    "missing": 0,
+    "benchWithMinutes": 72,
+    "distinctPrimaries": 60,
+    "primarySlots": 60,
+    "examples": []
+   },
+   "day12": {
+    "teams": 12,
+    "starterBackups": 1,
+    "avoidable": 0,
+    "cGuard": 0,
+    "cNonBigAvoidable": 0,
+    "missing": 0,
+    "benchWithMinutes": 71,
+    "distinctPrimaries": 59,
+    "primarySlots": 60,
+    "examples": []
+   },
+   "court": {
+    "snaps": 4449,
+    "noBig": 0,
+    "noBigAvoidable": 0,
+    "guardAtC": 31
+   }
+  },
+  {
+   "league": "wnba",
+   "seed": 9203,
+   "day0": {
+    "teams": 12,
+    "starterBackups": 6,
+    "avoidable": 0,
+    "cGuard": 0,
+    "cNonBigAvoidable": 0,
+    "missing": 0,
+    "benchWithMinutes": 72,
+    "distinctPrimaries": 60,
+    "primarySlots": 60,
+    "examples": []
+   },
+   "day12": {
+    "teams": 12,
+    "starterBackups": 7,
+    "avoidable": 0,
+    "cGuard": 0,
+    "cNonBigAvoidable": 0,
+    "missing": 0,
+    "benchWithMinutes": 74,
+    "distinctPrimaries": 59,
+    "primarySlots": 60,
+    "examples": []
+   },
+   "court": {
+    "snaps": 4378,
+    "noBig": 0,
+    "noBigAvoidable": 0,
+    "guardAtC": 118
+   }
+  },
+  {
+   "league": "wnba",
+   "seed": 9204,
+   "day0": {
+    "teams": 12,
+    "starterBackups": 2,
+    "avoidable": 0,
+    "cGuard": 0,
+    "cNonBigAvoidable": 0,
+    "missing": 0,
+    "benchWithMinutes": 72,
+    "distinctPrimaries": 59,
+    "primarySlots": 60,
+    "examples": []
+   },
+   "day12": {
+    "teams": 12,
+    "starterBackups": 1,
+    "avoidable": 0,
+    "cGuard": 0,
+    "cNonBigAvoidable": 0,
+    "missing": 0,
+    "benchWithMinutes": 76,
+    "distinctPrimaries": 60,
+    "primarySlots": 60,
+    "examples": []
+   },
+   "court": {
+    "snaps": 4686,
+    "noBig": 0,
+    "noBigAvoidable": 0,
+    "guardAtC": 131
+   }
+  },
+  {
+   "league": "wnba",
+   "seed": 9205,
+   "day0": {
+    "teams": 12,
+    "starterBackups": 0,
+    "avoidable": 0,
+    "cGuard": 0,
+    "cNonBigAvoidable": 0,
+    "missing": 0,
+    "benchWithMinutes": 72,
+    "distinctPrimaries": 59,
+    "primarySlots": 60,
+    "examples": []
+   },
+   "day12": {
+    "teams": 12,
+    "starterBackups": 0,
+    "avoidable": 0,
+    "cGuard": 0,
+    "cNonBigAvoidable": 0,
+    "missing": 0,
+    "benchWithMinutes": 76,
+    "distinctPrimaries": 60,
+    "primarySlots": 60,
+    "examples": []
+   },
+   "court": {
+    "snaps": 4043,
+    "noBig": 0,
+    "noBigAvoidable": 0,
+    "guardAtC": 55
+   }
+  }
+ ]
+}

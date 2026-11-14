@@ -1,0 +1,475 @@
+{
+ "repo": "/home/user/hd-maintest",
+ "total": {
+  "day0": {
+   "teams": 210,
+   "starterBackups": 1611,
+   "avoidable": 1585,
+   "cGuard": 36,
+   "cNonBigAvoidable": 127,
+   "missing": 1303,
+   "benchWithMinutes": 1706,
+   "distinctPrimaries": 654,
+   "primarySlots": 1050
+  },
+  "day12": {
+   "teams": 210,
+   "starterBackups": 1591,
+   "avoidable": 1560,
+   "cGuard": 38,
+   "cNonBigAvoidable": 126,
+   "missing": 1296,
+   "benchWithMinutes": 1719,
+   "distinctPrimaries": 657,
+   "primarySlots": 1050
+  },
+  "court": {
+   "snaps": 106870,
+   "noBig": 108,
+   "noBigAvoidable": 108,
+   "guardAtC": 7161
+  }
+ },
+ "rows": [
+  {
+   "league": "nba",
+   "seed": 9101,
+   "day0": {
+    "teams": 30,
+    "starterBackups": 240,
+    "avoidable": 240,
+    "cGuard": 5,
+    "cNonBigAvoidable": 21,
+    "missing": 223,
+    "benchWithMinutes": 269,
+    "distinctPrimaries": 91,
+    "primarySlots": 150,
+    "examples": [
+     "ATL PG: starter Arthur McDonald (SG/PG)",
+     "ATL PG: starter Andre Hughes (PF)",
+     "ATL SG: starter Andre Hughes (PF)",
+     "ATL SG: starter Adam Freeman (PG)"
+    ]
+   },
+   "day12": {
+    "teams": 30,
+    "starterBackups": 237,
+    "avoidable": 237,
+    "cGuard": 5,
+    "cNonBigAvoidable": 21,
+    "missing": 218,
+    "benchWithMinutes": 270,
+    "distinctPrimaries": 92,
+    "primarySlots": 150,
+    "examples": [
+     "ATL PG: starter Arthur McDonald (SG/PG)",
+     "ATL PG: starter Andre Hughes (PF)",
+     "ATL SG: starter Andre Hughes (PF)",
+     "ATL SG: starter Adam Freeman (PG)"
+    ]
+   },
+   "court": {
+    "snaps": 16979,
+    "noBig": 31,
+    "noBigAvoidable": 31,
+    "guardAtC": 1143
+   }
+  },
+  {
+   "league": "nba",
+   "seed": 9102,
+   "day0": {
+    "teams": 30,
+    "starterBackups": 233,
+    "avoidable": 233,
+    "cGuard": 5,
+    "cNonBigAvoidable": 15,
+    "missing": 211,
+    "benchWithMinutes": 269,
+    "distinctPrimaries": 98,
+    "primarySlots": 150,
+    "examples": [
+     "ATL PG: starter Jonathan Morgan (SG/PG)",
+     "ATL SG: starter Alexander Meyer (SG/PG)",
+     "ATL SG: starter Ma Jian (PG)",
+     "ATL SF: starter Jonathan Morgan (SG/PG)"
+    ]
+   },
+   "day12": {
+    "teams": 30,
+    "starterBackups": 231,
+    "avoidable": 231,
+    "cGuard": 5,
+    "cNonBigAvoidable": 16,
+    "missing": 213,
+    "benchWithMinutes": 272,
+    "distinctPrimaries": 99,
+    "primarySlots": 150,
+    "examples": [
+     "ATL PG: starter Jonathan Morgan (SG/PG)",
+     "ATL SG: starter Alexander Meyer (SG/PG)",
+     "ATL SG: starter Ma Jian (PG)",
+     "ATL SF: starter Jonathan Morgan (SG/PG)"
+    ]
+   },
+   "court": {
+    "snaps": 17165,
+    "noBig": 11,
+    "noBigAvoidable": 11,
+    "guardAtC": 1161
+   }
+  },
+  {
+   "league": "nba",
+   "seed": 9103,
+   "day0": {
+    "teams": 30,
+    "starterBackups": 225,
+    "avoidable": 225,
+    "cGuard": 4,
+    "cNonBigAvoidable": 17,
+    "missing": 210,
+    "benchWithMinutes": 269,
+    "distinctPrimaries": 88,
+    "primarySlots": 150,
+    "examples": [
+     "ATL PG: starter Getachew Haile (C)",
+     "ATL PG: starter Steven Ross (C)",
+     "ATL SG: starter Gao Kai (PG)",
+     "ATL SG: starter Getachew Haile (C)"
+    ]
+   },
+   "day12": {
+    "teams": 30,
+    "starterBackups": 217,
+    "avoidable": 217,
+    "cGuard": 4,
+    "cNonBigAvoidable": 16,
+    "missing": 203,
+    "benchWithMinutes": 266,
+    "distinctPrimaries": 88,
+    "primarySlots": 150,
+    "examples": [
+     "ATL PG: starter Getachew Haile (C)",
+     "ATL PG: starter Steven Ross (C)",
+     "ATL SG: starter Gao Kai (PG)",
+     "ATL SG: starter Getachew Haile (C)"
+    ]
+   },
+   "court": {
+    "snaps": 17058,
+    "noBig": 8,
+    "noBigAvoidable": 8,
+    "guardAtC": 987
+   }
+  },
+  {
+   "league": "nba",
+   "seed": 9104,
+   "day0": {
+    "teams": 30,
+    "starterBackups": 232,
+    "avoidable": 232,
+    "cGuard": 4,
+    "cNonBigAvoidable": 18,
+    "missing": 211,
+    "benchWithMinutes": 269,
+    "distinctPrimaries": 91,
+    "primarySlots": 150,
+    "examples": [
+     "ATL PG: starter Vikram Sharma (PF/C)",
+     "ATL PG: starter Anthony Ortega (SF/SG)",
+     "ATL SG: starter Anthony Ortega (SF/SG)",
+     "ATL SG: starter Vikram Sharma (PF/C)"
+    ]
+   },
+   "day12": {
+    "teams": 30,
+    "starterBackups": 230,
+    "avoidable": 230,
+    "cGuard": 4,
+    "cNonBigAvoidable": 18,
+    "missing": 209,
+    "benchWithMinutes": 269,
+    "distinctPrimaries": 89,
+    "primarySlots": 150,
+    "examples": [
+     "ATL PG: starter Vikram Sharma (PF/C)",
+     "ATL PG: starter Anthony Ortega (SF/SG)",
+     "ATL SG: starter Anthony Ortega (SF/SG)",
+     "ATL SG: starter Vikram Sharma (PF/C)"
+    ]
+   },
+   "court": {
+    "snaps": 16814,
+    "noBig": 3,
+    "noBigAvoidable": 3,
+    "guardAtC": 676
+   }
+  },
+  {
+   "league": "nba",
+   "seed": 9105,
+   "day0": {
+    "teams": 30,
+    "starterBackups": 225,
+    "avoidable": 223,
+    "cGuard": 4,
+    "cNonBigAvoidable": 19,
+    "missing": 204,
+    "benchWithMinutes": 270,
+    "distinctPrimaries": 98,
+    "primarySlots": 150,
+    "examples": [
+     "ATL PG: starter Henry Schmidt (SF/SG)",
+     "ATL SG: starter Aaron Hunt (SF/SG)",
+     "ATL SF: starter Henry Schmidt (SF/SG)",
+     "ATL SF: starter George Palmer (PF/SF)"
+    ]
+   },
+   "day12": {
+    "teams": 30,
+    "starterBackups": 223,
+    "avoidable": 221,
+    "cGuard": 4,
+    "cNonBigAvoidable": 19,
+    "missing": 205,
+    "benchWithMinutes": 272,
+    "distinctPrimaries": 98,
+    "primarySlots": 150,
+    "examples": [
+     "ATL PG: starter Henry Schmidt (SF/SG)",
+     "ATL SG: starter Aaron Hunt (SF/SG)",
+     "ATL SF: starter Henry Schmidt (SF/SG)",
+     "ATL SF: starter George Palmer (PF/SF)"
+    ]
+   },
+   "court": {
+    "snaps": 17014,
+    "noBig": 7,
+    "noBigAvoidable": 7,
+    "guardAtC": 620
+   }
+  },
+  {
+   "league": "wnba",
+   "seed": 9201,
+   "day0": {
+    "teams": 12,
+    "starterBackups": 91,
+    "avoidable": 83,
+    "cGuard": 3,
+    "cNonBigAvoidable": 8,
+    "missing": 47,
+    "benchWithMinutes": 72,
+    "distinctPrimaries": 36,
+    "primarySlots": 60,
+    "examples": [
+     "ATL PG: starter Cynthia Ruiz (SF/SG)",
+     "ATL SG: starter Latoya Stewart (PG/SG)",
+     "ATL SG: starter Cynthia Ruiz (SF/SG)",
+     "ATL SF: starter Latoya Stewart (PG/SG)"
+    ]
+   },
+   "day12": {
+    "teams": 12,
+    "starterBackups": 89,
+    "avoidable": 83,
+    "cGuard": 3,
+    "cNonBigAvoidable": 9,
+    "missing": 47,
+    "benchWithMinutes": 74,
+    "distinctPrimaries": 36,
+    "primarySlots": 60,
+    "examples": [
+     "ATL PG: starter Cynthia Ruiz (SF/SG)",
+     "ATL SG: starter Latoya Stewart (PG/SG)",
+     "ATL SG: starter Cynthia Ruiz (SF/SG)",
+     "ATL SF: starter Latoya Stewart (PG/SG)"
+    ]
+   },
+   "court": {
+    "snaps": 4365,
+    "noBig": 13,
+    "noBigAvoidable": 13,
+    "guardAtC": 396
+   }
+  },
+  {
+   "league": "wnba",
+   "seed": 9202,
+   "day0": {
+    "teams": 12,
+    "starterBackups": 91,
+    "avoidable": 89,
+    "cGuard": 5,
+    "cNonBigAvoidable": 8,
+    "missing": 46,
+    "benchWithMinutes": 72,
+    "distinctPrimaries": 41,
+    "primarySlots": 60,
+    "examples": [
+     "ATL PG: starter Silvia Bruno (SG/PG)",
+     "ATL SG: starter Meera Mehta (PG)",
+     "ATL SG: starter Ana Pérez (SF)",
+     "ATL SF: starter Meera Mehta (PG)"
+    ]
+   },
+   "day12": {
+    "teams": 12,
+    "starterBackups": 91,
+    "avoidable": 89,
+    "cGuard": 5,
+    "cNonBigAvoidable": 8,
+    "missing": 45,
+    "benchWithMinutes": 71,
+    "distinctPrimaries": 41,
+    "primarySlots": 60,
+    "examples": [
+     "ATL PG: starter Silvia Bruno (SG/PG)",
+     "ATL SG: starter Meera Mehta (PG)",
+     "ATL SG: starter Ana Pérez (SF)",
+     "ATL SF: starter Meera Mehta (PG)"
+    ]
+   },
+   "court": {
+    "snaps": 4477,
+    "noBig": 4,
+    "noBigAvoidable": 4,
+    "guardAtC": 643
+   }
+  },
+  {
+   "league": "wnba",
+   "seed": 9203,
+   "day0": {
+    "teams": 12,
+    "starterBackups": 93,
+    "avoidable": 83,
+    "cGuard": 2,
+    "cNonBigAvoidable": 9,
+    "missing": 49,
+    "benchWithMinutes": 72,
+    "distinctPrimaries": 34,
+    "primarySlots": 60,
+    "examples": [
+     "ATL PG: starter Mary Mcdonald (PF/SF)",
+     "ATL PG: starter Patricia Garcia (PG/SG)",
+     "ATL SG: starter Mary Mcdonald (PF/SF)",
+     "ATL SG: starter Ann Reyes (SF/SG)"
+    ]
+   },
+   "day12": {
+    "teams": 12,
+    "starterBackups": 96,
+    "avoidable": 81,
+    "cGuard": 2,
+    "cNonBigAvoidable": 7,
+    "missing": 53,
+    "benchWithMinutes": 75,
+    "distinctPrimaries": 36,
+    "primarySlots": 60,
+    "examples": [
+     "ATL PG: starter Mary Mcdonald (PF/SF)",
+     "ATL PG: starter Patricia Garcia (PG/SG)",
+     "ATL SG: starter Mary Mcdonald (PF/SF)",
+     "ATL SG: starter Katherine Spencer (PG)"
+    ]
+   },
+   "court": {
+    "snaps": 4376,
+    "noBig": 14,
+    "noBigAvoidable": 14,
+    "guardAtC": 501
+   }
+  },
+  {
+   "league": "wnba",
+   "seed": 9204,
+   "day0": {
+    "teams": 12,
+    "starterBackups": 93,
+    "avoidable": 89,
+    "cGuard": 1,
+    "cNonBigAvoidable": 8,
+    "missing": 51,
+    "benchWithMinutes": 72,
+    "distinctPrimaries": 40,
+    "primarySlots": 60,
+    "examples": [
+     "ATL PG: starter Mia Wright (SG/PG)",
+     "ATL SF: starter Tsegaye Haile (C/PF)",
+     "ATL PF: starter Felicia Watson (PF/SF)",
+     "ATL PF: starter Adriana Gutiérrez (C)"
+    ]
+   },
+   "day12": {
+    "teams": 12,
+    "starterBackups": 90,
+    "avoidable": 88,
+    "cGuard": 1,
+    "cNonBigAvoidable": 8,
+    "missing": 53,
+    "benchWithMinutes": 76,
+    "distinctPrimaries": 42,
+    "primarySlots": 60,
+    "examples": [
+     "ATL PG: starter Mia Wright (SG/PG)",
+     "ATL SF: starter Tsegaye Haile (C/PF)",
+     "ATL PF: starter Felicia Watson (PF/SF)",
+     "ATL PF: starter Adriana Gutiérrez (C)"
+    ]
+   },
+   "court": {
+    "snaps": 4562,
+    "noBig": 4,
+    "noBigAvoidable": 4,
+    "guardAtC": 664
+   }
+  },
+  {
+   "league": "wnba",
+   "seed": 9205,
+   "day0": {
+    "teams": 12,
+    "starterBackups": 88,
+    "avoidable": 88,
+    "cGuard": 3,
+    "cNonBigAvoidable": 4,
+    "missing": 51,
+    "benchWithMinutes": 72,
+    "distinctPrimaries": 37,
+    "primarySlots": 60,
+    "examples": [
+     "ATL PG: starter Sneha Gupta (PG/SG)",
+     "ATL PG: starter Serena Campbell (SG/SF)",
+     "ATL SG: starter Pamela Sims (PG/SG)",
+     "ATL SG: starter Serena Campbell (SG/SF)"
+    ]
+   },
+   "day12": {
+    "teams": 12,
+    "starterBackups": 87,
+    "avoidable": 83,
+    "cGuard": 5,
+    "cNonBigAvoidable": 4,
+    "missing": 50,
+    "benchWithMinutes": 74,
+    "distinctPrimaries": 36,
+    "primarySlots": 60,
+    "examples": [
+     "ATL PG: starter Sneha Gupta (PG/SG)",
+     "ATL PG: starter Serena Campbell (SG/SF)",
+     "ATL SG: starter Pamela Sims (PG/SG)",
+     "ATL SG: starter Serena Campbell (SG/SF)"
+    ]
+   },
+   "court": {
+    "snaps": 4060,
+    "noBig": 13,
+    "noBigAvoidable": 13,
+    "guardAtC": 370
+   }
+  }
+ ]
+}
