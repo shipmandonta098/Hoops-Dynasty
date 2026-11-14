@@ -61,10 +61,12 @@ console.log('Stage 3 (40-minute bench minutes by quality): totals, caps, no rese
 
 // Stage 4 (both leagues).
 for(const g of ['male','female']){const L=g==='male'?'NBA':'WNBA',l=leagues[g];
- // Auto team: rotation starters are the lineup's; backups at each spot follow the slot value.
+ // Auto team: rotation starters are the lineup's; backups come from the bench by position fit first (main >
+ // secondary), then value (depth-chart rules, test-depth-chart.cjs): the 55 natural SF is the SF's primary backup, the
+ // 75 SG/SF backs up SG and is the SF reserve.
  l.run(`build([['PG',80],['SG',76],['SF',78],['PF',77],['C',77],['SF',55],['SG',75,['SF']],['C',60]]);applyAutoLineup(club)`);
- const rot=run(g,`(()=>{const plan=rotationFromClub(club),a=lineupAssignment(club);return {same:courtPositions().every(pos=>plan.depth[pos][0]===a[pos]),sf:plan.depth.SF.slice(1).map(id=>club.roster.find(p=>p.id===id).ovr),order:club.roster.filter(p=>p.id!==a.SF).sort((x,y)=>lineupSlotValue(y,'SF')-lineupSlotValue(x,'SF')||x.id-y.id).slice(0,2).map(p=>p.ovr)}})()`);
- assert(rot.same,L+' rotation starters = lineup');assert.deepEqual(rot.sf,rot.order,L+' SF backups by slot value');assert(!rot.sf.includes(55),L+' the 55 natural SF is not a top SF backup ahead of the 75 SG/SF');
+ const rot=run(g,`(()=>{const plan=rotationFromClub(club),a=lineupAssignment(club),ovr=id=>club.roster.find(p=>p.id===id).ovr,starters=new Set(Object.values(a));return {same:courtPositions().every(pos=>plan.depth[pos][0]===a[pos]),sf:plan.depth.SF.slice(1).map(ovr),sg:ovr(plan.depth.SG[1]),c:ovr(plan.depth.C[1]),starterBackups:courtPositions().flatMap(pos=>plan.depth[pos].slice(1)).filter(id=>starters.has(id)).length}})()`);
+ assert(rot.same,L+' rotation starters = lineup');assert.deepEqual(rot.sf,[55,75],L+' SF backups: natural SF first, then the SG/SF');assert.equal(rot.sg,75,L+' the 75 SG/SF is the SG primary backup');assert.equal(rot.c,60,L+' the bench C backs up C');
  // Injury replacement: the starting SF is hurt and has no depth backup; the 75 SG/SF replaces him, not the 55 natural SF.
  const inj=run(g,`(()=>{const sf=club.roster.find(p=>p.ovr===78);sf.injuredUntil=moraleStamp()+20;const depth=Object.fromEntries(courtPositions().map(pos=>[pos,[lineupAssignment(club,club.roster.filter(p=>p!==sf||true))[pos]]]));depth.SF=[sf.id];const st=injuryStarters(club,depth);sf.injuredUntil=0;return club.roster.find(p=>p.id===st.SF).ovr})()`);
  assert.equal(inj,75,L+' injury replacement uses secondary positions');

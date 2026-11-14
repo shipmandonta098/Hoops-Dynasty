@@ -69,7 +69,10 @@ function featFinalize(g,context){
  }
  const retained=feats.filter(f=>f.priority>=FEAT_POLICY.newsMinimum),entry={id,year:state.year,context,feats:retained,game:retained.length?featSnapshot(g,retained):null,published:[]};if(retained.length)store.games.push(entry);store.processed.push(id);
  const selected=[...feats].filter(f=>f.priority>=FEAT_POLICY.newsMinimum).sort((a,b)=>b.priority-a.priority||a.id.localeCompare(b.id)),players=new Set();
- for(const f of selected){if(entry.published.length>=FEAT_POLICY.maxNewsPerGame)break;if(players.has(f.playerId))continue;players.add(f.playerId);const t=summaryTeams(g)[f.side],opp=summaryTeams(g)[1-f.side],won=f.side===(g.sa>g.sb?0:1),score=f.side===0?[g.sa,g.sb]:[g.sb,g.sa];
+ // Exhibition games (and any stage the news feed can't link to) record feats without a news item: a feed link to
+ // such a game fails the save checker.
+ const newsStage=['Regular season','First round','Conference semifinal','Conference final','Semifinal','Championship'].includes(g.stage)&&Number.isInteger(g.day)&&g.day>=1;
+ for(const f of newsStage?selected:[]){if(entry.published.length>=FEAT_POLICY.maxNewsPerGame)break;if(players.has(f.playerId))continue;players.add(f.playerId);const t=summaryTeams(g)[f.side],opp=summaryTeams(g)[1-f.side],won=f.side===(g.sa>g.sb?0:1),score=f.side===0?[g.sa,g.sb]:[g.sb,g.sa];
   addNewsItem({category:'Player Feat',featId:f.id,headline:f.text,detail:t.city+' '+t.name+' '+(won?'defeated':'lost to')+' '+opp.city+' '+opp.name+', '+score.join('–')+featContext(g,context)+'. '+(f.e.type==='stat'?'Final box score.':featClock(g,f.e)+' · Score at the play: '+f.e.score.join('–')+'.'),teams:[[g.a,g.b][f.side],[g.a,g.b][1-f.side]],day:g.day,phase:g.stage,game:{year:state.year,day:g.day,a:g.a,b:g.b,stage:g.stage}});entry.published.push(f.id);
  }
 }
