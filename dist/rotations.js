@@ -183,9 +183,10 @@ function refreshGameRotation(club,runtime,minute,rows,events,margin=0){
   const score=p=>{
    const energy=runtime.stamina.get(p.id),stint=runtime.consecutive.get(p.id)||0;
    // Fit: main position, secondary, adjacent spot, anything else. The depth chart's own backups at this position come
-   // first among the bench (primary, then reserve).
+   // first among the bench (primary, then reserve); the starter's own spot carries a larger bonus so planned starter
+   // minutes hold (bench minutes measured equal to before this change).
    return (p.pos===pos?100:secondaryPositions(p).includes(pos)?95:playerPositions(p).some(q=>Math.abs(ROTATION_POSITIONS.indexOf(q)-ROTATION_POSITIONS.indexOf(pos))===1)?40:-60)
-    +(depth[0]===p.id?12:depth[1]===p.id?45:depth[2]===p.id?30:0)
+    +(depth[0]===p.id?60:depth[1]===p.id?45:depth[2]===p.id?30:0)
     +(clutch?(starters.has(p.id)?1000:0)+p.ovr*2:energy+(energy>=90?25:0)-(energy<70?160:0)-(stint>=maxStint?140:0))
     +(blowout&&!starters.has(p.id)?500:0)+(planned.includes(p.id)?70:0)
     +(intent.restLead&&!starters.has(p.id)?100:0)
