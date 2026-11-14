@@ -13,7 +13,7 @@ const score=e=>{const m=/^\[(\d+)–(\d+)\] /.exec(e);return m?[+m[1],+m[2]]:nul
 // Expected scoring rows: each score change, credited to the MADE line that follows with the same score (a crowd
 // reaction line written before the made shot already carries the new score), else to the line where it changed.
 const credited=new Map();{let prev=[0,0];for(let i=0;i<events.length;i++){const sc=score(events[i]);if(!sc||sc.join()===prev.join())continue;let at=i;
- if(!/ · MADE: /.test(events[i]))for(let j=i+1;j<events.length&&score(events[j])?.join()===sc.join();j++)if(/ · MADE: /.test(events[j])){at=j;break}
+ if(!/ · MADE: /.test(events[i])){let fb=null;for(let j=i+1;j<events.length&&score(events[j])?.join()===sc.join();j++){if(/ · MADE: /.test(events[j])){at=j;fb=null;break}if(fb===null&&!/crowd comes alive/.test(events[j]))fb=j}if(at===i&&/crowd comes alive/.test(events[i])&&fb!==null)at=fb}
  const marker=/^\[\d+–\d+\] (FINAL · |[^·]+ · [A-Z]{2,4} · (Start of|End of) )/.test(events[at]);if(!marker)credited.set(at,{s:sc,p:prev});prev=sc}}
 let scoring=0,checkedBold=0;
 for(const [k,i] of visible.entries()){const [,cls,logo,text,c0,c1]=rows[k],e=events[i],hit=credited.get(i),changed=!!hit,s=hit?.s,p=hit?.p;
