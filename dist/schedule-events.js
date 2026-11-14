@@ -79,9 +79,12 @@ function pbpText(event){return String(event||'').replace(/^\[\d+–\d+\] /,'')}
 const pbpScoringCache=new WeakMap();
 function pbpScoringRows(events){let rows=pbpScoringCache.get(events);if(rows&&rows.length===events.length)return rows.map;const map=new Map();let prev=[0,0];
  for(let i=0;i<events.length;i++){const score=pbpScore(events[i]);if(!score||score[0]===prev[0]&&score[1]===prev[1])continue;
-  let at=i;if(!/ · MADE: /.test(events[i]))for(let j=i+1;j<events.length;j++){const next=pbpScore(events[j]);if(!next||next[0]!==score[0]||next[1]!==score[1])break;if(/ · MADE: /.test(events[j])){at=j;break}}
+  let at=i;if(!/ · MADE: /.test(events[i])){let fallback=null;for(let j=i+1;j<events.length;j++){const next=pbpScore(events[j]);if(!next||next[0]!==score[0]||next[1]!==score[1])break;if(/ · MADE: /.test(events[j])){at=j;fallback=null;break}if(fallback===null&&!pbpCrowd(events[j]))fallback=j}
+   // No MADE line (a narrated make such as "connects on the post hook"): credit the first line after a crowd reaction.
+   if(at===i&&pbpCrowd(events[i])&&fallback!==null)at=fallback}
   if(!pbpMarker(events[at]))map.set(at,{score,prev});prev=score}
  pbpScoringCache.set(events,{length:events.length,map});return map}
+function pbpCrowd(event){return /crowd comes alive|The noise lifts/.test(event||'')}
 function pbpScoring(events,i){return pbpScoringRows(events).get(i)||null}
 // Period markers (Start/End of a period, FINAL) are never scoring plays; they show the running score dimmed (games kept
 // with markers only jump from one period score to the next).
