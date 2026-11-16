@@ -24,11 +24,15 @@ async function runDraftLottery(){if(state.expansion?.active)return toast('Finish
  if(mode==='equal')eligible.forEach(t=>t.weight=1);
  if(expansion?.config.seed==='equal'){eligible.forEach(t=>t.weight=1);eligible.push({id:expansion.team,weight:1})}
  if(mode==='custom'){let weights;try{weights=parseLotteryChances(leagueRules().lotteryChances);if(weights.length<eligible.length||weights.slice(0,eligible.length).filter(w=>w>0).length<Math.min(leagueRules().lotterySelections,eligible.length))throw Error('Provide a weight for every lottery team and enough positive weights for the selected lottery slots.');}catch(e){state=before;return toast(e.message)}eligible.forEach((t,i)=>t.weight=weights[i]);}
- winners.push(...lotteryDraw(eligible,['record','random','snake'].includes(mode)?0:Math.min(leagueRules().lotterySelections,eligible.length)));
+ // Lottery record (draft-lottery-news.js): pre-lottery seeds, odds for the No. 1 pick, picks won in the draw.
+ const draws=['record','random','snake'].includes(mode)?0:Math.min(leagueRules().lotterySelections,eligible.length),seeds=[...eligible.map(t=>t.id),...ranked.filter(t=>ownerPlayoffClub(t)).reverse().map(t=>t.id)],weightTotal=eligible.reduce((n,t)=>n+t.weight,0),weightOf=new Map(eligible.map(t=>[t.id,t.weight]));
+ winners.push(...lotteryDraw(eligible,draws));
  d.order=[...winners,...eligible.map(t=>t.id),...ranked.filter(t=>ownerPlayoffClub(t)).reverse().map(t=>t.id)];
  if(mode==='random'){for(let i=d.order.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[d.order[i],d.order[j]]=[d.order[j],d.order[i]];}}
  if(expansion&&expansion.config.seed!=='equal')d.order.splice(expansion.config.seed==='first'?0:3,0,expansion.team);
  d.type=mode;d.laterOrder=rank().slice().reverse().map(t=>t.id);
+ if(expansion&&expansion.config.seed!=='equal')seeds.splice(expansion.config.seed==='first'?0:3,0,expansion.team);
+ d.lottery={version:1,mode,draws,seeds,odds:seeds.map(id=>draws>0?(weightOf.has(id)&&weightTotal>0?weightOf.get(id)/weightTotal:0):mode==='random'?1/seeds.length:null),drawn:[...winners],order:[...d.order],posted:false};
  say('Draft lottery complete. The first-round order is locked.');await draftCommit(before);
 }
 function draftOrder(d){return draftBaseOrder(d)}
