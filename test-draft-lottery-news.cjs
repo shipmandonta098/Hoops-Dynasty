@@ -58,7 +58,7 @@ assert.equal(run('you'),0);
  console.log('PASS equal, custom and random lotteries post the winner and results');
  // 7. Saves (a real finished season): the record round-trips and is checked; old saves without it load, render and post nothing.
  const s2=loadLeague({seed:32,strictDOM:false});s2.setRandomSeed(32);const run2=c=>{const v=s2.run(c);return v&&typeof v==='object'?JSON.parse(JSON.stringify(v)):v};
- s2.run(`render=()=>{};toast=()=>{};save=async()=>true;showResult=()=>{};ownerCanManage=()=>true;ownerTrack=()=>{};ownerDay=()=>{};ownerFinalize=()=>{};state=validateCareerData(fresh(defaultTeams().slice(0,6),1));sim(seasonLength());playoffs();`);
+ s2.run(`render=()=>{};toast=()=>{};save=async()=>true;showResult=()=>{};ownerCanManage=()=>true;ownerTrack=()=>{};ownerDay=()=>{};ownerFinalize=()=>{};state=validateCareerData(fresh(defaultTeams().slice(0,6),1));`);await s2.run('(async()=>{await sim(seasonLength());await playoffs()})()');assert(run2('draftReady()'),'season finished');
  await s2.run('runDraftLottery()');assert.equal(run2('state.draft.lottery.posted'),true,'real season lottery recorded');
  const saved=run2('JSON.stringify(state)');s2.context.saved=saved;
  assert.deepEqual(run2('validateCareerData(JSON.parse(saved)).draft.lottery'),run2('state.draft.lottery'));
