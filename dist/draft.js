@@ -45,7 +45,7 @@ function draftPickInternal(id){if(wnbaEnabled())return wnbaDraftPick(id);const d
  d.picks.push({number:index+1,round,team:club.id,id:p.id,name:p.name,pos:p.pos,ovr:p.ovr,pot:p.pot});
  const stashed=internationalOnDraft(p);if(!stashed)draftMakeRoom(club,p,round);
  if(!stashed&&club.roster.length<rosterMaximum()&&ownerPayroll(club)+p.salary<=financeRosterLimit(club)+.001){internationalPrepareSigning(p);club.roster.push(p)}else(state.draftRights??=[]).push({team:club.id,player:p});
- say(club.city+' selects '+p.name+' with pick '+(index+1)+'.');return true;
+ return true;
 }
 async function selectDraftPlayer(id){const d=ensureDraft();if(!ownerCanManage()||draftOrder(d)[d.picks.length]!==controlledTeamId())return;const before=snapshotState();if(draftPickInternal(id))await draftCommit(before)}
 async function autoDraft(untilUser=false){if(!gmCanAdvance()||!draftReady())return;const d=ensureDraft();if(!d.order.length)return toast('Run the draft lottery first.');const before=snapshotState();let count=0;
