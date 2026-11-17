@@ -49,6 +49,7 @@ const LEAGUE_SETTING_GROUPS=[
  ['prospectAgeMin','Minimum prospect age',19,[16,30,1],'Age when prospects are generated. Existing classes stay unchanged.','draftClass'],
  ['prospectAgeMax','Maximum prospect age',22,[16,30,1],'Set both ages to the same value for a single-age class.','draftClass'],
  ['lotteryMode','Draft type','weighted',[['weighted','Weighted lottery'],['equal','Equal-chance lottery'],['custom','Custom lottery'],['record','Reverse standings'],['random','Random order · All teams'],['snake','Snake · Reverse standings']],'Expansion seeding rules still apply.','lottery'],
+ ['draftNewsPicks','Draft news: individual pick stories',10,[0,60,1],'Picks 1–N each get their own news item; the rest are grouped into a recap per round. Your picks always get their own item.'],
  ['draftStrength','Future draft class rating adjustment',0,[-10,10,1],'Adjusts overall and potential when a new class is generated. Existing prospects stay unchanged.','draftClass']]],
  ['Finances',[
  ['minimumPayroll','Minimum payroll ($M)',0,[0,1000,.000001],'Season-end shortfalls are charged as payroll. 0 disables the payroll floor.','season'],
